@@ -107,3 +107,28 @@ _(empty — no handoffs)_
 ### Change requests from non-integration sessions
 
 _(none)_
+
+### 2026-11-06 — progress update
+
+- **T01 done.** `data/sources.json` — 26 registered sources with tier (A–D), publisher,
+  retrieval date, and an explicit `limitation` field. Tier C items are explicitly
+  ruled out as model inputs.
+- **T02–T07 done.** `data/dataset.json` — **157 rows**, each carrying `source`, `url`,
+  `as_of`, and `status` ∈ {VERIFIED 126, DERIVED 2, FLAGGED 2, UNVERIFIED 27}.
+  27 rows are deliberately BLANK because the lease, rent roll, APN and owner tax
+  basis were not supplied. Nothing was estimated to fill them.
+- **T08 done.** `model/project_model.py` — unified DCF + 4,000-trial Monte Carlo,
+  fixed seed 20261106, stdlib only. `python3 model/project_model.py --check`
+  confirms byte-identical reproduction. Output `data/model_output.json`.
+- **Key model finding.** Sell-vs-hold is decided by one comparison: the owner's
+  required return vs. the market cap rate. Crossover sits ~30–40 bps ABOVE the cap
+  rate at 4-6 yr remaining term. Below it → hold. Above it → sell.
+- **Irregularities to flag for review** (see `verification/FLAGGED.md`):
+  1. CoStar net-lease cap rate is secondary/paywalled → excluded from the model.
+  2. LAEDC 2026 forecast PDF (9.37 MB) could not be parsed → numeric 2026 forecast
+     is unverified; 2025-vintage SCAG/LAEDC figures are used instead.
+  3. BLS LAUS series has a government-shutdown gap at Oct-2025 → 12-month
+     comparisons spanning it are distorted.
+  4. IRS §1031 page is flagged archival by IRS itself.
+  5. The subject parcel cannot be located (APN redacted) → every parcel-level
+     hazard/zoning/assessor value is UNVERIFIED.

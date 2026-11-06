@@ -1,0 +1,688 @@
+{
+ "generated_utc": "2026-11-06",
+ "generated_by": "arena-8149683c",
+ "engine": "model/project_model.py",
+ "seed": 20261106,
+ "inputs": {
+  "rf_5y": 0.0469,
+  "rf_5y_real": 0.0239,
+  "rf_10y": 0.049,
+  "rf_10y_real": 0.0264,
+  "cap_anchor": 0.066,
+  "cpi_la": 0.037,
+  "gcp_growth_2026f": 0.025,
+  "taxable_sales_2026f": 0.012,
+  "unemployment_2026f": 0.061,
+  "franchise_auv": 1874000,
+  "royalty_rate": 0.05,
+  "discount_premiums": [
+   0.015,
+   0.0225,
+   0.03
+  ],
+  "cap_spread_scenarios": {
+   "compression": 0.005,
+   "base": 0.0125,
+   "stress": 0.0275
+  }
+ },
+ "axes": [
+  {
+   "key": "remaining_years",
+   "label": "Remaining lease term at 2026-11-06",
+   "values": [
+    4,
+    6,
+    9
+   ],
+   "unit": "years",
+   "provenance": "Owner-stated 2030-2035 expiry gives 4.2-8.2 years. 4 / 6 / 9 bracket it. NOT a sourced fact (P-04 blank)."
+  },
+  {
+   "key": "base_rent",
+   "label": "Current annual base rent",
+   "values": [
+    150000,
+    250000,
+    350000
+   ],
+   "unit": "USD/yr",
+   "provenance": "The lease was not provided (P-07 blank). Grid spans ~8.0%-18.7% of the $1.874M franchise AUV, i.e. from a comfortable QSR rent to a stressed one. Scenario axis, not an estimate."
+  },
+  {
+   "key": "cap_spread",
+   "label": "Single-asset near-roll cap spread over the 6.6% anchor",
+   "values": [
+    0.005,
+    0.0125,
+    0.0275
+   ],
+   "unit": "decimal",
+   "provenance": "Modelled, not sourced. Brackets 'tenant renews and buyer competes' to 'credit concern, thin market'."
+  },
+  {
+   "key": "discount_premium",
+   "label": "Illiquidity + management premium over the 5y UST",
+   "values": [
+    0.015,
+    0.0225,
+    0.03
+   ],
+   "unit": "decimal",
+   "provenance": "Modelled, not sourced. 150 / 225 / 300 bps."
+  },
+  {
+   "key": "rent_growth",
+   "label": "Contractual escalator applied to the rent",
+   "values": [
+    0.01,
+    0.02,
+    0.037
+   ],
+   "unit": "decimal",
+   "provenance": "1.0% / 2.0% / 3.7%. The 3.7% top end is the BLS CPI-U Los Angeles print (E-17); the low ends are typical fixed escalators and are labelled as conventions."
+  },
+  {
+   "key": "renewal_probability",
+   "label": "Probability the tenant renews or extends at expiry",
+   "values": [
+    0.45,
+    0.65,
+    0.85
+   ],
+   "unit": "probability",
+   "provenance": "Modelled. Anchored by Realty Income's filed statement that it generally renews at market (T-21) and by its 103.1%-103.5% realised rent recapture (R-14/R-15), offset by Jack's -4.2% same-store sales (T-08)."
+  }
+ ],
+ "surface": [
+  {
+   "remaining_years": 4,
+   "base_rent": 150000,
+   "pv": {
+    "A": 2000618,
+    "B": 1745580,
+    "C": 2226533,
+    "D": 2046947
+   },
+   "winner": "C",
+   "rent_to_sales": 0.08,
+   "rent_to_sales_flag": "in-band"
+  },
+  {
+   "remaining_years": 4,
+   "base_rent": 250000,
+   "pv": {
+    "A": 3334363,
+    "B": 2909300,
+    "C": 3710888,
+    "D": 3411579
+   },
+   "winner": "C",
+   "rent_to_sales": 0.1334,
+   "rent_to_sales_flag": "above"
+  },
+  {
+   "remaining_years": 4,
+   "base_rent": 350000,
+   "pv": {
+    "A": 4668108,
+    "B": 4073020,
+    "C": 5195244,
+    "D": 4776211
+   },
+   "winner": "C",
+   "rent_to_sales": 0.1868,
+   "rent_to_sales_flag": "above"
+  },
+  {
+   "remaining_years": 6,
+   "base_rent": 150000,
+   "pv": {
+    "A": 2054677,
+    "B": 1863267,
+    "C": 2234472,
+    "D": 2046947
+   },
+   "winner": "C",
+   "rent_to_sales": 0.08,
+   "rent_to_sales_flag": "in-band"
+  },
+  {
+   "remaining_years": 6,
+   "base_rent": 250000,
+   "pv": {
+    "A": 3424461,
+    "B": 3105446,
+    "C": 3724119,
+    "D": 3411579
+   },
+   "winner": "C",
+   "rent_to_sales": 0.1334,
+   "rent_to_sales_flag": "above"
+  },
+  {
+   "remaining_years": 6,
+   "base_rent": 350000,
+   "pv": {
+    "A": 4794245,
+    "B": 4347624,
+    "C": 5213767,
+    "D": 4776211
+   },
+   "winner": "C",
+   "rent_to_sales": 0.1868,
+   "rent_to_sales_flag": "above"
+  },
+  {
+   "remaining_years": 9,
+   "base_rent": 150000,
+   "pv": {
+    "A": 2125258,
+    "B": 2019917,
+    "C": 2245056,
+    "D": 2046947
+   },
+   "winner": "C",
+   "rent_to_sales": 0.08,
+   "rent_to_sales_flag": "in-band"
+  },
+  {
+   "remaining_years": 9,
+   "base_rent": 250000,
+   "pv": {
+    "A": 3542096,
+    "B": 3366529,
+    "C": 3741761,
+    "D": 3411579
+   },
+   "winner": "C",
+   "rent_to_sales": 0.1334,
+   "rent_to_sales_flag": "above"
+  },
+  {
+   "remaining_years": 9,
+   "base_rent": 350000,
+   "pv": {
+    "A": 4958935,
+    "B": 4713140,
+    "C": 5238465,
+    "D": 4776211
+   },
+   "winner": "C",
+   "rent_to_sales": 0.1868,
+   "rent_to_sales_flag": "above"
+  }
+ ],
+ "stress": [
+  {
+   "cap_scenario": "compression",
+   "cap_spread": 0.005,
+   "cap_rate": 0.071,
+   "discount_premium": 0.015,
+   "discount_rate": 0.0619,
+   "pv": {
+    "A": 3794130,
+    "B": 3388692,
+    "C": 4135672,
+    "D": 3776997
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "compression",
+   "cap_spread": 0.005,
+   "cap_rate": 0.071,
+   "discount_premium": 0.0225,
+   "discount_rate": 0.0694,
+   "pv": {
+    "A": 3794130,
+    "B": 3271482,
+    "C": 3918488,
+    "D": 3661628
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "compression",
+   "cap_spread": 0.005,
+   "cap_rate": 0.071,
+   "discount_premium": 0.03,
+   "discount_rate": 0.0769,
+   "pv": {
+    "A": 3794130,
+    "B": 3159531,
+    "C": 3715924,
+    "D": 3550808
+   },
+   "winner": "A"
+  },
+  {
+   "cap_scenario": "base",
+   "cap_spread": 0.0125,
+   "cap_rate": 0.0785,
+   "discount_premium": 0.015,
+   "discount_rate": 0.0619,
+   "pv": {
+    "A": 3424461,
+    "B": 3215493,
+    "C": 3927131,
+    "D": 3517992
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "base",
+   "cap_spread": 0.0125,
+   "cap_rate": 0.0785,
+   "discount_premium": 0.0225,
+   "discount_rate": 0.0694,
+   "pv": {
+    "A": 3424461,
+    "B": 3105446,
+    "C": 3724119,
+    "D": 3411579
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "base",
+   "cap_spread": 0.0125,
+   "cap_rate": 0.0785,
+   "discount_premium": 0.03,
+   "discount_rate": 0.0769,
+   "pv": {
+    "A": 3424461,
+    "B": 3000312,
+    "C": 3534675,
+    "D": 3309346
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "stress",
+   "cap_spread": 0.0275,
+   "cap_rate": 0.0935,
+   "discount_premium": 0.015,
+   "discount_rate": 0.0619,
+   "pv": {
+    "A": 2863671,
+    "B": 2940930,
+    "C": 3610416,
+    "D": 3124637
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "stress",
+   "cap_spread": 0.0275,
+   "cap_rate": 0.0935,
+   "discount_premium": 0.0225,
+   "discount_rate": 0.0694,
+   "pv": {
+    "A": 2863671,
+    "B": 2842235,
+    "C": 3428928,
+    "D": 3031825
+   },
+   "winner": "C"
+  },
+  {
+   "cap_scenario": "stress",
+   "cap_spread": 0.0275,
+   "cap_rate": 0.0935,
+   "discount_premium": 0.03,
+   "discount_rate": 0.0769,
+   "pv": {
+    "A": 2863671,
+    "B": 2747911,
+    "C": 3259410,
+    "D": 2942633
+   },
+   "winner": "C"
+  }
+ ],
+ "breakeven": [
+  {
+   "remaining_years": 4.0,
+   "breakeven_cap_spread": 0.04267,
+   "breakeven_cap_rate": 0.10867
+  },
+  {
+   "remaining_years": 6.0,
+   "breakeven_cap_spread": 0.02884,
+   "breakeven_cap_rate": 0.09484
+  },
+  {
+   "remaining_years": 9.0,
+   "breakeven_cap_spread": 0.01906,
+   "breakeven_cap_rate": 0.08506
+  }
+ ],
+ "regime": [
+  {
+   "cap_rate": 0.07,
+   "discount_rate": 0.058,
+   "premium_over_cap_bps": 120,
+   "pv": {
+    "A": 3849427,
+    "B": 3477785,
+    "C": 4287136,
+    "D": 3878306
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.07,
+   "discount_rate": 0.064,
+   "premium_over_cap_bps": 60,
+   "pv": {
+    "A": 3849427,
+    "B": 3380430,
+    "C": 4103890,
+    "D": 3782569
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.07,
+   "discount_rate": 0.0694,
+   "premium_over_cap_bps": 6,
+   "pv": {
+    "A": 3849427,
+    "B": 3295835,
+    "C": 3947551,
+    "D": 3699016
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.07,
+   "discount_rate": 0.076,
+   "premium_over_cap_bps": -60,
+   "pv": {
+    "A": 3849427,
+    "B": 3196166,
+    "C": 3766826,
+    "D": 3600129
+   },
+   "winner": "A"
+  },
+  {
+   "cap_rate": 0.07,
+   "discount_rate": 0.085,
+   "premium_over_cap_bps": -150,
+   "pv": {
+    "A": 3849427,
+    "B": 3066535,
+    "C": 3537432,
+    "D": 3470763
+   },
+   "winner": "A"
+  },
+  {
+   "cap_rate": 0.0785,
+   "discount_rate": 0.058,
+   "premium_over_cap_bps": 205,
+   "pv": {
+    "A": 3424461,
+    "B": 3274751,
+    "C": 4038429,
+    "D": 3575046
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0785,
+   "discount_rate": 0.064,
+   "premium_over_cap_bps": 145,
+   "pv": {
+    "A": 3424461,
+    "B": 3184169,
+    "C": 3868857,
+    "D": 3487763
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0785,
+   "discount_rate": 0.0694,
+   "premium_over_cap_bps": 91,
+   "pv": {
+    "A": 3424461,
+    "B": 3105446,
+    "C": 3724119,
+    "D": 3411579
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0785,
+   "discount_rate": 0.076,
+   "premium_over_cap_bps": 25,
+   "pv": {
+    "A": 3424461,
+    "B": 3012677,
+    "C": 3556727,
+    "D": 3321400
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0785,
+   "discount_rate": 0.085,
+   "premium_over_cap_bps": -65,
+   "pv": {
+    "A": 3424461,
+    "B": 2891991,
+    "C": 3344125,
+    "D": 3203404
+   },
+   "winner": "A"
+  },
+  {
+   "cap_rate": 0.0875,
+   "discount_rate": 0.058,
+   "premium_over_cap_bps": 295,
+   "pv": {
+    "A": 3064810,
+    "B": 3096477,
+    "C": 3827758,
+    "D": 3318166
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0875,
+   "discount_rate": 0.064,
+   "premium_over_cap_bps": 235,
+   "pv": {
+    "A": 3064810,
+    "B": 3011843,
+    "C": 3669769,
+    "D": 3238045
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0875,
+   "discount_rate": 0.0694,
+   "premium_over_cap_bps": 181,
+   "pv": {
+    "A": 3064810,
+    "B": 2938275,
+    "C": 3534860,
+    "D": 3168103
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0875,
+   "discount_rate": 0.076,
+   "premium_over_cap_bps": 115,
+   "pv": {
+    "A": 3064810,
+    "B": 2851565,
+    "C": 3378761,
+    "D": 3085300
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.0875,
+   "discount_rate": 0.085,
+   "premium_over_cap_bps": 25,
+   "pv": {
+    "A": 3064810,
+    "B": 2738733,
+    "C": 3180382,
+    "D": 2976935
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.1,
+   "discount_rate": 0.058,
+   "premium_over_cap_bps": 420,
+   "pv": {
+    "A": 2673140,
+    "B": 2895165,
+    "C": 3598069,
+    "D": 3038096
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.1,
+   "discount_rate": 0.064,
+   "premium_over_cap_bps": 360,
+   "pv": {
+    "A": 2673140,
+    "B": 2817247,
+    "C": 3452709,
+    "D": 2965784
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.1,
+   "discount_rate": 0.0694,
+   "premium_over_cap_bps": 306,
+   "pv": {
+    "A": 2673140,
+    "B": 2749501,
+    "C": 3328514,
+    "D": 2902646
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.1,
+   "discount_rate": 0.076,
+   "premium_over_cap_bps": 240,
+   "pv": {
+    "A": 2673140,
+    "B": 2669633,
+    "C": 3184729,
+    "D": 2827885
+   },
+   "winner": "C"
+  },
+  {
+   "cap_rate": 0.1,
+   "discount_rate": 0.085,
+   "premium_over_cap_bps": 150,
+   "pv": {
+    "A": 2673140,
+    "B": 2565670,
+    "C": 3001857,
+    "D": 2730020
+   },
+   "winner": "C"
+  }
+ ],
+ "crossover": [
+  {
+   "cap_rate": 0.071,
+   "crossover_discount_rate": 0.0739,
+   "interpretation": "Hold if your required return is BELOW this; sell if ABOVE."
+  },
+  {
+   "cap_rate": 0.0785,
+   "crossover_discount_rate": 0.0815,
+   "interpretation": "Hold if your required return is BELOW this; sell if ABOVE."
+  },
+  {
+   "cap_rate": 0.0935,
+   "crossover_discount_rate": 0.0967,
+   "interpretation": "Hold if your required return is BELOW this; sell if ABOVE."
+  }
+ ],
+ "rent_pressure": [
+  {
+   "base_rent": 150000,
+   "pct_of_franchise_auv": 0.08,
+   "occupancy_plus_royalty_pct": 0.13,
+   "band": "in-band"
+  },
+  {
+   "base_rent": 250000,
+   "pct_of_franchise_auv": 0.1334,
+   "occupancy_plus_royalty_pct": 0.1834,
+   "band": "above"
+  },
+  {
+   "base_rent": 350000,
+   "pct_of_franchise_auv": 0.1868,
+   "occupancy_plus_royalty_pct": 0.2368,
+   "band": "above"
+  }
+ ],
+ "monte_carlo": {
+  "trials": 4000,
+  "seed": 20261106,
+  "event_hits": 66,
+  "event_frequency": 0.0165,
+  "stats": {
+   "A": {
+    "mean": 3288892.2630020618,
+    "p05": 2355619.750196181,
+    "p25": 2879766.754720053,
+    "median": 3265779.895430329,
+    "p75": 3680308.263699073,
+    "p95": 4282437.154225004,
+    "prob_negative_vs_sell_now": 0.5005,
+    "prob_best": 0.01675
+   },
+   "B": {
+    "mean": 3010647.9688451574,
+    "p05": 2122967.411977032,
+    "p25": 2627921.8007442974,
+    "median": 2995747.0101716155,
+    "p75": 3380660.4106324622,
+    "p95": 3917758.7958873366,
+    "prob_negative_vs_sell_now": 0.62725,
+    "prob_best": 0.0
+   },
+   "C": {
+    "mean": 3698242.0471667973,
+    "p05": 2611403.7196266893,
+    "p25": 3250045.7017464833,
+    "median": 3697183.84987012,
+    "p75": 4160087.782030838,
+    "p95": 4830051.3403264955,
+    "prob_negative_vs_sell_now": 0.32725,
+    "prob_best": 0.98325
+   },
+   "D": {
+    "mean": 3350449.986997862,
+    "p05": 2385950.8325348403,
+    "p25": 2937461.7719952725,
+    "median": 3338050.2814789177,
+    "p75": 3757123.6469194237,
+    "p95": 4343304.768247009,
+    "prob_negative_vs_sell_now": 0.46625,
+    "prob_best": 0.0
+   }
+  }
+ }
+}
