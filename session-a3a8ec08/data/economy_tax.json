@@ -1,0 +1,212 @@
+{
+  "labor_and_economy": [
+    {
+      "id": "EC-01",
+      "category": "Unemployment Rate",
+      "metric": "Local Area Unemployment Rate (NSA — City, County, Metro, State, U.S.)",
+      "geography_or_scope": "LA City, LA County, LA Metro, CA, U.S.",
+      "period": "August 2026 (vs. August 2025) & Sept 2026 Prelim",
+      "value": "5.0% LA City | 4.9% LA County | 4.8% LA Metro (4.4% Sept prelim) | 5.4% CA | 4.3% U.S.",
+      "notes": "Significant 120–130 bps YoY improvement in LA City (from 6.2%) and LA County (from 6.2%), though still ~60–70 bps above U.S. average.",
+      "status": "verified",
+      "source_label": "U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026) & EAG",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "id": "EC-02",
+      "category": "Payroll Job Growth",
+      "metric": "Total Nonfarm Payroll Employment & 12-Month Change",
+      "geography_or_scope": "Los Angeles-Long Beach-Anaheim MSA",
+      "period": "August 2026 (CES) & September 2026 Prelim",
+      "value": "6,289.1k jobs Aug 2026 (+38.2k / +0.6% YoY vs. +0.3% U.S.) | 6,282.1k Sept 2026 (+0.5% YoY)",
+      "notes": "Modest, steady net job creation (+0.5% to +0.6% YoY), outpacing U.S. headline payroll growth (+0.3%) in late summer 2026.",
+      "status": "verified",
+      "source_label": "U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026)",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "id": "EC-03",
+      "category": "Expanding Sectors",
+      "metric": "Education & Health Services and Leisure & Hospitality Employment Growth",
+      "geography_or_scope": "Los Angeles-Long Beach-Anaheim MSA",
+      "period": "August 2025 to August 2026",
+      "value": "Ed & Health: 1,324.0k (+42.7k / +3.3% YoY) | Leisure & Hospitality: 795.8k (+16.8k / +2.2% YoY)",
+      "notes": "Healthcare shift workers and hospitality/tourism activity ahead of the 2028 LA Olympics are primary demand drivers for 24-hour/drive-thru QSR sites.",
+      "status": "verified",
+      "source_label": "U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026)",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "id": "EC-04",
+      "category": "Contracting Sectors",
+      "metric": "Information (Media/Entertainment), Professional Services & Manufacturing Payrolls",
+      "geography_or_scope": "Los Angeles-Long Beach-Anaheim MSA",
+      "period": "August 2025 to August 2026",
+      "value": "Information: 190.4k (-12.3k / -6.1%) | Prof. Services: 974.2k (-0.9%) | Mfg: 447.2k (-1.1%)",
+      "notes": "Continued structural contraction in LA's entertainment/production sector (-6.1% YoY) dampens high-wage office/studio corridor daytime traffic.",
+      "status": "verified",
+      "source_label": "U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026)",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "id": "EC-05",
+      "category": "Wage Levels",
+      "metric": "Average Weekly Wages (Q1 2026 QCEW) & Mean Hourly Wage (May 2025 OEWS)",
+      "geography_or_scope": "Los Angeles County & Metro Area vs. U.S.",
+      "period": "Q1 2026 & May 2025",
+      "value": "$1,704/wk LA County ($1,721 Metro vs. $1,654 U.S.) | $37.15/hr LA Metro (vs. $33.54/hr U.S.)",
+      "notes": "High wage base supports purchasing power while reinforcing elevated operating labor costs for local service employers.",
+      "status": "verified",
+      "source_label": "U.S. BLS — QCEW & OEWS via Los Angeles Economic Summary",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "id": "EC-06",
+      "category": "Regional GDP",
+      "metric": "Los Angeles County Real Gross Domestic Product (GDP)",
+      "geography_or_scope": "Los Angeles County, CA",
+      "period": "2023 Chained Dollars (BEA County GDP Series)",
+      "value": "$802.0 billion (#1 largest county real GDP in 2023 release; 2024 personal income $818.5B)",
+      "notes": "Note: In Feb 2026, BEA discontinued MSA-level GDP releases and transitioned county GDP tables to its interactive database (2025 county release scheduled Dec 2, 2026).",
+      "status": "verified",
+      "source_label": "U.S. Bureau of Economic Analysis (BEA) County GDP Release",
+      "source_url": "https://www.bea.gov/sites/default/files/2024-12/lagdp1224.pdf"
+    },
+    {
+      "id": "EC-07",
+      "category": "Food Services & Retail Sales",
+      "metric": "Accommodation & Food Services Sales and Total Retail Sales",
+      "geography_or_scope": "City of Los Angeles & Los Angeles County",
+      "period": "2022 Economic Census",
+      "value": "Food/Accomm: $17.37B LA City / $44.00B LA County | Retail: $81.35B LA City / $213.93B LA County",
+      "notes": "City of LA alone generates $17.37 billion in annual restaurant/hospitality revenue — one of the deepest dining markets in North America.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (2022 Economic Census)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "EC-08",
+      "category": "Business Establishments",
+      "metric": "Employer Establishments, Private Employment & Annual Payroll",
+      "geography_or_scope": "Los Angeles County, CA",
+      "period": "2023 County Business Patterns (2024 Nonemployers)",
+      "value": "304,988 employer establishments | 3,987,736 employees | $299.62B payroll | 1,165,040 nonemployers",
+      "notes": "Massive density of small/medium enterprises and gig/independent workers provides resilient all-day QSR customer flow.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (County Business Patterns)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    }
+  ],
+  "inflation_and_rates": [
+    {
+      "id": "IR-01",
+      "category": "Local Inflation",
+      "metric": "CPI-U All Items Index & 12-Month Inflation Rate (Los Angeles Area)",
+      "geography_or_scope": "Los Angeles-Long Beach-Anaheim, CA",
+      "period": "September 2026 (and August 2026 Category Split)",
+      "value": "+3.7% YoY Sept 2026 (Index 358.725) | Aug 2026: +3.6% All Items, +2.8% Food, +17.6% Energy",
+      "notes": "Local inflation (+3.7%) exceeds typical fixed 1%–2%/yr NNN lease escalations, eroding real purchasing power of flat/low-bump NNN rents; Energy up +17.6% YoY.",
+      "status": "verified",
+      "source_label": "U.S. BLS — Economy at a Glance (Nov 2026) & LA Economic Summary",
+      "source_url": "https://www.bls.gov/regions/west/ca_losangeles_msa.htm"
+    },
+    {
+      "id": "IR-02",
+      "category": "Risk-Free Rate Benchmark",
+      "metric": "10-Year U.S. Treasury Constant Maturity Par Yield Trajectory",
+      "geography_or_scope": "United States Capital Markets",
+      "period": "March 10, 2026 -> October 7, 2026 -> October 28, 2026",
+      "value": "4.15% (03/10/2026) -> 5.28% (10/07/2026) -> 5.05% (10/28/2026)",
+      "notes": "~90 bps rise in 10-Yr Treasury yields between March and late October 2026 elevates commercial mortgage rates (~6.5%–7.25%) and pressures NNN cap rates upward.",
+      "status": "verified",
+      "source_label": "U.S. Department of the Treasury — Daily Treasury Par Yield Curve (2026)",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve"
+    },
+    {
+      "id": "IR-03",
+      "category": "Short-Term Policy Rates",
+      "metric": "Federal Reserve H.15 Effective Federal Funds Rate & 10-Year TIPS Real Yield",
+      "geography_or_scope": "United States Monetary Policy",
+      "period": "August 10, 2026 H.15 Statistical Release",
+      "value": "3.63% Effective Fed Funds | 3.75% Discount Rate | 2.43% 10-Yr Real TIPS Yield",
+      "notes": "Steepened Treasury curve (3.63% Fed Funds vs. >5.0% 10-Yr nominal Treasury in Oct 2026) reflects fiscal/term-premium pressure on long-duration fixed cash flows.",
+      "status": "verified",
+      "source_label": "Board of Governors of the Federal Reserve System — H.15 Release",
+      "source_url": "https://www.federalreserve.gov/feeds/data/H15_H15.XML"
+    }
+  ],
+  "tax_and_regulatory": [
+    {
+      "id": "TX-01",
+      "category": "Tax-Deferred Disposition",
+      "metric": "IRC Section 1031 Like-Kind Exchange Rules (Real Property Only)",
+      "geography_or_scope": "United States Federal Tax Code (Form 8824)",
+      "period": "Active Statutory Rule (Post-TCJA Real Property)",
+      "value": "100% Tax Deferral | 45-Day Written Identification | 180-Day Closing Window",
+      "notes": "Allows [REDACTED-OWNER-01] to sell before lease cliff and reinvest 100% of pre-tax equity into diversified replacement real estate via a Qualified Intermediary (QI).",
+      "status": "verified",
+      "source_label": "Internal Revenue Service (IRS) — Instructions for Form 8824",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf"
+    },
+    {
+      "id": "TX-02",
+      "category": "Federal Taxable Sale Rates",
+      "metric": "Federal Long-Term Capital Gains, Unrecaptured §1250 & Net Investment Income Tax",
+      "geography_or_scope": "United States Federal Tax Code (IRC §1(h) & §1411)",
+      "period": "Current Statutory Top Rates",
+      "value": "20.0% LTCG + 3.8% NIIT (23.8%) | 25.0% Unrecaptured §1250 Depreciation (+3.8% NIIT = 28.8%)",
+      "notes": "Substantial tax erosion on an outright cash sale, particularly for long-held depreciated NNN buildings.",
+      "status": "verified",
+      "source_label": "IRS — Net Investment Income Tax Q&A & IRB 2013-51",
+      "source_url": "https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax"
+    },
+    {
+      "id": "TX-03",
+      "category": "California Income & 1031 Clawback",
+      "metric": "CA Top Marginal Tax on Capital Gains & Out-of-State §1031 Tracking (Form FTB 3840)",
+      "geography_or_scope": "State of California (Franchise Tax Board)",
+      "period": "2025–2026 Tax Years",
+      "value": "Up to 12.3% + 1.0% Behavioral/Mental Health Tax (> $1M) = 13.3% | Annual Form FTB 3840",
+      "notes": "CA taxes capital gains as ordinary income (pushing combined Fed+CA cash-sale tax to ~37.1%). Out-of-state §1031 defers CA tax but requires annual FTB 3840 filing until eventual taxable sale or step-up at death.",
+      "status": "verified",
+      "source_label": "CA Franchise Tax Board — Pub 1067 (2025) & Form FTB 3840 Instructions",
+      "source_url": "https://www.ftb.ca.gov/forms/2022/2022-3840-instructions.html"
+    },
+    {
+      "id": "TX-04",
+      "category": "Property Tax & NNN Impact",
+      "metric": "California Proposition 13 Base Levy, Annual Cap & Change-in-Ownership Reassessment",
+      "geography_or_scope": "Los Angeles County / State of California",
+      "period": "CA Constitution Art. XIII A",
+      "value": "1.0% base levy (+ voter bonds) | Max 2.0%/yr FBYV cap | 100% FMV reassessment on sale",
+      "notes": "CRITICAL NNN INSIGHT: Selling triggers full reassessment to sale price. Because the NNN tenant pays property taxes, a sale spikes the tenant's occupancy cost right before 2030–2035 renewal, which sophisticated buyers price into their offer!",
+      "status": "verified",
+      "source_label": "LA County Office of the Assessor — Proposition 13 Guide",
+      "source_url": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13"
+    },
+    {
+      "id": "TX-05",
+      "category": "Municipal Transfer Tax Cliff",
+      "metric": "City of Los Angeles Base Transfer Tax & Measure ULA Mansion/Commercial Transfer Tax",
+      "geography_or_scope": "Incorporated City of Los Angeles",
+      "period": "Transactions Closing After June 30, 2026",
+      "value": "0.45% (<= $5.4M) | 4.45% (> $5.4M to < $10.9M) | 5.95% (>= $10.9M) of full value",
+      "notes": "Measure ULA is a 'cliff' tax on total gross consideration (not marginal). Pricing a City of LA sale at $5.39M vs. $5.45M saves ~$218,000 in transfer tax!",
+      "status": "verified",
+      "source_label": "City of Los Angeles Office of Finance — Measure ULA FAQ (Post-June 30, 2026)",
+      "source_url": "https://finance.lacity.gov/faq/measure-ula"
+    },
+    {
+      "id": "TX-06",
+      "category": "Owner Tax Basis",
+      "metric": "Owner's Adjusted Tax Basis, Accumulated Depreciation & Current Prop 13 Assessed Value",
+      "geography_or_scope": "[REDACTED-OWNER-01] / [REDACTED-PROPERTY-01]",
+      "period": "2026 Current",
+      "value": "",
+      "notes": "Private taxpayer and parcel tax-roll records are confidential/redacted; left blank per strict privacy & verification rules and parameterized in local calculator.",
+      "status": "unverified",
+      "source_label": "LA County Office of the Assessor Property Portal",
+      "source_url": "https://portal.assessor.lacounty.gov/"
+    }
+  ]
+}
