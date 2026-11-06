@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell vs Renew — Decision | Jack2 — DTLA NNN Asset Intelligence</title>
+<meta name="description" content="Trigger-based decision framework for selling the Central Los Angeles Jack in the Box NNN property before lease expiry vs renewing: tax math, weighted scorecard, and an action plan.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar"><button id="burger" class="burger" aria-label="Toggle menu">☰</button><b>Jack2 · DTLA NNN Asset Intelligence</b></div>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="25" width="34" height="17" rx="2.5" fill="#0e3a39"/><path d="M24 25c-4-3 4-6 0-9" stroke="#0e3a39" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="11" r="5.6" fill="#0e3a39"/><circle cx="22.1" cy="10.2" r=".95" fill="#f5c97b"/><circle cx="26" cy="10.2" r=".95" fill="#f5c97b"/></svg></div>
+    <div><h1>Jack2</h1><small>DTLA NNN Asset Intelligence</small></div>
+  </div>
+  <div class="nav-label">Overview</div>
+  <ul class="nav"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h8V3H3zM13 21h8V11h-8zM13 9h8V3h-8zM3 21h8v-4H3z"/></svg>Dashboard</a></li></ul>
+  <div class="nav-label">Property &amp; Market</div>
+  <ul class="nav">
+    <li><a href="property.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Property &amp; Lease</a></li>
+    <li><a href="market.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg>Market &amp; Economy</a></li>
+    <li><a href="demographics.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 11h6M19 8v6"/></svg>Demographics &amp; Schools</a></li>
+    <li><a href="projection.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l6-8 4 4 6-9M20 6v5h-5"/></svg>Projection 2026–2035</a></li>
+  </ul>
+  <div class="nav-label">Decision</div>
+  <ul class="nav">
+    <li><a href="risk.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Risk Register</a></li>
+    <li><a class="active" href="decision.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>Sell vs Renew</a></li>
+  </ul>
+  <div class="nav-label">Governance</div>
+  <ul class="nav">
+    <li><a href="sources.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Sources &amp; Verification</a></li>
+    <li><a href="flagged.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>Flagged for Review</a></li>
+    <li><a href="methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 12v5"/></svg>Methodology &amp; Privacy</a></li>
+  </ul>
+  <div class="sidebar-foot"><b>Prepared 2026-11-06</b><br>Personal data anonymized. See <a href="methodology.html" style="color:#ffd166">Methodology &amp; Privacy</a>.</div>
+</aside>
+<main class="main">
+  <div class="crumbs">Decision / Sell vs Renew</div>
+  <h2 class="page-title">Sell Before Expiry — or Renew?</h2>
+  <p class="lede">A balanced, trigger-based answer. The goal: preserve wealth, keep measured growth, and never bet the estate on a single lease date. Numbers use placeholders or clearly-labeled illustrations; the <b>framework</b> is the deliverable.</p>
+
+  <div class="callout"><b>Bottom line.</b> <u>Renew first, sell only on a defined trigger.</u> Specifically: (1) open renewal negotiations in 2026–2027 for a 10–15 year extension with ≥2.5%/yr escalations (or ≥10%/5yr), absolute-NNN with verified insurance, and a corporate/franchisee guarantee; (2) simultaneously get a confidential broker opinion of value and 1031 counsel on standby; (3) sell only if a trigger in the table below fires. Do not let the lease reach 2030–2035 unextended.<br><br><b>Why:</b> after ≈8.6–10.6% transaction friction (ULA + transfer taxes + commissions, before income tax) and ±13–19% value sensitivity per 100 bps of cap rate, a negotiated renewal dominates a pressured sale in almost every scenario — while preserving the option to sell into DTLA 2040 / post-Olympics re-rating later.</div>
+
+  <div class="card mt16">
+    <h3>Decision criteria — weighted scorecard (owner-adjustable weights)</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Criterion</th><th>Weight</th><th>Sell before expiry (1–5)</th><th>Renew &amp; hold (1–5)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Wealth preservation (safety of capital)</td><td>30%</td><td>3 — locks value, but tax/friction burn</td><td><b>5</b> — predictable escalating income</td><td>Selling surrenders a performing bond-like asset</td></tr>
+          <tr><td>Growth opportunity</td><td>20%</td><td>3 — only if redeployed well via 1031</td><td><b>4</b> — DTLA 2040 upside + escalations + re-rating</td><td>Upside asymmetry favors hold if tenant viable</td></tr>
+          <tr><td>Tax efficiency</td><td>20%</td><td>1 — cap gains + ULA 4–5.5% + Prop 13 reset</td><td><b>5</b> — no event tax; step-up in basis at death (IRC §1014, confirm w/ advisor)</td><td>Renewal = zero taxable event</td></tr>
+          <tr><td>Risk control (BAU + black swan)</td><td>20%</td><td><b>4</b> — exits tenant default risk</td><td>3 — mitigated by guarantee + insurance</td><td>Sell scores better only on tenant-default risk</td></tr>
+          <tr><td>Flexibility / liquidity</td><td>10%</td><td>2 — 1031 locks redeployment within 45/180 days</td><td><b>3</b> — can sell later anytime; renewal is reversible via sale</td><td>Optionality favors hold</td></tr>
+          <tr><td><b>Weighted score</b> (illustrative weights)</td><td>100%</td><td><b>2.7</b> <span class="badge b-computed">Computed</span></td><td><b>4.2</b> <span class="badge b-computed">Computed</span></td><td>Adjust weights to your utility; Renew wins under preservation-first weighting</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Scores are structured judgement, not measurements. The weights encode the stated objective (wealth preservation with measured growth). If your utility flips to pure liquidity, Sell wins — this is why the process, not the verdict, is the product.</p>
+  </div>
+
+  <div class="card mt16">
+    <h3>Trigger matrix — the objective rules that flip the recommendation</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>#</th><th>Trigger (objective, checkable)</th><th>Action if fired</th></tr></thead>
+        <tbody>
+          <tr><td>S1</td><td>Renewal offer below [RENT FLOOR $] or without escalations, AND no credit support</td><td><b>Sell</b> — non-core yield; redeploy via 1031</td></tr>
+          <tr><td>S2</td><td>Firm written offer ≥ (NOI ÷ [target cap ≤ 6.25%]) with 1031 replacement identified (45/180-day clock manageable)</td><td><b>Sell</b> — capture premium, defer gain via <a href="https://www.irs.gov/pub/irs-news/fs-08-18.pdf" target="_blank" rel="noopener">IRC §1031 ↗</a></td></tr>
+          <tr><td>S3</td><td>Estoppel or financials show franchisee distress: unit AUV &lt; [DISTRESS AUV ≈ 20% below $1.874M], royalty delinquencies, or JACK/franchisee default to lenders</td><td><b>Sell immediately</b> — before impairment reprices the pad</td></tr>
+          <tr><td>S4</td><td>Cap rates compress materially (market NNN &lt; 5.5%) creating a cyclical peak, or DTLA 2040 delivery + Olympics catalyze a pricing spike</td><td><b>Consider selling at peak</b> — especially with estate/concentration motive (&gt;20% net worth)</td></tr>
+          <tr><td>S5</td><td>Personal: estate equalization, liquidity need, health, or concentration policy breach</td><td><b>Sell</b> — personal balance sheet outranks market timing; use 1031/DST to soften tax</td></tr>
+          <tr><td>R1</td><td>Renewal ≥ [RENT FLOOR $] with ≥ 2.5%/yr (or ≥10%/5yr) escalations, 10+ year term, 1–2 options</td><td><b>Sign renewal</b> — then set-and-monitor</td></tr>
+          <tr><td>R2</td><td>Guarantee from Jack in the Box Inc. <i>or</i> audited franchisee P&amp;L + LC/deposit + cross-default</td><td><b>Sign renewal</b> — credit solved</td></tr>
+          <tr><td>R3</td><td>Absolute NNN incl. roof/structure; insurance (fire+quake, loss-of-rents) verified annually; premium-pass-through clause</td><td><b>Sign renewal</b> — tail risk transferred</td></tr>
+          <tr><td>R4</td><td>No sale/financing constraint triggered (no prepayment penalty breach, no partner dispute)</td><td><b>Hold</b> — review annually each Q1</td></tr>
+          <tr><td>H1</td><td>None of the above; market neutral</td><td><b>Hold + renegotiate at next milestone</b>; re-pull EDD jobs, JACK 10-K, and cap-rate survey quarterly</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Illustrative 10-year math — sell now (2026) vs renew (to 2035)</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Line (illustrative $6.0M value, NOI $390K, 6.5% cap)</th><th>Sell 2026</th><th>Renew to 2035</th></tr></thead>
+        <tbody>
+          <tr><td>Gross proceeds / value 2035</td><td>$6,000,000</td><td>$6.29M (NOI +2.5%/yr @ 6.5%) to $6.81M (+3.5% @ 6.0%) — see <a href="projection.html">Projection</a></td></tr>
+          <tr><td>ULA + city/county transfer taxes</td><td>−$273,600 ($240K + $27K + $6.6K)</td><td>$0</td></tr>
+          <tr><td>Commission ~5% (unverified market practice)</td><td>−$300,000</td><td>$0</td></tr>
+          <tr><td>Capital gains tax (no 1031)</td><td>[CAP GAINS $ — depends on basis; potentially six figures]</td><td>$0 (deferred; §1014 step-up potentially at death)</td></tr>
+          <tr><td>Net after friction (before income tax)</td><td>≈ $5.43M</td><td>Asset retained + cumulative NOI (2026→2035, $390K growing 2.5%/yr ≈ <b>$4.35M</b> <span class="badge b-computed">Computed</span>)</td></tr>
+          <tr><td>Wealth destroyed by friction</td><td>≈ $570K + income tax + lost escalation compounding</td><td>—</td></tr>
+          <tr><td>Option preserved</td><td>1031 into replacement (locks new asset, 45/180 days)</td><td>Can still sell in any year; DTLA 2040 delivery accrues to land</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Illustrative only — actual NOI, basis, and cap rates are placeholders. Cumulative NOI: 390,000 × Σ1.025^t for t=0..9 ≈ $4.35M (computed). Not investment/tax advice; figures exclude maintenance reserves already netted in NOI under NNN.</p>
+  </div>
+
+  <div class="card mt16">
+    <h3>Why sell can still be right — honest counterpoints</h3>
+    <ul class="tight">
+      <li><b>Tenant-default reality.</b> JIB is 93% franchised with falling AUV ($1.949M→$1.874M) and a discontinued dividend to fund debt paydown. If your counterparty is a weak franchisee, "NNN safety" is an illusion — bail early (S3).</li>
+      <li><b>Cyclical top.</b> If NNN QSR cap rates compress below ~5.5% (e.g., post-Olympics euphoria or rate cuts), selling into the bid and 1031-ing into multi-tenant diversification can be rational (S4).</li>
+      <li><b>Concentration.</b> One pad = [X]% of net worth. Wealth preservation literally may require selling part of the bet and re-diversifying (S5).</li>
+      <li><b>Estate design.</b> If heirs can't manage a single-tenant asset, a sale or DST/1031 simplification may beat a "hold forever" purity test.</li>
+      <li><b>Honest bias check.</b> This framework was built to resist the endowment effect. The trigger table is pre-committed: when a trigger fires, the decision is already made — reducing emotional/recency bias at the critical moment.</li>
+    </ul>
+  </div>
+
+  <div class="card mt16">
+    <h3>Action plan (owner, no other manual work required beyond signature)</h3>
+    <ol class="tight">
+      <li><b>Week 1–2:</b> Pull lease abstract; confirm exact expiry, escalations, guarantor (JIB Inc. vs franchisee), insurance schedule, kick-outs. Engage broker for <b>confidential valuation</b> + <b>off-market solicitation</b> of interest (no listing).</li>
+      <li><b>Week 2–4:</b> Request <b>estoppel certificate</b> + franchisee financials (or unit AUV for trailing 8 quarters) via tenant; commission property-condition assessment; verify earthquake/fire coverage and loss-of-rents limits.</li>
+      <li><b>Week 4–8:</b> Negotiate extension LOI — target 10–15 yrs, ≥2.5%/yr or 10%/5yr bumps, absolute NNN, guarantee/LC, no early kick-out &lt;7 years. Simultaneously brief 1031 qualified intermediary (no commitment).</li>
+      <li><b>On LOI term sheet:</b> score against Trigger Matrix (R1–R3 → sign; S1–S5 → execute sale process). Tax counsel models ULA/1031/§1014 for the two paths.</li>
+      <li><b>Quarterly monitoring:</b> JACK 10-K/10-Qs (SEC EDGAR), EDD county jobs report, Port of LA TEUs, insurance renewals, and your tenant's sales reports. Trigger check = 30 minutes per quarter.</li>
+      <li><b>Hard checkpoints:</b> 2027-06-30 (extension signed?), 2028-12-31 (absorption check: re-rate vs Black swan review), 2030-01-01 (if no extension by now, escalate sales track), 12 months before expiry (final sell/lease-up decision).</li>
+    </ol>
+  </div>
+
+  <div class="card mt16">
+    <h3>Decision summary</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>Best single decision today?</td><td><b>Negotiate a long-term extension now; keep sale as a triggered fallback.</b></td></tr>
+          <tr><td>Best for wealth preservation?</td><td>Renew on strong terms (locked, escalating, guaranteed income; no tax event).</td></tr>
+          <tr><td>Best for growth?</td><td>Renew + option to refinance; or sell-and-1031 into higher-yield diversified NNN only at cyclical cap-rate peaks.</td></tr>
+          <tr><td>Balance of risk (BAU vs black swan)?</td><td>BAU risk managed by clauses/credit; black-swan tail managed by insurance + not over-concentrating. Neither is eliminated — both are capped to deductibles/percentages.</td></tr>
+          <tr><td>What single thing must happen before any sale?</td><td>A signed 1031 identification plan and a binding offer clearing the ULA/basis math — see <a href="property.html">Property &amp; Lease</a> and triggers S2/S5.</td></tr>
+          <tr><td>What single thing must happen before any renewal?</td><td>Estoppel + financials verified; guarantee/LC in place; escalation ≥2.5%/yr; insurance confirmed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout danger"><b>Not advice.</b> This analysis is decision-support, not legal/tax/investment/appraisal advice. Private figures are placeholders; market cap rates are flagged unverified; LAEDC projections are estimates. Engage a California-licensed attorney, CPA, MAI appraiser, and broker before transacting.</div>
+  </div>
+
+  <div class="foot">Jack2 · Sell vs Renew · Tax citations: <a href="https://www.irs.gov/pub/irs-news/fs-08-18.pdf" target="_blank" rel="noopener">IRS FS-08-18 (1031) ↗</a> · <a href="https://cityclerk.lacity.org/election/Measure_TE.pdf" target="_blank" rel="noopener">LA City Clerk (ULA) ↗</a> · <a href="https://www.boe.ca.gov/prop13/" target="_blank" rel="noopener">CA BOE (Prop 13) ↗</a>. Analysis date 2026-11-06.</div>
+</main>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

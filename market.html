@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market &amp; Economy | Jack2 — DTLA NNN Asset Intelligence</title>
+<meta name="description" content="Verified official economic data for Los Angeles County and Central Los Angeles: GDP, employment, unemployment, port activity, retail sales, and the DTLA 2040 plan.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar"><button id="burger" class="burger" aria-label="Toggle menu">☰</button><b>Jack2 · DTLA NNN Asset Intelligence</b></div>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="25" width="34" height="17" rx="2.5" fill="#0e3a39"/><path d="M24 25c-4-3 4-6 0-9" stroke="#0e3a39" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="11" r="5.6" fill="#0e3a39"/><circle cx="22.1" cy="10.2" r=".95" fill="#f5c97b"/><circle cx="26" cy="10.2" r=".95" fill="#f5c97b"/></svg></div>
+    <div><h1>Jack2</h1><small>DTLA NNN Asset Intelligence</small></div>
+  </div>
+  <div class="nav-label">Overview</div>
+  <ul class="nav"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h8V3H3zM13 21h8V11h-8zM13 9h8V3h-8zM3 21h8v-4H3z"/></svg>Dashboard</a></li></ul>
+  <div class="nav-label">Property &amp; Market</div>
+  <ul class="nav">
+    <li><a href="property.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Property &amp; Lease</a></li>
+    <li><a class="active" href="market.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg>Market &amp; Economy</a></li>
+    <li><a href="demographics.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 11h6M19 8v6"/></svg>Demographics &amp; Schools</a></li>
+    <li><a href="projection.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l6-8 4 4 6-9M20 6v5h-5"/></svg>Projection 2026–2035</a></li>
+  </ul>
+  <div class="nav-label">Decision</div>
+  <ul class="nav">
+    <li><a href="risk.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Risk Register</a></li>
+    <li><a href="decision.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>Sell vs Renew</a></li>
+  </ul>
+  <div class="nav-label">Governance</div>
+  <ul class="nav">
+    <li><a href="sources.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Sources &amp; Verification</a></li>
+    <li><a href="flagged.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>Flagged for Review</a></li>
+    <li><a href="methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 12v5"/></svg>Methodology &amp; Privacy</a></li>
+  </ul>
+  <div class="sidebar-foot"><b>Prepared 2026-11-06</b><br>Personal data anonymized. See <a href="methodology.html" style="color:#ffd166">Methodology &amp; Privacy</a>.</div>
+</aside>
+<main class="main">
+  <div class="crumbs">Property &amp; Market / Market &amp; Economy</div>
+  <h2 class="page-title">Market &amp; Economic Activity — Los Angeles County / Central LA</h2>
+  <p class="lede">Verified official indicators driving the Central LA economy and the value of a NNN pad asset: output, jobs, unemployment, trade, retail spending, and the adopted Downtown plan. Every row links to its source.</p>
+
+  <div class="grid kpis">
+    <div class="kpi"><div class="label">Real GDP 2024 (LA County)</div><div class="value">$810.8B</div><div class="sub">Chained 2017 $ · 2023: $794.4B <span class="badge b-computed">Computed +2.1%</span></div><div class="src"><a href="https://fred.stlouisfed.org/series/REALGDPALL06037" target="_blank" rel="noopener">BEA via FRED ↗</a></div></div>
+    <div class="kpi"><div class="label">Nonfarm payroll (Sep 2026)</div><div class="value">4.54M</div><div class="sub">4,539,800 · +20,300 YoY (+0.4%)</div><div class="src"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">CA EDD LMI ↗</a></div></div>
+    <div class="kpi"><div class="label">Port of LA — FY2025</div><div class="value">10.5M TEU</div><div class="sub">3rd straight FY &gt;10M TEU · Sep 2026: 1,042,652 TEU (all-time month)</div><div class="src"><a href="https://portoflosangeles.org/references/2025-news-releases/news_071425_june_cargo" target="_blank" rel="noopener">Port of LA ↗</a></div></div>
+    <div class="kpi"><div class="label">Retail sales 2022 (county)</div><div class="value">$213.9B</div><div class="sub">$22,010 retail sales per capita · accommodation &amp; food services $44.0B</div><div class="src"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts (Economic Census 2022) ↗</a></div></div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Output &amp; income (BEA, official)</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Indicator</th><th>Value</th><th>Vintage</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>GDP, current dollars — Los Angeles County</td><td>$1,002,965,029 thousand (≈ $1.003T) — largest county economy in the US</td><td>2024</td><td class="src-cell"><a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener">BEA GDP by County news release, Feb 2026 ↗</a> · <a href="https://fred.stlouisfed.org/series/GDPALL06037" target="_blank" rel="noopener">FRED GDPALL06037 ↗</a></td></tr>
+          <tr><td>Real GDP, chained 2017 $</td><td>$810,842,127 thousand (2024)</td><td>2024</td><td class="src-cell"><a href="https://fred.stlouisfed.org/series/REALGDPALL06037" target="_blank" rel="noopener">BEA via FRED REALGDPALL06037 ↗</a></td></tr>
+          <tr><td>Real GDP by year — 2020 / 2021 / 2022 / 2023 / 2024</td><td>$728.6B / $773.3B / $785.2B / $794.4B / $810.8B</td><td>2020–2024</td><td class="src-cell"><a href="https://fred.stlouisfed.org/series/REALGDPALL06037" target="_blank" rel="noopener">BEA via FRED ↗</a></td></tr>
+          <tr><td>Real GDP growth 2023→2024</td><td>≈ <b>+2.1%</b> (810.8 / 794.4 − 1)</td><td>2024</td><td class="src-cell"><span class="badge b-computed">Computed</span> from above</td></tr>
+          <tr><td>Personal income — Los Angeles County</td><td>$818.5B (2024) — highest of all US counties</td><td>2024</td><td class="src-cell"><a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener">BEA, Feb 2026 ↗</a></td></tr>
+          <tr><td>Accommodation &amp; food services sales (county)</td><td>$44,000,801 thousand (2022) — direct proxy for QSR demand base</td><td>2022</td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts / Economic Census ↗</a></td></tr>
+          <tr><td>Employer establishments (county)</td><td>304,988 (2023) · employment 3,987,736 · payroll $299.6B · employment +2.3% 2022–23</td><td>2023</td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts / County Business Patterns ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bars mt16" aria-label="Real GDP of Los Angeles County, $B">
+      <div class="bar-row"><span>2020 — $728.6B</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div><span class="bar-val">$728.6B</span></div>
+      <div class="bar-row"><span>2021 — $773.3B</span><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div><span class="bar-val">$773.3B</span></div>
+      <div class="bar-row"><span>2022 — $785.2B</span><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div><span class="bar-val">$785.2B</span></div>
+      <div class="bar-row"><span>2023 — $794.4B</span><div class="bar-track"><div class="bar-fill" style="width:98%"></div></div><span class="bar-val">$794.4B</span></div>
+      <div class="bar-row"><span>2024 — $810.8B</span><div class="bar-track"><div class="bar-fill amber" style="width:100%"></div></div><span class="bar-val">$810.8B</span></div>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Employment &amp; unemployment (BLS / CA EDD, official)</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Indicator</th><th>Value</th><th>Period</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Unemployment rate — LA County (annual, not SA)</td><td>2021: 9.0% · 2022: 5.0% · 2023: 5.1% · 2024: 5.8% · <b>2025: 5.7%</b></td><td>Annual</td><td class="src-cell"><a href="https://fred.stlouisfed.org/series/LAUCN060370000000003A" target="_blank" rel="noopener">BLS Local Area Unemployment via FRED ↗</a></td></tr>
+          <tr><td>LA-Long Beach-Anaheim MSA unemployment (not SA)</td><td>5.6% (Jun 2025); LA-LB-Glendale division 5.9% — highest among divisions</td><td>Jun 2025</td><td class="src-cell"><a href="https://www.bls.gov/news.release/archives/metro_07302025.pdf" target="_blank" rel="noopener">BLS Metropolitan Area Employment &amp; Unemployment, Jul 30 2025 ↗</a></td></tr>
+          <tr><td>LA County — seasonally adjusted UR (Sep 2026)</td><td><b>4.8%</b> (Aug 2026 revised 5.0%; Sep 2025: 5.6%)</td><td>Sep 2026</td><td class="src-cell"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">CA EDD, Oct 16 2026 ↗</a></td></tr>
+          <tr><td>LA County — labor force / employed / unemployed (Sep 2026)</td><td>4,990,000 / 4,751,000 / 239,000 (not SA UR 4.5%)</td><td>Sep 2026</td><td class="src-cell"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">CA EDD ↗</a></td></tr>
+          <tr><td>LA County — nonfarm employment (Sep 2026)</td><td>4,539,800 · +20,300 YoY (+0.4%) · educational &amp; health services +37,500 YoY (healthcare-led)</td><td>Sep 2026</td><td class="src-cell"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">CA EDD ↗</a></td></tr>
+          <tr><td>Comparison — California / US UR (SA, Sep 2026)</td><td>CA 5.1% · US 4.2%</td><td>Sep 2026</td><td class="src-cell"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">CA EDD ↗</a></td></tr>
+          <tr><td>Benchmark revision note</td><td>March 2025 benchmark applied; figures not seasonally adjusted unless marked SA</td><td>—</td><td class="src-cell"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">CA EDD ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bars mt16" aria-label="LA County unemployment rate by year">
+      <div class="bar-row"><span>2021 — 9.0%</span><div class="bar-track"><div class="bar-fill amber" style="width:100%"></div></div><span class="bar-val">9.0%</span></div>
+      <div class="bar-row"><span>2022 — 5.0%</span><div class="bar-track"><div class="bar-fill" style="width:56%"></div></div><span class="bar-val">5.0%</span></div>
+      <div class="bar-row"><span>2023 — 5.1%</span><div class="bar-track"><div class="bar-fill" style="width:57%"></div></div><span class="bar-val">5.1%</span></div>
+      <div class="bar-row"><span>2024 — 5.8%</span><div class="bar-track"><div class="bar-fill" style="width:64%"></div></div><span class="bar-val">5.8%</span></div>
+      <div class="bar-row"><span>2025 — 5.7%</span><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div><span class="bar-val">5.7%</span></div>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Trade &amp; logistics (Port of Los Angeles, official)</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Indicator</th><th>Value</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>FY2025 (Jul 2024–Jun 2025) throughput</td><td>10.5M TEU — third fiscal year above 10M; only Western Hemisphere port to do so, with no vessel backlog</td><td class="src-cell"><a href="https://portoflosangeles.org/references/2025-news-releases/news_071425_june_cargo" target="_blank" rel="noopener">Port of LA news release, Jul 14 2025 ↗</a></td></tr>
+          <tr><td>July 2025 — busiest month in port history</td><td>1,019,837 TEU (+8.5% YoY); loaded imports 543,728 TEU (record)</td><td class="src-cell"><a href="https://portoflosangeles.org/references/2025-news-releases/news_081325_july_cargo" target="_blank" rel="noopener">Port of LA, Aug 13 2025 ↗</a></td></tr>
+          <tr><td>Calendar 2025 (through November)</td><td>9,447,731 TEU after 11 months, ≈ +1–2% YoY; full year &gt;10M TEU — third-best year on record</td><td class="src-cell"><a href="https://portoflosangeles.org/references/2025-news-releases/news_121625_nov_cargo" target="_blank" rel="noopener">Port of LA, Dec 16 2025 ↗</a></td></tr>
+          <tr><td>September 2026 — all-time monthly record</td><td>1,042,652 TEU (118-year history)</td><td class="src-cell"><a href="https://portoflosangeles.org/news/latest-news" target="_blank" rel="noopener">Port of LA latest news ↗</a></td></tr>
+          <tr><td>Why it matters</td><td>Trade/logistics is a core LA growth engine and employer; supports consumer spending powering QSR pads across the county; tariff "front-loading" cycles can swing volumes ±10% month-to-month</td><td class="src-cell"><a href="https://portoflosangeles.org/references/2025-news-releases/news_021925_jan_cargo" target="_blank" rel="noopener">Port of LA, Feb 19 2025 ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Official forecasts &amp; adopted plans shaping 2026–2035</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Source (official / quasi-public)</th><th>Key projection or plan</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>LAEDC 2025 Economic Forecast (Institute for Applied Economics, Nov 2025)</td><td>County real GDP: +2.1% (2025), +1.3% (2026) after +3.4% (2024); payroll jobs +0.7% (2025), +0.2% (2026); UR to 6.1% (2025) from 5.7% (2024); cost of doing business ≈ 20% above national average; education/health &amp; leisure/hospitality drive growth; manufacturing declines; film/TV below pre-strike levels; 2028 Olympics infrastructure = investment driver</td><td class="src-cell"><a href="https://laedc.org/laedc-releases-2025-economic-forecast-report/" target="_blank" rel="noopener">LAEDC ↗</a></td></tr>
+          <tr><td>LAEDC 2026 Economic Forecast (Feb 2026)</td><td>"From Disruption to Direction": continued but moderated employment growth; trade/logistics strength; housing affordability constraints on workforce mobility; strategic investment opportunities</td><td class="src-cell"><a href="https://laedc.org/laedc-releases-the-2026-economic-forecast" target="_blank" rel="noopener">LAEDC ↗</a></td></tr>
+          <tr><td>Downtown Community Plan — DTLA 2040 (City of Los Angeles, adopted May 3, 2023; new zoning finalized Dec 2024)</td><td>Plan targets by 2040: <b>+125,000 residents · +70,000 housing units · +55,000 jobs</b>; first area under LA's new form-based zoning code; Skid Row IX1 zone (≥80% affordable new units there)</td><td class="src-cell"><a href="https://planning.lacity.gov/plans-policies/community-plan-updates/downtown-community-plan-update-dtla-2040" target="_blank" rel="noopener">LA City Planning ↗</a> · <span class="badge b-reported">Reported</span> <a href="https://www.ladowntownnews.com/news/downtown-community-plan-city-council-approves-2040-proposal/article_7171801a-f4e9-11ed-844f-933bc96732e4.html" target="_blank" rel="noopener">LA Downtown News ↗</a></td></tr>
+          <tr><td>California EDD — Labor Market Information</td><td>Official monthly county labor force/employment benchmarks (March 2025 benchmark) used throughout this report</td><td class="src-cell"><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener">EDD ↗</a></td></tr>
+          <tr><td>2028 Olympic &amp; Paralympic Games (LA28)</td><td>LAEDC cites Olympics prep as a continuing driver of infrastructure investment and business opportunity in the region; no official standalone $ impact figure is adopted by the City/LAEDC in sources reviewed — see Flagged for Review</td><td class="src-cell"><span class="badge b-reported">Reported</span> <a href="https://laedc.org/laedc-releases-2025-economic-forecast-report/" target="_blank" rel="noopener">LAEDC ↗</a> · <span class="badge b-flagged">Flagged</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><b>Read-across for the property.</b> Central LA is not a high-population-growth story; it is an <b>income-density + re-zoning + Olympics-infrastructure</b> story. That favors assets with DTLA adjacency, drive-thru access, and long lease terms — and it raises the value of the land under the pad more than the pad itself.</div>
+  </div>
+
+  <div class="foot">Jack2 · Market &amp; Economy · All figures cited inline; computed values marked <span class="badge b-computed">Computed</span>. County economic output per BEA (released Feb 2026). See <a href="sources.html">Sources</a>.</div>
+</main>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
