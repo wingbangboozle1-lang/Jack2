@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "purpose": "Every number used in the valuation and projection work, separated into (a) verified official figures and (b) labelled analyst assumptions that the client can change.",
+    "hard_rule": "No verified figure is ever estimated. No assumption is ever presented as data."
+  },
+  "verified_inputs": [
+    { "key": "t10", "label": "10-year Treasury yield", "value": 4.90, "unit": "%", "source": "S11", "date": "2026-11-04" },
+    { "key": "fed_upper", "label": "FOMC target range upper limit", "value": 4.00, "unit": "%", "source": "S12", "date": "2026-11-05" },
+    { "key": "netlease_yield", "label": "Net-lease acquisition initial weighted average cash yield (Realty Income, FY2025)", "value": 7.3, "unit": "%", "source": "S10", "date": "FY2025" },
+    { "key": "cpi_la", "label": "CPI-U Los Angeles metro, 12-month change", "value": 3.6, "unit": "%", "source": "S1", "date": "Aug 2026" },
+    { "key": "prop13_levy", "label": "Proposition 13 general levy", "value": 1.00, "unit": "% of assessed value", "source": "S6", "date": "current" },
+    { "key": "prop13_cap", "label": "Proposition 13 annual assessed value cap", "value": 2.00, "unit": "%", "source": "S6", "date": "current" },
+    { "key": "county_dtt", "label": "Los Angeles County documentary transfer tax", "value": 0.11, "unit": "% of price", "source": "S7", "date": "current" },
+    { "key": "city_dtt", "label": "City of Los Angeles documentary transfer tax", "value": 0.45, "unit": "% of price", "source": "S7", "date": "current" },
+    { "key": "ula_t1", "label": "Measure ULA tier 1 surtax (above $5.4M, below $10.9M)", "value": 4.0, "unit": "% of gross price", "source": "S8", "date": "closings on/after 2026-07-01" },
+    { "key": "ula_t2", "label": "Measure ULA tier 2 surtax (at/above $10.9M)", "value": 5.5, "unit": "% of gross price", "source": "S8", "date": "closings on/after 2026-07-01" },
+    { "key": "ula_threshold_1", "label": "Measure ULA tier 1 threshold", "value": 5400000, "unit": "USD", "source": "S8", "date": "closings on/after 2026-07-01" },
+    { "key": "ula_threshold_2", "label": "Measure ULA tier 2 threshold", "value": 10900000, "unit": "USD", "source": "S8", "date": "closings on/after 2026-07-01" },
+    { "key": "auv", "label": "Jack in the Box franchise average unit volume", "value": 1874000, "unit": "USD/unit/year", "source": "S9", "date": "FY2025" },
+    { "key": "prototype_size", "label": "Prototype building size", "value": 1372, "unit": "sq ft", "source": "S9", "date": "FY2025" },
+    { "key": "fastfood_wage", "label": "California fast food minimum wage", "value": 20.00, "unit": "USD/hour", "source": "S5", "date": "in force since 2024-04-01" },
+    { "key": "state_wage", "label": "California statewide minimum wage", "value": 16.90, "unit": "USD/hour", "source": "S4", "date": "effective 2026-01-01" },
+    { "key": "msa_jobs_growth", "label": "Los Angeles metro nonfarm employment, 12-month change", "value": 0.6, "unit": "%", "source": "S1", "date": "Aug 2026" },
+    { "key": "county_pop_2035", "label": "Los Angeles County projected population", "value": 9708647, "unit": "persons", "source": "S3", "date": "2035" },
+    { "key": "county_pop_2025", "label": "Los Angeles County population", "value": 9853435, "unit": "persons", "source": "S3", "date": "2025" }
+  ],
+  "analyst_assumptions": [
+    { "key": "A1", "label": "Subject base rent used in the model", "value": 150000, "unit": "USD/year", "basis": "8.0% of the verified FY2025 franchise AUV ($1,874k). This is a benchmark, NOT the subject's actual rent. Replace with the leases's contract rent (P03).", "confidence": "low - placeholder", "verified": false },
+    { "key": "A2", "label": "Contract rent escalation", "value": 2.0, "unit": "%/year", "basis": "Typical NNN escalation band of 1.5%-3.0%. Observed metro CPI is 3.6% (verified), so a 2.0% escalator transfers real value to the landlord only if the lease compounds it.", "confidence": "medium", "verified": false },
+    { "key": "A3", "label": "Lease expiration date used", "value": 2032, "unit": "year", "basis": "Midpoint of the stated 2030-2035 window. Actual date is P02 and is material: each year shifts NPV.", "confidence": "low - placeholder", "verified": false },
+    { "key": "A4", "label": "Discount rate for owner-level cash flows", "value": 8.0, "unit": "%", "basis": "10-year Treasury 4.90% (verified) plus a 3.1 point illiquidity/single-tenant premium. Premium size is judgment.", "confidence": "medium", "verified": false },
+    { "key": "A5", "label": "Exit cap rate - base case", "value": 6.50, "unit": "%", "basis": "Set inside the 5.50%-7.00% range tested. Anchored directionally to the 7.3% net-lease acquisition yield (verified, S10) which covers Europe/industrial; a single QSR in Los Angeles typically prices tighter. Asset-level cap rate is unverified (M51).", "confidence": "low", "verified": false },
+    { "key": "A6", "label": "Brokerage and closing costs on sale", "value": 3.50, "unit": "% of price", "basis": "3.0% brokerage plus 0.5% escrow/title/legal. Negotiable; not a government-published figure.", "confidence": "medium", "verified": false },
+    { "key": "A7", "label": "Renewal probability at expiry - base case", "value": 75, "unit": "%", "basis": "Tenant's own filing states it has generally been able to renew at then-current market rates (verified S9). Probability is judgment and scenario-specific.", "confidence": "medium", "verified": false },
+    { "key": "A8", "label": "Downtime if the tenant does not renew", "value": 18, "unit": "months", "basis": "Re-tenanting a drive-thru requires entitlement and build-out; no official dataset measures this.", "confidence": "low", "verified": false },
+    { "key": "A9", "label": "Landlord leasing costs on re-tenanting", "value": 300000, "unit": "USD", "basis": "Tenant improvements plus leasing commission plus carrying costs during downtime. Judgment.", "confidence": "low", "verified": false },
+    { "key": "A10", "label": "Reinvestment yield if sold", "value": 4.90, "unit": "%", "basis": "Verified 10-year Treasury (S11) as the risk-free alternative. A like-kind exchange into another net-lease asset could plausibly earn 7.0%-7.3% (S10) with added concentration risk.", "confidence": "high", "verified": true },
+    { "key": "A11", "label": "Hold period for the reinvestment comparison", "value": 2040, "unit": "year", "basis": "Long enough to span a full cycle after the 2030-2035 expiry.", "confidence": "medium", "verified": false }
+  ],
+  "transaction_cost_stack": [
+    { "line": "Brokerage", "rate_pct": 3.00, "source": "A6" },
+    { "line": "Escrow, title, legal", "rate_pct": 0.50, "source": "A6" },
+    { "line": "Los Angeles County documentary transfer tax", "rate_pct": 0.11, "source": "S7" },
+    { "line": "City of Los Angeles documentary transfer tax", "rate_pct": 0.45, "source": "S7" },
+    { "line": "Measure ULA tier 1 (only if price >= $5,400,000)", "rate_pct": 4.00, "source": "S8" },
+    { "line": "Measure ULA tier 2 (only if price >= $10,900,000)", "rate_pct": 5.50, "source": "S8" }
+  ],
+  "cap_rate_sensitivity_bands": [
+    { "band": "5.50%", "interpretation": "Strong market, long lease, credit tenant. Best-case exit." },
+    { "band": "6.00%", "interpretation": "Healthy single-tenant QSR pricing." },
+    { "band": "6.50%", "interpretation": "Base case used in the model." },
+    { "band": "7.00%", "interpretation": "Rate-stress or short remaining term." },
+    { "band": "7.50%+", "interpretation": "Distressed / near-expiry / tenant-credit concern." }
+  ],
+  "tax_layer": {
+    "status": "not modeled - requires CPA",
+    "reason": "Federal long-term capital gains, unrecaptured Section 1250 depreciation recapture, net investment income tax, and California income tax each depend on the owner's basis, holding period, depreciation history, entity structure, and other income. None of those are in the brief (P05). Publishing a rate stack without them would be a fabrication.",
+    "verified_mechanism": "Section 1031 permits deferral of gain on the exchange of real property held for productive use or investment, with carryover basis and qualified-intermediary mechanics (S16).",
+    "practical_effect": "A 1031 exchange is the main tool that separates 'sell' from 'lose 30%+ of the gain'. It is why the recommendation is structured as a sequencing decision, not a binary sell/hold."
+  }
+}
