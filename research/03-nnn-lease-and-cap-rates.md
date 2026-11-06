@@ -71,7 +71,7 @@ This is not a "wait for rate cuts" environment. It is the opposite. The Boulder 
 ### The four facts that matter most from this table
 
 1. **Corporate vs franchisee QSR is a ~100 bp spread** (5.85 % vs 6.85 %). If the Subject Property's tenant is a franchisee without a corporate guaranty, its pricing anchor is the 6.85 % line, not the 5.85 % line.
-2. **Term is worth a lot.** 7-Eleven 5-yr prices 5.90–6.20 %; the same credit at 15-yr prices 4.80–5.15 %. That is **~105 bp of pure term premium on identical credit** — roughly **17 %** more value for the same NOI.
+2. **Term is worth a lot.** 7-Eleven 5-yr prices 5.90–6.20 %; the same credit at 15-yr prices 4.80–5.15 %. That is **~107 bp of pure term premium on identical credit** — roughly **21 %** more value for the same NOI (1 ÷ 4.975 % versus 1 ÷ 6.05 %, using the midpoints of each range).
 3. **Brand weakness is priced brutally and fast.** Burger King at 10-yr (6.30–6.60 %) already sits well inside the franchisee-QSR average despite investment-grade-adjacent scale. Family Dollar moved from investment grade to unrated and repriced instantly to 8.50–8.90 % at 5-yr.
 4. **The market is bifurcating, not falling.** Long-term premium credit trades tight; short-term and unrated product trades wide. The Subject Property sits firmly on the **short-term, unrated** side of that line today — and will sit further out on it every year it is not extended.
 

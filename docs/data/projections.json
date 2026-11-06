@@ -415,45 +415,45 @@
  "term_decay": [
   {
    "year": 2026,
-   "remaining_term_years": 6.85,
-   "cap_pct": 7.8,
-   "value_per_1_noi": 12.83
+   "remaining_term_years": 6.15,
+   "cap_pct": 8.02,
+   "value_per_1_noi": 12.47
   },
   {
    "year": 2027,
-   "remaining_term_years": 5.85,
-   "cap_pct": 8.11,
-   "value_per_1_noi": 12.33
+   "remaining_term_years": 6.0,
+   "cap_pct": 8.06,
+   "value_per_1_noi": 12.4
   },
   {
    "year": 2028,
-   "remaining_term_years": 4.85,
-   "cap_pct": 8.42,
-   "value_per_1_noi": 11.87
+   "remaining_term_years": 5.0,
+   "cap_pct": 8.38,
+   "value_per_1_noi": 11.94
   },
   {
    "year": 2029,
-   "remaining_term_years": 3.85,
-   "cap_pct": 8.73,
-   "value_per_1_noi": 11.45
+   "remaining_term_years": 4.0,
+   "cap_pct": 8.69,
+   "value_per_1_noi": 11.51
   },
   {
    "year": 2030,
-   "remaining_term_years": 2.85,
-   "cap_pct": 9.08,
-   "value_per_1_noi": 11.02
+   "remaining_term_years": 3.0,
+   "cap_pct": 9.0,
+   "value_per_1_noi": 11.11
   },
   {
    "year": 2031,
-   "remaining_term_years": 1.85,
-   "cap_pct": 9.58,
-   "value_per_1_noi": 10.44
+   "remaining_term_years": 2.0,
+   "cap_pct": 9.5,
+   "value_per_1_noi": 10.52
   },
   {
    "year": 2032,
-   "remaining_term_years": 0.85,
-   "cap_pct": 10.08,
-   "value_per_1_noi": 9.93
+   "remaining_term_years": 1.0,
+   "cap_pct": 10.0,
+   "value_per_1_noi": 10.0
   },
   {
    "year": 2033,
@@ -475,12 +475,28 @@
   }
  ],
  "extension_uplift": {
-  "cap_now_pct": 7.91,
+  "cap_now_pct": 8.02,
   "cap_after_extension_pct": 6.4,
-  "value_now_per_1_noi": 12.65,
+  "value_now_per_1_noi": 12.48,
   "value_after_per_1_noi": 15.62,
-  "uplift_pct": 23.5,
-  "uplift_dollars_at_200k_noi": 595356
+  "uplift_pct": 25.2,
+  "uplift_dollars_at_200k_noi": 629873
+ },
+ "central": {
+  "term_now_years": 6.15,
+  "expiry_midpoint": "2032-12-31",
+  "cap_now_pct": 8.02,
+  "value_now_per_1_noi": 12.48,
+  "cap_extended_pct": 6.4,
+  "value_extended_per_1_noi": 15.62,
+  "uplift_pct": 25.2,
+  "uplift_dollars_at_200k_noi": 629873,
+  "cap_final_year_pct": 10.38,
+  "value_final_year_per_1_noi": 9.64,
+  "term_decay_pct": -22.7,
+  "value_lost_to_decay_dollars_at_200k_noi": -567416,
+  "value_per_bp_of_cap_dollars_at_200k_noi": -160212,
+  "pct_value_per_55bp_of_cap": -6.4
  },
  "breakeven": [
   {

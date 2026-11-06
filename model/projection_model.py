@@ -34,6 +34,9 @@ import statistics
 
 SEED = 20261106
 AS_OF = 2026.85                 # 2026-11-06 as a decimal year
+# Midpoint of the Owner-stated expiry range 2030-01-01 .. 2035-12-31, expressed as a date.
+EXPIRY_MIDPOINT = 2032.997      # 2032-12-31
+TERM_NOW = round(EXPIRY_MIDPOINT - AS_OF, 2)   # remaining term today at the midpoint, in years
 YEARS_SALE = 2040               # common terminal date: all strategies exit by 2040
 OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs", "data")
 
@@ -463,14 +466,14 @@ def main() -> None:
     # ---- term decay ----
     term_decay = []
     for y in range(2026, 2036):
-        term = max(2032.85 - y, 0.25)
+        term = max(EXPIRY_MIDPOINT - (AS_OF if y == 2026 else y), 0.25)
         cap = cap_for_term(term)
         term_decay.append({"year": y, "remaining_term_years": round(term, 2),
                            "cap_pct": round(cap, 2),
                            "value_per_1_noi": round(1 / (cap / 100), 2)})
 
-    # ---- extension uplift ----
-    base_cap = cap_for_term(6.5)
+    # ---- extension uplift (central case uses TERM_NOW, the midpoint of the stated range) ----
+    base_cap = cap_for_term(TERM_NOW)
     ext_cap = cap_for_term(BASE["extend_target_term_years"])
     uplift = {
         "cap_now_pct": round(base_cap, 2),
@@ -479,6 +482,30 @@ def main() -> None:
         "value_after_per_1_noi": round(1 / (ext_cap / 100), 2),
         "uplift_pct": round(100 * ((1 / (ext_cap / 100)) / (1 / (base_cap / 100)) - 1), 1),
         "uplift_dollars_at_200k_noi": round((1 / (ext_cap / 100) - 1 / (base_cap / 100)) * 200_000),
+    }
+
+    # ---- central case: every headline figure derived from one place ----
+    cap_now = cap_for_term(TERM_NOW)
+    cap_ext = cap_for_term(BASE["extend_target_term_years"])
+    cap_end = cap_for_term(0.25)
+    val_now = 1 / (cap_now / 100)
+    val_ext = 1 / (cap_ext / 100)
+    val_end = 1 / (cap_end / 100)
+    central = {
+        "term_now_years": TERM_NOW,
+        "expiry_midpoint": "2032-12-31",
+        "cap_now_pct": round(cap_now, 2),
+        "value_now_per_1_noi": round(val_now, 2),
+        "cap_extended_pct": round(cap_ext, 2),
+        "value_extended_per_1_noi": round(val_ext, 2),
+        "uplift_pct": round(100 * (val_ext / val_now - 1), 1),
+        "uplift_dollars_at_200k_noi": round((val_ext - val_now) * 200_000),
+        "cap_final_year_pct": round(cap_end, 2),
+        "value_final_year_per_1_noi": round(val_end, 2),
+        "term_decay_pct": round(100 * (val_end / val_now - 1), 1),
+        "value_lost_to_decay_dollars_at_200k_noi": round((val_end - val_now) * 200_000),
+        "value_per_bp_of_cap_dollars_at_200k_noi": round((1 / ((cap_now + 0.55) / 100) - val_now) * 200_000),
+        "pct_value_per_55bp_of_cap": round(100 * ((1 / ((cap_now + 0.55) / 100)) / val_now - 1), 1),
     }
 
     # ---- break-even Treasury level ----
@@ -523,6 +550,7 @@ def main() -> None:
         "expiry_sensitivity": expiry_sens,
         "term_decay": term_decay,
         "extension_uplift": uplift,
+        "central": central,
         "breakeven": breakeven,
         "tax_waterfall_example": ex,
         "value_of_information": voi,
@@ -551,6 +579,7 @@ def main() -> None:
         print(f"   {results[k]['label']:34s} CE={results[k]['certainty_equiv_crra3']:7.3f}  "
               f"vs A {results[k]['ce_vs_A_pct']:+6.1f}%   worst-10% avg={results[k]['cvar_10pct']:6.3f}")
     print()
+    print("Central case:", central)
     print("Extension uplift:", uplift)
     print("Value of resolving the expiry date:", voi)
     print()

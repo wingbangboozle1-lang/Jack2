@@ -25,10 +25,10 @@ Scores are present value of after-tax wealth at a 2040 horizon, per $1.00 of cur
 ## Five findings that drive the answer
 
 **1. Time is destroying value mechanically — about 25 % of it.**
-On the model's cap-rate term curve the asset is worth **$12.83 per $1 of NOI today** and **$9.64** once the lease is inside its final year. That is **−24.9 %** from the passage of time alone, with no change in rent, tenant or market. Every month the lease runs down, the Owner gives that away for free.
+On the model's cap-rate term curve the asset is worth **$12.48 per $1 of NOI today** (midpoint expiry, 6.15 years remaining) and **$9.64** once the lease is inside its final year. That is **−22.7 %** from the passage of time alone, with no change in rent, tenant or market. Every month the lease runs down, the Owner gives that away for free.
 
 **2. A signature is worth more than a rate cut.**
-Moving from ~6.5 years remaining to ~15 years moves the model cap rate from **7.91 % to 6.40 %** — the same NOI is suddenly worth **$15.62 instead of $12.65** per $1. That is **+23.5 %**, or **≈ $595,000** on a $200,000-NOI asset. No plausible interest-rate scenario competes with that.
+Moving from 6.15 years remaining to ~15 years moves the model cap rate from **8.02 % to 6.40 %** — the same NOI is suddenly worth **$15.62 instead of $12.48** per $1. That is **+25.2 %**, or **≈ $630,000** on a $200,000-NOI asset. No plausible interest-rate scenario competes with that.
 
 **3. The trade area will not bail the asset out.**
 Los Angeles County has **lost 322,480 residents (−3.2 %)** since the 2020 census base. Metro payrolls have grown **+0.10 % per year over seven years** and are **1.2 % below** their October 2024 peak. County median household income is $90,112 against a $834,200 median home value. There is no growth engine here — this is a mature, deep, slowly contracting market. **Underwrite zero real NOI growth.**

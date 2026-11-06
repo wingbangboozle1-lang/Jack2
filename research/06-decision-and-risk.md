@@ -30,7 +30,7 @@ This deserves its own section because it is the intuitive, do-nothing answer and
 
 | Mechanism | What happens |
 |---|---|
-| **Term decay** | Remaining term falls every month. On the model's cap curve the asset is worth **$12.83 per $1 NOI today** and **$9.64** once the lease is inside its final year — a **−24.9 %** decline from pure passage of time, with no change in rent, tenant or market. |
+| **Term decay** | Remaining term falls every month. On the model's cap curve the asset is worth **$12.48 per $1 NOI today** (midpoint expiry, 6.15 years remaining) and **$9.64** once the lease is inside its final year — a **−22.7 %** decline from pure passage of time, with no change in rent, tenant or market. |
 | **Optionality transfer** | At expiry the Owner holds a **vacant building in a market with flat job growth and falling population**, and the franchisee holds the option to walk. The Owner pays the carry (taxes, insurance, security, code compliance) while the option is exercised against them. |
 | **Lost 1031 window** | A §1031 exchange requires identifying replacement property within **45 days** and closing within **180 days** of sale. Selling under time pressure, or after a tenant default, is exactly when an Owner is least able to run a disciplined exchange. |
 | **Financing cost** | Buyer financing is priced off a **7.18 %** 30-year mortgage and a **4.90 %** 10-year Treasury. Every quarter of term decay makes the asset harder to finance, which shrinks the buyer pool to all-cash 1031 buyers — who know it. |
@@ -40,7 +40,7 @@ This deserves its own section because it is the intuitive, do-nothing answer and
 
 Three numbers do most of the work:
 
-1. **The extension premium is ~23.5 %.** Same NOI, same tenant: moving from ~6.5 years remaining to ~15 years remaining moves the model cap rate from **7.91 % to 6.40 %**, i.e. value from **$12.65 to $15.62 per $1 of NOI**. On a $200,000-NOI asset that is **≈ $595,000** of value created by a signature.
+1. **The extension premium is ~25.2 %.** Same NOI, same tenant: moving from 6.15 years remaining to ~15 years remaining moves the model cap rate from **8.02 % to 6.40 %**, i.e. value from **$12.48 to $15.62 per $1 of NOI**. On a $200,000-NOI asset that is **≈ $630,000** of value created by a signature.
 2. **The expiry ambiguity is worth ~$500,000.** Moving the assumed expiry from 2030 to 2035 changes value from **$11.57 to $14.07** per $1 NOI (**+21.6 %**).
 3. **Selling costs ~23 % in tax if you sell badly and ~0 % if you sell well.** The illustrative waterfall on a sale at 12.51× NOI: adjusted basis 4.68, total gain 7.83, of which 1.32 is unrecaptured §1250 recapture taxed at 25 %, and **total tax 2.92 (23.3 % of price)**. A §1031 exchange removes it from the sale moment — but it does **not** eliminate the liability, which is why the model deducts it as a contingent liability rather than pretending it is free.
 
@@ -88,8 +88,8 @@ Severity is the model's impact on the Owner's wealth; likelihood is judged from 
 |---|---|---|---|---|---|---|
 | R1 | **Lease terms unknown** — wrong expiry, below-market option, tenant-held renewal at fixed rent | Structural | **Certain** (document not supplied) | **High** (~21.6 % of value at stake) | Read the lease; get an estoppel | **Blocking — do first** |
 | R2 | **Tenant/franchisee default or non-renewal** | Credit | Medium (3.5 %/yr modelled) | **High** — worst-decile collapse to 1.88× NOI | Corporate guaranty; security deposit; personal guaranty; sell before expiry | Due diligence on franchisee |
-| R3 | **Term decay** — value falls as lease shortens | Structural | **Certain** | **High** (−24.9 % from 2026 to final year, mechanical) | Extend, or sell before decay compounds | Decision timing |
-| R4 | **Cap-rate expansion from rising rates** — 10-yr 4.06 %→4.90 %, Fed hiked to 3.88 %, 30-yr mortgage 7.18 % | Market | **Elevated** | **High** — each +55 bp of cap ≈ −6.5 % of value | Sell into the dislocation rather than after it | Now |
+| R3 | **Term decay** — value falls as lease shortens | Structural | **Certain** | **High** (−22.7 % from 2026 to final year, mechanical) | Extend, or sell before decay compounds | Decision timing |
+| R4 | **Cap-rate expansion from rising rates** — 10-yr 4.06 %→4.90 %, Fed hiked to 3.88 %, 30-yr mortgage 7.18 % | Market | **Elevated** | **High** — each +55 bp of cap ≈ −6.4 % of value | Sell into the dislocation rather than after it | Now |
 | R5 | **Brand retrenchment** — JACK SSS −4.2 % FY25, −7.4 % in Q4, units 2,168→2,115, Del Taco sold at a ~$470 m loss | Credit | **Observed, ongoing** | Medium–High | Price it in; prefer a corporate guaranty | Now |
 | R6 | **Trade-area stagnation** — LA County pop −3.2 % since 2020; metro payrolls +0.10 %/yr over 7 yrs, −1.2 % from the Oct-2024 peak | Market | **Observed** | Medium | Underwrite zero real NOI growth | Now |
 | R7 | **Wildfire / smoke / PSPS** — 2025: 8,232 CA wildfires, 16,627 structures lost, 4 LA County incidents ≥ 5,000 ac | Catastrophe | Medium (4 %/yr modelled) | Medium–High | Insurance covenant; exit | Verify FHSZ with address |

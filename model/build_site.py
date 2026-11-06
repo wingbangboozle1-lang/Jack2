@@ -179,6 +179,7 @@ def pager(slug):
 R = PROJ["results"]
 UP = PROJ["extension_uplift"]
 VOI = PROJ["value_of_information"]
+CE = PROJ["central"]
 SC = PROJ["scenarios"]
 STRATS = ["A_sell_now", "A1_sell_now_1031", "B_expire_sell_vacant", "C_renew_hold", "D_extend_sell_2028"]
 SHORT = {"A_sell_now": "A · Sell now, pay tax",
@@ -212,7 +213,7 @@ index_body = f"""
   </div>
   <div class="metrics">
     <div><span class="n">{UP['uplift_pct']:.1f}%</span><span class="l">Value from an extension</span></div>
-    <div><span class="n">−24.9%</span><span class="l">Value lost to term decay</span></div>
+    <div><span class="n">{CE['term_decay_pct']:.1f}%</span><span class="l">Value lost to term decay</span></div>
     <div><span class="n">4.90%</span><span class="l">10-yr Treasury</span></div>
     <div><span class="n">+3.72%</span><span class="l">CPI, year over year</span></div>
   </div>
@@ -256,15 +257,15 @@ constant relative risk aversion of 3 — the metric that answers "what certain a
 <div class="grid g2">
   <div class="card">
     <h3>01 · Time destroys value mechanically</h3>
-    <div class="big">−24.9%</div>
-    <div class="sub">Value per $1 of NOI falls from $12.83 today to $9.64 once the lease is inside its final year.
+    <div class="big">{CE['term_decay_pct']:.1f}%</div>
+    <div class="sub">Value per $1 of NOI falls from ${CE["value_now_per_1_noi"]:.2f} today to ${CE["value_final_year_per_1_noi"]:.2f} once the lease is inside its final year.
     No rent change, no tenant change, no market change — just the passage of time. Every month the lease runs
     down, that is given away for free.</div>
   </div>
   <div class="card">
     <h3>02 · A signature is worth more than a rate cut</h3>
     <div class="big pos">+{UP['uplift_pct']:.1f}%</div>
-    <div class="sub">Extending from ~6.5 years to ~15 years moves the model cap rate from 7.91% to 6.40%:
+    <div class="sub">Extending from {CE["term_now_years"]:.2f} years to ~{PROJ["assumptions"]["extend_target_term_years"]:.0f} years moves the model cap rate from {CE["cap_now_pct"]:.2f}% to {CE["cap_extended_pct"]:.2f}%:
     the same NOI goes from ${UP['value_now_per_1_noi']:.2f} to ${UP['value_after_per_1_noi']:.2f} per $1 —
     about ${UP['uplift_dollars_at_200k_noi']:,.0f} on a $200,000-NOI asset.</div>
   </div>
@@ -329,7 +330,7 @@ page("index.html", "Overview",
 risk_rows = [
     ("R1", "Lease terms unknown — wrong expiry, below-market option, tenant renewal at fixed rent", "Structural", "Certain", "High (~21.6% of value)", "Read the lease; obtain an estoppel", "Do first — blocking"),
     ("R2", "Tenant / franchisee default or non-renewal", "Credit", "Medium (3.5%/yr modelled)", "High", "Corporate or personal guaranty; sell before expiry", "Underwrite the franchisee"),
-    ("R3", "Term decay — value falls as the lease shortens", "Structural", "Certain", "High (−24.9% mechanical)", "Extend, or sell before decay compounds", "Timing decision now"),
+    ("R3", "Term decay — value falls as the lease shortens", "Structural", "Certain", f"High ({CE['term_decay_pct']:.1f}% mechanical)", "Extend, or sell before decay compounds", "Timing decision now"),
     ("R4", "Cap-rate expansion from rising rates", "Market", "Elevated", "High (~−6.5% per +55 bp)", "Sell into the move, not after it", "Now"),
     ("R5", "Brand retrenchment at Jack in the Box", "Credit", "Observed, ongoing", "Medium–High", "Price it in; prefer corporate guaranty", "Now"),
     ("R6", "Trade-area stagnation", "Market", "Observed", "Medium", "Underwrite zero real NOI growth", "Now"),
@@ -593,7 +594,7 @@ franchisee average for full-term durability, but well outside premium-brand 15-y
 <div class="table-wrap"><table>
 <thead><tr><th>Year</th><th>Remaining term (to midpoint expiry)</th><th>Model cap rate</th><th>Value per $1.00 of NOI</th></tr></thead>
 <tbody>{decay_rows}</tbody></table></div>
-<div class="callout danger"><p><strong>−24.9% from pure passage of time.</strong> $12.83 today, $9.64 once the lease
+<div class="callout danger"><p><strong>{CE["term_decay_pct"]:.1f}% from pure passage of time.</strong> ${CE["value_now_per_1_noi"]:.2f} today, ${CE["value_final_year_per_1_noi"]:.2f} once the lease
 is inside its final year. No rent change, no tenant change, no market change. This is the single largest
 self-inflicted cost in every "hold" strategy, and it is why strategy B is dominated.</p></div>
 
@@ -651,7 +652,7 @@ this layer so its influence is visible.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Line</th><th>Per $1.00 of current NOI</th><th>Note</th></tr></thead>
 <tbody>
-<tr><td class="metric">Gross sale price</td><td class="num">{PROJ['tax_waterfall_example']['price']:.4f}</td><td>NOI ÷ cap rate at ~6.5 years remaining</td></tr>
+<tr><td class="metric">Gross sale price</td><td class="num">{PROJ['tax_waterfall_example']['price']:.4f}</td><td>NOI ÷ cap rate at 6.15 years remaining</td></tr>
 <tr><td class="metric">Less sale costs</td><td class="num">3.0%</td><td>Commission, closing, transfer taxes</td></tr>
 <tr><td class="metric">Adjusted basis</td><td class="num">{PROJ['tax_waterfall_example']['adjusted_basis']:.4f}</td><td>Basis 6.00 less 22% accumulated depreciation</td></tr>
 <tr><td class="metric">Total gain</td><td class="num">{PROJ['tax_waterfall_example']['total_gain']:.4f}</td><td></td></tr>
@@ -774,7 +775,7 @@ tenant_body = f"""
 
 <div class="grid g4">
   {kpi("−4.2%", "FY2025 system same-store sales", "vs −1.3% in FY2024", "neg")}
-  {kpi("−7.4%", "Q4 FY2025 same-store sales", "Worst since the Great Recession", "neg")}
+  {kpi("−7.4%", "Q4 FY2025 same-store sales", "Second straight quarter of ≥7% decline", "neg")}
   {kpi("2,168 → 2,115", "Store count in four quarters", "51 closures in one block programme", "neg")}
   {kpi("−$470m", "Del Taco round trip", "Bought ~$585m, sold ~$119m", "neg")}
 </div>
@@ -905,15 +906,15 @@ a 0.62% cycle low to 5.13%.</p>
 
 <h2>Cap-rate sensitivity</h2>
 <div class="table-wrap"><table>
-<thead><tr><th>Cap rate</th><th>Value per $1.00 of NOI</th><th>Change vs 7.91%</th></tr></thead>
+<thead><tr><th>Cap rate</th><th>Value per $1.00 of NOI</th><th>Change vs 8.02% (today)</th></tr></thead>
 <tbody>
-<tr><td class="num">6.40%</td><td class="num">$15.62</td><td class="num">+23.5%</td></tr>
-<tr><td class="num">6.85%</td><td class="num">$14.60</td><td class="num">+15.4%</td></tr>
-<tr><td class="num">7.50%</td><td class="num">$13.33</td><td class="num">+5.4%</td></tr>
-<tr><td class="num"><b>7.91%</b></td><td class="num"><b>$12.65</b></td><td class="num"><b>base</b></td></tr>
-<tr><td class="num">8.46%</td><td class="num">$11.82</td><td class="num">−6.6%</td></tr>
-<tr><td class="num">9.00%</td><td class="num">$11.11</td><td class="num">−12.2%</td></tr>
-<tr><td class="num">10.50%</td><td class="num">$9.52</td><td class="num">−24.7%</td></tr>
+<tr><td class="num">6.40%</td><td class="num">$15.62</td><td class="num">+25.2%</td></tr>
+<tr><td class="num">6.85%</td><td class="num">$14.60</td><td class="num">+17.0%</td></tr>
+<tr><td class="num">7.50%</td><td class="num">$13.33</td><td class="num">+6.8%</td></tr>
+<tr><td class="num"><b>8.02%</b></td><td class="num"><b>$12.48</b></td><td class="num"><b>base</b></td></tr>
+<tr><td class="num">8.57%</td><td class="num">$11.67</td><td class="num">−6.4%</td></tr>
+<tr><td class="num">9.00%</td><td class="num">$11.11</td><td class="num">−10.9%</td></tr>
+<tr><td class="num">10.50%</td><td class="num">$9.52</td><td class="num">−23.7%</td></tr>
 </tbody></table></div>
 <p class="tbl-note">Derived arithmetic (NOI ÷ cap rate), consistent with the model's curve and with the same
 multiples published on the Projection page.</p>
@@ -976,7 +977,7 @@ ambiguity in a single sentence.</p></div>
 
 <h2>The extension premium</h2>
 <div class="grid g3">
-  {kpi(f"{UP['cap_now_pct']:.2f}%", "Cap rate today", "~6.5 years remaining")}
+  {kpi(f"{UP['cap_now_pct']:.2f}%", "Cap rate today", "6.15 years remaining (midpoint)")}
   {kpi(f"{UP['cap_after_extension_pct']:.2f}%", "Cap rate after extension", "~15 years remaining", "pos")}
   {kpi(f"+{UP['uplift_pct']:.1f}%", "Value uplift", f"${UP['uplift_dollars_at_200k_noi']:,.0f} at $200k NOI", "pos")}
 </div>
@@ -1427,6 +1428,18 @@ page("methodology.html", "Method",
      method_body + pager("methodology.html"))
 
 # ============================================================================= WRITE + LINK CHECK
+def typo(html):
+    """Typographic minus: turn ASCII '-' before a digit into U+2212, but ONLY inside text
+    nodes (never inside a tag/attribute). '2030-2035' and 'Oct-2024' are left untouched
+    because the '-' is preceded by a word character."""
+    parts = re.split(r"(<[^>]*>)", html)
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            continue
+        parts[i] = re.sub(r"(?<![\w.])-(?=\d)", "\u2212", part)
+    return "".join(parts)
+
+
 os.makedirs(DOCS, exist_ok=True)
 emitted = set(PAGES.keys())
 link_re = re.compile(r'href="([^"#:]+\.html)"')
@@ -1437,7 +1450,7 @@ for slug, html in PAGES.items():
         if t and t not in emitted:
             errors.append(f"{slug} -> {target}")
     with open(os.path.join(DOCS, slug), "w") as f:
-        f.write(html)
+        f.write(typo(html))
 
 # also validate NAV targets
 for href, _ in NAV:
