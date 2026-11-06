@@ -30,6 +30,7 @@ Rule applied: a value appears only if it was read from the official source below
 | S20 | A | California Department of Insurance (CDI) | California FAIR Plan - consumers and agents | <https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-resi/FAIR-Plan.cfm> |
 | S21 | A | City of Los Angeles Economic and Workforce Development Department (EWDD) | Annual Economic Report FY2025-26, Tab 5: Los Angeles - People, Industry and Jobs (Economic Forecast) | <https://ewdd.lacity.gov/images/reports/ap25/APy25_Tab5-EconomicForecast.pdf> |
 | S22 | A | Los Angeles County Auditor-Controller | Property Tax FAQs | <https://auditor.lacounty.gov/faqs/> |
+| S23 | A | U.S. Bureau of Economic Analysis (BEA) | Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, released February 5, 2026) | <https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024> |
 
 ## Population
 
@@ -57,6 +58,8 @@ Rule applied: a value appears only if it was read from the official source below
 | M15 | Median gross rent | $1,933 | USD/month | 2020-2024 ACS 5-yr | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) |  |
 | M16 | Poverty rate | **(blank - unverified)** | percent | 2020-2024 ACS 5-yr | City of Los Angeles | UNVERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Not present in the QuickFacts extract captured. Left blank rather than taken from a secondary aggregator. |
 | M17 | Per capita income | **(blank - unverified)** | USD | 2020-2024 ACS 5-yr | City of Los Angeles | UNVERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Not present in the QuickFacts extract captured (B19301). Left blank. |
+| M86 | Los Angeles County total personal income (highest of any US county) | $818.5 billion | USD | 2024 | Los Angeles County | VERIFIED | [S23](https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024) | BEA 26-08. Confirms the size of the county's consumer base even while population declines. |
+| M87 | Los Angeles County real GDP level | **(blank - unverified)** | USD | 2024 | Los Angeles County | UNVERIFIED | [S23](https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024) | The BEA news release quantifies county personal income ($818.5B for Los Angeles County) but publishes the GDP level only in its interactive tables, which were not machine-readable in this session. Left blank rather than inferred from personal income. |
 
 ## Employment
 
@@ -178,8 +181,8 @@ Rule applied: a value appears only if it was read from the official source below
 
 ## Totals
 
-- Rows: 85
-- Verified: 75
-- Blank / unverified: 10
-- Sources: 22
+- Rows: 87
+- Verified: 76
+- Blank / unverified: 11
+- Sources: 23
 

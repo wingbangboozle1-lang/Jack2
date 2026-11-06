@@ -226,6 +226,16 @@
       "covers": "Composition of the tax bill: 1% general levy plus voter-approved debt and direct assessments",
       "accessed": "2026-11-06",
       "verified": true
+    },
+    {
+      "id": "S23",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Economic Analysis (BEA)",
+      "title": "Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, released February 5, 2026)",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+      "covers": "County personal income levels and real GDP growth, 2024. Los Angeles County total personal income $818.5 billion - the highest of any US county. The release also states that BEA has discontinued metropolitan-area statistics.",
+      "accessed": "2026-11-06",
+      "verified": true
     }
   ]
 }

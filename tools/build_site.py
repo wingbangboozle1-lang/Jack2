@@ -53,6 +53,7 @@ NAV = [
     ("sources.html", "Sources"),
     ("privacy.html", "Privacy"),
     ("deployment.html", "Deployment"),
+    ("archive.html", "Session A archive"),
 ]
 
 
@@ -124,7 +125,7 @@ def page(slug, title, body, description="", wide=False):
   Every data value on this site links to the official source it was read from on {ACCESS}.
   Values that could not be confirmed from an official source are blank and listed on the
   <a href="flagged.html">Flagged for review</a> page. No personal or parcel-identifying information is published.</p>
-  <p>Built from <a href="sources.html">22 sources</a> &middot; <a href="verification.html">verification log</a> &middot;
+  <p>Built from <a href="sources.html">{len(SRC)} sources</a> &middot; <a href="verification.html">verification log</a> &middot;
   <a href="deployment.html">deployment</a> &middot; reproduction: <code>python3 tools/build_site.py</code></p>
 </div></footer>
 <script src="assets/app.js" defer></script>
@@ -901,7 +902,7 @@ def build_deployment():
 <div class="tablewrap"><table>
 <thead><tr><th>Path</th><th>Purpose</th></tr></thead>
 <tbody>
-<tr><td><code>data/sources.json</code></td><td>22 sources with tier, publisher, coverage, access date</td></tr>
+<tr><td><code>data/sources.json</code></td><td>All sources with tier, publisher, coverage and access date</td></tr>
 <tr><td><code>data/metrics.json</code></td><td>{len(ROWS)} metric rows, each with a source id and a verification status</td></tr>
 <tr><td><code>data/valuation.json</code></td><td>Verified inputs separated from labelled analyst assumptions</td></tr>
 <tr><td><code>data/property_lease.json</code></td><td>Anonymised asset profile and the missing-document list</td></tr>
@@ -938,6 +939,62 @@ python3 tools/check_site.py   # links, sources, PII, orphan pages
 
 
 # ----------------------------------------------------------------------------- write
+
+# ----------------------------------------------------------------------------- archive
+def build_archive():
+    rows = [
+        ["Landing page", "<a href='session-1944e5a3/index.html'>session-1944e5a3/index.html</a>"],
+        ["Property", "<a href='session-1944e5a3/property.html'>session-1944e5a3/property.html</a>"],
+        ["Market", "<a href='session-1944e5a3/market.html'>session-1944e5a3/market.html</a>"],
+        ["Demographics", "<a href='session-1944e5a3/demographics.html'>session-1944e5a3/demographics.html</a>"],
+        ["Projection", "<a href='session-1944e5a3/projection.html'>session-1944e5a3/projection.html</a>"],
+        ["Risk", "<a href='session-1944e5a3/risk.html'>session-1944e5a3/risk.html</a>"],
+        ["Decision", "<a href='session-1944e5a3/decision.html'>session-1944e5a3/decision.html</a>"],
+        ["Sources", "<a href='session-1944e5a3/sources.html'>session-1944e5a3/sources.html</a>"],
+        ["Flagged for review", "<a href='session-1944e5a3/flagged.html'>session-1944e5a3/flagged.html</a>"],
+        ["Methodology", "<a href='session-1944e5a3/methodology.html'>session-1944e5a3/methodology.html</a>"],
+    ]
+    body = f"""
+{head_block("Session A archive", "A second agent session published its own site on this same repository. It is preserved here, unmodified.",
+            "Nothing another session produced was deleted, overwritten or rewritten. Both analyses are published; the root of the site is the data-driven build, and this is the parallel one.")}
+
+<div class="callout warn">
+<p><strong>What happened.</strong> Session <code>arena-1944e5a3</code> merged its site to <code>main</code> as PR #1 (<code>22f2f91</code>) while this session
+(<code>arena-742b6a03</code>) was still doing research and had not yet pushed. The next <code>git pull --rebase</code> failed with conflicts in six files.
+Instead of force-pushing over that work, session B copied every page session A published into this folder &mdash; with its own CSS, JS and favicon, so its
+relative links still work &mdash; and cross-linked it here.</p>
+<p>Full record: <a href="COORDINATION.md" download>COORDINATION.md</a> (conflict section and both session logs).</p>
+</div>
+
+<h2>Session A's pages</h2>
+{table(["Page", "Link"], rows)}
+
+<h2>How the two analyses differ</h2>
+<table class="tablewrap"><table>
+<thead><tr><th></th><th>Session A (<code>arena-1944e5a3</code>)</th><th>Root site (<code>arena-742b6a03</code>)</th></tr></thead>
+<tbody>
+<tr><td>Data storage</td><td>Values written inline into HTML</td><td>Values in <code>data/*.json</code>, one source id per row, rendered by a generator</td></tr>
+<tr><td>Source policy</td><td>Government records plus LAEDC and UCLA Anderson forecasts</td><td>Government, regulator or SEC filing only (Tiers A&ndash;C). No forecasts from non-official bodies.</td></tr>
+<tr><td>Verification</td><td>Manual link check, local</td><td>Automated: source resolution, blank-value rule, internal links, PII scan, model reproducibility &mdash; all failing the build</td></tr>
+<tr><td>Quantification</td><td>Projection narrative with a flagged cap-rate band</td><td>Deterministic 2026&ndash;2040 model with breakevens, sensitivity grid and assumption ranking</td></tr>
+<tr><td>Sources cited</td><td>29</td><td>{len(SRC)}</td></tr>
+</tbody></table></div>
+
+<h2>What was taken from it</h2>
+<p>Session B re-checked the sources session A cited and adopted one figure it had not covered: Los Angeles County total personal income of
+<strong>$818.5 billion</strong> in 2024, the highest of any US county, now row M86 with source S23. {src_link("S23")}</p>
+<p>Session A's Census QuickFacts link for the city/county table is malformed (<code>losangelesNICITYcalifornia</code>) and fails as a source citation.
+It is left unmodified in the archive and recorded as irregularity I09 on the <a href="flagged.html">Flagged for review</a> page &mdash; rewriting another
+session's page would hide the defect rather than disclose it.</p>
+
+<h2>Where to read if you want one answer</h2>
+<p>Use the root site: <a href="executive-summary.html">Executive summary</a> for the recommendation,
+<a href="decision.html">Decision</a> for the ranked strategies and triggers. The archive is here for completeness and audit, not as a second opinion to reconcile.</p>
+"""
+    return page("archive.html", "Session A archive", body,
+                "Archive of the parallel session's site, preserved unmodified and cross-linked, with the conflict resolution record.")
+
+
 BUILDERS = {
     "index.html": build_index,
     "executive-summary.html": build_exec,
@@ -953,6 +1010,7 @@ BUILDERS = {
     "sources.html": build_sources,
     "privacy.html": build_privacy,
     "deployment.html": build_deployment,
+    "archive.html": build_archive,
 }
 
 for fname, fn in BUILDERS.items():

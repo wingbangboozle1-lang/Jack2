@@ -40,11 +40,21 @@ pages = sorted(f for f in os.listdir(ROOT) if f.endswith(".html"))
 if not pages:
     fail("no HTML pages found at the repository root")
 
+# every HTML file anywhere in the tree (the archived parallel-session site is included)
+ALL_HTML = []
+for dirpath, dirnames, filenames in os.walk(ROOT):
+    dirnames[:] = [d for d in dirnames if d not in (".git", "__pycache__", "node_modules")]
+    for fn in filenames:
+        if fn.endswith(".html"):
+            ALL_HTML.append(os.path.relpath(os.path.join(dirpath, fn), ROOT))
+ALL_HTML.sort()
+
 # ---------------------------------------------------------------- 1 + 6 links
 link_re = re.compile(r'(?:href|src)="([^"]+)"')
-for p in pages:
+for p in ALL_HTML:
     with open(os.path.join(ROOT, p), encoding="utf-8") as f:
         html = f.read()
+    base = os.path.dirname(os.path.join(ROOT, p))
     for href in link_re.findall(html):
         if href.startswith("#") or href.startswith("data:") or href.startswith("mailto:"):
             continue
@@ -58,7 +68,7 @@ for p in pages:
         target = href.split("#")[0].split("?")[0]
         if not target:
             continue
-        if not os.path.exists(os.path.join(ROOT, target)):
+        if not os.path.exists(os.path.join(base, target)):
             fail(f"{p}: broken internal link -> {target}")
 
 # ---------------------------------------------------------------- 2 nav reachability
@@ -95,7 +105,7 @@ PATS = [
     (re.compile(r"\b\d{1,6}\s+(?:[A-Z][a-z]+\s){1,3}(Street|St|Avenue|Ave|Boulevard|Blvd|Road|Rd|Drive|Dr|Way|Lane|Ln)\b"), "street address"),
     (re.compile(r"\bAPN[:\s#]*\d{3,}"), "parcel number"),
 ]
-scan_targets = pages + [os.path.join("data", f) for f in os.listdir(D) if f.endswith(".json")]
+scan_targets = ALL_HTML + [os.path.join("data", f) for f in os.listdir(D) if f.endswith(".json")]
 for rel in scan_targets:
     path = os.path.join(ROOT, rel)
     with open(path, encoding="utf-8") as f:
@@ -119,7 +129,7 @@ for s in MODEL.get("scenarios", []):
 
 # ---------------------------------------------------------------- report
 notes = [
-    f"pages: {len(pages)}",
+    f"pages: {len(pages)} at root, {len(ALL_HTML)} including the archive",
     f"sources: {len(SRC)}",
     f"metric rows: {len(METRICS['rows'])} "
     f"({sum(1 for r in METRICS['rows'] if r['status']=='verified')} verified, "

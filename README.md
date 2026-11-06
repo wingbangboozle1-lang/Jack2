@@ -11,7 +11,7 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 |---|---|
 | Question | Sell the property before the lease expires, or renew and hold? |
 | Answer format | A ranked strategy plus six testable decision triggers — not a guess at value |
-| Evidence base | 85 metric rows, 75 verified against 22 official sources, 10 deliberately blank and flagged |
+| Evidence base | 87 metric rows, 76 verified against 23 official sources, 11 deliberately blank and flagged |
 | Model | Deterministic 2026–2040 projection in `tools/model.py`, published inputs, breakevens and sensitivity |
 | Risk | 24-row register mapped to each decision, including wildfire/earthquake/insurance tail scenarios |
 | Privacy | No name, address, APN, loan number or account anywhere in the repo or the site (enforced in code) |
@@ -25,6 +25,8 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 5. `projection-model.html` — how the numbers were produced
 6. `risks.html` — what can go wrong, decision by decision
 7. `flagged.html` — everything that could **not** be verified, and what to obtain
+8. `archive.html` — the parallel session's site, preserved unmodified (a second agent session merged
+   its own build to `main` mid-session; nothing was overwritten — see `COORDINATION.md`)
 
 ## Reproduce
 
@@ -41,6 +43,7 @@ Python 3.11, standard library only. No installs, no network needed to build.
 
 ```
 data/           source ledger, metrics, valuation inputs, risks, decisions, requirements, irregularities
+session-1944e5a3/  verbatim archive of the parallel session's published site
 tools/          model.py, build_site.py, check_site.py, export_ledger.py
 research/       model report and the manual-review verification ledger
 assets/         style.css, app.js (progressive enhancement only)
