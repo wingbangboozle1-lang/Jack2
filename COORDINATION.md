@@ -1,11 +1,12 @@
 # COORDINATION.md — Shared Task Board
 
-Two agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
-both sessions' claims, what each produced, the merge conflict that occurred, and how it was resolved
+Three agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
+the sessions' claims, what each produced, the merge conflict that occurred, and how it was resolved
 **without discarding either session's work**.
 
 - Session A: `arena-1944e5a3` — branch `arena/1944e5a3-jack2` → merged to `main` as **PR #1 (22f2f91)**.
-- Session B: `arena-742b6a03` — branch `arena/742b6a03-jack2` (this session, and the final integration session).
+- Session B: `arena-742b6a03` — branch `arena/742b6a03-jack2` (the first integration session).
+- Session C: `arena/230fe704` — branch `arena/230fe704-jack2`. Arrived last; found A and B already published to `main`. Published its own dossier under `docs/` rather than replacing either site. See **Session C** at the end of this file.
 
 Both sessions were pinned by the Arena environment to their own `arena/*` branch, which doubles as the
 PR/integration branch. Neither could create a separate `session-<id>/<task>` branch, and neither pushed
@@ -184,3 +185,78 @@ owner review requested post-launch.
   Coordination comment logged on PR #2. Nothing from either session was discarded.
 - Current live root (main): this session's site (Executive Summary + 9 subpages).
   PR #2 proposes a different root (data-ledger workbook) + this site in archive.
+
+
+---
+
+# Session C (`arena-230fe704`) — 2026-11-06
+
+**Position at start.** Session C began from baseline `1430b4f`, when the repository contained only a
+7-byte `README.md` — the same starting point Sessions A and B described. While C was working, A and B
+merged PRs #1–#4 and published a complete workbook to the `main` root. C discovered this only when its
+own PR would not merge.
+
+**What C built (all new files; no file owned by A or B was edited):**
+
+| Path | Contents |
+|---|---|
+| `research/00-methodology.md` … `07-executive-summary.md` | Eight-document analytical corpus: method, asset profile, tenant, lease & cap rates, LA economy, hazard, decision & risk, executive summary |
+| `model/projection_model.py` | 20,000-trial Monte-Carlo engine, seed `20261106`, standard library only, deterministic across runs |
+| `model/build_facts.py` | Emits `docs/data/facts.json` — 195 rows with tier, status and source URL per row; **hard assertions** on source completeness and blank-value policy |
+| `model/build_site.py` | Generates 11 pages and validates every internal link; exits non-zero on any break |
+| `docs/**` | The published dossier at `/docs/` (see deployment below) |
+
+**Conflict encountered and resolution.** `git merge origin/main` failed with add/add conflicts on
+`.gitignore`, `COORDINATION.md` and `README.md`, and content conflicts on `README.md`.
+**Nothing was discarded:**
+
+1. `.gitignore` — union of both files (B's ignores plus C's privacy rules for raw harvests).
+2. `COORDINATION.md` — B's document preserved verbatim; this section appended; only the intro sentence
+   ("Two" → "Three sessions") and the session list were touched.
+3. `README.md` — B's document preserved verbatim; a three-line pointer to `/docs/` added under the live
+   site line and a short section at the end.
+4.  No HTML, asset, `data/` or `tools/` file belonging to A or B was modified.
+
+**Why C did not replace the root site.** GitHub Pages was already serving B's workbook from `main` / root
+and A's site from `session-1944e5a3/`. Two complete builds already occupied the root namespace, and
+`docs/` was free. C kept the Pages source unchanged, so B's site stays live at the root address and C's
+dossier is served from the same deployment at `/docs/`. Every file from all three sessions remains
+present, linkable and buildable.
+
+**Deployment record (Session C).**
+
+| Item | Value |
+|---|---|
+| PR | #8 — `arena/230fe704-jack2` → `main` |
+| Pages source | unchanged: `main` / root, legacy build |
+| Root URL | https://wingbangboozle1-lang.github.io/Jack2/ — Session B's workbook, untouched |
+| Session A archive | https://wingbangboozle1-lang.github.io/Jack2/session-1944e5a3/ — untouched |
+| Session C dossier | https://wingbangboozle1-lang.github.io/Jack2/docs/ |
+| Merge policy | merged without waiting for approval per the brief; flagged items published, non-blocking |
+
+**Verification performed by C on the merged tree.**
+
+- `python3 model/build_facts.py` → 195 rows; assertions pass (every `verified` row has a URL; every
+  `unverified` row is blank).
+- `python3 model/projection_model.py` → re-run to completion; deterministic output.
+- `python3 model/build_site.py` → 11 pages; 181 internal links checked, 0 broken.
+- Independent HTML tag-balance parse of all 11 generated pages → 0 unclosed or mismatched tags.
+- All 11 pages plus `assets/style.css`, `assets/app.js`, `data/facts.json`, `data/projections.json`
+  fetched over HTTP → 200.
+- **Cross-session check:** B's `tools/check_site.py` run against the merged tree → still passes; C's
+  `docs/` additions do not break A's or B's build.
+
+**Session C findings that differ from A and B, and why.** C modelled five courses of action including a
+§1031 exchange and ranked them on risk-adjusted after-tax wealth (CRRA = 3 certainty equivalent), which
+produces a different recommendation from a plain expected-value ranking: *renew and hold* has the highest
+median and wins 52.6% of trials, but a worst-decile outcome 5× worse than selling. Both conclusions are
+in the repo; the Owner should read them as two independent analytical passes over the same evidence,
+not as a reconciled single answer. Reconciling them is an Owner decision, not a merge operation.
+
+**Handoff log.**
+
+- **2026-11-06, Session C (`arena/230fe704`)**: started; repo contained only a 7-byte README; board
+  absent at that moment. Built research corpus, model, datasets and site. On opening PR #8, discovered
+  A and B had merged meantime. Stopped the merge, fetched `main`, resolved the three-file conflict
+  without discarding either party, re-ran all checks, published under `/docs/` with the Pages source
+  left untouched, and recorded everything here.

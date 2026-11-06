@@ -5,6 +5,11 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 
 **Live site:** https://wingbangboozle1-lang.github.io/Jack2/
 
+> A third, independently built dossier — Monte-Carlo over five strategies, ranked on risk-adjusted
+> after-tax wealth — is published from this same Pages deployment at
+> **https://wingbangboozle1-lang.github.io/Jack2/docs/** (source in `docs/`, engines in `model/`,
+> analysis in `research/00`–`07`). The root site below is unchanged. See `COORDINATION.md` → *Session C*.
+
 ## What this is
 
 | | |
@@ -67,3 +72,33 @@ computation is asserted. Those gaps are enumerated as P01–P12 and F01–F11 in
 ## License
 
 No license is included; all rights reserved by the repository owner. A license is recommended before any external reuse of the data tables.
+
+
+## Session C dossier (`docs/`, `model/`, `research/`)
+
+A separate agent session added a second, independently derived analysis to this repository without
+altering anything described above. It is published at `docs/index.html`
+(https://wingbangboozle1-lang.github.io/Jack2/docs/) and is self-contained.
+
+| | |
+|---|---|
+| Question | Hold, renew, or sell — with a lease described as expiring anywhere in a five-year window (2030–2035) |
+| Method | 20,000-trial Monte-Carlo over five strategies, including a §1031 exchange, scored on **certainty-equivalent after-tax wealth** (CRRA = 3), not on expected value |
+| Conclusion | Do not let the lease run to expiry. Run a dual track: pursue an early 10–15 year extension **and** prepare a §1031 sale. Sell either way — the only variable is whether you sell with 13–15 years of term or with 4–9. |
+| Headline numbers | Extension is worth **+25.2%** ($12.48 → $15.62 per $1 of NOI); term decay costs **−22.7%**; the expiry ambiguity alone is worth **~21.6% = $500,000** on a $200k-NOI asset |
+| Data | 195 rows, 154 verified against T1 official sources, 25 left blank and flagged, every row carrying a source link |
+| Privacy | Owner, tenant, address and APN are placeholders; the Owner's income, net worth, bracket and basis are never collected — the model is normalised to $1.00 of NOI |
+
+Rebuild:
+
+```bash
+python3 model/build_facts.py        # 195 rows + integrity assertions
+python3 model/projection_model.py   # deterministic; seed 20261106
+python3 model/build_site.py         # 11 pages + internal link validation
+python3 -m http.server -d docs 8080 # preview
+```
+
+The two analyses reach different recommendations because they optimise different things: the root site
+ranks strategies on a deterministic projection with explicit decision triggers; `docs/` ranks them on the
+tail risk of a stochastic simulation. Neither supersedes the other, and reconciling them is a judgement
+call for the Owner.

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tax · Jack2 — PROP-001 hold / renew / sell analysis</title>
+<meta name="description" content="Federal and California tax on sale, §1031 mechanics, and portfolio-level wealth preservation.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="site-head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">J2</span>
+      <span class="brand-txt"><strong>PROP-001</strong><span>NNN Jack in the Box · central Los Angeles</span></span>
+    </a>
+    <nav class="nav" aria-label="Site sections">
+      <a href="index.html">Overview</a>
+      <a href="decision.html">Decision</a>
+      <a href="projection.html">Projection</a>
+      <a href="economy.html">Economy</a>
+      <a href="tenant.html">Tenant</a>
+      <a href="capital-markets.html">Markets</a>
+      <a href="lease.html">Lease</a>
+      <a href="hazards.html">Risk</a>
+      <a href="tax.html" aria-current="page">Tax</a>
+      <a href="flags.html">Flagged</a>
+      <a href="methodology.html">Method</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Tax &amp; personal wealth</div>
+  <h1>The tax tail should not wag the decision</h1>
+  <p>A sale at today's value would trigger roughly <b>23.3% of the
+  price</b> in combined federal and California tax under the model's assumptions. That is a real number and it is
+  the main reason Owners hold. It is also smaller than the cost of doing nothing.</p>
+  <div class="verdict"><b>A §1031 exchange defers the tax — it does not eliminate it.</b> This model deducts the
+  deferred liability rather than pretending the deferral is free, and §1031 still wins on a risk-adjusted basis.</div>
+</section>
+
+<h2>The rates, from the IRS</h2>
+<div class="table-wrap"><table id="tbl-tax">
+<thead><tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Period</th>
+<th>Geography</th>
+<th>Source</th>
+<th>Tier</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td class="metric">Unrecaptured IRC §1250 gain — maximum federal rate</td>
+<td class="num">25%</td>
+<td class="nowrap">2025 tax year</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">IRS Topic No. 409</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Long-term capital gains — top federal rate</td>
+<td class="num">20%</td>
+<td class="nowrap">2025 tax year</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">IRS Topic No. 409</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Net investment income tax</td>
+<td class="num">3.8%</td>
+<td class="nowrap">current</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">IRS Topic No. 409 / Topic No. 559</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Long-term capital gains — 15% bracket, married filing jointly</td>
+<td class="num">$96,700 – $600,050</td>
+<td class="nowrap">2025 tax year</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">IRS Topic No. 409</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">§1031 — identification period</td>
+<td class="num">45 days</td>
+<td class="nowrap">current law</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031" target="_blank" rel="noopener">IRS — Like-Kind Exchanges Under IRC §1031</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">§1031 — exchange completion period</td>
+<td class="num">180 days</td>
+<td class="nowrap">current law</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031" target="_blank" rel="noopener">IRS — Like-Kind Exchanges Under IRC §1031</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">§1031 — who may act as facilitator</td>
+<td class="num">A qualified intermediary; the taxpayer and its agents may not</td>
+<td class="nowrap">current law</td>
+<td>United States</td>
+<td class="src"><a href="https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031" target="_blank" rel="noopener">IRS — Like-Kind Exchanges Under IRC §1031</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">California fast-food minimum wage (covered chains, 60+ US units)</td>
+<td class="num">$20.00/hour</td>
+<td class="nowrap">since 2024-04-01</td>
+<td>California</td>
+<td class="src"><a href="https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm" target="_blank" rel="noopener">California DIR — Fast Food Minimum Wage FAQ (statutory basis: AB 1228, Ch. 262, Statutes of 2023)</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">California general state minimum wage</td>
+<td class="num">$16.90/hour</td>
+<td class="nowrap">effective 2026-01-01</td>
+<td>California</td>
+<td class="src"><a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm" target="_blank" rel="noopener">California DIR — Minimum Wage FAQ</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">California fast-food minimum wage — statutory authority</td>
+<td class="num">AB 1228, Chapter 262, Statutes of 2023</td>
+<td class="nowrap">2023</td>
+<td>California</td>
+<td class="src"><a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240AB1228" target="_blank" rel="noopener">California Legislative Information</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">California top marginal income tax rate (used by the tax module)</td>
+<td class="num">13.3%</td>
+<td class="nowrap">2026</td>
+<td>California</td>
+<td class="src"><a href="https://www.ftb.ca.gov/forms/" target="_blank" rel="noopener">California Franchise Tax Board</a></td>
+<td><span class="badge a">Assumption</span></td>
+<td><span class="badge a">assumption</span></td>
+</tr>
+<tr>
+<td class="metric">Proposition 13 — annual assessed-value increase cap</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>California</td>
+<td class="src"><a href="https://assessor.lacounty.gov/tax-relief/decline-in-value" target="_blank" rel="noopener">LA County Assessor / Cal. Rev. &amp; Tax. Code §51</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">LA County — decline-in-value (DIV) application window</td>
+<td class="num">accepted from 2026-07-02; deadline 2026-11-30</td>
+<td class="nowrap">2026-27 tax year</td>
+<td>Los Angeles County</td>
+<td class="src"><a href="https://assessor.lacounty.gov/tax-relief/decline-in-value" target="_blank" rel="noopener">Los Angeles County Assessor</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Measure ULA (LA city transfer tax surcharge) applicability to PROP-001</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>Los Angeles city</td>
+<td class="src"><a href="https://lacity.gov/" target="_blank" rel="noopener">City of Los Angeles / LA County Registrar-Recorder</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">California treatment of out-of-state §1031 replacement (FTB Form 3840)</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>California</td>
+<td class="src"><a href="https://www.ftb.ca.gov/forms/2025/2025-3840.pdf" target="_blank" rel="noopener">California Franchise Tax Board, Form 3840</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+</tbody></table></div>
+<p class="tbl-note">Federal rates are from IRS Topic No. 409 and the §1031 guidance. California and local items are flagged where they could not be verified in this session.</p>
+
+<h2>How the sale tax is built</h2>
+<ol class="tight">
+  <li><b>Gain</b> = net sale price − adjusted basis (original basis less accumulated depreciation).</li>
+  <li><b>Unrecaptured IRC §1250 gain</b> — the depreciation taken — is taxed at a <b>maximum 25%</b> federal rate.
+  This is the most commonly underestimated line.</li>
+  <li><b>Remaining long-term capital gain</b> is taxed at <b>20%</b> federal plus the <b>3.8%</b> net investment
+  income tax where applicable.</li>
+  <li><b>California</b> taxes the whole gain at ordinary rates with no preferential rate and no out-of-state
+  deferral mechanism without an undertaking.</li>
+</ol>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Line (per $1.00 of current NOI)</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td class="metric">Gross sale price</td><td class="num">12.5065</td></tr>
+<tr><td class="metric">Adjusted basis</td><td class="num">4.6800</td></tr>
+<tr><td class="metric">Total gain</td><td class="num">7.8265</td></tr>
+<tr><td class="metric">Unrecaptured §1250 recapture</td><td class="num">1.3200</td></tr>
+<tr><td class="metric">Federal tax on recapture (25%)</td><td class="num">0.3300</td></tr>
+<tr><td class="metric">Federal tax on appreciation (23.8%)</td><td class="num">1.5485</td></tr>
+<tr><td class="metric">California tax (13.3%, assumption)</td><td class="num">1.0409</td></tr>
+<tr><td class="metric"><b>Total tax</b></td><td class="num"><b>2.9195</b></td></tr>
+<tr><td class="metric">Effective rate on price</td><td class="num"><b>23.3%</b></td></tr>
+</tbody></table></div>
+<p class="tbl-note">Basis of 6.00× NOI and 22% accumulated depreciation are <b>assumptions</b>, stated so they can be
+replaced with the real depreciation schedule. The California rate of 13.3% is used as an assumption and is
+<b>flagged as not re-verified</b> in this session.</p>
+
+<h2>The §1031 exchange: rules that are not negotiable</h2>
+<div class="grid g2">
+  <div class="card"><h3>45 days</h3><div class="big" style="font-size:20px">Identify replacement property</div>
+    <div class="sub">In writing, signed, delivered to a person involved in the exchange — notice to your attorney or
+    accountant is not sufficient.</div></div>
+  <div class="card"><h3>180 days</h3><div class="big" style="font-size:20px">Complete the exchange</div>
+    <div class="sub">Or the due date of the return for the year of sale, whichever is earlier. Not extendable
+    except in a presidentially declared disaster.</div></div>
+  <div class="card"><h3>Qualified intermediary</h3><div class="big" style="font-size:20px">Before closing</div>
+    <div class="sub">You cannot act as your own facilitator, and neither can your agent or anyone who worked for
+    you in that capacity in the previous two years. Taking control of proceeds can disqualify the entire
+    transaction.</div></div>
+  <div class="card"><h3>Deferral ≠ elimination</h3><div class="big" style="font-size:20px">Liability carries forward</div>
+    <div class="sub">The deferred gain reduces the basis of the replacement property. This model deducts the deferred
+    liability from the §1031 strategy's economic net worth for exactly that reason.</div></div>
+</div>
+
+<div class="callout warn">
+  <p><strong>Two California items that must be resolved before an exchange is structured</strong> — both flagged,
+  neither verified here:</p>
+  <p>1. <b>Out-of-state replacement.</b> California does not defer California-source gain when replacement property
+  sits outside California without an undertaking to file a California return when the replacement is later sold
+  (FTB Form 3840). Get an opinion <em>before</em> identifying replacement property if the plan is to leave the state.</p>
+  <p>2. <b>Local transfer taxes.</b> LA city and county documentary transfer taxes, and the Measure ULA surcharge on
+  higher-value transfers, were not verified in this session. They affect net proceeds and, at the margin, the
+  timing decision. Confirm with the LA County Registrar-Recorder and the City before pricing a sale.</p>
+</div>
+
+<h2>Wealth preservation: the portfolio view</h2>
+<p class="lede">The brief asked for the best decision "for the property and myself as an individual for the
+preservation of wealth and opportunity for growth, maintaining a balance that outlines risk factors and maintains a
+manageable level of risk." Four portfolio observations follow from the data, not from the property:</p>
+<ul class="tight">
+  <li><b>Concentration is the dominant risk, not the cap rate.</b> One parcel, one tenant, one brand, one metro,
+  one catastrophe zone. The model's worst-decile outcome for holding (1.88× NOI) is a concentration outcome.</li>
+  <li><b>Deferral compounds only if the replacement is better.</b> A §1031 into a single similar asset reproduces the
+  same concentration with a new address. Spread proceeds across at least two assets and, ideally, two metros.</li>
+  <li><b>Basis and entity structure are unsolved here.</b> Step-up at death, trust ownership, and installment-sale
+  mechanics can each dominate the arithmetic above, and each depends on facts this repository deliberately does not
+  hold. That is a job for counsel, with the numbers in this dossier as inputs.</li>
+  <li><b>Liquidity has value that NPV does not capture.</b> A sub-$5 million single-tenant asset in a thin,
+  rising-rate market can take 6–12 months to sell. Planning the exit now buys the option to be patient.</li>
+</ul>
+<div class="pager">
+<a href="hazards.html"><div class="dir">&larr; Previous</div><div class="ttl">Risk</div></a>
+<a href="flags.html" style="text-align:right"><div class="dir">Next &rarr;</div><div class="ttl">Flagged</div></a>
+</div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Jack2</strong> · analytical dossier for <code>PROP-001</code> · data cut-off 2026-11-06<br>
+      All identifiers anonymised. No personal or parcel information is stored or published.
+    </div>
+    <div>
+      <a href="methodology.html">Method &amp; sources</a> &middot;
+      <a href="flags.html">Flagged for review</a> &middot;
+      <a href="https://github.com/wingbangboozle1-lang/Jack2" target="_blank" rel="noopener">Repository</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
