@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deployment - Central LA Jack in the Box NNN workbook</title>
+<meta name="description" content="Repository baseline, files added, publish path and reproduction steps.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Workbook<small>Jack in the Box &middot; 2030&ndash;2035 lease expiry &middot; data as of 2026-11-06</small></span></a>
+  <nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="market-economics.html">Market economics</a><a href="property-lease.html">Property &amp; lease</a><a href="valuation.html">Valuation inputs</a><a href="projection-model.html">Projection model</a><a href="risks.html">Risk register</a><a href="requirements.html">Requirements</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a><a href="deployment.html" aria-current="page">Deployment</a><a href="archive.html">Session A archive</a></nav>
+</div></header>
+<main id="main" class="wrap">
+
+<div class="page-head"><p class="eyebrow">Deployment</p><h1>How this workbook was built, verified and published</h1><p class="lede">Repository, branch, checks, pull request and GitHub Pages status, recorded so the process is auditable.</p></div>
+
+<h2>Repository state at the start of the session</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Check</th><th>Finding</th></tr></thead><tbody><tr><td>Files</td><td><code>README.md</code> only, 7 bytes, contents <code># Jack2</code></td></tr><tr><td>Commit</td><td><code>1430b4f</code> &mdash; 'Initial commit' (baseline)</td></tr><tr><td>Branches</td><td><code>main</code> and the session branch <code>arena/742b6a03-jack2</code></td></tr><tr><td>GitHub Pages</td><td>Enabled, legacy build, source = <code>main</code> / root, public URL <code>https://wingbangboozle1-lang.github.io/Jack2/</code></td></tr><tr><td>CI / checks</td><td>None</td></tr><tr><td>COORDINATION.md</td><td>Absent (created by this session)</td></tr></tbody></table></div>
+
+<h2>What was added</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Path</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><code>data/sources.json</code></td><td>All sources with tier, publisher, coverage and access date</td></tr>
+<tr><td><code>data/metrics.json</code></td><td>87 metric rows, each with a source id and a verification status</td></tr>
+<tr><td><code>data/valuation.json</code></td><td>Verified inputs separated from labelled analyst assumptions</td></tr>
+<tr><td><code>data/property_lease.json</code></td><td>Anonymised asset profile and the missing-document list</td></tr>
+<tr><td><code>data/risks.json</code></td><td>24-row risk register</td></tr>
+<tr><td><code>data/decisions.json</code></td><td>Four scored strategies, recommendation, plan, triggers</td></tr>
+<tr><td><code>data/requirements.json</code></td><td>22 requirements tracked to delivery</td></tr>
+<tr><td><code>data/irregularities.json</code></td><td>Repository and data irregularities</td></tr>
+<tr><td><code>tools/model.py</code></td><td>Deterministic projection model; writes <code>data/model_output.json</code></td></tr>
+<tr><td><code>tools/build_site.py</code></td><td>Static site generator with hard assertions</td></tr>
+<tr><td><code>tools/check_site.py</code></td><td>Link, source, PII and orphan-page checks</td></tr>
+<tr><td><code>.github/workflows/verify.yml</code></td><td>Rebuilds the model and site, then runs the checks on every push and PR</td></tr>
+<tr><td><code>COORDINATION.md</code></td><td>Shared task board and log</td></tr>
+</tbody></table></div>
+
+<h2>Publish path</h2>
+<ol>
+  <li>All work on <code>arena/742b6a03-jack2</code>. Every commit is small and scoped.</li>
+  <li><code>git pull --rebase</code> before each push.</li>
+  <li>Pull request from the session branch to <code>main</code>, with the summary, sources and flagged irregularities.</li>
+  <li>Checks must pass before merge; a broken site is never merged.</li>
+  <li>Merge to <code>main</code>. GitHub Pages serves <code>main</code> / root; <code>.nojekyll</code> keeps the files served exactly as built.</li>
+  <li>The deployment status and PR link are recorded in <code>COORDINATION.md</code>.</li>
+</ol>
+
+<h2>Reproduce locally</h2>
+<pre style="background:#0b1220;color:#e6edf7;padding:16px;border-radius:12px;overflow-x:auto;font-size:13px"><code>python3 tools/model.py        # regenerate data/model_output.json + research/model-report.md
+python3 tools/build_site.py   # regenerate all HTML pages
+python3 tools/check_site.py   # links, sources, PII, orphan pages
+</code></pre>
+<p>Python 3.11, standard library only. No installs, no network access required to build.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support &mdash; not an appraisal, not tax advice, not investment advice.</strong>
+  Every data value on this site links to the official source it was read from on 2026-11-06.
+  Values that could not be confirmed from an official source are blank and listed on the
+  <a href="flagged.html">Flagged for review</a> page. No personal or parcel-identifying information is published.</p>
+  <p>Built from <a href="sources.html">23 sources</a> &middot; <a href="verification.html">verification log</a> &middot;
+  <a href="deployment.html">deployment</a> &middot; reproduction: <code>python3 tools/build_site.py</code></p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
