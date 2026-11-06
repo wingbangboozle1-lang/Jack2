@@ -1,0 +1,13 @@
+# ---- generated / tooling ----
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.arena/
+.cache/
+
+# ---- privacy: never commit raw research harvests that may contain PII ----
+private/
+*.private
+*.pii
+*.csv.raw
