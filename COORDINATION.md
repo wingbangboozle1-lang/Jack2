@@ -21,17 +21,17 @@ Statuses: `unclaimed` | `in progress` | `done` | `needs review`
 | # | Task | Status | Owner | Files touched | Notes / log |
 |---|---|---|---|---|---|
 | T1 | Repo review + coordination setup | done | arena-b4ec6128-jack2 | COORDINATION.md, README.md | Repo initially contained README.md only ("# Jack2"). No prior sessions, no claims, no conflicts. |
-| T2 | Research: demographics & housing (US Census ACS/PEP, HUD) | in progress | arena-b4ec6128-jack2 | research/02-demographics.md | Central LA area (ZCTAs), LA city/county |
-| T3 | Research: economy & labor (BLS, CA EDD, CA DIR) | in progress | arena-b4ec6128-jack2 | research/03-economy.md | LA metro employment, CPI, minimum wage, fast-food wage |
-| T4 | Research: education (CA Dept of Education, CA Dashboard) | in progress | arena-b4ec6128-jack2 | research/04-education.md | LAUSD + area schools |
-| T5 | Research: hazards & insurance (FEMA, USGS, CAL FIRE, CDI, LADBS) | in progress | arena-b4ec6128-jack2 | research/05-hazards.md | Earthquake, wildfire, flood; Jan 2025 fire events; insurance market |
-| T6 | Research: tenant financials (SEC EDGAR — Jack in the Box Inc.) | in progress | arena-b4ec6128-jack2 | research/06-tenant.md | 10-K data, JACK on Track closures, Del Taco divestiture |
-| T7 | Research: tax/regulatory & growth forecasts (IRS, FTB, BOE, SCAG, CA DOF, LA City Planning) | in progress | arena-b4ec6128-jack2 | research/07-tax-forecasts.md | 1031, Prop 13, capital gains, SCAG/DOF projections |
-| T8 | Analysis: decision framework, risk matrix, projection system | in progress | arena-b4ec6128-jack2 | research/08-analysis.md, site decision page | Sell vs renew vs hold; black swan scenarios |
-| T9 | Executive summary | in progress | arena-b4ec6128-jack2 | site executive-summary page | |
-| T10 | Site creation (GitHub Pages static site) | in progress | arena-b4ec6128-jack2 | index.html, *.html, assets/style.css | Static HTML/CSS dashboard, no build step |
-| T11 | Verification: line-by-line source audit + link check | in progress | arena-b4ec6128-jack2 | scripts/check_links.py, site pages | Every table row must link an official source or be flagged unverified |
-| T12 | Integration: PR to main, merge, GitHub Pages deploy, final record | in progress | arena-b4ec6128-jack2 | COORDINATION.md, GitHub settings | Confirm deploy; record PR link + merge result here |
+| T2 | Research: demographics & housing (US Census ACS/PEP, HUD) | done | arena-b4ec6128-jack2 | research/02-demographics.md | Verified via Census QuickFacts (API key required — used HTML page). ZIP-level income -> IRS SOI flagged (file download). |
+| T3 | Research: economy & labor (BLS, CA EDD, CA DIR) | done | arena-b4ec6128-jack2 | research/03-economy.md | BLS EAG + CPI release (Sept 2026, 26-1595-SAN) + CA DIR pages verified 2026-11-06. |
+| T4 | Research: education (CA Dept of Education, CA Dashboard) | done | arena-b4ec6128-jack2 | research/04-education.md | CDE Directory + CA School Dashboard 2024 verified. |
+| T5 | Research: hazards & insurance (FEMA, USGS, CAL FIRE, CDI, LADBS) | done | arena-b4ec6128-jack2 | research/05-hazards.md | USGS UCERF3 (60/46/31% 30-yr), CAL FIRE Palisades/Eaton incident pages, CDI Bulletin 2025-4, LADBS retrofit, FEMA NRI/MSC manual-review links. Parcel-level items flagged. |
+| T6 | Research: tenant financials (SEC EDGAR — Jack in the Box Inc.) | done | arena-b4ec6128-jack2 | research/06-tenant.md | CIK 0000807882 FY2025 10-K (accession 0000807882-25-000072) + 8-K EX-99.1 Del Taco completion (12/22/2025) verified. |
+| T7 | Research: tax/regulatory & growth forecasts (IRS, FTB, BOE, SCAG, CA DOF, LA City Planning) | done | arena-b4ec6128-jack2 | research/07-tax-forecasts.md | IRS + FTB + BOE Pub 800-10 verified; SCAG Connect SoCal 2024 PEIR App. I interval tables verified; DOF xlsx flagged manual review. |
+| T8 | Analysis: decision framework, risk matrix, projection system | done | arena-b4ec6128-jack2 | research/08-analysis.md, site decision page | research/08-analysis.md + site decision.html: options, risk matrix, transparent projection system (CPI-banded scenarios, cap-rate sensitivity), deadlines, triggers, recommendation. |
+| T9 | Executive summary | done | arena-b4ec6128-jack2 | site executive-summary page | executive-summary.html: situation, verified facts, recommendation, risk-by-decision table, privacy statement. |
+| T10 | Site creation (GitHub Pages static site) | done | arena-b4ec6128-jack2 | index.html, *.html, assets/style.css | 11 pages: index, executive-summary, property, market, education, hazards, tenant, decision, data (master tables), flagged, sources; assets/style.css; .nojekyll. |
+| T11 | Verification: line-by-line source audit + link check | done | arena-b4ec6128-jack2 | scripts/verify.py, site pages | scripts/verify.py: internal-link check + per-row source-link audit (391 rows incl. headers) + privacy pattern scan. ALL CHECKS PASSED 2026-11-06. Cap-rate bands and escalation scenarios labeled as assumptions on site + flagged page. |
+| T12 | Integration: PR to main, merge, GitHub Pages deploy, final record | in progress | arena-b4ec6128-jack2 | COORDINATION.md, GitHub settings | PR/merge/deploy in progress this session; results recorded below when complete. |
 
 ## Irregularities & deviations
 
