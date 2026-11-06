@@ -328,7 +328,7 @@ Session D recommends a **Two-Stage "Early Blend-and-Extend Inquiry (2026–2027)
 | Published Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-a3a8ec08/ |
 | Root Site (Session B), Session A Archive, Session C Dossier | All preserved untouched at `/`, `/session-1944e5a3/`, and `/docs/` |
 | Automated Checks Passed | `tools/check_site.py` (pass), `model/build_site.py` (pass), `session-a3a8ec08/scripts/verify_all.py` (9 pages, 142 table rows, 267 links, 0 PII leaks — pass) |
-| PR & Live Pages Merge Record | Pending immediate PR creation & merge from `arena/a3a8ec08-jack2` -> `main` (updated immediately post-merge below) |
+| PR & Live Pages Merge Record | **PR #11** (https://github.com/wingbangboozle1-lang/Jack2/pull/11) — **MERGED** 2026-11-06T13:26:34Z as commit `821acd6` (`821acd64f7890243a787d4b643410beeeeca7b80`). CI `verify` run `42225530063` **success**; `pages-build-deployment` run `42225528455` build **success** (8s) & deploy **success** (1m39s). Live HTML & blank-unverified tables fetched and verified at `https://wingbangboozle1-lang.github.io/Jack2/session-a3a8ec08/` and `.../flagged.html`. |
 
 ---
 
