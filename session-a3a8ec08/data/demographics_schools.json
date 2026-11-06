@@ -1,0 +1,224 @@
+{
+  "geography_population_housing": [
+    {
+      "id": "DM-01",
+      "category": "Geography & Urban Density",
+      "metric": "Land Area & Population Density (2020 Census)",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "2020 Decennial Census",
+      "value": "8,304.2 / sq mi (469.49 sq mi) LA City | 2,466.9 / sq mi (4,059.28 sq mi) LA County | 93.8 / sq mi U.S.",
+      "notes": "88.5x U.S. population density in City of LA creates dense round-the-clock foot/vehicular traffic and high urban land scarcity.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (FIPS 0644000 & 06037)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-02",
+      "category": "Population Trajectory",
+      "metric": "Resident Population Estimate (July 1, 2025 Vintage V2025)",
+      "geography_or_scope": "City of Los Angeles & Los Angeles County",
+      "period": "July 1, 2025 (V2025)",
+      "value": "3,869,089 (City of LA) | 9,694,934 (LA County) | 341,784,857 (U.S.)",
+      "notes": "Remains the #2 most populous U.S. city and #1 most populous U.S. county, providing massive aggregate consumer volume despite mild out-migration.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (V2025)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-03",
+      "category": "Population Trajectory",
+      "metric": "Cumulative Population Change (April 1, 2020 Base to July 1, 2025)",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "2020–2025 (V2025)",
+      "value": "-0.8% (City of LA) | -3.2% (LA County) | +3.1% (U.S.)",
+      "notes": "City of LA (-0.8%) outperformed wider LA County (-3.2%) by 240 bps, demonstrating stronger urban-core infill retention than suburban rings.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (V2025)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-04",
+      "category": "State Population Benchmark",
+      "metric": "CA Dept. of Finance E-1 Annual Population Estimate & YoY Change",
+      "geography_or_scope": "City of Los Angeles & Los Angeles County",
+      "period": "January 1, 2025 to January 1, 2026",
+      "value": "3,806,201 (-0.9% YoY) City of LA | 9,837,286 (-0.6% YoY) LA County",
+      "notes": "CA DOF May 2026 release notes slower international migration and domestic affordability outflow creating ~0.6%–0.9% annual population headwinds.",
+      "status": "verified",
+      "source_label": "CA Dept. of Finance E-1 Population Estimates (May 1, 2026)",
+      "source_url": "https://dof.ca.gov/media/docs/forecasting/demographics/estimates/e-1_2026_press_release.Pdf"
+    },
+    {
+      "id": "DM-05",
+      "category": "Demographics & Commute",
+      "metric": "Households, Household Size & Mean Commute Time",
+      "geography_or_scope": "City of Los Angeles & Los Angeles County",
+      "period": "2020–2024 ACS 5-Year",
+      "value": "1,439,097 HH (2.61/HH; 30.7 min commute) LA City | 3,416,449 HH (2.81/HH; 30.4 min) LA County",
+      "notes": "30.7-minute mean commute (vs. 26.4 min U.S.) reinforces automotive commuter reliance on drive-thru quick-service dining.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (ACS 2020–2024)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-06",
+      "category": "Age Distribution",
+      "metric": "Youth (<18 Years) vs. Senior (65+ Years) Population Share",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "V2025",
+      "value": "19.2% <18 / 14.2% 65+ (LA City) | 19.2% <18 / 17.1% 65+ (LA County) | 21.1% / 18.9% (U.S.)",
+      "notes": "Working-age adult share (18–64) in City of LA is 66.6% (vs. 60.0% U.S.), sustaining strong daytime & late-night adult QSR demand.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (V2025)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-07",
+      "category": "Housing & Land Value Proxy",
+      "metric": "Owner-Occupied Housing Rate & Median Home Value",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "2020–2024 ACS 5-Year",
+      "value": "36.0% owner / $921,200 median value (LA City) | 45.9% / $834,200 (LA County) | 65.2% / $332,700 (U.S.)",
+      "notes": "2.77x U.S. median home values reflect high underlying urban land values; 64.0% renter share supports multifamily redevelopment optionality.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (ACS 2020–2024)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-08",
+      "category": "Housing Supply & Rent",
+      "metric": "Median Gross Rent (2020–2024) & County Housing Units / 2025 Permits",
+      "geography_or_scope": "City of Los Angeles & Los Angeles County",
+      "period": "2020–2024 ACS & 2025 Permits",
+      "value": "$1,933/mo rent (LA City) | $1,954/mo rent, 3,726,923 units, 22,250 permits (LA County)",
+      "notes": "High shelter costs squeeze lower-income discretionary QSR budgets while keeping land supply tightly constrained (only 22,250 permits countywide in 2025).",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (ACS 2020–2024 & V2025)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "DM-09",
+      "category": "Submarket Census Tract",
+      "metric": "1-Mile / 3-Mile Radius Census Tract Population & Traffic Count Around [REDACTED-PROPERTY-01]",
+      "geography_or_scope": "[REDACTED-PROPERTY-01] Immediate Trade Area",
+      "period": "2026 Current",
+      "value": "",
+      "notes": "Cannot be published without revealing or triangulating the protected parcel coordinates; left blank per privacy and verification rules.",
+      "status": "unverified",
+      "source_label": "U.S. Census Bureau data.census.gov",
+      "source_url": "https://data.census.gov/"
+    }
+  ],
+  "income_and_spending": [
+    {
+      "id": "IN-01",
+      "category": "Household Income",
+      "metric": "Median Household Income (in 2024 Dollars)",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "2020–2024 ACS 5-Year",
+      "value": "$81,939 (City of LA) | $90,112 (LA County) | $80,734 (U.S.)",
+      "notes": "LA County median household income exceeds U.S. median by +11.6%; City of LA is +1.5% above U.S. median.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (ACS 2020–2024)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "IN-02",
+      "category": "Individual Income & Poverty",
+      "metric": "Per Capita Income (2024 Dollars) & Persons in Poverty (%)",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "2020–2024 ACS / V2025 Poverty",
+      "value": "$47,685 / 16.5% poverty (LA City) | $45,792 / 13.3% (LA County) | $44,673 / 10.2% (U.S.)",
+      "notes": "Bifurcated income distribution: elevated poverty (16.5% in LA City) makes core QSR value-menu customers sensitive to post-AB 1228 menu price hikes.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "IN-03",
+      "category": "Aggregate Regional Wealth",
+      "metric": "Total County Personal Income (Current Dollars)",
+      "geography_or_scope": "Los Angeles County, CA",
+      "period": "2024 Annual (Released Feb 5, 2026)",
+      "value": "$818.5 billion (#1 highest among all 3,116 U.S. counties)",
+      "notes": "Unmatched aggregate personal income base underpins long-term commercial real estate liquidity and institutional buyer depth in Los Angeles.",
+      "status": "verified",
+      "source_label": "U.S. Bureau of Economic Analysis (BEA) Release BEA 26-08",
+      "source_url": "https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf"
+    },
+    {
+      "id": "IN-04",
+      "category": "Consumer Food Spending",
+      "metric": "Average Annual Household Food & Housing Expenditures",
+      "geography_or_scope": "Los Angeles Metro Area vs. United States",
+      "period": "2023–2024 Consumer Expenditure Survey",
+      "value": "$11,858 food / $33,126 housing (LA Metro) vs. $10,077 food / $25,853 housing (U.S.)",
+      "notes": "LA households spend +17.7% more annually on food than the U.S. average, supporting high gross unit sales potential for well-located QSR pads.",
+      "status": "verified",
+      "source_label": "U.S. Bureau of Labor Statistics — Los Angeles Economic Summary (Oct 2026)",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    }
+  ],
+  "school_systems": [
+    {
+      "id": "SC-01",
+      "category": "K-12 Public School Scale",
+      "metric": "Los Angeles Unified School District (LAUSD) Certified TK–12 Enrollment",
+      "geography_or_scope": "LAUSD (CDS 19-64733 — 710 Sq. Mi. Service Area)",
+      "period": "2025–26 Academic Year",
+      "value": "497,105 students (#1 largest district in California; 8.7% of CA enrollment)",
+      "notes": "Major institutional employer and neighborhood anchor across Central Los Angeles, generating daily school-commute and student QSR traffic.",
+      "status": "verified",
+      "source_label": "California Department of Education (CDE) DataQuest 2025–26",
+      "source_url": "https://dq.cde.ca.gov/dataquest/dqcensus/enrgrdlevels.aspx?agglevel=District&year=2025-26&cds=1964733"
+    },
+    {
+      "id": "SC-02",
+      "category": "Academic Outcomes",
+      "metric": "LAUSD Four-Year Cohort High School Graduation Rate",
+      "geography_or_scope": "Los Angeles Unified School District",
+      "period": "2024–2025 Academic Year",
+      "value": "86.7% district average",
+      "notes": "Reflects steady high-school completion improvements despite socioeconomic challenges across urban core attendance zones.",
+      "status": "verified",
+      "source_label": "LAUSD Official School Explorer Data Portal",
+      "source_url": "https://explore.lausd.org/school/1873601/Los-Angeles-SH"
+    },
+    {
+      "id": "SC-03",
+      "category": "Demographic Enrollment Forecast",
+      "metric": "Projected 10-Year Public K-12 Enrollment Change",
+      "geography_or_scope": "Los Angeles County Public Schools",
+      "period": "10-Year Cohort-Survival Projection",
+      "value": "-240,800 students (largest projected county K-12 decline in California)",
+      "notes": "Lower birth rates and family housing out-migration signal shift from young-family growth toward smaller adult/renter households in Central LA.",
+      "status": "verified",
+      "source_label": "California Department of Finance — Public K-12 Graded Enrollment",
+      "source_url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/"
+    },
+    {
+      "id": "SC-04",
+      "category": "Workforce Educational Attainment",
+      "metric": "High School Graduate+ & Bachelor's Degree+ Share (Persons Age 25+)",
+      "geography_or_scope": "City of Los Angeles vs. LA County vs. U.S.",
+      "period": "2020–2024 ACS 5-Year",
+      "value": "79.6% HS+ / 38.5% Bachelor's+ (LA City) | 80.9% / 36.0% (LA County) | 89.6% / 35.7% (U.S.)",
+      "notes": "Higher share of college graduates in City of LA (38.5% vs. 35.7% U.S.) supports daytime white-collar/healthcare employment nodes in Central LA.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts (ACS 2020–2024)",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "SC-05",
+      "category": "Parcel School Assignment",
+      "metric": "Exact Assigned Neighborhood Elementary/Middle/High School Attendance Zone for [REDACTED-PROPERTY-01]",
+      "geography_or_scope": "[REDACTED-PROPERTY-01] Immediate Parcel",
+      "period": "2026–2027",
+      "value": "",
+      "notes": "Specific school boundary identification would narrow parcel location to a ~0.5-mile polygon; left blank to protect owner privacy.",
+      "status": "unverified",
+      "source_label": "LAUSD Resident School Identifier / Enroll Portal",
+      "source_url": "https://lausd.org/enrollnow?lang=en"
+    }
+  ]
+}
