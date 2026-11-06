@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Session A archive - Central LA Jack in the Box NNN workbook</title>
+<meta name="description" content="Archive of the parallel session&#x27;s site, preserved unmodified and cross-linked, with the conflict resolution record.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Workbook<small>Jack in the Box &middot; 2030&ndash;2035 lease expiry &middot; data as of 2026-11-06</small></span></a>
+  <nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="market-economics.html">Market economics</a><a href="property-lease.html">Property &amp; lease</a><a href="valuation.html">Valuation inputs</a><a href="projection-model.html">Projection model</a><a href="risks.html">Risk register</a><a href="requirements.html">Requirements</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a><a href="deployment.html">Deployment</a><a href="archive.html" aria-current="page">Session A archive</a></nav>
+</div></header>
+<main id="main" class="wrap">
+
+<div class="page-head"><p class="eyebrow">Session A archive</p><h1>A second agent session published its own site on this same repository. It is preserved here, unmodified.</h1><p class="lede">Nothing another session produced was deleted, overwritten or rewritten. Both analyses are published; the root of the site is the data-driven build, and this is the parallel one.</p></div>
+
+<div class="callout warn">
+<p><strong>What happened.</strong> Session <code>arena-1944e5a3</code> merged its site to <code>main</code> as PR #1 (<code>22f2f91</code>) while this session
+(<code>arena-742b6a03</code>) was still doing research and had not yet pushed. The next <code>git pull --rebase</code> failed with conflicts in six files.
+Instead of force-pushing over that work, session B copied every page session A published into this folder &mdash; with its own CSS, JS and favicon, so its
+relative links still work &mdash; and cross-linked it here.</p>
+<p>Full record: <a href="COORDINATION.md" download>COORDINATION.md</a> (conflict section and both session logs).</p>
+</div>
+
+<h2>Session A's pages</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Page</th><th>Link</th></tr></thead><tbody><tr><td>Landing page</td><td><a href='session-1944e5a3/index.html'>session-1944e5a3/index.html</a></td></tr><tr><td>Property</td><td><a href='session-1944e5a3/property.html'>session-1944e5a3/property.html</a></td></tr><tr><td>Market</td><td><a href='session-1944e5a3/market.html'>session-1944e5a3/market.html</a></td></tr><tr><td>Demographics</td><td><a href='session-1944e5a3/demographics.html'>session-1944e5a3/demographics.html</a></td></tr><tr><td>Projection</td><td><a href='session-1944e5a3/projection.html'>session-1944e5a3/projection.html</a></td></tr><tr><td>Risk</td><td><a href='session-1944e5a3/risk.html'>session-1944e5a3/risk.html</a></td></tr><tr><td>Decision</td><td><a href='session-1944e5a3/decision.html'>session-1944e5a3/decision.html</a></td></tr><tr><td>Sources</td><td><a href='session-1944e5a3/sources.html'>session-1944e5a3/sources.html</a></td></tr><tr><td>Flagged for review</td><td><a href='session-1944e5a3/flagged.html'>session-1944e5a3/flagged.html</a></td></tr><tr><td>Methodology</td><td><a href='session-1944e5a3/methodology.html'>session-1944e5a3/methodology.html</a></td></tr></tbody></table></div>
+
+<h2>Other independent dossiers on this same deployment</h2>
+<div class="tablewrap"><table><thead><tr><th>Dossier</th><th>Link</th><th>Method</th></tr></thead><tbody>
+<tr><td>Session C (<code>arena/230fe704</code>)</td><td><a href="docs/index.html">docs/index.html</a></td><td>Monte-Carlo certainty-equivalent after-tax wealth over five strategies</td></tr>
+<tr><td>Session D (<code>50002478</code>)</td><td><a href="session-50002478/index.html">session-50002478/index.html</a></td><td>Source-linked conditional dashboard; deterministic normalized cash-flow stress tests; no property-specific price target</td></tr>
+</tbody></table></div>
+<p class="lede">These are independent analytical passes preserved side by side. None silently replaces the others; reconciling them is an owner judgement, not a merge operation.</p>
+
+<h2>How the two analyses differ</h2>
+<table class="tablewrap"><table>
+<thead><tr><th></th><th>Session A (<code>arena-1944e5a3</code>)</th><th>Root site (<code>arena-742b6a03</code>)</th></tr></thead>
+<tbody>
+<tr><td>Data storage</td><td>Values written inline into HTML</td><td>Values in <code>data/*.json</code>, one source id per row, rendered by a generator</td></tr>
+<tr><td>Source policy</td><td>Government records plus LAEDC and UCLA Anderson forecasts</td><td>Government, regulator or SEC filing only (Tiers A&ndash;C). No forecasts from non-official bodies.</td></tr>
+<tr><td>Verification</td><td>Manual link check, local</td><td>Automated: source resolution, blank-value rule, internal links, PII scan, model reproducibility &mdash; all failing the build</td></tr>
+<tr><td>Quantification</td><td>Projection narrative with a flagged cap-rate band</td><td>Deterministic 2026&ndash;2040 model with breakevens, sensitivity grid and assumption ranking</td></tr>
+<tr><td>Sources cited</td><td>29</td><td>23</td></tr>
+</tbody></table></div>
+
+<h2>What was taken from it</h2>
+<p>Session B re-checked the sources session A cited and adopted one figure it had not covered: Los Angeles County total personal income of
+<strong>$818.5 billion</strong> in 2024, the highest of any US county, now row M86 with source S23. <span class="src"><a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Economic Analysis (BEA) - Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, released February 5, 2026)">S23 &#8599;</a></span></p>
+<p>Session A's Census QuickFacts link for the city/county table is malformed (<code>losangelesNICITYcalifornia</code>) and fails as a source citation.
+It is left unmodified in the archive and recorded as irregularity I09 on the <a href="flagged.html">Flagged for review</a> page &mdash; rewriting another
+session's page would hide the defect rather than disclose it.</p>
+
+<h2>Where to read if you want one answer</h2>
+<p>Use the root site: <a href="executive-summary.html">Executive summary</a> for the recommendation,
+<a href="decision.html">Decision</a> for the ranked strategies and triggers. The archive is here for completeness and audit, not as a second opinion to reconcile.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support &mdash; not an appraisal, not tax advice, not investment advice.</strong>
+  Every data value on this site links to the official source it was read from on 2026-11-06.
+  Values that could not be confirmed from an official source are blank and listed on the
+  <a href="flagged.html">Flagged for review</a> page. No personal or parcel-identifying information is published.</p>
+  <p>Built from <a href="sources.html">23 sources</a> &middot; <a href="verification.html">verification log</a> &middot;
+  <a href="deployment.html">deployment</a> &middot; reproduction: <code>python3 tools/build_site.py</code></p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

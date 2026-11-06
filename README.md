@@ -1,49 +1,130 @@
-# Jack2 — Anonymous NNN Property Decision Dashboard
+# Central Los Angeles Jack in the Box (NNN) — sell vs renew decision workbook
 
-Source-linked, public-safe research and conditional decision support for a Jack in the Box NNN property described only as “around central Los Angeles,” with a user-reported lease expiry range of 2030–2035.
+A verifiable decision workbook for a single-tenant Jack in the Box restaurant on an NNN lease in
+Central Los Angeles, with a lease expiration window of 2030–2035.
 
-**Live dashboard:** https://wingbangboozle1-lang.github.io/Jack2/
+**Live site:** https://wingbangboozle1-lang.github.io/Jack2/
 
-> This is not an appraisal, legal opinion, tax opinion or personalized investment recommendation. No property address, owner identity, rent, executable sale price, executed lease option or parcel hazard record was supplied. Missing property values remain blank and are flagged for review. The current recommendation is a conditional dual-track process: obtain market bids while reviewing the lease and negotiating a tenant-supported extension; do not blindly hold to expiry or assume renewal.
+> A third, independently built dossier — Monte-Carlo over five strategies, ranked on risk-adjusted
+> after-tax wealth — is published from this same Pages deployment at
+> **https://wingbangboozle1-lang.github.io/Jack2/docs/** (source in `docs/`, engines in `model/`,
+> analysis in `research/00`–`07`). The root site below is unchanged. See `COORDINATION.md` → *Session C*.
 
-## What is included
+## What this is
 
-- Executive overview and explicit sell / hold / extension decision gates.
-- 66 regional and tenant evidence rows, 9 official forecast rows, 28 blank property inputs, 30 risk pathways, 16 decision alternatives and 44 review flags.
-- Category subpages for demographics, income, education, employment, geography, housing, business/trade, infrastructure, inflation/rates, tenant/brand, regulation/tax and hazards.
-- A deterministic normalized cash-flow model: 16 scenario/tail paths and 15 one-way sensitivity points. All numeric controls are flagged hypotheses, not verified property inputs.
-- Source library with curated issuing-source excerpts and visible source links on every data row.
-- Searchable tables and CSV downloads. No analytics, cookies, forms, external runtime scripts or CDN assets.
+| | |
+|---|---|
+| Question | Sell the property before the lease expires, or renew and hold? |
+| Answer format | A ranked strategy plus six testable decision triggers — not a guess at value |
+| Evidence base | 87 metric rows, 76 verified against 23 official sources, 11 deliberately blank and flagged |
+| Model | Deterministic 2026–2040 projection in `tools/model.py`, published inputs, breakevens and sensitivity |
+| Risk | 24-row register mapped to each decision, including wildfire/earthquake/insurance tail scenarios |
+| Privacy | No name, address, APN, loan number or account anywhere in the repo or the site (enforced in code) |
 
-## Reproduce locally
+## Read it in this order
 
-Requires Node 22+ and Python 3.11+ (standard library only).
+1. `index.html` — dashboard
+2. `executive-summary.html` — the answer on one page
+3. `decision.html` — four scored strategies, the plan, the triggers
+4. `market-economics.html` — the verified data
+5. `projection-model.html` — how the numbers were produced
+6. `risks.html` — what can go wrong, decision by decision
+7. `flagged.html` — everything that could **not** be verified, and what to obtain
+8. `archive.html` — the parallel session's site, preserved unmodified (a second agent session merged
+   its own build to `main` mid-session; nothing was overwritten — see `COORDINATION.md`)
+
+## Reproduce
 
 ```bash
-python research/assemble.py   # regenerate curated public-safe research JSON
-npm ci
-npm run check                 # build + model/verification tests + deterministic/source/link/privacy checks
-npm run preview               # static preview on 0.0.0.0:4173
+python3 tools/model.py        # data/model_output.json + research/model-report.md
+python3 tools/build_site.py   # all HTML pages at the repo root
+python3 tools/check_site.py   # internal links, source completeness, PII scan, model consistency
+python3 tools/export_ledger.py# research/source-ledger.md (manual review copy)
 ```
 
-Generated directories `site/` and `reports/` are intentionally not committed. GitHub Actions rebuilds, verifies and deploys `site/` to GitHub Pages on `main`.
+Python 3.11, standard library only. No installs, no network needed to build.
 
-## Repository map
+## Structure
 
-| Path | Purpose |
+```
+data/           source ledger, metrics, valuation inputs, risks, decisions, requirements, irregularities
+session-1944e5a3/  verbatim archive of the parallel session's published site
+tools/          model.py, build_site.py, check_site.py, export_ledger.py
+research/       model report and the manual-review verification ledger
+assets/         style.css, app.js (progressive enhancement only)
+*.html          the published site (GitHub Pages serves main / root)
+COORDINATION.md shared task board for parallel sessions
+```
+
+## Verification rules used
+
+- A value is published **only** if it was read from the official source on the access date (2026-11-06) and that source is linked on the same row.
+- If no official value exists, the cell is **blank** and the row is listed on `flagged.html`. Nothing is inferred, interpolated or taken from an aggregator.
+- Verified inputs are kept in a different JSON block from analyst assumptions (`data/valuation.json`), and assumptions are labelled on the site.
+- The build fails if a row carries a value without a source, if a "verified" row is empty, if an internal link is broken, or if a possible personal identifier appears.
+
+## Scope and limitations
+
+This is internal decision support, not an appraisal, not tax advice and not investment advice. The brief did not include the street
+address, APN, current rent, exact expiry date, purchase basis or loan terms, so no parcel-level value, hazard classification or tax
+computation is asserted. Those gaps are enumerated as P01–P12 and F01–F11 in `flagged.html`.
+
+## License
+
+No license is included; all rights reserved by the repository owner. A license is recommended before any external reuse of the data tables.
+
+
+## Session C dossier (`docs/`, `model/`, `research/`)
+
+A separate agent session added a second, independently derived analysis to this repository without
+altering anything described above. It is published at `docs/index.html`
+(https://wingbangboozle1-lang.github.io/Jack2/docs/) and is self-contained.
+
+| | |
 |---|---|
-| `COORDINATION.md` | Session claims, branch-policy note, audit and integration log |
-| `data/research.json` | Curated evidence, blank property fields, risks, decisions, flags and sources |
-| `data/analysis.json` | Executive recommendation, methodology, assumptions and limitations |
-| `research/assemble.py` | Reproducible assembler for the curated research register |
-| `scripts/model.mjs` | Normalized monthly cash-flow and same-basis sale comparison |
-| `scripts/build.mjs` | Static dashboard generator |
-| `scripts/verify.mjs` | Schema, source-excerpt, row-link, internal-link, privacy and determinism checks |
-| `tests/` | Node built-in test suites |
-| `.github/workflows/pages.yml` | Verify and deploy workflow |
+| Question | Hold, renew, or sell — with a lease described as expiring anywhere in a five-year window (2030–2035) |
+| Method | 20,000-trial Monte-Carlo over five strategies, including a §1031 exchange, scored on **certainty-equivalent after-tax wealth** (CRRA = 3), not on expected value |
+| Conclusion | Do not let the lease run to expiry. Run a dual track: pursue an early 10–15 year extension **and** prepare a §1031 sale. Sell either way — the only variable is whether you sell with 13–15 years of term or with 4–9. |
+| Headline numbers | Extension is worth **+25.2%** ($12.48 → $15.62 per $1 of NOI); term decay costs **−22.7%**; the expiry ambiguity alone is worth **~21.6% = $500,000** on a $200k-NOI asset |
+| Data | 195 rows, 154 verified against T1 official sources, 25 left blank and flagged, every row carrying a source link |
+| Privacy | Owner, tenant, address and APN are placeholders; the Owner's income, net worth, bracket and basis are never collected — the model is normalised to $1.00 of NOI |
 
-## Evidence and privacy boundaries
+Rebuild:
 
-Official-government, official-company SEC, and original issuing-organization sources are distinguished. County, metropolitan and school-district figures are proxies, not parcel evidence. Forecasts are not observations. Scenario values are mathematical stress controls, not market estimates. Automated checks validate internal consistency and citation structure; they do not independently appraise the property or re-fetch live sources at build time.
+```bash
+python3 model/build_facts.py        # 195 rows + integrity assertions
+python3 model/projection_model.py   # deterministic; seed 20261106
+python3 model/build_site.py         # 11 pages + internal link validation
+python3 -m http.server -d docs 8080 # preview
+```
 
-Public outputs use placeholders such as `[PROPERTY]`. Do not add addresses, parcel numbers, owner/tenant personal identifiers, contacts, account data or identifying financial documents to this repository or website.
+The two analyses reach different recommendations because they optimise different things: the root site
+ranks strategies on a deterministic projection with explicit decision triggers; `docs/` ranks them on the
+tail risk of a stochastic simulation. Neither supersedes the other, and reconciling them is a judgement
+call for the Owner.
+
+## Session D dossier (`session-50002478/`, `scripts/`, `tests/`, `data/research.json`)
+
+A fourth independently built, source-linked dashboard is published from the same legacy Pages deployment at
+**https://wingbangboozle1-lang.github.io/Jack2/session-50002478/**. It does not replace the root workbook,
+the Session A archive or the `docs/` dossier.
+
+| | |
+|---|---|
+| Question | Sell before expiry, hold, or pursue a tenant-supported extension under an unverified 2030–2035 expiry range |
+| Method | Deterministic normalized monthly cash-flow model; 16 scenario/tail paths and 15 one-way sensitivities; no Monte-Carlo probabilities or property-specific price target |
+| Conclusion | Conditional dual-track: obtain executable market bids while reviewing the executed lease and negotiating an extension; no blind hold or automatic renewal |
+| Data | 66 regional/tenant evidence rows, 9 official forecast rows, 28 blank property inputs, 30 risks, 16 alternatives, 44 flags, 34 issuing-source records |
+| Privacy | Placeholder-only public outputs; no address, APN, owner/tenant personal identifiers, contacts or account data |
+
+Rebuild and verify:
+
+```bash
+python research/assemble.py
+npm ci
+npm run check       # build + 23 Node tests + deterministic/source/link/privacy verification
+npm run preview     # local preview on 0.0.0.0:4173
+```
+
+The generated dossier is committed under `session-50002478/` because the existing GitHub Pages source is
+`main` / root (legacy build). `site/` and `reports/` remain ignored scratch/output directories.

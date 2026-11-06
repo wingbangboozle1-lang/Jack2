@@ -117,8 +117,8 @@ export function runVerification() {
   const analysis = readJSON(path.join(root,'data/analysis.json'));
   const researchStats = validateResearch(data);
   const sourceURLs = new Set(data.sources.map(s=>s.url));
-  const site = path.join(root,'site');
-  if (!fs.existsSync(site)) fail('site/ missing; run npm run build first');
+  const site = path.join(root,'session-50002478');
+  if (!fs.existsSync(site)) fail('session-50002478/ missing; run npm run build first');
   const before = hashTree(site);
   execFileSync(process.execPath, [path.join(root,'scripts/build.mjs')], {cwd:root, stdio:'pipe'});
   const after = hashTree(site);

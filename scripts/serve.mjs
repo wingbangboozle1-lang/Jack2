@@ -1,7 +1,7 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
-const root = path.resolve(import.meta.dirname, '..', 'site');
+const root = path.resolve(import.meta.dirname, '..', 'session-50002478');
 const port = Number(process.env.PORT || 4173);
 const types = { '.html':'text/html; charset=utf-8', '.json':'application/json; charset=utf-8', '.csv':'text/csv; charset=utf-8', '.svg':'image/svg+xml', '.css':'text/css', '.js':'text/javascript' };
 const server = http.createServer((req, res) => {

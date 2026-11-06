@@ -1,0 +1,40 @@
+name: verify
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate the projection model
+        run: python3 tools/model.py
+
+      - name: Rebuild the site from data
+        run: python3 tools/build_site.py
+
+      - name: Fail if generated files are out of date
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Generated output is out of date. Run tools/model.py and tools/build_site.py and commit the result."
+            git status --porcelain
+            exit 1
+          fi
+
+      - name: Run link, source, PII and consistency checks
+        run: python3 tools/check_site.py
+
+      - name: Export the manual-review ledger
+        run: python3 tools/export_ledger.py
