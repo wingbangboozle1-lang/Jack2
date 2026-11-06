@@ -62,3 +62,17 @@ All published on `flagged.html` (F-01…F-20 data items; R-01…R-07 repository
 irregularities, including README stub, Pages already enabled on main root, repo
 public, no license/CI, branch-protection not enforced). Merge is not blocked;
 owner review requested post-launch.
+
+## Parallel-session notice (2026-11-06)
+
+- A parallel session (`arena/742b6a03-jack2`) opened PR #2 "Verified decision workbook:
+  Central LA Jack in the Box NNN (sell vs renew)" at 13:06:09Z, after PR #1 had merged.
+  Its CI (build-and-check) passes; it archives this session's site verbatim under
+  `session-1944e5a3/`, cross-links it from `archive.html`, and re-verifies sources
+  (adopts BEA personal income $818.5B as its S23/M86).
+- This session left PR #2 OPEN deliberately: this session's merge mandate covered
+  `arena/1944e5a3-jack2` only; replacing the live root site with the parallel
+  session's build is the owner's call (or the parallel session's own merge mandate).
+  Coordination comment logged on PR #2. Nothing from either session was discarded.
+- Current live root (main): this session's site (Executive Summary + 9 subpages).
+  PR #2 proposes a different root (data-ledger workbook) + this site in archive.
