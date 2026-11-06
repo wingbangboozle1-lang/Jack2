@@ -437,7 +437,7 @@ requirements = [
  ('Q10','Clean landing page and category subpages','Implemented','Static accessible dashboard with overview, evidence, property, projections, decisions, risks, tax, requirements, sources and review pages.','repo'),
  ('Q11','No manual input required','Implemented','Research, build, validation, PR and deployment are automated in-session. Missing facts are not requested through a form.','repo'),
  ('Q12','Shared coordination board','Implemented','Claims, branch constraint, verification log, sources and final integration outcome recorded in COORDINATION.md.','repo'),
- ('Q13','Build and link validation before merge','Pending integration','Static build, internal link/anchor checks, model tests, source checks and privacy scans run before the PR is merged.','repo'),
+ ('Q13','Build and link validation before merge','Implemented','Static build, internal link/anchor checks, model tests, source checks and privacy scans run before the PR is merged.','repo'),
  ('Q14','PR, merge and live GitHub Pages','Pending integration','Create and merge the integration PR, then verify the deployed site and record actual links/results.','repo'),
  ('Q15','Flagged items visible after publication','Implemented','Dedicated Flagged for Review page includes every missing property input and source/data irregularity with official links.','repo'),
 ]

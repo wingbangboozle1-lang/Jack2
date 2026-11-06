@@ -14,8 +14,8 @@
 |---|---|---|---|
 | T01 — Official-source research register | implemented; integration checks pending | 50002478 | `data/research.json`, `research/` |
 | T02 — Scenario methodology and risk analysis | implemented; 15 model tests passing | 50002478 | `data/analysis.json`, `scripts/model.mjs`, `tests/model.test.mjs` |
-| T03 — Accessible dashboard and category pages | in progress | 50002478 | `site/`, `scripts/build.mjs`, `package.json`, `package-lock.json` |
-| T04 — Verification and privacy checks | in progress | 50002478 | `scripts/verify.mjs`, `tests/verify.test.mjs`, `reports/` |
+| T03 — Accessible dashboard and category pages | implemented; 23 static pages | 50002478 | `site/`, `scripts/build.mjs`, `package.json`, `package-lock.json` |
+| T04 — Verification and privacy checks | implemented; 23 tests passing | 50002478 | `scripts/verify.mjs`, `tests/verify.test.mjs`, `reports/` |
 | T05 — Final integration, pull request, Pages deployment | in progress | 50002478 | `README.md`, `.github/workflows/`, `index.html`, `COORDINATION.md`, generated `dist/` (not tracked) |
 
 All scopes were unclaimed at initial inspection. Shared index/navigation is generated only during T05 after data and verification checks. The user requested autonomous completion; no manual-input gate is used. Missing facts remain blank and are flagged, not guessed.
@@ -32,6 +32,10 @@ All scopes were unclaimed at initial inspection. Shared index/navigation is gene
 - Model: deterministic monthly cash-flow engine, explicit dimensionless stress controls, no populated real-property inputs, same-basis sale comparison, 16 scenario/tail paths and 15 one-way sensitivity points. Initial tests caught a present-value decomposition omission of expiry-month releasing cost; fixed and covered. All 15 Node tests pass.
 - GitHub CLI authentication confirmed without exposing credentials. No conflicting claims or files observed. T03/T04 remain active; no shared index/navigation or deployment claim is complete yet.
 
+- Dashboard: 23 static pages (overview, evidence index, 12 evidence category subpages, property blanks, official projections, scenario model, decisions, risks, tax/exit, review flags, sources, requirements). Inline CSS/JS/SVG only; local preview served on `0.0.0.0:4173` and returned HTTP 200 for all primary pages.
+- Verification: `npm run check` passes. 23 Node tests; deterministic rebuild; 26 tables / 366 HTML data rows with registered source links; 251 CSV data rows with registered source URLs; internal links/anchors, source-excerpt substrings, privacy pattern scan and null model-property-input checks pass. Two verifier defects were caught and fixed during development: projection rows intentionally duplicated from findings were incorrectly treated as cross-section duplicates, and a case-insensitive street-address pattern false-positived on transit prose.
+- Pages configuration: repository already had a legacy Pages site (`build_type: legacy`, status building). Direct Arena-token API update to workflow build type returned HTTP 403 (integration permission boundary). The workflow now uses the workflow-scoped `GITHUB_TOKEN` with `pages: write` to set `build_type: workflow`, then configure/upload/deploy. Deployment remains pending until the main-branch workflow runs.
+
 ## Completion record
 
-Pending: source verification, deterministic model tests, build and link validation, privacy audit, integration PR, merge, and live Pages verification.
+Pending: integration PR, merge, main-branch Pages deployment and live HTTP verification. Local research/model/build/verification gates are complete; no manual-input gate is used.

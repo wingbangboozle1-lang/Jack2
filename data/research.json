@@ -3136,7 +3136,7 @@
       "id": "Q13",
       "category": "Requirements",
       "metric": "Build and link validation before merge",
-      "value": "Pending integration",
+      "value": "Implemented",
       "period": "This release",
       "geography": "Project",
       "source_id": "repo",
