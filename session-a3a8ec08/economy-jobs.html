@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Economy, Job Growth, Inflation, Treasury Yields &amp; Tax Law — Central LA Jack in the Box NNN Decision Dashboard</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Primary Navigation">
+      <div class="brand">
+        <span class="brand-badge">NNN Lease Decision Suite</span>
+        <h1>Central LA Jack in the Box Analysis</h1>
+        <p>Asset: [REDACTED-PROPERTY-01]<br>Expiry Window: 2030–2035</p>
+      </div>
+      <div class="nav-section-label">Dashboard Categories</div>
+      <ul class="nav-links">
+        <li><a href="./index.html"><span class="nav-num">01</span><span>Overview Dashboard</span></a></li><li><a href="./executive-summary.html"><span class="nav-num">02</span><span>Executive Summary</span></a></li><li><a href="./property-tenant.html"><span class="nav-num">03</span><span>Property, Lease &amp; Tenant</span></a></li><li><a href="./demographics-schools.html"><span class="nav-num">04</span><span>Demographics, Income &amp; Schools</span></a></li><li><a href="./economy-jobs.html" class="active"><span class="nav-num">05</span><span>Economy, Jobs, Rates &amp; Tax</span></a></li><li><a href="./projections-decisions.html"><span class="nav-num">06</span><span>Projections &amp; Decision Model</span></a></li><li><a href="./risks-black-swans.html"><span class="nav-num">07</span><span>BAU &amp; Black Swan Risks</span></a></li><li><a href="./sources.html"><span class="nav-num">08</span><span>Official Sources Ledger</span></a></li><li><a href="./flagged.html"><span class="nav-num">09</span><span>Flagged for Review</span></a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <strong>Privacy Guardrail Active</strong><br>
+        Owner: <code>[REDACTED-OWNER-01]</code><br>
+        Zero PII published. 100% official primary sources.
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <div class="privacy-bar" role="region" aria-label="Privacy Notice">
+        <div><strong>PRIVACY SHIELD ACTIVE:</strong> All personal, owner, and parcel-identifying details are anonymized using placeholders (<code>[REDACTED-OWNER-01]</code> / <code>[REDACTED-PROPERTY-01]</code>).</div>
+        <div>Analysis Date: <strong>2026-11-06</strong> · Every table row verified from official sources or left blank &amp; flagged.</div>
+      </div>
+      <main class="content">
+        <header class="page-header">
+          <div class="page-eyebrow">Category 05 · Macro, Rates &amp; Tax Rules</div>
+          <h2>Local Economy, Job Growth, Inflation, Treasury Yields &amp; Tax Law</h2>
+          <p>BLS Fall 2026 employment and CPI data, U.S. Treasury yield curve, IRC §1031 deferral rules, Prop 13 NNN tax shock, and City of LA Measure ULA.</p>
+        </header>
+        
+    <section class="card" data-table-block>
+      <h3>1. Labor Market, Sectoral Job Growth, Wages &amp; Regional Output (2026)</h3>
+      <p class="card-subtitle">Verified from U.S. BLS Los Angeles Area Economic Summary (Oct 5, 2026), Economy at a Glance (Nov 2026), BEA, and U.S. Economic Census.</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (8)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-labor-econ">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="verified"><td><code>EC-01</code></td><td>Unemployment Rate</td><td><strong>Local Area Unemployment Rate (NSA — City, County, Metro, State, U.S.)</strong><br><span style="font-size:12px;color:#64748b;">LA City, LA County, LA Metro, CA, U.S. · August 2026 (vs. August 2025) &amp; Sept 2026 Prelim</span></td><td class="val-cell">5.0% LA City | 4.9% LA County | 4.8% LA Metro (4.4% Sept prelim) | 5.4% CA | 4.3% U.S.</td><td>Significant 120–130 bps YoY improvement in LA City (from 6.2%) and LA County (from 6.2%), though still ~60–70 bps above U.S. average.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026) &amp; EAG &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-02</code></td><td>Payroll Job Growth</td><td><strong>Total Nonfarm Payroll Employment &amp; 12-Month Change</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles-Long Beach-Anaheim MSA · August 2026 (CES) &amp; September 2026 Prelim</span></td><td class="val-cell">6,289.1k jobs Aug 2026 (+38.2k / +0.6% YoY vs. +0.3% U.S.) | 6,282.1k Sept 2026 (+0.5% YoY)</td><td>Modest, steady net job creation (+0.5% to +0.6% YoY), outpacing U.S. headline payroll growth (+0.3%) in late summer 2026.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026) &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-03</code></td><td>Expanding Sectors</td><td><strong>Education &amp; Health Services and Leisure &amp; Hospitality Employment Growth</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles-Long Beach-Anaheim MSA · August 2025 to August 2026</span></td><td class="val-cell">Ed &amp; Health: 1,324.0k (+42.7k / +3.3% YoY) | Leisure &amp; Hospitality: 795.8k (+16.8k / +2.2% YoY)</td><td>Healthcare shift workers and hospitality/tourism activity ahead of the 2028 LA Olympics are primary demand drivers for 24-hour/drive-thru QSR sites.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026) &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-04</code></td><td>Contracting Sectors</td><td><strong>Information (Media/Entertainment), Professional Services &amp; Manufacturing Payrolls</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles-Long Beach-Anaheim MSA · August 2025 to August 2026</span></td><td class="val-cell">Information: 190.4k (-12.3k / -6.1%) | Prof. Services: 974.2k (-0.9%) | Mfg: 447.2k (-1.1%)</td><td>Continued structural contraction in LA&#x27;s entertainment/production sector (-6.1% YoY) dampens high-wage office/studio corridor daytime traffic.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026) &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-05</code></td><td>Wage Levels</td><td><strong>Average Weekly Wages (Q1 2026 QCEW) &amp; Mean Hourly Wage (May 2025 OEWS)</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles County &amp; Metro Area vs. U.S. · Q1 2026 &amp; May 2025</span></td><td class="val-cell">$1,704/wk LA County ($1,721 Metro vs. $1,654 U.S.) | $37.15/hr LA Metro (vs. $33.54/hr U.S.)</td><td>High wage base supports purchasing power while reinforcing elevated operating labor costs for local service employers.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. BLS — QCEW &amp; OEWS via Los Angeles Economic Summary &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-06</code></td><td>Regional GDP</td><td><strong>Los Angeles County Real Gross Domestic Product (GDP)</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles County, CA · 2023 Chained Dollars (BEA County GDP Series)</span></td><td class="val-cell">$802.0 billion (#1 largest county real GDP in 2023 release; 2024 personal income $818.5B)</td><td>Note: In Feb 2026, BEA discontinued MSA-level GDP releases and transitioned county GDP tables to its interactive database (2025 county release scheduled Dec 2, 2026).</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bea.gov/sites/default/files/2024-12/lagdp1224.pdf" target="_blank" rel="noopener noreferrer">U.S. Bureau of Economic Analysis (BEA) County GDP Release &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-07</code></td><td>Food Services &amp; Retail Sales</td><td><strong>Accommodation &amp; Food Services Sales and Total Retail Sales</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles &amp; Los Angeles County · 2022 Economic Census</span></td><td class="val-cell">Food/Accomm: $17.37B LA City / $44.00B LA County | Retail: $81.35B LA City / $213.93B LA County</td><td>City of LA alone generates $17.37 billion in annual restaurant/hospitality revenue — one of the deepest dining markets in North America.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (2022 Economic Census) &#8599;</a></td></tr><tr data-status="verified"><td><code>EC-08</code></td><td>Business Establishments</td><td><strong>Employer Establishments, Private Employment &amp; Annual Payroll</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles County, CA · 2023 County Business Patterns (2024 Nonemployers)</span></td><td class="val-cell">304,988 employer establishments | 3,987,736 employees | $299.62B payroll | 1,165,040 nonemployers</td><td>Massive density of small/medium enterprises and gig/independent workers provides resilient all-day QSR customer flow.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (County Business Patterns) &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="card" data-table-block>
+      <h3>2. Consumer Inflation (LA CPI-U) &amp; U.S. Treasury / Federal Reserve Interest Rates (2026)</h3>
+      <p class="card-subtitle">Verified from U.S. BLS Western Information Office, U.S. Treasury Daily Par Yield Curve (Oct 2026), and Federal Reserve H.15.</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (3)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-infl-rates">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="verified"><td><code>IR-01</code></td><td>Local Inflation</td><td><strong>CPI-U All Items Index &amp; 12-Month Inflation Rate (Los Angeles Area)</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles-Long Beach-Anaheim, CA · September 2026 (and August 2026 Category Split)</span></td><td class="val-cell">+3.7% YoY Sept 2026 (Index 358.725) | Aug 2026: +3.6% All Items, +2.8% Food, +17.6% Energy</td><td>Local inflation (+3.7%) exceeds typical fixed 1%–2%/yr NNN lease escalations, eroding real purchasing power of flat/low-bump NNN rents; Energy up +17.6% YoY.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/ca_losangeles_msa.htm" target="_blank" rel="noopener noreferrer">U.S. BLS — Economy at a Glance (Nov 2026) &amp; LA Economic Summary &#8599;</a></td></tr><tr data-status="verified"><td><code>IR-02</code></td><td>Risk-Free Rate Benchmark</td><td><strong>10-Year U.S. Treasury Constant Maturity Par Yield Trajectory</strong><br><span style="font-size:12px;color:#64748b;">United States Capital Markets · March 10, 2026 -&gt; October 7, 2026 -&gt; October 28, 2026</span></td><td class="val-cell">4.15% (03/10/2026) -&gt; 5.28% (10/07/2026) -&gt; 5.05% (10/28/2026)</td><td>~90 bps rise in 10-Yr Treasury yields between March and late October 2026 elevates commercial mortgage rates (~6.5%–7.25%) and pressures NNN cap rates upward.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve" target="_blank" rel="noopener noreferrer">U.S. Department of the Treasury — Daily Treasury Par Yield Curve (2026) &#8599;</a></td></tr><tr data-status="verified"><td><code>IR-03</code></td><td>Short-Term Policy Rates</td><td><strong>Federal Reserve H.15 Effective Federal Funds Rate &amp; 10-Year TIPS Real Yield</strong><br><span style="font-size:12px;color:#64748b;">United States Monetary Policy · August 10, 2026 H.15 Statistical Release</span></td><td class="val-cell">3.63% Effective Fed Funds | 3.75% Discount Rate | 2.43% 10-Yr Real TIPS Yield</td><td>Steepened Treasury curve (3.63% Fed Funds vs. &gt;5.0% 10-Yr nominal Treasury in Oct 2026) reflects fiscal/term-premium pressure on long-duration fixed cash flows.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.federalreserve.gov/feeds/data/H15_H15.XML" target="_blank" rel="noopener noreferrer">Board of Governors of the Federal Reserve System — H.15 Release &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="card" data-table-block>
+      <h3>3. Federal IRC §1031, California FTB, Proposition 13 Reassessment &amp; City of LA Measure ULA Rules</h3>
+      <p class="card-subtitle">Verified from IRS, CA Franchise Tax Board, LA County Office of the Assessor, and City of LA Office of Finance (post-June 30, 2026 thresholds).</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (6)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-tax-reg">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="verified"><td><code>TX-01</code></td><td>Tax-Deferred Disposition</td><td><strong>IRC Section 1031 Like-Kind Exchange Rules (Real Property Only)</strong><br><span style="font-size:12px;color:#64748b;">United States Federal Tax Code (Form 8824) · Active Statutory Rule (Post-TCJA Real Property)</span></td><td class="val-cell">100% Tax Deferral | 45-Day Written Identification | 180-Day Closing Window</td><td>Allows [REDACTED-OWNER-01] to sell before lease cliff and reinvest 100% of pre-tax equity into diversified replacement real estate via a Qualified Intermediary (QI).</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.irs.gov/pub/irs-pdf/i8824.pdf" target="_blank" rel="noopener noreferrer">Internal Revenue Service (IRS) — Instructions for Form 8824 &#8599;</a></td></tr><tr data-status="verified"><td><code>TX-02</code></td><td>Federal Taxable Sale Rates</td><td><strong>Federal Long-Term Capital Gains, Unrecaptured §1250 &amp; Net Investment Income Tax</strong><br><span style="font-size:12px;color:#64748b;">United States Federal Tax Code (IRC §1(h) &amp; §1411) · Current Statutory Top Rates</span></td><td class="val-cell">20.0% LTCG + 3.8% NIIT (23.8%) | 25.0% Unrecaptured §1250 Depreciation (+3.8% NIIT = 28.8%)</td><td>Substantial tax erosion on an outright cash sale, particularly for long-held depreciated NNN buildings.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax" target="_blank" rel="noopener noreferrer">IRS — Net Investment Income Tax Q&amp;A &amp; IRB 2013-51 &#8599;</a></td></tr><tr data-status="verified"><td><code>TX-03</code></td><td>California Income &amp; 1031 Clawback</td><td><strong>CA Top Marginal Tax on Capital Gains &amp; Out-of-State §1031 Tracking (Form FTB 3840)</strong><br><span style="font-size:12px;color:#64748b;">State of California (Franchise Tax Board) · 2025–2026 Tax Years</span></td><td class="val-cell">Up to 12.3% + 1.0% Behavioral/Mental Health Tax (&gt; $1M) = 13.3% | Annual Form FTB 3840</td><td>CA taxes capital gains as ordinary income (pushing combined Fed+CA cash-sale tax to ~37.1%). Out-of-state §1031 defers CA tax but requires annual FTB 3840 filing until eventual taxable sale or step-up at death.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.ftb.ca.gov/forms/2022/2022-3840-instructions.html" target="_blank" rel="noopener noreferrer">CA Franchise Tax Board — Pub 1067 (2025) &amp; Form FTB 3840 Instructions &#8599;</a></td></tr><tr data-status="verified"><td><code>TX-04</code></td><td>Property Tax &amp; NNN Impact</td><td><strong>California Proposition 13 Base Levy, Annual Cap &amp; Change-in-Ownership Reassessment</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles County / State of California · CA Constitution Art. XIII A</span></td><td class="val-cell">1.0% base levy (+ voter bonds) | Max 2.0%/yr FBYV cap | 100% FMV reassessment on sale</td><td>CRITICAL NNN INSIGHT: Selling triggers full reassessment to sale price. Because the NNN tenant pays property taxes, a sale spikes the tenant&#x27;s occupancy cost right before 2030–2035 renewal, which sophisticated buyers price into their offer!</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://assessor.lacounty.gov/real-estate-toolkit/proposition-13" target="_blank" rel="noopener noreferrer">LA County Office of the Assessor — Proposition 13 Guide &#8599;</a></td></tr><tr data-status="verified"><td><code>TX-05</code></td><td>Municipal Transfer Tax Cliff</td><td><strong>City of Los Angeles Base Transfer Tax &amp; Measure ULA Mansion/Commercial Transfer Tax</strong><br><span style="font-size:12px;color:#64748b;">Incorporated City of Los Angeles · Transactions Closing After June 30, 2026</span></td><td class="val-cell">0.45% (&lt;= $5.4M) | 4.45% (&gt; $5.4M to &lt; $10.9M) | 5.95% (&gt;= $10.9M) of full value</td><td>Measure ULA is a &#x27;cliff&#x27; tax on total gross consideration (not marginal). Pricing a City of LA sale at $5.39M vs. $5.45M saves ~$218,000 in transfer tax!</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://finance.lacity.gov/faq/measure-ula" target="_blank" rel="noopener noreferrer">City of Los Angeles Office of Finance — Measure ULA FAQ (Post-June 30, 2026) &#8599;</a></td></tr><tr data-status="unverified"><td><code>TX-06</code></td><td>Owner Tax Basis</td><td><strong>Owner&#x27;s Adjusted Tax Basis, Accumulated Depreciation &amp; Current Prop 13 Assessed Value</strong><br><span style="font-size:12px;color:#64748b;">[REDACTED-OWNER-01] / [REDACTED-PROPERTY-01] · 2026 Current</span></td><td class="val-cell"></td><td>Private taxpayer and parcel tax-roll records are confidential/redacted; left blank per strict privacy &amp; verification rules and parameterized in local calculator.</td><td><span class="badge badge-unverified">Flagged — Unverified</span></td><td><a class="src-link" href="https://portal.assessor.lacounty.gov/" target="_blank" rel="noopener noreferrer">LA County Office of the Assessor Property Portal &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+        <footer class="footer-note">
+          <div>Session <code>session-a3a8ec08</code> · Strict Official-Source Verification &amp; Zero-PII Compliance</div>
+          <div><a class="src-link" href="./sources.html">Review Official Sources</a> · <a class="src-link" href="./flagged.html">Review Unverified &amp; Flagged Items</a></div>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

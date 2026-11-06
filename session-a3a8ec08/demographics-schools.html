@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geography, Demographics, Household Income &amp; School Systems — Central LA Jack in the Box NNN Decision Dashboard</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Primary Navigation">
+      <div class="brand">
+        <span class="brand-badge">NNN Lease Decision Suite</span>
+        <h1>Central LA Jack in the Box Analysis</h1>
+        <p>Asset: [REDACTED-PROPERTY-01]<br>Expiry Window: 2030–2035</p>
+      </div>
+      <div class="nav-section-label">Dashboard Categories</div>
+      <ul class="nav-links">
+        <li><a href="./index.html"><span class="nav-num">01</span><span>Overview Dashboard</span></a></li><li><a href="./executive-summary.html"><span class="nav-num">02</span><span>Executive Summary</span></a></li><li><a href="./property-tenant.html"><span class="nav-num">03</span><span>Property, Lease &amp; Tenant</span></a></li><li><a href="./demographics-schools.html" class="active"><span class="nav-num">04</span><span>Demographics, Income &amp; Schools</span></a></li><li><a href="./economy-jobs.html"><span class="nav-num">05</span><span>Economy, Jobs, Rates &amp; Tax</span></a></li><li><a href="./projections-decisions.html"><span class="nav-num">06</span><span>Projections &amp; Decision Model</span></a></li><li><a href="./risks-black-swans.html"><span class="nav-num">07</span><span>BAU &amp; Black Swan Risks</span></a></li><li><a href="./sources.html"><span class="nav-num">08</span><span>Official Sources Ledger</span></a></li><li><a href="./flagged.html"><span class="nav-num">09</span><span>Flagged for Review</span></a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <strong>Privacy Guardrail Active</strong><br>
+        Owner: <code>[REDACTED-OWNER-01]</code><br>
+        Zero PII published. 100% official primary sources.
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <div class="privacy-bar" role="region" aria-label="Privacy Notice">
+        <div><strong>PRIVACY SHIELD ACTIVE:</strong> All personal, owner, and parcel-identifying details are anonymized using placeholders (<code>[REDACTED-OWNER-01]</code> / <code>[REDACTED-PROPERTY-01]</code>).</div>
+        <div>Analysis Date: <strong>2026-11-06</strong> · Every table row verified from official sources or left blank &amp; flagged.</div>
+      </div>
+      <main class="content">
+        <header class="page-header">
+          <div class="page-eyebrow">Category 04 · Local Area Fundamentals</div>
+          <h2>Geography, Demographics, Household Income &amp; School Systems</h2>
+          <p>Central Los Angeles and Los Angeles County demographic, housing, spending, and public school trajectory from Census, BEA, CA DOF, and CDE.</p>
+        </header>
+        
+    <section class="card" data-table-block>
+      <h3>1. Geography, Urban Density, Population Trajectory &amp; Housing Supply</h3>
+      <p class="card-subtitle">Verified from U.S. Census Bureau QuickFacts (V2025 &amp; 2020–2024 ACS) and California Department of Finance E-1 (May 2026).</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (9)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-geo-pop">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="verified"><td><code>DM-01</code></td><td>Geography &amp; Urban Density</td><td><strong>Land Area &amp; Population Density (2020 Census)</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · 2020 Decennial Census</span></td><td class="val-cell">8,304.2 / sq mi (469.49 sq mi) LA City | 2,466.9 / sq mi (4,059.28 sq mi) LA County | 93.8 / sq mi U.S.</td><td>88.5x U.S. population density in City of LA creates dense round-the-clock foot/vehicular traffic and high urban land scarcity.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (FIPS 0644000 &amp; 06037) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-02</code></td><td>Population Trajectory</td><td><strong>Resident Population Estimate (July 1, 2025 Vintage V2025)</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles &amp; Los Angeles County · July 1, 2025 (V2025)</span></td><td class="val-cell">3,869,089 (City of LA) | 9,694,934 (LA County) | 341,784,857 (U.S.)</td><td>Remains the #2 most populous U.S. city and #1 most populous U.S. county, providing massive aggregate consumer volume despite mild out-migration.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (V2025) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-03</code></td><td>Population Trajectory</td><td><strong>Cumulative Population Change (April 1, 2020 Base to July 1, 2025)</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · 2020–2025 (V2025)</span></td><td class="val-cell">-0.8% (City of LA) | -3.2% (LA County) | +3.1% (U.S.)</td><td>City of LA (-0.8%) outperformed wider LA County (-3.2%) by 240 bps, demonstrating stronger urban-core infill retention than suburban rings.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (V2025) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-04</code></td><td>State Population Benchmark</td><td><strong>CA Dept. of Finance E-1 Annual Population Estimate &amp; YoY Change</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles &amp; Los Angeles County · January 1, 2025 to January 1, 2026</span></td><td class="val-cell">3,806,201 (-0.9% YoY) City of LA | 9,837,286 (-0.6% YoY) LA County</td><td>CA DOF May 2026 release notes slower international migration and domestic affordability outflow creating ~0.6%–0.9% annual population headwinds.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://dof.ca.gov/media/docs/forecasting/demographics/estimates/e-1_2026_press_release.Pdf" target="_blank" rel="noopener noreferrer">CA Dept. of Finance E-1 Population Estimates (May 1, 2026) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-05</code></td><td>Demographics &amp; Commute</td><td><strong>Households, Household Size &amp; Mean Commute Time</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles &amp; Los Angeles County · 2020–2024 ACS 5-Year</span></td><td class="val-cell">1,439,097 HH (2.61/HH; 30.7 min commute) LA City | 3,416,449 HH (2.81/HH; 30.4 min) LA County</td><td>30.7-minute mean commute (vs. 26.4 min U.S.) reinforces automotive commuter reliance on drive-thru quick-service dining.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (ACS 2020–2024) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-06</code></td><td>Age Distribution</td><td><strong>Youth (&lt;18 Years) vs. Senior (65+ Years) Population Share</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · V2025</span></td><td class="val-cell">19.2% &lt;18 / 14.2% 65+ (LA City) | 19.2% &lt;18 / 17.1% 65+ (LA County) | 21.1% / 18.9% (U.S.)</td><td>Working-age adult share (18–64) in City of LA is 66.6% (vs. 60.0% U.S.), sustaining strong daytime &amp; late-night adult QSR demand.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (V2025) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-07</code></td><td>Housing &amp; Land Value Proxy</td><td><strong>Owner-Occupied Housing Rate &amp; Median Home Value</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · 2020–2024 ACS 5-Year</span></td><td class="val-cell">36.0% owner / $921,200 median value (LA City) | 45.9% / $834,200 (LA County) | 65.2% / $332,700 (U.S.)</td><td>2.77x U.S. median home values reflect high underlying urban land values; 64.0% renter share supports multifamily redevelopment optionality.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (ACS 2020–2024) &#8599;</a></td></tr><tr data-status="verified"><td><code>DM-08</code></td><td>Housing Supply &amp; Rent</td><td><strong>Median Gross Rent (2020–2024) &amp; County Housing Units / 2025 Permits</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles &amp; Los Angeles County · 2020–2024 ACS &amp; 2025 Permits</span></td><td class="val-cell">$1,933/mo rent (LA City) | $1,954/mo rent, 3,726,923 units, 22,250 permits (LA County)</td><td>High shelter costs squeeze lower-income discretionary QSR budgets while keeping land supply tightly constrained (only 22,250 permits countywide in 2025).</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (ACS 2020–2024 &amp; V2025) &#8599;</a></td></tr><tr data-status="unverified"><td><code>DM-09</code></td><td>Submarket Census Tract</td><td><strong>1-Mile / 3-Mile Radius Census Tract Population &amp; Traffic Count Around [REDACTED-PROPERTY-01]</strong><br><span style="font-size:12px;color:#64748b;">[REDACTED-PROPERTY-01] Immediate Trade Area · 2026 Current</span></td><td class="val-cell"></td><td>Cannot be published without revealing or triangulating the protected parcel coordinates; left blank per privacy and verification rules.</td><td><span class="badge badge-unverified">Flagged — Unverified</span></td><td><a class="src-link" href="https://data.census.gov/" target="_blank" rel="noopener noreferrer">U.S. Census Bureau data.census.gov &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="card" data-table-block>
+      <h3>2. Household Income, Poverty Distribution, Aggregate Personal Income &amp; Food Spending</h3>
+      <p class="card-subtitle">Verified from U.S. Census ACS, BEA County Personal Income Release (Feb 2026), and BLS Consumer Expenditure Survey.</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (4)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-income-spend">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="verified"><td><code>IN-01</code></td><td>Household Income</td><td><strong>Median Household Income (in 2024 Dollars)</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · 2020–2024 ACS 5-Year</span></td><td class="val-cell">$81,939 (City of LA) | $90,112 (LA County) | $80,734 (U.S.)</td><td>LA County median household income exceeds U.S. median by +11.6%; City of LA is +1.5% above U.S. median.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (ACS 2020–2024) &#8599;</a></td></tr><tr data-status="verified"><td><code>IN-02</code></td><td>Individual Income &amp; Poverty</td><td><strong>Per Capita Income (2024 Dollars) &amp; Persons in Poverty (%)</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · 2020–2024 ACS / V2025 Poverty</span></td><td class="val-cell">$47,685 / 16.5% poverty (LA City) | $45,792 / 13.3% (LA County) | $44,673 / 10.2% (U.S.)</td><td>Bifurcated income distribution: elevated poverty (16.5% in LA City) makes core QSR value-menu customers sensitive to post-AB 1228 menu price hikes.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts &#8599;</a></td></tr><tr data-status="verified"><td><code>IN-03</code></td><td>Aggregate Regional Wealth</td><td><strong>Total County Personal Income (Current Dollars)</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles County, CA · 2024 Annual (Released Feb 5, 2026)</span></td><td class="val-cell">$818.5 billion (#1 highest among all 3,116 U.S. counties)</td><td>Unmatched aggregate personal income base underpins long-term commercial real estate liquidity and institutional buyer depth in Los Angeles.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf" target="_blank" rel="noopener noreferrer">U.S. Bureau of Economic Analysis (BEA) Release BEA 26-08 &#8599;</a></td></tr><tr data-status="verified"><td><code>IN-04</code></td><td>Consumer Food Spending</td><td><strong>Average Annual Household Food &amp; Housing Expenditures</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles Metro Area vs. United States · 2023–2024 Consumer Expenditure Survey</span></td><td class="val-cell">$11,858 food / $33,126 housing (LA Metro) vs. $10,077 food / $25,853 housing (U.S.)</td><td>LA households spend +17.7% more annually on food than the U.S. average, supporting high gross unit sales potential for well-located QSR pads.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics — Los Angeles Economic Summary (Oct 2026) &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <section class="card" data-table-block>
+      <h3>3. Public School System (LAUSD / CDE) &amp; 10-Year Demographic Pipeline</h3>
+      <p class="card-subtitle">Verified from California Department of Education DataQuest (2025–26), LAUSD School Explorer, and CA Dept. of Finance K-12 Projections.</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (5)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-schools">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="verified"><td><code>SC-01</code></td><td>K-12 Public School Scale</td><td><strong>Los Angeles Unified School District (LAUSD) Certified TK–12 Enrollment</strong><br><span style="font-size:12px;color:#64748b;">LAUSD (CDS 19-64733 — 710 Sq. Mi. Service Area) · 2025–26 Academic Year</span></td><td class="val-cell">497,105 students (#1 largest district in California; 8.7% of CA enrollment)</td><td>Major institutional employer and neighborhood anchor across Central Los Angeles, generating daily school-commute and student QSR traffic.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://dq.cde.ca.gov/dataquest/dqcensus/enrgrdlevels.aspx?agglevel=District&amp;year=2025-26&amp;cds=1964733" target="_blank" rel="noopener noreferrer">California Department of Education (CDE) DataQuest 2025–26 &#8599;</a></td></tr><tr data-status="verified"><td><code>SC-02</code></td><td>Academic Outcomes</td><td><strong>LAUSD Four-Year Cohort High School Graduation Rate</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles Unified School District · 2024–2025 Academic Year</span></td><td class="val-cell">86.7% district average</td><td>Reflects steady high-school completion improvements despite socioeconomic challenges across urban core attendance zones.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://explore.lausd.org/school/1873601/Los-Angeles-SH" target="_blank" rel="noopener noreferrer">LAUSD Official School Explorer Data Portal &#8599;</a></td></tr><tr data-status="verified"><td><code>SC-03</code></td><td>Demographic Enrollment Forecast</td><td><strong>Projected 10-Year Public K-12 Enrollment Change</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles County Public Schools · 10-Year Cohort-Survival Projection</span></td><td class="val-cell">-240,800 students (largest projected county K-12 decline in California)</td><td>Lower birth rates and family housing out-migration signal shift from young-family growth toward smaller adult/renter households in Central LA.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/" target="_blank" rel="noopener noreferrer">California Department of Finance — Public K-12 Graded Enrollment &#8599;</a></td></tr><tr data-status="verified"><td><code>SC-04</code></td><td>Workforce Educational Attainment</td><td><strong>High School Graduate+ &amp; Bachelor&#x27;s Degree+ Share (Persons Age 25+)</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles vs. LA County vs. U.S. · 2020–2024 ACS 5-Year</span></td><td class="val-cell">79.6% HS+ / 38.5% Bachelor&#x27;s+ (LA City) | 80.9% / 36.0% (LA County) | 89.6% / 35.7% (U.S.)</td><td>Higher share of college graduates in City of LA (38.5% vs. 35.7% U.S.) supports daytime white-collar/healthcare employment nodes in Central LA.</td><td><span class="badge badge-verified">Verified (Official)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census Bureau QuickFacts (ACS 2020–2024) &#8599;</a></td></tr><tr data-status="unverified"><td><code>SC-05</code></td><td>Parcel School Assignment</td><td><strong>Exact Assigned Neighborhood Elementary/Middle/High School Attendance Zone for [REDACTED-PROPERTY-01]</strong><br><span style="font-size:12px;color:#64748b;">[REDACTED-PROPERTY-01] Immediate Parcel · 2026–2027</span></td><td class="val-cell"></td><td>Specific school boundary identification would narrow parcel location to a ~0.5-mile polygon; left blank to protect owner privacy.</td><td><span class="badge badge-unverified">Flagged — Unverified</span></td><td><a class="src-link" href="https://lausd.org/enrollnow?lang=en" target="_blank" rel="noopener noreferrer">LAUSD Resident School Identifier / Enroll Portal &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+        <footer class="footer-note">
+          <div>Session <code>session-a3a8ec08</code> · Strict Official-Source Verification &amp; Zero-PII Compliance</div>
+          <div><a class="src-link" href="./sources.html">Review Official Sources</a> · <a class="src-link" href="./flagged.html">Review Unverified &amp; Flagged Items</a></div>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
