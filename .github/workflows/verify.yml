@@ -38,3 +38,9 @@ jobs:
 
       - name: Export the manual-review ledger
         run: python3 tools/export_ledger.py
+
+      - name: Regenerate and verify session-a3a8ec08 dashboard
+        run: |
+          python3 session-a3a8ec08/scripts/projection_engine.py
+          python3 session-a3a8ec08/scripts/build_site.py
+          python3 session-a3a8ec08/scripts/verify_all.py

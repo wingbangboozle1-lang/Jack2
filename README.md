@@ -9,6 +9,12 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 > after-tax wealth — is published from this same Pages deployment at
 > **https://wingbangboozle1-lang.github.io/Jack2/docs/** (source in `docs/`, engines in `model/`,
 > analysis in `research/00`–`07`). The root site below is unchanged. See `COORDINATION.md` → *Session C*.
+>
+> A fourth, independently verified dashboard — incorporating Q3 FY2026 SEC Form 10-Q (`JACK`), Fall 2026
+> BLS/Treasury releases, post-June 30, 2026 Measure ULA `$5.4M` thresholds, and a 100% browser-local
+> IRC §1031 / Prop 13 / Measure ULA simulator — is published at
+> **https://wingbangboozle1-lang.github.io/Jack2/session-a3a8ec08/** (source in `session-a3a8ec08/`).
+> See `COORDINATION.md` → *Session D*.
 
 ## What this is
 
@@ -102,3 +108,25 @@ The two analyses reach different recommendations because they optimise different
 ranks strategies on a deterministic projection with explicit decision triggers; `docs/` ranks them on the
 tail risk of a stochastic simulation. Neither supersedes the other, and reconciling them is a judgement
 call for the Owner.
+
+
+## Session D dashboard (`session-a3a8ec08/`)
+
+A fourth independent session (`session-a3a8ec08` / `arena/a3a8ec08-jack2`) published a complete 9-page
+dashboard and client-side simulator under `session-a3a8ec08/`
+(https://wingbangboozle1-lang.github.io/Jack2/session-a3a8ec08/) without altering any prior session's files.
+
+| | |
+|---|---|
+| Recommended strategy | Two-Stage **Early Blend-and-Extend Inquiry (2026–2027) → Pre-Cliff Sale & IRC §1031 Diversified Exchange (2027–2028)** (`2.03x` expected 10-yr multiple; `$3.09M` mean / `$2.81M` P05 tail floor per `$100k` NOI) |
+| Key Fall 2026 official updates | `JACK` Q3 FY2026 Form 10-Q (`2,115` units, `-4.2%` YTD SSS, `$1.47B` debt, `-$901.3M` equity deficit), BLS Oct/Nov 2026 LA employment & CPI (`+3.7%` YoY), Oct 28, 2026 10-Yr Treasury (`5.05%`), post-June 30, 2026 City of LA Measure ULA `$5.4M` (`4.45%`) cliff, CAL FIRE Jan 2025 Eaton & Palisades finals (`16,264` structures destroyed) |
+| Interactive private simulator | 100% browser-local calculator (`session-a3a8ec08/projections-decisions.html`) for exact NNN rent, expiry year (`2030–2035`), Prop 13 reassessment shock, Measure ULA cliff, and §1031 tax deferral |
+| Verification & privacy | 142 table rows across 9 pages verified against official primary sources; 11 unverified private lease/parcel items left strictly blank; automated zero-PII enforcement (`[REDACTED-OWNER-01]`, `[REDACTED-PROPERTY-01]`) |
+
+Rebuild & verify:
+
+```bash
+python3 session-a3a8ec08/scripts/projection_engine.py
+python3 session-a3a8ec08/scripts/build_site.py
+python3 session-a3a8ec08/scripts/verify_all.py
+```
