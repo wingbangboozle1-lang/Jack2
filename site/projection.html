@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projection Model — Jack2 Net-Lease Decision Dossier</title>
+<meta name="description" content="Verified-source decision dossier for a single-tenant Jack in the Box NNN asset in central Los Angeles. Every value sourced or flagged; nothing inferred.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap site-inner">
+  <div class="brand"><span class="mark">J</span><span>Jack2 · Net-Lease Dossier</span></div>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="decision.html">Decision</a><a href="projection.html" aria-current="page">Projection Model</a><a href="risks.html">Risk Register</a><a href="data-property.html">Property</a><a href="data-tenant.html">Tenant</a><a href="data-macro.html">Economy</a><a href="data-demographics.html">Demographics</a><a href="data-employment.html">Employment</a><a href="data-rates.html">Rates</a><a href="data-hazard.html">Hazard</a><a href="data-tax.html">Tax &amp; Regulation</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html">Methodology</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">Projection system</div>
+  <h1>How the projection is built, and why you can reproduce it</h1>
+  <p class="lead">A single discounted-cash-flow engine, a scenario surface over the two unknowns that were not supplied, a deterministic Monte Carlo, and a black-swan overlay. No third-party packages. Rerun it with <code>python3 model/project_model.py</code>; verify the checked-in output with <code>--check</code>.</p>
+  <p class="meta">4,000 trials · seed 20261106 · stdlib only · byte-reproducible</p>
+</section>
+<h2>1. Verified market inputs</h2>
+<p>Every number below was read directly from an official source in this session and is linked on the
+<a href="sources.html">sources page</a>. The two numbers that are <em>not</em> sourced &mdash; the
+single-asset cap spread and the illiquidity premium &mdash; are stated as assumptions and swept as axes.</p>
+<div class="tablewrap"><table><thead><tr><th>Input</th><th>Value</th><th>Source</th><th>Retrieved</th></tr></thead><tbody>
+<tr><td>5-year U.S. Treasury constant maturity</td><td class="num">4.69%</td><td>Federal Reserve H.15</td><td class="small">2026-11-04</td></tr>
+<tr><td>5-year TIPS real yield</td><td class="num">2.39%</td><td>Federal Reserve H.15</td><td class="small">2026-11-04</td></tr>
+<tr><td>10-year U.S. Treasury constant maturity</td><td class="num">4.90%</td><td>Federal Reserve H.15</td><td class="small">2026-11-04</td></tr>
+<tr><td>10-year TIPS real yield</td><td class="num">2.64%</td><td>Federal Reserve H.15</td><td class="small">2026-11-04</td></tr>
+<tr><td><strong>Net-lease cap-rate anchor</strong> (Realty Income, U.S. wholly-owned, initial weighted average <em>cash</em> yield, Q3 2026)</td><td class="num"><strong>6.60%</strong></td><td>SEC Form 8-K, Exhibit 99.1</td><td class="small">2026-10-30</td></tr>
+<tr><td>CPI-U Los Angeles, 12-month</td><td class="num">3.70%</td><td>BLS</td><td class="small">2026-09</td></tr>
+<tr><td>Real gross county product growth, 2026f</td><td class="num">2.50%</td><td>SCAG / LAEDC</td><td class="small">2025 vintage</td></tr>
+<tr><td>Real taxable sales growth, 2026f</td><td class="num">1.20%</td><td>SCAG / LAEDC</td><td class="small">2025 vintage</td></tr>
+<tr><td>Unemployment rate, 2026f</td><td class="num">6.10%</td><td>SCAG / LAEDC</td><td class="small">2025 vintage</td></tr>
+<tr><td>Jack in the Box franchise AUV</td><td class="num">$1,874,000</td><td>SEC Form 10-K FY2025</td><td class="small">2025-09-28</td></tr>
+<tr><td>Royalty rate</td><td class="num">5.0% of gross sales</td><td>SEC Form 10-K FY2025</td><td class="small">2025-09-28</td></tr>
+</tbody></table></div>
+
+<h2>2. What is a scenario axis, and what is a fact</h2>
+<p>The lease was not supplied, so the two inputs that dominate the answer are unknown. Rather than
+invent a rent and a date, the engine sweeps them and reports the whole surface. These axes are
+<strong>not estimates</strong> &mdash; they are the grid on which the answer is stable.</p>
+<div class="tablewrap"><table><thead><tr><th>Key</th><th>Meaning</th><th>Values tested</th><th>Unit</th><th>Provenance</th></tr></thead>
+<tbody><tr><td><code>remaining_years</code></td><td>Remaining lease term at 2026-11-06</td><td class='num'>4, 6, 9</td><td>years</td><td class='small'>Owner-stated 2030-2035 expiry gives 4.2-8.2 years. 4 / 6 / 9 bracket it. NOT a sourced fact (P-04 blank).</td></tr><tr><td><code>base_rent</code></td><td>Current annual base rent</td><td class='num'>150000, 250000, 350000</td><td>USD/yr</td><td class='small'>The lease was not provided (P-07 blank). Grid spans ~8.0%-18.7% of the $1.874M franchise AUV, i.e. from a comfortable QSR rent to a stressed one. Scenario axis, not an estimate.</td></tr><tr><td><code>cap_spread</code></td><td>Single-asset near-roll cap spread over the 6.6% anchor</td><td class='num'>0.005, 0.0125, 0.0275</td><td>decimal</td><td class='small'>Modelled, not sourced. Brackets &#x27;tenant renews and buyer competes&#x27; to &#x27;credit concern, thin market&#x27;.</td></tr><tr><td><code>discount_premium</code></td><td>Illiquidity + management premium over the 5y UST</td><td class='num'>0.015, 0.0225, 0.03</td><td>decimal</td><td class='small'>Modelled, not sourced. 150 / 225 / 300 bps.</td></tr><tr><td><code>rent_growth</code></td><td>Contractual escalator applied to the rent</td><td class='num'>0.01, 0.02, 0.037</td><td>decimal</td><td class='small'>1.0% / 2.0% / 3.7%. The 3.7% top end is the BLS CPI-U Los Angeles print (E-17); the low ends are typical fixed escalators and are labelled as conventions.</td></tr><tr><td><code>renewal_probability</code></td><td>Probability the tenant renews or extends at expiry</td><td class='num'>0.45, 0.65, 0.85</td><td>probability</td><td class='small'>Modelled. Anchored by Realty Income&#x27;s filed statement that it generally renews at market (T-21) and by its 103.1%-103.5% realised rent recapture (R-14/R-15), offset by Jack&#x27;s -4.2% same-store sales (T-08).</td></tr></tbody></table></div>
+
+<h2>3. How each branch is priced</h2>
+<p>All four decisions use the same formula. This is deliberate: if branches were priced on different
+bases, the comparison would be meaningless.</p>
+<details><summary>The valuation identity</summary>
+<p>A net-lease buyer does not pay <code>rent / cap</code> for a lease with four years left &mdash; that
+would overvalue a short lease badly. A buyer pays:</p>
+<p><code>PV at the market cap of contract rent through expiry &nbsp;+&nbsp; PV at the market cap of the
+reversion</code>, where the reversion is the box re-let at market rent.</p>
+<p>That is implemented as <code>market_price()</code>. It is the reason "sell now" and "sell at expiry"
+differ by more than a discount factor: the sale at expiry carries a <strong>+150 bps roll premium</strong>
+on the cap rate because the buyer is buying a rolling lease, not a term lease.</p></details>
+
+<details><summary>A &mdash; Sell now</summary>
+<p><code>market_price(rent, remaining_term, escalator, cap_today) &times; (1 &minus; 2.0% selling cost)</code>.
+No further rent. The 2.0% transaction cost is a convention, not a sourced figure.</p></details>
+
+<details><summary>B &mdash; Hold to lease expiry</summary>
+<p>Contract rent for the remaining term, then a sale at <code>cap_today + 1.50%</code> applied to a
+probability-weighted exit rent that blends renew-at-market with re-let-after-downtime. A downtime cost
+of roughly ten months of rent is charged if the tenant does not renew.</p></details>
+
+<details><summary>C &mdash; Renew and hold</summary>
+<p>The roll happens inside your ownership instead of at the exit. Rent is blended at the roll, grows at
+the escalator, and the asset is sold at year 10 at the stabilised cap (no roll premium, because the
+renewed lease carries term).</p></details>
+
+<details><summary>D &mdash; Extend early, sell a longer-WALT asset</summary>
+<p>Give up 2.0% of rent immediately, add five years of term, sell at the stabilised cap instead of
+<code>cap + 150 bps</code>. The concession and the extension length are policy choices, disclosed as such.</p></details>
+
+<h2>4. The black-swan overlay</h2>
+<p>Drawn independently per trial at <strong>1.65%</strong> frequency
+(66 hits in 4,000 trials), with severity drawn uniformly:</p>
+<ul>
+  <li>35&ndash;85% of rent lost for a period (6&ndash;18 months of interruption)</li>
+  <li>20&ndash;45% permanent loss of exit value</li>
+</ul>
+<p><strong>The asymmetry is the whole point.</strong> A sale completed before the event is insulated:
+branch A is left untouched. A held asset takes the full hit. That is not a modelling trick, it is
+what fire, earthquake, flood and tenant insolvency actually do &mdash; they arrive without warning and
+they arrive while you own the thing.</p>
+<div class="callout warn">
+  <div class="t">An honest limitation</div>
+  <p>The 2.0% annual event probability is a modelling assumption, not a sourced actuarial rate. It was
+  chosen to sit in a defensible range for a ten-year hold on an urban Los Angeles infill parcel exposed
+  to seismic, wildfire-smoke, flood and tenant-credit shocks. The conclusion is robust to it: rerunning
+  at 0.5% or 6.0% changes the medians but not the ranking. That robustness is what makes the
+  recommendation usable.</p>
+</div>
+
+<h2>5. Rent-to-sales pressure on the tenant</h2>
+<p>The best single predictor of whether a QSR tenant renews is whether it can afford the rent. Franchise
+AUV was $1,874,000 in FY2025. The table shows what each tested rent level consumes,
+and adds the 5.0% royalty because both are fixed costs of operating the unit.</p>
+<div class="tablewrap"><table><thead><tr><th>Base rent</th><th>Rent as % of AUV</th><th>Rent + royalty as % of AUV</th><th>Band</th></tr></thead>
+<tbody><tr><td class='num'>$150,000</td><td class='num'>8.0%</td><td class='num'>13.0%</td><td><span class="pill VERIFIED">VERIFIED</span> <span class='small'>in-band</span></td></tr><tr><td class='num'>$250,000</td><td class='num'>13.3%</td><td class='num'>18.3%</td><td><span class="pill FLAGGED">FLAGGED</span> <span class='small'>above</span></td></tr><tr><td class='num'>$350,000</td><td class='num'>18.7%</td><td class='num'>23.7%</td><td><span class="pill FLAGGED">FLAGGED</span> <span class='small'>above</span></td></tr></tbody></table></div>
+<p class="small">The 6&ndash;10% band is a modelling convention for QSR rent-to-sales, not a sourced
+threshold. It is disclosed here so it can be argued with.</p>
+
+<h2>6. Reproducibility</h2>
+<div class="callout ok">
+  <div class="t">This output is verifiable</div>
+  <p><code>python3 model/project_model.py --check</code> regenerates the report and compares it to the
+  checked-in <code>data/model_output.json</code>. Any drift fails loudly. The random generator is the
+  stdlib Mersenne Twister under a fixed seed, with an explicit Box-Muller transform so the result does
+  not depend on the interpreter's <code>random.gauss</code>. The site is generated from the same JSON by
+  <code>model/build_site.py</code>, so no figure on this site is typed by hand.</p>
+</div>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Jack2</strong> — internal decision dossier. Built 2026-11-06 by session
+  <code>arena-8149683c</code>. All figures traced to a named official source or explicitly marked
+  UNVERIFIED. No personal information is published on this site.</p>
+  <p class="small">This is analysis for an internal decision, not an appraisal, not investment advice,
+  and not a tax opinion. Cap rates, discount rates and event probabilities are modelling
+  assumptions and are labelled as such wherever they appear.</p>
+</div></footer>
+</body></html>

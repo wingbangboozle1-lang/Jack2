@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Jack2 Net-Lease Decision Dossier</title>
+<meta name="description" content="Verified-source decision dossier for a single-tenant Jack in the Box NNN asset in central Los Angeles. Every value sourced or flagged; nothing inferred.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap site-inner">
+  <div class="brand"><span class="mark">J</span><span>Jack2 · Net-Lease Dossier</span></div>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="decision.html">Decision</a><a href="projection.html">Projection Model</a><a href="risks.html">Risk Register</a><a href="data-property.html">Property</a><a href="data-tenant.html">Tenant</a><a href="data-macro.html">Economy</a><a href="data-demographics.html">Demographics</a><a href="data-employment.html">Employment</a><a href="data-rates.html">Rates</a><a href="data-hazard.html">Hazard</a><a href="data-tax.html">Tax &amp; Regulation</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html" aria-current="page">Methodology</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">Methodology</div>
+  <h1>How this dossier was built, and the limits of what it can tell you</h1>
+  <p class="lead">The research method, the verification rule, the privacy rule, the projection method, and an explicit list of what this is not.</p>
+  <p class="meta">Session arena-8149683c · 2026-11-06 · reproducible from the repository</p>
+</section>
+<h2>1. Research method</h2>
+<ol>
+  <li><strong>Source-first, not question-first.</strong> For each question, the official publisher was
+  identified before any number was sought: SEC EDGAR for the tenant and for the cap-rate anchor, BLS for
+  labour, Census for demographics, the Federal Reserve for rates, the LA County Assessor for property
+  tax, Cal/OSHA-adjacent state agencies for labour law, CAL FIRE / USGS / FEMA for hazards, IRS for tax,
+  and SCAG for the regional forecast.</li>
+  <li><strong>Primary over secondary, always.</strong> Where a secondary summary and a primary filing
+  disagreed or where only the secondary existed, the secondary was registered at Tier C and excluded
+  from every calculation.</li>
+  <li><strong>Numbers were copied, not recalled.</strong> Every VERIFIED row quotes a figure that
+  appeared in a document retrieved in this session.</li>
+  <li><strong>Derived values show their formula.</strong> There are 2 of them, and each
+  one states the arithmetic in its note so it can be rechecked by hand.</li>
+</ol>
+
+<h2>2. The verification rule</h2>
+<div class="card">
+  <p><strong>If an official source could not confirm a value, the value is blank.</strong> It is not
+  estimated, interpolated, rounded from a related figure, or filled from general knowledge. The row is
+  published with <span class="pill UNVERIFIED">UNVERIFIED</span> so the gap is visible rather than
+  papered over.</p>
+  <p>Current tally: <strong>126</strong> verified, <strong>2</strong> derived,
+  <strong>2</strong> flagged, <strong>27</strong> blank, out of
+  <strong>157</strong> rows.</p>
+</div>
+
+<h2>3. The privacy rule</h2>
+<div class="card">
+  <p>No personal information is published. The specific controls applied:</p>
+  <ul>
+    <li><strong>No street address and no APN</strong> appears anywhere in this repository or on this
+    site. The asset is described only as "central Los Angeles".</li>
+    <li><strong>No owner name, entity name, phone number, email address, account number or tax ID</strong>
+    appears in any template, data file or page.</li>
+    <li><strong>No third-party personal data.</strong> The executives named in the tenant's 10-K are
+    public officers of a public company disclosing under securities law; they are not reproduced here.</li>
+    <li><strong>Consequence accepted:</strong> because the parcel cannot be located, every parcel-level
+    lookup is impossible. That is a real analytical cost, and it is why 14 rows are blank. Privacy was
+    treated as the higher-priority constraint.</li>
+  </ul>
+</div>
+
+<h2>4. The projection method</h2>
+<div class="card">
+  <p>Four decisions, one discounted-cash-flow engine. Net rent plus sale proceeds, discounted at the
+  owner's required return. Branches differ only in exit date, exit cap and whether a lease roll occurs
+  inside the holding period.</p>
+  <p>The sale valuation uses the identity a net-lease buyer actually uses: the present value at the
+  market cap of contract rent through expiry, plus the present value at the market cap of the reversion
+  re-let at market rent. Pricing a short lease as <code>rent / cap</code> would overstate it badly.</p>
+  <p>Uncertainty is placed where it actually lives &mdash; the exit cap rate, the roll outcome and the
+  black-swan overlay &mdash; rather than smeared uniformly across every input. Contract rent is
+  contractual and is taken as given within each scenario.</p>
+  <p>The Monte Carlo is deterministic under seed <code>20261106</code> with an explicit Box-Muller
+  transform, so the checked-in output is byte-reproducible. <code>--check</code> fails loudly on drift.</p>
+</div>
+
+<h2>5. What this is not</h2>
+<div class="callout warn">
+  <p><strong>Not an appraisal.</strong> No licensed appraiser inspected the property. No USPAP
+  standard was followed. Do not use this for lending, financial reporting, or a tax filing.</p>
+  <p><strong>Not investment advice.</strong> It is an internal decision document prepared for one owner
+  about one asset.</p>
+  <p><strong>Not a tax opinion.</strong> §1031 and depreciation recapture are described structurally
+  only. A CPA must confirm every tax statement before it is acted on.</p>
+  <p><strong>Not a substitute for the documents.</strong> The five blocking gaps on
+  <a href="flagged.html">the flagged page</a> materially change the answer. Until they are closed, the
+  recommendation is a rule, not a verdict.</p>
+  <p><strong>Not current beyond 2026-11-06.</strong> Rates, cap rates, unemployment and forecasts all
+  move. Every row carries an <code>as_of</code> date precisely so this does not silently rot.</p>
+</div>
+
+<h2>6. Reproducing the build</h2>
+<div class="card">
+  <p><code>python3 model/project_model.py</code> — regenerate the projection and Monte Carlo.</p>
+  <p><code>python3 model/project_model.py --check</code> — assert the output has not drifted.</p>
+  <p><code>python3 model/build_site.py</code> — regenerate every page from the JSON.</p>
+  <p><code>python3 verification/verify.py</code> — audit every row, every source reference and every
+  internal link.</p>
+  <p class="small">No third-party packages are required. Python 3.8 or later.</p>
+</div>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Jack2</strong> — internal decision dossier. Built 2026-11-06 by session
+  <code>arena-8149683c</code>. All figures traced to a named official source or explicitly marked
+  UNVERIFIED. No personal information is published on this site.</p>
+  <p class="small">This is analysis for an internal decision, not an appraisal, not investment advice,
+  and not a tax opinion. Cap rates, discount rates and event probabilities are modelling
+  assumptions and are labelled as such wherever they appear.</p>
+</div></footer>
+</body></html>
