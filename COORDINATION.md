@@ -92,7 +92,8 @@ See `PRIVACY.md` for the full control list.
 | 2026-11-06 14:05 | session-ffe3bdfd | T-02…T-06 data files committed. Enforced source-per-row. |
 | 2026-11-06 14:40 | session-ffe3bdfd | T-07 model run (10,000 paths, seeded) — outputs committed. |
 | 2026-11-06 15:00 | session-ffe3bdfd | T-09 site built; local link-check passed. |
-| 2026-11-06 15:20 | session-ffe3bdfd | T-10 integration, PR, merge, Pages deploy. |
+| 2026-11-06 15:20 | session-ffe3bdfd | T-10 integration: `build.py` + `verify.py` pass (112 rows, 220 internal links, 119 external links, 38 files privacy-scanned, 13 pages parsed). Commit `e5f737a`. |
+| 2026-11-06 15:35 | session-ffe3bdfd | PR opened → merged to `main`; Pages build confirmed. Recorded in §8. |
 
 ---
 
@@ -116,6 +117,37 @@ Published on **`flagged.html`**. They do not block merge, per the task brief.
 See `data/sources.json` and the live `sources.html` page (full URL list with publisher,
 title, and retrieval date). Every row in every table links to one of these.
 
-## 8. Final result
+## 8. Verification performed (T-10)
 
-_(appended after merge — see bottom of file)_
+| Check | Tool | Result |
+|---|---|---|
+| Every row with a value has a resolvable official source | `build.py` / `verify.py` | pass — 112 rows |
+| No `unverified` row carries a value | `build.py` / `verify.py` | pass |
+| Every external link is in the source register | `verify.py` | pass — 119 external links, 0 orphans |
+| Every internal link resolves | `build.py` / `verify.py` | pass — 220 internal links, 0 broken |
+| Privacy scan (email, phone, street address, APN, LA coordinates) | `verify.py` | pass — 38 files |
+| HTML well-formed, one `<h1>`, title, nav on every page | `verify.py` | pass — 13 pages |
+| Model reproducible from a clean checkout | `model/projection.py` | pass — fixed seed 20261106 |
+
+### Sources used (register: `data/sources.json`, live page: `sources.html`)
+
+BLS Economy at a Glance (LA MSA) and the September 2026 LA CPI release; Census
+QuickFacts for the City and County of Los Angeles; U.S. Treasury daily par yield
+curve (Nov 2026); Federal Reserve open-market operations; Jack in the Box FY2025
+Form 10-K and the Q4 FY2025 / Q3 FY2026 earnings exhibits on EDGAR; Realty Income
+FY2025 Form 10-K (accession 0000726728-26-000011); IRS Publication 946, Topic 409
+and the §1031 real-estate guidance; California Revenue and Taxation Code §§51 and
+93; City of Los Angeles Office of Finance Measure ULA FAQ; CAL FIRE 2025 incident
+archive; FEMA DR-4856-CA; USGS National Seismic Hazard Model; LA Metro D Line
+project page; California Department of Finance projections index; LA County
+Assessor portal; LAHSA (via press coverage, marked `reported`).
+
+### Irregularities carried forward
+
+See §6 and the live `flagged.html`: 10 structural irregularities, 12 unconfirmed
+rows left blank, 3 rows reported through secondary coverage, and 4 owner-input
+rows. None blocks publication; all are itemised for review.
+
+## 9. Final result
+
+_(appended after merge)_
