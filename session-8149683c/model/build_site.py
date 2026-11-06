@@ -29,7 +29,7 @@ import html
 from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
+ROOT = os.path.dirname(HERE)          # .../session-8149683c
 SITE = os.path.join(ROOT, "site")
 DATA = os.path.join(ROOT, "data")
 
@@ -154,7 +154,8 @@ def page(path, title, body, root=".", active=None, subtitle="", prefix=None):
 </body></html>"""
     if path.startswith("site/"):
         path = path[len("site/"):]
-    dest = os.path.join(SITE, path) if path != "index.html" else os.path.join(ROOT, "index.html")
+    dest = (os.path.join(SITE, path) if path != "index.html"
+            else os.path.join(ROOT, "index.html"))
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     with open(dest, "w") as fh:
         fh.write(doc)

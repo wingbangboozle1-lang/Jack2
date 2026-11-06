@@ -44,7 +44,7 @@ import sys
 import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
+ROOT = os.path.dirname(HERE)          # .../session-8149683c
 DATA = os.path.join(ROOT, "data")
 SITE = os.path.join(ROOT, "site")
 
