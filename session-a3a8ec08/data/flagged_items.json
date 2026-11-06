@@ -1,0 +1,295 @@
+{
+  "unverified_items": [
+    {
+      "id": "UV-01",
+      "item": "Exact Street Address, Legal Description & Assessor Parcel Number (APN) for [REDACTED-PROPERTY-01]",
+      "table_location": "property-tenant.html (Row SP-01)",
+      "value": "",
+      "reason_unverified": "Intentionally withheld and redacted under strict PII / owner privacy mandate; no address or APN was present in the repository.",
+      "how_to_verify": "Owner internal check only via LA County Office of the Assessor Portal (never publish on site).",
+      "status": "unverified",
+      "source_label": "LA County Office of the Assessor Portal",
+      "source_url": "https://portal.assessor.lacounty.gov/"
+    },
+    {
+      "id": "UV-02",
+      "item": "Exact NNN Lease Expiration Date Within the 2030–2035 Window",
+      "table_location": "property-tenant.html (Row SP-02)",
+      "value": "",
+      "reason_unverified": "Project brief states 2030–2035 range (~3.2 to ~9.1 yrs left); exact day/month/year requires executed private lease or recorded memorandum of lease.",
+      "how_to_verify": "Inspect Lease Abstract / Recorded Memorandum of Lease via LA County Registrar-Recorder.",
+      "status": "unverified",
+      "source_label": "LA County Registrar-Recorder Real Estate Records",
+      "source_url": "https://www.lavote.gov/home/records/real-estate-records/general-info"
+    },
+    {
+      "id": "UV-03",
+      "item": "Current Annual Base Contract Rent & Net Operating Income (NOI)",
+      "table_location": "property-tenant.html (Row SP-03)",
+      "value": "",
+      "reason_unverified": "Private commercial lease rent is confidential and not published in official government databases; left blank rather than guessed.",
+      "how_to_verify": "Confirm from private lease schedule and enter locally in the browser-only Decision Simulator.",
+      "status": "unverified",
+      "source_label": "SEC EDGAR — Jack in the Box Inc. (CIK 0000807882)",
+      "source_url": "https://www.sec.gov/edgar/browse/?CIK=0000807882"
+    },
+    {
+      "id": "UV-04",
+      "item": "Lease Guarantor Entity (Corporate Jack in the Box Inc. vs. Franchisee LLC/Corp)",
+      "table_location": "property-tenant.html (Row SP-04)",
+      "value": "",
+      "reason_unverified": "93% of system stores are franchised while corporate controls 729 buildings; parcel guaranty cannot be verified without the private lease.",
+      "how_to_verify": "Review Guaranty / Assignment clauses of [REDACTED-LEASE-01].",
+      "status": "unverified",
+      "source_label": "SEC Form 10-K (FY2025) — Jack in the Box Inc.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm"
+    },
+    {
+      "id": "UV-05",
+      "item": "Renewal Option Count, Option Term Length & Rent Escalation Formula",
+      "table_location": "property-tenant.html (Row SP-05)",
+      "value": "",
+      "reason_unverified": "Contractual option bumps (fixed %, CPI, or FMV) are private lease terms not filed with public agencies.",
+      "how_to_verify": "Audit Option-to-Extend riders and notice deadlines (typically 6–12 months prior to expiry).",
+      "status": "unverified",
+      "source_label": "SEC Form 10-K (FY2025) — Jack in the Box Inc.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm"
+    },
+    {
+      "id": "UV-06",
+      "item": "Roof, Structure & Parking Lot CapEx Responsibility (Absolute NNN vs. NN Carve-Outs)",
+      "table_location": "property-tenant.html (Row SP-06)",
+      "value": "",
+      "reason_unverified": "Some 'NNN' QSR leases retain structural slab/roof replacement with landlord; unverified without executed lease.",
+      "how_to_verify": "Check Maintenance & Repair article and Casualty Destruction termination rights in private lease.",
+      "status": "unverified",
+      "source_label": "LA County Office of the Assessor — Real Estate Toolkit",
+      "source_url": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13"
+    },
+    {
+      "id": "UV-07",
+      "item": "Subject Store Gross Annual Sales & Unit Rent-to-Sales Ratio",
+      "table_location": "property-tenant.html (Row SP-07)",
+      "value": "",
+      "reason_unverified": "Unit-level restaurant gross sales are non-public; left blank per strict anti-hallucination rule.",
+      "how_to_verify": "Exercise landlord's annual gross-sales reporting audit right under the lease.",
+      "status": "unverified",
+      "source_label": "SEC Form 10-Q (Q3 FY2026) — Jack in the Box Inc.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm"
+    },
+    {
+      "id": "UV-08",
+      "item": "Incorporated City of Los Angeles vs. Unincorporated County / Neighboring City Jurisdiction",
+      "table_location": "property-tenant.html (Row SP-08)",
+      "value": "",
+      "reason_unverified": "'Around Central Los Angeles' spans City of LA (Measure ULA 4.45%/5.95% tax) and unincorporated pockets/adjacent cities (no ULA tax).",
+      "how_to_verify": "Verify privately in City of LA ZIMAS or Office of Finance ULA lookup.",
+      "status": "unverified",
+      "source_label": "City of Los Angeles Office of Finance — Measure ULA FAQ",
+      "source_url": "https://finance.lacity.gov/faq/measure-ula"
+    },
+    {
+      "id": "UV-09",
+      "item": "Parcel-Specific Central LA Single-Tenant QSR Market Cap Rate",
+      "table_location": "property-tenant.html (Row TC-19)",
+      "value": "",
+      "reason_unverified": "No official government agency publishes parcel-specific QSR cap rates; private brokerage surveys are excluded as primary fact rows.",
+      "how_to_verify": "Benchmark against SEC-audited NNN REIT 10-K (6.4%–7.4%) and obtain confidential broker BOV.",
+      "status": "unverified",
+      "source_label": "SEC Form 10-K (FY2025) — NNN REIT, Inc.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm"
+    },
+    {
+      "id": "UV-10",
+      "item": "1-Mile / 3-Mile Census Tract Demographics, Assigned LAUSD School & GeoTracker UST Status",
+      "table_location": "demographics-schools.html (DM-09, SC-05) & risks-black-swans.html (BS-08)",
+      "value": "",
+      "reason_unverified": "Publishing exact tract, school boundary, or GeoTracker ID would triangulate and expose the protected property location.",
+      "how_to_verify": "Check privately on data.census.gov, LAUSD School Finder, and CA GeoTracker.",
+      "status": "unverified",
+      "source_label": "CA State Water Resources Control Board — GeoTracker",
+      "source_url": "https://geotracker.waterboards.ca.gov/"
+    },
+    {
+      "id": "UV-11",
+      "item": "Owner's Adjusted Tax Basis, Accumulated Depreciation & Prop 13 Factored Base Year Value",
+      "table_location": "economy-jobs.html (Row TX-06)",
+      "value": "",
+      "reason_unverified": "Confidential taxpayer records; withheld under privacy protocol and left blank.",
+      "how_to_verify": "Verify from CPA depreciation schedule and LA County secured property tax bill.",
+      "status": "unverified",
+      "source_label": "Internal Revenue Service (IRS) — Form 8824 Instructions",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf"
+    }
+  ],
+  "repo_and_data_irregularities": [
+    {
+      "id": "IRG-01",
+      "category": "Repository Baseline Irregularity",
+      "finding": "Initial Commit 1430b4f Contained Only a 7-Byte Stub README.md ('# Jack2') With Missing Trailing Newline and Zero Prior Property/Lease Files",
+      "impact_and_resolution": "Audited commit 1430b4f line-by-line: no prior datasets, lease abstracts, or website code existed. Built full verified dataset, projection engine, and dashboard from scratch without inventing missing parcel facts.",
+      "status": "verified",
+      "source_label": "GitHub Repository Initial Commit 1430b4f",
+      "source_url": "https://github.com/wingbangboozle1-lang/Jack2/commit/1430b4f04885e701ba4de07756105ff31122ee06"
+    },
+    {
+      "id": "IRG-02",
+      "category": "Privacy Audit Irregularity (High Priority)",
+      "finding": "Initial Commit 1430b4f Git Author Metadata Used a Non-Noreply Personal Email ([REDACTED-EMAIL-01])",
+      "impact_and_resolution": "Per strict privacy mandate, the discovered email is kept strictly internal-only, never printed anywhere in data/docs/site, replaced with placeholder [REDACTED-EMAIL-01], and blocked by automated PII checks in verify_all.py. Subsequent agent commits use GitHub's users.noreply.github.com address.",
+      "status": "verified",
+      "source_label": "GitHub Official Docs — Setting Commit Email Privacy",
+      "source_url": "https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address"
+    },
+    {
+      "id": "IRG-03",
+      "category": "Branch Policy Conflict",
+      "finding": "Task Brief Mentions 'session-<id>/<task>' Branches vs. Arena Platform Fixed-Branch Enforcement ('arena/a3a8ec08-jack2')",
+      "impact_and_resolution": "Platform rules strictly bind session tracking to 'arena/a3a8ec08-jack2' and prohibit creating/pushing other branches. Documented in COORDINATION.md; non-overlapping file scopes were maintained on 'arena/a3a8ec08-jack2' prior to PR integration to 'main'.",
+      "status": "verified",
+      "source_label": "GitHub Repository Branches — wingbangboozle1-lang/Jack2",
+      "source_url": "https://github.com/wingbangboozle1-lang/Jack2/branches"
+    },
+    {
+      "id": "IRG-04",
+      "category": "Official Federal Data Series Gap",
+      "finding": "October 2025 Los Angeles Area CPI-U Values Missing Due to 2025 Federal Lapse in Appropriations",
+      "impact_and_resolution": "BLS officially notes October 2025 CPI observations were not collected due to the 2025 appropriations lapse. Gap is preserved transparently without artificial interpolation.",
+      "status": "verified",
+      "source_label": "U.S. BLS — Consumer Price Index, Los Angeles Area (Jan 2026 Release Footnote)",
+      "source_url": "https://www.bls.gov/regions/west/news-release/2026/consumerpriceindex_losangeles_20260213.htm"
+    },
+    {
+      "id": "IRG-05",
+      "category": "Official Federal Statistical Discontinuation",
+      "finding": "BEA Discontinued Metropolitan Statistical Area (MSA) GDP & Personal Income Releases Starting Feb 5, 2026",
+      "impact_and_resolution": "With Release BEA 26-08 (Feb 5, 2026), BEA ceased publishing MSA-level GDP/Personal Income and consolidated reporting at the county level (LA County Personal Income = $818.5B). County-level official series used accordingly.",
+      "status": "verified",
+      "source_label": "U.S. Bureau of Economic Analysis (BEA) Release 26-08",
+      "source_url": "https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf"
+    },
+    {
+      "id": "IRG-06",
+      "category": "Census Sub-County Suppression Flags",
+      "finding": "U.S. Census QuickFacts Displays '[X]' (Not Applicable) for City-Level Annual Building Permits & County Business Patterns",
+      "impact_and_resolution": "Census County Business Patterns (304,988 establishments) and annual Building Permits (22,250 in 2025) are tabulated at county geography (LA County FIPS 06037), marked '[X]' for Los Angeles city. Reported at exact county scope without fabricating city splits.",
+      "status": "verified",
+      "source_label": "U.S. Census Bureau QuickFacts Value Flags",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    }
+  ],
+  "sources_ledger": [
+    {
+      "id": "SR-01",
+      "agency": "U.S. Securities and Exchange Commission (SEC EDGAR)",
+      "document": "Jack in the Box Inc. Form 10-Q (Quarterly Period Ended July 5, 2026; Filed Aug 12, 2026)",
+      "scope_verified": "2,115 total units (93% franchised), -4.2% YTD SSS (-1.1% Q3), $1,472.8M debt, $1,008.8M lease liabilities, -$901.3M equity deficit, Dec 22, 2025 Del Taco sale ($115M), $500M June 2026 securitization notes.",
+      "status": "verified",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm"
+    },
+    {
+      "id": "SR-02",
+      "agency": "U.S. Securities and Exchange Commission (SEC EDGAR)",
+      "document": "Jack in the Box Inc. Form 10-K (Fiscal Year Ended September 28, 2025; Filed Nov 19, 2025)",
+      "scope_verified": "941 California restaurants (44.1% of 2,136 system), 729 company-owned buildings, FY2025 -4.2% SSS (-1.3% FY2024), $4.21B systemwide sales.",
+      "status": "verified",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm"
+    },
+    {
+      "id": "SR-03",
+      "agency": "U.S. Securities and Exchange Commission (SEC EDGAR)",
+      "document": "Jack in the Box Inc. Form 10-Q (16 Weeks Ended January 18, 2026) & DEF 14A / Form 8-K Q4 FY25",
+      "scope_verified": "Q1 FY2026 -6.7% SSS (-7.0% franchise), 'JACK on Track' 51 block closures (86 total FY25 closures), FY26 50–100 closure guidance, 19.6% FY25 restaurant margin.",
+      "status": "verified",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000042/jack-20260118.htm"
+    },
+    {
+      "id": "SR-04",
+      "agency": "U.S. Securities and Exchange Commission (SEC EDGAR)",
+      "document": "NNN REIT, Inc. Form 10-K (Fiscal Year Ended December 31, 2025)",
+      "scope_verified": "Institutional single-tenant net-lease benchmarks across 3,692 properties (10.2-yr WALT): 7.4% acquisition cap rate ($931.0M invested) and 6.4% occupied disposition cap rate.",
+      "status": "verified",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm"
+    },
+    {
+      "id": "SR-05",
+      "agency": "U.S. Census Bureau",
+      "document": "QuickFacts (V2025 & 2020–2024 ACS): United States, Los Angeles County (06037), Los Angeles City (0644000)",
+      "scope_verified": "Population (3,869,089 LA City; 9,694,934 LA County), density (8,304.2/sq mi), median HH income ($81,939 City; $90,112 County), poverty (16.5% City), home value ($921,200 City), food sales ($17.37B City / $44.00B County).",
+      "status": "verified",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "SR-06",
+      "agency": "U.S. Bureau of Labor Statistics (BLS)",
+      "document": "Los Angeles Area Economic Summary (Updated Oct 5, 2026) & Economy at a Glance (Nov 2026)",
+      "scope_verified": "Unemployment (5.0% LA City, 4.9% LA County, 4.8% MSA Aug 2026; 4.4% MSA Sept prelim), nonfarm jobs (6,289.1k, +0.6% YoY), Healthcare (+3.3%), Hospitality (+2.2%), Information (-6.1%), CPI-U (+3.7% Sept 2026; Energy +17.6%), weekly wage ($1,704), food spend ($11,858/yr).",
+      "status": "verified",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "id": "SR-07",
+      "agency": "U.S. Bureau of Economic Analysis (BEA)",
+      "document": "Gross Domestic Product by County and Personal Income by County (Releases Dec 2024 & Feb 5, 2026)",
+      "scope_verified": "LA County #1 U.S. personal income ($818.5B in 2024) and #1 county real GDP ($802.0B in 2023); MSA series discontinuation notice.",
+      "status": "verified",
+      "source_url": "https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf"
+    },
+    {
+      "id": "SR-08",
+      "agency": "California Department of Finance (CA DOF)",
+      "document": "E-1 City/County Population Estimates (May 1, 2026) & Public K-12 Graded Enrollment Projections",
+      "scope_verified": "Jan 1, 2026 population change (-0.9% LA City; -0.6% LA County) and projected 10-year LA County K-12 enrollment decline (-240,800 students).",
+      "status": "verified",
+      "source_url": "https://dof.ca.gov/media/docs/forecasting/demographics/estimates/e-1_2026_press_release.Pdf"
+    },
+    {
+      "id": "SR-09",
+      "agency": "California Department of Education (CDE) & LAUSD",
+      "document": "2025–26 DataQuest District Enrollment (CDS 19-64733) & LAUSD School Explorer Graduation Data",
+      "scope_verified": "LAUSD 2025–26 certified enrollment of 497,105 TK–12 students (#1 in CA) and 86.7% 4-year cohort graduation rate (2024–25).",
+      "status": "verified",
+      "source_url": "https://dq.cde.ca.gov/dataquest/dqcensus/enrgrdlevels.aspx?agglevel=District&year=2025-26&cds=1964733"
+    },
+    {
+      "id": "SR-10",
+      "agency": "California Department of Industrial Relations (CA DIR)",
+      "document": "AB 1228 Fast Food Minimum Wage Frequently Asked Questions",
+      "scope_verified": "$20.00/hour mandatory fast-food minimum wage effective April 1, 2024 across national QSR chains (corporate & franchised) and Fast Food Council standards.",
+      "status": "verified",
+      "source_url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm"
+    },
+    {
+      "id": "SR-11",
+      "agency": "U.S. Department of the Treasury & Federal Reserve Board",
+      "document": "Daily Treasury Par Yield Curve Rates (2026) & Federal Reserve H.15 Statistical Release",
+      "scope_verified": "10-Year U.S. Treasury yield rise from 4.15% (03/10/2026) to 5.28% (10/07/2026) and 5.05% (10/28/2026); 3.63% Effective Fed Funds & 2.43% 10-Yr TIPS real yield.",
+      "status": "verified",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve"
+    },
+    {
+      "id": "SR-12",
+      "agency": "Internal Revenue Service (IRS) & California Franchise Tax Board (FTB)",
+      "document": "IRS Form 8824 Instructions (§1031), IRS NIIT Q&A (§1411), FTB Pub 1067 (2025) & Form FTB 3840",
+      "scope_verified": "45-day ID / 180-day closing §1031 deferral rules; Federal 20% LTCG + 3.8% NIIT + 25% §1250 recapture; CA 12.3% + 1% Mental Health tax (13.3%) & annual FTB 3840 out-of-state exchange tracking.",
+      "status": "verified",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf"
+    },
+    {
+      "id": "SR-13",
+      "agency": "LA County Office of the Assessor, City of LA Office of Finance & LA City Planning",
+      "document": "Proposition 13 Guide, Measure ULA FAQ (Post-June 30, 2026 Thresholds), & LAMC §12.24-W,17",
+      "scope_verified": "Prop 13 1% base + max 2%/yr cap & 100% FMV reassessment on sale; City of LA Measure ULA 4.45% (> $5.4M) & 5.95% (>= $10.9M); discretionary CUP barrier for drive-thru QSRs.",
+      "status": "verified",
+      "source_url": "https://finance.lacity.gov/faq/measure-ula"
+    },
+    {
+      "id": "SR-14",
+      "agency": "U.S. Geological Survey (USGS), FEMA, CAL FIRE & CA Department of Insurance",
+      "document": "USGS UCERF3 & ARkStorm, FEMA NRI v1.20, CAL FIRE Jan 2025 Incident Finals, & CDI Order No. 2025-1",
+      "scope_verified": "LA 30-yr earthquake probabilities (60% M>=6.7, 46% M>=7.0, 31% M>=7.5); ARkStorm $725B scenario; Jan 2025 Eaton (9,419 destroyed) & Palisades (6,845 destroyed) fires; $1B FAIR Plan assessment.",
+      "status": "verified",
+      "source_url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area"
+    }
+  ]
+}

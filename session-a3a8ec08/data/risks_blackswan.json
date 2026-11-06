@@ -1,0 +1,210 @@
+{
+  "bau_risks": [
+    {
+      "id": "BAU-01",
+      "category": "Lease Term Cliff Risk",
+      "metric": "Shortening Primary NNN Term (<6 Years) Buyer Debt Contraction & Cap-Rate Expansion",
+      "geography_or_scope": "[REDACTED-PROPERTY-01] (2030–2035 Expiry Window)",
+      "period": "2026–2035 Horizon",
+      "value": "3.2 to 9.1 yrs remaining (Nov 2026) vs. 10.2-yr NNN REIT institutional WALT",
+      "notes": "Once remaining primary term drops below ~6 years, commercial lenders curtail 10-yr amortizing debt, shrinking the 1031 buyer pool and expanding exit cap rates by ~75–175 bps.",
+      "status": "verified",
+      "source_label": "SEC Form 10-K (FY2025) — NNN REIT, Inc. WALT & Cap Rate Disclosure",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm"
+    },
+    {
+      "id": "BAU-02",
+      "category": "Tenant Credit & Store Closure Risk",
+      "metric": "Jack in the Box Same-Store Sales Contraction & 'JACK on Track' Closure Wave",
+      "geography_or_scope": "Jack in the Box Inc. (NASDAQ: JACK)",
+      "period": "FY2025 & YTD Q3 FY2026",
+      "value": "-4.2% FY25 & YTD Q3 FY26 SSS | 86 FY25 closures + 50–100 FY26 guided closures",
+      "notes": "Sustained negative comparable sales and active block-closure execution elevate non-renewal or rent-reduction risk at 2030–2035 expiration.",
+      "status": "verified",
+      "source_label": "SEC Form 10-Q (July 5, 2026) & Form 8-K Q4 FY2025 Release",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm"
+    },
+    {
+      "id": "BAU-03",
+      "category": "QSR Labor Margin Squeeze",
+      "metric": "California Fast-Food Statutory Wage Floor (AB 1228) & Fast Food Council Authority",
+      "geography_or_scope": "California QSR Establishments (44.1% of JACK System)",
+      "period": "Effective April 1, 2024 – Ongoing",
+      "value": "$20.00/hr statutory minimum wage (+25% jump); JACK store margin 21.7% -> 19.6%",
+      "notes": "Compresses franchisee EBITDA and raises store rent-to-sales ratios, weakening tenant appetite for upward rent resets at lease renewal.",
+      "status": "verified",
+      "source_label": "CA Dept. of Industrial Relations (DIR) — AB 1228 Fast Food Wage FAQ",
+      "source_url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm"
+    },
+    {
+      "id": "BAU-04",
+      "category": "Tax Reassessment Pass-Through",
+      "metric": "Proposition 13 Change-in-Ownership Reassessment Burden on NNN Tenant",
+      "geography_or_scope": "Los Angeles County, CA",
+      "period": "Upon Any Property Sale",
+      "value": "Reassessment from legacy 2%-capped FBYV to 100% Fair Market Value (1% + bonds)",
+      "notes": "Under NNN leases, property tax jumps triggered by a sale pass directly to the tenant, raising occupancy cost right before lease renewal — buyers discount price accordingly.",
+      "status": "verified",
+      "source_label": "LA County Office of the Assessor — Proposition 13",
+      "source_url": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13"
+    },
+    {
+      "id": "BAU-05",
+      "category": "Transfer Tax Cliff",
+      "metric": "City of Los Angeles Measure ULA Gross Documentary Transfer Tax",
+      "geography_or_scope": "Incorporated City of Los Angeles",
+      "period": "Post-June 30, 2026 Thresholds",
+      "value": "4.45% total tax (> $5.4M to < $10.9M) | 5.95% total tax (>= $10.9M)",
+      "notes": "Direct confiscation of 4.0%–5.5% of gross sale price (not equity gain) if parcel lies inside City of LA and closes above $5,400,000.",
+      "status": "verified",
+      "source_label": "City of Los Angeles Office of Finance — Measure ULA FAQ",
+      "source_url": "https://finance.lacity.gov/faq/measure-ula"
+    },
+    {
+      "id": "BAU-06",
+      "category": "Interest Rate & Refinancing Risk",
+      "metric": "Long-Term Risk-Free Yield Expansion Pressuring Net-Lease Valuations",
+      "geography_or_scope": "U.S. Commercial Real Estate Capital Markets",
+      "period": "March 2026 – October 2026",
+      "value": "10-Yr U.S. Treasury rose from 4.15% (03/10/2026) to 5.05%–5.31% (Oct 2026)",
+      "notes": "With risk-free 10-Yr Treasuries near ~5.05%, sub-6% NNN cap rates offer minimal risk spread unless justified by covered-land urban redevelopment value.",
+      "status": "verified",
+      "source_label": "U.S. Department of the Treasury — Daily Treasury Par Yield Curve (2026)",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve"
+    },
+    {
+      "id": "BAU-07",
+      "category": "Real Rent Erosion",
+      "metric": "Sticky Los Angeles Consumer & Energy Inflation Outpacing Fixed NNN Bumps",
+      "geography_or_scope": "Los Angeles-Long Beach-Anaheim MSA",
+      "period": "August–September 2026",
+      "value": "+3.7% YoY All-Items CPI-U (Sept 2026) | +17.6% YoY Energy CPI (Aug 2026)",
+      "notes": "Standard NNN leases with flat or ~1.5%/yr (7.5%–10% every 5 yrs) escalations lose ~1.7%–2.2%/yr in real purchasing power while LA energy spikes pinch QSR utilities.",
+      "status": "verified",
+      "source_label": "U.S. Bureau of Labor Statistics — Los Angeles Economy at a Glance",
+      "source_url": "https://www.bls.gov/regions/west/ca_losangeles_msa.htm"
+    },
+    {
+      "id": "BAU-08",
+      "category": "Demographic & School Outflow",
+      "metric": "Population Out-Migration & K-12 Public School Enrollment Contraction",
+      "geography_or_scope": "City of Los Angeles & Los Angeles County",
+      "period": "2020–2026 & 10-Year Projection",
+      "value": "-3.2% LA County pop (2020–25) | -0.9% LA City YoY (2025–26) | -240,800 K-12 projection",
+      "notes": "Gradual family outflow caps organic transaction volume growth, shifting QSR reliance toward commuter, healthcare, and late-night adult cohorts.",
+      "status": "verified",
+      "source_label": "U.S. Census QuickFacts (V2025) & CA Dept. of Finance",
+      "source_url": "https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222"
+    },
+    {
+      "id": "BAU-09",
+      "category": "Sectoral Employment Shift",
+      "metric": "Entertainment / Information Sector Contraction in Core Los Angeles",
+      "geography_or_scope": "Los Angeles-Long Beach-Anaheim MSA",
+      "period": "August 2025 – August 2026",
+      "value": "-6.1% YoY Information payrolls (-12,300 jobs); Prof. Services -0.9% YoY",
+      "notes": "Studio/production relocation reduces daytime production-crew QSR spending in Hollywood/Central LA corridors, partially offset by Healthcare (+3.3%) & Hospitality (+2.2%).",
+      "status": "verified",
+      "source_label": "U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026)",
+      "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    }
+  ],
+  "black_swan_risks": [
+    {
+      "id": "BS-01",
+      "category": "Seismic Black Swan",
+      "metric": "Major Los Angeles Region Earthquake (UCERF3 & Puente Hills Blind-Thrust Rupture)",
+      "geography_or_scope": "Los Angeles Region / Central LA Basin",
+      "period": "USGS 30-Year Forecast Horizon",
+      "value": "60% prob M>=6.7 | 46% prob M>=7.0 | 31% prob M>=7.5 (Puente Hills Mw 6.5–7.1)",
+      "notes": "HIGHEST SINGLE-ASSET TAIL RISK: Puente Hills thrust runs directly beneath Central LA. Standard NNN fire policies exclude earthquake; unhedged structural destruction + lease casualty termination clause can wipe out single-parcel building equity.",
+      "status": "verified",
+      "source_label": "U.S. Geological Survey (USGS) — UCERF3 Earthquake Probabilities",
+      "source_url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area"
+    },
+    {
+      "id": "BS-02",
+      "category": "Urban Conflagration Wildfire",
+      "metric": "Catastrophic Wind-Driven LA County Wildfires (Empirical Jan 2025 Precedent)",
+      "geography_or_scope": "Los Angeles County (Eaton & Palisades Fires)",
+      "period": "January 7–31, 2025 Confirmed Totals",
+      "value": "37,469 acres | 16,264 structures destroyed (9,419 Eaton + 6,845 Palisades) | 31 fatalities",
+      "notes": "Proved extreme Santa Ana wind events can destroy >16,000 urban/suburban LA County structures in days, causing regional smoke closures, grid shutoffs, displaced populations, and construction labor surges.",
+      "status": "verified",
+      "source_label": "CAL FIRE Official Incident Final Reports — Eaton & Palisades Fires",
+      "source_url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire"
+    },
+    {
+      "id": "BS-03",
+      "category": "Insurance Market Collapse",
+      "metric": "Commercial Property Insurance Withdrawal & California FAIR Plan Emergency Assessment",
+      "geography_or_scope": "Los Angeles County / State of California",
+      "period": "Feb 2025 Order No. 2025-1 – 2026",
+      "value": "$1.0B FAIR Plan assessment ($4.0B est. fire loss); $20M/structure FAIR commercial cap",
+      "notes": "Carrier non-renewals and surging commercial property premiums strain NNN tenant occupancy budgets or leave landlords exposed to coverage gaps if tenant defaults on insurance covenants.",
+      "status": "verified",
+      "source_label": "California Department of Insurance — Order No. 2025-1 & Release 028-2025",
+      "source_url": "https://www.insurance.ca.gov/0250-insurers/0500-legal-info/0700-commissioners-orders/upload/Order-No-2025-1-Approving-the-California-FAIR-Plan-Association-s-Request-to-Issue-Assessment.pdf"
+    },
+    {
+      "id": "BS-04",
+      "category": "Atmospheric River Mega-Flood",
+      "metric": "USGS ARkStorm West Coast Mega-Storm & Urban Basin Flooding Scenario",
+      "geography_or_scope": "Los Angeles County & Statewide California",
+      "period": "USGS Modeled Catastrophe Scenario",
+      "value": "~$725B total economic loss ($400B property + $325B business interruption); up to 25% CA buildings flooded",
+      "notes": "Overwhelms 100-to-200-year LA flood channels, severing freight supply chains, power, and arterial corridors across flatland Central/South LA.",
+      "status": "verified",
+      "source_label": "U.S. Geological Survey (USGS) — ARkStorm Scenario (OFR 2010-1312)",
+      "source_url": "https://www.usgs.gov/programs/science-application-for-risk-reduction/science/arkstorm-scenario"
+    },
+    {
+      "id": "BS-05",
+      "category": "Multi-Hazard Composite Exposure",
+      "metric": "FEMA National Risk Index (NRI) Urban LA Tract Composite & Earthquake Loss Percentiles",
+      "geography_or_scope": "Los Angeles County Urban Census Tracts",
+      "period": "FEMA NRI v1.20",
+      "value": "89.6 Risk Index Score | 97.8 Earthquake EAL National Percentile | Very Low Resilience (15.4)",
+      "notes": "High physical hazard exposure combined with low community resilience score amplifies recovery duration after any regional shock.",
+      "status": "verified",
+      "source_label": "FEMA National Risk Index — Los Angeles County Tract Viewer",
+      "source_url": "https://hazards.fema.gov/nri/report/viewer?dataLOD=Census+tracts&dataIDs=T06037295103"
+    },
+    {
+      "id": "BS-06",
+      "category": "Tenant Corporate Insolvency",
+      "metric": "Whole-Business Securitization Default / Chapter 11 Lease Rejection by Tenant",
+      "geography_or_scope": "Jack in the Box Inc. ($2.48B Combined Debt + Lease Liabilities)",
+      "period": "2026–2035 Lease Horizon",
+      "value": "$1,472.8M debt + $1,008.8M lease liabilities vs. $46.3M cash & -$901.3M equity deficit",
+      "notes": "In a severe recession or liquidity crunch, Chapter 11 Reorganization (11 U.S.C. §365) allows a debtor-tenant to reject above-market leases unilaterally, leaving landlord with a dark building.",
+      "status": "verified",
+      "source_label": "SEC Form 10-Q (July 5, 2026) — Jack in the Box Inc. Balance Sheet",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm"
+    },
+    {
+      "id": "BS-07",
+      "category": "Stagflation / Sovereign Yield Spike",
+      "metric": "10-Year Treasury Surge Above 6.5%–7.0% Freezing Leveraged CRE Transaction Markets",
+      "geography_or_scope": "U.S. Sovereign Debt & CRE Debt Markets",
+      "period": "2026–2035",
+      "value": "Baseline 10-Yr Treasury already at 5.05%–5.31% (Oct 2026) + +3.7% LA CPI",
+      "notes": "A fiscal/inflation shock pushing 10-Yr yields >6.5% would push single-tenant QSR cap rates to 8.0%–9.5%, slashing exit values by 20%–30% if forced to sell near expiry.",
+      "status": "verified",
+      "source_label": "U.S. Department of the Treasury — Daily Yield Curve (2026)",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve"
+    },
+    {
+      "id": "BS-08",
+      "category": "Environmental / Subsurface Liability",
+      "metric": "Parcel-Specific Phase I/II Environmental Contamination (Legacy Auto/Gas/Dry-Cleaner Use)",
+      "geography_or_scope": "[REDACTED-PROPERTY-01] Subsurface Soil/Vapor",
+      "period": "Historical Urban Corner Pad Use",
+      "value": "",
+      "notes": "Many older Central LA corner QSR pads replaced mid-century service stations (USTs). Parcel GeoTracker status is unverified/redacted to preserve anonymity; verify privately before listing.",
+      "status": "unverified",
+      "source_label": "CA State Water Resources Control Board — GeoTracker Portal",
+      "source_url": "https://geotracker.waterboards.ca.gov/"
+    }
+  ]
+}

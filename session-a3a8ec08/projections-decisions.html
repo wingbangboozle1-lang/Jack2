@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026–2036 Area Projection System &amp; Interactive §1031 Simulator — Central LA Jack in the Box NNN Decision Dashboard</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Primary Navigation">
+      <div class="brand">
+        <span class="brand-badge">NNN Lease Decision Suite</span>
+        <h1>Central LA Jack in the Box Analysis</h1>
+        <p>Asset: [REDACTED-PROPERTY-01]<br>Expiry Window: 2030–2035</p>
+      </div>
+      <div class="nav-section-label">Dashboard Categories</div>
+      <ul class="nav-links">
+        <li><a href="./index.html"><span class="nav-num">01</span><span>Overview Dashboard</span></a></li><li><a href="./executive-summary.html"><span class="nav-num">02</span><span>Executive Summary</span></a></li><li><a href="./property-tenant.html"><span class="nav-num">03</span><span>Property, Lease &amp; Tenant</span></a></li><li><a href="./demographics-schools.html"><span class="nav-num">04</span><span>Demographics, Income &amp; Schools</span></a></li><li><a href="./economy-jobs.html"><span class="nav-num">05</span><span>Economy, Jobs, Rates &amp; Tax</span></a></li><li><a href="./projections-decisions.html" class="active"><span class="nav-num">06</span><span>Projections &amp; Decision Model</span></a></li><li><a href="./risks-black-swans.html"><span class="nav-num">07</span><span>BAU &amp; Black Swan Risks</span></a></li><li><a href="./sources.html"><span class="nav-num">08</span><span>Official Sources Ledger</span></a></li><li><a href="./flagged.html"><span class="nav-num">09</span><span>Flagged for Review</span></a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <strong>Privacy Guardrail Active</strong><br>
+        Owner: <code>[REDACTED-OWNER-01]</code><br>
+        Zero PII published. 100% official primary sources.
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <div class="privacy-bar" role="region" aria-label="Privacy Notice">
+        <div><strong>PRIVACY SHIELD ACTIVE:</strong> All personal, owner, and parcel-identifying details are anonymized using placeholders (<code>[REDACTED-OWNER-01]</code> / <code>[REDACTED-PROPERTY-01]</code>).</div>
+        <div>Analysis Date: <strong>2026-11-06</strong> · Every table row verified from official sources or left blank &amp; flagged.</div>
+      </div>
+      <main class="content">
+        <header class="page-header">
+          <div class="page-eyebrow">Category 06 · Quantitative Forecasting</div>
+          <h2>2026–2036 Area Projection System &amp; Interactive §1031 Simulator</h2>
+          <p>10,000-trial Monte Carlo wealth projections anchored to official series plus a 100% private client-side calculator for confidential lease inputs.</p>
+        </header>
+        
+    <section class="card" id="private-decision-simulator">
+      <h3>Interactive Private Property &amp; IRC §1031 Decision Simulator (100% Browser-Local — Zero Data Transmitted)</h3>
+      <p class="card-subtitle">Because exact parcel rent, basis, and lease expiration date are kept private and blank in public tables, <code>[REDACTED-OWNER-01]</code> can test confidential lease parameters locally below. Nothing is sent over the network or saved to disk.</p>
+      <div class="sim-grid">
+        <div class="sim-field">
+          <label for="sim-rent">Current Annual NNN Base Rent ($)</label>
+          <input type="number" id="sim-rent" value="200000" min="25000" step="5000">
+        </div>
+        <div class="sim-field">
+          <label for="sim-expiry">Exact Lease Expiration Year (2030–2035)</label>
+          <select id="sim-expiry">
+            <option value="2030">2030 (~4 yrs remaining — Cliff Zone)</option>
+            <option value="2031">2031 (~5 yrs remaining — Near Cliff)</option>
+            <option value="2032" selected>2032 (~6 yrs remaining — Midpoint)</option>
+            <option value="2033">2033 (~7 yrs remaining)</option>
+            <option value="2034">2034 (~8 yrs remaining)</option>
+            <option value="2035">2035 (~9 yrs remaining)</option>
+          </select>
+        </div>
+        <div class="sim-field">
+          <label for="sim-prop13">Current Prop 13 Assessed Value ($)</label>
+          <input type="number" id="sim-prop13" value="950000" min="100000" step="50000">
+        </div>
+        <div class="sim-field">
+          <label for="sim-basis">Owner Adjusted Tax Basis ($)</label>
+          <input type="number" id="sim-basis" value="850000" min="0" step="50000">
+        </div>
+        <div class="sim-field">
+          <label for="sim-ula">Municipal Jurisdiction (Measure ULA Check)</label>
+          <select id="sim-ula">
+            <option value="city_la" selected>Incorporated City of Los Angeles (ULA Applies &gt;$5.4M)</option>
+            <option value="non_ula">Unincorporated LA County / Non-ULA City</option>
+          </select>
+        </div>
+        <div class="sim-field">
+          <label for="sim-extend">Early 12-Yr Blend-and-Extend (96% Rent)?</label>
+          <select id="sim-extend">
+            <option value="yes" selected>Yes — Tenant Signs Early 12-Yr Extension</option>
+            <option value="no">No — Sell on Existing Remaining Term</option>
+          </select>
+        </div>
+      </div>
+      <div class="sim-results">
+        <div class="sim-out-card"><div class="label">As-Is Implied Value Today</div><div class="num" id="out-val-now">$3,053,435</div><div class="hint">Based on remaining-term cap curve</div></div>
+        <div class="sim-out-card"><div class="label">Blend-and-Extend Value (12-Yr)</div><div class="num" id="out-val-ext">$3,282,051</div><div class="hint">Cap rate compresses to ~5.85%</div></div>
+        <div class="sim-out-card"><div class="label">Est. Documentary / ULA Tax</div><div class="num" id="out-ula">$18,379</div><div class="hint" id="out-ula-hint">Below $5.4M ULA cliff</div></div>
+        <div class="sim-out-card"><div class="label">Tax Deferred via IRC §1031</div><div class="num" id="out-tax-saved">$809,814</div><div class="hint">Avoids ~35.5% Fed + CA cash tax</div></div>
+        <div class="sim-out-card"><div class="label">Prop 13 Tax Jump to NNN Tenant</div><div class="num" id="out-prop13-shock">+$27,518 / yr</div><div class="hint">Billed to tenant post-sale</div></div>
+        <div class="sim-out-card"><div class="label">10-Yr Expected Wealth (§1031)</div><div class="num" id="out-w-1031" style="color:#047857;">$6,327,205</div><div class="hint">Diversified 2–3 asset replacement</div></div>
+        <div class="sim-out-card"><div class="label">10-Yr Expected Wealth (Hold)</div><div class="num" id="out-w-hold">$5,162,060</div><div class="hint">Single-asset rollover &amp; tail exposure</div></div>
+        <div class="sim-out-card"><div class="label">10-Yr Expected Wealth (Cash Sale)</div><div class="num" id="out-w-cash">$3,855,610</div><div class="hint">After immediate capital gains tax</div></div>
+      </div>
+      <div class="sim-verdict" id="sim-dynamic-verdict"></div>
+    </section>
+
+    <section class="card">
+      <h3>10-Year Monte Carlo Wealth &amp; Tail-Risk Chart (Normalized per $100k Current Annual NOI)</h3>
+      <p class="card-subtitle">Comparison of mean expected 10-year wealth and 5th-percentile catastrophic tail floor across all 5 strategic options.</p>
+      
+    <div class="svg-chart-wrap">
+      <svg viewBox="0 0 820 285" width="100%" height="285" role="img" aria-label="10-Year Expected Wealth vs 5th Percentile Tail Floor per $100k NOI">
+        <rect x="0" y="0" width="820" height="285" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="12" y="22" font-size="12" font-weight="700" fill="#334155">10-Year Monte Carlo Wealth Comparison (Normalized per $100,000 Current Annual NNN Rent; N = 10,000 Paths)</text>
+        <text x="10" y="51" font-size="12.5" font-weight="700" fill="#0f172a">Opt A: Blend+Extend -&gt; §1031</text><rect x="235" y="36" width="418" height="15" rx="4" fill="#1d4ed8" opacity="0.9"/><text x="660" y="48" font-size="11.5" font-weight="700" fill="#0f172a">$3.09M Mean</text><rect x="235" y="54" width="379" height="11" rx="3" fill="#64748b" opacity="0.55"/><text x="621" y="64" font-size="11" fill="#475569">$2.81M P05 Tail Floor</text><text x="10" y="99" font-size="12.5" font-weight="700" fill="#0f172a">Opt B: Pre-Cliff Sale -&gt; §1031</text><rect x="235" y="84" width="397" height="15" rx="4" fill="#2563eb" opacity="0.9"/><text x="639" y="96" font-size="11.5" font-weight="700" fill="#0f172a">$2.94M Mean</text><rect x="235" y="102" width="371" height="11" rx="3" fill="#64748b" opacity="0.55"/><text x="613" y="112" font-size="11" fill="#475569">$2.74M P05 Tail Floor</text><text x="10" y="147" font-size="12.5" font-weight="700" fill="#0f172a">Opt D: Passive Hold &amp; Renew</text><rect x="235" y="132" width="349" height="15" rx="4" fill="#d97706" opacity="0.9"/><text x="591" y="144" font-size="11.5" font-weight="700" fill="#0f172a">$2.58M Mean</text><rect x="235" y="150" width="268" height="11" rx="3" fill="#64748b" opacity="0.55"/><text x="510" y="160" font-size="11" fill="#475569">$1.99M P05 Tail Floor</text><text x="10" y="195" font-size="12.5" font-weight="700" fill="#0f172a">Opt E: Hold -&gt; Infill Redev</text><rect x="235" y="180" width="321" height="15" rx="4" fill="#7c3aed" opacity="0.9"/><text x="563" y="192" font-size="11.5" font-weight="700" fill="#0f172a">$2.37M Mean</text><rect x="235" y="198" width="213" height="11" rx="3" fill="#64748b" opacity="0.55"/><text x="455" y="208" font-size="11" fill="#475569">$1.58M P05 Tail Floor</text><text x="10" y="243" font-size="12.5" font-weight="700" fill="#0f172a">Opt C: Taxable Cash Sale</text><rect x="235" y="228" width="274" height="15" rx="4" fill="#dc2626" opacity="0.9"/><text x="516" y="240" font-size="11.5" font-weight="700" fill="#0f172a">$2.03M Mean</text><rect x="235" y="246" width="122" height="11" rx="3" fill="#64748b" opacity="0.55"/><text x="364" y="256" font-size="11" fill="#475569">$0.91M P05 Tail Floor</text>
+      </svg>
+    </div>
+    
+    </section>
+
+    
+    <section class="card" data-table-block>
+      <h3>1. Central Los Angeles 2026–2035 Economic &amp; Cap-Rate Projection System</h3>
+      <p class="card-subtitle">Deterministic and Monte Carlo model projections anchored directly to official Census, BLS, Treasury, SEC, and USGS series.</p>
+      <div class="table-controls">
+        <input type="search" class="search-input" data-table-search placeholder="Filter rows by keyword, agency, metric, or ID..." aria-label="Search table">
+        <div class="filter-group">
+          <button type="button" class="btn-pill active" data-status-filter="all">All (6)</button>
+          <button type="button" class="btn-pill" data-status-filter="verified">Verified</button>
+          <button type="button" class="btn-pill" data-status-filter="model_anchored">Model Anchored</button>
+          <button type="button" class="btn-pill" data-status-filter="unverified">Unverified (Blank)</button>
+          <button type="button" class="btn-pill" data-csv-export>Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-area-proj">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Metric &amp; Geographic Scope</th>
+              <th>Verified Value (Blank if Unverified)</th>
+              <th>Analytical Impact &amp; Notes</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="model_anchored"><td><code>PR-01</code></td><td>Population Projection (2026–2035)</td><td><strong>City of Los Angeles Projected Resident Population Path</strong><br><span style="font-size:12px;color:#64748b;">City of Los Angeles (Anchored to Census V2025 = 3,869,089) · 2025 Base -&gt; 2030P -&gt; 2035P</span></td><td class="val-cell">3,869,089 (2025) -&gt; 3,801,852 (2030P) -&gt; 3,754,566 (2035P) [-0.30%/yr avg]</td><td>Anchored to Census V2025 (-0.16%/yr 2020–25) and CA DOF E-1 (-0.9% 2025–26); urban infill density (&gt;8,000/sq mi) preserves high foot/auto traffic despite mild headwinds.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/US,losangelescountycalifornia,losangelescitycalifornia/PST045222" target="_blank" rel="noopener noreferrer">U.S. Census QuickFacts (V2025) &amp; CA Dept. of Finance E-1 &#8599;</a></td></tr><tr data-status="model_anchored"><td><code>PR-02</code></td><td>Employment Projection (2026–2035)</td><td><strong>Los Angeles Metro Total Nonfarm Payrolls (Incl. 2028 Olympics Pulse)</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles-Long Beach-Anaheim MSA (Base = 6,289.1k) · 2026 Base -&gt; 2030P -&gt; 2035P</span></td><td class="val-cell">6,289.1k (Aug 2026) -&gt; 6,441.4k (2030P) -&gt; 6,587.6k (2035P)</td><td>Healthcare (+3.3% YoY) and Hospitality (+2.2% YoY) plus 2028 Olympic transit/tourism offset Information (-6.1% YoY) contraction.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">U.S. BLS — Los Angeles Area Economic Summary (Oct 5, 2026) &#8599;</a></td></tr><tr data-status="model_anchored"><td><code>PR-03</code></td><td>Inflation &amp; Real Rent Erosion</td><td><strong>Projected Los Angeles CPI-U Path &amp; Real Erosion of Flat NNN Rent</strong><br><span style="font-size:12px;color:#64748b;">Los Angeles-Long Beach-Anaheim CPI-U (Base = 358.725) · Sept 2026 -&gt; 2030P -&gt; 2035P</span></td><td class="val-cell">Index 358.7 (2026) -&gt; 405.3 (2030P) -&gt; 467.6 (2035P) [+30.4% cum. CPI]</td><td>A flat NNN lease loses ~23.3% of real purchasing power by 2035 unless redeployed into CPI/escalating assets.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/ca_losangeles_msa.htm" target="_blank" rel="noopener noreferrer">U.S. BLS — Los Angeles Economy at a Glance (CPI-U) &#8599;</a></td></tr><tr data-status="model_anchored"><td><code>PR-04</code></td><td>Cap-Rate Term Cliff Curve</td><td><strong>Modeled Single-Tenant QSR Exit Cap Rate by Remaining Primary Lease Term</strong><br><span style="font-size:12px;color:#64748b;">Central LA Pad (Anchored to 5.05% 10-Yr UST &amp; NNN REIT 6.4%–7.4% Caps) · 12+ Yrs -&gt; 8 Yrs -&gt; 5 Yrs -&gt; &lt;=2 Yrs Remaining</span></td><td class="val-cell">5.85% (12+ yrs) | 6.20% (8–9 yrs) | 7.05% (4–5 yrs) | 7.65%–8.25% (&lt;=3 yrs)</td><td>Waiting until &lt;4 years remain on a 2030–2035 lease inflicts an automatic ~120–200 bps cap-rate penalty (~16%–24% valuation haircut on identical NOI).</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer">SEC Form 10-K (FY2025) — NNN REIT, Inc. &amp; U.S. Treasury Yield Curve &#8599;</a></td></tr><tr data-status="model_anchored"><td><code>PR-05</code></td><td>Tenant Renewal Probability</td><td><strong>Modeled 2030–2035 Lease Renewal vs. Dark-Store Probability Band</strong><br><span style="font-size:12px;color:#64748b;">Jack in the Box Central LA Pad · 2030–2035 Rollover Window</span></td><td class="val-cell">72% renewal at market/flat rent | 28% non-renewal / rent-cut restructuring risk</td><td>Calibrated to JACK -4.2% SSS, 50–100/yr &#x27;JACK on Track&#x27; closures, and $20/hr AB 1228 labor floor, balanced against Central LA grandfathered drive-thru scarcity.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm" target="_blank" rel="noopener noreferrer">SEC Form 10-Q (July 5, 2026) — Jack in the Box Inc. &amp; CA DIR AB 1228 &#8599;</a></td></tr><tr data-status="model_anchored"><td><code>PR-06</code></td><td>Catastrophe Tail Adjustment</td><td><strong>10-Year Cumulative Seismic + Conflagration Expected Tail Drag (Unhedged Single Site)</strong><br><span style="font-size:12px;color:#64748b;">Central Los Angeles Single Parcel (10,000-Path Monte Carlo) · 10-Year Horizon (2026–2036)</span></td><td class="val-cell">~26.3% 10-yr regional M&gt;=6.7 seismic prob (USGS 60%/30-yr) | -4.8% expected single-site tail drag</td><td>Diversifying into 2–3 non-correlated multi-state §1031 assets cuts catastrophic single-parcel wipeout variance (99th-percentile loss) by &gt;65%.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener noreferrer">U.S. Geological Survey (USGS) — UCERF3 &amp; CAL FIRE Incident Data &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+
+    <section class="card" data-table-block>
+      <h3>2. Full Strategic Decision Matrix (Normalized per $100,000 Current Annual NNN Rent)</h3>
+      <p class="card-subtitle">All five actionable choices ranked by risk-adjusted wealth preservation and compounding growth.</p>
+      <div class="table-wrap">
+        <table class="data-table" id="tbl-decision-matrix">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Strategic Course of Action</th>
+              <th>10-Yr Wealth &amp; Tail Floor</th>
+              <th>Risk Profile</th>
+              <th>Detailed Trade-Off Analysis</th>
+              <th>Verification Status</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="model_anchored"><td><strong>1 (Recommended Optimal Strategy)</strong></td><td><strong>Option A: Early &#x27;Blend-and-Extend&#x27; Inquiry -&gt; Sale &amp; IRC §1031 Diversified Exchange (2027–2028)</strong></td><td class="val-cell">$3,094,634 mean (P10: $2,865,691 | P05 Tail: $2,805,868) (2.03x)</td><td>Low-Moderate (Manageable &amp; Diversified)</td><td>Approaching JACK now for a 10–15 yr extension lifts sale price ~7.5%+ via cap compression (5.85% vs 6.55%) if accepted, or gives early warning if store is slated for closure; §1031 defers ~35.5% tax and eliminates single-tenant &amp; LA seismic concentration.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.irs.gov/pub/irs-pdf/i8824.pdf" target="_blank" rel="noopener noreferrer">IRS Form 8824 (§1031) &amp; SEC NNN REIT Form 10-K (2025) &#8599;</a></td></tr><tr data-status="model_anchored"><td><strong>2 (Strong Runner-Up / Fast De-Risk)</strong></td><td><strong>Option B: Direct Pre-Cliff Sale (2027, &gt;=5 Yrs Left) + IRC §1031 Multi-Market Exchange</strong></td><td class="val-cell">$2,940,003 mean (P10: $2,777,185 | P05 Tail: $2,743,555) (1.93x)</td><td>Low-Moderate (Immediate Credit/Disaster Exit)</td><td>Best choice if lease expires 2030–2031 or tenant declines early extension. Captures financeable NNN buyer pool before &lt;4-yr cliff, preserves 100% of tax-deferred equity, and boosts cash yield into ~7.1% diversified net-lease assets.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.ftb.ca.gov/forms/2022/2022-3840-instructions.html" target="_blank" rel="noopener noreferrer">IRS Form 8824 (§1031) &amp; CA FTB Form 3840 Instructions &#8599;</a></td></tr><tr data-status="model_anchored"><td><strong>3 (Conditional Hold — High Tail Variance)</strong></td><td><strong>Option D: Passive Hold Through 2030–2035 Expiration &amp; Renew at Market</strong></td><td class="val-cell">$2,581,030 mean (P10: $2,066,782 | P05 Tail: $1,985,203) (1.69x)</td><td>High Concentration &amp; Tail Risk</td><td>Preserves Prop 13 low tax base, but leaves 100% of wealth exposed to JACK credit (-4.2% SSS, block closures), AB 1228 margin pressure, dark-store TI/carry risk (P10 drops sharply), and unhedged Central LA Puente Hills seismic risk.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm" target="_blank" rel="noopener noreferrer">SEC Form 10-Q (July 5, 2026) — Jack in the Box Inc. &amp; USGS UCERF3 &#8599;</a></td></tr><tr data-status="model_anchored"><td><strong>4 (Opportunistic / High Execution Risk)</strong></td><td><strong>Option E: Hold to Expiration &amp; Reposition / Ground-Lease / Mixed-Use Infill Redevelopment</strong></td><td class="val-cell">$2,374,480 mean (P10: $1,744,345 | P05 Tail: $1,578,273) (1.56x)</td><td>High Entitlement, Capital &amp; Carry Risk</td><td>Viable ONLY if parcel is a large (&gt;=25,000 sq ft) signalized transit corner where underlying Central LA land value exceeds NNN leased-fee value; exposes individual investor to multi-year LA permitting, construction cost, and zero-income downtime.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://planning.lacity.gov/pdiscaseinfo/Search/casenumber/ENV-2021-4711-MND" target="_blank" rel="noopener noreferrer">Los Angeles Department of City Planning — LAMC §12.24-W,17 &#8599;</a></td></tr><tr data-status="model_anchored"><td><strong>5 (Tax-Inefficient Wealth Erosion)</strong></td><td><strong>Option C: Outright Taxable Cash Sale Before Expiration (No §1031 Exchange)</strong></td><td class="val-cell">$2,031,387 mean (P10: $1,066,167 | P05 Tail: $908,167) (1.33x)</td><td>Low Operational Risk, Severe Immediate Tax Loss</td><td>Triggers immediate ~35%–37.1% combined Federal (20% LTCG + 3.8% NIIT + 25% §1250) + California (up to 13.3%) tax hit (plus 4.45% Measure ULA if &gt;$5.4M in LA City), permanently destroying ~1/3 of compounding principal.</td><td><span class="badge badge-model">Model Output (Official Anchor)</span></td><td><a class="src-link" href="https://www.irs.gov/newsroom/questions-and-answers-on-the-net-investment-income-tax" target="_blank" rel="noopener noreferrer">IRS NIIT / Capital Gains Rules &amp; CA FTB Pub 1067 &#8599;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+        <footer class="footer-note">
+          <div>Session <code>session-a3a8ec08</code> · Strict Official-Source Verification &amp; Zero-PII Compliance</div>
+          <div><a class="src-link" href="./sources.html">Review Official Sources</a> · <a class="src-link" href="./flagged.html">Review Unverified &amp; Flagged Items</a></div>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
