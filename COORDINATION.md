@@ -144,3 +144,19 @@ _(none)_
 - **Regime grid (20 cells).** "Sell now" wins in exactly 3 of 20, all where the
   owner's required return EXCEEDS the cap rate. That is internally consistent with
   the crossover and is the sanity check that the engine is not rigged.
+
+### 2026-11-06 — pre-PR status
+
+| Task | State | Evidence |
+|---|---|---|
+| T00 repo audit | done | initial commit had only README.md (7 bytes) |
+| T01 source register | done | `data/sources.json`, 28 sources, tiers A–D, limitation on every entry |
+| T02–T07 data tables | done | `data/dataset.json`, 157 rows / 8 categories |
+| T08 projection model | done | `model/project_model.py`, reproducible via `--check` |
+| T09 decision analysis | done | `site/decision.html`, regime map + crossover rule |
+| T10 site build | done | 16 pages, root `index.html` + `site/*` |
+| T11 verification | done | `verification/verify.py` — 2,356 checks, PASS |
+| T12 PR + merge + deploy | **in progress** | this commit |
+
+Verification tally: 126 VERIFIED, 2 DERIVED, 2 FLAGGED, 27 UNVERIFIED (blank by design).
+Live preview verified locally: all 16 pages and both assets return HTTP 200.
