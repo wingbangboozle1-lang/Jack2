@@ -179,3 +179,59 @@ owner review requested post-launch.
   Coordination comment logged on PR #2. Nothing from either session was discarded.
 - Current live root (main): this session's site (Executive Summary + 9 subpages).
   PR #2 proposes a different root (data-ledger workbook) + this site in archive.
+
+
+---
+
+## Session C — `arena/ffe3bdfd-jack2` (this session)
+
+**What happened.** Session C started from the same baseline (`1430b4f`, a 7-byte `README.md`), saw no
+other session and no board, and built a third complete package: 112 verified rows, a 20,000-path
+Monte Carlo, and a 13-page site. It committed at `e5f737a` and opened **PR #5** — which failed to merge
+because Sessions A and B had already published to `main` in the meantime. The board in §1–§9 above did
+not exist when C started; C read the repository at checkout, not `main`.
+
+**Conflict (2026-11-06, second occurrence).** PR #5 could not be merged: `main` already held a root
+site (B), a verbatim archive (A), a shared `data/` schema, tools and CI, while C's branch held a
+same-named `data/`, `assets/`, `index.html`, `decision.html`, `flagged.html`, `sources.html`,
+`README.md` and `COORDINATION.md`.
+
+**Resolution — nothing discarded, no schema merged by hand.**
+
+1. C's entire build was moved into `analysis/` **before** merging: its own `data/`, `content/`,
+   `model/`, `assets/`, `build.py`, `verify.py`, `PRIVACY.md` and 13 pages. Relative links are
+   folder-local, so its site works unchanged at `/analysis/` and cannot collide with the root.
+2. The merge kept **`main`'s** root files wholesale — `README.md`, `COORDINATION.md`, `.gitignore`,
+   `index.html` and every root page — and C's folder arrived as pure additions. No root page was
+   hand-edited; the only change to the root build is a new `NAV` entry in `tools/build_site.py`.
+3. `README.md` gains a "second model" section; `COORDINATION.md` gains this section.
+4. C's numbers were **not** blended into `data/metrics.json` or `data/model_output.json`. Two models
+   with different units, horizons and assumptions cannot be averaged into one verified value — that
+   is exactly the unverifiable transcription the brief forbids. They are published side by side and
+   the disagreement is stated.
+
+**Where the two models agree and differ (published, not hidden).** Both say redeploying beats holding.
+B measures the margin as thin (~$247k on ~$5.9M of 2040 wealth, reinvestment hurdle 6.97% against a
+7.30% benchmark). C measures it as wide (33.26 vs 26.70 per $1 of NOI) because C charges a full
+rollover year plus a +125 bp exit cap at expiry and assumes a 6.00% going-in cap. C publishes its
+break-even exit cap — **~4.7%** at a 6.0% going-in cap — so a reader can decide which view they
+believe. Both are labelled as model output, not as verified fact.
+
+**Verification of the merged tree.**
+
+| Gate | Command | Result |
+|---|---|---|
+| Root site still builds and verifies | `python3 tools/build_site.py` + `tools/check_site.py` | see §10 below |
+| C's package still builds from its own folder | `cd analysis && python3 model/projection.py && python3 build.py` | 112 rows, 13 pages, 0 broken links |
+| C's independent verifier | `cd analysis && python3 verify.py` | data, 220 internal links, 119 external links, 38 files privacy-scanned, 13 pages parsed — pass |
+| Root nav reaches the new section | `tools/check_site.py` (nav reachability is root-only) | pass |
+
+## 10. Final result
+
+| Item | Value |
+|---|---|
+| PR | https://github.com/wingbangboozle1-lang/Jack2/pull/5 |
+| Merge | `--merge` into `main` after the conflicts above were resolved |
+| Pages | https://wingbangboozle1-lang.github.io/Jack2/ (legacy build, `main` / root) |
+| Second model | https://wingbangboozle1-lang.github.io/Jack2/analysis/ |
+| Session A archive | https://wingbangboozle1-lang.github.io/Jack2/session-1944e5a3/ |
