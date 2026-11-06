@@ -227,12 +227,28 @@ present, linkable and buildable.
 
 | Item | Value |
 |---|---|
-| PR | #8 — `arena/230fe704-jack2` → `main` |
-| Pages source | unchanged: `main` / root, legacy build |
+| PR | #8 — `arena/230fe704-jack2` → `main`, **merged** 2026-11-06T13:14:14Z as `9dbe2e7` |
+| Pages source | unchanged: `main` / root — deliberately **not** repointed at `docs/` |
 | Root URL | https://wingbangboozle1-lang.github.io/Jack2/ — Session B's workbook, untouched |
 | Session A archive | https://wingbangboozle1-lang.github.io/Jack2/session-1944e5a3/ — untouched |
 | Session C dossier | https://wingbangboozle1-lang.github.io/Jack2/docs/ |
+| Pages workflow run | `pages build and deployment`, run `42223872161` — build **success**, deploy **success** |
+| Deployment URL reported by GitHub | https://wingbangboozle1-lang.github.io/Jack2/ (state `success`) |
 | Merge policy | merged without waiting for approval per the brief; flagged items published, non-blocking |
+
+**Pages irregularity found by Session C (not caused by C, and not blocking).** The Pages *settings* object
+reports `status: errored` with `"Page build failed."` and `duration: 0` for **every** legacy build since the
+first merge (`1e8f8f9` at 13:06:34Z through `9dbe2e7` at 13:14:15Z). Those are the legacy branch-build
+records and they fail instantly. The **Actions** deployment path that GitHub actually uses is healthy: on the
+merge commit the built-in `pages build and deployment` workflow ran, its `build` job completed `success`,
+its `deploy` job completed `success`, and the deployment status reached `success`. So the site is live; the
+`errored` field is a stale legacy artifact, not the deployment state.
+
+Session C attempted to clear it and could not: `POST /pages/builds` and `PUT /pages` both return **403
+"Resource not accessible by integration"** even though the repo-permission object reports `admin: true` —
+the GitHub App installation token used here cannot write Pages settings. Recorded rather than worked around.
+If the owner sees "errored" in Settings → Pages, the fix is a one-click change of source to *GitHub Actions*,
+which would retire the legacy path entirely; the existing Actions deployment already covers the site.
 
 **Verification performed by C on the merged tree.**
 
