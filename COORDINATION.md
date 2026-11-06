@@ -132,3 +132,15 @@ _(none)_
   4. IRS §1031 page is flagged archival by IRS itself.
   5. The subject parcel cannot be located (APN redacted) → every parcel-level
      hazard/zoning/assessor value is UNVERIFIED.
+
+### 2026-11-06 — progress update (2)
+
+- **T08 complete.** Crossover results: at a 7.10% market cap and 6 yr of remaining
+  term the sell/hold crossover owner return is **7.39%**; at 7.85% it is **8.15%**;
+  at 9.35% it is **9.67%**. The rule is *hold if your required return is below the
+  crossover; sell if above*. Because a typical private owner's required return sits
+  BELOW a single-asset QSR cap rate, the model's default output is **hold/renew**,
+  not sell — and this is stated with the condition attached, not as a bare verdict.
+- **Regime grid (20 cells).** "Sell now" wins in exactly 3 of 20, all where the
+  owner's required return EXCEEDS the cap rate. That is internally consistent with
+  the crossover and is the sanity check that the engine is not rigged.
