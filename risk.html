@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk Register | Jack2 — DTLA NNN Asset Intelligence</title>
+<meta name="description" content="Business-as-usual and black-swan risk register for the Central Los Angeles Jack in the Box NNN property: likelihood, impact, mitigants, and decision impact.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar"><button id="burger" class="burger" aria-label="Toggle menu">☰</button><b>Jack2 · DTLA NNN Asset Intelligence</b></div>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="25" width="34" height="17" rx="2.5" fill="#0e3a39"/><path d="M24 25c-4-3 4-6 0-9" stroke="#0e3a39" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="11" r="5.6" fill="#0e3a39"/><circle cx="22.1" cy="10.2" r=".95" fill="#f5c97b"/><circle cx="26" cy="10.2" r=".95" fill="#f5c97b"/></svg></div>
+    <div><h1>Jack2</h1><small>DTLA NNN Asset Intelligence</small></div>
+  </div>
+  <div class="nav-label">Overview</div>
+  <ul class="nav"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h8V3H3zM13 21h8V11h-8zM13 9h8V3h-8zM3 21h8v-4H3z"/></svg>Dashboard</a></li></ul>
+  <div class="nav-label">Property &amp; Market</div>
+  <ul class="nav">
+    <li><a href="property.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Property &amp; Lease</a></li>
+    <li><a href="market.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg>Market &amp; Economy</a></li>
+    <li><a href="demographics.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 11h6M19 8v6"/></svg>Demographics &amp; Schools</a></li>
+    <li><a href="projection.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l6-8 4 4 6-9M20 6v5h-5"/></svg>Projection 2026–2035</a></li>
+  </ul>
+  <div class="nav-label">Decision</div>
+  <ul class="nav">
+    <li><a class="active" href="risk.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Risk Register</a></li>
+    <li><a href="decision.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>Sell vs Renew</a></li>
+  </ul>
+  <div class="nav-label">Governance</div>
+  <ul class="nav">
+    <li><a href="sources.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Sources &amp; Verification</a></li>
+    <li><a href="flagged.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>Flagged for Review</a></li>
+    <li><a href="methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 12v5"/></svg>Methodology &amp; Privacy</a></li>
+  </ul>
+  <div class="sidebar-foot"><b>Prepared 2026-11-06</b><br>Personal data anonymized. See <a href="methodology.html" style="color:#ffd166">Methodology &amp; Privacy</a>.</div>
+</aside>
+<main class="main">
+  <div class="crumbs">Decision / Risk Register</div>
+  <h2 class="page-title">Risk Register — Routine &amp; Black-Swan</h2>
+  <p class="lede">Two tiers: <b>business-as-usual</b> risks (expected, plan for them) and <b>black swans</b> (rare, catastrophic — transfer, insure, and survive). Likelihood and impact are 1–5 analyst judgements derived from the cited sources — not official statistics. Ratings are this report's structured judgement, not a guarantee.</p>
+
+  <div class="card">
+    <h3>Scoring key</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data" style="min-width:0">
+        <thead><tr><th>Scale</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+        <tbody>
+          <tr><td>Likelihood (10-yr)</td><td>Rare &lt;2%</td><td>Unlikely 2–15%</td><td>Possible 15–40%</td><td>Likely 40–70%</td><td>Near-certain &gt;70%</td></tr>
+          <tr><td>Impact (value / NOI)</td><td>&lt;5%</td><td>5–10%</td><td>10–25%</td><td>25–50%</td><td>&gt;50% / loss of asset</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Exposure = Likelihood × Impact (max 25). ≥15 critical · 9–14 high · 5–8 elevated · ≤4 low.</p>
+  </div>
+
+  <div class="card mt16">
+    <h3>Tier 1 — Business-as-usual risks</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>#</th><th>Risk</th><th>L</th><th>I</th><th>Exposure</th><th>Mitigant</th><th>Decision impact</th><th>Sources</th></tr></thead>
+        <tbody>
+          <tr><td>BAU-01</td><td>Tenant / franchisee default (JIB 93% franchised)</td><td>2</td><td>5</td><td>10 — High</td><td>Estoppel; unit sales vs $1.874M AUV; guarantee from strongest entity; security deposit; letter of credit; cross-default clauses</td><td>Favors <b>renew with credit protection</b> or sale to credit-backed buyer</td><td class="src-cell"><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">JACK 10-K ↗</a></td></tr>
+          <tr><td>BAU-02</td><td>Lease rollover / non-renewal by 2030–2035</td><td>3</td><td>4</td><td>12 — High</td><td>Negotiate 10–15 yr extension now; cap on TI/LC obligations; auto-renewal options; early notice rights</td><td>Core argument for <b>renew-first strategy</b></td><td class="src-cell">Lease abstract [LEASE EXPIRY] — <span class="badge b-placeholder">Private</span></td></tr>
+          <tr><td>BAU-03</td><td>Cap-rate expansion (rate risk)</td><td>4</td><td>4</td><td>16 — Critical</td><td>Hold through cycles; avoid forced sale; lock extension before marketing; rate hedges on any debt</td><td>Selling into a +100 bps move destroys ~13–19% of value</td><td class="src-cell"><a href="https://fred.stlouisfed.org/series/DFF" target="_blank" rel="noopener">Fed funds via FRED ↗</a> · <span class="badge b-flagged">Cap-rate levels unverified (private market)</span></td></tr>
+          <tr><td>BAU-04</td><td>Flat NOI vs inflation (weak escalations)</td><td>4</td><td>2</td><td>8 — Elevated</td><td>Renegotiate bumps to ≥2.5% or 10%/5yr; percentage-rent kicker</td><td>If unfixable → selling earlier captures current NOI better</td><td class="src-cell"><span class="badge b-placeholder">Lease terms private</span></td></tr>
+          <tr><td>BAU-05</td><td>Tenant sales decline (JIB AUV $1.949M→$1.874M, −3.8% YoY)</td><td>3</td><td>3</td><td>9 — High</td><td>Monitor AUV quarterly via franchisee reports; co-marketing rights; kick-out only if sales &lt; threshold</td><td>Weak unit → push to sell before expiry if NNN demand persists</td><td class="src-cell"><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">JACK 10-K ↗</a> <span class="badge b-computed">Δ% computed</span></td></tr>
+          <tr><td>BAU-06</td><td>Property tax reassessment on sale (Prop 13)</td><td>5</td><td>2</td><td>10 — High</td><td>Hold to avoid reset; if selling, price in higher buyer taxes; 1031 to defer</td><td>Sell penalty — supports hold/renew</td><td class="src-cell"><a href="https://www.boe.ca.gov/prop13/" target="_blank" rel="noopener">CA BOE ↗</a></td></tr>
+          <tr><td>BAU-07</td><td>Measure ULA transfer-tax drag on sale</td><td>5</td><td>2</td><td>10 — High</td><td>Price below/above thresholds strategically; 1031 exchange; exempt purchasers (nonprofit/govt)</td><td>Sell penalty ~4–5.5% — supports renew or 1031-only sale</td><td class="src-cell"><a href="https://cityclerk.lacity.org/election/Measure_TE.pdf" target="_blank" rel="noopener">LA City Clerk ↗</a></td></tr>
+          <tr><td>BAU-08</td><td>Insurance premium inflation / CA market withdrawal</td><td>4</td><td>2</td><td>8 — Elevated</td><td>Annual broker remarketing; tenant-paid per NNN; confirm quake + fire limits; FAIR plan fallback</td><td>Neutral if NNN properly drafted</td><td class="src-cell"><a href="https://www.insurance.ca.gov/" target="_blank" rel="noopener">CA Dept. of Insurance ↗</a> <span class="badge b-flagged">Market specifics unverified</span></td></tr>
+          <tr><td>BAU-09</td><td>Structural/maintenance surprises (roof, parking, ADA)</td><td>3</td><td>2</td><td>6 — Elevated</td><td>NNN absolute vs modified-net clarity; reserve; PCA before sale</td><td>Verify before listing; buyer will discount</td><td class="src-cell">Lease [NNN TYPE] — <span class="badge b-placeholder">Private</span></td></tr>
+          <tr><td>BAU-10</td><td>DTLA retail softness / homelessness &amp; safety perception suppressing sales</td><td>3</td><td>3</td><td>9 — High</td><td>Drive-thru format resilience; trade-area count; security/lighting; monitor foot traffic</td><td>Favors quality renewal over speculative redevelopment</td><td class="src-cell"><a href="https://laedc.org/laedc-releases-2025-economic-forecast-report/" target="_blank" rel="noopener">LAEDC ↗</a></td></tr>
+          <tr><td>BAU-11</td><td>Interest-rate / financing risk (owner debt or buyer pool)</td><td>3</td><td>3</td><td>9 — High</td><td>Fixed-rate debt; prepayment review; pre-qualify buyers on any sale</td><td>High rates → fewer 1031 buyers → wider bid-ask</td><td class="src-cell"><a href="https://fred.stlouisfed.org/series/DFF" target="_blank" rel="noopener">FRED (Fed funds) ↗</a></td></tr>
+          <tr><td>BAU-12</td><td>Regulatory creep on commercial property (taxes, retrofit, ULA expansion)</td><td>2</td><td>2</td><td>4 — Low-elevated</td><td>Track LA City council file; join BOMA/CCIM alerts; annual tax counsel review</td><td>Watch item; revisit at each renewal milestone</td><td class="src-cell"><a href="https://cityclerk.lacity.org/" target="_blank" rel="noopener">LA City Clerk ↗</a></td></tr>
+          <tr><td>BAU-13</td><td>Single-asset concentration (this pad = [X]% of net worth)</td><td>4</td><td>3</td><td>12 — High</td><td>Cap exposure ≤15–20%; diversify via 1031 into DST/multi-asset if sold; rebalance at renewal</td><td>If concentration &gt; comfort → sell &amp; 1031 into diversification</td><td class="src-cell">Owner portfolio — <span class="badge b-placeholder">Private</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Tier 2 — Black-swan &amp; catastrophe risks</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>#</th><th>Black swan</th><th>L</th><th>I</th><th>Exposure</th><th>Mitigant</th><th>Decision impact</th><th>Sources</th></tr></thead>
+        <tbody>
+          <tr><td>BS-01</td><td><b>Puente Hills thrust (blind thrust beneath downtown LA)</b> — scenario M7.5</td><td>1</td><td>5</td><td>5 — Elevated (rare × catastrophic)</td><td>USGS/SCEC estimate: 3,000–18,000 fatalities, &gt;$250B damage, 142k–735k households displaced; ~3,000-yr recurrence. Structural/seismic retrofit verification; earthquake insurance (loss-of-rents + replacement cost); lender-required coverage; casualty clause review</td><td>Cannot diversify by selling <u>location risk</u>; mitigate via insurance. If building is pre-1980 unretrofitted → accelerate sale or harden</td><td class="src-cell"><a href="https://www.usgs.gov/natural-hazards/earthquake-hazards" target="_blank" rel="noopener">USGS Earthquake Hazards ↗</a> · <span class="badge b-reported">Reported</span> <a href="https://www.claimsjournal.com/news/west/2005/05/25/55453.htm" target="_blank" rel="noopener">USGS/SCEC study summary ↗</a></td></tr>
+          <tr><td>BS-02</td><td>Southern San Andreas "Big One" M≈7.8</td><td>1</td><td>5</td><td>5 — Elevated</td><td>Same as BS-01; regional, not parcel-specific; coordinate with tenant business-continuity plan</td><td>Rare; insurance + structure</td><td class="src-cell"><a href="https://earthquake.usgs.gov/" target="_blank" rel="noopener">USGS ↗</a> · <a href="https://www.scec.org/" target="_blank" rel="noopener">SCEC (USC) ↗</a></td></tr>
+          <tr><td>BS-03</td><td><b>Major wildfire + insurance contagion</b> (Palisades/Eaton precedent)</td><td>2</td><td>4</td><td>8 — Elevated</td><td>Jan 2025 fires: &gt;40,000 acres, ~16,000 structures destroyed; UCLA: $95–164B losses, insured ≈ $75B, county GDP hit ≈ $4.6B (0.48%) in 2025; LAEDC/SCLC: $28–54B property damage, 5-yr county cost up to $8.9–9.7B, tax revenue −$0.73–1.4B. Central LA core burn probability low, but premiums/availability reprice county-wide</td><td>Verify fire + earthquake coverage pricing now; renew caps must cover premium shocks passed to NNN tenants</td><td class="src-cell"><a href="https://newsroom.ucla.edu/releases/los-angeles-wildfires-caused-up-to-164-billion-in-property-capital-losses" target="_blank" rel="noopener">UCLA Newsroom ↗</a> · <a href="https://laedc.org/laedc-releases-2025-economic-forecast-report/" target="_blank" rel="noopener">LAEDC ↗</a> · <a href="https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fire-hazard-severity-zones-maps-2022" target="_blank" rel="noopener">CAL FIRE FHSZ maps ↗</a></td></tr>
+          <tr><td>BS-04</td><td>Civil unrest / urban disturbance (1992 LA precedent)</td><td>2</td><td>4</td><td>8 — Elevated</td><td>Vandalism coverage; security plan; board-up protocol; tenant to maintain storefront glazing standards; monitor LAPD/city alerts</td><td>Central-LA specific; NNN shifts some burden to tenant — verify</td><td class="src-cell"><a href="https://www.lapdonline.org/" target="_blank" rel="noopener">LAPD ↗</a> · <span class="badge b-reported">Historical context — no official 1992 loss total cited here; see Flagged</span></td></tr>
+          <tr><td>BS-05</td><td>Pandemic / public-health shutdown</td><td>2</td><td>3</td><td>6 — Elevated</td><td>Drive-thru format (JIB is drive-thru centric) proved resilient in 2020–21; percentage-rent clauses share pain; keep liquidity reserve 12–18 months</td><td>Favors drive-thru NNN retention</td><td class="src-cell"><a href="https://www.cdc.gov/" target="_blank" rel="noopener">CDC ↗</a> · operational judgement</td></tr>
+          <tr><td>BS-06</td><td>Trade / tariff shock hitting LA logistics</td><td>3</td><td>3</td><td>9 — High</td><td>Port of LA swung +8–12% months in 2025 (front-loading) then −12% — volatility, not collapse; food input costs volatile; franchisee margins squeezed → rent-risk</td><td>Watch franchisee margins quarterly; escalation CPI-linkage helps</td><td class="src-cell"><a href="https://portoflosangeles.org/references/2025-news-releases/news_081325_july_cargo" target="_blank" rel="noopener">Port of LA ↗</a> · <a href="https://portoflosangeles.org/references/2025-news-releases/news_121625_nov_cargo" target="_blank" rel="noopener">Port of LA ↗</a></td></tr>
+          <tr><td>BS-07</td><td>Interest-rate/credit crisis (2008-type / liquidity crunch)</td><td>2</td><td>4</td><td>8 — Elevated</td><td>No floating-rate debt; 12–18-mo reserve; avoid ULA-tainted forced sales; 1031 backups identified early</td><td>Supports renew + hold through cycle</td><td class="src-cell"><a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve ↗</a> · <a href="https://fred.stlouisfed.org/series/DFF" target="_blank" rel="noopener">FRED ↗</a></td></tr>
+          <tr><td>BS-08</td><td>Cyber/POS attack on tenant operations</td><td>3</td><td>2</td><td>6 — Elevated</td><td>Tenant-side; confirm NNN cyber isn't landlord's; review lease insurance schedule</td><td>Low direct impact on landlord</td><td class="src-cell">Lease [INSURANCE SCHEDULE] — <span class="badge b-placeholder">Private</span></td></tr>
+          <tr><td>BS-09</td><td>Terrorism / critical-infrastructure event — DTLA</td><td>1</td><td>4</td><td>4 — Low-elevated</td><td>TRIA coverage via CA policy; tenant continuity; LAPD DTLA alerts</td><td>Rare; insurance transfer</td><td class="src-cell"><a href="https://www.treasury.gov/" target="_blank" rel="noopener">US Treasury (TRIA) ↗</a></td></tr>
+          <tr><td>BS-10</td><td>Climate: extreme heat / LA River flooding</td><td>2</td><td>2</td><td>4 — Low-elevated</td><td>FEMA flood map check (msc.fema.gov); drainage; heat-resilient roof membrane; utility shutoff plan</td><td>Verify flood zone — central LA typically low/moderate; confirm for parcel</td><td class="src-cell"><a href="https://msc.fema.gov/" target="_blank" rel="noopener">FEMA Flood Map Service Center ↗</a> <span class="badge b-flagged">Parcel zone unverified</span></td></tr>
+          <tr><td>BS-11</td><td>Sovereign/policy shock: aggressive LA tax expansion on commercial assets</td><td>2</td><td>3</td><td>6 — Elevated</td><td>Scenario: vacancy tax / ULA enlargement — monitored via City Clerk &amp; BOMA; revisit annually</td><td>Watch item; sell-decision input</td><td class="src-cell"><a href="https://cityclerk.lacity.org/" target="_blank" rel="noopener">LA City Clerk ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Reading the register — what actually threatens the outcome</h3>
+    <ul class="tight">
+      <li><b>The #1 controllable risk is BAU-03 (cap-rate/rate risk)</b> — it swamps everything else and is why panic-selling is the cardinal sin here.</li>
+      <li><b>The #1 verifiable credit risk is BAU-01</b> — JIB's system is 93% franchised and AUV is falling; your real counterparty is a franchisee balance sheet.</li>
+      <li><b>The #1 catastrophic tail is BS-01</b> — rare × ruinous. It does not justify selling (risk is city-wide, price reflects it), it justifies <b>verified insurance</b> and retrofit checks.</li>
+      <li><b>Wildfire (BS-03) is an insurance-pricing story for this parcel,</b> not a burn-probability story — Central LA is urban core; the FHSZ map shows very-high zones concentrated in the hills/brush interface (Palisades, Altadena), not the urban core. Verify parcel zone at CAL FIRE's official map.</li>
+      <li><b>Aggregate non-catastrophic value at risk</b> if renewed 2026→2035 (rough, illustrative): ≈10–25% of asset value across BAU items; aggregate tail risk mitigated to insurance-deductible levels with proper coverage.</li>
+    </ul>
+    <div class="callout danger"><b>Non-negotiables.</b> (1) Earthquake + fire coverage with loss-of-rents, re-marketed annually. (2) Estoppel + franchisee financials before any extension or sale. (3) No sale without a 1031 plan if embedded gains are material. (4) This asset ≤ 15–20% of investable net worth. (5) Review this register annually each Q1 and 12 months before lease expiry.</div>
+  </div>
+
+  <div class="foot">Jack2 · Risk Register · Ratings are structured analyst judgement (L×I, 1–5) informed by cited official sources; they are not probabilities issued by any agency. See <a href="sources.html">Sources</a> and <a href="flagged.html">Flagged for Review</a>.</div>
+</main>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
