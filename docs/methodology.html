@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method · Jack2 — PROP-001 hold / renew / sell analysis</title>
+<meta name="description" content="Privacy protocol, source tiers, verification procedure, limitations and full source list.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="site-head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">J2</span>
+      <span class="brand-txt"><strong>PROP-001</strong><span>NNN Jack in the Box · central Los Angeles</span></span>
+    </a>
+    <nav class="nav" aria-label="Site sections">
+      <a href="index.html">Overview</a>
+      <a href="decision.html">Decision</a>
+      <a href="projection.html">Projection</a>
+      <a href="economy.html">Economy</a>
+      <a href="tenant.html">Tenant</a>
+      <a href="capital-markets.html">Markets</a>
+      <a href="lease.html">Lease</a>
+      <a href="hazards.html">Risk</a>
+      <a href="tax.html">Tax</a>
+      <a href="flags.html">Flagged</a>
+      <a href="methodology.html" aria-current="page">Method</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Method, sources &amp; verification</div>
+  <h1>How every number on this site was checked</h1>
+  <p>195 sourced data points. Each carries a source link, a source tier and a status. Nothing is
+  marked verified without a resolving official source; nothing unconfirmed is filled in.</p>
+  <div class="verdict"><b>Reproducible.</b> <code>python3 model/build_facts.py</code> regenerates the dataset and
+  asserts that every unverified row is genuinely blank. <code>python3 model/projection_model.py</code> regenerates
+  the model with a fixed seed. <code>python3 model/build_site.py</code> rebuilds this site and fails if any internal
+  link is broken.</div>
+</section>
+
+<h2>Privacy protocol</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Rule</th><th>Implementation</th></tr></thead>
+<tbody>
+<tr><td class="metric">No owner identity</td><td>Referred to only as "the Owner" or <code>PARTY-OWNER</code>. No name, entity, address, phone or email appears anywhere.</td></tr>
+<tr><td class="metric">No tenant-contact identity</td><td>Referred to only as "the Tenant" or <code>PARTY-TENANT</code>.</td></tr>
+<tr><td class="metric">No parcel identity</td><td>Address, APN and legal description are placeholders.</td></tr>
+<tr><td class="metric">No personal financial data</td><td>The Owner's income, net worth, tax bracket and basis are <b>not collected</b>. The model is normalised per $1.00 of NOI so none of it is needed.</td></tr>
+<tr><td class="metric">No geolocation</td><td>No street address, cross-streets or coordinates are published. Trade-area analysis is at county / city / metro level.</td></tr>
+<tr><td class="metric">Research hygiene</td><td>Raw page captures are never committed. <code>.gitignore</code> blocks <code>private/</code>, <code>*.private</code>, <code>*.pii</code>, <code>*.csv.raw</code>.</td></tr>
+</tbody></table></div>
+
+<h2>Source tiers</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Tier</th><th>Rows</th><th>Meaning</th></tr></thead>
+<tbody><tr><td><span class="badge t1">T1 Official</span></td><td class="num">148</td><td>Government or central-bank primary source. Authoritative.</td></tr>
+<tr><td><span class="badge t3">T3 Industry</span></td><td class="num">20</td><td>Named commercial research house. Directional only, never authoritative.</td></tr>
+<tr><td><span class="badge d">Derived</span></td><td class="num">10</td><td>Arithmetic performed by this model on T1/T2 inputs, with the formula shown.</td></tr>
+<tr><td><span class="badge a">Assumption</span></td><td class="num">4</td><td>Analytical input chosen by this model. Never presented as fact.</td></tr>
+<tr><td><span class="badge d">Privacy</span></td><td class="num">13</td><td>Privacy placeholder — a value deliberately withheld.</td></tr></tbody></table></div>
+
+<h2>Verification procedure actually performed</h2>
+<ol class="tight">
+  <li>Each metric was retrieved from a resolving official page or CSV endpoint on <b>2026-11-06</b>.</li>
+  <li>The <b>period or vintage</b> is recorded per row (e.g. "Sep 2026", "V2025", "FY2025", "ACS 2020–2024"). Rows are
+  never compared across incompatible vintages without saying so.</li>
+  <li>Percentages were <b>recomputed from the raw series</b>, not copied from commentary:
+    <ul class="tight">
+      <li>CPI year over year = 336.298 / 324.245 − 1 = <b>+3.72%</b></li>
+      <li>LA metro payrolls, Sep 2019 → Sep 2026 = 6,282.1 / 6,236.7 − 1 = <b>+0.73%</b> over seven years</li>
+      <li>LA metro payrolls, Oct 2024 peak → Sep 2026 = 6,282.1 / 6,359.6 − 1 = <b>−1.22%</b></li>
+      <li>Franchised share = 1,966 / 2,115 = <b>93.0%</b></li>
+    </ul>
+  </li>
+  <li>Automated assertions in <code>build_facts.py</code>: every <code>verified</code> row must carry a URL, and every
+  <code>unverified</code> row must have an empty value. The build fails otherwise.</li>
+  <li>Automated assertions in <code>build_site.py</code>: every internal link must resolve to a page that was actually
+  emitted.</li>
+</ol>
+
+<h2>Known limitations</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>#</th><th>Limitation</th><th>Consequence</th></tr></thead>
+<tbody>
+<tr><td class="num">L1</td><td>No street address or APN supplied, by design.</td><td>Parcel-level hazard, zoning, assessed value and school assignment are unverified.</td></tr>
+<tr><td class="num">L2</td><td>The lease document was not supplied. "NNN" and "expiring 2030–2035" are as described, not verified.</td><td>The model parameterises these and shows sensitivity instead of asserting them.</td></tr>
+<tr><td class="num">L3</td><td>Current rent, NOI and basis were not supplied.</td><td>The model is normalised per $1.00 of current NOI so no disclosure is required.</td></tr>
+<tr><td class="num">L4</td><td><code>api.census.gov</code> required a key that was not available.</td><td>ACS data were taken from Census QuickFacts (same source data, different access path).</td></tr>
+<tr><td class="num">L5</td><td>California DOF projections are distributed as .xlsx.</td><td>Projections were not machine-verified; Census V2025 estimates are used instead.</td></tr>
+<tr><td class="num">L6</td><td>FEMA National Risk Index API returned HTTP 500.</td><td>County hazard scores are not reported.</td></tr>
+<tr><td class="num">L7</td><td>Cap-rate data are Tier 3 (a brokerage).</td><td>Treated as directional and badged on every row.</td></tr>
+</tbody></table></div>
+
+<h2>Sources used</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Source</th><th>What it was used for</th></tr></thead>
+<tbody><tr><td class="metric"><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">Federal Reserve Bank of St. Louis (FRED)</a></td><td>Interest rates, inflation, employment, unemployment</td></tr>
+<tr><td class="metric"><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">U.S. Treasury — 10-Year Constant Maturity (DGS10)</a></td><td>Risk-free rate</td></tr>
+<tr><td class="metric"><a href="https://fred.stlouisfed.org/series/MORTGAGE30US" target="_blank" rel="noopener">Freddie Mac — Primary Mortgage Market Survey</a></td><td>30-year mortgage rate</td></tr>
+<tr><td class="metric"><a href="https://fred.stlouisfed.org/series/SMU06310800000000001" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — Current Employment Statistics</a></td><td>LA metro payrolls</td></tr>
+<tr><td class="metric"><a href="https://www.bls.gov/lau/laufaq.htm" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — Local Area Unemployment Statistics</a></td><td>LA County unemployment</td></tr>
+<tr><td class="metric"><a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — CPI</a></td><td>Inflation</td></tr>
+<tr><td class="metric"><a href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia,losangelescitycalifornia/PST045224" target="_blank" rel="noopener">U.S. Census Bureau — QuickFacts (Population Estimates V2025, ACS 2020–2024, Economic Census, CBP, Building Permits)</a></td><td>Population, income, housing, education, retail sales</td></tr>
+<tr><td class="metric"><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">U.S. Securities and Exchange Commission — EDGAR</a></td><td>Jack in the Box Form 10-K FY2025, Form 8-K Q3 FY2026</td></tr>
+<tr><td class="metric"><a href="https://www.irs.gov/taxtopics/tc409" target="_blank" rel="noopener">Internal Revenue Service — Topic No. 409</a></td><td>Capital gains rates, §1250 recapture, NIIT</td></tr>
+<tr><td class="metric"><a href="https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031" target="_blank" rel="noopener">Internal Revenue Service — IRC §1031 guidance</a></td><td>Like-kind exchange rules</td></tr>
+<tr><td class="metric"><a href="https://www.fire.ca.gov/incidents/2025" target="_blank" rel="noopener">CAL FIRE — 2025 Incident Archive</a></td><td>Wildfire frequency, acreage, structures lost</td></tr>
+<tr><td class="metric"><a href="https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones" target="_blank" rel="noopener">CAL FIRE / Office of the State Fire Marshal — Fire Hazard Severity Zones</a></td><td>Hazard classification methodology</td></tr>
+<tr><td class="metric"><a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240AB1228" target="_blank" rel="noopener">California Legislative Information — AB 1228 (Ch. 262, Stats. 2023)</a></td><td>Fast-food minimum wage</td></tr>
+<tr><td class="metric"><a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm" target="_blank" rel="noopener">California Department of Industrial Relations — Minimum Wage FAQ</a></td><td>State minimum wage</td></tr>
+<tr><td class="metric"><a href="https://assessor.lacounty.gov/tax-relief/decline-in-value" target="_blank" rel="noopener">Los Angeles County Assessor</a></td><td>Decline-in-value window; property tax</td></tr>
+<tr><td class="metric"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group — Net Lease Research Q2/Q3 2026 and Tenant Profiles Q3 2026</a></td><td>Cap rates (Tier 3 industry data)</td></tr></tbody></table></div>
+
+<h2>The asset record (anonymised)</h2>
+<div class="table-wrap"><table id="tbl-asset2">
+<thead><tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Period</th>
+<th>Geography</th>
+<th>Source</th>
+<th>Tier</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td class="metric">Street address</td>
+<td class="num">[ADDRESS REDACTED]</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#privacy" target="_blank" rel="noopener">Withheld by design</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Assessor's parcel number</td>
+<td class="num">APN [REDACTED]</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#privacy" target="_blank" rel="noopener">Withheld by design</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Owner identity</td>
+<td class="num">PARTY-OWNER (placeholder)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#privacy" target="_blank" rel="noopener">Withheld by design</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Tenant identity</td>
+<td class="num">PARTY-TENANT (placeholder)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#privacy" target="_blank" rel="noopener">Withheld by design</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Lease type</td>
+<td class="num">NNN (triple-net) — Owner description</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#lease" target="_blank" rel="noopener">Owner description; lease document not supplied</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge t3">owner-stated</span></td>
+</tr>
+<tr>
+<td class="metric">Lease expiration</td>
+<td class="num">2030 – 2035 (a five-year range) — Owner description</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#lease" target="_blank" rel="noopener">Owner description; lease document not supplied</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge t3">owner-stated</span></td>
+</tr>
+<tr>
+<td class="metric">Rent escalations</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Renewal / extension options and who holds them</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Landlord obligations (roof / structure)</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Early-termination / kick-out rights</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Current annual rent / NOI</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#model" target="_blank" rel="noopener">Requires rent roll</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Original basis and accumulated depreciation</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#tax" target="_blank" rel="noopener">Requires tax returns / depreciation schedule</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Existing debt, rate and maturity</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="#tax" target="_blank" rel="noopener">Requires loan documents</a></td>
+<td><span class="badge d">Privacy</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Assessed value and property tax bill</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="https://assessor.lacounty.gov/" target="_blank" rel="noopener">LA County Assessor / Treasurer-Tax Collector</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Zoning, general plan designation and redevelopment potential</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>PROP-001</td>
+<td class="src"><a href="https://planning.lacity.gov/" target="_blank" rel="noopener">City of Los Angeles Department of City Planning</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+</tbody></table></div>
+
+<h2>Repository layout</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Path</th><th>Contents</th></tr></thead>
+<tbody>
+<tr><td class="mono">COORDINATION.md</td><td>Shared task board, session claims, verification ledger</td></tr>
+<tr><td class="mono">research/00-methodology.md</td><td>This method, in full</td></tr>
+<tr><td class="mono">research/01-asset-profile.md</td><td>Anonymised asset record and open lease questions</td></tr>
+<tr><td class="mono">research/02-jack-in-the-box.md</td><td>Tenant and brand from SEC filings</td></tr>
+<tr><td class="mono">research/03-nnn-lease-and-cap-rates.md</td><td>Lease mechanics, cap rates, rates regime</td></tr>
+<tr><td class="mono">research/04-central-la-economy.md</td><td>Economy and demographics</td></tr>
+<tr><td class="mono">research/05-hazard-risk.md</td><td>Geography and catastrophe risk</td></tr>
+<tr><td class="mono">research/06-decision-and-risk.md</td><td>Decision framework and risk register</td></tr>
+<tr><td class="mono">research/07-executive-summary.md</td><td>Executive summary</td></tr>
+<tr><td class="mono">model/build_facts.py</td><td>Emits <code>docs/data/facts.json</code> with assertions</td></tr>
+<tr><td class="mono">model/projection_model.py</td><td>Monte-Carlo engine, emits <code>docs/data/projections.json</code></td></tr>
+<tr><td class="mono">model/build_site.py</td><td>Generates this site, validates every internal link</td></tr>
+<tr><td class="mono">docs/</td><td>The published GitHub Pages site</td></tr>
+</tbody></table></div>
+<div class="pager">
+<a href="flags.html"><div class="dir">&larr; Previous</div><div class="ttl">Flagged</div></a>
+<span></span>
+</div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Jack2</strong> · analytical dossier for <code>PROP-001</code> · data cut-off 2026-11-06<br>
+      All identifiers anonymised. No personal or parcel information is stored or published.
+    </div>
+    <div>
+      <a href="methodology.html">Method &amp; sources</a> &middot;
+      <a href="flags.html">Flagged for review</a> &middot;
+      <a href="https://github.com/wingbangboozle1-lang/Jack2" target="_blank" rel="noopener">Repository</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

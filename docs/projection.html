@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projection Model · Jack2 — PROP-001 hold / renew / sell analysis</title>
+<meta name="description" content="Monte-Carlo projection engine: cap-rate term curve, term decay, scenarios, sensitivity and assumptions.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="site-head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">J2</span>
+      <span class="brand-txt"><strong>PROP-001</strong><span>NNN Jack in the Box · central Los Angeles</span></span>
+    </a>
+    <nav class="nav" aria-label="Site sections">
+      <a href="index.html">Overview</a>
+      <a href="decision.html">Decision</a>
+      <a href="projection.html" aria-current="page">Projection</a>
+      <a href="economy.html">Economy</a>
+      <a href="tenant.html">Tenant</a>
+      <a href="capital-markets.html">Markets</a>
+      <a href="lease.html">Lease</a>
+      <a href="hazards.html">Risk</a>
+      <a href="tax.html">Tax</a>
+      <a href="flags.html">Flagged</a>
+      <a href="methodology.html">Method</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Projection engine</div>
+  <h1>20,000 paths, five strategies, every assumption published</h1>
+  <p><code>model/projection_model.py</code> · Python 3 standard library only · seed <code>20261106</code>
+  · term of art: all outputs are multiples of <b>current annual NOI</b>, after all federal and California taxes,
+  so the Owner's actual rent never has to be disclosed.</p>
+</section>
+
+<h2>The core identity</h2>
+<p class="lede"><b>Value = NOI ÷ cap rate.</b> Only two things can move value. For this asset the NOI is
+contractually fixed by a NNN lease, so the landlord has almost no lever there. The cap rate is therefore the
+dominant variable — and remaining lease term feeds directly into it, because net-lease buyers pay for the
+durability of cash flow. That is why time itself is a cost here.</p>
+
+<h2>The cap-rate term curve</h2>
+<p class="lede">No Jack-in-the-Box-specific cap rate could be verified, so the curve is <b>derived</b> from The
+Boulder Group's QSR observations and labelled as derived everywhere it appears. The 10-year point is a direct
+anchor: the franchisee-QSR average of 6.85%.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Remaining term</th><th>Model cap rate</th><th>Value per $1.00 of NOI</th></tr></thead>
+<tbody><tr><td class="num">0.5 yr</td><td class="num">10.25%</td><td class="num">$9.76</td></tr>
+<tr><td class="num">1.0 yr</td><td class="num">10.00%</td><td class="num">$10.00</td></tr>
+<tr><td class="num">2.0 yr</td><td class="num">9.50%</td><td class="num">$10.53</td></tr>
+<tr><td class="num">3.0 yr</td><td class="num">9.00%</td><td class="num">$11.11</td></tr>
+<tr><td class="num">4.0 yr</td><td class="num">8.69%</td><td class="num">$11.51</td></tr>
+<tr><td class="num">5.0 yr</td><td class="num">8.38%</td><td class="num">$11.94</td></tr>
+<tr><td class="num">6.0 yr</td><td class="num">8.06%</td><td class="num">$12.40</td></tr>
+<tr><td class="num">7.0 yr</td><td class="num">7.75%</td><td class="num">$12.90</td></tr>
+<tr><td class="num">8.0 yr</td><td class="num">7.45%</td><td class="num">$13.42</td></tr>
+<tr><td class="num">9.0 yr</td><td class="num">7.15%</td><td class="num">$13.99</td></tr>
+<tr><td class="num">10.0 yr</td><td class="num">6.85%</td><td class="num">$14.60</td></tr>
+<tr><td class="num">12.0 yr</td><td class="num">6.67%</td><td class="num">$14.99</td></tr>
+<tr><td class="num">15.0 yr</td><td class="num">6.40%</td><td class="num">$15.62</td></tr>
+<tr><td class="num">20.0 yr</td><td class="num">6.33%</td><td class="num">$15.79</td></tr>
+<tr><td class="num">25.0 yr</td><td class="num">6.27%</td><td class="num">$15.96</td></tr>
+<tr><td class="num">30.0 yr</td><td class="num">6.20%</td><td class="num">$16.13</td></tr></tbody></table></div>
+<p class="tbl-note" id="cap-curve">Construction: (0 yr, 10.50%) → (3, 9.00%) → (7, 7.75%) → (10, 6.85%, direct
+Boulder anchor) → (15, 6.40%) → (30, 6.20%), piecewise-linear. The 15-year point sits 45 bp inside the
+franchisee average for full-term durability, but well outside premium-brand 15-year comps (Raising Cane's
+4.90–5.20%, Whataburger 4.85–5.25%) because JACK is a materially weaker credit than either.</p>
+
+<h2>Term decay: the cost of waiting, with nothing else changing</h2>
+<div class="bars">
+<div class="bar-row"><div>2026</div><div class="bar-track"><div class="bar-fill r" style="width:100.0%"></div></div><div class="bar-val">$12.83</div></div>
+<div class="bar-row"><div>2027</div><div class="bar-track"><div class="bar-fill r" style="width:96.1%"></div></div><div class="bar-val">$12.33</div></div>
+<div class="bar-row"><div>2028</div><div class="bar-track"><div class="bar-fill r" style="width:92.5%"></div></div><div class="bar-val">$11.87</div></div>
+<div class="bar-row"><div>2029</div><div class="bar-track"><div class="bar-fill r" style="width:89.2%"></div></div><div class="bar-val">$11.45</div></div>
+<div class="bar-row"><div>2030</div><div class="bar-track"><div class="bar-fill r" style="width:85.9%"></div></div><div class="bar-val">$11.02</div></div>
+<div class="bar-row"><div>2031</div><div class="bar-track"><div class="bar-fill r" style="width:81.4%"></div></div><div class="bar-val">$10.44</div></div>
+<div class="bar-row"><div>2032</div><div class="bar-track"><div class="bar-fill r" style="width:77.4%"></div></div><div class="bar-val">$9.93</div></div>
+<div class="bar-row"><div>2033</div><div class="bar-track"><div class="bar-fill r" style="width:75.1%"></div></div><div class="bar-val">$9.64</div></div>
+<div class="bar-row"><div>2034</div><div class="bar-track"><div class="bar-fill r" style="width:75.1%"></div></div><div class="bar-val">$9.64</div></div>
+<div class="bar-row"><div>2035</div><div class="bar-track"><div class="bar-fill r" style="width:75.1%"></div></div><div class="bar-val">$9.64</div></div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Year</th><th>Remaining term (to midpoint expiry)</th><th>Model cap rate</th><th>Value per $1.00 of NOI</th></tr></thead>
+<tbody><tr><td class="num">2026</td><td class="num">6.85</td><td class="num">7.80%</td><td class="num">$12.83</td></tr>
+<tr><td class="num">2027</td><td class="num">5.85</td><td class="num">8.11%</td><td class="num">$12.33</td></tr>
+<tr><td class="num">2028</td><td class="num">4.85</td><td class="num">8.42%</td><td class="num">$11.87</td></tr>
+<tr><td class="num">2029</td><td class="num">3.85</td><td class="num">8.73%</td><td class="num">$11.45</td></tr>
+<tr><td class="num">2030</td><td class="num">2.85</td><td class="num">9.08%</td><td class="num">$11.02</td></tr>
+<tr><td class="num">2031</td><td class="num">1.85</td><td class="num">9.58%</td><td class="num">$10.44</td></tr>
+<tr><td class="num">2032</td><td class="num">0.85</td><td class="num">10.08%</td><td class="num">$9.93</td></tr>
+<tr><td class="num">2033</td><td class="num">0.25</td><td class="num">10.38%</td><td class="num">$9.64</td></tr>
+<tr><td class="num">2034</td><td class="num">0.25</td><td class="num">10.38%</td><td class="num">$9.64</td></tr>
+<tr><td class="num">2035</td><td class="num">0.25</td><td class="num">10.38%</td><td class="num">$9.64</td></tr></tbody></table></div>
+<div class="callout danger"><p><strong>−24.9% from pure passage of time.</strong> $12.83 today, $9.64 once the lease
+is inside its final year. No rent change, no tenant change, no market change. This is the single largest
+self-inflicted cost in every "hold" strategy, and it is why strategy B is dominated.</p></div>
+
+<h2>Result distribution</h2>
+<p class="lede">Bars show the median; the range shown is the 10th to 90th percentile.</p>
+<div class="bars">
+<div class="bar-row"><div>C · Renew, hold to 2040</div><div class="bar-track"><div class="bar-fill v" style="width:100.0%"></div></div><div class="bar-val">2.9 – 14.3</div></div>
+<div class="bar-row"><div>A1 · Sell now via §1031</div><div class="bar-track"><div class="bar-fill g" style="width:94.8%"></div></div><div class="bar-val">11.1 – 12.6</div></div>
+<div class="bar-row"><div>D · Extend now, sell 2028</div><div class="bar-track"><div class="bar-fill " style="width:90.9%"></div></div><div class="bar-val">9.9 – 12.4</div></div>
+<div class="bar-row"><div>A · Sell now, pay tax</div><div class="bar-track"><div class="bar-fill a" style="width:82.7%"></div></div><div class="bar-val">9.7 – 10.9</div></div>
+<div class="bar-row"><div>B · Hold to expiry, sell vacant</div><div class="bar-track"><div class="bar-fill r" style="width:82.2%"></div></div><div class="bar-val">7.6 – 11.5</div></div>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Strategy</th><th>Mean</th><th>p10</th><th>Median</th><th>p90</th><th>Worst-decile</th><th>Risk-adjusted (CE)</th><th>Win rate</th></tr></thead>
+<tbody>
+<tr><td class="metric">A · Sell now, pay tax</td><td class="num">10.31</td><td class="num">9.74</td><td class="num">10.29</td><td class="num">10.91</td><td class="num">9.66</td><td class="num">10.29</td><td class="num">0.0%</td></tr><tr><td class="metric">A1 · Sell now via §1031</td><td class="num">11.83</td><td class="num">11.08</td><td class="num">11.81</td><td class="num">12.63</td><td class="num">10.96</td><td class="num">11.79</td><td class="num">34.0%</td></tr><tr><td class="metric">B · Hold to expiry, sell vacant</td><td class="num">9.90</td><td class="num">7.57</td><td class="num">10.24</td><td class="num">11.46</td><td class="num">6.21</td><td class="num">9.34</td><td class="num">0.1%</td></tr><tr><td class="metric">C · Renew, hold to 2040</td><td class="num">9.62</td><td class="num">2.86</td><td class="num">12.45</td><td class="num">14.33</td><td class="num">1.88</td><td class="num">3.96</td><td class="num">52.6%</td></tr><tr><td class="metric">D · Extend now, sell 2028</td><td class="num">11.20</td><td class="num">9.94</td><td class="num">11.32</td><td class="num">12.41</td><td class="num">9.51</td><td class="num">11.06</td><td class="num">13.3%</td></tr>
+</tbody></table></div>
+
+<h2>The extension premium</h2>
+<div class="grid g3">
+  <div class="card "><h3>Cap rate</h3><div class="big">7.91% → 6.40%</div><div class="sub">Same NOI, same tenant, more term</div></div>
+  <div class="card pos"><h3>Value per $1 of NOI</h3><div class="big">$12.65 → $15.62</div><div class="sub">+23.5%</div></div>
+  <div class="card pos"><h3>Uplift at $200k NOI</h3><div class="big">$595,356</div><div class="sub">Created by a signature</div></div>
+</div>
+<div class="callout ok"><p>A <b>23.5%</b> uplift from negotiation is worth more than any plausible
+interest-rate move. That is the whole argument for strategy D.</p></div>
+
+<h2>Expiry-date sensitivity</h2>
+<p class="lede">The Owner gave a five-year range. This is what that ambiguity is worth.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Expiry</th><th>Remaining term</th><th>Cap rate today</th><th>Value per $1 NOI</th><th>A · Sell now</th><th>C · Renew &amp; hold</th><th>D · Extend &amp; sell</th></tr></thead>
+<tbody><tr><td class="num">2030</td><td class="num">4.15</td><td class="num">8.64%</td><td class="num">$11.57</td><td class="num">9.62</td><td class="num">9.61</td><td class="num">10.93</td></tr>
+<tr><td class="num">2031</td><td class="num">5.15</td><td class="num">8.33%</td><td class="num">$12.01</td><td class="num">9.87</td><td class="num">9.62</td><td class="num">11.01</td></tr>
+<tr><td class="num">2032</td><td class="num">6.15</td><td class="num">8.02%</td><td class="num">$12.48</td><td class="num">10.15</td><td class="num">9.78</td><td class="num">11.18</td></tr>
+<tr><td class="num">2033</td><td class="num">7.15</td><td class="num">7.70%</td><td class="num">$12.98</td><td class="num">10.44</td><td class="num">9.65</td><td class="num">11.25</td></tr>
+<tr><td class="num">2034</td><td class="num">8.15</td><td class="num">7.40%</td><td class="num">$13.50</td><td class="num">10.75</td><td class="num">9.85</td><td class="num">11.34</td></tr>
+<tr><td class="num">2035</td><td class="num">9.15</td><td class="num">7.10%</td><td class="num">$14.07</td><td class="num">11.09</td><td class="num">9.75</td><td class="num">11.47</td></tr></tbody></table></div>
+<div class="callout warn"><p><strong>$500,000 of value
+(21.6%) rides on a date nobody has looked up.</strong> Note also that a
+shorter remaining term makes selling <i>more</i> attractive, not less — because the hold has less term left to
+harvest and the same tail risk.</p></div>
+
+<h2>Discount-rate sensitivity</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Discount rate</th><th>A</th><th>A1</th><th>B</th><th>C</th><th>D</th><th>Best</th></tr></thead>
+<tbody><tr><td class="num">6%</td><td class="num">10.31</td><td class="num">11.46</td><td class="num">10.81</td><td class="num">11.08</td><td class="num">11.57</td><td>D · Extend now, sell 2028</td></tr>
+<tr><td class="num">7%</td><td class="num">10.31</td><td class="num">11.66</td><td class="num">10.34</td><td class="num">10.36</td><td class="num">11.38</td><td>A1 · Sell now via §1031</td></tr>
+<tr><td class="num">8%</td><td class="num">10.31</td><td class="num">11.83</td><td class="num">9.90</td><td class="num">9.71</td><td class="num">11.20</td><td>A1 · Sell now via §1031</td></tr>
+<tr><td class="num">9%</td><td class="num">10.31</td><td class="num">11.98</td><td class="num">9.49</td><td class="num">9.13</td><td class="num">11.02</td><td>A1 · Sell now via §1031</td></tr>
+<tr><td class="num">10%</td><td class="num">10.31</td><td class="num">12.11</td><td class="num">9.10</td><td class="num">8.61</td><td class="num">10.84</td><td>A1 · Sell now via §1031</td></tr></tbody></table></div>
+<p class="tbl-note">At a low opportunity cost of capital (6%), an Owner should capture the extension premium before
+selling. At 7% and above, selling via §1031 leads. This is the one input that changes the ranking.</p>
+
+<h2>Assumptions</h2>
+<p class="lede">Everything below is an <b>assumption</b>, not a fact. They are published so they can be
+challenged and replaced with the real lease.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Input</th><th>Value used</th><th>Rationale / status</th></tr></thead>
+<tbody><tr><td class="metric">Lease expiry (Owner-stated range)</td><td class="num">2030 – 2035, drawn uniform</td><td>The range is the Owner's description, not a document</td></tr>
+<tr><td class="metric">Rent escalation</td><td class="num">0% / 1% / 1.5% / 2% / 2.5% / 3%, drawn</td><td>Lease not supplied — drawn from a plausible set</td></tr>
+<tr><td class="metric">Renewal probability at expiry</td><td class="num">70%</td><td>Franchised JACK unit in a viable trade area</td></tr>
+<tr><td class="metric">Renewal rent concession</td><td class="num">4%</td><td>Concession a franchisor extracts for signing</td></tr>
+<tr><td class="metric">Market rent growth after expiry</td><td class="num">2.5% ± 1.0%</td><td>Long-run central-LA retail rent growth</td></tr>
+<tr><td class="metric">Vacancy if not renewed</td><td class="num">1.5 years</td><td>Re-leasing time for a second-generation QSR box</td></tr>
+<tr><td class="metric">Re-leasing cost</td><td class="num">6% of new annual rent + 3 months free</td><td>Commission plus tenant improvement</td></tr>
+<tr><td class="metric">Sale costs</td><td class="num">2.5% – 4.5%, drawn</td><td>Commission, closing costs, transfer taxes</td></tr>
+<tr><td class="metric">Cap-rate beta to the 10-year</td><td class="num">0.35 – 0.75, drawn</td><td>Empirical sensitivity of cap rates to rates</td></tr>
+<tr><td class="metric">Terminal 10-yr Treasury</td><td class="num">4.60% ± 0.90%, drawn</td><td>Base case; the break-even table spans 3.5%–7.0%</td></tr>
+<tr><td class="metric">Discount rate</td><td class="num">8.0%</td><td>Owner's after-tax opportunity cost; sensitivity at 6%–10%</td></tr>
+<tr><td class="metric">Reinvestment return</td><td class="num">= discount rate</td><td>Deliberately no free lunch</td></tr>
+<tr><td class="metric">Original basis</td><td class="num">6.0 × current NOI</td><td>Not supplied — stated so it can be replaced</td></tr>
+<tr><td class="metric">Accumulated depreciation</td><td class="num">22% of basis</td><td>Not supplied</td></tr>
+<tr><td class="metric">California state tax rate</td><td class="num">13.3%</td><td>Assumption — flagged, not re-verified this session</td></tr>
+<tr><td class="metric">Extension probability</td><td class="num">55%</td><td>Will the franchisor sign 10–15 years now?</td></tr>
+<tr><td class="metric">Extension rent change</td><td class="num">−2% ± 2.5%, drawn</td><td>Typical concession</td></tr>
+<tr><td class="metric">Land / vacant value</td><td class="num">6 – 10 × current NOI, drawn</td><td>Not verified — no parcel data</td></tr></tbody></table></div>
+
+<h3 id="hazard-model">Catastrophe and black-swan priors</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Event</th><th>Annual probability</th><th>Modelled impact</th></tr></thead>
+<tbody>
+<tr><td class="metric">Regional wildfire / smoke / power shut-off</td><td class="num">4% / yr</td>
+<td>NOI −5% to −25% in the event year; cap rate +50–150 bp for 2 years</td></tr>
+<tr><td class="metric">Significant seismic event felt in the metro</td><td class="num">3% / yr</td>
+<td>20–60% of gross rent abated for 3–12 months</td></tr>
+<tr><td class="metric">Insurance shock (premium doubling / non-renewal)</td><td class="num">6% / yr</td>
+<td>Cap rate +60 bp for 3 years</td></tr>
+<tr><td class="metric">Tenant default / franchisee insolvency (while leased)</td><td class="num">3.5% / yr</td>
+<td>Rent stops; no renewal follows</td></tr>
+</tbody></table></div>
+<p class="tbl-note">These are the model's stated priors, <b>not official statistics</b>, and are drawn from the
+hazard profile documented on the <a href="hazards.html">Risk</a> page. Every run is reported both with and without
+this layer so its influence is visible.</p>
+
+<h2>Illustrative tax waterfall on a sale at today's value</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Line</th><th>Per $1.00 of current NOI</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td class="metric">Gross sale price</td><td class="num">12.5065</td><td>NOI ÷ cap rate at ~6.5 years remaining</td></tr>
+<tr><td class="metric">Less sale costs</td><td class="num">3.0%</td><td>Commission, closing, transfer taxes</td></tr>
+<tr><td class="metric">Adjusted basis</td><td class="num">4.6800</td><td>Basis 6.00 less 22% accumulated depreciation</td></tr>
+<tr><td class="metric">Total gain</td><td class="num">7.8265</td><td></td></tr>
+<tr><td class="metric">— of which unrecaptured §1250 recapture</td><td class="num">1.3200</td><td>Federal max 25% (IRS Topic 409)</td></tr>
+<tr><td class="metric">Federal tax on recapture</td><td class="num">0.3300</td><td>1.32 × 25%</td></tr>
+<tr><td class="metric">— of which long-term appreciation</td><td class="num">6.5065</td><td>Federal 20% + 3.8% NIIT</td></tr>
+<tr><td class="metric">Federal tax on appreciation</td><td class="num">1.5485</td><td></td></tr>
+<tr><td class="metric">California tax</td><td class="num">1.0409</td><td>13.3% assumption — flagged</td></tr>
+<tr><td class="metric"><b>Total tax</b></td><td class="num"><b>2.9195</b></td><td><b>23.3% of price</b></td></tr>
+</tbody></table></div>
+
+<h2>Reproducibility</h2>
+<p>Run <code>python3 model/projection_model.py</code>. The RNG seed is fixed at 20261106,
+so the output JSON is byte-identical on every run. The engine uses no third-party libraries and no network access.</p>
+<div class="pager">
+<a href="decision.html"><div class="dir">&larr; Previous</div><div class="ttl">Decision</div></a>
+<a href="economy.html" style="text-align:right"><div class="dir">Next &rarr;</div><div class="ttl">Economy</div></a>
+</div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Jack2</strong> · analytical dossier for <code>PROP-001</code> · data cut-off 2026-11-06<br>
+      All identifiers anonymised. No personal or parcel information is stored or published.
+    </div>
+    <div>
+      <a href="methodology.html">Method &amp; sources</a> &middot;
+      <a href="flags.html">Flagged for review</a> &middot;
+      <a href="https://github.com/wingbangboozle1-lang/Jack2" target="_blank" rel="noopener">Repository</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
