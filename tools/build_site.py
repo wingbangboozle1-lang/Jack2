@@ -969,6 +969,13 @@ relative links still work &mdash; and cross-linked it here.</p>
 <h2>Session A's pages</h2>
 {table(["Page", "Link"], rows)}
 
+<h2>Other independent dossiers on this same deployment</h2>
+<div class="tablewrap"><table><thead><tr><th>Dossier</th><th>Link</th><th>Method</th></tr></thead><tbody>
+<tr><td>Session C (<code>arena/230fe704</code>)</td><td><a href="docs/index.html">docs/index.html</a></td><td>Monte-Carlo certainty-equivalent after-tax wealth over five strategies</td></tr>
+<tr><td>Session D (<code>50002478</code>)</td><td><a href="session-50002478/index.html">session-50002478/index.html</a></td><td>Source-linked conditional dashboard; deterministic normalized cash-flow stress tests; no property-specific price target</td></tr>
+</tbody></table></div>
+<p class="lede">These are independent analytical passes preserved side by side. None silently replaces the others; reconciling them is an owner judgement, not a merge operation.</p>
+
 <h2>How the two analyses differ</h2>
 <table class="tablewrap"><table>
 <thead><tr><th></th><th>Session A (<code>arena-1944e5a3</code>)</th><th>Root site (<code>arena-742b6a03</code>)</th></tr></thead>

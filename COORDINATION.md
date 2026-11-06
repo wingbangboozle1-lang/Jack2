@@ -1,12 +1,13 @@
 # COORDINATION.md — Shared Task Board
 
-Three agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
+Four agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
 the sessions' claims, what each produced, the merge conflict that occurred, and how it was resolved
 **without discarding either session's work**.
 
 - Session A: `arena-1944e5a3` — branch `arena/1944e5a3-jack2` → merged to `main` as **PR #1 (22f2f91)**.
 - Session B: `arena-742b6a03` — branch `arena/742b6a03-jack2` (the first integration session).
-- Session C: `arena/230fe704` — branch `arena/230fe704-jack2`. Arrived last; found A and B already published to `main`. Published its own dossier under `docs/` rather than replacing either site. See **Session C** at the end of this file.
+- Session C: `arena/230fe704` — branch `arena/230fe704-jack2`. Found A and B already published to `main`. Published its own dossier under `docs/` rather than replacing either site. See **Session C**.
+- Session D: `50002478` — branch `arena/50002478-jack2`. Found A, B and C already published to `main`. Published a fourth dossier under `session-50002478/` rather than replacing any existing site. See **Session D** at the end of this file.
 
 Both sessions were pinned by the Arena environment to their own `arena/*` branch, which doubles as the
 PR/integration branch. Neither could create a separate `session-<id>/<task>` branch, and neither pushed
@@ -276,3 +277,57 @@ not as a reconciled single answer. Reconciling them is an Owner decision, not a 
   A and B had merged meantime. Stopped the merge, fetched `main`, resolved the three-file conflict
   without discarding either party, re-ran all checks, published under `/docs/` with the Pages source
   left untouched, and recorded everything here.
+
+---
+
+## Session D (`50002478`, branch `arena/50002478-jack2`)
+
+**Claim and branch policy.** Arena pinned this session to `arena/50002478-jack2`; no alternate session branch
+was created. Initial local inspection at `1430b4f` found only a two-line README and no coordination board.
+The session claimed T01–T05 sequentially and pushed the claim before research. While implementation was in
+progress, `origin/main` advanced with Sessions A, B and C. Session D stopped, fetched `main`, and merged it
+without discarding any published site.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| T01 — Official-source research register | implemented | 50002478 | `data/research.json`, `research/assemble.py` |
+| T02 — Conditional model and risk analysis | implemented; 15 model tests passing | 50002478 | `data/analysis.json`, `scripts/model.mjs`, `tests/model.test.mjs` |
+| T03 — Accessible dashboard and category pages | implemented; 23 static pages | 50002478 | `session-50002478/`, `scripts/build.mjs`, `package.json`, `package-lock.json` |
+| T04 — Verification and privacy checks | implemented; 23 Node tests passing | 50002478 | `scripts/verify.mjs`, `tests/verify.test.mjs`, `reports/` (ignored) |
+| T05 — Final integration, PR, Pages verification | in progress | 50002478 | `README.md`, `archive.html`, `.github/workflows/verify-node.yml`, `COORDINATION.md` |
+
+**Conflict resolution (nothing discarded).** `git merge origin/main` produced add/add/content conflicts in
+`.gitignore`, `README.md` and `COORDINATION.md`. Resolution:
+
+1. `.gitignore` — union of main's privacy/tooling rules plus Session D scratch ignores (`site/`, `dist/`, `reports/`, `*.log`).
+2. `README.md` — main's document preserved verbatim; Session D section appended.
+3. `COORDINATION.md` — main's merged board preserved; intro updated from three to four sessions and this section appended.
+4. No `docs/`, `session-1944e5a3/`, main-schema `data/`, `model/`, `assets/` or research markdown owned by A/B/C was modified. The only shared-navigation change is a minimal cross-link addition in `tools/build_site.py`'s archive generator, regenerated into `archive.html` during final integration so the root build remains reproducible.
+5. Session D's generated dashboard is published under the free namespace `session-50002478/`. The existing Pages source (`main` / root, legacy build) is deliberately **not** repointed. Session D's initial workflow-only Pages attempt was removed after discovering the existing deployment; a verify-only Node workflow was added instead.
+
+**Why a fourth dossier rather than a merged dataset.** A/B/C use different schemas, models and recommendation
+frames (inline HTML, deterministic JSON workbook, Monte-Carlo certainty-equivalent). Hand-merging their rows
+would create unverifiable transcription. Session D keeps its own schema, source registry and normalized model,
+clearly labelled and cross-linked, while preserving all prior published analysis.
+
+**Verification performed by D before integration.**
+
+- `python research/assemble.py` → 75 evidence/forecast rows, 28 blank property fields, 30 risks, 16 alternatives, 44 flags, 34 sources.
+- `npm run check` → PASS: 23 Node tests; deterministic rebuild; 26 tables / 366 HTML data rows with registered source links; 251 CSV data rows with registered source URLs; internal links/anchors, source-excerpt substrings, privacy pattern scan and null model-property-input checks pass.
+- Local preview HTTP 200 on all primary pages; inline CSS/JS/SVG only.
+- Development defects caught and fixed: expiry-month releasing cost omitted from PV decomposition; projection rows intentionally duplicated from findings incorrectly treated as cross-section duplicates; case-insensitive street-address privacy pattern false-positived on transit prose.
+- GitHub CLI authentication confirmed. Direct Pages API update returned HTTP 403 (integration permission boundary); Session D did not force a Pages source change and instead preserved the existing legacy deployment.
+
+**Handoff log.**
+
+- **2026-11-06, Session D (`50002478`)**: started at `1430b4f`; claimed scope; researched official/issuing sources; built curated register, conditional model, dashboard and verifier. Opened PR #10. Discovered `main` had advanced with A/B/C; merged `origin/main`, resolved three-file conflicts without overwriting published sites, moved generated output to `session-50002478/`, removed the workflow-only Pages deploy attempt, and re-ran combined checks. Final PR/merge/live verification recorded below once complete.
+
+**Combined-tree verification after merging `origin/main`.**
+
+- Session D: `python research/assemble.py` + `npm run check` → PASS (23 pages, 23 Node tests, 366 sourced HTML rows, 251 sourced CSV rows, 28 blank property fields).
+- Session B root workbook: `python3 tools/model.py`, `python3 tools/build_site.py`, `python3 tools/check_site.py`, `python3 tools/export_ledger.py` → PASS on the merged tree (15 root pages, 59 HTML files including archives/dossiers, 23 sources, 87 metric rows, 24 risk rows). The archive generator was minimally extended to cross-link Sessions C and D; root build remains reproducible.
+- Session C dossier: `python3 model/build_facts.py`, `python3 model/projection_model.py`, `python3 model/build_site.py` → PASS (195 fact rows, 20,000 deterministic trials, 11 pages, 183 internal links checked, 0 broken).
+- No existing published site was removed. Pages source remains `main` / root; Session D is served from `/session-50002478/`.
+
+**Session D deployment record.** Pending final merge and live HTTP verification. Expected public URL:
+https://wingbangboozle1-lang.github.io/Jack2/session-50002478/

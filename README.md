@@ -102,3 +102,29 @@ The two analyses reach different recommendations because they optimise different
 ranks strategies on a deterministic projection with explicit decision triggers; `docs/` ranks them on the
 tail risk of a stochastic simulation. Neither supersedes the other, and reconciling them is a judgement
 call for the Owner.
+
+## Session D dossier (`session-50002478/`, `scripts/`, `tests/`, `data/research.json`)
+
+A fourth independently built, source-linked dashboard is published from the same legacy Pages deployment at
+**https://wingbangboozle1-lang.github.io/Jack2/session-50002478/**. It does not replace the root workbook,
+the Session A archive or the `docs/` dossier.
+
+| | |
+|---|---|
+| Question | Sell before expiry, hold, or pursue a tenant-supported extension under an unverified 2030–2035 expiry range |
+| Method | Deterministic normalized monthly cash-flow model; 16 scenario/tail paths and 15 one-way sensitivities; no Monte-Carlo probabilities or property-specific price target |
+| Conclusion | Conditional dual-track: obtain executable market bids while reviewing the executed lease and negotiating an extension; no blind hold or automatic renewal |
+| Data | 66 regional/tenant evidence rows, 9 official forecast rows, 28 blank property inputs, 30 risks, 16 alternatives, 44 flags, 34 issuing-source records |
+| Privacy | Placeholder-only public outputs; no address, APN, owner/tenant personal identifiers, contacts or account data |
+
+Rebuild and verify:
+
+```bash
+python research/assemble.py
+npm ci
+npm run check       # build + 23 Node tests + deterministic/source/link/privacy verification
+npm run preview     # local preview on 0.0.0.0:4173
+```
+
+The generated dossier is committed under `session-50002478/` because the existing GitHub Pages source is
+`main` / root (legacy build). `site/` and `reports/` remain ignored scratch/output directories.

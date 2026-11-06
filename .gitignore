@@ -12,3 +12,9 @@ private/
 *.private
 *.pii
 *.csv.raw
+
+# ---- Node / generated preview scratch ----
+site/
+dist/
+reports/
+*.log
