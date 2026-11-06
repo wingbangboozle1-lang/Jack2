@@ -1,0 +1,149 @@
+/* Jack2 — DTLA NNN Asset Intelligence Dashboard
+   Clean, light dashboard with deep-teal sidebar. No external dependencies. */
+:root{
+  --sidebar:#0e3a39;
+  --sidebar-2:#155e5c;
+  --sidebar-text:#d7e8e7;
+  --sidebar-dim:#8fb8b6;
+  --bg:#f3f5f7;
+  --card:#ffffff;
+  --ink:#1c2b33;
+  --muted:#5b6b76;
+  --line:#e2e8ee;
+  --teal:#0f766e;
+  --teal-soft:#e6f4f2;
+  --amber:#d97706;
+  --amber-soft:#fdf3e3;
+  --red:#b91c1c;
+  --red-soft:#fdecec;
+  --green:#166534;
+  --green-soft:#e9f7ee;
+  --blue:#1d4ed8;
+  --blue-soft:#e8eefc;
+  --radius:14px;
+  --shadow:0 1px 2px rgba(16,42,67,.06),0 8px 24px rgba(16,42,67,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px;
+}
+.app{display:grid;grid-template-columns:272px 1fr;min-height:100vh}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  background:linear-gradient(180deg,var(--sidebar) 0%,#0a2c2b 100%);
+  color:var(--sidebar-text);padding:22px 18px 28px;position:sticky;top:0;height:100vh;overflow-y:auto;
+}
+.brand{display:flex;gap:12px;align-items:center;padding:4px 6px 18px;border-bottom:1px solid rgba(255,255,255,.14);margin-bottom:14px}
+.brand-mark{width:42px;height:42px;border-radius:11px;background:var(--amber);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.brand-mark svg{width:26px;height:26px}
+.brand h1{font-size:15px;margin:0;color:#fff;letter-spacing:.3px;line-height:1.3}
+.brand small{display:block;color:var(--sidebar-dim);font-size:10.5px;font-weight:500;letter-spacing:.6px;text-transform:uppercase;margin-top:2px}
+.nav-label{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--sidebar-dim);margin:16px 8px 6px}
+.nav{list-style:none;margin:0;padding:0}
+.nav a{
+  display:flex;align-items:center;gap:10px;color:var(--sidebar-text);text-decoration:none;
+  padding:9px 10px;border-radius:9px;font-size:13.5px;font-weight:500;transition:background .15s,color .15s;
+}
+.nav a:hover{background:var(--sidebar-2);color:#fff}
+.nav a.active{background:var(--sidebar-2);color:#fff;box-shadow:inset 3px 0 0 var(--amber)}
+.nav svg{width:17px;height:17px;flex:0 0 auto;stroke:var(--sidebar-dim)}
+.nav a.active svg,.nav a:hover svg{stroke:#ffd166}
+.sidebar-foot{margin-top:18px;padding:12px 10px;border-top:1px solid rgba(255,255,255,.14);font-size:11px;color:var(--sidebar-dim)}
+.sidebar-foot b{color:var(--sidebar-text)}
+
+/* ---------- Topbar (mobile) ---------- */
+.topbar{display:none;position:sticky;top:0;z-index:40;background:var(--sidebar);color:#fff;padding:10px 14px;align-items:center;gap:12px}
+.topbar b{font-size:13px;letter-spacing:.3px}
+.burger{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:8px;width:38px;height:38px;font-size:18px;cursor:pointer}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:29}
+.overlay.show{display:block}
+
+/* ---------- Main ---------- */
+.main{padding:26px 30px 60px;max-width:1180px}
+.crumbs{font-size:11.5px;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
+h2.page-title{font-size:26px;margin:2px 0 4px;letter-spacing:-.2px}
+.lede{color:var(--muted);max-width:880px;margin:0 0 20px}
+
+/* Cards & grids */
+.grid{display:grid;gap:16px}
+.kpis{grid-template-columns:repeat(4,1fr)}
+.two{grid-template-columns:1fr 1fr}
+.three{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 14px;box-shadow:var(--shadow)}
+.card h3{margin:2px 0 10px;font-size:14px;letter-spacing:.3px;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.kpi .label{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}
+.kpi .value{font-size:25px;font-weight:700;margin:6px 0 2px;letter-spacing:-.5px}
+.kpi .sub{font-size:11.5px;color:var(--muted)}
+.kpi .src{margin-top:8px}
+.callout{border-left:4px solid var(--teal);background:var(--teal-soft);padding:14px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:16px 0}
+.callout.warn{border-color:var(--amber);background:var(--amber-soft)}
+.callout.danger{border-color:var(--red);background:var(--red-soft)}
+.callout b{color:#0b4f4a}
+.callout.warn b{color:#7c4a03}.callout.danger b{color:#7a1212}
+
+/* ---------- Tables ---------- */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:#fff}
+table.data{width:100%;border-collapse:collapse;font-size:13px;min-width:720px}
+table.data thead th{background:#0e3a39;color:#eafaf8;text-align:left;padding:11px 12px;font-size:11px;letter-spacing:.8px;text-transform:uppercase;position:sticky;top:0}
+table.data tbody td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+table.data tbody tr:nth-child(even){background:#fafbfd}
+table.data tbody tr:hover{background:#f0f7f6}
+table.data a{color:var(--teal);font-weight:600;text-decoration:none;word-break:break-word}
+table.data a:hover{text-decoration:underline}
+.src-cell{font-size:11px;color:var(--muted);max-width:230px}
+.src-cell a{font-weight:500}
+
+/* Badges */
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.b-verified{background:var(--green-soft);color:var(--green);border:1px solid #bfe6cd}
+.b-flagged{background:var(--red-soft);color:var(--red);border:1px solid #f3c2c2}
+.b-reported{background:var(--blue-soft);color:var(--blue);border:1px solid #c3d3f7}
+.b-computed{background:#f3e8fd;color:#6b21a8;border:1px solid #e2ccf8}
+.b-placeholder{background:#eef1f4;color:#4b5563;border:1px solid #d5dbe3}
+
+/* Buttons / pills */
+.pill{display:inline-block;background:var(--teal-soft);color:var(--teal);border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700}
+.btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:600;font-size:13px}
+.btn.amber{background:var(--amber)}
+.btn:hover{filter:brightness(1.08)}
+
+/* Bar chart (pure CSS) */
+.bars{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bar-row{display:grid;grid-template-columns:170px 1fr 64px;align-items:center;gap:10px;font-size:12.5px}
+.bar-track{background:#eef1f5;border-radius:6px;height:18px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--teal),#14b8a6);border-radius:6px}
+.bar-fill.amber{background:linear-gradient(90deg,#b45309,var(--amber))}
+.bar-val{font-variant-numeric:tabular-nums;color:var(--muted);font-size:12px;text-align:right}
+
+/* Footer */
+.foot{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:11.5px;color:var(--muted)}
+.foot a{color:var(--teal)}
+
+/* Utility */
+.muted{color:var(--muted)}.small{font-size:12px}.mb0{margin-bottom:0}.mt16{margin-top:16px}
+code.formula{display:block;background:#0e3a39;color:#cdeae6;padding:14px 16px;border-radius:10px;font-size:12.5px;overflow-x:auto;white-space:pre}
+ul.tight li{margin:6px 0}
+.checklist{list-style:none;padding-left:0}
+.checklist li{padding-left:26px;position:relative;margin:8px 0}
+.checklist li::before{content:"✓";position:absolute;left:0;top:0;width:17px;height:17px;border-radius:5px;background:var(--teal-soft);color:var(--teal);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.xlist li::before{content:"!";background:var(--amber-soft);color:var(--amber)}
+
+@media (max-width: 1060px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .three{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 880px){
+  .app{grid-template-columns:1fr}
+  .sidebar{position:fixed;left:-300px;top:0;width:272px;z-index:30;height:100vh;transition:left .25s;box-shadow:0 0 40px rgba(0,0,0,.4)}
+  .sidebar.open{left:0}
+  .topbar{display:flex}
+  .main{padding:18px 16px 48px}
+  .two,.three{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+  .bar-row{grid-template-columns:110px 1fr 58px}
+}
+@media (max-width: 560px){.kpis{grid-template-columns:1fr}}

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · Jack2 — PROP-001 hold / renew / sell analysis</title>
+<meta name="description" content="Every unverified, owner-stated and assumed item, each with the official source that would settle it.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="site-head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">J2</span>
+      <span class="brand-txt"><strong>PROP-001</strong><span>NNN Jack in the Box · central Los Angeles</span></span>
+    </a>
+    <nav class="nav" aria-label="Site sections">
+      <a href="index.html">Overview</a>
+      <a href="decision.html">Decision</a>
+      <a href="projection.html">Projection</a>
+      <a href="economy.html">Economy</a>
+      <a href="tenant.html">Tenant</a>
+      <a href="capital-markets.html">Markets</a>
+      <a href="lease.html">Lease</a>
+      <a href="hazards.html">Risk</a>
+      <a href="tax.html">Tax</a>
+      <a href="flags.html" aria-current="page">Flagged</a>
+      <a href="methodology.html">Method</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Flagged for review</div>
+  <h1>Everything this dossier could not verify</h1>
+  <p>Nothing here was inferred, estimated or filled in. Where an official source could not be reached or a document
+  was not supplied, the value is left <b>blank</b> and published here with the source that should settle it.
+  25 items are blank and flagged, 2 are reported as the Owner stated them, and 4 are
+  disclosed assumptions.</p>
+  <div class="verdict">None of this blocks publication or the recommendation — but <b>IR-1 through IR-3 do block a
+  transaction</b>. Do not price, market, extend or sell this asset before those three are closed.</div>
+</section>
+
+<h2>Irregularities requiring a decision</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>#</th><th>Irregularity</th><th>Why it matters</th><th>How to close it</th></tr></thead>
+<tbody><tr><td class="num">IR-1</td><td class="metric">No street address, APN or legal description was supplied, and none is stored.</td><td>Parcel-level facts — fire-hazard-severity zone, FEMA flood zone, seismic site class, assessed value, school attendance area, zoning and redevelopment potential — cannot be verified. 12 rows are published blank.</td><td>Supply the APN or address to a private channel; the parcel checks then take minutes at CAL FIRE, FEMA and CGS.</td></tr>
+<tr><td class="num">IR-2</td><td class="metric">The lease was described only as 'NNN, expiring 2030–2035'. No document, rent roll or basis was supplied.</td><td>The five-year expiry range alone is worth ~21.6% of value. Escalations, options, guarantor and landlord obligations are all unknown, and each is worth more than a percentage point of cap rate.</td><td>Upload a redacted lease. Redaction is sufficient — no personal data needs to enter this analysis.</td></tr>
+<tr><td class="num">IR-3</td><td class="metric">The tenant of record may be a franchisee rather than Jack in the Box Inc.</td><td>93.0% of the system is franchised (1,966 of 2,115 units, Q3 FY2026). This is an inference from the corporate filings, not a fact about this lease. It matters by ~100 bp of cap rate (~15% of value).</td><td>Confirm from the lease and any guaranty.</td></tr>
+<tr><td class="num">IR-4</td><td class="metric">No Jack-in-the-Box-specific net-lease cap rate could be retrieved.</td><td>Boulder Group's Q3 2026 Tenant Profiles covers 88 operators but a JACK-specific range was not available. The model therefore derives a term curve from the QSR corporate and franchisee anchors and labels every output as derived.</td><td>Obtain a JACK-specific comp set from a broker before pricing.</td></tr>
+<tr><td class="num">IR-5</td><td class="metric">California DOF county population projections are distributed only as .xlsx.</td><td>The 2040 population projection could not be machine-verified, so Census Vintage-2025 estimates are used instead and no projection is asserted.</td><td>Download P-2A from dof.ca.gov and verify manually.</td></tr>
+<tr><td class="num">IR-6</td><td class="metric">The FEMA National Risk Index API returned HTTP 500 on 2026-11-06.</td><td>County hazard scores are not reported. Only CAL FIRE figures that resolved are used.</td><td>Retry NRI later.</td></tr>
+<tr><td class="num">IR-7</td><td class="metric">The LA County Assessor's Proposition 13 page did not render content.</td><td>The 2% annual assessed-value cap is not asserted. The Assessor's decline-in-value window IS verified (applications from 2026-07-02, deadline 2026-11-30).</td><td>Confirm Prop 13 status with the Assessor or Cal. Rev. & Tax. Code §51.</td></tr>
+<tr><td class="num">IR-8</td><td class="metric">California top marginal rate of 13.3% and the FTB 3840 out-of-state exchange rule are used as assumptions and are not re-verified this session.</td><td>Both feed the tax module. An error here moves the tax line, not the strategy ranking.</td><td>Confirm with a California tax adviser.</td></tr>
+<tr><td class="num">IR-9</td><td class="metric">Measure ULA and LA local transfer taxes were not verified.</td><td>These affect net sale proceeds and can affect the timing decision.</td><td>Confirm with the City and County.</td></tr>
+<tr><td class="num">IR-10</td><td class="metric">Cap-rate data are Tier 3 industry data (The Boulder Group), not official statistics.</td><td>They are the best available market pricing signal but are directional. Every cap-rate row is badged T3.</td><td>Cross-check with a second research house before pricing.</td></tr>
+<tr><td class="num">IR-11</td><td class="metric">The catastrophe and default priors in the model are stated assumptions, not official frequencies.</td><td>Wildfire 4%/yr, seismic 3%/yr, insurance shock 6%/yr, tenant default 3.5%/yr. The model reports results both with and without this layer so its influence is visible.</td><td>Challenge the priors; the recommendation's direction does not depend on them (see the no-hazard control).</td></tr>
+<tr><td class="num">IR-12</td><td class="metric">The brief asked about school systems. School quality is deliberately not assessed.</td><td>The assigned attendance area cannot be determined without the address, so no claim is made rather than a guessed one. For a QSR, household formation matters more than school ratings anyway.</td><td>Provide the address; then use CDE DataQuest / CAASPP.</td></tr></tbody></table></div>
+
+<h2>Blank and flagged — no value asserted</h2>
+<p class="lede">Each row is a field this analysis deliberately left empty rather than guessing. The source column is
+where the answer actually lives.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Item</th><th>Geography</th><th>Why it is blank</th><th>Authoritative source</th><th>Status</th></tr></thead>
+<tbody><tr><td class="metric">Jack in the Box-specific net-lease cap rate</td><td>United States</td><td>Not retrieved. The model therefore derives a term curve from the QSR corporate/franchisee anchors instead.</td><td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">Boulder Group Q3 2026 Tenant Profiles (88 operators)</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">County population projection to 2040</td><td>Los Angeles County</td><td>Published only as .xlsx; not machine-verified in this session. Census V2025 estimates used instead.</td><td class="src"><a href="https://dof.ca.gov/forecasting/demographics/projections/" target="_blank" rel="noopener">California Department of Finance, P-2/P-3 projections</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Parcel-level daytime population / traffic counts</td><td>PROP-001</td><td>Deliberately not retrieved — no address retained</td><td class="src"><a href="https://dot.ca.gov/programs/traffic-operations/census" target="_blank" rel="noopener">Requires address (Caltrans AADT, Census LEHD LODES)</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">School assignment / attendance area for the parcel</td><td>PROP-001</td><td>Requires an address. No school-quality claim is made anywhere in this analysis.</td><td class="src"><a href="https://www.cde.ca.gov/ds/" target="_blank" rel="noopener">LAUSD / California Department of Education</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Assigned school academic performance</td><td>PROP-001</td><td>Requires an address. Deliberately left blank.</td><td class="src"><a href="https://caaspp-elpac.ets.org/" target="_blank" rel="noopener">California Department of Education, DataQuest / CAASPP</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Parcel Fire Hazard Severity Zone</td><td>PROP-001</td><td>Requires address. Not guessed.</td><td class="src"><a href="https://experience.arcgis.com/experience/5065c998b4b0462f9ec3c6c226c610a9" target="_blank" rel="noopener">CAL FIRE FHSZ viewer (address lookup)</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Parcel FEMA flood zone</td><td>PROP-001</td><td>Requires address.</td><td class="src"><a href="https://msc.fema.gov/portal/home" target="_blank" rel="noopener">FEMA National Flood Hazard Layer</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Parcel seismic / liquefaction zone</td><td>PROP-001</td><td>Requires address.</td><td class="src"><a href="https://www.conservation.ca.gov/cgs/geohazards" target="_blank" rel="noopener">California Geological Survey, Seismic Hazards Program</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Fault proximity / rupture likelihood</td><td>PROP-001</td><td>Requires address.</td><td class="src"><a href="https://earthquake.usgs.gov/hazards/" target="_blank" rel="noopener">USGS Earthquake Hazards Program</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">FEMA National Risk Index — county score</td><td>Los Angeles County</td><td>API returned HTTP 500 on 2026-11-06; not retrieved.</td><td class="src"><a href="https://hazards.fema.gov/nri/" target="_blank" rel="noopener">FEMA National Risk Index</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Site-level average unit volume for PROP-001</td><td>PROP-001</td><td>Not available. AUV is the single best predictor of renewal and is flagged.</td><td class="src"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000807882" target="_blank" rel="noopener">Requires franchisee P&amp;L or franchisor FDD site data</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Tenant of record — corporate or franchisee</td><td>PROP-001</td><td>Not supplied</td><td class="src"><a href="#asset" target="_blank" rel="noopener">Requires lease / rent roll</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Corporate or personal guaranty</td><td>PROP-001</td><td>Worth ~100 bp of cap rate (≈15% of value) if a corporate guaranty exists</td><td class="src"><a href="#asset" target="_blank" rel="noopener">Requires lease</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Proposition 13 — annual assessed-value increase cap</td><td>California</td><td>Assessor Prop 13 page did not render content on 2026-11-06. Not asserted.</td><td class="src"><a href="https://assessor.lacounty.gov/tax-relief/decline-in-value" target="_blank" rel="noopener">LA County Assessor / Cal. Rev. &amp; Tax. Code §51</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Measure ULA (LA city transfer tax surcharge) applicability to PROP-001</td><td>Los Angeles city</td><td>Not verified. Applicability depends on sale price and property type; must be checked before pricing a sale.</td><td class="src"><a href="https://lacity.gov/" target="_blank" rel="noopener">City of Los Angeles / LA County Registrar-Recorder</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">California treatment of out-of-state §1031 replacement (FTB Form 3840)</td><td>California</td><td>Potentially significant if capital is redeployed outside California. Needs a California tax opinion.</td><td class="src"><a href="https://www.ftb.ca.gov/forms/2025/2025-3840.pdf" target="_blank" rel="noopener">California Franchise Tax Board, Form 3840</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Rent escalations</td><td>PROP-001</td><td>Not supplied</td><td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Renewal / extension options and who holds them</td><td>PROP-001</td><td>Not supplied</td><td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Landlord obligations (roof / structure)</td><td>PROP-001</td><td>Not supplied</td><td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Early-termination / kick-out rights</td><td>PROP-001</td><td>Not supplied</td><td class="src"><a href="#lease" target="_blank" rel="noopener">Requires lease</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Current annual rent / NOI</td><td>PROP-001</td><td>Not supplied. The model is normalised to $1.00 of NOI so no disclosure is required.</td><td class="src"><a href="#model" target="_blank" rel="noopener">Requires rent roll</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Original basis and accumulated depreciation</td><td>PROP-001</td><td>Not supplied. The tax module uses stated assumptions.</td><td class="src"><a href="#tax" target="_blank" rel="noopener">Requires tax returns / depreciation schedule</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Existing debt, rate and maturity</td><td>PROP-001</td><td>Not supplied</td><td class="src"><a href="#tax" target="_blank" rel="noopener">Requires loan documents</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Assessed value and property tax bill</td><td>PROP-001</td><td>Requires APN</td><td class="src"><a href="https://assessor.lacounty.gov/" target="_blank" rel="noopener">LA County Assessor / Treasurer-Tax Collector</a></td><td><span class="badge st-blank">unverified</span></td></tr>
+<tr><td class="metric">Zoning, general plan designation and redevelopment potential</td><td>PROP-001</td><td>Requires address. This is the largest un-quantified upside in the analysis.</td><td class="src"><a href="https://planning.lacity.gov/" target="_blank" rel="noopener">City of Los Angeles Department of City Planning</a></td><td><span class="badge st-blank">unverified</span></td></tr></tbody></table></div>
+
+<h2>Owner-stated, not verified</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Item</th><th>As stated</th><th>Note</th><th>Status</th></tr></thead>
+<tbody><tr><td class="metric">Lease type</td><td class="num">NNN (triple-net) — Owner description</td><td>Reported as stated, not independently verified</td><td><span class="badge t3">owner-stated</span></td></tr>
+<tr><td class="metric">Lease expiration</td><td class="num">2030 – 2035 (a five-year range) — Owner description</td><td>A five-year range is worth ~21.6% of value. Must be resolved before any transaction.</td><td><span class="badge t3">owner-stated</span></td></tr></tbody></table></div>
+
+<h2>Disclosed assumptions used by the model</h2>
+<p class="lede">These are not errors — they are the model's inputs, published so they can be challenged and
+replaced.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Assumption</th><th>Value</th><th>Note</th><th>Status</th></tr></thead>
+<tbody><tr><td class="metric">Model: annual probability of a regional wildfire/smoke event</td><td class="num">4%</td><td>ASSUMPTION — the model's stated prior, not an official statistic</td><td><span class="badge a">assumption</span></td></tr>
+<tr><td class="metric">Model: annual probability of a significant seismic event</td><td class="num">3%</td><td>ASSUMPTION</td><td><span class="badge a">assumption</span></td></tr>
+<tr><td class="metric">Model: annual probability of an insurance shock</td><td class="num">6%</td><td>ASSUMPTION</td><td><span class="badge a">assumption</span></td></tr>
+<tr><td class="metric">California top marginal income tax rate (used by the tax module)</td><td class="num">13.3%</td><td>FLAGGED — used as a modelling assumption; not re-verified against FTB in this session.</td><td><span class="badge a">assumption</span></td></tr></tbody></table></div>
+
+<h2>What was deliberately withheld</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Field</th><th>Published as</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td class="metric">Owner identity</td><td class="num">PARTY-OWNER</td><td>Privacy protocol — no personal or entity information is stored or published</td></tr>
+<tr><td class="metric">Tenant identity</td><td class="num">PARTY-TENANT</td><td>Privacy protocol</td></tr>
+<tr><td class="metric">Street address</td><td class="num">[ADDRESS REDACTED]</td><td>Privacy protocol</td></tr>
+<tr><td class="metric">Assessor's parcel number</td><td class="num">APN [REDACTED]</td><td>Privacy protocol</td></tr>
+<tr><td class="metric">Legal description</td><td class="num">[LEGAL DESC REDACTED]</td><td>Privacy protocol</td></tr>
+<tr><td class="metric">Owner's income, net worth, tax bracket, basis</td><td class="num">not collected</td><td>Privacy protocol — the model is normalised per $1 of NOI so none of it is needed</td></tr>
+<tr><td class="metric">Parcel coordinates / geolocation</td><td class="num">not collected</td><td>Privacy protocol</td></tr>
+</tbody></table></div>
+<div class="callout ok"><p><strong>The trade-off, stated plainly.</strong> Withholding the address protects privacy and
+costs analytical precision. That cost is quantified on the <a href="lease.html">Lease</a> page at roughly
+$500,000 of value tied to the unresolved expiry date alone. The
+correct resolution is to verify the parcel privately and publish only the anonymised conclusions — which is what
+this site does.</p></div>
+<div class="pager">
+<a href="tax.html"><div class="dir">&larr; Previous</div><div class="ttl">Tax</div></a>
+<a href="methodology.html" style="text-align:right"><div class="dir">Next &rarr;</div><div class="ttl">Method</div></a>
+</div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Jack2</strong> · analytical dossier for <code>PROP-001</code> · data cut-off 2026-11-06<br>
+      All identifiers anonymised. No personal or parcel information is stored or published.
+    </div>
+    <div>
+      <a href="methodology.html">Method &amp; sources</a> &middot;
+      <a href="flags.html">Flagged for review</a> &middot;
+      <a href="https://github.com/wingbangboozle1-lang/Jack2" target="_blank" rel="noopener">Repository</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# ---- Python / tooling ----
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.arena/
+.cache/
+.DS_Store
+
+# ---- privacy: never commit raw research harvests that may contain PII ----
+private/
+*.private
+*.pii
+*.csv.raw

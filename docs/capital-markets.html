@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markets · Jack2 — PROP-001 hold / renew / sell analysis</title>
+<meta name="description" content="Verified interest rates, inflation and net-lease cap rates, with the term premium quantified.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="site-head-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">J2</span>
+      <span class="brand-txt"><strong>PROP-001</strong><span>NNN Jack in the Box · central Los Angeles</span></span>
+    </a>
+    <nav class="nav" aria-label="Site sections">
+      <a href="index.html">Overview</a>
+      <a href="decision.html">Decision</a>
+      <a href="projection.html">Projection</a>
+      <a href="economy.html">Economy</a>
+      <a href="tenant.html">Tenant</a>
+      <a href="capital-markets.html" aria-current="page">Markets</a>
+      <a href="lease.html">Lease</a>
+      <a href="hazards.html">Risk</a>
+      <a href="tax.html">Tax</a>
+      <a href="flags.html">Flagged</a>
+      <a href="methodology.html">Method</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Capital markets</div>
+  <h1>Rates rising, inflation re-accelerating, cap rates resetting upward</h1>
+  <p>A net-lease asset is a bond with a building attached. The 10-year Treasury has risen 107 bp in twelve months,
+  the Federal Reserve has stopped cutting and hiked, the 30-year mortgage is above 7%, and net-lease cap rates rose
+  to 6.92% in Q3 2026. This is not an environment to wait for relief in.</p>
+  <div class="verdict"><b>Every +55 bp of cap-rate expansion costs about 6.5% of value.</b> The market is moving in
+  that direction, not away from it.</div>
+</section>
+
+<h2>Rates</h2>
+<div class="grid g4">
+  <div class="card warn"><h3>10-year Treasury</h3><div class="big">4.90%</div><div class="sub">2026-11-04</div></div>
+  <div class="card warn"><h3>10-yr monthly average</h3><div class="big">5.13%</div><div class="sub">Oct 2026 · 4.06% a year earlier</div></div>
+  <div class="card warn"><h3>Fed funds</h3><div class="big">3.88%</div><div class="sub">Hiked 2026-09-17</div></div>
+  <div class="card warn"><h3>30-year mortgage</h3><div class="big">7.18%</div><div class="sub">Week of 2026-11-05 · 6.16% in January</div></div>
+</div>
+<div class="bars">
+<div class="bar-row"><div>Jul 2020 low</div><div class="bar-track"><div class="bar-fill g" style="width:12.1%"></div></div><div class="bar-val">0.62%</div></div>
+<div class="bar-row"><div>2019 average</div><div class="bar-track"><div class="bar-fill g" style="width:41.7%"></div></div><div class="bar-val">2.14%</div></div>
+<div class="bar-row"><div>Oct 2025</div><div class="bar-track"><div class="bar-fill a" style="width:79.1%"></div></div><div class="bar-val">4.06%</div></div>
+<div class="bar-row"><div>Oct 2026</div><div class="bar-track"><div class="bar-fill r" style="width:100.0%"></div></div><div class="bar-val">5.13%</div></div>
+</div>
+<p class="tbl-note">10-year Treasury constant-maturity, monthly averages in basis points. The series has moved from
+a 0.62% cycle low to 5.13%.</p>
+
+<div class="callout warn">
+  <p><strong>The policy turn.</strong> The effective funds rate went 4.33% (May 2025) → 4.08% (Sep 2025) → 3.87%
+  (Oct 2025) → 3.64% (Dec 2025), then <b>held for eight months and was raised to 3.88% on 2026-09-17</b>. CPI is
+  running at <b>+3.72% year over year</b> on the September 2026 print, up from a disinflationary trend.
+  The easing cycle is over.</p>
+</div>
+
+<h2>Cap rates</h2>
+<div class="callout">
+  <p><strong>Source note.</strong> The cap-rate data below is <span class="badge t3">T3 Industry</span> — The Boulder
+  Group, a brokerage. It is the best available <em>market pricing</em> signal and it is <b>not</b> an official
+  statistic. Every row is badged accordingly. No cap rate is asserted as a fact about this asset.</p>
+</div>
+<div class="table-wrap"><table id="tbl-cm">
+<thead><tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Period</th>
+<th>Geography</th>
+<th>Source</th>
+<th>Tier</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr>
+<td class="metric">10-year U.S. Treasury constant maturity</td>
+<td class="num">4.90%</td>
+<td class="nowrap">2026-11-04</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED — DGS10 (U.S. Treasury via St. Louis Fed)</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">10-year U.S. Treasury — highest daily print in 2026</td>
+<td class="num">5.31%</td>
+<td class="nowrap">2026-10-05</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED — DGS10</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">10-year U.S. Treasury — monthly average</td>
+<td class="num">5.13%</td>
+<td class="nowrap">Oct 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/GS10" target="_blank" rel="noopener">FRED — GS10</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">10-year U.S. Treasury — monthly average</td>
+<td class="num">4.06%</td>
+<td class="nowrap">Oct 2025</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/GS10" target="_blank" rel="noopener">FRED — GS10</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">10-year U.S. Treasury — monthly average (cycle low)</td>
+<td class="num">0.62%</td>
+<td class="nowrap">Jul 2020</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/GS10" target="_blank" rel="noopener">FRED — GS10</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">30-year fixed mortgage rate</td>
+<td class="num">7.18%</td>
+<td class="nowrap">week of 2026-11-05</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/MORTGAGE30US" target="_blank" rel="noopener">FRED — MORTGAGE30US (Freddie Mac)</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">30-year fixed mortgage rate</td>
+<td class="num">6.16%</td>
+<td class="nowrap">week of 2026-01-08</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/MORTGAGE30US" target="_blank" rel="noopener">FRED — MORTGAGE30US (Freddie Mac)</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Effective federal funds rate — current</td>
+<td class="num">3.88%</td>
+<td class="nowrap">from 2026-09-17</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/DFF" target="_blank" rel="noopener">FRED — DFF</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Effective federal funds rate — prior level</td>
+<td class="num">3.64%</td>
+<td class="nowrap">2025-12-11 → 2026-09-16</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/DFF" target="_blank" rel="noopener">FRED — DFF</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">CPI-U, all items, seasonally adjusted</td>
+<td class="num">336.298</td>
+<td class="nowrap">Sep 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">FRED — CPIAUCSL (BLS)</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">CPI-U, all items, seasonally adjusted</td>
+<td class="num">324.245</td>
+<td class="nowrap">Sep 2025</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">FRED — CPIAUCSL (BLS)</a></td>
+<td><span class="badge t1">T1 Official</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">CPI inflation, year over year</td>
+<td class="num">3.72%</td>
+<td class="nowrap">Sep 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">Computed from FRED CPIAUCSL (336.298 / 324.245 − 1)</a></td>
+<td><span class="badge d">Derived</span></td>
+<td><span class="badge d">derived</span></td>
+</tr>
+<tr>
+<td class="metric">All single-tenant net-lease cap rate</td>
+<td class="num">6.92%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.financialcontent.com/article/abnewswire-2026-10-9-the-boulder-group-reports-net-lease-cap-rates-rise-to-692-in-q3-2026" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Net Lease Research Report</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">All single-tenant net-lease cap rate</td>
+<td class="num">6.82%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026 Net Lease Research Report</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Retail single-tenant net-lease cap rate</td>
+<td class="num">6.60%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Industrial single-tenant net-lease cap rate</td>
+<td class="num">7.25%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Office single-tenant net-lease cap rate</td>
+<td class="num">7.90%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Auto single-tenant net-lease cap rate</td>
+<td class="num">6.45%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Dollar-store single-tenant net-lease cap rate</td>
+<td class="num">7.49%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Drug-store single-tenant net-lease cap rate</td>
+<td class="num">7.85%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">QSR net lease — corporate credit</td>
+<td class="num">5.85%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">QSR net lease — franchisee credit</td>
+<td class="num">6.85%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Retail net-lease bid–ask spread</td>
+<td class="num">25 bp</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.financialcontent.com/article/abnewswire-2026-10-9-the-boulder-group-reports-net-lease-cap-rates-rise-to-692-in-q3-2026" target="_blank" rel="noopener">The Boulder Group, Q3 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">7-Eleven net lease, 5-year term</td>
+<td class="num">5.90% – 6.20%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">7-Eleven net lease, 15-year term</td>
+<td class="num">4.80% – 5.15%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Raising Cane's net lease, 15-year term</td>
+<td class="num">4.90% – 5.20%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Whataburger net lease, 15-year term</td>
+<td class="num">4.85% – 5.25%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Burger King net lease, 10-year term</td>
+<td class="num">6.30% – 6.60%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Applebee's net lease, 15-year term</td>
+<td class="num">7.15% – 7.45%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Family Dollar net lease, 5-year term</td>
+<td class="num">8.50% – 8.90%</td>
+<td class="nowrap">Q3 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">The Boulder Group, Q3 2026 Tenant Profiles</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">McDonald's / Chick-fil-A ground lease (tightest in sector)</td>
+<td class="num">4.45%</td>
+<td class="nowrap">Q2 2026</td>
+<td>United States</td>
+<td class="src"><a href="https://www.bouldergroup.com/blog/" target="_blank" rel="noopener">The Boulder Group, Q2 2026</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-ok">verified</span></td>
+</tr>
+<tr>
+<td class="metric">Jack in the Box-specific net-lease cap rate</td>
+<td class="blank" title="Not confirmed from an official source">&mdash; blank (unverified)</td>
+<td class="nowrap">—</td>
+<td>United States</td>
+<td class="src"><a href="https://www.openpr.com/news/4629798/the-boulder-group-releases-q3-2026-net-lease-tenant-profiles" target="_blank" rel="noopener">Boulder Group Q3 2026 Tenant Profiles (88 operators)</a></td>
+<td><span class="badge t3">T3 Industry</span></td>
+<td><span class="badge st-blank">UNVERIFIED</span></td>
+</tr>
+<tr>
+<td class="metric">Cap-rate term curve used by this model (6.5 yr remaining)</td>
+<td class="num">7.91%</td>
+<td class="nowrap">2026</td>
+<td>PROP-001</td>
+<td class="src"><a href="#cap-curve" target="_blank" rel="noopener">model/projection_model.py — CAP_TERM_CURVE interpolation</a></td>
+<td><span class="badge d">Derived</span></td>
+<td><span class="badge d">derived</span></td>
+</tr>
+<tr>
+<td class="metric">Cap-rate term curve used by this model (15 yr remaining)</td>
+<td class="num">6.40%</td>
+<td class="nowrap">2026</td>
+<td>PROP-001</td>
+<td class="src"><a href="#cap-curve" target="_blank" rel="noopener">model/projection_model.py — CAP_TERM_CURVE interpolation</a></td>
+<td><span class="badge d">Derived</span></td>
+<td><span class="badge d">derived</span></td>
+</tr>
+</tbody></table></div>
+<p class="tbl-note">Tier 1 rows are official (FRED, U.S. Treasury, BLS). Tier 3 rows are Boulder Group research and are directional only.</p>
+
+<h2>The four facts that matter most</h2>
+<div class="grid g2">
+  <div class="card">
+    <h3>1 · Corporate vs franchisee is ~100 bp</h3>
+    <div class="big" style="font-size:22px">5.85% vs 6.85%</div>
+    <div class="sub">If PROP-001's tenant is a franchisee without a corporate guaranty, its pricing anchor is the
+    6.85% line — not 5.85%. That is roughly 15% of value.</div>
+  </div>
+  <div class="card">
+    <h3>2 · Term is worth a lot</h3>
+    <div class="big" style="font-size:22px">~105 bp</div>
+    <div class="sub">7-Eleven prices 5.90–6.20% at 5 years and 4.80–5.15% at 15 years. Identical credit, ~17% more
+    value for the same NOI, purely from term.</div>
+  </div>
+  <div class="card">
+    <h3>3 · Weakness is repriced brutally and fast</h3>
+    <div class="big" style="font-size:22px">8.50–8.90%</div>
+    <div class="sub">Family Dollar moved from investment grade to unrated on its sale and repriced immediately.
+    Burger King widened 25 bp at 10-year. The market does not wait for confirmations.</div>
+  </div>
+  <div class="card">
+    <h3>4 · The market is bifurcating, not falling</h3>
+    <div class="big" style="font-size:22px">25 bp</div>
+    <div class="sub">Bid–ask spreads in retail widened to 25 bp in Q3 2026. Premium long-term credit trades tight;
+    short-term and unrated product trades wide and selectively.</div>
+  </div>
+</div>
+
+<div class="callout danger">
+  <p><strong>PROP-001 sits on the wrong side of that line today</strong> — short-term and probably unrated — and
+  moves further out on it every year it is not extended. That is the entire valuation argument in one sentence.</p>
+</div>
+
+<h2>Cap-rate sensitivity</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Cap rate</th><th>Value per $1.00 of NOI</th><th>Change vs 8.02% (today)</th></tr></thead>
+<tbody>
+<tr><td class="num">6.40%</td><td class="num">$15.62</td><td class="num">+25.2%</td></tr>
+<tr><td class="num">6.85%</td><td class="num">$14.60</td><td class="num">+17.0%</td></tr>
+<tr><td class="num">7.50%</td><td class="num">$13.33</td><td class="num">+6.8%</td></tr>
+<tr><td class="num"><b>8.02%</b></td><td class="num"><b>$12.48</b></td><td class="num"><b>base</b></td></tr>
+<tr><td class="num">8.57%</td><td class="num">$11.67</td><td class="num">−6.4%</td></tr>
+<tr><td class="num">9.00%</td><td class="num">$11.11</td><td class="num">−10.9%</td></tr>
+<tr><td class="num">10.50%</td><td class="num">$9.52</td><td class="num">−23.7%</td></tr>
+</tbody></table></div>
+<p class="tbl-note">Derived arithmetic (NOI ÷ cap rate), consistent with the model's curve and with the same
+multiples published on the Projection page.</p>
+<div class="pager">
+<a href="tenant.html"><div class="dir">&larr; Previous</div><div class="ttl">Tenant</div></a>
+<a href="lease.html" style="text-align:right"><div class="dir">Next &rarr;</div><div class="ttl">Lease</div></a>
+</div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Jack2</strong> · analytical dossier for <code>PROP-001</code> · data cut-off 2026-11-06<br>
+      All identifiers anonymised. No personal or parcel information is stored or published.
+    </div>
+    <div>
+      <a href="methodology.html">Method &amp; sources</a> &middot;
+      <a href="flags.html">Flagged for review</a> &middot;
+      <a href="https://github.com/wingbangboozle1-lang/Jack2" target="_blank" rel="noopener">Repository</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
