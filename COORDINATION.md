@@ -17,7 +17,7 @@ Session ID: `arena-1944e5a3`
 | 3 | Research: property/market/demographics/economy/risk (official sources) | done | arena-1944e5a3 | site data inline in HTML |
 | 4 | Build GitHub Pages site (landing + subpages, tables, sources) | done | arena-1944e5a3 | `*.html`, `assets/**`, `README.md` |
 | 5 | Verification pass (every row sourced or flagged) | done | arena-1944e5a3 | `sources.html`, `flagged.html` |
-| 6 | Final integration: PR to main, merge, confirm Pages deploy | in progress | arena-1944e5a3 | PR + repo settings |
+| 6 | Final integration: PR to main, merge, confirm Pages deploy | done | arena-1944e5a3 | PR #1 |
 
 ## Rules (from task brief)
 
@@ -48,6 +48,13 @@ Verification performed: official pages read during build (Census county table, E
 county PDF, BEA release, BLS Jul 2025 metro release, SEC 10-K FY2025, Port of LA
 releases, LA City Clerk/LAHD ULA PDFs, IRS FS-08-18). Derived values marked
 "Computed" with formulas. Anything unverifiable was blanked/flagged (F-01…F-20).
+
+## Integration result (2026-11-06)
+
+- PR #1 (arena/1944e5a3-jack2 → main): https://github.com/wingbangboozle1-lang/Jack2/pull/1 — MERGED 2026-11-06T13:03:29Z (merge commit 22f2f910a154c707326c672f94afd31c7f212ec2) via `gh pr merge 1 --merge`.
+- GitHub Pages (legacy, main root): build created 13:03:31Z, status `built` 13:06:02Z, error: none. Live: https://wingbangboozle1-lang.github.io/Jack2/ (root serves Executive Summary; `decision.html`, `flagged.html`, all 10 pages + assets verified returning 200/200 live).
+- Local pre-merge checks: internal link/asset check (all 200), HTML parse of all 10 pages (balanced), placeholder scan — no personal information in repo.
+- Post-merge verification: root and `decision.html`/`index.html` fetched live — content correct; edge cache lagged initial root fetch, resolved on re-check.
 
 ## Flagged irregularities / unverified items
 
