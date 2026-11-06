@@ -21,7 +21,7 @@ conflict section below.
 | 3 | Requirements extraction (22 items) | done | B | `data/requirements.json` |
 | 4 | Official-source research ledger | done | A (29 sources, inline in HTML) and B (23 sources, structured JSON) | `data/sources.json`, `data/metrics.json`; A's list on `session-1944e5a3/sources.html` |
 | 5 | Property & lease facts (anonymised) | done | A and B | `data/property_lease.json` (B); A on `session-1944e5a3/property.html` |
-| 6 | Market / demographic economics dataset | done | A and B | B: 86 rows in `data/metrics.json`; A: `session-1944e5a3/market.html`, `demographics.html` |
+| 6 | Market / demographic economics dataset | done | A and B | B: 87 rows in `data/metrics.json`; A: `session-1944e5a3/market.html`, `demographics.html` |
 | 7 | Valuation inputs (cap rates, rates, taxes) | done | B | `data/valuation.json` |
 | 8 | Risk register (BAU + black swan) | done | A and B | B: `data/risks.json` (24 rows); A: `session-1944e5a3/risk.html` |
 | 9 | Projection model + scenarios | done | B | `tools/model.py`, `data/model_output.json`, `projection-model.html` |
@@ -93,10 +93,15 @@ traceable to the source that produced it. B re-verified the sources that A cited
 | Item | Value |
 |---|---|
 | Session A PRs | #1 merged as `22f2f91`; #3 merged as `1e8f8f9` (recorded the deploy verification). Their site content is preserved in `session-1944e5a3/`. |
-| Session B final PR | see the PR link in the repository's Pull Requests, title "Verified decision workbook: Central LA Jack in the Box NNN (sell vs renew)" |
+| Session B final PR | **#2** — https://github.com/wingbangboozle1-lang/Jack2/pull/2 — merged 2026-11-06T13:07:14Z, merge commit `5166eb8` |
+| Session A follow-up PRs | #3 (`1e8f8f9`) and #4 (`18f08ff`) — their board/deploy records, folded into this file |
+| Session B merge-conflict history | PR #2 was blocked once when main advanced (PR #3); resolved by merging `origin/main` again and folding session A's new integration record into this file, then re-running all checks |
 | Pages source | `main` / root, legacy build, `.nojekyll` present |
 | Pages URL | https://wingbangboozle1-lang.github.io/Jack2/ |
-| Checks run before merge | `tools/model.py`, `tools/build_site.py`, `tools/export_ledger.py`, `tools/check_site.py` — all pass |
+| Checks run before merge | `tools/model.py`, `tools/build_site.py`, `tools/export_ledger.py`, `tools/check_site.py` — all pass on the merged tree (15 root pages, 25 HTML files including the archive, 23 sources, 87 metric rows, 24 risk rows) |
+| CI | GitHub Actions `verify` — build-and-check **pass** on PR #2 and on every push |
+| Pages verification (post-merge) | Deployment run `42222929469`: build **success** (7s), deploy **success**. Live checks: `/executive-summary.html`, `/flagged.html`, `/index.html?cachebust=...` and `/?cb=1` all return the new build. The bare `/` path served a cached copy of the original README-only build for a few minutes after deploy; re-tested with a cache-busting query and again after propagation — resolved. |
+| Raw Pages build record | `api.github.com/repos/.../pages/builds/latest` briefly reported `errored` for `5166eb8` (a superseded/cancelled legacy build); the authoritative `pages-build-deployment` workflow run for that commit finished **success**. No broken pages were live at any point: `/` is the only path that showed stale content, and only from edge cache. |
 | Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
 
 ## Original board and log from Session A (`arena-1944e5a3`), preserved verbatim
