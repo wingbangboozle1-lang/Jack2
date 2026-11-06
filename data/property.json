@@ -1,0 +1,238 @@
+{
+  "id": "property",
+  "title": "Property & Lease Profile",
+  "intro": "Everything this project actually knows about the asset, separated into what the owner stated and what an official record can confirm. The owner's address, parcel number (APN), rent roll, purchase basis and operating statements were never supplied and are deliberately not reconstructed here \u2014 doing so would both fabricate data and defeat the privacy requirement.",
+  "rows": [
+    {
+      "id": "PR-01",
+      "topic": "Asset identity",
+      "metric": "Property reference",
+      "display": "PARCEL-01",
+      "status": "not_applicable",
+      "source_id": null,
+      "note": "Internal placeholder. No address, APN, latitude/longitude or assessor link is stored in this repository."
+    },
+    {
+      "id": "PR-02",
+      "topic": "Asset identity",
+      "metric": "Owner reference",
+      "display": "OWNER-01",
+      "status": "not_applicable",
+      "source_id": null,
+      "note": "Personal identifiers removed at intake."
+    },
+    {
+      "id": "PR-03",
+      "topic": "Asset identity",
+      "metric": "Asset type",
+      "display": "Single-tenant quick-service restaurant, triple-net (NNN) lease",
+      "status": "input",
+      "source_id": "SRC-INPUT",
+      "note": "Owner-stated. No public record corroborates this; the lease itself was not provided."
+    },
+    {
+      "id": "PR-04",
+      "topic": "Asset identity",
+      "metric": "Tenant brand",
+      "display": "Jack in the Box",
+      "status": "input",
+      "source_id": "SRC-INPUT",
+      "note": "Owner-stated. Whether the tenant of record is a franchisee or the corporate entity is NOT known and is a material unknown (see R-02)."
+    },
+    {
+      "id": "PR-05",
+      "topic": "Location",
+      "metric": "Sub-market",
+      "display": "Central Los Angeles (approximate only)",
+      "status": "input",
+      "source_id": "SRC-INPUT",
+      "note": "No further geographic precision is stored. All market data in this project is therefore measured at City of Los Angeles, County of Los Angeles or LA\u2013Long Beach\u2013Anaheim MSA level."
+    },
+    {
+      "id": "PR-06",
+      "topic": "Lease",
+      "metric": "Lease expiry window",
+      "display": "2030 \u2013 2035",
+      "status": "input",
+      "source_id": "SRC-INPUT",
+      "note": "Owner-stated range, not verified against the lease document."
+    },
+    {
+      "id": "PR-07",
+      "topic": "Lease",
+      "metric": "Years of remaining term from 2026-11-06",
+      "display": "3.2 \u2013 9.2 years (modelled 3.15 / 5.65 / 9.15)",
+      "value": null,
+      "status": "derived",
+      "source_id": "SRC-INPUT",
+      "note": "Derived arithmetic from PR-06. Three cases are modelled rather than one point estimate."
+    },
+    {
+      "id": "PR-08",
+      "topic": "Lease",
+      "metric": "Renewal options held by tenant",
+      "display": null,
+      "status": "unverified",
+      "source_id": null,
+      "note": "Unknown. This is the single most important missing document term: it determines whether the owner or the tenant controls the post-2030 outcome."
+    },
+    {
+      "id": "PR-09",
+      "topic": "Lease",
+      "metric": "Contract rent, escalators, expense pass-throughs",
+      "display": null,
+      "status": "unverified",
+      "source_id": null,
+      "note": "Not provided; withheld for privacy. The model is therefore normalised to $1.00 of NOI."
+    },
+    {
+      "id": "PR-10",
+      "topic": "Property",
+      "metric": "Building area, land area, parking ratio, drive-thru",
+      "display": null,
+      "status": "unverified",
+      "source_id": null,
+      "note": "Not provided. Drive-thru presence materially changes re-leasing prospects for a QSR box and is the first item to confirm."
+    },
+    {
+      "id": "PR-11",
+      "topic": "Property",
+      "metric": "Zoning, general plan designation, entitlement upside",
+      "display": null,
+      "status": "unverified",
+      "source_id": null,
+      "note": "Requires the parcel number to query ZIMAS (City of LA). Not attempted, by design."
+    },
+    {
+      "id": "PR-12",
+      "topic": "Property",
+      "metric": "Assessed value, base-year value, annual property tax",
+      "display": null,
+      "status": "unverified",
+      "source_id": null,
+      "note": "Requires the APN to query the Los Angeles County Assessor. Not attempted, by design."
+    },
+    {
+      "id": "PR-13",
+      "topic": "Financials",
+      "metric": "Current NOI, purchase price, adjusted basis",
+      "display": null,
+      "status": "unverified",
+      "source_id": null,
+      "note": "Not provided. Without adjusted basis no after-tax comparison can be computed; the model reports pre-tax wealth and treats tax as a documented overlay (see V-07 to V-10)."
+    },
+    {
+      "id": "PR-14",
+      "topic": "Brand system",
+      "metric": "Jack in the Box system units at 2026-07-05",
+      "value": 2115,
+      "display": "2,115",
+      "unit": "restaurants",
+      "as_of": "2026-07-05",
+      "status": "verified",
+      "source_id": "S-JACK-Q3FY26",
+      "note": "149 company-operated + 1,966 franchised."
+    },
+    {
+      "id": "PR-15",
+      "topic": "Brand system",
+      "metric": "Share of system that is franchised",
+      "value": 0.9296,
+      "display": "93.0%",
+      "unit": "percent",
+      "as_of": "2026-07-05",
+      "status": "derived",
+      "source_id": "S-JACK-Q3FY26",
+      "note": "1,966 franchised \u00f7 2,115 total. Makes it likely, but not certain, that PARCEL-01's tenant is a franchisee rather than the corporate parent."
+    },
+    {
+      "id": "PR-16",
+      "topic": "Brand system",
+      "metric": "Jack in the Box same-store sales, Q3 FY2026",
+      "value": -0.011,
+      "display": "(1.1%)",
+      "unit": "percent",
+      "as_of": "2026-07-05",
+      "status": "verified",
+      "source_id": "S-JACK-Q3FY26",
+      "note": "Franchise same-store sales (1.2%), company (0.9%). An improvement from (7.1%) a year earlier."
+    },
+    {
+      "id": "PR-17",
+      "topic": "Brand system",
+      "metric": "Jack in the Box same-store sales, FY2025",
+      "value": -0.042,
+      "display": "(4.2%)",
+      "unit": "percent",
+      "as_of": "2025-09-28",
+      "status": "verified",
+      "source_id": "S-JACK-Q4FY25",
+      "note": "Q4 FY2025 alone was (7.4%)."
+    },
+    {
+      "id": "PR-18",
+      "topic": "Brand system",
+      "metric": "Restaurants closed in FY2025",
+      "value": 86,
+      "display": "86 closed (31 opened)",
+      "unit": "restaurants",
+      "as_of": "2025-09-28",
+      "status": "verified",
+      "source_id": "S-JACK-Q4FY25",
+      "note": "38 of the 47 Q4 closures were part of the 'JACK on Track' block-closure programme."
+    },
+    {
+      "id": "PR-19",
+      "topic": "Brand system",
+      "metric": "Closures guided for FY2026",
+      "display": "50 \u2013 100 closures, ~20 openings",
+      "unit": "restaurants",
+      "as_of": "2025-11-19",
+      "status": "verified",
+      "source_id": "S-JACK-Q4FY25",
+      "note": "Guidance issued with Q4 FY2025 results: restaurant count of 2,050\u20132,100, 'approximately 50 to 100 closures, most of which will be franchise restaurants'."
+    },
+    {
+      "id": "PR-20",
+      "topic": "Brand system",
+      "metric": "Franchised restaurant average unit volume, FY2025",
+      "value": 1874000,
+      "display": "$1,874,000",
+      "unit": "USD per restaurant per year",
+      "as_of": "2025-09-28",
+      "status": "verified",
+      "source_id": "S-JACK-10K",
+      "note": "Down from $1,949,000 in FY2024. Useful for stress-testing whether the store can carry market rent."
+    },
+    {
+      "id": "PR-21",
+      "topic": "Brand system",
+      "metric": "Del Taco divestiture completed",
+      "display": "Sold to Yadav Enterprises; closed 2025-12-22",
+      "as_of": "2025-12-22",
+      "status": "verified",
+      "source_id": "S-JACK-Q3FY26",
+      "note": "The brand is now a single-concept operator, which concentrates franchisee and landlord exposure on the Jack in the Box banner."
+    },
+    {
+      "id": "PR-22",
+      "topic": "Brand system",
+      "metric": "Corporate leadership",
+      "display": "Mark King, Interim CEO (from 2026); refinancing completed",
+      "as_of": "2026-08-12",
+      "status": "verified",
+      "source_id": "S-JACK-Q3FY26",
+      "note": "Leadership turnover at the franchisor is a second-order but real signal for renewal decisions."
+    },
+    {
+      "id": "PR-23",
+      "topic": "Brand system",
+      "metric": "Franchisor sells owned real estate to franchisees",
+      "display": null,
+      "as_of": "2025-04-23",
+      "status": "unverified",
+      "source_id": null,
+      "note": "Trade press reported a plan to sell land/building at roughly 170 franchised sites as part of the 2025 'JACK on Track' programme. This could not be confirmed in the SEC exhibit retrieved for this project, so it is flagged rather than asserted."
+    }
+  ]
+}
