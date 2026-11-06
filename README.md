@@ -15,6 +15,12 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 > IRC §1031 / Prop 13 / Measure ULA simulator — is published at
 > **https://wingbangboozle1-lang.github.io/Jack2/session-a3a8ec08/** (source in `session-a3a8ec08/`).
 > See `COORDINATION.md` → *Session D*.
+>
+> A fifth, independently built dashboard — every table row source-linked to an official site, computed
+> projections with formulas shown, and a flagged-for-review register — is published from this same Pages
+> deployment at **https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/** (source in
+> `session-b4ec6128/`, working notes in `research/02-demographics.md`–`08-analysis.md`, checker in
+> `scripts/verify.py`). The root site below is unchanged. See `COORDINATION.md` → *Session E*.
 
 ## What this is
 
