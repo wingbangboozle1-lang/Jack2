@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy - Central LA Jack in the Box NNN workbook</title>
+<meta name="description" content="Privacy architecture and enforcement: no personal information in the repository or the published site.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Workbook<small>Jack in the Box &middot; 2030&ndash;2035 lease expiry &middot; data as of 2026-11-06</small></span></a>
+  <nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="market-economics.html">Market economics</a><a href="property-lease.html">Property &amp; lease</a><a href="valuation.html">Valuation inputs</a><a href="projection-model.html">Projection model</a><a href="risks.html">Risk register</a><a href="requirements.html">Requirements</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html" aria-current="page">Privacy</a><a href="deployment.html">Deployment</a><a href="archive.html">Session A archive</a><a href="analysis/index.html">Second model</a></nav>
+</div></header>
+<main id="main" class="wrap">
+
+<div class="page-head"><p class="eyebrow">Privacy</p><h1>No personal information is collected, stored, published or inferred</h1><p class="lede">This is the highest-priority constraint in the brief, so it is enforced in code rather than promised in prose.</p></div>
+
+<div class="callout ok">
+<p><strong>Summary.</strong> This repository and the published site contain zero personal identifiers. The property is referred to only as
+&ldquo;the Subject Property (Central Los Angeles)&rdquo;. There is no owner name, entity name, street address, parcel number, loan number, policy number,
+contact detail, or financial account anywhere. Values the brief did not supply are marked <code>[WITHHELD - placeholder]</code> and flagged.</p>
+</div>
+
+<h2>What was deliberately excluded</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Category</th><th>Treatment</th></tr></thead>
+<tbody>
+<tr><td>Owner identity and entity structure</td><td>Excluded. Not requested, not inferred, not stored.</td></tr>
+<tr><td>Street address and APN</td><td>Excluded. The brief references only &ldquo;central Los Angeles&rdquo;. Parcel-level lookups are therefore flagged unverified (M82&ndash;M85).</td></tr>
+<tr><td>Lease documents</td><td>Not published. Only the clause categories to audit are listed.</td></tr>
+<tr><td>Tenant franchisee identity</td><td>Excluded. Only the franchisor (a public company) is named, which is public record.</td></tr>
+<tr><td>Financial accounts, loan numbers, policy numbers</td><td>Excluded.</td></tr>
+<tr><td>Correspondence and contact details</td><td>Excluded. No form, no analytics, no cookies, no third-party scripts on this site.</td></tr>
+</tbody></table></div>
+
+<h2>How it is enforced</h2>
+<ul>
+  <li><strong>At build time:</strong> <code>tools/build_site.py</code> scans every emitted page against patterns for email addresses, telephone numbers, US street addresses, and parcel numbers, and the build fails on a match.</li>
+  <li><strong>In CI:</strong> <code>tools/check_site.py</code> re-runs the same scan plus link and source checks on every push.</li>
+  <li><strong>By data design:</strong> <code>data/property_lease.json</code> carries placeholders, not values. There is no field in the schema for an owner name.</li>
+  <li><strong>By scope:</strong> the workbook cites public companies (Jack in the Box Inc.), government statistics, and public filings only.</li>
+</ul>
+
+<h2>Internal-use classification</h2>
+<p>The market analysis, the model code, and the flagged list are internal decision support. If the owner later supplies the missing documents,
+those documents must stay outside this repository, or in a private repository &mdash; never in a published one. The public Pages site must remain free of them.</p>
+
+<h2>Client-side behaviour</h2>
+<p>The site is fully static. There is no server, no database, no form, no analytics, no cookie, no third-party font or script, and no outbound request
+other than the source links you choose to click. Search and filtering run entirely in your browser.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support &mdash; not an appraisal, not tax advice, not investment advice.</strong>
+  Every data value on this site links to the official source it was read from on 2026-11-06.
+  Values that could not be confirmed from an official source are blank and listed on the
+  <a href="flagged.html">Flagged for review</a> page. No personal or parcel-identifying information is published.</p>
+  <p>Built from <a href="sources.html">23 sources</a> &middot; <a href="verification.html">verification log</a> &middot;
+  <a href="deployment.html">deployment</a> &middot; reproduction: <code>python3 tools/build_site.py</code></p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

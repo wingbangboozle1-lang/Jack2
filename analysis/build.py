@@ -176,6 +176,7 @@ def layout(slug, title, body, description=""):
     for key, label, href in PAGES:
         cls = ' class="on" aria-current="page"' if key == slug else ""
         bits.append("<a href='" + href + "'" + cls + ">" + label + "</a>")
+    bits.append("<a href='../index.html' title='Back to the root workbook'>Main site &#8599;</a>")
     nav = "".join(bits)
     return f"""<!doctype html>
 <html lang="en">

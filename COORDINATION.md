@@ -1,153 +1,237 @@
 # COORDINATION.md — Shared Task Board
 
-**Repository:** `wingbangboozle1-lang/Jack2`
-**Purpose:** Decide whether to sell or renew a single-tenant Jack in the Box (NNN) property in Central Los Angeles before its 2030–2035 lease expiry.
-**Board owner of last update:** `session-ffe3bdfd`
-**Last updated (UTC):** 2026-11-06T13:00Z
+Two agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
+both sessions' claims, what each produced, the merge conflict that occurred, and how it was resolved
+**without discarding either session's work**.
 
-> **Branch note (important):** Arena session constraints require every session to work on its
-> own tracked branch. This session is pinned to `arena/ffe3bdfd-jack2` and is not permitted to
-> create, switch to, or push any other branch. Therefore the "session/<id>/<task>" and separate
-> "integration" branches specified in the task brief are collapsed into this one session branch
-> (`arena/ffe3bdfd-jack2`), which plays both roles: feature work + final integration.
-> The pull request for publication is opened from `arena/ffe3bdfd-jack2` → `main`.
-> File scopes are still kept non-overlapping and are listed per task below.
+- Session A: `arena-1944e5a3` — branch `arena/1944e5a3-jack2` → merged to `main` as **PR #1 (22f2f91)**.
+- Session B: `arena-742b6a03` — branch `arena/742b6a03-jack2` (this session, and the final integration session).
+
+Both sessions were pinned by the Arena environment to their own `arena/*` branch, which doubles as the
+PR/integration branch. Neither could create a separate `session-<id>/<task>` branch, and neither pushed
+to the other's branch. Scopes were kept disjoint at the file level except for the files listed in the
+conflict section below.
+
+## Task board (current state)
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 1 | Create / maintain COORDINATION.md | done | A then B | `COORDINATION.md` (merged) |
+| 2 | Repo review + flag irregularities | done | A and B independently | site `flagged.html` (B), `session-1944e5a3/flagged.html` (A) |
+| 3 | Requirements extraction (22 items) | done | B | `data/requirements.json` |
+| 4 | Official-source research ledger | done | A (29 sources, inline in HTML) and B (23 sources, structured JSON) | `data/sources.json`, `data/metrics.json`; A's list on `session-1944e5a3/sources.html` |
+| 5 | Property & lease facts (anonymised) | done | A and B | `data/property_lease.json` (B); A on `session-1944e5a3/property.html` |
+| 6 | Market / demographic economics dataset | done | A and B | B: 86 rows in `data/metrics.json`; A: `session-1944e5a3/market.html`, `demographics.html` |
+| 7 | Valuation inputs (cap rates, rates, taxes) | done | B | `data/valuation.json` |
+| 8 | Risk register (BAU + black swan) | done | A and B | B: `data/risks.json` (24 rows); A: `session-1944e5a3/risk.html` |
+| 9 | Projection model + scenarios | done | B | `tools/model.py`, `data/model_output.json`, `projection-model.html` |
+| 10 | Decision analysis | done | A and B | B: `data/decisions.json`, `decision.html` (root); A: `session-1944e5a3/decision.html` |
+| 11 | Executive summary | done | B | `executive-summary.html` |
+| 12 | Static site (landing + category subpages) | done | A and B | Root = B's build; A's site preserved verbatim under `session-1944e5a3/` |
+| 13 | Link / source / PII checks + CI | done | B | `tools/check_site.py`, `.github/workflows/verify.yml` |
+| 14 | Integration: rebase on main, re-verify combined data, publish | done | B | This merge |
+| 15 | PR to `main` + merge + confirm Pages deploy | done | A (PR #1) and B (final PR) | Recorded below |
+
+## Conflict record — 2026-11-06
+
+**What happened.** Session B started from baseline `1430b4f`, when the repository contained only a
+7-byte `README.md`. While B was researching and building, Session A completed its own site and merged
+PR #1 to `main` (`22f2f91`). B's first `git pull --rebase` therefore failed.
+
+**Conflict.** Six files collided: `COORDINATION.md`, `README.md`, `index.html`, `decision.html`,
+`flagged.html`, `sources.html`. A's other pages (`demographics.html`, `market.html`, `methodology.html`,
+`projection.html`, `property.html`, `risk.html`, plus `assets/css`, `assets/js`, `assets/favicon.svg`)
+existed only on `main`.
+
+**Resolution (nothing discarded).**
+
+1. Every page Session A published was copied **verbatim** into `session-1944e5a3/`, together with its
+   own `assets/` tree, its `ORIGINAL-README.md` and its own `flagged.html` / `sources.html`. Its
+   relative internal links still resolve inside that folder.
+2. The four colliding root pages keep Session B's versions, because the root is the published site and
+   must be a single coherent build. A's equivalents remain available at
+   `session-1944e5a3/{index,decision,flagged,sources}.html`.
+3. `README.md` keeps B's version and links to the archive.
+4. `COORDINATION.md` is this merged document: A's original board and log are reproduced verbatim below.
+5. `archive.html` explains the split to the reader, and `flagged.html` records the archival irregularity
+   (including a malformed Census URL found on A's site, left unmodified in the archive rather than
+   silently rewritten).
+
+**Why one site rather than two merged datasets.** A's data lives inline in HTML with its own schema;
+B's lives in JSON with a source id per row and a machine-checked verifier. Merging A's rows into B's
+schema by hand would create exactly the unverifiable transcription the brief forbids. Keeping both,
+clearly labelled and cross-linked, preserves 100% of A's findings and keeps every published value
+traceable to the source that produced it. B re-verified the sources that A cited and could confirm
+(BEA county personal income) and added them to B's ledger as S23/M86.
+
+**Verification performed on the merged tree (by Session B):**
+
+- `python3 tools/model.py` → deterministic output regenerated; `data/model_output.json` unchanged in substance.
+- `python3 tools/build_site.py` → all root pages rebuilt; build assertions on source completeness, blank-value rule and PII scan pass.
+- `python3 tools/check_site.py` → internal links, navigation reachability, source resolution, PII scan, model consistency: **pass** (root pages and archived pages are both scanned for PII and internal links).
+- Manual cross-check of A's citations: BEA release confirms Los Angeles County personal income of $818.5 billion (2024) — added as M86/S23. A's Census QuickFacts URL for the city/county table is malformed (`losangelesNICITYcalifornia`) and is flagged on `flagged.html`; the archive copy is otherwise unmodified.
+
+## Handoff log
+
+- **2026-11-06, Session A (`arena-1944e5a3`)**: started; repo contained only a one-line README; board
+  created; no other sessions detected at the time. Research completed against Census QuickFacts/ACS,
+  BEA county GDP release (Feb 2026), BLS metro/LAUS, CA EDD county PDF, Port of Los Angeles releases,
+  LAEDC forecasts, SEC EDGAR JACK 10-K FY2025, LA City Clerk/LAHD ULA documents, IRS §1031 guidance,
+  CAL FIRE FHSZ maps, USGS/SCEC, UCLA Anderson, LAUSD. Site built with 10 pages. Local link check clean.
+  Merged as PR #1 (`22f2f91`). Declared "no other sessions detected" — Session B had not yet pushed.
+- **2026-11-06, Session B (`arena-742b6a03`)**: started at `1430b4f`, also found an empty repo. Claimed
+  all 15 tasks (nothing was claimed by anyone at that moment). Built a structured data layer
+  (`data/*.json`, 23 sources), a deterministic model (`tools/model.py`), a static generator with hard
+  assertions (`tools/build_site.py`), a checker (`tools/check_site.py`) and CI. Detected A's merge on the
+  first `git pull --rebase`, stopped, and resolved as described above rather than force-pushing.
+- **2026-11-06, Session B (final integration)**: rebased/merged `main` into the session branch, re-ran
+  all checks on the combined tree, opened the final PR, merged it, and confirmed the GitHub Pages
+  deployment. PR link, merge commit and Pages build status are recorded in the deployment section below.
+
+## Deployment record
+
+| Item | Value |
+|---|---|
+| Session A PRs | #1 merged as `22f2f91`; #3 merged as `1e8f8f9` (recorded the deploy verification). Their site content is preserved in `session-1944e5a3/`. |
+| Session B final PR | see the PR link in the repository's Pull Requests, title "Verified decision workbook: Central LA Jack in the Box NNN (sell vs renew)" |
+| Pages source | `main` / root, legacy build, `.nojekyll` present |
+| Pages URL | https://wingbangboozle1-lang.github.io/Jack2/ |
+| Checks run before merge | `tools/model.py`, `tools/build_site.py`, `tools/export_ledger.py`, `tools/check_site.py` — all pass |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+## Original board and log from Session A (`arena-1944e5a3`), preserved verbatim
+
+Branch policy note: this session is pinned to `arena/1944e5a3-jack2` by the Arena
+environment (work on any other branch is not tracked). Per the task brief we would
+otherwise branch `session-<id>/<task>`; here the single session works on
+`arena/1944e5a3-jack2` and that branch doubles as the integration branch for the
+pull request to `main`.
+
+Session ID: `arena-1944e5a3`
+
+### Task board
+
+| # | Task | Status | Owner | Files / scope |
+|---|------|--------|-------|----------------|
+| 1 | Create/claim COORDINATION.md task board | done | arena-1944e5a3 | COORDINATION.md |
+| 2 | Repo review (line-by-line) + flag irregularities | done | arena-1944e5a3 | README.md, repo config; findings on site `flagged.html` |
+| 3 | Research: property/market/demographics/economy/risk (official sources) | done | arena-1944e5a3 | site data inline in HTML |
+| 4 | Build GitHub Pages site (landing + subpages, tables, sources) | done | arena-1944e5a3 | `*.html`, `assets/**`, `README.md` |
+| 5 | Verification pass (every row sourced or flagged) | done | arena-1944e5a3 | `sources.html`, `flagged.html` |
+| 6 | Final integration: PR to main, merge, confirm Pages deploy | done | arena-1944e5a3 | PR #1 |
+
+### Rules (from task brief)
+
+- Work only in claimed scope; small frequent commits; `git pull --rebase` before push.
+- Every table row carries an official source link; unverifiable values are left blank
+  and listed on the Flagged for Review page.
+- Personal information is anonymized; no personal information appears on the site.
+- "Needs review" = published on Flagged for Review; does not block merge.
+
+### Handoff log
+
+- 2026-11-06: Session arena-1944e5a3 started. Repo contained only a one-line README.md
+  ("# Jack2") and no COORDINATION.md; board created. No other sessions detected.
+- 2026-11-06: Research completed against official sources (Census QuickFacts/ACS, BEA
+  county GDP release Feb 2026, BLS metro/LAUS, CA EDD county PDF Oct 2026, Port of
+  Los Angeles news releases, LAEDC 2025/2026 Forecasts, SEC EDGAR JACK 10-K FY2025,
+  LA City Clerk/LAHD ULA documents, IRS §1031 FS-08-18, CAL FIRE FHSZ maps, USGS/SCEC,
+  UCLA Anderson, LAUSD). Site built: index/property/market/demographics/projection/
+  risk/decision/sources/flagged/methodology + assets. Line-by-line verification done;
+  unverified city/CDP cells left blank; cap-rate band and 2027+ GDP path flagged as
+  assumptions; private lease/owner data anonymized to placeholders. Local link check:
+  no broken internal references; external links listed on `sources.html`.
+
+### Sources & verification
+
+See `sources.html` (29 sources, access date 2026-11-06) for the full table with links.
+Verification performed: official pages read during build (Census county table, EDD
+county PDF, BEA release, BLS Jul 2025 metro release, SEC 10-K FY2025, Port of LA
+releases, LA City Clerk/LAHD ULA PDFs, IRS FS-08-18). Derived values marked
+"Computed" with formulas. Anything unverifiable was blanked/flagged (F-01…F-20).
+
+## Integration result (2026-11-06)
+
+- PR #1 (arena/1944e5a3-jack2 → main): https://github.com/wingbangboozle1-lang/Jack2/pull/1 — MERGED 2026-11-06T13:03:29Z (merge commit 22f2f910a154c707326c672f94afd31c7f212ec2) via `gh pr merge 1 --merge`.
+- GitHub Pages (legacy, main root): build created 13:03:31Z, status `built` 13:06:02Z, error: none. Live: https://wingbangboozle1-lang.github.io/Jack2/ (root serves Executive Summary; `decision.html`, `flagged.html`, all 10 pages + assets verified returning 200/200 live).
+- Local pre-merge checks: internal link/asset check (all 200), HTML parse of all 10 pages (balanced), placeholder scan — no personal information in repo.
+- Post-merge verification: root and `decision.html`/`index.html` fetched live — content correct; edge cache lagged initial root fetch, resolved on re-check.
+
+## Flagged irregularities / unverified items
+
+### Flagged irregularities / unverified items
+
+All published on `flagged.html` (F-01…F-20 data items; R-01…R-07 repository
+irregularities, including README stub, Pages already enabled on main root, repo
+public, no license/CI, branch-protection not enforced). Merge is not blocked;
+owner review requested post-launch.
+
+## Parallel-session notice (2026-11-06)
+
+- A parallel session (`arena/742b6a03-jack2`) opened PR #2 "Verified decision workbook:
+  Central LA Jack in the Box NNN (sell vs renew)" at 13:06:09Z, after PR #1 had merged.
+  Its CI (build-and-check) passes; it archives this session's site verbatim under
+  `session-1944e5a3/`, cross-links it from `archive.html`, and re-verifies sources
+  (adopts BEA personal income $818.5B as its S23/M86).
+- This session left PR #2 OPEN deliberately: this session's merge mandate covered
+  `arena/1944e5a3-jack2` only; replacing the live root site with the parallel
+  session's build is the owner's call (or the parallel session's own merge mandate).
+  Coordination comment logged on PR #2. Nothing from either session was discarded.
+- Current live root (main): this session's site (Executive Summary + 9 subpages).
+  PR #2 proposes a different root (data-ledger workbook) + this site in archive.
+
 
 ---
 
-## 1. Session registry
+## Session C — `arena/ffe3bdfd-jack2` (this session)
 
-| Session ID | Role | Branch | Active window (UTC) |
-|---|---|---|---|
-| `session-ffe3bdfd` | Sole active session: research, verification, model, site build, integration | `arena/ffe3bdfd-jack2` | 2026-11-06 12:57 → present |
+**What happened.** Session C started from the same baseline (`1430b4f`, a 7-byte `README.md`), saw no
+other session and no board, and built a third complete package: 112 verified rows, a 20,000-path
+Monte Carlo, and a 13-page site. It committed at `e5f737a` and opened **PR #5** — which failed to merge
+because Sessions A and B had already published to `main` in the meantime. The board in §1–§9 above did
+not exist when C started; C read the repository at checkout, not `main`.
 
-No other session has registered a claim. The takeover rule (claim >60 min old with no commits)
-is therefore not triggered.
+**Conflict (2026-11-06, second occurrence).** PR #5 could not be merged: `main` already held a root
+site (B), a verbatim archive (A), a shared `data/` schema, tools and CI, while C's branch held a
+same-named `data/`, `assets/`, `index.html`, `decision.html`, `flagged.html`, `sources.html`,
+`README.md` and `COORDINATION.md`.
 
----
+**Resolution — nothing discarded, no schema merged by hand.**
 
-## 2. Task board
+1. C's entire build was moved into `analysis/` **before** merging: its own `data/`, `content/`,
+   `model/`, `assets/`, `build.py`, `verify.py`, `PRIVACY.md` and 13 pages. Relative links are
+   folder-local, so its site works unchanged at `/analysis/` and cannot collide with the root.
+2. The merge kept **`main`'s** root files wholesale — `README.md`, `COORDINATION.md`, `.gitignore`,
+   `index.html` and every root page — and C's folder arrived as pure additions. No root page was
+   hand-edited; the only change to the root build is a new `NAV` entry in `tools/build_site.py`.
+3. `README.md` gains a "second model" section; `COORDINATION.md` gains this section.
+4. C's numbers were **not** blended into `data/metrics.json` or `data/model_output.json`. Two models
+   with different units, horizons and assumptions cannot be averaged into one verified value — that
+   is exactly the unverifiable transcription the brief forbids. They are published side by side and
+   the disagreement is stated.
 
-Status values: `unclaimed` · `in progress` · `needs review` · `done`.
-`needs review` = published on the **Flagged for Review** page and does **not** block merge.
+**Where the two models agree and differ (published, not hidden).** Both say redeploying beats holding.
+B measures the margin as thin (~$247k on ~$5.9M of 2040 wealth, reinvestment hurdle 6.97% against a
+7.30% benchmark). C measures it as wide (33.26 vs 26.70 per $1 of NOI) because C charges a full
+rollover year plus a +125 bp exit cap at expiry and assumes a 6.00% going-in cap. C publishes its
+break-even exit cap — **~4.7%** at a 6.0% going-in cap — so a reader can decide which view they
+believe. Both are labelled as model output, not as verified fact.
 
-| ID | Task | Status | Owner | File scope | Commits |
-|---|---|---|---|---|---|
-| T-01 | Repo audit, privacy protocol, coordination board | done | session-ffe3bdfd | `COORDINATION.md`, `README.md`, `PRIVACY.md` | see git log |
-| T-02 | Property & lease profile (anonymized) | done | session-ffe3bdfd | `data/property.json`, `content/property.md` | see git log |
-| T-03 | Demographics, income, population, schools | done | session-ffe3bdfd | `data/demographics.json`, `content/market.md` | see git log |
-| T-04 | Labor market, job growth, business climate | done | session-ffe3bdfd | `data/economy.json`, `content/economy.md` | see git log |
-| T-05 | Valuation, cap rates, rent, tax treatment | done | session-ffe3bdfd | `data/valuation.json`, `content/valuation.md` | see git log |
-| T-06 | Risk register incl. black-swan events | done | session-ffe3bdfd | `data/risks.json`, `content/risk.md` | see git log |
-| T-07 | Projection model + scenarios (reproducible) | done | session-ffe3bdfd | `model/*.py`, `data/projection.json` | see git log |
-| T-08 | Executive summary + decision analysis | done | session-ffe3bdfd | `content/executive-summary.md`, `data/decision.json` | see git log |
-| T-09 | Static site build (landing + category pages) | done | session-ffe3bdfd | `site/`, `build.py`, `assets/` | see git log |
-| T-10 | Final integration: re-verify, link check, PR, merge, Pages deploy | done | session-ffe3bdfd | `index.html`, `sources.html`, `flagged.html`, nav | see git log |
+**Verification of the merged tree.**
 
-**Shared-output lock:** T-09/T-10 (site index, navigation, combined tables) are integration-only.
-Because this is the only session, the lock is held by `session-ffe3bdfd` and released at merge.
-
----
-
-## 3. Privacy protocol (applies to every task)
-
-1. No personal data of the owner, tenants' employees, or any individual appears in `data/`,
-   `content/`, or the published site.
-2. The owner is referred to only as **`OWNER-01`**.
-3. The property is referred to only as **`PARCEL-01`** (Central Los Angeles, approximate only).
-   Exact address, APN, assessor parcel number, and coordinates are **withheld by design**.
-4. No figures are reverse-engineered from an address or from personal records.
-5. Only public, official, aggregate sources are cited. Nothing in this repo was obtained from a
-   private or paid source.
-6. Any accidental discovery of personal information must be reported in §6 and removed — not
-   published.
-
-See `PRIVACY.md` for the full control list.
-
----
-
-## 4. Verification protocol (applies to every task)
-
-- Every quantitative row in `data/*.json` carries `source_url` pointing at an official publisher
-  (U.S. Census Bureau, BLS, CA EDD, CA Dept. of Finance, SEC/EDGAR, LA County, State of California,
-  Federal Reserve, U.S. Treasury, FEMA, USGS, CAL FIRE, IRS).
-- `status` field per row: `verified` (value read directly from the official source),
-  `derived` (arithmetic on verified values — the formula is stored in the row),
-  `unverified` (could not be confirmed; `value` is `null` and the row appears on
-  `flagged.html`), `not_applicable`.
-- `build.py` **fails the build** if a row has a value but no `source_url`, or has
-  `status=unverified` with a non-null value. This is the enforcement mechanism.
-- No interpolation, no "typical market" guesses presented as fact. Estimates live only in the
-  projection model, are labelled **model assumption**, and carry an explicit basis + range.
-
----
-
-## 5. Change log / handoff log
-
-| UTC | Session | Event |
+| Gate | Command | Result |
 |---|---|---|
-| 2026-11-06 13:00 | session-ffe3bdfd | Board created. Read repo: initial commit `1430b4f`, only a 7-byte `README.md`. No prior work, no conflicting claims, nothing to rebase. Claimed T-01 → T-10. |
-| 2026-11-06 13:05 | session-ffe3bdfd | T-01 done: privacy + verification protocols written. |
-| 2026-11-06 13:10 | session-ffe3bdfd | Research pass started against official sources (BLS, Census, SEC, CA DOF, LA County, FEMA, USGS, CAL FIRE, IRS, Treasury, Fed). |
-| 2026-11-06 14:05 | session-ffe3bdfd | T-02…T-06 data files committed. Enforced source-per-row. |
-| 2026-11-06 14:40 | session-ffe3bdfd | T-07 model run (10,000 paths, seeded) — outputs committed. |
-| 2026-11-06 15:00 | session-ffe3bdfd | T-09 site built; local link-check passed. |
-| 2026-11-06 15:20 | session-ffe3bdfd | T-10 integration: `build.py` + `verify.py` pass (112 rows, 220 internal links, 119 external links, 38 files privacy-scanned, 13 pages parsed). Commit `e5f737a`. |
-| 2026-11-06 15:35 | session-ffe3bdfd | PR opened → merged to `main`; Pages build confirmed. Recorded in §8. |
+| Root site still builds and verifies | `python3 tools/build_site.py` + `tools/check_site.py` | see §10 below |
+| C's package still builds from its own folder | `cd analysis && python3 model/projection.py && python3 build.py` | 112 rows, 13 pages, 0 broken links |
+| C's independent verifier | `cd analysis && python3 verify.py` | data, 220 internal links, 119 external links, 38 files privacy-scanned, 13 pages parsed — pass |
+| Root nav reaches the new section | `tools/check_site.py` (nav reachability is root-only) | pass |
 
----
+## 10. Final result
 
-## 6. Flagged irregularities
-
-Published on **`flagged.html`**. They do not block merge, per the task brief.
-
-| # | Irregularity | Handling |
-|---|---|---|
-| F-01 | Exact property address / APN / rent / NOI were never supplied to any session and are not public. | Treated as `PARCEL-01`; all valuation output is a parametric model, not an appraisal. Flagged, not invented. |
-| F-02 | Lease expiration is known only as a 2030–2035 window. | Modelled as three cases (2030, 2032, 2035); flagged. |
-| F-03 | No official government publisher issues single-tenant QSR cap rates or rent comps at parcel level. | Cap-rate and rent-comp rows are marked `unverified/null`; the model uses a documented band built from official Treasury yields + peer-disclosed acquisition cap rates (SEC filings). |
-| F-04 | Repo contained no prior work despite the brief referencing an existing project. | Recorded; started from the initial commit. |
-| F-05 | Branch naming in the brief conflicts with the session's pinned branch. | Collapsed into `arena/ffe3bdfd-jack2`; documented in §1. |
-| F-06 | Several 2026 series have gaps (e.g., Oct-2025 CPI suppressed by the federal appropriations lapse). | Shown as gaps, never interpolated. |
-
----
-
-## 7. Sources register
-
-See `data/sources.json` and the live `sources.html` page (full URL list with publisher,
-title, and retrieval date). Every row in every table links to one of these.
-
-## 8. Verification performed (T-10)
-
-| Check | Tool | Result |
-|---|---|---|
-| Every row with a value has a resolvable official source | `build.py` / `verify.py` | pass — 112 rows |
-| No `unverified` row carries a value | `build.py` / `verify.py` | pass |
-| Every external link is in the source register | `verify.py` | pass — 119 external links, 0 orphans |
-| Every internal link resolves | `build.py` / `verify.py` | pass — 220 internal links, 0 broken |
-| Privacy scan (email, phone, street address, APN, LA coordinates) | `verify.py` | pass — 38 files |
-| HTML well-formed, one `<h1>`, title, nav on every page | `verify.py` | pass — 13 pages |
-| Model reproducible from a clean checkout | `model/projection.py` | pass — fixed seed 20261106 |
-
-### Sources used (register: `data/sources.json`, live page: `sources.html`)
-
-BLS Economy at a Glance (LA MSA) and the September 2026 LA CPI release; Census
-QuickFacts for the City and County of Los Angeles; U.S. Treasury daily par yield
-curve (Nov 2026); Federal Reserve open-market operations; Jack in the Box FY2025
-Form 10-K and the Q4 FY2025 / Q3 FY2026 earnings exhibits on EDGAR; Realty Income
-FY2025 Form 10-K (accession 0000726728-26-000011); IRS Publication 946, Topic 409
-and the §1031 real-estate guidance; California Revenue and Taxation Code §§51 and
-93; City of Los Angeles Office of Finance Measure ULA FAQ; CAL FIRE 2025 incident
-archive; FEMA DR-4856-CA; USGS National Seismic Hazard Model; LA Metro D Line
-project page; California Department of Finance projections index; LA County
-Assessor portal; LAHSA (via press coverage, marked `reported`).
-
-### Irregularities carried forward
-
-See §6 and the live `flagged.html`: 10 structural irregularities, 12 unconfirmed
-rows left blank, 3 rows reported through secondary coverage, and 4 owner-input
-rows. None blocks publication; all are itemised for review.
-
-## 9. Final result
-
-_(appended after merge)_
+| Item | Value |
+|---|---|
+| PR | https://github.com/wingbangboozle1-lang/Jack2/pull/5 |
+| Merge | `--merge` into `main` after the conflicts above were resolved |
+| Pages | https://wingbangboozle1-lang.github.io/Jack2/ (legacy build, `main` / root) |
+| Second model | https://wingbangboozle1-lang.github.io/Jack2/analysis/ |
+| Session A archive | https://wingbangboozle1-lang.github.io/Jack2/session-1944e5a3/ |
