@@ -12,8 +12,8 @@
 
 | Task | Status | Owner | Files / scope |
 |---|---|---|---|
-| T01 — Official-source research register | in progress | 50002478 | `data/research.json`, `research/` |
-| T02 — Scenario methodology and risk analysis | in progress | 50002478 | `data/analysis.json`, `scripts/model.mjs`, `tests/model.test.mjs` |
+| T01 — Official-source research register | implemented; integration checks pending | 50002478 | `data/research.json`, `research/` |
+| T02 — Scenario methodology and risk analysis | implemented; 15 model tests passing | 50002478 | `data/analysis.json`, `scripts/model.mjs`, `tests/model.test.mjs` |
 | T03 — Accessible dashboard and category pages | in progress | 50002478 | `site/`, `scripts/build.mjs`, `package.json`, `package-lock.json` |
 | T04 — Verification and privacy checks | in progress | 50002478 | `scripts/verify.mjs`, `tests/verify.test.mjs`, `reports/` |
 | T05 — Final integration, pull request, Pages deployment | in progress | 50002478 | `README.md`, `.github/workflows/`, `index.html`, `COORDINATION.md`, generated `dist/` (not tracked) |
@@ -26,6 +26,11 @@ All scopes were unclaimed at initial inspection. Shared index/navigation is gene
 - Repository review: `README.md:1` contains `# Jack2`; `README.md:2` is blank. No factual claims or personal information to verify or redact.
 - Research rule: official-government, official-company SEC, or issuing-agency sources only. Regional statistics are context, not evidence of the subject property's performance or precise location. Historical observations and analytical assumptions must be labeled separately.
 - No lease, rent roll, sale price, exact expiration date, tenant options, parcel, or financial records supplied. These fields will remain unverified in public outputs.
+
+- Research register committed/pushed at `48988a9`: 75 evidence/forecast rows, 28 blank property fields, 30 risks, 16 alternatives, 34 issuing-source records. Subsequent editorial pass added a scenario-hypothesis flag (44 total), corrected the Freddie excerpt to the issuing page's exact criteria wording, and relabeled generic evidence status as source-checked data rather than implying every estimate is a literal observation.
+- Source integrity: every nonempty evidence quote checked as a normalized substring of its registered issuing-source excerpt; all property values remain empty. Official-topic links on blank rows are not evidence that a missing value exists.
+- Model: deterministic monthly cash-flow engine, explicit dimensionless stress controls, no populated real-property inputs, same-basis sale comparison, 16 scenario/tail paths and 15 one-way sensitivity points. Initial tests caught a present-value decomposition omission of expiry-month releasing cost; fixed and covered. All 15 Node tests pass.
+- GitHub CLI authentication confirmed without exposing credentials. No conflicting claims or files observed. T03/T04 remain active; no shared index/navigation or deployment claim is complete yet.
 
 ## Completion record
 

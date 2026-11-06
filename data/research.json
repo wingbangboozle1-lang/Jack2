@@ -98,7 +98,7 @@
       "url": "https://www.freddiemac.com/pmms",
       "checked": "2026-11-06",
       "kind": "Government-sponsored enterprise primary",
-      "excerpt": "U.S. weekly mortgage rate averages as of 11/05/2026\n30-year Fixed-Rate Mortgage 7.18%\n15-year Fixed-Rate Mortgage 6.57%\nThe PMMS is focused on conventional, single-family originations with conforming loan limits as set by FHFA.",
+      "excerpt": "U.S. weekly mortgage rate averages as of 11/05/2026\n30-year Fixed-Rate Mortgage 7.18%\n15-year Fixed-Rate Mortgage 6.57%\nThe criteria include weekly conventional, single-family originations with conforming loan limits as set by FHFA.",
       "note": "Residential affordability/financing context only; not a quote for NNN commercial financing."
     },
     {
@@ -320,7 +320,7 @@
       "source_id": "census",
       "quote": "9,694,934",
       "implication": "Large regional market; does not establish a trade-area customer count.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -333,7 +333,7 @@
       "source_id": "census",
       "quote": "-3.2%",
       "implication": "Do not underwrite rent growth from an assumption of uninterrupted population growth.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -346,7 +346,7 @@
       "source_id": "census",
       "quote": "3,416,449",
       "implication": "County scale is not a substitute for a site-specific daytime and residential catchment.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -359,7 +359,7 @@
       "source_id": "census",
       "quote": "2.81",
       "implication": "Household composition matters, but no customer mix is inferred.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -372,7 +372,7 @@
       "source_id": "census",
       "quote": "$90,112",
       "implication": "Assess value-menu affordability; county median hides neighborhood variation.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -385,7 +385,7 @@
       "source_id": "census",
       "quote": "$45,792",
       "implication": "Different definition from BEA personal income; not directly interchangeable.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -398,7 +398,7 @@
       "source_id": "census",
       "quote": "13.3%",
       "implication": "Price sensitivity and disposable-income pressure are relevant to tenant sales.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -411,7 +411,7 @@
       "source_id": "bea",
       "quote": "$818.5 billion",
       "implication": "Economic scale is substantial; aggregate income is not local restaurant sales.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -424,7 +424,7 @@
       "source_id": "census",
       "quote": "80.9%",
       "implication": "Human-capital context; no direct capitalization-rate uplift inferred.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -437,7 +437,7 @@
       "source_id": "census",
       "quote": "36.0%",
       "implication": "Education can support employability, but does not establish neighborhood demand.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -450,7 +450,7 @@
       "source_id": "school",
       "quote": "86.5% graduated",
       "implication": "School quality can matter to residential reinvestment; actual assigned schools remain unknown.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -463,7 +463,7 @@
       "source_id": "school",
       "quote": "Four Year = 84.6%",
       "implication": "Do not label the combined 86.5% measure as a four-year rate.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -476,7 +476,7 @@
       "source_id": "edd",
       "quote": "4.8 percent in September 2026",
       "implication": "Improvement versus a year earlier, but not a property-level demand guarantee.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -489,7 +489,7 @@
       "source_id": "edd",
       "quote": "4.5 percent in September 2026",
       "implication": "Keep adjustment basis separate from the 4.8% household series.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -502,7 +502,7 @@
       "source_id": "edd",
       "quote": "4,539,800",
       "implication": "Large employment base; monthly payrolls fell by 4,100.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -515,7 +515,7 @@
       "source_id": "edd",
       "quote": "increased by 20,300 or 0.4 percent",
       "implication": "Modest growth argues for conservative, not automatic, rent escalation.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -528,7 +528,7 @@
       "source_id": "edd",
       "quote": "restaurants and other eating places (up 7,300)",
       "implication": "Sector employment grew despite brand-level sales pressure; neither proves this site’s health.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -541,7 +541,7 @@
       "source_id": "edd",
       "quote": "information (down 10,200)",
       "implication": "Uneven sector activity can affect office-adjacent and daytime food demand.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -580,7 +580,7 @@
       "source_id": "census",
       "quote": "4,059.28",
       "implication": "A broad county proxy cannot identify micro-location, access, frontage, or corner quality.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -593,7 +593,7 @@
       "source_id": "census",
       "quote": "2,466.9",
       "implication": "Density is regional context; drive-thru access and pedestrian barriers need site review.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -606,7 +606,7 @@
       "source_id": "census",
       "quote": "30.4",
       "implication": "Commuting patterns matter; no site traffic count is available.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -619,7 +619,7 @@
       "source_id": "census",
       "quote": "$834,200",
       "implication": "Housing wealth and affordability pressures coexist; not a commercial-property comparable.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -632,7 +632,7 @@
       "source_id": "census",
       "quote": "$1,954",
       "implication": "Housing cost burden can constrain discretionary spending; not commercial rent.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -645,7 +645,7 @@
       "source_id": "census",
       "quote": "22,250",
       "implication": "Construction activity is a regional driver; series differs from the EDD profile’s permit categories.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -658,7 +658,7 @@
       "source_id": "census",
       "quote": "304,988",
       "implication": "Diversified economic base reduces dependence on one industry, but not single-tenant property risk.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -671,7 +671,7 @@
       "source_id": "census",
       "quote": "44,000,801",
       "implication": "Older sector-sales baseline only; not current restaurant sales.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -684,7 +684,7 @@
       "source_id": "port",
       "quote": "1,042,652",
       "implication": "Trade is a support pillar; one record month does not eliminate tariff or shipping-cycle risk.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -697,7 +697,7 @@
       "source_id": "port",
       "quote": "up 19% compared with last September",
       "implication": "Positive logistics signal, geographically distant from an unspecified central-LA site.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -710,7 +710,7 @@
       "source_id": "film",
       "quote": "4,171 Shoot Days* from July through September, a 4.8 percent decrease",
       "implication": "Production-related daytime demand remains a vulnerability; sound stages are not fully captured.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -723,7 +723,7 @@
       "source_id": "tourism",
       "quote": "49.5 million visitors in 2025",
       "implication": "Tourism supports demand, but benefits depend on location and visitor routes.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -749,7 +749,7 @@
       "source_id": "metro",
       "quote": "This Opened on May 8, 2026.",
       "implication": "Improved regional access; no uplift assigned without the actual site and walking/driving access.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -762,7 +762,7 @@
       "source_id": "metro",
       "quote": "Section 2 remains active in Beverly Hills and Century City",
       "implication": "Construction can interrupt access; future completion dates are not asserted.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -775,7 +775,7 @@
       "source_id": "cpi-local",
       "quote": "increased 3.7 percent for the 12 months ending in September",
       "implication": "Nominal sales growth can reflect prices rather than more customers.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -788,7 +788,7 @@
       "source_id": "cpi-local",
       "quote": "less food and energy increased 2.6 percent over the year",
       "implication": "Inflation pressure persists; lease bumps may not match landlord replacement costs.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -801,7 +801,7 @@
       "source_id": "cpi-local",
       "quote": "Food away from home advanced 2.8 percent.",
       "implication": "Menu-price inflation is not equivalent to unit sales or traffic growth.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -814,7 +814,7 @@
       "source_id": "cpi-local",
       "quote": "Gasoline prices increased 30.8 percent.",
       "implication": "Fuel costs can squeeze customers and deliveries; a severe consumer-pressure signal.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -827,7 +827,7 @@
       "source_id": "fed",
       "quote": "3-3/4 to 4 percent",
       "implication": "Policy-rate context only; do not use as the property discount rate.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -840,7 +840,7 @@
       "source_id": "freddie",
       "quote": "7.18%",
       "implication": "Financing and household affordability context; not a commercial loan quote.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -853,7 +853,7 @@
       "source_id": "jack-q3",
       "quote": "2,115 restaurants",
       "implication": "Brand scale does not establish the subject tenant’s creditworthiness.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -866,7 +866,7 @@
       "source_id": "jack-q3",
       "quote": "Franchise | (1.2 %) | (7.2 %) | (4.4 %) | (3.3 %)",
       "implication": "Franchise demand weakness makes unit-level rent coverage essential.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -879,7 +879,7 @@
       "source_id": "jack-q3",
       "quote": "System | (1.1 %) | (7.1 %) | (4.2 %) | (3.3 %)",
       "implication": "Improvement from prior-year declines is not the same as positive growth.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -892,7 +892,7 @@
       "source_id": "jack-q3",
       "quote": "$ | 1,427 | $ | 1,460",
       "implication": "AUV is not this store’s sales and is not rent coverage. Table units are thousands.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -905,7 +905,7 @@
       "source_id": "jack-q3",
       "quote": "Closed | (2) | (38) | (40)",
       "implication": "A national brand can remain operating while individual locations close.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -918,7 +918,7 @@
       "source_id": "jack-q3",
       "quote": "4.6% in the quarter and $17.7 million, or 6.8% year-to-date",
       "implication": "Brand landlords are experiencing revenue pressure; review operator payment history.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -931,7 +931,7 @@
       "source_id": "jack-q3",
       "quote": "approximately $11.0 million resulting from delayed payments from franchisees",
       "implication": "Payment deferrals are a concrete warning against relying only on the brand name.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -944,7 +944,7 @@
       "source_id": "jack-q3",
       "quote": "7.624% Fixed Rate Senior Secured Notes",
       "implication": "Issuer-specific financing context, not the owner’s borrowing rate or a cap rate.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -957,7 +957,7 @@
       "source_id": "jack-q3",
       "quote": "we were in compliance with all of our debt covenant requirements and were not subject to any rapid amortization events.",
       "implication": "Balance the adverse sales evidence against disclosed compliance; do not assert imminent corporate default.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -970,7 +970,7 @@
       "source_id": "jack-10k",
       "quote": "1,986, or 93%, were franchised",
       "implication": "Identify the actual lease obligor and guarantors; the brand may not guarantee rent.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -983,7 +983,7 @@
       "source_id": "jack-10k",
       "quote": "approximately 70% of our systemwide restaurants are located in the states of California and Texas.",
       "implication": "California regulatory and economic conditions are material to the brand.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -996,7 +996,7 @@
       "source_id": "wage",
       "quote": "at least $20.00 per hour",
       "implication": "Tenant labor costs affect rent coverage; confirm current applicable council/local rate before underwriting.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1009,7 +1009,7 @@
       "source_id": "wage-general",
       "quote": "$16.90 per hour",
       "implication": "Not the applicable floor for covered fast-food employees.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1022,7 +1022,7 @@
       "source_id": "boe",
       "quote": "reassess the property to its current fair market value",
       "implication": "Buyer underwriting and some extension structures can be affected; model actual tax consequences.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1035,7 +1035,7 @@
       "source_id": "boe",
       "quote": "35 years or more (including written renewal options)",
       "implication": "Do not sign a long extension without property-tax counsel.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1048,7 +1048,7 @@
       "source_id": "ula",
       "quote": "$5,400,000 and $10,900,000",
       "implication": "Jurisdiction and price unknown. Additional ULA rates are 4% / 5.5%; city base tax is separate.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1061,7 +1061,7 @@
       "source_id": "irs",
       "quote": "identified within 45 days",
       "implication": "An exchange can defer eligible gain but adds timing and replacement-asset risk.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1074,7 +1074,7 @@
       "source_id": "fire-p",
       "quote": "23,448 Acres",
       "implication": "Urban-interface wildfire can cause regional displacement and insurance disruption.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1087,7 +1087,7 @@
       "source_id": "fire-p",
       "quote": "6,845 Structures Destroyed",
       "implication": "Current CAL FIRE count; County snapshot differs and is flagged.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1100,7 +1100,7 @@
       "source_id": "fire-e",
       "quote": "14,021 Acres",
       "implication": "A low-rainfall urban area is not immune to catastrophic fire exposure.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1113,7 +1113,7 @@
       "source_id": "fire-e",
       "quote": "9,419 Structures Destroyed",
       "implication": "Current CAL FIRE count; do not infer subject-site exposure.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -1165,7 +1165,7 @@
       "source_id": "insurance",
       "quote": "$22.4 billion distributed since January 2025",
       "implication": "Insurance recovery can be substantial but coverage, exclusions, deductibles and timing remain critical.",
-      "status": "Verified observation",
+      "status": "Source-checked data",
       "note": ""
     },
     {
@@ -2958,6 +2958,19 @@
       "source_id": "irs",
       "quote": "",
       "implication": "Owner finances, basis, liquidity needs and risk tolerance are absent. The recommendation is a reversible decision process, not a claim that a particular sale price or allocation is personally optimal.",
+      "status": "Flagged · nonblocking",
+      "note": "No personal or identifying property information is included."
+    },
+    {
+      "id": "F16",
+      "category": "Flagged for review",
+      "metric": "Scenario controls are hypotheses, not verified property inputs",
+      "value": "Needs review",
+      "period": "Checked 2026-11-06",
+      "geography": "Public research / [PROPERTY]",
+      "source_id": "repo",
+      "quote": "",
+      "implication": "The model uses dimensionless test points to demonstrate mechanics. Rent growth, discount rates, cap rates, downtime, costs and residual multiples are not market observations. Actual property fields remain blank; replace test controls only with independently verified evidence in a private analysis.",
       "status": "Flagged · nonblocking",
       "note": "No personal or identifying property information is included."
     }

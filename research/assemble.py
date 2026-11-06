@@ -106,7 +106,7 @@ S('freddie','Freddie Mac · Primary Mortgage Market Survey','https://www.freddie
 '''U.S. weekly mortgage rate averages as of 11/05/2026
 30-year Fixed-Rate Mortgage 7.18%
 15-year Fixed-Rate Mortgage 6.57%
-The PMMS is focused on conventional, single-family originations with conforming loan limits as set by FHFA.''',kind='Government-sponsored enterprise primary',note='Residential affordability/financing context only; not a quote for NNN commercial financing.')
+The criteria include weekly conventional, single-family originations with conforming loan limits as set by FHFA.''',kind='Government-sponsored enterprise primary',note='Residential affordability/financing context only; not a quote for NNN commercial financing.')
 S('jack-10k','Jack in the Box Inc. · FY2025 Form 10-K, SEC','https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm',
 '''FOR THE FISCAL YEAR ENDED SEPTEMBER 28, 2025
 As of September 28, 2025, Jack in the Box operated and franchised 2,136 quick-service restaurants
@@ -236,7 +236,7 @@ S('caltrans','California Department of Transportation','https://dot.ca.gov/progr
 The resulting counts are adjusted to an estimate of annual average daily traffic by compensating for seasonal influence, weekly variation and other variables''',note='State-highway counts; local-road counts require the relevant public-works agency. Passing traffic is not verified site access or customer traffic.')
 
 findings=[]
-def F(id, category, metric, value, period, geography, source, quote, implication, status='Verified observation', note=''):
+def F(id, category, metric, value, period, geography, source, quote, implication, status='Source-checked data', note=''):
     findings.append(dict(id=id, category=category, metric=metric, value=value, period=period, geography=geography, source_id=source, quote=quote, implication=implication, status=status, note=note))
 F('E01','Demographics','Population estimate','9,694,934','2025-07-01 · V2025','Los Angeles County','census','9,694,934','Large regional market; does not establish a trade-area customer count.')
 F('E02','Demographics','Population change from estimates base','−3.2%','2020-04-01 to 2025-07-01','Los Angeles County','census','-3.2%','Do not underwrite rent growth from an assumption of uninterrupted population growth.')
@@ -422,6 +422,7 @@ Q('F12','Wage FAQ is an initial-floor source','DIR explains the $20 floor effect
 Q('F13','UCLA forecast vintage predates latest policy decision','The June 2026 state outlook is not updated here to the October FOMC decision. Its rate commentary is historical context; only labeled economic forecast rows are retained.','ucla')
 Q('F14','Repository history and coordination','The initial repository contained only a two-line README and no evidence files. The coordination claim was committed and pushed before research. Arena fixes the working branch, so the requested alternate session-branch naming was not used.','repo','Review note')
 Q('F15','No individualized investment or tax conclusion','Owner finances, basis, liquidity needs and risk tolerance are absent. The recommendation is a reversible decision process, not a claim that a particular sale price or allocation is personally optimal.','irs')
+Q('F16','Scenario controls are hypotheses, not verified property inputs','The model uses dimensionless test points to demonstrate mechanics. Rent growth, discount rates, cap rates, downtime, costs and residual multiples are not market observations. Actual property fields remain blank; replace test controls only with independently verified evidence in a private analysis.','repo')
 
 requirements = [
  ('Q01','Privacy first; anonymize owner and property','Implemented','Public outputs use placeholders; no owner/property identifiers were supplied or collected. Static site has no forms, analytics, cookies or external runtime scripts.','boe'),
