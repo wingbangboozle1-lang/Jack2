@@ -124,6 +124,9 @@ def page(path, title, body, root=".", active=None, subtitle="", prefix=None):
         tgt = href
         if path == "index.html" and href == "index.html":
             tgt = "./"
+        elif href == "index.html":
+            # subpages live in site/; the dossier landing page is one level up
+            tgt = "../index.html"
         nav_parts.append(f'<a href="{esc(prefix)}{tgt}"{cur}>{esc(label)}</a>')
     nav = "".join(nav_parts)
     doc = f"""<!DOCTYPE html>
@@ -137,7 +140,7 @@ def page(path, title, body, root=".", active=None, subtitle="", prefix=None):
 </head>
 <body>
 <header class="site"><div class="wrap site-inner">
-  <div class="brand"><span class="mark">J</span><span>Jack2 · Net-Lease Dossier</span></div>
+  <div class="brand"><a href="{esc('..' if prefix else '../..')}/index.html" style="display:flex;align-items:center;gap:10px;color:inherit"><span class="mark">J</span></a><span>Jack2 · Net-Lease Dossier<sup style="font-size:9px;letter-spacing:.1em;color:var(--ink-faint)">SESSION 8149683c</sup></span></div>
   <nav class="main">{nav}</nav>
 </div></header>
 <main class="wrap">

@@ -160,3 +160,30 @@ _(none)_
 
 Verification tally: 126 VERIFIED, 2 DERIVED, 2 FLAGGED, 27 UNVERIFIED (blank by design).
 Live preview verified locally: all 16 pages and both assets return HTTP 200.
+
+## Session C — `arena-8149683c` (this branch)
+
+Third independent dossier, built in parallel with Sessions A and B and **not merged into their data
+layer**. Precedent followed: Session B preserved Session A verbatim under `session-1944e5a3/`; this
+session is preserved the same way under `session-8149683c/`. The published root is untouched except
+for one additive banner linking to this dossier, so nothing another session shipped is overwritten.
+
+| Item | Value |
+|---|---|
+| Landing page | `session-8149683c/index.html` |
+| Pages | 16 (executive summary, decision, projection, risk register, 8 data categories, sources, flagged, methodology) |
+| Data | 157 rows — 126 VERIFIED, 2 DERIVED, 2 FLAGGED, 27 UNVERIFIED (blank by design) |
+| Sources | 28, tiers A–D, `limitation` on every entry, tier C excluded from the model |
+| Engine | `session-8149683c/model/project_model.py` — reproducible, `--check` |
+| Builder | `session-8149683c/model/build_site.py` — every figure generated from JSON |
+| Checks | `session-8149683c/verification/verify.py` — 2,372 assertions, PASS |
+| Retrieval log | `session-8149683c/verification/LINK_CHECK.md` — 12 documented failures |
+| Root changes | `index.html` + `archive.html`: one additive banner each. `COORDINATION.md` (this section). |
+
+**Scope kept disjoint:** nothing under `data/`, `tools/`, `assets/`, root `*.html`, or
+`session-1944e5a3/` was modified. Session C writes only inside `session-8149683c/` plus this
+coordination record and the two additive banners.
+
+**Core finding, stated as a rule:** hold and extend when the owner's required return is below the
+sell/hold crossover, sell when it is above. At a 7.10% cap rate and six years of term the crossover is
+7.39%; at 7.85% it is 8.15%. "Sell at expiry" is dominated in every scenario tested (P(best) ≈ 0).
