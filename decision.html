@@ -3,264 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Decision &amp; Risk — JACK2 Property Decision Dashboard</title>
+<title>Decision - Central LA Jack in the Box NNN workbook</title>
+<meta name="description" content="Four scored strategies, the recommendation, the 6-step plan and the triggers that would change the answer.">
+<meta name="robots" content="index,follow">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-<header class="site-header">
-  <div class="inner">
-    <span class="brand"><span class="dot"></span>JACK2 — Property Decision Dashboard</span>
-    <nav class="nav">
-      <a href="index.html">Dashboard</a>
-      <a href="executive-summary.html">Executive Summary</a>
-      <a href="property.html">Property</a>
-      <a href="market.html">Market</a>
-      <a href="education.html">Education</a>
-      <a href="hazards.html">Hazards</a>
-      <a href="tenant.html">Tenant</a>
-      <a href="decision.html" class="active">Decision &amp; Risk</a>
-      <a href="data.html">Data Tables</a>
-      <a href="flagged.html">Flagged</a>
-      <a href="sources.html">Sources</a>
-    </nav>
-  </div>
-</header>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Workbook<small>Jack in the Box &middot; 2030&ndash;2035 lease expiry &middot; data as of 2026-11-06</small></span></a>
+  <nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html" aria-current="page">Decision</a><a href="market-economics.html">Market economics</a><a href="property-lease.html">Property &amp; lease</a><a href="valuation.html">Valuation inputs</a><a href="projection-model.html">Projection model</a><a href="risks.html">Risk register</a><a href="requirements.html">Requirements</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a><a href="deployment.html">Deployment</a><a href="archive.html">Session A archive</a></nav>
+</div></header>
+<main id="main" class="wrap">
 
-<div class="wrap">
-  <div class="page-head">
-    <h1>Decision &amp; Risk — Sell Before Expiry or Renew?</h1>
-    <p class="sub">The options, the risks of each, a transparent projection system built only on official inputs,
-    and a decision rule with deadlines and watch-list triggers. Facts are sourced on the other pages; this page's
-    judgments are marked <span class="chip gray">Analysis</span> and assumptions are marked
-    <span class="chip warn">Assumption</span>.</p>
-  </div>
+<div class="page-head"><p class="eyebrow">Decision</p><h1>The answer, the four strategies behind it, and the triggers that would change it</h1><p class="lede">Scored on what the client asked for: preserve wealth first, allow growth, keep risk manageable.</p></div>
 
-  <section>
-    <h2 class="section">The options</h2>
-    <div class="panel">
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>Option</th><th>What it means</th><th>When it fits</th><th>Key references</th></tr></thead>
-        <tbody>
-          <tr><td><strong>A. Sell now</strong></td><td>Market the property with its remaining ~4–9 years of NNN lease term</td><td>Liquidity, simplification, or de-concentration is the priority</td><td class="src"><a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html" target="_blank" rel="noopener">FTB</a> (tax friction) · <a href="https://www.bls.gov/eag/eag.ca_losangeles_msa.htm" target="_blank" rel="noopener">BLS</a> (market backdrop)</td></tr>
-          <tr><td><strong>B. Renew first, then hold or sell</strong></td><td>Negotiate an early extension (target ≥10 yrs, CPI-banded escalations); keep the income or exit at a higher price with long term</td><td>Default recommendation — best balance of value and risk</td><td class="src"><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">SEC 10-K</a> (renewal practice) · <a href="https://sustain.scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf" target="_blank" rel="noopener">SCAG</a> (area growth)</td></tr>
-          <tr><td><strong>C. Hold to expiry without renewal</strong></td><td>Collect rent until 2030–2035; accept vacancy/rollover risk</td><td>Not recommended (see risk matrix)</td><td class="src"><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">SEC 10-K</a> (closure program backdrop)</td></tr>
-          <tr><td><strong>D. Sell via §1031 exchange</strong></td><td>Variant of A/B: reinvest in like-kind US real property within statutory deadlines to defer gain</td><td>Preserving gross proceeds for redeployment</td><td class="src"><a href="https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips" target="_blank" rel="noopener">IRS</a> · <a href="https://www.irs.gov/instructions/i8824" target="_blank" rel="noopener">Form 8824</a></td></tr>
-          <tr><td><strong>E. Redevelop / reposition</strong></td><td>Capture central-LA land value through redevelopment</td><td>Only with verified zoning/entitlement path and risk appetite</td><td class="src"><a href="https://planning.lacity.gov/" target="_blank" rel="noopener">LA City Planning</a> (zoning — unverified, flagged)</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small"><span class="chip gray">Analysis</span> Tax mechanics referenced: §1031 real-property exchanges
-      (<a href="https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips" target="_blank" rel="noopener">IRS</a>;
-      45-day identification / 180-day closing per <a href="https://www.irs.gov/instructions/i8824" target="_blank" rel="noopener">Form 8824 instructions</a>);
-      California taxes capital gains as ordinary income with no preferential rate
-      (<a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html" target="_blank" rel="noopener">FTB</a>);
-      Prop 13 caps assessed-value growth at 2%/yr and reassesses only on ownership change or new construction
-      (<a href="https://boe.ca.gov/pdf/pub800-10.pdf" target="_blank" rel="noopener">BOE Pub 800-10</a>).</p>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section">Risk matrix by option</h2>
-    <div class="panel">
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>Risk</th><th>A. Sell now</th><th>B. Renew → hold/sell</th><th>C. Hold to expiry</th><th>D. §1031</th><th>E. Redevelop</th></tr></thead>
-        <tbody>
-          <tr><td><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">Tenant non-renewal / site closure</a></td><td>Eliminated at closing</td><td>Low (locked), residual credit risk</td><td><strong>High</strong> at expiry</td><td>Eliminated</td><td>Eliminated</td></tr>
-          <tr><td><a href="#table1">Cap-rate / interest-rate expansion</a></td><td>Low–moderate (immediate pricing)</td><td>Moderate at later exit</td><td>High (short-term pricing)</td><td>Low–moderate</td><td>High</td></tr>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">Rent-growth capture</a></td><td>Forgone</td><td>Full (CPI-banded)</td><td>Partial (to expiry)</td><td>Depends on replacement</td><td>N/A</td></tr>
-          <tr><td><a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html" target="_blank" rel="noopener">Tax friction</a></td><td>Immediate</td><td>Deferred</td><td>Deferred</td><td><strong>Deferred</strong> (fed + CA)</td><td>Deferred</td></tr>
-          <tr><td><a href="#table4">Vacancy / downtime / re-lease cost</a></td><td>None</td><td>None</td><td><strong>High</strong></td><td>None</td><td>Construction/lease-up risk</td></tr>
-          <tr><td>Earthquake (60% M≥6.7 / 30 yr — <a href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener">USGS</a>)</td><td>Transfers to buyer</td><td>Retained — explicit insurance decision required</td><td>Retained, longest window</td><td>Retained on replacement</td><td>Retained</td></tr>
-          <tr><td>Insurance-market hardening (<a href="https://www.insurance.ca.gov/0250-insurers/0300-insurers/0200-bulletins/bulletin-notices-commiss-opinion/upload/Bulletin-2025-4-Updated-Guidance-regarding-Insurer-Recoupment-Procedures-in-Response-to-Assessment-by-the-FAIR-Plan.pdf" target="_blank" rel="noopener">CDI</a>)</td><td>Largely transfers</td><td>Shared (NNN pass-through)</td><td>Retained</td><td>Shared</td><td>Retained</td></tr>
-          <tr><td><a href="tenant.html">Liquidity / buyer pool</a></td><td>Broad (term + brand)</td><td>Broadest (long WALT)</td><td>Narrow</td><td>Broad</td><td>Narrow (spec)</td></tr>
-          <tr><td><a href="https://www.irs.gov/instructions/i8824" target="_blank" rel="noopener">Execution complexity</a></td><td>Low</td><td>Moderate (negotiation)</td><td>None</td><td>Moderate (deadlines, QI)</td><td>High (entitlements)</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small"><span class="chip gray">Analysis</span> Ratings are qualitative judgments derived from the
-      verified facts on this site. Linked sources document the underlying probabilities and mechanisms.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section">Projection system (method + scenarios)</h2>
-    <div class="panel">
-      <h3 id="method">Method</h3>
-      <p>Two formulas, fully transparent, using only official inputs:</p>
-      <ul class="tight">
-        <li><span class="mono">NOI<sub>t</sub> = Current annual NOI × (1 + g)<sup>t</sup></span>, where <em>g</em> = the
-        lease's cost-of-living escalation. Scenario bands anchored to official LA CPI: <strong>Low 2.0% / Base 3.0% /
-        High 3.7%</strong> (recent 12-month LA CPI prints range 2.9–3.7% —
-        <a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">BLS</a>).
-        <span class="chip warn">Assumption</span> — actual escalation terms are in the private lease abstract.</li>
-        <li><span class="mono">Value<sub>t</sub> = NOI<sub>t</sub> ÷ cap rate</span>, with the cap rate tested across
-        <strong>4.50%–7.25%</strong>. <span class="chip warn">Assumption</span> — no official source publishes cap rates;
-        the band is an illustrative sensitivity, not a forecast. Verify with broker opinions at decision time.</li>
-        <li>Area-demand context: LA County households are officially projected to grow ~+1.0%/yr to 2030 and
-        employment +0.27%/yr to 2050 (<a href="https://sustain.scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf" target="_blank" rel="noopener">SCAG</a>),
-        supporting rent-market fundamentals without relying on them for arithmetic.</li>
-      </ul>
-
-      <h3 id="table1">Table 1 — What each dollar of NOI is worth (value = NOI ÷ cap rate)</h3>
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>Exit cap rate</th><th>4.50%</th><th>5.00%</th><th>5.50%</th><th>5.75%</th><th>6.00%</th><th>6.50%</th><th>7.00%</th><th>7.25%</th></tr></thead>
-        <tbody>
-          <tr><td><a href="#method">Value multiple (× NOI)</a></td><td class="num">22.22×</td><td class="num">20.00×</td><td class="num">18.18×</td><td class="num">17.39×</td><td class="num">16.67×</td><td class="num">15.38×</td><td class="num">14.29×</td><td class="num">13.79×</td></tr>
-          <tr><td><a href="#method">Value per $100k NOI</a></td><td class="num">$2.222M</td><td class="num">$2.000M</td><td class="num">$1.818M</td><td class="num">$1.739M</td><td class="num">$1.667M</td><td class="num">$1.538M</td><td class="num">$1.429M</td><td class="num">$1.379M</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small"><span class="chip info">Computed</span> — arithmetic (1 ÷ cap rate); no market data implied.</p>
-
-      <h3 id="table2">Table 2 — Rent escalation factors by scenario (CPI-linked)</h3>
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>Scenario (escalation g)</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>Year 5</th><th>Year 7</th><th>Year 10</th></tr></thead>
-        <tbody>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">Low 2.0%</a></td><td class="num">1.0200</td><td class="num">1.0404</td><td class="num">1.0612</td><td class="num">1.1041</td><td class="num">1.1487</td><td class="num">1.2190</td></tr>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">Base 3.0%</a></td><td class="num">1.0300</td><td class="num">1.0609</td><td class="num">1.0927</td><td class="num">1.1593</td><td class="num">1.2299</td><td class="num">1.3439</td></tr>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">High 3.7%</a></td><td class="num">1.0370</td><td class="num">1.0754</td><td class="num">1.1152</td><td class="num">1.1992</td><td class="num">1.2896</td><td class="num">1.4381</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small"><span class="chip info">Computed</span> — (1+g)<sup>t</sup>. Bands anchored to
-      <a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">BLS LA CPI</a>.</p>
-
-      <h3 id="table3">Table 3 — Cap-rate risk dominates rent growth</h3>
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>Move</th><th>Effect on value (at constant other input)</th></tr></thead>
-        <tbody>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">Rent grows +3.0%/yr for 3 years</a></td><td class="num">+9.3%</td></tr>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">Rent grows +3.0%/yr for 5 years</a></td><td class="num">+15.9%</td></tr>
-          <tr><td><a href="https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm" target="_blank" rel="noopener">Rent grows +3.0%/yr for 7 years</a></td><td class="num">+23.0%</td></tr>
-          <tr><td><a href="#table1">Cap rate widens 5.25% → 5.75%</a></td><td class="num">−8.7%</td></tr>
-          <tr><td><a href="#table1">Cap rate widens 5.25% → 6.25%</a></td><td class="num">−16.0%</td></tr>
-          <tr><td><a href="#table1">Cap rate widens 5.75% → 6.25%</a></td><td class="num">−8.0%</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small"><span class="chip info">Computed</span> — one year of cap-rate widening can erase years of
-      CPI-linked rent growth. This is the quantitative case for locking a long lease term before any planned exit:
-      term is the lever that <em>narrows</em> the exit cap a buyer will require.</p>
-
-      <h3 id="table4">Table 4 — Illustrative paths for $100,000 of current annual NOI</h3>
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>Path</th><th>Math</th><th>Indicative value</th></tr></thead>
-        <tbody>
-          <tr><td><a href="#method">Sell now</a></td><td class="mono">$100,000 ÷ 5.75%</td><td class="num">$1,739,130</td></tr>
-          <tr><td><a href="#method">Renew now → sell in year 3</a> (Base case rent growth, tighter cap for long WALT)</td><td class="mono">$100,000 × 1.03³ ÷ 5.25%</td><td class="num">$2,081,385</td></tr>
-          <tr><td><a href="#method">Hold, sell in year 5 with term remaining</a></td><td class="mono">$100,000 × 1.03⁵ ÷ 5.75%</td><td class="num">$2,016,129</td></tr>
-          <tr><td><a href="#method">Hold past expiry → sell vacant in year 5</a></td><td class="mono">$100,000 × 1.03⁵ ÷ 7.25%</td><td class="num">$1,598,999</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="small"><span class="chip info">Computed</span> with <span class="chip warn">Assumption</span> cap rates.
-      The spread between the best and worst path (≈$482K per $100K of NOI, ~30%) is driven by term and tenant
-      occupancy, not by rent growth — the central quantitative finding of this analysis.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section">Recommendation and decision rules</h2>
-    <div class="panel">
-      <div class="callout ok">
-        <p><strong>Recommended course (analysis):</strong> <strong>Option B — negotiate an early renewal now</strong>
-        (target ≥10 years, CPI-banded escalations, corporate guarantee where possible), then choose to hold the
-        income stream or sell with a long lease term. <strong>Fallback: sell via §1031 while ≥5–7 years of term
-        remain</strong> if renewal terms are not market-competitive by the deadline. <strong>Reject Option C</strong>
-        (passive hold through expiry) as the risk-dominant path.</p>
-      </div>
-      <h3>Why (from the verified record)</h3>
-      <ul class="tight">
-        <li><strong>The tenant renews as a matter of practice</strong> — its SEC filing says so verbatim
-        (<a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">10-K, Item 2</a>) — and California is the brand's core market (941 restaurants;
-        <a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">10-K</a>),
-        so an extension ask from a landlord with 4–9 years of term remaining is commercially reasonable.</li>
-        <li><strong>But the tenant's credit trajectory is negative</strong> (net losses, negative equity, 150–200-unit
-        closure program, dividend eliminated — <a href="tenant.html">Tenant page</a>), so the owner's exposure should
-        shrink over time, not grow: extension improves exit economics; it does not eliminate credit risk.</li>
-        <li><strong>The area's fundamentals do not force a panic sale:</strong> long-run household and employment growth
-        are positive (<a href="https://sustain.scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf" target="_blank" rel="noopener">SCAG</a>),
-        the labor market is at 4.4% unemployment with growing food-service employment
-        (<a href="https://www.bls.gov/eag/eag.ca_losangeles_msa.htm" target="_blank" rel="noopener">BLS</a>),
-        and CPI supports the escalators.</li>
-        <li><strong>Tail risks argue against an open-ended hold:</strong> 60%/30-yr earthquake probability
-        (<a href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener">USGS</a>)
-        and insurance hardening (<a href="https://www.insurance.ca.gov/0250-insurers/0300-insurers/0200-bulletins/bulletin-notices-commiss-opinion/upload/Bulletin-2025-4-Updated-Guidance-regarding-Insurer-Recoupment-Procedures-in-Response-to-Assessment-by-the-FAIR-Plan.pdf" target="_blank" rel="noopener">CDI</a>).</li>
-        <li><strong>Preservation of wealth:</strong> a direct sale bears federal capital-gains tax plus California tax
-        at ordinary-income rates (<a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html" target="_blank" rel="noopener">FTB</a>);
-        §1031 defers both for real-property exchanges (<a href="https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips" target="_blank" rel="noopener">IRS</a>),
-        with 45/180-day mechanics (<a href="https://www.irs.gov/instructions/i8824" target="_blank" rel="noopener">Form 8824</a>).</li>
-      </ul>
-
-      <h3>Deadlines by expiry year (placeholder window 2030–2035)</h3>
-      <div class="table-scroll">
-      <table class="data">
-        <thead><tr><th>If lease expires…</th><th>Begin renewal talks</th><th>Sell-fallback window (keep ≥5–7 yrs of term)</th></tr></thead>
-        <tbody>
-          <tr><td>2030–2031</td><td><a href="tenant.html">Immediately (2026)</a></td><td>List by 2026–2027</td></tr>
-          <tr><td>2032–2033</td><td><a href="tenant.html">By 2027</a></td><td>2028–2029</td></tr>
-          <tr><td>2034–2035</td><td><a href="tenant.html">By 2028–2029</a></td><td>2030–2031</td></tr>
-        </tbody>
-      </table>
-      </div>
-
-      <h3>Watch-list triggers (any two should activate the sell branch)</h3>
-      <ul class="tight">
-        <li>This location appears in a closure announcement or goes dark.</li>
-        <li>Tenant or franchisee financial distress (bankruptcy filing, rent delinquency, default notice).</li>
-        <li>JIB same-store sales remain negative for more than 8 consecutive quarters
-        (currently −3.7% FY2025 — <a href="https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm" target="_blank" rel="noopener">10-K</a>).</li>
-        <li>Renewal offer freezes or caps escalations below the CPI band, or shifts costs back to the owner.</li>
-        <li>Insurance/tax pass-through disputes or material unreimbursed carry-cost increases.</li>
-        <li>Comparable-NNN cap rates exceed ~6.5% (non-official market observation — verify with brokers at decision time).</li>
-      </ul>
-
-      <h3>Balance for the owner as an individual</h3>
-      <ul class="tight">
-        <li><strong>Preservation:</strong> §1031 deferral; Prop 13 basis retained while holding
-        (<a href="https://boe.ca.gov/pdf/pub800-10.pdf" target="_blank" rel="noopener">BOE</a>); NNN pass-through of
-        taxes/insurance/maintenance; an explicit earthquake-insurance decision rather than a default.</li>
-        <li><strong>Growth:</strong> CPI-banded escalations (~3%/yr base case); area household growth
-        (+1.0%/yr to 2030 — <a href="https://sustain.scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf" target="_blank" rel="noopener">SCAG</a>);
-        redevelopment optionality (zoning unverified — flagged).</li>
-        <li><strong>Manageable-risk profile:</strong> extended WALT + explicit quake/insurance review + staged exit
-        checkpoints (reassess at each 5-year WALT threshold) + no over-concentration in one weakening tenant.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section">Black-swan stress notes</h2>
-    <div class="panel">
-      <ul class="tight">
-        <li><strong>Earthquake (quantified):</strong> 60% M≥6.7 within 30 years
-        (<a href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener">USGS</a>).
-        Post-event, a leased NNN asset's value depends on building integrity, insurance response, and tenant
-        continuation — all of which favor shorter holding periods or explicit coverage.</li>
-        <li><strong>Insurance cascade (precedent):</strong> Jan 2025 fires → $1B FAIR Plan assessment (first in 30+
-        years) and 50% recoupment surcharges (<a href="https://www.insurance.ca.gov/0250-insurers/0300-insurers/0200-bulletins/bulletin-notices-commiss-opinion/upload/Bulletin-2025-4-Updated-Guidance-regarding-Insurer-Recoupment-Procedures-in-Response-to-Assessment-by-the-FAIR-Plan.pdf" target="_blank" rel="noopener">CDI Bulletin 2025-4</a>) —
-        a permanent-cost repricing channel that reaches unburned areas.</li>
-        <li><strong>Pandemic-style shock (precedent):</strong> SCAG region lost 1.9M jobs in ~3 months in 2020;
-        unemployment peaked at 17.3% (<a href="https://www.scag.ca.gov/sites/default/files/2024-05/23-2987-tr-demographics-growth-forecast-final-040424.pdf" target="_blank" rel="noopener">SCAG</a>).
-        NNN rent collection held up better in QSR than in most retail segments, but the tail is real.</li>
-        <li><strong>Civil unrest / other shocks:</strong> historically present in LA (e.g., 1992); not officially
-        quantified here — treated as an unquantified tail, another argument for diversification over concentration.</li>
-      </ul>
-    </div>
-  </section>
+<div class="decision">
+  <h2>Do not choose between &#x27;sell&#x27; and &#x27;renew&#x27; as a slogan. Run a sequenced plan: strengthen the lease now, price the asset in 2027-2028, and sell into a 1031 exchange only if pricing and the replacement yield clear explicit thresholds.</h2>
+  <div class="rank"><span>1. Negotiate an early extension with a rent reset, then sell with a long WALT</span><span>2. Hybrid: extend 5 years now at a reset rent, keep a 2030-2035 sale window</span><span>3. Sell now</span><span>4. Hold to expiry, renew at market, keep the asset</span></div>
+  <h3>Why</h3>
+  <ul><li>The model shows the decision is not dominated by either side. Base case: selling and reinvesting at the verified 7.3% net-lease benchmark beats holding by about $0.25M of 2040 wealth; holding beats selling and reinvesting at the Treasury rate by about $1.36M. The answer turns on the reinvestment yield the owner can actually achieve - the breakeven is 6.97%.</li><li>Because the margin is thin, the highest-value action is not to sell or to hold, but to change the asset: secure a market-rent reset and a longer term. That is the only path that improves both the sell price and the hold economics.</li><li>Everything that could move the answer by more than the thin margin is a fact the owner has not yet supplied: actual rent, exact expiry, basis, debt, and the parcel&#x27;s hazard classification. So the plan below is trigger-based, not a blind instruction.</li></ul>
 </div>
 
-<footer class="site-footer">
-  <div class="inner">
-    Analysis compiled 2026-11-06 · Inputs verified from official sources · Not investment, legal, or tax advice — engage a broker, attorney, and CPA before executing any transaction ·
-    <a href="index.html">Dashboard</a> · <a href="flagged.html">Flagged items</a>
-  </div>
-</footer>
+<h2>The four strategies, scored</h2>
+<div class="grid g2">
+<div class="card">
+  <p class="eyebrow">D1 &middot; weighted score 3.80 / 5</p>
+  <h3>Sell now (2026-2027) and 1031-exchange into diversified net lease</h3>
+  <p>Capture today&#x27;s pricing before the short-WALT discount appears, defer gain with a Section 1031 exchange, and replace one tenant and one parcel with several.</p>
+  <h3>Arguments for</h3><ul><li>Removes single-tenant, single-parcel, single-metro concentration - the largest risk in the file (RK20).</li><li>Section 1031 defers the tax that would otherwise consume a large share of proceeds (S16, RK19).</li><li>Verified net-lease deployment benchmark is 7.3% (S10) versus the 6.97% reinvestment yield the base case needs to match holding - a thin but positive margin.</li><li>Avoids the short-WALT buyer pool problem entirely (RK05).</li></ul>
+  <h3>Arguments against</h3><ul><li>Gives up a 2% Prop 13 assessment cap in a 3.6% CPI environment (S6, S1) - a real, permanent benefit that is not transferable.</li><li>Forfeits the option value of a market-rent reset at 2030-2035 if contract rent is below market (RK03).</li><li>Execution risk: 45/180-day exchange identification rules (S16) and a 3.5%+ cost stack including city/county transfer taxes (S7, S8).</li><li>If the asset is actually worth more than the benchmark suggests, selling now may leave value on the table.</li></ul>
+  <p class="muted">Wealth preservation 5/5 &middot; Growth 3/5 &middot;
+  Execution risk (higher is safer) 2/5 &middot; Liquidity 5/5 &middot; Tax efficiency 4/5</p>
+</div>
+<div class="card">
+  <p class="eyebrow">D2 &middot; weighted score 3.95 / 5</p>
+  <h3>Negotiate an early extension with a rent reset, then sell with a long WALT</h3>
+  <p>Use the 2030-2035 expiry as leverage: trade the tenant a 10-20 year extension for a market rent reset and a credit guaranty, then sell the re-priced asset into the deepest possible buyer pool.</p>
+  <h3>Arguments for</h3><ul><li>Creates the value that D1 gives up: a market reset plus a long lease is the highest-priced version of this asset (RK03, RK05).</li><li>The tenant has structural incentive - its franchise term is 20 years and it reprices renewals to market anyway (S9).</li><li>Selling after the reset removes the short-WALT discount and attracts 1031 buyers who need term.</li><li>Keeps the 2% assessment cap (S6) while the extension is negotiated.</li></ul>
+  <h3>Arguments against</h3><ul><li>Requires the tenant to cooperate; a franchisee facing a $20/hour fast-food wage floor (S5) and a 3.8% AUV decline (S9) may not be able to absorb a higher rent.</li><li>Two-step execution (negotiate, then market) with timing risk on rates (S11).</li><li>Extending a lease you then sell can be seen by buyers as a captured premium rather than a gift.</li></ul>
+  <p class="muted">Wealth preservation 4/5 &middot; Growth 5/5 &middot;
+  Execution risk (higher is safer) 3/5 &middot; Liquidity 4/5 &middot; Tax efficiency 3/5</p>
+</div>
+<div class="card">
+  <p class="eyebrow">D3 &middot; weighted score 3.30 / 5</p>
+  <h3>Hold to expiry, renew at market, keep the asset</h3>
+  <p>Do nothing until the option window, then reprice at market and continue collecting NNN rent with an inflation-capped tax basis.</p>
+  <h3>Arguments for</h3><ul><li>Model base case: holding beats selling and reinvesting at the Treasury rate by about $1.36M of 2040 wealth, and beats it in every scenario tested.</li><li>Beats selling and reinvesting at the 7.3% net-lease benchmark in the bull case by about $0.43M (model output).</li><li>No transaction cost, no tax event, no reinvestment risk, and the Prop 13 basis persists (S6).</li><li>Zero action required until the option window opens - the cheapest path administratively.</li></ul>
+  <h3>Arguments against</h3><ul><li>In the bear case, holding loses about $0.69M versus selling and reinvesting at the net-lease benchmark.</li><li>Concentration risk compounds over 6-14 more years (RK20).</li><li>Wildfire, earthquake and insurance shocks are unhedged by diversification (RK12, RK13, RK15).</li><li>Leaves the owner exposed to a single franchisee&#x27;s credit (RK02).</li></ul>
+  <p class="muted">Wealth preservation 2/5 &middot; Growth 4/5 &middot;
+  Execution risk (higher is safer) 5/5 &middot; Liquidity 1/5 &middot; Tax efficiency 5/5</p>
+</div>
+<div class="card">
+  <p class="eyebrow">D4 &middot; weighted score 3.90 / 5</p>
+  <h3>Hybrid: extend 5 years now at a reset rent, keep a 2030-2035 sale window</h3>
+  <p>Take a short extension with a fair-market reset and a strengthened guaranty, then decide at the new expiration with full information and a re-priced asset.</p>
+  <h3>Arguments for</h3><ul><li>Locks in a rent reset (the model needs only +7.1% uplift to beat selling into the net-lease benchmark) while preserving the sale option.</li><li>Avoids both the short-WALT discount and the permanent loss of the Prop 13 basis.</li><li>Buys time to complete parcel-level hazard and insurance work that is currently unverified (M82-M85).</li><li>Limits downside: a 5-year extension is short enough to reprice again in a better market.</li></ul>
+  <h3>Arguments against</h3><ul><li>A short extension still leaves a short WALT at the next decision point.</li><li>Requires tenant consent and a guaranty the franchisee may not be able to give.</li><li>Splits the difference on every axis - the classic risk of a compromise.</li></ul>
+  <p class="muted">Wealth preservation 4/5 &middot; Growth 4/5 &middot;
+  Execution risk (higher is safer) 4/5 &middot; Liquidity 3/5 &middot; Tax efficiency 4/5</p>
+</div></div>
+
+<h2>The plan</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Step</th><th>Window</th><th>Action</th></tr></thead><tbody><tr><td>1</td><td>Now to +90 days</td><td>Assemble the twelve missing documents (P01-P12). Nothing else is decision-grade until rent, expiry date, basis and debt are known.</td></tr><tr><td>2</td><td>Now to +120 days</td><td>Order parcel-level hazard and insurance verification: FEMA flood zone, CAL FIRE/LACoFD FHSZ, CGS seismic and liquefaction, and a current property quote (closes M82-M85).</td></tr><tr><td>3</td><td>+90 to +180 days</td><td>Open the extension conversation with the franchisee. Ask for a fair-market reset with a floor, a 10-year extension, and a guaranty. Model any offer against the +7.1% uplift threshold.</td></tr><tr><td>4</td><td>+180 to +365 days</td><td>Obtain a broker opinion of value and an appraisal. If the implied cap rate is at or below 6.00%, sell. If it is above 7.00%, hold and extend instead (see the sensitivity grid).</td></tr><tr><td>5</td><td>If selling</td><td>Engage a qualified intermediary before listing, identify replacement property inside 45 days, close inside 180 days, and buy at least three properties to break the concentration (S16).</td></tr><tr><td>6</td><td>If holding</td><td>Build a reserve equal to 12 months of NOI against the earthquake/wildfire/insurance tail (RK12, RK13, RK15), and re-test the decision every 24 months.</td></tr></tbody></table></div>
+
+<h2>Decision triggers - check these before acting</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>If you learn that&hellip;</th><th>Then&hellip;</th></tr></thead><tbody><tr><td>Appraisal implies a cap rate of 6.00% or lower</td><td>Sell, and exchange into diversified net lease.</td></tr><tr><td>Appraisal implies a cap rate above 7.00%</td><td>Hold, extend, and re-test in 24 months.</td></tr><tr><td>Tenant will sign a 10-year extension at market with a guaranty</td><td>Take it, then market the asset with long WALT (D2).</td></tr><tr><td>Tenant refuses any reset and the option rent is fixed at a below-market number</td><td>Do not extend. Market the asset before the short-WALT discount deepens (D1).</td></tr><tr><td>Insurance quote exceeds 1.5% of value or coverage is unavailable</td><td>Treat as a sell trigger regardless of cap rate.</td></tr><tr><td>Parcel sits in a very-high fire hazard zone or a mapped liquefaction zone</td><td>Reduce the hold bias; obtain engineering and insurance clarity before any extension.</td></tr></tbody></table></div>
+
+<h2>For you as an individual, not just for the asset</h2>
+<div class="card">
+<ul><li>Wealth preservation first: a single-tenant, single-parcel, single-metro asset worth roughly $2.0M-$2.7M at the benchmark rent is a concentrated position. Diversification is the only free risk reduction available, and a 1031 exchange is the tax-efficient way to get it (S16).</li><li>Do not sell for the sake of selling: at the benchmark rent the asset prices below the $5.4M Measure ULA threshold, so the 4%/5.5% surtax does not bite, and the transfer-tax cost stack is about 0.56% plus brokerage (S7, S8). The friction is real but not disqualifying.</li><li>Keep the option alive: a 5-year extension preserves both the tax basis (S6) and the sale option, which is why D4 ranks second rather than last.</li><li>Reserve, then reinvest: whatever the decision, hold a 12-month NOI reserve outside the property. Every black-swan scenario in the register ends in a liquidity problem before it ends in a valuation problem.</li></ul>
+</div>
+
+<h2>What would make this recommendation wrong</h2>
+<ul>
+  <li><strong>If the actual rent is much higher than the benchmark.</strong> Then the asset may cross the $5.4M Measure ULA threshold, the cost stack changes, and the price-test around the threshold becomes the dominant decision. <span class="src"><a href="https://finance.lacity.gov/faq/measure-ula" target="_blank" rel="noopener noreferrer" title="City of Los Angeles Office of Finance - Real Property Transfer Tax and Measure ULA FAQ">S8 &#8599;</a></span></li>
+  <li><strong>If the lease has a fixed-price option.</strong> A below-market fixed option rent at the 2030&ndash;2035 window would make renewal cheap for the tenant and expensive for you &mdash; and would flip the ranking toward selling before the option is exercised.</li>
+  <li><strong>If the parcel is in a very-high fire hazard or mapped liquefaction zone.</strong> Insurance and engineering conclusions could override the financial ranking entirely. Both are currently unverified (M82&ndash;M85).</li>
+  <li><strong>If the owner needs liquidity or cannot tolerate concentration.</strong> Then D1 rises to first regardless of the modelled spread &mdash; a risk preference is not an error in the arithmetic.</li>
+</ul>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support &mdash; not an appraisal, not tax advice, not investment advice.</strong>
+  Every data value on this site links to the official source it was read from on 2026-11-06.
+  Values that could not be confirmed from an official source are blank and listed on the
+  <a href="flagged.html">Flagged for review</a> page. No personal or parcel-identifying information is published.</p>
+  <p>Built from <a href="sources.html">23 sources</a> &middot; <a href="verification.html">verification log</a> &middot;
+  <a href="deployment.html">deployment</a> &middot; reproduction: <code>python3 tools/build_site.py</code></p>
+</div></footer>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

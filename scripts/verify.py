@@ -17,7 +17,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = sorted(ROOT.glob("*.html"))
+SITE = ROOT / "session-b4ec6128"
+PAGES = sorted(SITE.glob("*.html"))
 errors, warnings = [], []
 
 # ---------------------------------------------------------------- check 1: links
@@ -34,9 +35,9 @@ for page in PAGES:
             errors.append(f"[link] {page.name}: broken internal link -> {url}")
         else:
             internal_targets.add(url.split("#")[0])
-css = ROOT / "assets" / "style.css"
+css = SITE / "assets" / "style.css"
 if not css.exists():
-    errors.append("[link] assets/style.css missing")
+    errors.append("[link] session-b4ec6128/assets/style.css missing")
 pages_without_css = [p.name for p in PAGES if 'href="assets/style.css"' not in p.read_text(encoding="utf-8")]
 if pages_without_css:
     errors.append(f"[link] pages missing stylesheet link: {pages_without_css}")
@@ -116,7 +117,7 @@ privacy_patterns = {
     "ssn": r"\b\d{3}-\d{2}-\d{4}\b",
     "apn-like": r"\b\d{4}[- ]\d{3}[- ]\d{3}\b",
 }
-for page in PAGES + [ROOT / "COORDINATION.md"]:
+for page in PAGES + [ROOT / "COORDINATION.md", ROOT / "README.md"]:
     if not page.exists():
         continue
     text = page.read_text(encoding="utf-8")
