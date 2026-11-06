@@ -1,0 +1,276 @@
+{
+  "config": {
+    "start_year": 2026,
+    "expiry_year": 2032,
+    "horizon_year": 2040,
+    "base_rent": 150000.0,
+    "discount_rate": 0.08,
+    "reinvest_treasury": 0.049,
+    "reinvest_netlease": 0.073,
+    "transfer_cost_formula": "3.00% brokerage + 0.50% closing + 0.11% county DTT + 0.45% city DTT + Measure ULA tier (4.0% above $5.4M / 5.5% at $10.9M)"
+  },
+  "scenarios": [
+    {
+      "id": "bear",
+      "label": "Bear",
+      "narrative": "Rates stay high, exit cap 7.50%, 1.5% escalators, tenant negotiates rent down 10% at renewal.",
+      "exit_cap": 0.075,
+      "escalation": 0.015,
+      "renew_prob": 0.55,
+      "reprice": 0.9,
+      "sell_now_price": 2000000.0,
+      "sell_now_cost_rate": 0.04059999999999999,
+      "sell_now_net": 1918800.0,
+      "sell_now_wealth_treasury": 3748750.56742183,
+      "sell_now_wealth_netlease": 5145479.085805913,
+      "hold_to_expiry_wealth": 4622408.392318861,
+      "renew_wealth": 5148278.421288623,
+      "vacate_wealth": 3608797.408729828,
+      "hold_expected_wealth": 4455511.965637165,
+      "delta_hold_vs_sell_treasury": 706761.3982153353,
+      "delta_hold_vs_sell_netlease": -689967.1201687483,
+      "npv_treasury": 1276303.5219951773,
+      "npv_hold": 1516928.2436268541,
+      "renewed_rent": 147614.84063225638,
+      "market_rent_at_expiry": 164016.48959139598
+    },
+    {
+      "id": "base",
+      "label": "Base",
+      "narrative": "Exit cap 6.50%, 2.0% escalators, renewal at then-current market rent, 75% renewal probability.",
+      "exit_cap": 0.065,
+      "escalation": 0.02,
+      "renew_prob": 0.75,
+      "reprice": 1.0,
+      "sell_now_price": 2307692.3076923075,
+      "sell_now_cost_rate": 0.04059999999999999,
+      "sell_now_net": 2214000.0,
+      "sell_now_wealth_treasury": 4325481.423948265,
+      "sell_now_wealth_netlease": 5937091.252852977,
+      "hold_to_expiry_wealth": 5220328.609916682,
+      "renew_wealth": 6201756.414387908,
+      "vacate_wealth": 4155798.231474904,
+      "hold_expected_wealth": 5690266.8686596565,
+      "delta_hold_vs_sell_treasury": 1364785.4447113918,
+      "delta_hold_vs_sell_netlease": -246824.38419332076,
+      "npv_treasury": 1472657.9099944353,
+      "npv_hold": 1937314.1837381606,
+      "renewed_rent": 168924.36288960002,
+      "market_rent_at_expiry": 168924.36288960002
+    },
+    {
+      "id": "bull",
+      "label": "Bull",
+      "narrative": "Rate relief compresses the exit cap to 5.50%, 2.5% escalators, market rent 15% above contract at renewal.",
+      "exit_cap": 0.055,
+      "escalation": 0.025,
+      "renew_prob": 0.85,
+      "reprice": 1.15,
+      "sell_now_price": 2727272.727272727,
+      "sell_now_cost_rate": 0.04059999999999999,
+      "sell_now_net": 2616545.4545454546,
+      "sell_now_wealth_treasury": 5111932.591938859,
+      "sell_now_wealth_netlease": 7016562.389735336,
+      "hold_to_expiry_wealth": 6032326.481292429,
+      "renew_wealth": 7900633.457209923,
+      "vacate_wealth": 4901802.21830862,
+      "hold_expected_wealth": 7450808.771374728,
+      "delta_hold_vs_sell_treasury": 2338876.1794358687,
+      "delta_hold_vs_sell_netlease": 434246.3816393912,
+      "npv_treasury": 1740413.8936297873,
+      "npv_hold": 2536710.1133000148,
+      "renewed_rent": 200047.1146417235,
+      "market_rent_at_expiry": 173954.0127319335
+    }
+  ],
+  "breakevens": {
+    "required_reinvest_yield_pct": {
+      "bear": 6.202,
+      "base": 6.975,
+      "bull": 7.761
+    },
+    "exit_cap_hold_equals_sell_treasury_pct": 11.79,
+    "exit_cap_hold_equals_sell_netlease_pct": 6.012
+  },
+  "sensitivity": [
+    {
+      "exit_cap": 0.055,
+      "cells": [
+        {
+          "escalation": 0.015,
+          "wealth": 5968478.5441737175,
+          "delta_vs_sell_netlease": 31387.291320740245,
+          "delta_vs_sell_treasury": 1642997.1202254528
+        },
+        {
+          "escalation": 0.02,
+          "wealth": 6243296.138427509,
+          "delta_vs_sell_netlease": 306204.88557453174,
+          "delta_vs_sell_treasury": 1917814.7144792443
+        },
+        {
+          "escalation": 0.025,
+          "wealth": 6532915.2219913835,
+          "delta_vs_sell_netlease": 595823.9691384062,
+          "delta_vs_sell_treasury": 2207433.798043119
+        }
+      ]
+    },
+    {
+      "exit_cap": 0.06,
+      "cells": [
+        {
+          "escalation": 0.015,
+          "wealth": 5685700.781124476,
+          "delta_vs_sell_netlease": -251390.4717285009,
+          "delta_vs_sell_treasury": 1360219.3571762117
+        },
+        {
+          "escalation": 0.02,
+          "wealth": 5943738.617303257,
+          "delta_vs_sell_netlease": 6647.364450279623,
+          "delta_vs_sell_treasury": 1618257.1933549922
+        },
+        {
+          "escalation": 0.025,
+          "wealth": 6215573.6249647755,
+          "delta_vs_sell_netlease": 278482.37211179826,
+          "delta_vs_sell_treasury": 1890092.2010165108
+        }
+      ]
+    },
+    {
+      "exit_cap": 0.065,
+      "cells": [
+        {
+          "escalation": 0.015,
+          "wealth": 5446427.28931358,
+          "delta_vs_sell_netlease": -490663.96353939734,
+          "delta_vs_sell_treasury": 1120945.8653653152
+        },
+        {
+          "escalation": 0.02,
+          "wealth": 5690266.8686596565,
+          "delta_vs_sell_netlease": -246824.38419332076,
+          "delta_vs_sell_treasury": 1364785.4447113918
+        },
+        {
+          "escalation": 0.025,
+          "wealth": 5947053.812096108,
+          "delta_vs_sell_netlease": 9962.559243130498,
+          "delta_vs_sell_treasury": 1621572.388147843
+        }
+      ]
+    },
+    {
+      "exit_cap": 0.07,
+      "cells": [
+        {
+          "escalation": 0.015,
+          "wealth": 5241335.72490424,
+          "delta_vs_sell_netlease": -695755.5279487371,
+          "delta_vs_sell_treasury": 915854.3009559754
+        },
+        {
+          "escalation": 0.02,
+          "wealth": 5473005.369822286,
+          "delta_vs_sell_netlease": -464085.8830306912,
+          "delta_vs_sell_treasury": 1147523.9458740214
+        },
+        {
+          "escalation": 0.025,
+          "wealth": 5716893.972494393,
+          "delta_vs_sell_netlease": -220197.2803585846,
+          "delta_vs_sell_treasury": 1391412.548546128
+        }
+      ]
+    },
+    {
+      "exit_cap": 0.075,
+      "cells": [
+        {
+          "escalation": 0.015,
+          "wealth": 5063589.702416146,
+          "delta_vs_sell_netlease": -873501.5504368311,
+          "delta_vs_sell_treasury": 738108.2784678815
+        },
+        {
+          "escalation": 0.02,
+          "wealth": 5284712.070829899,
+          "delta_vs_sell_netlease": -652379.1820230782,
+          "delta_vs_sell_treasury": 959230.6468816344
+        },
+        {
+          "escalation": 0.025,
+          "wealth": 5517422.11150624,
+          "delta_vs_sell_netlease": -419669.1413467368,
+          "delta_vs_sell_treasury": 1191940.6875579758
+        }
+      ]
+    }
+  ],
+  "renewal_value": {
+    "renew_wealth_at_market_rent": 6201756.414387908,
+    "vacate_wealth": 4155798.231474904,
+    "required_rent_uplift_to_beat_sell_netlease_pct": 7.1,
+    "required_rent_uplift_to_beat_sell_treasury_pct": -39.24
+  },
+  "assumption_sensitivity": [
+    {
+      "change": "Exit cap 5.50% instead of 6.50%",
+      "hold_expected_wealth": 6243296.138427509,
+      "delta_vs_base_hold": 553029.2697678525,
+      "delta_vs_sell_netlease": 306204.88557453174,
+      "delta_vs_sell_treasury": 1917814.7144792443
+    },
+    {
+      "change": "Rent reset 15% higher at renewal",
+      "hold_expected_wealth": 6211955.114237232,
+      "delta_vs_base_hold": 521688.24557757564,
+      "delta_vs_sell_netlease": 274863.8613842549,
+      "delta_vs_sell_treasury": 1886473.6902889675
+    },
+    {
+      "change": "Renewal probability 55% instead of 75%",
+      "hold_expected_wealth": 5281075.232077057,
+      "delta_vs_base_hold": -409191.63658259995,
+      "delta_vs_sell_netlease": -656016.0207759207,
+      "delta_vs_sell_treasury": 955593.8081287919
+    },
+    {
+      "change": "Exit cap 7.50% instead of 6.50%",
+      "hold_expected_wealth": 5284712.070829899,
+      "delta_vs_base_hold": -405554.79782975744,
+      "delta_vs_sell_netlease": -652379.1820230782,
+      "delta_vs_sell_treasury": 959230.6468816344
+    },
+    {
+      "change": "Rent reset 10% lower at renewal",
+      "hold_expected_wealth": 5342474.704941273,
+      "delta_vs_base_hold": -347792.16371838376,
+      "delta_vs_sell_netlease": -594616.5479117045,
+      "delta_vs_sell_treasury": 1016993.280993008
+    },
+    {
+      "change": "Escalation 2.5% instead of 2.0%",
+      "hold_expected_wealth": 5947053.812096108,
+      "delta_vs_base_hold": 256786.94343645126,
+      "delta_vs_sell_netlease": 9962.559243130498,
+      "delta_vs_sell_treasury": 1621572.388147843
+    },
+    {
+      "change": "Escalation 1.5% instead of 2.0%",
+      "hold_expected_wealth": 5446427.28931358,
+      "delta_vs_base_hold": -243839.57934607659,
+      "delta_vs_sell_netlease": -490663.96353939734,
+      "delta_vs_sell_treasury": 1120945.8653653152
+    },
+    {
+      "change": "Renewal probability 85% instead of 75%",
+      "hold_expected_wealth": 5894862.686950957,
+      "delta_vs_base_hold": 204595.8182913009,
+      "delta_vs_sell_netlease": -42228.56590201985,
+      "delta_vs_sell_treasury": 1569381.2630026927
+    }
+  ]
+}

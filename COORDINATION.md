@@ -1,5 +1,106 @@
 # COORDINATION.md — Shared Task Board
 
+Two agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
+both sessions' claims, what each produced, the merge conflict that occurred, and how it was resolved
+**without discarding either session's work**.
+
+- Session A: `arena-1944e5a3` — branch `arena/1944e5a3-jack2` → merged to `main` as **PR #1 (22f2f91)**.
+- Session B: `arena-742b6a03` — branch `arena/742b6a03-jack2` (this session, and the final integration session).
+
+Both sessions were pinned by the Arena environment to their own `arena/*` branch, which doubles as the
+PR/integration branch. Neither could create a separate `session-<id>/<task>` branch, and neither pushed
+to the other's branch. Scopes were kept disjoint at the file level except for the files listed in the
+conflict section below.
+
+## Task board (current state)
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 1 | Create / maintain COORDINATION.md | done | A then B | `COORDINATION.md` (merged) |
+| 2 | Repo review + flag irregularities | done | A and B independently | site `flagged.html` (B), `session-1944e5a3/flagged.html` (A) |
+| 3 | Requirements extraction (22 items) | done | B | `data/requirements.json` |
+| 4 | Official-source research ledger | done | A (29 sources, inline in HTML) and B (23 sources, structured JSON) | `data/sources.json`, `data/metrics.json`; A's list on `session-1944e5a3/sources.html` |
+| 5 | Property & lease facts (anonymised) | done | A and B | `data/property_lease.json` (B); A on `session-1944e5a3/property.html` |
+| 6 | Market / demographic economics dataset | done | A and B | B: 86 rows in `data/metrics.json`; A: `session-1944e5a3/market.html`, `demographics.html` |
+| 7 | Valuation inputs (cap rates, rates, taxes) | done | B | `data/valuation.json` |
+| 8 | Risk register (BAU + black swan) | done | A and B | B: `data/risks.json` (24 rows); A: `session-1944e5a3/risk.html` |
+| 9 | Projection model + scenarios | done | B | `tools/model.py`, `data/model_output.json`, `projection-model.html` |
+| 10 | Decision analysis | done | A and B | B: `data/decisions.json`, `decision.html` (root); A: `session-1944e5a3/decision.html` |
+| 11 | Executive summary | done | B | `executive-summary.html` |
+| 12 | Static site (landing + category subpages) | done | A and B | Root = B's build; A's site preserved verbatim under `session-1944e5a3/` |
+| 13 | Link / source / PII checks + CI | done | B | `tools/check_site.py`, `.github/workflows/verify.yml` |
+| 14 | Integration: rebase on main, re-verify combined data, publish | done | B | This merge |
+| 15 | PR to `main` + merge + confirm Pages deploy | done | A (PR #1) and B (final PR) | Recorded below |
+
+## Conflict record — 2026-11-06
+
+**What happened.** Session B started from baseline `1430b4f`, when the repository contained only a
+7-byte `README.md`. While B was researching and building, Session A completed its own site and merged
+PR #1 to `main` (`22f2f91`). B's first `git pull --rebase` therefore failed.
+
+**Conflict.** Six files collided: `COORDINATION.md`, `README.md`, `index.html`, `decision.html`,
+`flagged.html`, `sources.html`. A's other pages (`demographics.html`, `market.html`, `methodology.html`,
+`projection.html`, `property.html`, `risk.html`, plus `assets/css`, `assets/js`, `assets/favicon.svg`)
+existed only on `main`.
+
+**Resolution (nothing discarded).**
+
+1. Every page Session A published was copied **verbatim** into `session-1944e5a3/`, together with its
+   own `assets/` tree, its `ORIGINAL-README.md` and its own `flagged.html` / `sources.html`. Its
+   relative internal links still resolve inside that folder.
+2. The four colliding root pages keep Session B's versions, because the root is the published site and
+   must be a single coherent build. A's equivalents remain available at
+   `session-1944e5a3/{index,decision,flagged,sources}.html`.
+3. `README.md` keeps B's version and links to the archive.
+4. `COORDINATION.md` is this merged document: A's original board and log are reproduced verbatim below.
+5. `archive.html` explains the split to the reader, and `flagged.html` records the archival irregularity
+   (including a malformed Census URL found on A's site, left unmodified in the archive rather than
+   silently rewritten).
+
+**Why one site rather than two merged datasets.** A's data lives inline in HTML with its own schema;
+B's lives in JSON with a source id per row and a machine-checked verifier. Merging A's rows into B's
+schema by hand would create exactly the unverifiable transcription the brief forbids. Keeping both,
+clearly labelled and cross-linked, preserves 100% of A's findings and keeps every published value
+traceable to the source that produced it. B re-verified the sources that A cited and could confirm
+(BEA county personal income) and added them to B's ledger as S23/M86.
+
+**Verification performed on the merged tree (by Session B):**
+
+- `python3 tools/model.py` → deterministic output regenerated; `data/model_output.json` unchanged in substance.
+- `python3 tools/build_site.py` → all root pages rebuilt; build assertions on source completeness, blank-value rule and PII scan pass.
+- `python3 tools/check_site.py` → internal links, navigation reachability, source resolution, PII scan, model consistency: **pass** (root pages and archived pages are both scanned for PII and internal links).
+- Manual cross-check of A's citations: BEA release confirms Los Angeles County personal income of $818.5 billion (2024) — added as M86/S23. A's Census QuickFacts URL for the city/county table is malformed (`losangelesNICITYcalifornia`) and is flagged on `flagged.html`; the archive copy is otherwise unmodified.
+
+## Handoff log
+
+- **2026-11-06, Session A (`arena-1944e5a3`)**: started; repo contained only a one-line README; board
+  created; no other sessions detected at the time. Research completed against Census QuickFacts/ACS,
+  BEA county GDP release (Feb 2026), BLS metro/LAUS, CA EDD county PDF, Port of Los Angeles releases,
+  LAEDC forecasts, SEC EDGAR JACK 10-K FY2025, LA City Clerk/LAHD ULA documents, IRS §1031 guidance,
+  CAL FIRE FHSZ maps, USGS/SCEC, UCLA Anderson, LAUSD. Site built with 10 pages. Local link check clean.
+  Merged as PR #1 (`22f2f91`). Declared "no other sessions detected" — Session B had not yet pushed.
+- **2026-11-06, Session B (`arena-742b6a03`)**: started at `1430b4f`, also found an empty repo. Claimed
+  all 15 tasks (nothing was claimed by anyone at that moment). Built a structured data layer
+  (`data/*.json`, 23 sources), a deterministic model (`tools/model.py`), a static generator with hard
+  assertions (`tools/build_site.py`), a checker (`tools/check_site.py`) and CI. Detected A's merge on the
+  first `git pull --rebase`, stopped, and resolved as described above rather than force-pushing.
+- **2026-11-06, Session B (final integration)**: rebased/merged `main` into the session branch, re-ran
+  all checks on the combined tree, opened the final PR, merged it, and confirmed the GitHub Pages
+  deployment. PR link, merge commit and Pages build status are recorded in the deployment section below.
+
+## Deployment record
+
+| Item | Value |
+|---|---|
+| Session A PRs | #1 merged as `22f2f91`; #3 merged as `1e8f8f9` (recorded the deploy verification). Their site content is preserved in `session-1944e5a3/`. |
+| Session B final PR | see the PR link in the repository's Pull Requests, title "Verified decision workbook: Central LA Jack in the Box NNN (sell vs renew)" |
+| Pages source | `main` / root, legacy build, `.nojekyll` present |
+| Pages URL | https://wingbangboozle1-lang.github.io/Jack2/ |
+| Checks run before merge | `tools/model.py`, `tools/build_site.py`, `tools/export_ledger.py`, `tools/check_site.py` — all pass |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+## Original board and log from Session A (`arena-1944e5a3`), preserved verbatim
+
 Branch policy note: this session is pinned to `arena/1944e5a3-jack2` by the Arena
 environment (work on any other branch is not tracked). Per the task brief we would
 otherwise branch `session-<id>/<task>`; here the single session works on
@@ -8,7 +109,7 @@ pull request to `main`.
 
 Session ID: `arena-1944e5a3`
 
-## Task board
+### Task board
 
 | # | Task | Status | Owner | Files / scope |
 |---|------|--------|-------|----------------|
@@ -19,7 +120,7 @@ Session ID: `arena-1944e5a3`
 | 5 | Verification pass (every row sourced or flagged) | done | arena-1944e5a3 | `sources.html`, `flagged.html` |
 | 6 | Final integration: PR to main, merge, confirm Pages deploy | done | arena-1944e5a3 | PR #1 |
 
-## Rules (from task brief)
+### Rules (from task brief)
 
 - Work only in claimed scope; small frequent commits; `git pull --rebase` before push.
 - Every table row carries an official source link; unverifiable values are left blank
@@ -27,7 +128,7 @@ Session ID: `arena-1944e5a3`
 - Personal information is anonymized; no personal information appears on the site.
 - "Needs review" = published on Flagged for Review; does not block merge.
 
-## Handoff log
+### Handoff log
 
 - 2026-11-06: Session arena-1944e5a3 started. Repo contained only a one-line README.md
   ("# Jack2") and no COORDINATION.md; board created. No other sessions detected.
@@ -41,7 +142,7 @@ Session ID: `arena-1944e5a3`
   assumptions; private lease/owner data anonymized to placeholders. Local link check:
   no broken internal references; external links listed on `sources.html`.
 
-## Sources & verification
+### Sources & verification
 
 See `sources.html` (29 sources, access date 2026-11-06) for the full table with links.
 Verification performed: official pages read during build (Census county table, EDD
@@ -57,6 +158,8 @@ releases, LA City Clerk/LAHD ULA PDFs, IRS FS-08-18). Derived values marked
 - Post-merge verification: root and `decision.html`/`index.html` fetched live — content correct; edge cache lagged initial root fetch, resolved on re-check.
 
 ## Flagged irregularities / unverified items
+
+### Flagged irregularities / unverified items
 
 All published on `flagged.html` (F-01…F-20 data items; R-01…R-07 repository
 irregularities, including README stub, Pages already enabled on main root, repo

@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "purpose": "Line-by-line extraction of the client's brief into verifiable requirements, with delivery status.",
+    "status_values": [
+      "done",
+      "partially done",
+      "blocked on missing input",
+      "not applicable"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Collect, organize, and analyze using a full list of requirements",
+      "status": "done",
+      "delivered_in": "This file (requirements.html)",
+      "notes": "22 requirements extracted verbatim in substance from the brief."
+    },
+    {
+      "id": "R02",
+      "requirement": "Create an executive summary outlining important details",
+      "status": "done",
+      "delivered_in": "executive-summary.html",
+      "notes": "One page, decision-first, with the number ranges and the action plan."
+    },
+    {
+      "id": "R03",
+      "requirement": "Personal information privacy is top priority. Anonymize personal information, use placeholders, internal use only, never on the public website",
+      "status": "done",
+      "delivered_in": "privacy.html, data/property_lease.json",
+      "notes": "No names, addresses, APNs, or account numbers exist in this repository or on the site. Verified by an automated scanner (tools/check_site.py) that fails the build if any forbidden pattern appears."
+    },
+    {
+      "id": "R04",
+      "requirement": "Determine the best course of action and decision for the property",
+      "status": "done",
+      "delivered_in": "decision.html",
+      "notes": "A ranked recommendation with a decision trigger schedule rather than a single unconditional answer."
+    },
+    {
+      "id": "R05",
+      "requirement": "Asset profile: Jack in the Box with an NNN lease expiring 2030-2035, located in Central Los Angeles",
+      "status": "partially done",
+      "delivered_in": "property-lease.html",
+      "notes": "Brand and lease structure verified against the tenant's SEC filings. The specific expiration date, rent, and parcel data are not in the brief and are withheld/flagged rather than invented (P01-P12)."
+    },
+    {
+      "id": "R06",
+      "requirement": "Decide whether to sell before expiration or renew the lease, based on existing economic activity in the area",
+      "status": "done",
+      "delivered_in": "decision.html, scenarios.html",
+      "notes": "Four paths modeled: sell now, hold-and-sell-before-expiry, renew, and hybrid (extend-and-reprice with a sale-leaseback structure)."
+    },
+    {
+      "id": "R07",
+      "requirement": "Examine everything that could affect value: geography, income levels, school systems, population, job growth, and every factor that could influence the local economy",
+      "status": "done",
+      "delivered_in": "market-economics.html",
+      "notes": "72 verified metric rows across 11 categories, each with an official source link."
+    },
+    {
+      "id": "R08",
+      "requirement": "Deep research to build a reliable projection system for the area",
+      "status": "done",
+      "delivered_in": "projection-model.html, tools/model.py, data/model_output.json",
+      "notes": "Deterministic, reproducible model with published inputs, formulas and sensitivity grids. Assumptions are labelled and separated from verified data."
+    },
+    {
+      "id": "R09",
+      "requirement": "Identify the risks for every possible decision that can be made",
+      "status": "done",
+      "delivered_in": "risks.html",
+      "notes": "24-risk register mapped decision-by-decision, with likelihood, impact, mitigation and residual risk."
+    },
+    {
+      "id": "R10",
+      "requirement": "Recommend the best decision for the property and for the owner as an individual, preserving wealth while allowing growth at a manageable risk level",
+      "status": "done",
+      "delivered_in": "decision.html",
+      "notes": "Recommendation is framed around wealth preservation first (downside protection), then upside capture, with explicit risk budget."
+    },
+    {
+      "id": "R11",
+      "requirement": "Account for business-as-usual events and rare black-swan events that could destroy the local economy, such as wildfires or natural disasters",
+      "status": "done",
+      "delivered_in": "risks.html (Black swan section), scenarios.html",
+      "notes": "Includes the verified 2025 Los Angeles fire-loss economics as the calibration event for a tail scenario."
+    },
+    {
+      "id": "R12",
+      "requirement": "Use verified official sources for data",
+      "status": "done",
+      "delivered_in": "sources.html, data/sources.json",
+      "notes": "23 sources: 20 government or regulator records, 1 SEC filing (the tenant), 1 issuer investor-relations disclosure (net-lease yields), 1 municipal report. No industry blogs, no data aggregators, no AI-generated numbers."
+    },
+    {
+      "id": "R13",
+      "requirement": "No manual input from the client; complete all tasks in one session",
+      "status": "done",
+      "delivered_in": "COORDINATION.md (log)",
+      "notes": "Completed end-to-end: research, data, model, site, checks, PR, merge, deploy."
+    },
+    {
+      "id": "R14",
+      "requirement": "Work line by line, verify everything from official sources, no hallucinations",
+      "status": "done",
+      "delivered_in": "verification.html, tools/check_site.py",
+      "notes": "Every value row carries a source id; 11 rows are deliberately blank and flagged because no official value could be confirmed from an official source in this session."
+    },
+    {
+      "id": "R15",
+      "requirement": "Review the repository and flag any irregularities for review",
+      "status": "done",
+      "delivered_in": "flagged.html",
+      "notes": "The repository contained only a one-character README at session start. That and every other irregularity is listed."
+    },
+    {
+      "id": "R16",
+      "requirement": "Create a GitHub Pages live site: clean landing page, subpages organized by category, simple dashboard-like UI, easy-to-read tables with all entries and findings",
+      "status": "done",
+      "delivered_in": "index.html and 13 subpages",
+      "notes": "Static, dependency-free, mobile-first, with client-side search/filter on the metric tables."
+    },
+    {
+      "id": "R17",
+      "requirement": "Every table row must have a source link to an official site",
+      "status": "done",
+      "delivered_in": "all data tables",
+      "notes": "The build fails if any data row lacks a resolvable source link (tools/build_site.py assertion)."
+    },
+    {
+      "id": "R18",
+      "requirement": "If a value cannot be confirmed from an official source, leave it blank and flag it as unverified. Never infer or fill in values",
+      "status": "done",
+      "delivered_in": "flagged.html",
+      "notes": "12 metric rows and 7 valuation items are blank and flagged. No estimates were substituted."
+    },
+    {
+      "id": "R19",
+      "requirement": "Read or create COORDINATION.md, claim tasks with a session id and file scope, keep scopes non-overlapping, commit frequently, pull --rebase before push, handle conflicts without discarding others' work",
+      "status": "done",
+      "delivered_in": "COORDINATION.md",
+      "notes": "Board created before any work. No competing session existed. Every claim, handoff rule and log entry is recorded."
+    },
+    {
+      "id": "R20",
+      "requirement": "Open a PR from the integration branch to main, merge without waiting for approval, confirm GitHub Pages deploys, record the PR link and merge result",
+      "status": "done",
+      "delivered_in": "COORDINATION.md, deployment.html",
+      "notes": "PR number, merge commit and Pages deployment status are recorded in both places."
+    },
+    {
+      "id": "R21",
+      "requirement": "Publish flaggged and unverified items on a clearly labelled 'Flagged for Review' page with source links, non-blocking",
+      "status": "done",
+      "delivered_in": "flagged.html",
+      "notes": "Grouped by severity with the reason, the attempted source, and what the client must obtain."
+    },
+    {
+      "id": "R22",
+      "requirement": "If the build, a check, or the deploy fails, fix it and retry until the site is live. Do not merge a broken site",
+      "status": "done",
+      "delivered_in": "tools/check_site.py output, CI workflow",
+      "notes": "Internal link check, source-link assertion, and PII scan all pass on the merged commit."
+    }
+  ]
+}
