@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demographics &amp; Schools | Jack2 — DTLA NNN Asset Intelligence</title>
+<meta name="description" content="Population, income, housing, education and school-system data for Los Angeles County and Central Los Angeles, sourced from the U.S. Census Bureau and official district sources.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar"><button id="burger" class="burger" aria-label="Toggle menu">☰</button><b>Jack2 · DTLA NNN Asset Intelligence</b></div>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="25" width="34" height="17" rx="2.5" fill="#0e3a39"/><path d="M24 25c-4-3 4-6 0-9" stroke="#0e3a39" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="11" r="5.6" fill="#0e3a39"/><circle cx="22.1" cy="10.2" r=".95" fill="#f5c97b"/><circle cx="26" cy="10.2" r=".95" fill="#f5c97b"/></svg></div>
+    <div><h1>Jack2</h1><small>DTLA NNN Asset Intelligence</small></div>
+  </div>
+  <div class="nav-label">Overview</div>
+  <ul class="nav"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h8V3H3zM13 21h8V11h-8zM13 9h8V3h-8zM3 21h8v-4H3z"/></svg>Dashboard</a></li></ul>
+  <div class="nav-label">Property &amp; Market</div>
+  <ul class="nav">
+    <li><a href="property.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Property &amp; Lease</a></li>
+    <li><a href="market.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg>Market &amp; Economy</a></li>
+    <li><a class="active" href="demographics.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 11h6M19 8v6"/></svg>Demographics &amp; Schools</a></li>
+    <li><a href="projection.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l6-8 4 4 6-9M20 6v5h-5"/></svg>Projection 2026–2035</a></li>
+  </ul>
+  <div class="nav-label">Decision</div>
+  <ul class="nav">
+    <li><a href="risk.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Risk Register</a></li>
+    <li><a href="decision.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>Sell vs Renew</a></li>
+  </ul>
+  <div class="nav-label">Governance</div>
+  <ul class="nav">
+    <li><a href="sources.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Sources &amp; Verification</a></li>
+    <li><a href="flagged.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>Flagged for Review</a></li>
+    <li><a href="methodology.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 12v5"/></svg>Methodology &amp; Privacy</a></li>
+  </ul>
+  <div class="sidebar-foot"><b>Prepared 2026-11-06</b><br>Personal data anonymized. See <a href="methodology.html" style="color:#ffd166">Methodology &amp; Privacy</a>.</div>
+</aside>
+<main class="main">
+  <div class="crumbs">Property &amp; Market / Demographics &amp; Schools</div>
+  <h2 class="page-title">Demographics, Income &amp; Schools — Los Angeles County</h2>
+  <p class="lede">Who lives and earns around the asset. LA County is the verified reference geography; City of Los Angeles and Central LA CDP cells that could not be machine-verified are intentionally left blank and flagged for review — never filled in by inference.</p>
+
+  <div class="card">
+    <h3>Population &amp; vital statistics</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Indicator</th><th>LA County</th><th>City of Los Angeles</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Population estimates, July 1, 2025 (V2025)</td><td>9,694,934</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Population estimates base, April 1, 2020</td><td>10,017,414</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Population, Census April 1, 2020</td><td>10,014,009</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Population change, Apr 2020 → Jul 2025</td><td>−3.2%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Land area / population density</td><td>4,059.28 sq mi · 2,466.9 / sq mi (2020)</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Persons under 18 / 65+</td><td>19.2% / 17.1%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Hispanic or Latino (any race)</td><td>49.3%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>White alone / Black alone / Asian alone</td><td>62.9% / 8.9% / 16.6%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Foreign-born persons (2020–2024)</td><td>33.4%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Central Los Angeles CDP (census-designated place)</td><td>—</td><td>— <span class="badge b-flagged">Flagged</span> (table did not render machine-verifiable values in this build; see <a href="flagged.html">Flagged for Review</a>)</td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/centrallasangelesCCDPcalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts — Central LA CDP ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mt16">
+    <h3>Income, poverty &amp; housing (2020–2024 ACS 5-year, $2024)</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Indicator</th><th>LA County</th><th>City of Los Angeles</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>Median household income</td><td>$90,112</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Per capita income (past 12 months)</td><td>$45,792</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Persons in poverty</td><td>13.3%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Homeownership rate</td><td>45.9%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Median value — owner-occupied units</td><td>$834,200</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Median gross rent</td><td>$1,954</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Median owner costs w/ mortgage / w/o mortgage</td><td>$3,160 / $843</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Housing units (Jul 2025) / households 2020–24 / persons per household</td><td>3,726,923 / 3,416,449 / 2.81</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Building permits (2025)</td><td>22,250</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Mean travel time to work</td><td>30.4 minutes</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Bachelor's degree or higher (25+)</td><td>36.0%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>High-school graduate or higher (25+)</td><td>80.9%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Civilian labor-force participation (16+)</td><td>64.7%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Language other than English spoken at home (5+)</td><td>55.1%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+          <tr><td>Households with broadband subscription</td><td>93.0%</td><td>— <span class="badge b-flagged">Flagged</span></td><td class="src-cell"><a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">Census QuickFacts ↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">City-of-LA and Central-LA-CDP cells are shown blank on purpose: this build could not machine-verify them against the official tables, and inference is prohibited under the verification protocol. Use the official QuickFacts comparison table (city vs county vs US) for manual review: <a href="https://www.census.gov/quickfacts/fact/table/losangelesNICITYcalifornia,losangelesCountycalifornia/PST045225" target="_blank" rel="noopener">QuickFacts comparison ↗</a>.</p>
+  </div>
+
+  <div class="card mt16">
+    <h3>School systems</h3>
+    <div class="table-wrap" style="box-shadow:none;border:0">
+      <table class="data">
+        <thead><tr><th>Item</th><th>Finding</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td>District serving the site</td><td>Los Angeles Unified School District (LAUSD) — most of the City of LA plus 25 other cities / unincorporated communities; ~710 sq mi</td><td class="src-cell"><a href="https://lausd.net/lausd/offices/bulletins/EN138700.HTML" target="_blank" rel="noopener">LAUSD ↗</a></td></tr>
+          <tr><td>Size rank</td><td>Second-largest school district in the nation</td><td class="src-cell"><a href="https://lausd.net/lausd/offices/bulletins/EN138700.HTML" target="_blank" rel="noopener">LAUSD ↗</a></td></tr>
+          <tr><td>Enrollment</td><td>"More than 520,000 students" (LAUSD's published figure). District enrollment has been declining countywide; current-year official count should be pulled from LAUSD's adopted budget or CDE CALPADS</td><td class="src-cell"><a href="https://lausd.net/lausd/offices/bulletins/EN138700.HTML" target="_blank" rel="noopener">LAUSD ↗</a> · <a href="https://www.cde.ca.gov/ds/sd/cb/cefenrollment.asp" target="_blank" rel="noopener">CA Dept. of Education (CALPADS) ↗</a></td></tr>
+          <tr><td>School quality ratings</td><td>[NOT VERIFIED — no single official aggregate rating. California School Dashboard publishes school-level indicators]</td><td class="src-cell"><span class="badge b-flagged">Flagged</span> <a href="https://www.caschooldashboard.org/" target="_blank" rel="noopener">CA School Dashboard (official) ↗</a></td></tr>
+          <tr><td>Private ratings (GreatSchools etc.)</td><td>Excluded — not an official source</td><td class="src-cell"><span class="badge b-placeholder">Excluded</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><b>Why schools matter for a NNN asset.</b> School enrollment and district quality drive household formation and family trade-area stability for QSR pads. LAUSD decline is a headwind for family-oriented formats, partly offset by the district's scale and by strong independent/charter ecosystems in central LA. This factor is <b>secondary</b> to rent, cap rate and tenant credit — but it favors locations near stable enrollment or employment centers.</div>
+  </div>
+
+  <div class="foot">Jack2 · Demographics &amp; Schools · Census QuickFacts are official U.S. Census Bureau publications (V2025 vintage; 2020–2024 ACS). District figures per LAUSD publications. See <a href="sources.html">Sources</a>.</div>
+</main>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
