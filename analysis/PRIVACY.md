@@ -27,12 +27,12 @@ to analyse an asset whose income is private without inventing a number.
 
 ## Automated enforcement
 
-`verify.py` walks every tracked file and fails the build on:
+`analysis/verify.py` walks every tracked file and fails the build on:
 
 - email addresses;
 - phone numbers (public agency switchboards in cited pages are allow-listed);
 - street-address patterns;
-- assessor parcel-number patterns (`123-456-789`);
+- assessor parcel-number patterns (three-three-three digit groups);
 - latitude/longitude pairs that fall inside the Los Angeles basin.
 
 Run `python3 verify.py` before any push.
