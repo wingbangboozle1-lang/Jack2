@@ -422,3 +422,34 @@ Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here.
 | Checks | verify.py pass (6p/22rows); root check_site.py pass |
 | Fresh findings | County unemployment Aug2026 4.9% (fresher than Oct summary); DGS10 4.90% confirmed; all else consistent with 2026-11-06 |
 | Note | Parallel session arena/d0238bc7 appeared during deploy — untouched by F |
+
+---
+
+# Session G — `session-e618ace7` (originally filed as "Session F"; renamed to avoid a collision with `arena-5bb36a1b`, which merged first) (branch `arena/e618ace7-jack2`)
+
+**Claimed:** 2026-11-07 (UTC). Baseline: `fcc8df3` (merge of PR #13). Sessions A–E are all `done`; no live
+claims were open on the board when this session read it.
+
+**Platform constraint (same as A–E).** The Arena environment pins this session to `arena/e618ace7-jack2` and
+forbids creating or pushing any other branch, so the literal `session-<id>/<task>` branch/worktree scheme in
+the brief is not executable here. Scope isolation is therefore done at the **directory** level, exactly as
+Sessions A–E did, and this file is the single shared coordination surface.
+
+## Task board — Session G claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| G-01 | Independent line-by-line verification of the combined repo (Sessions A–E data) against official sources; flag irregularities | in progress | session-e618ace7 | `session-e618ace7/data/`, `session-e618ace7/verification.html`, `session-e618ace7/flagged.html` |
+| G-02 | Fresh official-source research (Fall 2026 vintage), PII-free | in progress | session-e618ace7 | `session-e618ace7/data/*.json` |
+| G-03 | Projection system: deterministic 2026–2040 + seeded Monte Carlo over 5 strategies | in progress | session-e618ace7 | `session-e618ace7/scripts/` |
+| G-04 | Decision analysis + risk register (business-as-usual + black swans) | in progress | session-e618ace7 | `session-e618ace7/decision.html`, `session-e618ace7/risks.html` |
+| G-05 | 11-page static dashboard, every row source-linked | in progress | session-e618ace7 | `session-e618ace7/*.html`, `session-e618ace7/assets/` |
+| G-06 | **Final integration** (all other sessions are done): add a single additive nav link on the published root build, update `README.md`, re-verify the combined tree, PR → `main`, merge, confirm Pages | in progress | session-e618ace7 | `README.md`, `COORDINATION.md`, one additive entry in `tools/build_site.py` NAV |
+
+**Non-overlap rule for this session.** No file owned by Sessions A–E is edited except the two shared outputs
+the brief assigns to the integration session — `README.md` and the root site's navigation — and `COORDINATION.md`.
+The root navigation change is a **single additive NAV tuple** in `tools/build_site.py` (the generator Session B
+owns), which keeps Session B's CI "generated output is up to date" check green; the change is logged here
+rather than made silently.
+
+**Requests to other session scopes:** none.
