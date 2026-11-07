@@ -54,6 +54,7 @@ NAV = [
     ("privacy.html", "Privacy"),
     ("deployment.html", "Deployment"),
     ("archive.html", "Session A archive"),
+    ("workspaces.html", "All workspaces"),
 ]
 
 
@@ -995,6 +996,86 @@ session's page would hide the defect rather than disclose it.</p>
                 "Archive of the parallel session's site, preserved unmodified and cross-linked, with the conflict resolution record.")
 
 
+def build_workspaces():
+    rows = [
+        ["<code>session-18dacdea/</code>",
+         "Session H &mdash; 2026-11-07 live BLS (Nov 4) &amp; FRED (Nov 5, 4.84% DGS10) update, 76 metrics across "
+         "26 official sources (resolving LAUSD 86.2% ACGR &amp; $18.42/hr LA City minimum wage), 26 risks, "
+         "15,000-trial Monte Carlo + browser-local &sect;1031 simulator",
+         "10 pages",
+         "<a href='session-18dacdea/index.html'>open &#8599;</a>"],
+        ["<code>session-e618ace7/</code>",
+         "Session G &mdash; 110 fact rows, 96 verified against 19 official sources, six strategies scored on "
+         "risk-adjusted wealth, 30-risk register, line-by-line review of this repository",
+         "14 pages",
+         "<a href='session-e618ace7/index.html'>open &#8599;</a>"],
+        ["<code>session-5bb36a1b/</code>",
+         "Session F &mdash; independent 2026-11-07 pass; reconciled extend&ndash;price&ndash;sell recommendation",
+         "&mdash;",
+         "<a href='session-5bb36a1b/index.html'>open &#8599;</a>"],
+        ["<code>session-b4ec6128/</code>",
+         "Session E &mdash; 11 pages, 391 data-table rows each carrying a source link or an explicit status",
+         "11 pages",
+         "<a href='session-b4ec6128/index.html'>open &#8599;</a>"],
+        ["<code>session-a3a8ec08/</code>",
+         "Session D &mdash; Q3 FY2026 filings, Fall 2026 releases, browser-local Section 1031 / Measure ULA simulator",
+         "9 pages",
+         "<a href='session-a3a8ec08/index.html'>open &#8599;</a>"],
+        ["<code>docs/</code>",
+         "Session C &mdash; 20,000-trial Monte Carlo scored on certainty-equivalent after-tax wealth",
+         "11 pages",
+         "<a href='docs/index.html'>open &#8599;</a>"],
+        ["<code>session-1944e5a3/</code>",
+         "Session A &mdash; the original build, archived verbatim with its own stylesheet and scripts",
+         "10 pages",
+         "<a href='session-1944e5a3/index.html'>open &#8599;</a>"],
+        ["This root site",
+         "Session B &mdash; the deterministic model, 23 sources, 87 metric rows and the decision triggers currently "
+         "served at the site root",
+         "15 pages",
+         "<a href='index.html'>you are here</a>"],
+    ]
+    body = f"""
+{head_block("All workspaces",
+            "Seven independent workbooks, one repository",
+            "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
+
+<div class="callout warn">
+<p><strong>Where to start.</strong> If you want one answer and the audit trail behind it, open
+<a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G). It re-verified this
+repository line by line on 2026-11-07, publishes 110 fact rows against 19 official sources with 14 values
+deliberately left blank, scores six exit and hold strategies on risk-adjusted after-tax wealth, and lists every
+irregularity it found &mdash; including one in this root site's own source ledger.</p>
+<p class="muted">If you want the original deterministic model with its decision triggers, this root site remains
+the reference build. The six others are preserved because deleting another session's work is never the right
+resolution to a conflict.</p>
+</div>
+
+<h2>The workbooks</h2>
+{table(["Folder", "What it is", "Size", "Open"], rows)}
+
+<h2>Why there are seven</h2>
+<p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
+each other. In practice each session started from a nearly empty repository, built a complete workbook, and
+discovered the others only when pushing. Every time, the resolution was the same: preserve what already exists,
+publish the new analysis beside it, and record the conflict. The result is redundant but intact &mdash; and the
+disagreements between the analyses are themselves informative, because they show which conclusions are robust
+to method and which are artefacts of an assumption.</p>
+
+<h2>Where the analyses disagree, and why</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Question</th><th>What differs between the workbooks</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Hold or sell?</td><td>Most rank an exit or an extend-then-sell above passive hold; the root build frames it as a sequence with thresholds</td><td>Different objective functions: expected value, certainty equivalent, or threshold testing</td></tr>
+<tr><td>What is the asset worth?</td><td>None asserts a value &mdash; the rent, expiry and basis are unknown</td><td>Every build normalises, usually per $1.00 or $100,000 of NOI</td></tr>
+<tr><td>Tenant credit</td><td>Sessions D and E emphasise the FY2025 loss; Session G publishes the FY2026 nine-month profit beside it</td><td>Vintage and framing, not data: both come from the same SEC dataset</td></tr>
+<tr><td>Cap rates</td><td>All carry them as assumptions, at different central values</td><td>No government body publishes transaction cap rates; see the flagged list</td></tr>
+</tbody></table></div>
+"""
+    return page("workspaces.html", "All workspaces", body,
+                "Index of every independent workbook published from this repository, with guidance on where to start.")
+
+
 BUILDERS = {
     "index.html": build_index,
     "executive-summary.html": build_exec,
@@ -1011,6 +1092,7 @@ BUILDERS = {
     "privacy.html": build_privacy,
     "deployment.html": build_deployment,
     "archive.html": build_archive,
+    "workspaces.html": build_workspaces,
 }
 
 for fname, fn in BUILDERS.items():

@@ -189,11 +189,13 @@ def page_shell(slug, title, body, desc=""):
     Unverified private/parcel values are strictly blank (<code>&quot;&quot;</code>) and listed on <a href="flagged.html">Flagged for Review</a>.
     Personal and parcel identifiers are anonymized as <code>[REDACTED-PROPERTY-01]</code> and <code>[REDACTED-OWNER-01]</code>.</p>
     <p>Cross-session navigation: <a href="../index.html">Root Site (Session B)</a> &middot;
+    <a href="../workspaces.html">All Workspaces</a> &middot;
     <a href="../session-1944e5a3/index.html">Session A</a> &middot;
     <a href="../docs/index.html">Session C</a> &middot;
     <a href="../session-a3a8ec08/index.html">Session D</a> &middot;
     <a href="../session-b4ec6128/index.html">Session E</a> &middot;
     <a href="../session-5bb36a1b/index.html">Session F</a> &middot;
+    <a href="../session-e618ace7/index.html">Session G</a> &middot;
     <a href="sources.html">{len(SRC)} Official Sources</a></p>
   </div>
 </footer>
@@ -260,7 +262,8 @@ def build_index():
         ["Session D Dashboard", "<code>session-a3a8ec08</code>", '<a href="../session-a3a8ec08/index.html">../session-a3a8ec08/index.html</a>', "Q3 FY26 10-Q &amp; Measure ULA simulator (142 rows)", src_link("S12")],
         ["Session E Dashboard", "<code>session-b4ec6128</code>", '<a href="../session-b4ec6128/index.html">../session-b4ec6128/index.html</a>', "11-page source-linked dashboard &amp; SCAG forecast", src_link("S01")],
         ["Session F Dashboard", "<code>session-5bb36a1b</code>", '<a href="../session-5bb36a1b/index.html">../session-5bb36a1b/index.html</a>', "6-page reconciled summary &amp; normalized table", src_link("S15")],
-        ["Session 18dacdea (This Build)", "<code>session-18dacdea</code>", '<a href="index.html">index.html</a>', "Nov 4, 2026 BLS &amp; Nov 5, 2026 FRED live update; resolved 5 root blanks; 76 metrics + 26 risks", src_link("S01")],
+        ["Session G Dashboard", "<code>session-e618ace7</code>", '<a href="../session-e618ace7/index.html">../session-e618ace7/index.html</a>', "14-page verified dashboard (110 facts, 19 sources, 30 risks)", src_link("S01")],
+        ["Session H / 18dacdea (This Build)", "<code>session-18dacdea</code>", '<a href="index.html">index.html</a>', "Nov 4, 2026 BLS &amp; Nov 5, 2026 FRED live update; resolved 5 root blanks; 76 metrics + 26 risks", src_link("S01")],
     ]
 
     body = f"""

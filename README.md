@@ -136,3 +136,39 @@ python3 session-a3a8ec08/scripts/projection_engine.py
 python3 session-a3a8ec08/scripts/build_site.py
 python3 session-a3a8ec08/scripts/verify_all.py
 ```
+
+
+## Session G dashboard (`session-e618ace7/`) — final integration
+
+A sixth, independent session (`session-e618ace7` / `arena/e618ace7-jack2`) performed a line-by-line review of
+everything above and published a **source-linked decision dashboard** at
+**https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/**. It is the recommended entry point: the root navigation now carries an **All workspaces** link to a new
+`workspaces.html` index (a single additive change in `tools/build_site.py`), so all seven builds in this
+repository are reachable from the landing page.
+
+| | |
+|---|---|
+| Question answered | Sell the NNN lease before 2030–2035, or renew? |
+| Recommendation | **Do not hold to expiry.** Two leading paths within 0.5% of each other on risk-adjusted wealth: (1) extend ~10 years at or above in-place rent in 2027, then sell 2029–2032 with ~12 years of term through a §1031 exchange; (2) sell now through a §1031 exchange. Passive hold is last on the floor and the risk-adjusted measure. |
+| Evidence | 110 fact rows, **96 verified** against **19 official sources** read on 2026-11-07, **14 deliberately blank** and flagged. Nothing inferred. |
+| Model | Six strategies, deterministic + 10,000-trial seeded Monte Carlo (seed 20261107), CRRA-2 certainty equivalent, 15-cell sensitivity grid, all 20 assumptions published with the range tested |
+| Risk | 30-row register mapped to every strategy, including 6 black swans |
+| Review | 10 irregularities found in the existing repository (1 URL defect, 1 incomplete tax row, 1 one-sided tenant framing, 3 fillable blanks, plus cleared items) — published with evidence on the site's Flagged for review page |
+| Privacy | No address, APN, rent, basis, loan or owner identity anywhere; enforced by a build-failing PII scan |
+
+Rebuild and verify:
+
+```bash
+python3 session-e618ace7/scripts/model.py            # deterministic + seeded Monte Carlo
+python3 session-e618ace7/scripts/build_site.py       # 14 pages
+python3 session-e618ace7/scripts/verify_dataset.py   # 12 rule checks, exits non-zero on failure
+```
+
+Two findings worth knowing before reading anything else in this repository:
+
+- The root build's Census source URL (`data/sources.json` S2) is malformed — it silently drops the Los Angeles
+  County column. The values it is cited for are correct; the link is not. Corrected URL published as S01 in the
+  Session G ledger (flagged R-01).
+- Sessions D and E both lead on the tenant's FY2025 net loss without noting that the same SEC dataset shows
+  **net income of +$27.9m for the first nine months of FY2026** and a narrowing equity deficit. Both facts are
+  published side by side on the Session G tenant page (flagged R-08).

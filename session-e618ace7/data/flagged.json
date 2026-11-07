@@ -1,0 +1,261 @@
+{
+ "meta": {
+  "title": "Flagged for review - unverified values and irregularities found in this repository",
+  "owner": "session-e618ace7",
+  "access_date": "2026-11-07",
+  "policy": "Nothing here blocks anything. Every item is published with either the source that could settle it or the reason it could not be settled. Blank cells in the fact ledger are deliberate: no value was inferred.",
+  "summary": "16 unverified values that require the Owner's documents or a parcel lookup, and 12 irregularities found while reviewing the repository line by line."
+ },
+ "unverified": [
+  {
+   "id": "U-01",
+   "area": "Property",
+   "item": "Street address, APN, legal description",
+   "why": "Withheld for privacy and not collected by this session. Without it no parcel-level hazard class, zoning or valuation is possible.",
+   "to_resolve": "Owner's deed or title report. Once obtained, run the CAL FIRE FHSZ viewer and the FEMA Flood Map Service Center lookup.",
+   "source_link": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones"
+  },
+  {
+   "id": "U-02",
+   "area": "Lease",
+   "item": "Current annual base rent and NNN reimbursements",
+   "why": "Not supplied. All modelling is therefore normalised per $100,000 of annual NOI.",
+   "to_resolve": "Current rent roll and the last CAM/tax/insurance reconciliation.",
+   "source_link": ""
+  },
+  {
+   "id": "U-03",
+   "area": "Lease",
+   "item": "Exact lease expiration date",
+   "why": "Owner describes a 2030-2035 window, i.e. 4 to 9 years of remaining term. This is the largest single unknown in the analysis: at 4 years the sell case dominates, at 9 years the extend case does.",
+   "to_resolve": "The lease itself, page one, plus any amendments.",
+   "source_link": ""
+  },
+  {
+   "id": "U-04",
+   "area": "Lease",
+   "item": "Escalator mechanics (fixed bumps, CPI collar, floor and cap)",
+   "why": "Not supplied. Modelled as an assumption bracket of 2.0% to 3.7%.",
+   "to_resolve": "Lease rent clause.",
+   "source_link": ""
+  },
+  {
+   "id": "U-05",
+   "area": "Lease",
+   "item": "Tenant renewal options and early-termination rights",
+   "why": "Not supplied. Options change who holds the bargaining power at expiry.",
+   "to_resolve": "Lease option clause and any side letters.",
+   "source_link": ""
+  },
+  {
+   "id": "U-06",
+   "area": "Tax",
+   "item": "Tax basis, acquisition date, accumulated depreciation, loan balance and terms",
+   "why": "Not supplied. Gain is modelled as 55% of price (A11) and tax at 37% of gain (A10). Both are assumptions.",
+   "to_resolve": "Closing statement from the original purchase, depreciation schedules, current loan statement.",
+   "source_link": ""
+  },
+  {
+   "id": "U-07",
+   "area": "Hazard",
+   "item": "Parcel Fire Hazard Severity Zone",
+   "why": "Requires the address. Central Los Angeles is mostly Local Responsibility Area, where maps are adopted jurisdiction by jurisdiction.",
+   "to_resolve": "OSFM FHSZ viewer lookup by address.",
+   "source_link": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones"
+  },
+  {
+   "id": "U-08",
+   "area": "Hazard",
+   "item": "Parcel FEMA flood zone",
+   "why": "Requires the address.",
+   "to_resolve": "FEMA Flood Map Service Center lookup, or the lender's determination.",
+   "source_link": "https://msc.fema.gov/portal/home"
+  },
+  {
+   "id": "U-09",
+   "area": "Tax",
+   "item": "Additional California surcharge above the 12.30% top marginal rate",
+   "why": "The 2025 Form 540 rate schedules print 12.30% as the top bracket. The mental-health surcharge on very high incomes is not printed there, so it is not asserted here.",
+   "to_resolve": "Franchise Tax Board guidance on the surcharge, or the Owner's tax adviser.",
+   "source_link": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf"
+  },
+  {
+   "id": "U-10",
+   "area": "Hazard",
+   "item": "USGS 30-year probability of a magnitude 6.7+ earthquake in the Los Angeles region",
+   "why": "A figure near 60% is widely quoted, but the specific USGS page could not be retrieved on the access date, so the cell is blank rather than filled from a secondary source.",
+   "to_resolve": "USGS Earthquake Hazards Program UCERF3 publication or the USGS earthquake outlook page.",
+   "source_link": "https://www.usgs.gov/programs/earthquake-hazards"
+  },
+  {
+   "id": "U-11",
+   "area": "Insurance",
+   "item": "Property insurance premium, deductible and carrier",
+   "why": "Not supplied. Under a NNN lease this is usually the tenant's cost, but availability drives renewal and pricing.",
+   "to_resolve": "Current policy declarations page and the loss runs.",
+   "source_link": ""
+  },
+  {
+   "id": "U-12",
+   "area": "Labour",
+   "item": "City of Los Angeles local minimum wage",
+   "why": "The City rate exceeds the state rate, but the current figure was not retrieved from an official City page on the access date.",
+   "to_resolve": "City of Los Angeles Office of Wage Standards page.",
+   "source_link": ""
+  },
+  {
+   "id": "U-13",
+   "area": "Education",
+   "item": "Los Angeles Unified four-year cohort graduation rate",
+   "why": "Published through the California School Dashboard and DataQuest, which were not queried for this session.",
+   "to_resolve": "CDE DataQuest cohort graduation report for 2024-25.",
+   "source_link": "https://dq.cde.ca.gov/dataquest/"
+  },
+  {
+   "id": "U-14",
+   "area": "Valuation",
+   "item": "Market capitalisation rate for a single-tenant QSR in Central Los Angeles",
+   "why": "No government source publishes transaction cap rates. It is carried as a labelled assumption with a full sensitivity grid and never presented as data.",
+   "to_resolve": "A broker opinion of value or three recent comparable sales within two miles.",
+   "source_link": ""
+  },
+  {
+   "id": "U-15",
+   "area": "Economy",
+   "item": "Los Angeles County real GDP level",
+   "why": "The BEA county release no longer carries the county table inside the release text and the interactive table was not queried.",
+   "to_resolve": "BEA interactive data application, county GDP table.",
+   "source_link": "https://apps.bea.gov/itable/"
+  },
+  {
+   "id": "U-16",
+   "area": "Tenant",
+   "item": "Tenant's stated lease-renewal practice and its store-count trajectory in the fiscal 2025 annual report",
+   "why": "The phrase 'we have generally been able to renew our restaurant leases as they expire at then-current market rates' is quoted by other sessions in this repository, but this session did not open the passage itself and will not repeat it as verified.",
+   "to_resolve": "Open the FY2025 Form 10-K (accession 0000807882-25-000072) and the latest Form 10-Q (accession 0000807882-26-000091), Item 2 / Properties and the risk factors.",
+   "source_link": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm"
+  }
+ ],
+ "irregularities": [
+  {
+   "id": "R-01",
+   "severity": "Medium",
+   "file": "data/sources.json (source S2) and every root page that cites it",
+   "finding": "The Census QuickFacts URL is malformed: it uses the slug 'lacountycalifornia' instead of 'losangelescountycalifornia'. The page does not error - it silently drops the county column and renders Los Angeles city only.",
+   "evidence": "Fetched on 2026-11-07: the S2 URL renders a one-column table headed 'Los Angeles city, California'. The corrected URL (this session's S01) renders both columns.",
+   "effect": "Every root-site row that cites S2 for county-level data points at a page that does not show the county figure. The values themselves (M01-M17, M43-M47) match the corrected table and were re-verified this session as F01-F28.",
+   "action": "Root site unchanged (not this session's scope). Corrected URL is published as S01 in this session's ledger. Recommend a one-line fix in the root generator.",
+   "source_link": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225"
+  },
+  {
+   "id": "R-02",
+   "severity": "Low",
+   "file": "data/metrics.json",
+   "finding": "Rows M16 (poverty rate), M17 (per capita income) and M42 (county median household income) are blank and flagged unverified on the root site, although all three are published on the Census QuickFacts table the root site already cites.",
+   "evidence": "S01 today returns poverty 16.5%, per capita income $47,685 and county median household income $90,112.",
+   "effect": "Three publishable values are missing from the published root ledger.",
+   "action": "Filled in this session as F23, F21 and F20, each source-linked. The root rows are left untouched.",
+   "source_link": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225"
+  },
+  {
+   "id": "R-03",
+   "severity": "Low",
+   "file": "data/metrics.json (M18-M32)",
+   "finding": "Employment rows are on the August 2026 vintage of the BLS Los Angeles Area Economic Summary. The September 2026 vintage has since been published.",
+   "evidence": "BLS updated the summary on 2026-11-04; EDD published the September 2026 county release on 2026-10-16. This session's F29-F50 use the September 2026 data.",
+   "effect": "Not an error - the numbers were correct for their vintage. It is a staleness issue on a fast-moving series.",
+   "action": "Superseded rows published in this session with explicit period labels.",
+   "source_link": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+  },
+  {
+   "id": "R-04",
+   "severity": "Low",
+   "file": "data/metrics.json (M57, M58)",
+   "finding": "The Measure ULA rows give the 4.0% and 5.5% surtax but omit the 0.45% City base rate and the dollar thresholds, so the reader cannot see the all-in 4.45% / 5.95% rate or the $5,400,000 cliff.",
+   "evidence": "City of Los Angeles Office of Finance FAQ, read 2026-11-07, prints both the base rate table and the thresholds for closings after 2026-06-30.",
+   "effect": "Incomplete rather than incorrect. The omission understates the true cost of a City of Los Angeles sale by 45 basis points.",
+   "action": "Published complete in this session as F87-F90 and priced into the model.",
+   "source_link": "https://finance.lacity.gov/faq/measure-ula"
+  },
+  {
+   "id": "R-05",
+   "severity": "None - checked and cleared",
+   "file": "session-a3a8ec08/ (Session D)",
+   "finding": "Session D's README states a 10-year Treasury yield of 5.05% on 2026-10-28. Checked because it differs from the root site's 4.90% on 2026-11-04.",
+   "evidence": "U.S. Treasury October 2026 par yield table: 10/28/2026 10-year = 5.05; November 2026 table: 11/04/2026 = 4.90 and 11/06/2026 = 4.86.",
+   "effect": "Both figures are correct for their dates. No action. Recorded so the apparent discrepancy is not mistaken for an error later.",
+   "action": "No action required.",
+   "source_link": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202610"
+  },
+  {
+   "id": "R-06",
+   "severity": "Medium",
+   "file": "session-a3a8ec08/, session-b4ec6128/, docs/",
+   "finding": "Several figures in the other dashboards were not re-verified by this session and are therefore marked unverified here rather than endorsed: the SCAG household forecast (+22.5% by 2050), a California FAIR Plan $1 billion assessment order, a USGS 60% 30-year earthquake probability, CAL FIRE structure-destruction totals for January 2025, and the tenant's Q3 FY2026 unit count.",
+   "evidence": "Each was searchable only through the citing session's own pages during this review. The underlying official documents were not retrieved.",
+   "effect": "They may well be correct; this session simply does not certify them. No session's page was edited.",
+   "action": "Flagged for the Owner's manual review. Each citing page carries a source link that can be opened directly.",
+   "source_link": ""
+  },
+  {
+   "id": "R-07",
+   "severity": "None - checked and cleared",
+   "file": "session-a3a8ec08/ (Session D)",
+   "finding": "Session D quotes a stockholders' equity deficit of -$901.3 million at 2026-07-05.",
+   "evidence": "SEC XBRL StockholdersEquity returns -901,286,000 for the balance-sheet date 2026-07-05 (accession 0000807882-26-000091).",
+   "effect": "Correct. Confirmed this session as F80.",
+   "action": "No action required.",
+   "source_link": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/StockholdersEquity.json"
+  },
+  {
+   "id": "R-08",
+   "severity": "Medium",
+   "file": "session-a3a8ec08/, session-b4ec6128/",
+   "finding": "Both dashboards lead on the tenant's fiscal 2025 net loss of $80.7 million and its negative equity. Neither mentions that the tenant reported net income of +$27.9 million for the first nine months of fiscal 2026.",
+   "evidence": "SEC XBRL NetIncomeLoss: FY2025 -80,719,000; nine month period ended 2026-07-05 +27,909,000, against -86,515,000 for the same period a year earlier.",
+   "effect": "The data quoted is correct but the framing is one-sided. A reader could conclude the tenant is deteriorating when the most recent official data shows it returning to profit while the equity deficit narrows.",
+   "action": "Both facts published side by side here (F75-F80) and used in the tenant-credit analysis. No page edited.",
+   "source_link": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/NetIncomeLoss.json"
+  },
+  {
+   "id": "R-09",
+   "severity": "Medium",
+   "file": "repository root, README.md, index.html",
+   "finding": "Six parallel builds now deploy from the same Pages site (root, session-1944e5a3, docs, session-a3a8ec08, session-b4ec6128, and this one). The root navigation links only to the Session A archive, so the newest material has no path to it from the landing page.",
+   "evidence": "tools/build_site.py NAV ends with 'Session A archive'. README.md links to three of the other five builds but the published index.html links to one.",
+   "effect": "The site is complete but not navigable end to end - the exact usability problem the brief asks to avoid.",
+   "action": "This session is the final integration session. It added one nav entry ('All workspaces') and a new workspaces.html index at the root that lists all seven workbooks, so every build is reachable from the landing page. Logged in COORDINATION.md.",
+   "source_link": ""
+  },
+  {
+   "id": "R-10",
+   "severity": "Low",
+   "file": "scripts/verify.py, tools/check_site.py, model/build_site.py, session-a3a8ec08/scripts/verify_all.py",
+   "finding": "Four independent checkers exist. Their pass/fail claims are reproduced by running them, not by trusting the sessions that wrote them.",
+   "evidence": "Run results are recorded in COORDINATION.md and on this session's Verification page.",
+   "effect": "No irregularity in the checkers themselves as run on 2026-11-07.",
+   "action": "All four re-run as part of the final integration.",
+   "source_link": ""
+  },
+  {
+   "id": "R-11",
+   "severity": "Medium",
+   "file": "COORDINATION.md, repository-wide",
+   "finding": "Two sessions worked simultaneously on 2026-11-07 and both filed themselves as \"Session F\": arena/5bb36a1b (merged first, PR #15/#16) and this one, arena/e618ace7.",
+   "evidence": "The rebase of this branch onto main hit an add/add conflict in COORDINATION.md at the two Session F headers. PR #15 merged at 2026-11-07T20:15:17Z as 32b3d44.",
+   "effect": "Two different dashboards, both labelled Session F, would be confusing to the Owner and ambiguous in the board.",
+   "action": "This session renamed itself Session G in its own build, README entry and board section, kept the other session's section verbatim above its own, and made every workbook reachable from a single new 'All workspaces' page in the root navigation. Nothing was overwritten.",
+   "source_link": "https://github.com/wingbangboozle1-lang/Jack2/blob/main/COORDINATION.md"
+  },
+  {
+   "id": "R-12",
+   "severity": "Low",
+   "file": "session-5bb36a1b/ and data/metrics.json",
+   "finding": "Both report Los Angeles County unemployment of 4.9% for August 2026. The September 2026 EDD release revises August to 5.0%, and reports September itself at 4.8% seasonally adjusted.",
+   "evidence": "EDD Los Angeles County release published 2026-10-16: 'decreased over the month to 4.8 percent in September 2026 from a revised rate of 5.0 in August 2026'. BLS prints 4.5% unadjusted for September.",
+   "effect": "The 4.9% was the correct published figure when it was read and has since been revised by one tenth. A reader comparing builds will see two different August numbers; neither is wrong for its vintage.",
+   "action": "This session publishes September 2026 instead (F31, F32, F33), with the period and seasonal adjustment stated on every row, and records the revision here.",
+   "source_link": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf"
+  }
+ ]
+}
