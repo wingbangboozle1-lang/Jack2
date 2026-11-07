@@ -422,3 +422,20 @@ Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here.
 | Checks | verify.py pass (6p/22rows); root check_site.py pass |
 | Fresh findings | County unemployment Aug2026 4.9% (fresher than Oct summary); DGS10 4.90% confirmed; all else consistent with 2026-11-06 |
 | Note | Parallel session arena/d0238bc7 appeared during deploy — untouched by F |
+
+---
+
+# Session G (`arena-0c849d9d-jack2`) — 2026-11-07 — IN PROGRESS (final integration)
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| G1 | Claim + repo review (no overwrite of A–F) | in progress | arena-0c849d9d | `COORDINATION.md` (append only), `session-0c849d9d/**` |
+| G2 | Executive summary reconciling all prior sessions + privacy enforcement | in progress | arena-0c849d9d | `session-0c849d9d/index.html`, `EXECUTIVE_SUMMARY.md` |
+| G3 | Deep-factor economics: geography, income, schools, population, jobs, capital markets, hazards | in progress | arena-0c849d9d | `session-0c849d9d/economics.html`, `data/ledger.json` |
+| G4 | Projection system (normalized, deterministic, formulas shown) | in progress | arena-0c849d9d | `session-0c849d9d/projection.html`, `data/projection.json` |
+| G5 | Risk register (BAU + black swan) & decision triggers | in progress | arena-0c849d9d | `session-0c849d9d/risks-decision.html` |
+| G6 | Verify line-by-line (sources, blanks, PII, links), PR to main, merge, confirm Pages | todo | arena-0c849d9d | `session-0c849d9d/scripts/verify.py` |
+
+Scope is disjoint: Session G edits ONLY `session-0c849d9d/**` plus appends here. Root site `index.html` and all prior session folders `docs/`, `session-1944e5a3/`, `session-a3a8ec08/`, `session-b4ec6128/`, `session-5bb36a1b/` are untouched. Live URL will be https://wingbangboozle1-lang.github.io/Jack2/session-0c849d9d/
+
+**Rebase conflict, 2026-11-07:** main advanced with Session F's deployment record after the G claim. Preserved main's complete record and appended the G claim; no other session's content was discarded. Session F's initial board remains historically in progress; its deployment record confirms PR #15 merged and live.
