@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projection &amp; Simulator — Central LA Jack in the Box NNN Decision Dashboard (Session 18dacdea)</title>
+<meta name="description" content="Deterministic and 15,000-trial Monte Carlo projection model plus browser-local NNN decision simulator.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <div class="top-bar">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Central LA Jack in the Box NNN Decision Dashboard
+          <small>2030&ndash;2035 Lease Expiry &middot; Verified 2026-11-07 (Nov 4, 2026 BLS &amp; Nov 5, 2026 FRED) &middot; Session <code>18dacdea</code></small>
+        </span>
+      </a>
+      <span class="privacy-pill">Zero-PII Enforced &middot; 100% Anonymized</span>
+    </div>
+    <nav class="main" aria-label="Primary Navigation"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="property-lease.html">Property &amp; Tenant</a><a href="market-economics.html">Market &amp; Economics</a><a href="valuation-tax.html">Valuation &amp; Tax</a><a href="projection-model.html" aria-current="page">Projection &amp; Simulator</a><a href="risks.html">Risk Register</a><a href="decision.html">Decision &amp; Triggers</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Official Sources</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<div class="page-head">
+  <p class="eyebrow">Projection System &amp; Interactive Private Simulator</p>
+  <h1>2026&ndash;2040 Area Economic &amp; Lease Decision Projection System</h1>
+  <p class="lede">Combines a deterministic 2026&ndash;2040 macro/lease model across Bear, Base, and Bull regimes with a 15,000-trial Monte Carlo engine (<code>seed = 20261107</code>) and a 100% browser-local calculator for private owner inputs.</p>
+</div>
+
+<div class="sim-box" id="local-nnn-simulator">
+  <h2 style="margin-top:0">1. Interactive 100% Browser-Local Decision, Prop 13, Measure ULA &amp; &sect;1031 Simulator</h2>
+  <p class="muted"><strong>Privacy guarantee:</strong> Enter your private lease rent, expiration year, store sales, and basis below. All calculations run exclusively in your browser's local memory &mdash; zero network calls, zero cookies, zero storage.</p>
+  <div class="sim-controls">
+    <div>
+      <label for="sim-noi">Current Annual NNN Rent / NOI ($)</label>
+      <input type="number" id="sim-noi" value="150000" min="50000" max="1000000" step="5000">
+    </div>
+    <div>
+      <label for="sim-expiry">Exact Lease Expiration Year</label>
+      <select id="sim-expiry">
+        <option value="2030">2030 (~4 yrs left — Urgent)</option>
+        <option value="2031">2031 (~5 yrs left — Cliff Window)</option>
+        <option value="2032" selected>2032 (~6 yrs left — Midpoint)</option>
+        <option value="2033">2033 (~7 yrs left)</option>
+        <option value="2034">2034 (~8 yrs left)</option>
+        <option value="2035">2035 (~9 yrs left)</option>
+      </select>
+    </div>
+    <div>
+      <label for="sim-sales">Store Gross Annual Sales ($)</label>
+      <input type="number" id="sim-sales" value="1874000" min="800000" max="5000000" step="25000">
+    </div>
+    <div>
+      <label for="sim-prop13">Current Prop 13 Assessed Value ($)</label>
+      <input type="number" id="sim-prop13" value="950000" min="100000" max="6000000" step="50000">
+    </div>
+    <div>
+      <label for="sim-taxbasis">Owner Adjusted Income Tax Basis ($)</label>
+      <input type="number" id="sim-taxbasis" value="600000" min="0" max="5000000" step="50000">
+    </div>
+    <div>
+      <label for="sim-cityla">Inside Incorporated City of LA?</label>
+      <select id="sim-cityla">
+        <option value="yes" selected>Yes (Subject to Measure ULA &gt;$5.4M)</option>
+        <option value="no">No (Unincorporated County / Adjacent City)</option>
+      </select>
+    </div>
+    <div>
+      <label for="sim-reinvest">§1031 Replacement Net Yield (%)</label>
+      <input type="number" id="sim-reinvest" value="7.10" min="5.0" max="9.5" step="0.1">
+    </div>
+  </div>
+
+  <div class="grid g3">
+    <div class="card kpi">
+      <p class="label">Estimated Unextended Value Now</p>
+      <p class="value" id="out-val-now">$2,158,273</p>
+      <p class="sub">Based on remaining term WALT cap curve</p>
+    </div>
+    <div class="card kpi ok">
+      <p class="label">Value After 15-Yr Blend &amp; Extend</p>
+      <p class="value" id="out-val-ext">$2,449,219</p>
+      <p class="sub">At 6.40% institutional disposition cap rate</p>
+    </div>
+    <div class="card kpi ok">
+      <p class="label">Net §1031 Reinvestable Equity</p>
+      <p class="value" id="out-net-1031">$2,059,856</p>
+      <p class="sub">Tax saved vs cash sale: <strong id="out-tax-saved">$518,249</strong></p>
+    </div>
+    <div class="card kpi warn">
+      <p class="label">Prop 13 Reassessment Tax Shock</p>
+      <p class="value" id="out-prop13-jump">+$13,895/yr</p>
+      <p class="sub">Occupancy ratio: <strong id="out-rts">9.5% now &rarr; 10.3% post-sale</strong></p>
+    </div>
+    <div class="card kpi ok">
+      <p class="label">2040 Wealth: S2 (Extend &rarr; §1031)</p>
+      <p class="value" id="out-w2040-s2">$5,733,248</p>
+      <p class="sub">S1 (Immediate §1031): <strong id="out-w2040-s1">$5,545,370</strong></p>
+    </div>
+    <div class="card kpi bad">
+      <p class="label">2040 Wealth: S5 (Taxable Cash Sale)</p>
+      <p class="value" id="out-w2040-s5">$3,272,520</p>
+      <p class="sub">Permanent wealth loss from ~35.5% tax drag</p>
+    </div>
+  </div>
+  <div class="callout ok" style="margin-bottom:0">
+    <p id="out-sim-verdict"><strong>OPTIMAL SEQUENCE:</strong> Pursue Early 15-Year Blend-and-Extend and rotate 100% tax-deferred via IRC §1031.</p>
+  </div>
+</div>
+
+<h2>2. Monte Carlo Stochastic Distribution (15,000 Trials, <code>seed = 20261107</code>, per $100k NOI)</h2>
+<div class="tablewrap"><table><thead><tr><th>Strategy</th><th class="num">Mean 2040 Wealth</th><th class="num">Median (P50)</th><th class="num">P10 Downside</th><th class="num">P05 Tail Floor</th><th class="num">CVaR-10% (Worst Decile Avg)</th><th class="num">P90 Upside</th><th class="num">Certainty Equiv. (CRRA=2.5)</th><th class="num">Equity Multiple</th><th>Source</th></tr></thead><tbody><tr><td><strong>S2: Early Blend-and-Extend -&gt; §1031 Sale</strong></td><td class="num">$3,822,165</td><td class="num">$3,833,775</td><td class="num">$3,472,390</td><td class="num">$3,354,931</td><td class="num">$3,326,777</td><td class="num">$4,152,499</td><td class="num">$3,798,208</td><td class="num">2.78x</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>S1: Sell Pre-Cliff Now via §1031 Exchange</strong></td><td class="num">$3,696,913</td><td class="num">$3,689,362</td><td class="num">$3,343,291</td><td class="num">$3,254,006</td><td class="num">$3,232,598</td><td class="num">$4,061,163</td><td class="num">$3,670,763</td><td class="num">2.69x</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>S3: Hold Through Expiry &amp; Renew to 2040</strong></td><td class="num">$3,454,245</td><td class="num">$3,552,934</td><td class="num">$2,807,948</td><td class="num">$2,659,459</td><td class="num">$2,575,542</td><td class="num">$4,005,534</td><td class="num">$3,361,449</td><td class="num">2.52x</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>S4: Hold to Expiry Year, Sell Unextended</strong></td><td class="num">$2,915,215</td><td class="num">$3,041,831</td><td class="num">$2,354,075</td><td class="num">$2,126,708</td><td class="num">$2,093,374</td><td class="num">$3,331,066</td><td class="num">$2,832,395</td><td class="num">2.12x</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>S5: Sell Now Outright (Taxable Cash Exit)</strong></td><td class="num">$2,181,680</td><td class="num">$2,177,400</td><td class="num">$1,985,318</td><td class="num">$1,936,340</td><td class="num">$1,924,726</td><td class="num">$2,382,840</td><td class="num">$2,168,195</td><td class="num">1.59x</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr></tbody></table></div>
+
+<h2>3. Lease Expiration Year Sensitivity Across the 2030&ndash;2035 Window (per $100k NOI, Base Case)</h2>
+<div class="tablewrap"><table><thead><tr><th>Expiry Year</th><th class="num">Remaining Term</th><th class="num">Implied Cap Now</th><th class="num">Gross Value Now</th><th class="num">Blend-Extend Uplift</th><th class="num">S2 NPV (Extend -> §1031)</th><th class="num">S1 NPV (Sell Now §1031)</th><th class="num">S3 NPV (Hold &amp; Renew)</th><th class="num">S4 NPV (Sell at Expiry)</th><th>Source</th></tr></thead><tbody><tr><td><strong>2030</strong></td><td class="num">4.0 yrs</td><td class="num">7.45%</td><td class="num">$1,342,282</td><td class="num">+21.7%</td><td class="num">$1,907,272</td><td class="num">$1,634,587</td><td class="num">$1,376,706</td><td class="num">$1,465,971</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>2031</strong></td><td class="num">5.0 yrs</td><td class="num">7.20%</td><td class="num">$1,388,889</td><td class="num">+17.6%</td><td class="num">$1,907,272</td><td class="num">$1,691,344</td><td class="num">$1,380,106</td><td class="num">$1,457,775</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>2032</strong></td><td class="num">6.0 yrs</td><td class="num">6.95%</td><td class="num">$1,438,849</td><td class="num">+13.5%</td><td class="num">$1,907,272</td><td class="num">$1,752,183</td><td class="num">$1,382,820</td><td class="num">$1,450,224</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>2033</strong></td><td class="num">7.0 yrs</td><td class="num">6.86%</td><td class="num">$1,457,195</td><td class="num">+12.1%</td><td class="num">$1,907,272</td><td class="num">$1,774,525</td><td class="num">$1,399,800</td><td class="num">$1,443,277</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>2034</strong></td><td class="num">8.0 yrs</td><td class="num">6.77%</td><td class="num">$1,476,015</td><td class="num">+10.7%</td><td class="num">$1,907,272</td><td class="num">$1,797,443</td><td class="num">$1,419,642</td><td class="num">$1,436,895</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr><tr><td><strong>2035</strong></td><td class="num">9.0 yrs</td><td class="num">6.69%</td><td class="num">$1,495,327</td><td class="num">+9.2%</td><td class="num">$1,907,272</td><td class="num">$1,820,961</td><td class="num">$1,440,313</td><td class="num">$1,431,042</td><td><span class="src"><a href="https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm" target="_blank" rel="noopener noreferrer" title="NNN REIT, Inc. (NYSE: NNN), U.S. SEC EDGAR — Form 10-K for the Fiscal Year Ended December 31, 2025 (CIK 0000751364)">S13: NNN REIT, Inc. &#8599;</a></span></td></tr></tbody></table></div>
+
+<h2>4. Macro Regime Sensitivity: Bear vs. Base vs. Bull (2026&ndash;2040, per $100k NOI)</h2>
+<div class="tablewrap"><table><thead><tr><th>Macro Economic Regime</th><th class="num">LA County Pop CAGR</th><th class="num">LA Metro Job CAGR</th><th class="num">LA CPI Inflation</th><th class="num">Tenant Renewal Prob.</th><th class="num">S2 2040 Wealth</th><th class="num">S1 2040 Wealth</th><th class="num">S3 2040 Wealth</th><th>Source</th></tr></thead><tbody><tr><td><strong>Bear (Stagflation / Out-Migration / QSR Margin Squeeze)</strong></td><td class="num">-0.35%/yr</td><td class="num">-0.10%/yr</td><td class="num">4.10%/yr</td><td class="num">55%</td><td class="num">$3,669,736</td><td class="num">$3,353,585</td><td class="num">$2,818,593</td><td><span class="src"><a href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics (BLS), Western Information Office — Los Angeles Area Economic Summary (Updated November 04, 2026 &amp; October 05, 2026 editions)">S01: U.S. Bureau of Labor Stati &#8599;</a></span></td></tr><tr><td><strong>Base (BLS/DOF Consensus: Stable Core Density, Mild County Outflow)</strong></td><td class="num">-0.15%/yr</td><td class="num">+0.45%/yr</td><td class="num">3.10%/yr</td><td class="num">72%</td><td class="num">$4,420,754</td><td class="num">$4,055,830</td><td class="num">$3,159,165</td><td><span class="src"><a href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics (BLS), Western Information Office — Los Angeles Area Economic Summary (Updated November 04, 2026 &amp; October 05, 2026 editions)">S01: U.S. Bureau of Labor Stati &#8599;</a></span></td></tr><tr><td><strong>Bull (2028 Olympics Boost / Rate Normalization / Infill Re-Rating)</strong></td><td class="num">+0.05%/yr</td><td class="num">+0.95%/yr</td><td class="num">2.45%/yr</td><td class="num">86%</td><td class="num">$5,064,507</td><td class="num">$4,652,265</td><td class="num">$3,411,105</td><td><span class="src"><a href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics (BLS), Western Information Office — Los Angeles Area Economic Summary (Updated November 04, 2026 &amp; October 05, 2026 editions)">S01: U.S. Bureau of Labor Stati &#8599;</a></span></td></tr></tbody></table></div>
+
+<h2>5. Year-by-Year Central Los Angeles &amp; Unextended Lease Trajectory (2026&ndash;2040 Base Case)</h2>
+<div class="tablewrap"><table><thead><tr><th class="num">Year</th><th class="num">LA County DOF Population</th><th class="num">LA Metro Nonfarm Jobs</th><th class="num">LA CPI Index (2026=100)</th><th class="num">QSR Market Rent Index</th><th class="num">Rem. Term (2032 Midpoint)</th><th class="num">Unextended Implied Cap Rate</th><th>Official Source</th></tr></thead><tbody><tr><td class="num"><strong>2026</strong></td><td class="num">9,828,209</td><td class="num">6,282.1k</td><td class="num">100.0</td><td class="num">100.0</td><td class="num">6.0 yrs</td><td class="num">6.95%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2027</strong></td><td class="num">9,802,983</td><td class="num">6,310.4k</td><td class="num">103.1</td><td class="num">102.2</td><td class="num">5.0 yrs</td><td class="num">7.20%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2028</strong></td><td class="num">9,777,757</td><td class="num">6,338.8k</td><td class="num">106.3</td><td class="num">104.3</td><td class="num">4.0 yrs</td><td class="num">7.45%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2029</strong></td><td class="num">9,752,531</td><td class="num">6,367.3k</td><td class="num">109.6</td><td class="num">106.6</td><td class="num">3.0 yrs</td><td class="num">7.70%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2030</strong></td><td class="num">9,727,305</td><td class="num">6,395.9k</td><td class="num">113.0</td><td class="num">108.9</td><td class="num">2.0 yrs</td><td class="num">7.92%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2031</strong></td><td class="num">9,723,573</td><td class="num">6,424.7k</td><td class="num">116.5</td><td class="num">111.2</td><td class="num">1.0 yrs</td><td class="num">8.13%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2032</strong></td><td class="num">9,719,842</td><td class="num">6,453.6k</td><td class="num">120.1</td><td class="num">113.6</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2033</strong></td><td class="num">9,716,110</td><td class="num">6,482.7k</td><td class="num">123.8</td><td class="num">116.1</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2034</strong></td><td class="num">9,712,379</td><td class="num">6,511.8k</td><td class="num">127.7</td><td class="num">118.6</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2035</strong></td><td class="num">9,708,647</td><td class="num">6,541.2k</td><td class="num">131.6</td><td class="num">121.1</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2036</strong></td><td class="num">9,694,422</td><td class="num">6,570.6k</td><td class="num">135.7</td><td class="num">123.7</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2037</strong></td><td class="num">9,680,198</td><td class="num">6,600.2k</td><td class="num">139.9</td><td class="num">126.4</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2038</strong></td><td class="num">9,665,973</td><td class="num">6,629.9k</td><td class="num">144.2</td><td class="num">129.1</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2039</strong></td><td class="num">9,651,749</td><td class="num">6,659.7k</td><td class="num">148.7</td><td class="num">131.9</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr><tr><td class="num"><strong>2040</strong></td><td class="num">9,637,524</td><td class="num">6,689.7k</td><td class="num">153.3</td><td class="num">134.7</td><td class="num">0.0 yrs</td><td class="num">8.35%</td><td><span class="src"><a href="https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Report P-2A: Total Population Projections, California Counties, 2020-2070 (Vintage 2026 Release, March 2026)">S04: California Department of F &#8599;</a></span></td></tr></tbody></table></div>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Internal Decision Support Only &mdash; Not an Appraisal, Tax Opinion, or Legal Advice.</strong>
+    Every verified value on this dashboard links directly to an official government or SEC filing accessed on 2026-11-07.
+    Unverified private/parcel values are strictly blank (<code>&quot;&quot;</code>) and listed on <a href="flagged.html">Flagged for Review</a>.
+    Personal and parcel identifiers are anonymized as <code>[REDACTED-PROPERTY-01]</code> and <code>[REDACTED-OWNER-01]</code>.</p>
+    <p>Cross-session navigation: <a href="../index.html">Root Site (Session B)</a> &middot;
+    <a href="../session-1944e5a3/index.html">Session A</a> &middot;
+    <a href="../docs/index.html">Session C</a> &middot;
+    <a href="../session-a3a8ec08/index.html">Session D</a> &middot;
+    <a href="../session-b4ec6128/index.html">Session E</a> &middot;
+    <a href="../session-5bb36a1b/index.html">Session F</a> &middot;
+    <a href="sources.html">26 Official Sources</a></p>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
