@@ -1,6 +1,6 @@
 # Verification ledger - manual review copy
 
-Access date: **2026-11-06**. Generated from `data/metrics.json` by `tools/export_ledger.py`; identical to what the website publishes.
+Access date: **2026-11-07**. Generated from `data/metrics.json` by `tools/export_ledger.py`; identical to what the website publishes.
 
 Rule applied: a value appears only if it was read from the official source below on the access date. Rows with no confirmed value are blank and marked UNVERIFIED.
 
@@ -8,7 +8,7 @@ Rule applied: a value appears only if it was read from the official source below
 
 | ID | Tier | Publisher | Document | URL |
 |---|---|---|---|---|
-| S1 | A | U.S. Bureau of Labor Statistics (BLS), Western Information Office | Los Angeles Area Economic Summary (updated October 05, 2026) | <https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf> |
+| S1 | A | U.S. Bureau of Labor Statistics (BLS), Western Information Office | Los Angeles Area Economic Summary (updated November 04, 2026; data through September 2026) | <https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf> |
 | S2 | A | U.S. Census Bureau | QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year) | <https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224> |
 | S3 | A | California Department of Finance, Demographic Research Unit | Report P-2A: Total Population Projections, California Counties, 2020-2070 (Baseline 2024; Vintage 2026 Release, March 2026) | <https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx> |
 | S4 | A | California Department of Industrial Relations (DIR), Labor Commissioner's Office | Minimum Wage Frequently Asked Questions | <https://www.dir.ca.gov/dlse/faq_minimumwage.htm> |
@@ -23,14 +23,16 @@ Rule applied: a value appears only if it was read from the official source below
 | S13 | A | County of Los Angeles | Key Facts About the Eaton and Palisades Fires (anniversary fact sheet) | <https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf> |
 | S14 | A | California Department of Education (CDE) | District Profile: Los Angeles Unified (school year 2025-26) | <https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000> |
 | S15 | A | California Department of Education (CDE) | Largest & Smallest Public School Districts (2025-26) | <https://www.cde.ca.gov/ds/ad/ceflargesmalldist.asp> |
-| S16 | A | Internal Revenue Service | Instructions for Form 8824, Like-Kind Exchanges (rev. December 2025) | <https://www.irs.gov/pub/irs-pdf/i8824.pdf> |
-| S17 | A | CAL FIRE - Office of the State Fire Marshal | Fire Hazard Severity Zones (FHSZ) maps and program | <https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fire-hazard-severity-zones-maps-2022> |
+| S16 | A | Internal Revenue Service | Instructions for Form 8824, Like-Kind Exchanges (2025 revision) | <https://www.irs.gov/pub/irs-pdf/i8824.pdf> |
+| S17 | A | CAL FIRE - Office of the State Fire Marshal | Fire Hazard Severity Zones (FHSZ) - programme page, 2026 SRA update and 2025 LRA rollout | <https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones> |
 | S18 | A | U.S. Geological Survey, Earthquake Hazards Program | Earthquake Hazards Program - hazards, maps and data | <https://www.usgs.gov/programs/earthquake-hazards> |
 | S19 | A | Federal Emergency Management Agency (FEMA) | Flood Map Service Center / National Flood Hazard Layer | <https://msc.fema.gov/portal/home> |
-| S20 | A | California Department of Insurance (CDI) | California FAIR Plan - consumers and agents | <https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-resi/FAIR-Plan.cfm> |
-| S21 | A | City of Los Angeles Economic and Workforce Development Department (EWDD) | Annual Economic Report FY2025-26, Tab 5: Los Angeles - People, Industry and Jobs (Economic Forecast) | <https://ewdd.lacity.gov/images/reports/ap25/APy25_Tab5-EconomicForecast.pdf> |
+| S20 | A | California Department of Insurance (CDI) | California FAIR Plan (CDI consumer page) | <https://www.insurance.ca.gov/01-consumers/200-wrr/California-FAIR-Plan.cfm> |
+| S21 | C | Los Angeles County Economic Development Corporation (LAEDC), Institute for Applied Economics - commissioned by the City of LA Workforce Development Board, hosted on ewdd.lacity.gov | Los Angeles: People, Industry and Jobs 2022-2028 (LAEDC, May 2024) - Annual Economic Report Tab 5 | <https://ewdd.lacity.gov/images/reports/ap25/APy25_Tab5-EconomicForecast.pdf> |
 | S22 | A | Los Angeles County Auditor-Controller | Property Tax FAQs | <https://auditor.lacounty.gov/faqs/> |
 | S23 | A | U.S. Bureau of Economic Analysis (BEA) | Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, released February 5, 2026) | <https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024> |
+| S24 | B | Jack in the Box Inc. (NASDAQ: JACK), SEC EDGAR | Form 10-Q for the quarterly period ended July 5, 2026 (filed August 2026) | <https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm> |
+| S25 | A | City of Los Angeles, Office of Wage Standards (EWDD) | Minimum Wage and Paid Sick Leave - 2026 Minimum Wage rate | <https://wagesla.lacity.gov/> |
 
 ## Population
 
@@ -56,55 +58,55 @@ Rule applied: a value appears only if it was read from the official source below
 | M13 | Median household income | $81,939 | USD (2024 dollars) | 2020-2024 ACS 5-yr | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) |  |
 | M14 | Median value of owner-occupied housing units | $921,200 | USD | 2020-2024 ACS 5-yr | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Owner-occupied rate 36.0%. |
 | M15 | Median gross rent | $1,933 | USD/month | 2020-2024 ACS 5-yr | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) |  |
-| M16 | Poverty rate | **(blank - unverified)** | percent | 2020-2024 ACS 5-yr | City of Los Angeles | UNVERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Not present in the QuickFacts extract captured. Left blank rather than taken from a secondary aggregator. |
-| M17 | Per capita income | **(blank - unverified)** | USD | 2020-2024 ACS 5-yr | City of Los Angeles | UNVERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Not present in the QuickFacts extract captured (B19301). Left blank. |
+| M16 | Poverty rate | 16.5% | percent | 2020-2024 ACS 5-yr | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | City of Los Angeles, Census QuickFacts (INC110224/IPE120225). Los Angeles County 13.3%. |
+| M17 | Per capita income | $47,685 | USD | 2020-2024 ACS 5-yr | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | City of Los Angeles, per capita income in past 12 months (2024 dollars). Los Angeles County $45,792. |
 | M86 | Los Angeles County total personal income (highest of any US county) | $818.5 billion | USD | 2024 | Los Angeles County | VERIFIED | [S23](https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024) | BEA 26-08. Confirms the size of the county's consumer base even while population declines. |
-| M87 | Los Angeles County real GDP level | **(blank - unverified)** | USD | 2024 | Los Angeles County | UNVERIFIED | [S23](https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024) | The BEA news release quantifies county personal income ($818.5B for Los Angeles County) but publishes the GDP level only in its interactive tables, which were not machine-readable in this session. Left blank rather than inferred from personal income. |
+| M87 | Los Angeles County real GDP level | **(blank - unverified)** | USD | 2024 | Los Angeles County | UNVERIFIED | [S23](https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024) | BEA confirms Los Angeles County had the highest total personal income of any US county in 2024 ($818.5 billion). The release table does not print the county real-GDP level, only the top and bottom of each population-size band, so the value stays blank rather than being read off an interactive query that is not reproducible from the URL. |
 
 ## Employment
 
 | ID | Metric | Value | Unit | Period | Geography | Status | Source | Note |
 |---|---|---|---|---|---|---|---|---|
-| M18 | Total nonfarm employment (not seasonally adjusted) | 6,289.1 | thousands of jobs | Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Prior year Aug 2025 comparison is embedded in S1 (12-month change below). |
-| M19 | Total nonfarm employment, 12-month change | +38.2 thousand (+0.6%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Growth is positive but below US trend in the same release (+0.3% US). |
-| M20 | Unemployment rate | 4.8% | percent | Aug 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Aug 2025: 5.8%. Clear improvement year over year. |
-| M21 | Unemployment rate | 4.9% | percent | Aug 2026 | Los Angeles County | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Aug 2025: 6.2%. |
-| M22 | Unemployment rate | 5.0% | percent | Aug 2026 | City of Los Angeles | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Aug 2025: 6.2%. |
-| M23 | Unemployment rate - benchmarks | California 5.4%; United States 4.3% | percent | Aug 2026 | State of California / US | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Local area still above the national rate. |
-| M24 | Leisure and hospitality employment, 12-month change | +16.8 thousand (+2.2%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Underlying demand for restaurant space and drive-thru trade areas. |
-| M25 | Education and health services employment, 12-month change | +42.7 thousand (+3.3%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Largest single contributor to net job growth in the metro. |
-| M26 | Information sector employment, 12-month change | -12.3 thousand (-6.1%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Largest percentage decline of any sector; office-adjacent lunch demand risk. |
-| M27 | Professional and business services employment, 12-month change | -9.2 thousand (-0.9%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | White-collar contraction. |
-| M28 | Manufacturing employment, 12-month change | -5.2 thousand (-1.1%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) |  |
-| M29 | Trade, transportation and utilities employment, 12-month change | -2.3 thousand (-0.2%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Includes the port/logistics complex. |
-| M30 | Financial activities employment, 12-month change | -4.7 thousand (-1.5%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) |  |
-| M31 | Construction employment, 12-month change | -1.9 thousand (-0.7%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Rebuild demand after the 2025 fires is not yet visible as construction job growth in this release. |
-| M32 | Government employment, 12-month change | +10.7 thousand (+1.5%) | jobs / percent | Aug 2025 to Aug 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) |  |
+| M18 | Total nonfarm employment (not seasonally adjusted) | 6,282.1 | thousands of jobs | Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles metro, total nonfarm, not seasonally adjusted. Updated from the superseded Aug 2026 figure (6,289.1). |
+| M19 | Total nonfarm employment, 12-month change | +30.2 thousand (+0.5%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Positive but below the US trend in the same release (+0.3%). Updated from the superseded Aug 2026 figure. |
+| M20 | Unemployment rate | 4.4% | percent | Sep 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles metro area. Sep 2025: 5.5%. Updated from the superseded Aug 2026 reading (4.8%). |
+| M21 | Unemployment rate | 4.5% | percent | Sep 2026 | Los Angeles County | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles County. Sep 2025: 5.9%. |
+| M22 | Unemployment rate | 4.5% | percent | Sep 2026 | City of Los Angeles | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | City of Los Angeles. Sep 2025: 5.9%. |
+| M23 | Unemployment rate - benchmarks | California 5.1%; United States 4.0% | percent | Sep 2026 | State of California / US | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | County and city (4.5%) remain above the national rate (4.0%). |
+| M24 | Leisure and hospitality employment, 12-month change | +11.5 thousand (+1.5%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Underlying demand for restaurant space and drive-thru trade areas. |
+| M25 | Education and health services employment, 12-month change | +49.1 thousand (+3.8%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Largest single contributor to net job growth in the metro. |
+| M26 | Information sector employment, 12-month change | -11.4 thousand (-5.7%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Largest percentage decline of any sector; office-adjacent lunch demand risk. |
+| M27 | Professional and business services employment, 12-month change | -5.2 thousand (-0.5%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | White-collar contraction, smaller than the prior vintage reported. |
+| M28 | Manufacturing employment, 12-month change | -5.4 thousand (-1.2%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) |  |
+| M29 | Trade, transportation and utilities employment, 12-month change | +2.9 thousand (+0.3%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Includes the port/logistics complex. Sign flipped from the superseded vintage. |
+| M30 | Financial activities employment, 12-month change | -5.1 thousand (-1.7%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) |  |
+| M31 | Construction employment, 12-month change | +0.1 thousand (0.0%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Flat. Rebuild demand after the 2025 fires is not visible as construction job growth in this release. |
+| M32 | Government employment, 12-month change | -8.4 thousand (-1.1%) | jobs / percent | Sep 2025 to Sep 2026 | Los Angeles-Long Beach-Anaheim MSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Sign flipped from the superseded vintage. |
 
 ## Wages
 
 | ID | Metric | Value | Unit | Period | Geography | Status | Source | Note |
 |---|---|---|---|---|---|---|---|---|
-| M33 | Average weekly wage, all industries | $1,704 | USD/week | Q1 2026 | Los Angeles County | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | US average $1,654; metro area $1,721; Orange County $1,766 (QCEW). |
-| M34 | Employment Cost Index, 12-month change | +2.8% | percent | Jun 2026 | Los Angeles-Long Beach CSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | US +3.1%. Wage pressure is cooling versus 2023 (+5.3%). |
+| M33 | Average weekly wage, all industries | $1,704 | USD/week | Q1 2026 | Los Angeles County | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles County, QCEW. US average $1,654; metro area $1,721; Orange County $1,766. |
+| M34 | Employment Cost Index, 12-month change | +3.9% | percent | Sep 2026 | Los Angeles-Long Beach CSA | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles-Long Beach CSA, ECI. US +3.1%. Updated from the superseded Jun 2026 figure (+2.8%). |
 
 ## Prices
 
 | ID | Metric | Value | Unit | Period | Geography | Status | Source | Note |
 |---|---|---|---|---|---|---|---|---|
-| M35 | CPI-U, all items, 12-month change | +3.6% | percent | Aug 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | US +3.4%. This is the reference rate for CPI-linked rent escalators. |
-| M36 | CPI-U, food, 12-month change | +2.8% | percent | Aug 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) |  |
-| M37 | CPI-U, energy, 12-month change | +17.6% | percent | Aug 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Relevant to operating cost pass-throughs in a NNN structure. |
+| M35 | CPI-U, all items, 12-month change | +3.7% | percent | Sep 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles metro CPI-U, all items. US +3.7%. Reference rate for CPI-linked rent escalators. Updated from the superseded Aug 2026 figure (+3.6%). |
+| M36 | CPI-U, food, 12-month change | +2.8% | percent | Sep 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles metro CPI-U, food. US +2.5%. |
+| M37 | CPI-U, energy, 12-month change | +20.3% | percent | Sep 2026 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | Los Angeles metro CPI-U, energy. US +20.4%. Relevant to NNN operating-cost pass-throughs. |
 
 ## Consumer demand
 
 | ID | Metric | Value | Unit | Period | Geography | Status | Source | Note |
 |---|---|---|---|---|---|---|---|---|
 | M38 | Total accommodation and food services sales | $17,366,966 thousand | USD | 2022 (Economic Census) | City of Los Angeles | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Latest Economic Census year available in QuickFacts. |
-| M39 | Average annual household expenditures - shelter/housing | $33,126 | USD/year | 2023-2024 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | US $25,853. High housing cost share compresses discretionary food spending. |
-| M40 | Average annual household expenditures - food | $11,858 | USD/year | 2023-2024 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | US $10,077. |
-| M41 | Average annual household expenditures - transportation | $14,497 | USD/year | 2023-2024 | Los Angeles metro area | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | US $13,278. Car dependency supports drive-thru formats. |
-| M42 | Median household income (county comparison) | **(blank - unverified)** | USD | 2020-2024 ACS 5-yr | Los Angeles County | UNVERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | County column was not captured in the QuickFacts extract. Blank by rule; do not substitute an aggregator value. |
+| M39 | Average annual household expenditures - shelter/housing | $33,016 | USD/year | 2025 | West region (Census West) | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | West region, Consumer Expenditure Survey. US $27,790. Updated from the superseded 2023-24 table. |
+| M40 | Average annual household expenditures - food | $12,447 | USD/year | 2025 | West region (Census West) | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | West region, Consumer Expenditure Survey. US $10,633. Updated from the superseded 2023-24 table. |
+| M41 | Average annual household expenditures - transportation | $14,110 | USD/year | 2025 | West region (Census West) | VERIFIED | [S1](https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf) | West region, Consumer Expenditure Survey. US $13,492. Car dependency supports drive-thru formats. |
+| M42 | Median household income (county comparison) | $90,112 | USD | 2020-2024 ACS 5-yr | Los Angeles County | VERIFIED | [S2](https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224) | Los Angeles County median household income (2024 dollars); city is $81,939. Geography field updated. |
 
 ## Education
 
@@ -145,7 +147,7 @@ Rule applied: a value appears only if it was read from the official source below
 |---|---|---|---|---|---|---|---|---|
 | M61 | California statewide minimum wage | $16.90 | USD/hour | effective 2026-01-01 | State of California | VERIFIED | [S4](https://www.dir.ca.gov/dlse/faq_minimumwage.htm) | Indexed annually to CPI-W, capped at 3.5% per year. |
 | M62 | California fast food minimum wage (AB 1228) | $20.00 | USD/hour | in force since 2024-04-01 | State of California | VERIFIED | [S5](https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm) | Applies to limited-service chains with 60+ US locations - Jack in the Box franchisees are covered. Fast Food Council may raise it; no later council-set rate was displayed on the DIR page on the access date. |
-| M63 | City of Los Angeles local minimum wage | **(blank - unverified)** | USD/hour | 2026 | City of Los Angeles | UNVERIFIED | [S4](https://www.dir.ca.gov/dlse/faq_minimumwage.htm) | DIR states a local rate may exceed the state rate but the city rate itself was not confirmed on an official city page in this session. Blank by rule. |
+| M63 | City of Los Angeles local minimum wage | $18.42 | USD/hour | effective 2026-07-01 | City of Los Angeles | VERIFIED | [S25](https://wagesla.lacity.gov/) | City of Los Angeles minimum wage, Office of Wage Standards. Indexed annually to CPI-W; higher than the $20.00 fast-food minimum applies only if the local rate exceeds it. |
 
 ## Tenant and brand
 
@@ -163,6 +165,13 @@ Rule applied: a value appears only if it was read from the official source below
 | M73 | Del Taco divestiture | $115 million to Yadav Enterprises, Inc. | USD | sale agreement 2025-10-15 | System | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | Subsequent event. Reduces brand complexity; proceeds earmarked for debt paydown. |
 | M74 | Securitized debt outstanding (Master Issuer) | ~$1.7 billion | USD | 2025-09-28 | System | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | Covenants include DSCR and gross-sales triggers - a stressed franchisee system can accelerate amortization. |
 | M75 | Dividend | Discontinued | corporate action | FY2025 | System | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | 'Jack on Track' reallocates cash to debt paydown. Signals balance-sheet priority over distribution. |
+| M88 | Net loss attributable to Jack in the Box Inc. (FY2025) | -$80.7 million | USD | FY ended 2025-09-28 | Company | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | Consolidated statements of operations, FY2025. FY2024 was a $36.7M net loss. |
+| M89 | Total stockholders' deficit | -$938.3 million | USD | 2025-09-28 | Company | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | Balance sheet: total liabilities exceed total assets. This is the tenant-credit fact that matters most to a landlord. |
+| M90 | Total stockholders' deficit (updated) | -$901.3 million | USD | 2026-07-05 | Company | VERIFIED | [S24](https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm) | Q3 FY2026 10-Q. Deficit narrowed after the Del Taco sale closed, but remains negative. |
+| M91 | Long-term debt, net of current maturities | $1,428.7 million | USD | 2026-07-05 | Company | VERIFIED | [S24](https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm) | Down from $1,674.5M at 2025-09-28; the Del Taco proceeds and cash flow went to debt paydown. |
+| M92 | Systemwide sales, Jack in the Box | $4,208.9 million | USD | FY2025 | Company | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | Down from $4,396.3M in FY2024. System same-store sales -4.2% in FY2025, -7.4% in Q4 FY2025. |
+| M93 | Net (loss) earnings, three quarters to 2026-07-05 | $27.9 million | USD | FY2026 YTD to 2026-07-05 | Company | VERIFIED | [S24](https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm) | Returned to profit after the Del Taco loss on sale and discontinued operations were separated out. |
+| M94 | Jack in the Box restaurants in California | 941 | restaurants | 2025-09-28 | California | VERIFIED | [S9](https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm) | Company-operated 96; franchise 845. California is the largest single state for the brand. |
 
 ## Hazard
 
@@ -174,15 +183,15 @@ Rule applied: a value appears only if it was read from the official source below
 | M79 | Businesses impacted - 2025 fire pair | ~6,800 | businesses | 2025 | Los Angeles County | VERIFIED | [S13](https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf) | Workers impacted ~47,000. |
 | M80 | Labor income lost - 2025 fire pair | $2.2 billion to $4.2 billion | USD | 2025 | Los Angeles County | VERIFIED | [S13](https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf) |  |
 | M81 | Tax revenue losses - 2025 fire pair | $900 million to $1.6 billion | USD | 2025 | Los Angeles County | VERIFIED | [S13](https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf) | Directly relevant to municipal service capacity and to future parcel-tax and assessment pressure. |
-| M82 | Fire Hazard Severity Zone classification of the subject parcel | **(blank - unverified)** | zone | 2026 | Subject property | UNVERIFIED | [S17](https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fire-hazard-severity-zones-maps-2022) | Requires parcel-level lookup in the CAL FIRE FHSZ viewer plus LAFD/LACoFD local maps. Central Los Angeles flatland is generally outside SRA very-high zones, but this is NOT asserted here. |
+| M82 | Fire Hazard Severity Zone classification of the subject parcel | **(blank - unverified)** | zone | 2026 | Subject property | UNVERIFIED | [S17](https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones) | Requires parcel-level lookup in the CAL FIRE FHSZ viewer plus LAFD/LACoFD local maps. Central Los Angeles flatland is generally outside SRA very-high zones, but this is NOT asserted here. |
 | M83 | Seismic site classification and fault-rupture zone | **(blank - unverified)** | classification | 2026 | Subject property | UNVERIFIED | [S18](https://www.usgs.gov/programs/earthquake-hazards) | Requires the CGS EQ Zapp / Alquist-Priolo maps and a geotechnical report. Blank by rule. |
 | M84 | FEMA flood zone | **(blank - unverified)** | zone | effective FIRM | Subject property | UNVERIFIED | [S19](https://msc.fema.gov/portal/home) | Requires a parcel-level NFHL lookup. Blank by rule. |
-| M85 | Property insurance availability and premium | **(blank - unverified)** | USD / terms | 2026 | Subject property | UNVERIFIED | [S20](https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-resi/FAIR-Plan.cfm) | No official published rate for a commercial parcel. Must be quoted by a broker; FAIR Plan is residential-oriented and does not solve commercial wildfire capacity. |
+| M85 | Property insurance availability and premium | **(blank - unverified)** | USD / terms | 2026 | Subject property | UNVERIFIED | [S20](https://www.insurance.ca.gov/01-consumers/200-wrr/California-FAIR-Plan.cfm) | No official published rate for a commercial parcel. Must be quoted by a broker; FAIR Plan is residential-oriented and does not solve commercial wildfire capacity. |
 
 ## Totals
 
-- Rows: 87
-- Verified: 76
-- Blank / unverified: 11
-- Sources: 23
+- Rows: 94
+- Verified: 87
+- Blank / unverified: 7
+- Sources: 25
 

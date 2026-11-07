@@ -233,14 +233,15 @@ def build_index():
     <p>County population is projected to <em>fall</em> from 9.85M (2025) to 9.64M (2040) in the state's official series. {src_link("S3")}</p>
   </div>
   <div class="card">
-    <h3>2. The tenant is restructuring, not disappearing</h3>
-    <p>2,136 Jack in the Box restaurants, 93% franchised, but the system shrank by 55 units in FY2025; Del Taco is being sold for $115M, the dividend is gone, and ~$1.7B of securitized debt carries sales-based covenants. {src_link("S9")}</p>
+    <h3>2. The tenant is restructuring, and its balance sheet is the real risk</h3>
+    <p>2,136 Jack in the Box restaurants at FY2025 year-end, 93% franchised, but the system <strong>shrank by 55 units</strong> that year (31 opened, 86 closed) and system same-store sales fell 4.2%. Del Taco was sold for $115M, the dividend is gone, and FY2025 produced a <strong>net loss of $80.7M</strong> against a <strong>stockholders&rsquo; deficit of $938.3M</strong>. {src_link("S9")} The most recent filing shows the deficit at $901.3M with long-term debt of $1,428.7M after the sale proceeds went to paydown. {src_link("S24")}</p>
     <p>Critically for you: the company says it has <em>&ldquo;generally been able to renew our restaurant leases as they expire at then-current market rates.&rdquo;</em> {src_link("S9")} The 2030&ndash;2035 expiry is a <strong>repricing event</strong>, not an automatic rollover.</p>
   </div>
   <div class="card">
     <h3>3. The money decision is tighter than it looks</h3>
     <p>At the benchmark rent, selling now clears about <strong>{money(BASE['sell_now_net'])}</strong> after costs. Holding and renewing produces <strong>{money(BASE['hold_expected_wealth'])}</strong> of 2040 wealth versus <strong>{money(BASE['sell_now_wealth_netlease'])}</strong> if you sell and redeploy at the verified 7.3% net-lease yield. {src_link("S10")}</p>
     <p>You need a <strong>{MODEL['breakevens']['required_reinvest_yield_pct']['base']:.2f}%</strong> reinvestment yield for selling to match holding. That is why the recommendation is a sequence, not a slogan.</p>
+    <p>And at a 6.50% going-in cap against an 8.71% debt constant, a leveraged buyer is in <strong>negative leverage</strong> &mdash; so the bid you get is an unlevered or 1031 bid. See <a href="projection-model.html">the model</a>.</p>
   </div>
   <div class="card">
     <h3>4. The tail risk is real and documented</h3>
@@ -691,6 +692,51 @@ def build_decision():
 <h2>Decision triggers - check these before acting</h2>
 {table(["If you learn that&hellip;", "Then&hellip;"], trig_rows)}
 
+<h2>Base case, better case, worse case &mdash; and the indicator that tells you which one you are in</h2>
+<p>The brief asks for the best, sustainable and worst outcomes, plus black swans. Each row below names what has to be true, which
+<em>verified, currently-published</em> indicator to watch, and the action that follows. The thresholds are decision rules set by this
+workbook, not data.</p>
+{table(["Path", "What has to be true", "Verified indicator to watch (source)", "What you do"],
+ [
+  ["<strong>Base case</strong><br><span class='muted'>most likely</span>",
+   "Tenant renews at then-current market rent; exit cap 6.50&ndash;7.00%; NOI grows ~2%/yr, below CPI.",
+   f"Tenant's own renewal practice and closure program {src_link('S9')}; system same-store sales and unit count in the quarterly filing {src_link('S24')}; metro payrolls +0.5% {src_link('S1')}",
+   "Open the extension conversation early. Hold, extend at a reset, re-price in 2027&ndash;28 while WALT is still long."],
+  ["<strong>Better case</strong>",
+   "Rates ease, cap compresses toward 5.50%, 1031 buyers compete for a long-WALT asset, and the Measure ULA threshold keeps indexing up with chained CPI so the 4.0% surtax is not triggered.",
+   f"10-year Treasury (currently 4.84%) {src_link('S11')}; FOMC target range {src_link('S12')}; ULA threshold indexation rule {src_link('S8')}; net-lease acquisition yields (7.3% in 2025) {src_link('S10')}",
+   "Sell into a 1031 with 5&ndash;7+ years of term left. Do not wait for the last year &mdash; the buyer pool is priced on WALT."],
+  ["<strong>Worse case</strong><br><span class='muted'>most plausible downside</span>",
+   "Tenant declines or dark-closes (it closed 86 units in FY2025, 47 in one quarter), the exit lands in a higher-rate market, and the sale crosses the $5.4M ULA tier.",
+   f"Quarterly unit count and same-store sales {src_link('S9')}; 10-year Treasury {src_link('S11')}; ULA tier-1 threshold and 4.0% rate {src_link('S8')}; county transfer tax {src_link('S7')}",
+   "Carry 18 months of NOI plus the deductible as a reserve. If the 10-Q shows another block closure near your trade area, accelerate the sale rather than renew."],
+  ["<strong>Black swan: wildfire</strong>",
+   "A repeat of the January 2025 fire pair at metropolitan scale: $5.2B&ndash;$10.1B of output lost, ~6,800 businesses and ~47,000 workers affected, $900M&ndash;$1.6B of tax revenue lost.",
+   f"County after-action fact sheet {src_link('S13')}; FHSZ classification for the parcel (needs APN) {src_link('S17')}; FAIR Plan as last resort, $20M commercial limit per location {src_link('S20')}",
+   "Insurance transfers the loss, not the downtime. Size the reserve to the deductible plus 12 months of NOI; confirm the policy is not a FAIR Plan fire-only policy without a DIC wrap."],
+  ["<strong>Black swan: earthquake</strong>",
+   "A basin M7+ event. The county's flatland asset is exposed to shaking and liquefaction regardless of FHSZ.",
+   f"USGS Earthquake Hazards Program, 2023 National Seismic Hazard Model {src_link('S18')}; CGS liquefaction screening for the parcel (needs APN)",
+   "Seismic retrofit assessment and a named-storm/earthquake deductible review before any renewal is signed."],
+  ["<strong>Black swan: insurance capacity</strong>",
+   "Carriers withdraw or reprice; the FAIR Plan becomes the only market and is fire-only.",
+   f"CDI FAIR Plan page and the Sustainable Insurance Strategy updates {src_link('S20')}",
+   "A renewal that is not insurable at a sane premium is not a renewal. Test insurability <em>before</em> granting a long extension."],
+ ], cls="wide")}
+
+<h2>Early-warning dashboard: the six numbers to check each quarter</h2>
+<p>All six are published by an official body, all six are free, and none of them requires the subject's private documents. Check them on
+the first business day of each quarter; if two or more move past the threshold, act.</p>
+{table(["Indicator", "Current verified reading", "Threshold that should change your mind", "Where to check"],
+ [
+  ["LA metro unemployment", f"4.4% (Sep 2026) {src_link('S1')}", "Above 6.0% sustained for two quarters", "BLS Los Angeles Area Economic Summary"],
+  ["LA metro payroll growth, 12-month", f"+0.5% (Sep 2026) {src_link('S1')}", "Negative for two consecutive quarters", "Same BLS release"],
+  ["LA metro CPI-U, all items", f"+3.7% (Sep 2026) {src_link('S1')}", "Below 2.0% &mdash; your escalator stops protecting you", "Same BLS release"],
+  ["10-year Treasury", f"4.84% (2026-11-05) {src_link('S11')}", "Above 5.50% &mdash; cap expansion risk rises", "FRED DGS10 (daily)"],
+  ["Tenant same-store sales and unit count", f"System SSS &minus;4.2% FY2025; 86 closures {src_link('S9')}", "Second consecutive year of negative SSS or another closure block", "Tenant's quarterly 10-Q on SEC EDGAR"],
+  ["Los Angeles County population", f"9,853,435 (2025) &rarr; 9,637,524 (2040) {src_link('S3')}", "Revision to growth rather than decline", "CA DOF P-2A (annual release)"],
+ ], cls="wide")}
+
 <h2>For you as an individual, not just for the asset</h2>
 <div class="card">
 <ul>{''.join(f'<li>{e(p)}</li>' for p in rec['individual_owner_layer'])}</ul>
@@ -849,12 +895,12 @@ def build_sources():
     for s in SOURCES["sources"]:
         rows.append([s["id"], f'<span class="badge neutral">{e(s["tier"])}</span>', e(s["publisher"]),
                      f'<a href="{e(s["url"])}" target="_blank" rel="noopener noreferrer">{e(s["title"])} &#8599;</a><br><span class="muted">{e(s["url"])}</span>',
-                     e(s["covers"]), e(s["accessed"])])
+                     e(s["covers"]), e(s.get("url_status", "not re-checked")), e(s["accessed"])])
     body = f"""
 {head_block("Sources", f"{len(SRC)} sources, every URL re-opened on 2026-11-07",
             "Tier A: government or regulator. Tier B: SEC filing by the tenant. Tier C: issuer investor-relations disclosure, used only where no regulator publishes the figure. Tier D industry commentary is not used for any value.")}
 
-{table(["ID", "Tier", "Publisher", "Title and link", "What it covers", "Accessed"], rows)}
+{table(["ID", "Tier", "Publisher", "Title and link", "What it covers", "Link status", "Re-verified"], rows)}
 
 <h2>How to audit this workbook</h2>
 <ol strat="1">

@@ -87,3 +87,8 @@ body.js .tablewrap table tbody tr[hidden]{display:none}
   table{font-size:12.5px;min-width:640px}
   .bar-row{grid-template-columns:110px 1fr 80px}
 }
+
+/* wide tables (scenario and early-warning tables) */
+table.wide { min-width: 780px; }
+table.wide td { vertical-align: top; }
+table.wide td .muted { font-weight: 400; }
