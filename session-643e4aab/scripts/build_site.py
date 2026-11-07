@@ -187,8 +187,8 @@ while at least five years of term remain. <a href="executive-summary.html">Read 
 <div class="s">Cap-rate band 4.50%-7.25% &rarr; {money(100000/0.0725)} to {money(100000/0.045)}</div></div>
 <div class="kpi"><div class="k">Best modelled outcome, 2040</div><div class="v">{money(b['strategies'][b['ranking'][0]])}</div>
 <div class="s">{b['ranking'][0].replace('_',' ').title()} &middot; spread across strategies {b['spread_pct']}%</div></div>
-<div class="kpi"><div class="k">Tenant credit</div><div class="v">{"-"}{money(-901286000/1e6)}M equity</div>
-<div class="s">FY2025 net loss $80.7M, but FY2026 YTD <b>+$27.9M</b> profit</div></div>
+<div class="kpi"><div class="k">Tenant equity</div><div class="v">-$901M</div>
+<div class="s">FY2025 net loss $80.7M, but FY2026 nine months <b>+$27.9M</b> {src_link('S18')}</div></div>
 <div class="kpi"><div class="k">Facts verified</div><div class="v">{counts['verified']}</div>
 <div class="s">of {len(METRICS['rows'])} rows; {counts['unverified']} left blank and flagged</div></div>
 </div>
@@ -290,14 +290,14 @@ makes an otherwise good asset unsellable - and it is exactly when you would want
 <h2>4. What the local economy actually says</h2>
 <p>Better than the headline reputation, and not strong enough to change the decision:</p>
 <ul>
-<li><b>Labour market has tightened.</b> City unemployment 4.5% in September 2026, down from 5.5% for the metro a year
-earlier, and now below the state's 5.1%. {src_link('S01')}</li>
+<li><b>Labour market has tightened.</b> City unemployment was 4.5% in September 2026, down from 5.9% a year earlier, and
+now below the state's 5.1% and only half a point above the national 4.0%. {src_link('S01')}</li>
 <li><b>The job mix is shifting, not shrinking.</b> Education and health added 49.1k jobs and leisure/hospitality added 11.5k;
 information lost 11.4k and professional services lost 5.2k. A lunch-driven office location is the exposure; an all-day
 residential catchment is not. {src_link('S01')}</li>
 <li><b>Population is projected to decline.</b> The state's official projection has Los Angeles County falling from
 {int(PROJ['meta']['population_projection']['2025']):,} in 2025 to {int(PROJ['meta']['population_projection']['2040']):,} in 2040,
-a {PROJ['meta']['population_projection']['change_2025_to_2040_pct']}% decline. This is a real headwind for unit volume and it is
+a {abs(PROJ['meta']['population_projection']['change_2025_to_2040_pct'])}% decline. This is a real headwind for unit volume and it is
 the single best argument against a 15-year lock-in at flat rent. {src_link('S04')}</li>
 <li><b>Income and demand are high in absolute terms</b> - county personal income of $818.5bn is the largest of any US county -
 but the city median household income ($81,939) trails the county ($90,112), and 16.5% of city residents are in poverty.
