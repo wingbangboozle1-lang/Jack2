@@ -556,3 +556,41 @@ They leave Session B's build and its CI "generated output up to date" check gree
 | Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/ |
 | PR | recorded below after merge |
 | Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+---
+
+# Session H (`arena/4bf707b1-jack2`) — 2026-11-07 — IN PROGRESS
+
+**Claimed:** 2026-11-07 (UTC). Baseline: `fb69f84` (merge of PR #17, Session G). Sessions A–G are all `done`;
+no live claims were open on the board when this session read it, and the one in-flight branch
+(`arena/bb4c2960-jack2`, commit `42410916`) had not opened a pull request.
+
+**Scope (disjoint from every earlier session).** This session writes only:
+
+| Path | Purpose |
+|---|---|
+| `session-4bf707b1/**` | its own namespaced 9-page workbook, data layer, build + verify scripts |
+| `COORDINATION.md` | append-only: this claim block, the verification log, the deployment record |
+| `data/irregularities.json` | append-only: new findings from the line-by-line review *and* the stale-link fix list |
+| `tools/check_site.py` | one additive check: HTTP status of every cited external URL, with an offline mode |
+
+It does **not** edit the root HTML, `data/sources.json`, `data/metrics.json`, `data/risks.json`,
+`data/decisions.json`, `tools/build_site.py`, `tools/model.py`, `README.md`, `docs/`, or any
+`session-*/` directory belonging to another session.
+
+**Task board.**
+
+| # | Task | Status | Files |
+|---|---|---|---|
+| H-01 | Claim + full repository review against the live tree | in progress | `COORDINATION.md` |
+| H-02 | Independent 2026-11-07 re-verification of every cited external source (HTTP status + value read-back) | in progress | `session-4bf707b1/data/*.json` |
+| H-03 | Decision workbook: sell / renew(extend) / hold-to-expiry / partial, scored, with triggers | in progress | `session-4bf707b1/*.html` |
+| H-04 | Risk register for every decision, BAU + black swan | in progress | `session-4bf707b1/data/risks.json` |
+| H-05 | Projection system, reproducible, inputs labelled verified vs assumption | in progress | `session-4bf707b1/model.py` |
+| H-06 | Verify (links live, sources, PII), PR → `main`, merge, confirm Pages `built` | in progress | `session-4bf707b1/scripts/verify.py` |
+
+**Recorded so far (headline):** two cited official URLs used by the *published* build are returning
+errors when re-fetched on 2026-11-07 — the California Department of Insurance FAIR Plan consumer page
+(cited as S20, now serves a "Document Not Found" page) and the BEA county personal-income release URL in
+Sessions C/D/E (404; the release moved to `/news/2026/gross-domestic-product-county-and-personal-income-county-2024`).
+Both are logged with a working replacement and will be published on this session's flagged page.
