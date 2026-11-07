@@ -520,9 +520,9 @@ the gain. They do not make selling wrong; they make unstructured selling wrong.<
 {table(["ID", "Event", "Likelihood", "Impact", "Damages", "Mitigation / action", "Source"], rows, scroll=True)}
 
 <h2>Black swans, honestly</h2>
-<p>The register includes eight events that a normal projection would ignore: a major earthquake, a
-wildfire-driven urban conflagration, insurer withdrawal, a 1031 repeal, a new transfer tax, a pandemic-scale
-closure, civil disturbance, and the loss of Proposition 13 protection. Only the January 2025 fire pair in this
+<p>The register includes six black swans and two structural shocks that a normal projection would ignore: a
+major earthquake, a wildfire-driven urban conflagration, insurer withdrawal, a 1031 repeal, a new transfer tax, a
+pandemic-scale closure, civil disturbance, and the loss of Proposition 13 protection. Only the January 2025 fire pair in this
 region has a documented precedent; the rest are carried on judgement and, in the model, through a deliberately
 coarse hazard assumption (1.0% a year for a &gt;20% impairment, 0.25% for total loss) that is disclosed as an
 assumption rather than dressed up as data.</p>

@@ -152,7 +152,7 @@ repository are reachable from the landing page.
 | Recommendation | **Do not hold to expiry.** Two leading paths within 0.5% of each other on risk-adjusted wealth: (1) extend ~10 years at or above in-place rent in 2027, then sell 2029–2032 with ~12 years of term through a §1031 exchange; (2) sell now through a §1031 exchange. Passive hold is last on the floor and the risk-adjusted measure. |
 | Evidence | 110 fact rows, **96 verified** against **19 official sources** read on 2026-11-07, **14 deliberately blank** and flagged. Nothing inferred. |
 | Model | Six strategies, deterministic + 10,000-trial seeded Monte Carlo (seed 20261107), CRRA-2 certainty equivalent, 15-cell sensitivity grid, all 20 assumptions published with the range tested |
-| Risk | 30-row register mapped to every strategy, including 8 black swans |
+| Risk | 30-row register mapped to every strategy, including 6 black swans |
 | Review | 10 irregularities found in the existing repository (1 URL defect, 1 incomplete tax row, 1 one-sided tenant framing, 3 fillable blanks, plus cleared items) — published with evidence on the site's Flagged for review page |
 | Privacy | No address, APN, rent, basis, loan or owner identity anywhere; enforced by a build-failing PII scan |
 
