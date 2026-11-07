@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy &middot; Central LA NNN decision workbook</title>
+<meta name="description" content="Verified, source-linked decision workbook for a single-tenant NNN restaurant asset in Central Los Angeles. Sell before expiry, or renew.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>Central LA NNN decision workbook</b><span>Open the box &middot; Session F &middot; data read 2026-11-07</span></div>
+  <nav class="main"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risks</a><a href="projection-model.html">Projection model</a><a href="flagged.html">Flagged for review</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<h1>Privacy</h1>
+<p class="lead">Personal information is the highest priority in this brief. Nothing that could identify the Owner,
+the property or the tenant's lease terms is stored, transmitted or published.</p>
+
+<h2>What is not collected</h2>
+<div class="tablewrap"><table><thead><tr><th>Category</th><th>Status in this build</th></tr></thead><tbody>
+<tr><td>Owner name, entity, address, contact details</td><td>Not collected, not stored, not published</td></tr>
+<tr><td>Street address, APN, legal description, parcel geometry</td><td>Not collected. The analysis is geography-agnostic beyond "Central Los Angeles".</td></tr>
+<tr><td>Rent, NOI, purchase price, tax basis, depreciation, loan terms, lender</td><td>Not collected. All modelling is normalised per $100,000 of annual NOI.</td></tr>
+<tr><td>Tenant lease document, rent schedule, guarantees</td><td>Not collected</td></tr>
+<tr><td>Insurance policy numbers, carrier, account numbers</td><td>Not collected</td></tr>
+<tr><td>Any individual's income, net worth or tax return</td><td>Not collected. The model never asks for it.</td></tr>
+</tbody></table></div>
+
+<h2>How that is enforced rather than promised</h2>
+<ul class="tight">
+<li>The data files contain no free-text field where such information could be pasted. Fact rows carry a metric, a value read from a public source, and a source id.</li>
+<li>The build script scans every generated file for email addresses, phone numbers, parcel-number patterns and street-address patterns, and fails the build on a match.</li>
+<li>No analytics, no cookies, no fonts, no scripts and no third-party requests are loaded by any page. The site is static HTML and one stylesheet.</li>
+<li>No form, no input field and no upload exists anywhere on the site, so no personal data can be entered.</li>
+</ul>
+
+<h2>What the site does contain</h2>
+<p>Public facts about a public company (Jack in the Box Inc., a Nasdaq issuer), public statistics about Los
+Angeles, and public tax and hazard rules. All of it is already published by the government. None of it is
+personal.</p>
+
+<h2>Retention</h2>
+<p>The repository is public because it publishes to GitHub Pages. Anything private that the Owner later supplies
+should be kept out of this repository entirely and, if it must be analysed, summarised only as a derived ratio
+&mdash; the same technique used here.</p>
+
+<div class="callout good"><b>If you are the Owner:</b> you never need to send the address, the rent or your tax
+return for this workbook to be useful. The decision rule is expressed in terms you can apply yourself: years of
+remaining term, rent versus market, and the exit tax.</div>
+
+</div></main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>This session</h4><p class="small mut" style="margin:0">Session F, <code>session-e618ace7</code>. Independent verification and decision workbook. 110 fact rows, 96 verified against 19 official sources, 14 deliberately blank.</p></div>
+    <div><h4>Pages</h4><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risk register</a><a href="projection-model.html">Projection model</a><a href="valuation-capital.html">Valuation &amp; capital markets</a><a href="area-economy.html">Area economy</a><a href="demographics-schools.html">Demographics &amp; schools</a><a href="tenant-credit.html">Tenant credit</a><a href="property-lease.html">Property &amp; lease</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></div>
+    <div><h4>Privacy &amp; scope</h4><p class="small mut" style="margin:0">No owner name, street address, APN, account or loan number appears anywhere in this build. All analysis is normalised per $100,000 of annual NOI. Internal decision support only &mdash; not an appraisal, not tax advice, not investment advice.</p></div>
+  </div>
+</div></footer>
+</body></html>

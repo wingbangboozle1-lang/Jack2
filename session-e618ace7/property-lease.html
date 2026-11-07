@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Property &amp;amp; lease &middot; Central LA NNN decision workbook</title>
+<meta name="description" content="Verified, source-linked decision workbook for a single-tenant NNN restaurant asset in Central Los Angeles. Sell before expiry, or renew.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>Central LA NNN decision workbook</b><span>Open the box &middot; Session F &middot; data read 2026-11-07</span></div>
+  <nav class="main"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risks</a><a href="projection-model.html">Projection model</a><a href="flagged.html">Flagged for review</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<h1>Property &amp; lease</h1>
+<p class="lead">What is known, what is withheld, and what the Owner must obtain before a binding decision. This
+page contains no address, no parcel number, no owner identity and no account numbers &mdash; by design.</p>
+
+<h2>What the brief tells us</h2>
+<div class="tablewrap"><table><thead><tr><th>Item</th><th>Status</th><th>Use in the analysis</th></tr></thead><tbody>
+<tr><td>Asset type</td><td><span class="badge ok">given</span></td><td>Single-tenant quick-service restaurant, net-net-net lease</td></tr>
+<tr><td>Brand</td><td><span class="badge ok">given</span></td><td>Jack in the Box &mdash; public company, analysable from SEC filings</td></tr>
+<tr><td>Location</td><td><span class="badge ok">given</span></td><td>Central Los Angeles. No sub-market, address or APN is recorded.</td></tr>
+<tr><td>Lease expiry</td><td><span class="badge warn">window only</span></td><td>2030&ndash;2035, i.e. 4 to 9 years of remaining term. Modelled at 6 years (A05) with a 4&ndash;9 year range.</td></tr>
+<tr><td>Rent, escalators, options, guarantor</td><td><span class="badge warn">not supplied</span></td><td>Modelled as assumptions; all analysis normalised per $100,000 of NOI</td></tr>
+<tr><td>Basis, loan, insurance, hazard class</td><td><span class="badge warn">not supplied</span></td><td>Flagged unverified; no value invented</td></tr>
+</tbody></table></div>
+
+<div class="callout bad"><b>The privacy rule applied to this build.</b> The Owner's identity, the street address,
+the parcel number, the rent, the loan and the tax basis are not stored in this repository, not in the JSON, not
+in the HTML and not in the model. The analysis is expressed per $100,000 of annual NOI so that it can be used
+without ever holding the sensitive figures. A verify script fails the build if an email, phone number, parcel
+number or street-address pattern appears in any generated page.</div>
+
+<h2>Lease clauses to audit before any decision</h2>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Clause</th><th>Why it changes the answer</th></tr></thead><tbody>
+<tr><td>1</td><td>Expiration date and commencement of any option period</td><td>Sets the clock. A 4-year answer is not the same as a 9-year answer.</td></tr>
+<tr><td>2</td><td>Fixed escalators vs CPI with collar, floor and cap</td><td>Determines whether NOI tracks the verified +3.7% local CPI <span class="src"><a href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics, Western Information Office - Los Angeles Area Economic Summary, updated November 4, 2026">S03 &#8599;</a></span> or lags it.</td></tr>
+<tr><td>3</td><td>Renewal options held by the tenant</td><td>Options transfer bargaining power to the tenant and reduce what a buyer will pay.</td></tr>
+<tr><td>4</td><td>Assignment and subletting</td><td>Affects the pool of replacement tenants and therefore the vacancy risk in K01.</td></tr>
+<tr><td>5</td><td>Guarantor and entity structure</td><td>Corporate guaranty vs franchisee changes the credit entirely.</td></tr>
+<tr><td>6</td><td>Tax, insurance and CAM reimbursement mechanics</td><td>A sale resets the Proposition 13 base <span class="src"><a href="https://assessor.lacounty.gov/homeowners/realproperty" target="_blank" rel="noopener noreferrer" title="Los Angeles County Office of the Assessor - Real Property Assessment - An Overview of Property Taxes / Proposition 13">S12 &#8599;</a></span> and the tenant pays the difference. Renewal pricing depends on it.</td></tr>
+<tr><td>7</td><td>Co-tenancy, kick-out and termination rights</td><td>Can void the term you are being asked to pay for.</td></tr>
+<tr><td>8</td><td>Restoration and casualty provisions</td><td>Decides who bears the risk in the black-swan scenarios.</td></tr>
+<tr><td>9</td><td>Right of first refusal to purchase</td><td>Can eliminate the competitive sale process entirely.</td></tr>
+<tr><td>10</td><td>Holdover and surrender conditions</td><td>Sets the cost of the transition if the tenant leaves.</td></tr>
+</tbody></table></div>
+
+<h2>Documents to obtain</h2>
+<ul class="tight">
+<li>The lease, all amendments, and any side letters or guaranties.</li>
+<li>Three years of rent roll, CAM reconciliations and the current tax bill.</li>
+<li>Insurance declarations page and loss runs.</li>
+<li>Original closing statement, depreciation schedules and current loan statement.</li>
+<li>A broker opinion of value and three recent comparable sales within two miles.</li>
+<li>Parcel-level fire hazard zone classification and FEMA flood zone.</li>
+</ul>
+<p>Each of these maps to a numbered item on <a href="flagged.html">Flagged for review</a>.</p>
+
+</div></main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>This session</h4><p class="small mut" style="margin:0">Session F, <code>session-e618ace7</code>. Independent verification and decision workbook. 110 fact rows, 96 verified against 19 official sources, 14 deliberately blank.</p></div>
+    <div><h4>Pages</h4><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risk register</a><a href="projection-model.html">Projection model</a><a href="valuation-capital.html">Valuation &amp; capital markets</a><a href="area-economy.html">Area economy</a><a href="demographics-schools.html">Demographics &amp; schools</a><a href="tenant-credit.html">Tenant credit</a><a href="property-lease.html">Property &amp; lease</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></div>
+    <div><h4>Privacy &amp; scope</h4><p class="small mut" style="margin:0">No owner name, street address, APN, account or loan number appears anywhere in this build. All analysis is normalised per $100,000 of annual NOI. Internal decision support only &mdash; not an appraisal, not tax advice, not investment advice.</p></div>
+  </div>
+</div></footer>
+</body></html>

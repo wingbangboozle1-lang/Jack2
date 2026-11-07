@@ -1,0 +1,290 @@
+{
+ "meta": {
+  "generated_by": "session-e618ace7/scripts/model.py",
+  "normalisation": "All figures are per $100,000 of current annual net operating income. A ratio, not a property value.",
+  "horizon": 2040,
+  "seed": 20261107,
+  "trials": 10000,
+  "currency": "nominal USD",
+  "warning": "Assumption-driven, not an appraisal. See data/assumptions.json and the sensitivity grid.",
+  "deterministic_hold": "The deterministic HOLD figure is the probability-weighted average of renewing and not renewing at the stated 65% assumption; the Monte Carlo draws both."
+ },
+ "inputs": {
+  "base_cap_pct": 5.25,
+  "cap_now_pct": 5.65,
+  "term_slope_bp_per_year": 10.0,
+  "rate_beta": 0.5,
+  "noi_growth_pct": 3.0,
+  "term0_years": 6,
+  "p_renew_pct": 65,
+  "tax_ordinary_pct": 48.0,
+  "tax_sale_pct": 37.0,
+  "gain_share_of_price_pct": 55.0,
+  "treasury_spot_pct": 4.859999999999999,
+  "cash_rate_pct": 4.33,
+  "yield_share_of_return_pct": 60,
+  "basis_usd": 857143,
+  "ula_threshold_price": 5400000.0,
+  "ula_threshold_noi": 305100
+ },
+ "deterministic": {
+  "HOLD": 2316865.0,
+  "WAIT2Y": 2292024.0,
+  "EXT_HOLD": 2751481.0,
+  "EXT_SELL": 2575415.0,
+  "SELL_NOW": 2251661.0,
+  "SELL_1031": 2397137.0
+ },
+ "monte_carlo": {
+  "HOLD": {
+   "ce_gamma2": 1825966,
+   "mean": 2227922,
+   "p05": 1127622,
+   "p25": 1565279,
+   "p50": 2405555,
+   "p75": 2804513,
+   "p95": 3246897
+  },
+  "WAIT2Y": {
+   "ce_gamma2": 2295982,
+   "mean": 2309631,
+   "p05": 2041641,
+   "p25": 2181259,
+   "p50": 2293804,
+   "p75": 2420170,
+   "p95": 2639723
+  },
+  "EXT_HOLD": {
+   "ce_gamma2": 2337239,
+   "mean": 2637275,
+   "p05": 1927220,
+   "p25": 2446902,
+   "p50": 2685079,
+   "p75": 2934846,
+   "p95": 3316923
+  },
+  "EXT_SELL": {
+   "ce_gamma2": 2386488,
+   "mean": 2537576,
+   "p05": 2157061,
+   "p25": 2407617,
+   "p50": 2561734,
+   "p75": 2721749,
+   "p95": 2917205
+  },
+  "SELL_NOW": {
+   "ce_gamma2": 2254581,
+   "mean": 2269486,
+   "p05": 1991065,
+   "p25": 2135039,
+   "p50": 2252662,
+   "p75": 2389446,
+   "p95": 2624018
+  },
+  "SELL_1031": {
+   "ce_gamma2": 2398403,
+   "mean": 2418526,
+   "p05": 2084446,
+   "p25": 2257201,
+   "p50": 2398339,
+   "p75": 2562466,
+   "p95": 2843932
+  }
+ },
+ "prob_beats_hold": {
+  "HOLD": 0.5019,
+  "WAIT2Y": 0.4778,
+  "EXT_HOLD": 0.6631,
+  "EXT_SELL": 0.5983,
+  "SELL_NOW": 0.4654,
+  "SELL_1031": 0.5299
+ },
+ "sensitivity": [
+  {
+   "growth_pct": 2.0,
+   "base_cap_pct": 4.75,
+   "hold": 2198847,
+   "ext_hold": 2608514,
+   "ext_sell": 2684504,
+   "sell_now": 2419958,
+   "sell_1031": 2599079
+  },
+  {
+   "growth_pct": 2.0,
+   "base_cap_pct": 5.0,
+   "hold": 2150392,
+   "ext_hold": 2547090,
+   "ext_sell": 2586654,
+   "sell_now": 2331914,
+   "sell_1031": 2493433
+  },
+  {
+   "growth_pct": 2.0,
+   "base_cap_pct": 5.25,
+   "hold": 2105928,
+   "ext_hold": 2490743,
+   "ext_sell": 2498124,
+   "sell_now": 2251661,
+   "sell_1031": 2397137
+  },
+  {
+   "growth_pct": 2.0,
+   "base_cap_pct": 5.5,
+   "hold": 2064981,
+   "ext_hold": 2438867,
+   "ext_sell": 2417641,
+   "sell_now": 2178210,
+   "sell_1031": 2309002
+  },
+  {
+   "growth_pct": 2.0,
+   "base_cap_pct": 5.75,
+   "hold": 2027149,
+   "ext_hold": 2390952,
+   "ext_sell": 2344158,
+   "sell_now": 2110730,
+   "sell_1031": 2228032
+  },
+  {
+   "growth_pct": 3.0,
+   "base_cap_pct": 4.75,
+   "hold": 2423571,
+   "ext_hold": 2886489,
+   "ext_sell": 2769213,
+   "sell_now": 2419958,
+   "sell_1031": 2599079
+  },
+  {
+   "growth_pct": 3.0,
+   "base_cap_pct": 5.0,
+   "hold": 2367926,
+   "ext_hold": 2816075,
+   "ext_sell": 2667469,
+   "sell_now": 2331914,
+   "sell_1031": 2493433
+  },
+  {
+   "growth_pct": 3.0,
+   "base_cap_pct": 5.25,
+   "hold": 2316865,
+   "ext_hold": 2751481,
+   "ext_sell": 2575415,
+   "sell_now": 2251661,
+   "sell_1031": 2397137
+  },
+  {
+   "growth_pct": 3.0,
+   "base_cap_pct": 5.5,
+   "hold": 2269844,
+   "ext_hold": 2692013,
+   "ext_sell": 2491730,
+   "sell_now": 2178210,
+   "sell_1031": 2309002
+  },
+  {
+   "growth_pct": 3.0,
+   "base_cap_pct": 5.75,
+   "hold": 2226401,
+   "ext_hold": 2637085,
+   "ext_sell": 2415322,
+   "sell_now": 2110730,
+   "sell_1031": 2228032
+  },
+  {
+   "growth_pct": 3.7,
+   "base_cap_pct": 4.75,
+   "hold": 2597198,
+   "ext_hold": 3101301,
+   "ext_sell": 2829956,
+   "sell_now": 2419958,
+   "sell_1031": 2599079
+  },
+  {
+   "growth_pct": 3.7,
+   "base_cap_pct": 5.0,
+   "hold": 2535949,
+   "ext_hold": 3023883,
+   "ext_sell": 2725418,
+   "sell_now": 2331914,
+   "sell_1031": 2493433
+  },
+  {
+   "growth_pct": 3.7,
+   "base_cap_pct": 5.25,
+   "hold": 2479745,
+   "ext_hold": 2952864,
+   "ext_sell": 2630837,
+   "sell_now": 2251661,
+   "sell_1031": 2397137
+  },
+  {
+   "growth_pct": 3.7,
+   "base_cap_pct": 5.5,
+   "hold": 2427989,
+   "ext_hold": 2887481,
+   "ext_sell": 2544853,
+   "sell_now": 2178210,
+   "sell_1031": 2309002
+  },
+  {
+   "growth_pct": 3.7,
+   "base_cap_pct": 5.75,
+   "hold": 2380172,
+   "ext_hold": 2827090,
+   "ext_sell": 2466347,
+   "sell_now": 2110730,
+   "sell_1031": 2228032
+  }
+ ],
+ "term_table": [
+  {
+   "remaining_term": 1,
+   "cap_pct": 6.15,
+   "value_per_100k_noi": 1626016,
+   "change_vs_10yr_pct": -14.6
+  },
+  {
+   "remaining_term": 2,
+   "cap_pct": 6.05,
+   "value_per_100k_noi": 1652893,
+   "change_vs_10yr_pct": -13.2
+  },
+  {
+   "remaining_term": 3,
+   "cap_pct": 5.95,
+   "value_per_100k_noi": 1680672,
+   "change_vs_10yr_pct": -11.8
+  },
+  {
+   "remaining_term": 5,
+   "cap_pct": 5.75,
+   "value_per_100k_noi": 1739130,
+   "change_vs_10yr_pct": -8.7
+  },
+  {
+   "remaining_term": 7,
+   "cap_pct": 5.55,
+   "value_per_100k_noi": 1801802,
+   "change_vs_10yr_pct": -5.4
+  },
+  {
+   "remaining_term": 10,
+   "cap_pct": 5.25,
+   "value_per_100k_noi": 1904762,
+   "change_vs_10yr_pct": 0.0
+  },
+  {
+   "remaining_term": 15,
+   "cap_pct": 5.25,
+   "value_per_100k_noi": 1904762,
+   "change_vs_10yr_pct": 0.0
+  },
+  {
+   "remaining_term": 20,
+   "cap_pct": 5.25,
+   "value_per_100k_noi": 1904762,
+   "change_vs_10yr_pct": 0.0
+  }
+ ],
+ "note_on_ula": "At the base cap rate of 5.65%, the property reaches the $5,400,000 Measure ULA threshold at about $305,100 of annual NOI. Below it the 4% City surtax does not apply; above it the surtax applies to the whole price."
+}

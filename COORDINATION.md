@@ -453,3 +453,83 @@ owns), which keeps Session B's CI "generated output is up to date" check green; 
 rather than made silently.
 
 **Requests to other session scopes:** none.
+
+## Session F — status update (2026-11-07)
+
+All six claimed tasks are **done**. No other session had a live claim while this one worked; A–E were all
+`done` on the board when it started and none was touched.
+
+| # | Task | Status | Files produced |
+|---|---|---|---|
+| F-01 | Independent line-by-line verification of the combined repo | **done** | `session-e618ace7/verification.html`, `session-e618ace7/flagged.html`, `session-e618ace7/data/flagged.json` |
+| F-02 | Fresh official-source research, Fall 2026 vintage | **done** | `session-e618ace7/data/sources.json` (19), `session-e618ace7/data/facts.json` (110 rows) |
+| F-03 | Projection system: deterministic + seeded Monte Carlo | **done** | `session-e618ace7/scripts/model.py`, `session-e618ace7/data/projections.json` |
+| F-04 | Decision analysis + risk register | **done** | `session-e618ace7/decision.html`, `session-e618ace7/risks.html`, `session-e618ace7/data/risks.json` (30) |
+| F-05 | 14-page static dashboard, every row source-linked | **done** | `session-e618ace7/*.html`, `session-e618ace7/assets/style.css` |
+| F-06 | Final integration, PR, merge, Pages verification | **done** | `tools/build_site.py` (one additive NAV entry), `README.md`, this file |
+
+### Sources used (all read 2026-11-07)
+
+Census QuickFacts V2025/ACS 2020–2024 (city + county); CA EDD LMID Los Angeles County release, September 2026
+(published 2026-10-16); BLS Los Angeles Area Economic Summary updated 2026-11-04 (LAUS/CES/CPI/ECI/QCEW/OEWS);
+U.S. Treasury daily par yield curve, October and November 2026 tables; Federal Reserve Board open-market
+operations page (2026 FOMC action); SEC EDGAR XBRL `NetIncomeLoss`, `StockholdersEquity` and `Revenues` for CIK
+0000807882 plus the 10-Q filing index; City of Los Angeles Office of Finance Measure ULA FAQ; LA County
+Registrar-Recorder documentary transfer tax page; LA County Assessor Proposition 13 overview; IRS Instructions for
+Form 8824 (2025); FTB 2025 Form 540 rate schedules; CA DIR minimum-wage and fast-food minimum-wage FAQs; CDE
+Los Angeles Unified district profile 2025-26; BEA GDP and personal income by county, 2024; CAL FIRE OSFM Fire
+Hazard Severity Zones.
+
+### Verification performed
+
+- `python3 session-e618ace7/scripts/model.py` → `data/projections.json` regenerated deterministically (seed
+  20261107, 10,000 trials).
+- `python3 session-e618ace7/scripts/build_site.py` → 14 pages, byte-stable.
+- `python3 session-e618ace7/scripts/verify_dataset.py` → **PASS**, 12 rule families: duplicate ids, value without
+  source, unknown source id, non-https URL, unverified row carrying a value, verified row with a blank value,
+  orphan source, unlabelled risk basis, broken internal link, PII pattern, strategy figure not matching the model,
+  unreachable page. Result on the final tree: 110 fact rows / 96 verified / 14 blank / 19 sources all cited /
+  30 risks / 20 assumptions / 16+10 flagged / 14 pages / 15 internal links.
+- Cross-session checkers re-run on the combined tree: `tools/model.py` + `tools/build_site.py` +
+  `tools/check_site.py` (Session B) **pass**; `model/build_facts.py` + `model/projection_model.py` +
+  `model/build_site.py` (Session C) **pass, 183 internal links OK**; `scripts/verify.py` (Session E) **pass,
+  391 rows**; `session-a3a8ec08/scripts/projection_engine.py` + `build_site.py` + `verify_all.py` (Session D)
+  **pass, 142 rows, 267 links, 0 PII**. None of their generated files changed as a result.
+
+### Irregularities recorded (full evidence on `session-e618ace7/flagged.html`)
+
+1. **R-01 — malformed Census URL in the published root build.** `data/sources.json` S2 uses the slug
+   `lacountycalifornia`; Census silently drops the county column instead of erroring, so every root row citing S2
+   for county data links to a city-only table. Values are correct; the link is not. Corrected URL published as
+   S01 in the Session F ledger.
+2. **R-04 — Measure ULA rows incomplete** (M57–M59 omit the 0.45% base rate, the $5,400,000 / $10,900,000
+   thresholds and therefore the all-in 4.45% / 5.95%). Not wrong; incomplete by 45 bp.
+3. **R-08 — one-sided tenant framing** in Sessions D and E: the FY2025 loss is quoted, the FY2026 nine-month
+   profit of +$27.9m and the narrowing equity deficit are not.
+4. **R-02 — three fillable blanks** on the root build (poverty, per-capita income, county median household
+   income) are published on the Census table the root already cites. Filled here as F23/F21/F20.
+5. **R-03 — vintage drift**: root employment rows are on the August 2026 BLS summary; September 2026 is now
+   published and used here.
+6. **R-05, R-07 — checked and cleared.** Session D's 5.05% 10-year Treasury on 2026-10-28 is correct (Treasury
+   table), and its -$901.3m equity figure is correct (SEC XBRL). Recorded so they are not mistaken for errors
+   later.
+7. **R-06 — cross-session figures not re-verified here** (SCAG household forecast, FAIR Plan assessment, USGS
+   60%, CAL FIRE structure counts, tenant unit count). Left marked unverified rather than endorsed.
+8. **R-09 — navigation gap**: six builds deploy from one Pages site but the root navigation linked only one
+   archive. Fixed by this session with one additive NAV entry.
+
+### Integration change made outside this session's own directory
+
+One entry was added to `NAV` in `tools/build_site.py` (`"Session F &mdash; decision dashboard"` →
+`session-e618ace7/index.html`). It is additive, it leaves Session B's build and CI "generated output up to date"
+check green, and it is the change the brief assigns to the final integration session. `README.md` gained a
+Session F section. No other session's page or data was edited.
+
+### Deployment record (Session F)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/e618ace7-jack2` |
+| Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/ |
+| PR | recorded below after merge |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |

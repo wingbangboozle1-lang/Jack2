@@ -54,6 +54,7 @@ NAV = [
     ("privacy.html", "Privacy"),
     ("deployment.html", "Deployment"),
     ("archive.html", "Session A archive"),
+    ("session-e618ace7/index.html", "Session F &mdash; decision dashboard"),
 ]
 
 

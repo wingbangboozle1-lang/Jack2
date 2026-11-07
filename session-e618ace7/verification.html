@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verification &middot; Central LA NNN decision workbook</title>
+<meta name="description" content="Verified, source-linked decision workbook for a single-tenant NNN restaurant asset in Central Los Angeles. Sell before expiry, or renew.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>Central LA NNN decision workbook</b><span>Open the box &middot; Session F &middot; data read 2026-11-07</span></div>
+  <nav class="main"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risks</a><a href="projection-model.html">Projection model</a><a href="flagged.html">Flagged for review</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<h1>Verification</h1>
+<p class="lead">How each row was checked, what the checks enforce, and what they caught. This page is the audit
+trail; the auditor is a script in the repository, not a promise in prose.</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Fact rows</div><div class="v">110</div><div class="n">in data/facts.json</div></div>
+  <div class="card"><div class="k">Verified</div><div class="v">96</div><div class="n">value read from the official source</div></div>
+  <div class="card"><div class="k">Blank and flagged</div><div class="v">14</div><div class="n">no official value; nothing inferred</div></div>
+  <div class="card"><div class="k">Sources</div><div class="v">19</div><div class="n">all government, all read on 2026-11-07</div></div>
+</div>
+
+<h2>The rules this build enforces in code</h2>
+<div class="panel">
+<ol class="tight" style="margin-bottom:0">
+<li>A row with a value <b>must</b> carry a source id that exists in <code>sources.json</code> and whose URL begins with <code>https://</code>. The build fails otherwise.</li>
+<li>A row marked <b>unverified must have an empty value cell</b>. The build fails if a value appears there.</li>
+<li>Every source URL is printed on the row that relies on it, not collected on a separate page.</li>
+<li>Every page carries the privacy and scope notices, and the build fails if an email address, phone number, parcel-number pattern or street-address pattern appears in any generated file.</li>
+<li>Internal links are resolved at build time; a broken internal link fails the build.</li>
+<li>The model is deterministic. The Monte Carlo is seeded, so a rebuild produces byte-identical output.</li>
+</ol></div>
+
+<h2>What the checks caught during this session</h2>
+<div class="tablewrap"><table><thead><tr><th>Finding</th><th>Where</th><th>Result</th></tr></thead><tbody>
+<tr><td>Malformed Census URL in the published root build &mdash; the county column silently disappears</td><td>data/sources.json S2 (root)</td><td><span class="badge warn">flagged R-01</span></td></tr>
+<tr><td>Three fillable values left blank on the root build</td><td>M16, M17, M42 (root)</td><td><span class="badge ok">filled correctly here</span></td></tr>
+<tr><td>Measure ULA rows missing the base rate and thresholds</td><td>M57&ndash;M59 (root)</td><td><span class="badge warn">flagged R-04</span></td></tr>
+<tr><td>Apparent conflict in the 10-year Treasury between two sessions</td><td>Session D vs root</td><td><span class="badge ok">both correct for their dates</span></td></tr>
+<tr><td>One-sided tenant framing (fiscal 2025 loss quoted, fiscal 2026 profit omitted)</td><td>Sessions D and E</td><td><span class="badge warn">flagged R-08</span></td></tr>
+<tr><td>Personal-information scan across every file in the repository</td><td>all sessions</td><td><span class="badge ok">clean</span></td></tr>
+</tbody></table></div>
+
+<h2>Source-by-source verification log</h2>
+<p>Each source was opened and read on 2026-11-07. The row count is how many facts in this ledger depend on it.</p>
+<div class="tablewrap scroll"><table class=""><thead><tr><th>ID</th><th>Publisher</th><th>Document</th><th class="num">Rows</th><th>Link</th><th>Tier</th></tr></thead><tbody><tr><td><b>S01</b></td><td>U.S. Census Bureau</td><td>QuickFacts: Los Angeles city and Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)</td><td class="num">35</td><td><a href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S02</b></td><td>California Employment Development Department, Labor Market Information Division</td><td>Los Angeles-Long Beach-Glendale Metropolitan Division (Los Angeles County) - Industry Employment and Labor Force, September 2026 (released October 16, 2026)</td><td class="num">13</td><td><a href="https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S03</b></td><td>U.S. Bureau of Labor Statistics, Western Information Office</td><td>Los Angeles Area Economic Summary, updated November 4, 2026</td><td class="num">16</td><td><a href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S04</b></td><td>U.S. Department of the Treasury</td><td>Daily Treasury Par Yield Curve Rates, October and November 2026</td><td class="num">4</td><td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S05</b></td><td>Board of Governors of the Federal Reserve System</td><td>Open Market Operations - FOMC target federal funds rate or range</td><td class="num">1</td><td><a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S06</b></td><td>U.S. Securities and Exchange Commission, EDGAR XBRL company concept API</td><td>Jack in the Box Inc. (CIK 0000807882) - NetIncomeLoss</td><td class="num">4</td><td><a href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/NetIncomeLoss.json" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier B</span></td></tr><tr><td><b>S07</b></td><td>U.S. Securities and Exchange Commission, EDGAR XBRL company concept API</td><td>Jack in the Box Inc. (CIK 0000807882) - StockholdersEquity</td><td class="num">2</td><td><a href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/StockholdersEquity.json" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier B</span></td></tr><tr><td><b>S08</b></td><td>U.S. Securities and Exchange Commission, EDGAR XBRL company concept API</td><td>Jack in the Box Inc. (CIK 0000807882) - Revenues</td><td class="num">3</td><td><a href="https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/Revenues.json" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier B</span></td></tr><tr><td><b>S09</b></td><td>U.S. Securities and Exchange Commission, EDGAR full-text and filing index</td><td>Jack in the Box Inc. Form 10-Q filing index (accession 0000807882-26-000091, filed 2026-08-12, period ended 2026-07-05)</td><td class="num">1</td><td><a href="https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/0000807882-26-000091-index.htm" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier B</span></td></tr><tr><td><b>S10</b></td><td>City of Los Angeles Office of Finance</td><td>Real Property Transfer Tax and Measure ULA FAQ</td><td class="num">4</td><td><a href="https://finance.lacity.gov/faq/measure-ula" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S11</b></td><td>Los Angeles County Registrar-Recorder/County Clerk</td><td>Documentary Transfer Tax</td><td class="num">1</td><td><a href="https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S12</b></td><td>Los Angeles County Office of the Assessor</td><td>Real Property Assessment - An Overview of Property Taxes / Proposition 13</td><td class="num">3</td><td><a href="https://assessor.lacounty.gov/homeowners/realproperty" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S13</b></td><td>Internal Revenue Service</td><td>Instructions for Form 8824, Like-Kind Exchanges (2025)</td><td class="num">1</td><td><a href="https://www.irs.gov/instructions/i8824" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S14</b></td><td>California Franchise Tax Board</td><td>2025 California Tax Rate Schedules (Form 540)</td><td class="num">1</td><td><a href="https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S15</b></td><td>California Department of Industrial Relations, Labor Commissioner&#x27;s Office</td><td>Minimum Wage Frequently Asked Questions</td><td class="num">1</td><td><a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S16</b></td><td>California Department of Industrial Relations, Labor Commissioner&#x27;s Office</td><td>Fast Food Minimum Wage Frequently Asked Questions (AB 1228 / Labor Code 1474-1476)</td><td class="num">1</td><td><a href="https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S17</b></td><td>California Department of Education</td><td>District Profile: Los Angeles Unified, school year 2025-26</td><td class="num">2</td><td><a href="https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S18</b></td><td>U.S. Bureau of Economic Analysis</td><td>Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, released February 5, 2026)</td><td class="num">1</td><td><a href="https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr><tr><td><b>S19</b></td><td>CAL FIRE - Office of the State Fire Marshal</td><td>Fire Hazard Severity Zones (FHSZ) programme and maps</td><td class="num">2</td><td><a href="https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones" target="_blank" rel="noopener noreferrer">open &#8599;</a></td><td><span class='badge ok'>tier A</span></td></tr></tbody></table></div>
+
+<h2>What "verified" does not mean</h2>
+<p>It means the number was read from the named official document on 2026-11-07. It does not mean the document is
+correct, current, or applicable to this parcel. Four specific limits apply:</p>
+<ul class="tight">
+<li><b>Vintage.</b> Employment data are preliminary and revised. The Census ACS is a five-year rolling estimate. Both are current as of the access date and will move.</li>
+<li><b>Geography.</b> City, county and metro figures are used because the sub-market is withheld. A specific corner in Central Los Angeles can differ materially from the county average.</li>
+<li><b>Parcel specificity.</b> Nothing parcel-level is asserted. Fire zone, flood zone, seismic class and insurance terms are all blank.</li>
+<li><b>Official does not mean advice.</b> Tax rules quoted here are statutory references, not a computation of the Owner's liability.</li>
+</ul>
+
+<h2>Cross-session checks</h2>
+<p>This repository contains six independently built workbooks. As the final integration session, this one ran
+every other session's automated checker against the combined tree as well as its own. Individual results are
+recorded in <code>COORDINATION.md</code> and reproducible from the commands on
+<a href="projection-model.html">Projection model</a>.</p>
+
+</div></main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>This session</h4><p class="small mut" style="margin:0">Session F, <code>session-e618ace7</code>. Independent verification and decision workbook. 110 fact rows, 96 verified against 19 official sources, 14 deliberately blank.</p></div>
+    <div><h4>Pages</h4><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risk register</a><a href="projection-model.html">Projection model</a><a href="valuation-capital.html">Valuation &amp; capital markets</a><a href="area-economy.html">Area economy</a><a href="demographics-schools.html">Demographics &amp; schools</a><a href="tenant-credit.html">Tenant credit</a><a href="property-lease.html">Property &amp; lease</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></div>
+    <div><h4>Privacy &amp; scope</h4><p class="small mut" style="margin:0">No owner name, street address, APN, account or loan number appears anywhere in this build. All analysis is normalised per $100,000 of annual NOI. Internal decision support only &mdash; not an appraisal, not tax advice, not investment advice.</p></div>
+  </div>
+</div></footer>
+</body></html>
