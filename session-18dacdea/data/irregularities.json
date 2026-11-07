@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "session_id": "session-18dacdea",
+    "audit_date": "2026-11-07",
+    "baseline_commit": "1430b4f04885e701ba4de07756105ff31122ee06",
+    "merged_head_at_start": "463ae8dd71eb12896fdba5fad2eab91b9f5b38d4"
+  },
+  "cross_session_findings": [
+    {
+      "id": "CS-01",
+      "severity": "high",
+      "category": "Live Official Source Update (BLS Nov 4, 2026)",
+      "finding": "Sessions B, D, E, and F cited 'blssummary_losangeles.pdf' at its October 05, 2026 edition (Aug 2026 data: 6,289.1k jobs, +0.6% YoY; unemployment 4.8% MSA / 4.9% County / 5.0% City; Aug CPI +3.6% All Items / +17.6% Energy; Jun 2026 ECI +2.8%). Live verification on 2026-11-07 confirms BLS updated that exact PDF on November 04, 2026 with September 2026 data: 6,282.1k jobs (+30.2k / +0.5% YoY; Aug revised to 6,282.6k), unemployment 4.4% MSA / 4.5% County / 4.5% City (vs 5.1% CA / 4.0% US), Sep 2026 CPI +3.7% All Items / +2.8% Food / +20.3% Energy, Sep 2026 ECI wages +3.9% YoY, and 2025 CEX West Region expenditures.",
+      "action_taken": "Both the August 2026 and newly released September 2026 (Nov 4, 2026 edition) BLS figures are recorded side-by-side in session-18dacdea/data/metrics.json (rows M-29 through M-45) with direct link to S01.",
+      "source": "S01"
+    },
+    {
+      "id": "CS-02",
+      "severity": "medium",
+      "category": "Live Official Source Update (FRED DGS10 Nov 5, 2026)",
+      "finding": "Sessions B, C, and F reported the 10-Year U.S. Treasury Constant Maturity Yield (FRED DGS10) as 4.90% as of 2026-11-04. Live verification of FRED DGS10 on 2026-11-07 shows the newer 2026-11-05 observation (updated Nov 6, 2026 4:05 PM CST) is 4.84% (with 2026-11-04 at 4.90%, 2026-11-03 at 4.95%, and the 2026 peak at 5.31% on 2026-10-05).",
+      "action_taken": "Recorded both the 2026-11-05 (4.84%) and 2026-11-04 (4.90%) observations plus the 2026 peak (5.31%) in M-51 through M-53, linked to S15.",
+      "source": "S15"
+    },
+    {
+      "id": "CS-03",
+      "severity": "high",
+      "category": "Previously Unverified Root Metrics Now Confirmed on Primary .gov Portals",
+      "finding": "Root data/metrics.json (Session B) left five public metrics blank (M16 City poverty rate, M17 City per capita income, M42 County median household income, M46 LAUSD 4-year graduation rate, and M63 City of LA local minimum wage). Line-by-line verification on 2026-11-07 confirmed all five directly on official government pages: (1) M16 City poverty = 16.5% (County 13.3%, US 10.2%, Census QuickFacts S03); (2) M17 City per capita income = $47,685 (County $45,792, S03); (3) M42 County median HH income = $90,112 (City $81,939, S03); (4) M46 LAUSD 2024-25 4-year ACGR = 86.2% (25,304/29,358 Non-Charter default on CDE DataQuest S08, vs 90.6% LA County & 91.5% CA); (5) M63 City of LA local minimum wage = $18.42/hr effective July 1, 2026 on City of LA Office of Wage Standards (wagesla.lacity.org, S10).",
+      "action_taken": "Published all five newly verified official figures in session-18dacdea/data/metrics.json while leaving Session B's root files untouched per parallel-session scope rules.",
+      "source": "S03"
+    },
+    {
+      "id": "CS-04",
+      "severity": "low",
+      "category": "Official Agency Revision Reconciliation (Jan 2025 Wildfires)",
+      "finding": "Session B (M76-M77) cited LA County's Anniversary Fact Sheet showing 16,251 structures destroyed (9,414 Eaton + 6,837 Palisades), whereas Session D (BS-02) cited CAL FIRE's final incident tables showing 16,264 structures destroyed (9,419 Eaton + 6,845 Palisades). Both are official government documents reflecting a +13 structure post-inspection count revision.",
+      "action_taken": "Documented both official counts (16,251 LA County Fact Sheet / 16,264 CAL FIRE final) in M-86 and M-87 so readers can audit either source without discrepancy.",
+      "source": "S21"
+    },
+    {
+      "id": "CS-05",
+      "severity": "medium",
+      "category": "Cross-Session Source Tier & URL Hygiene Audit",
+      "finding": "Session A's archived page (session-1944e5a3/sources.html) contains a malformed Census QuickFacts URL ('losangelesNICITYcalifornia'). Session C (docs/data/facts.json) includes Tier-3 non-government brokerage cap rate reports (Boulder Group / OpenPR) alongside Tier-1 government sources. Sessions B and D restrict cap-rate benchmarks to SEC-filed REIT disclosures (NNN REIT 10-K 7.4% acquisition / 6.4% disposition; Realty Income 7.3% yield).",
+      "action_taken": "Preserved all prior sessions' directories untouched; restricted session-18dacdea verified cap-rate benchmarks strictly to SEC Form 10-K (S13) and labelled REIT supplemental (S14), leaving parcel cap rate blank (UV-09).",
+      "source": "S13"
+    },
+    {
+      "id": "CS-06",
+      "severity": "medium",
+      "category": "LAUSD Graduation Rate Scope Difference (CDE DataQuest vs. LAUSD Explorer)",
+      "finding": "Session D (SC-02) reported an 86.7% LAUSD graduation rate citing LAUSD's School Explorer page for Los Angeles Senior High, whereas CDE DataQuest's official 2024-25 District Cohort Report (CDS 19-64733, Non-Charter default filter) reports 86.2% (25,304 graduates out of 29,358 cohort students, with 17,092 meeting UC/CSU A-G requirements).",
+      "action_taken": "Recorded the official CDE DataQuest district report figure (86.2% Non-Charter ACGR, S08) and noted the charter/DASS filter distinction explicitly.",
+      "source": "S08"
+    }
+  ],
+  "repo_irregularities": [
+    {
+      "id": "IR-01",
+      "severity": "high",
+      "finding": "Initial repository commit 1430b4f contained only a 7-byte README.md ('# Jack2') with no data, no lease documents, no scripts, and no COORDINATION.md.",
+      "impact": "No parcel-specific address, APN, rent, or lease document existed in the repository.",
+      "action": "All parcel-specific fields are kept strictly blank (UV-01..UV-12) and flagged; analysis uses official government/SEC data plus normalized per-$100k NOI modeling.",
+      "source": "S17"
+    },
+    {
+      "id": "IR-02",
+      "severity": "high",
+      "finding": "Commit 1430b4f git author metadata contained a personal email address ([REDACTED-EMAIL-01]).",
+      "impact": "Exposing git metadata in site pages would violate the top-priority personal information privacy mandate.",
+      "action": "Redacted as [REDACTED-EMAIL-01]; automated regex PII scanner in session-18dacdea/scripts/verify.py and tools/check_site.py blocks any email, phone, street address, or APN across all files.",
+      "source": "S17"
+    },
+    {
+      "id": "IR-03",
+      "severity": "medium",
+      "finding": "Task brief references 'session-<id>/<task>' branches whereas the Arena execution environment pins each agent to its assigned 'arena/<id>-jack2' branch.",
+      "impact": "Creating or switching to another branch would detach work from the Arena session tracker.",
+      "action": "All work is committed on 'arena/18dacdea-jack2' inside the non-overlapping directory 'session-18dacdea/**' plus append-only updates to COORDINATION.md, then merged to main via PR.",
+      "source": "S17"
+    },
+    {
+      "id": "IR-04",
+      "severity": "low",
+      "finding": "GitHub Pages legacy build status field on the repository API reports stale 'errored' metadata from initial commits while the authoritative GitHub Actions 'pages-build-deployment' workflow succeeds.",
+      "impact": "Reading only the legacy builds endpoint can mislead an auditor unless workflow runs and live HTTP 200 responses are checked.",
+      "action": "Deployment verification checks both the Actions 'pages-build-deployment' workflow and live HTTP responses on wingbangboozle1-lang.github.io/Jack2/.",
+      "source": "S17"
+    },
+    {
+      "id": "IR-05",
+      "severity": "low",
+      "finding": "BLS notes that October 2025 Los Angeles CPI-U data were not collected due to the 2025 federal lapse in appropriations.",
+      "impact": "Official CPI time series has a one-month gap in Oct 2025.",
+      "action": "Used official Aug 2026 (+3.6%) and Sep 2026 (+3.7%) 12-month CPI-U series from S01/S02 without interpolating Oct 2025.",
+      "source": "S01"
+    },
+    {
+      "id": "IR-06",
+      "severity": "low",
+      "finding": "BEA discontinued Metropolitan Statistical Area (MSA) GDP and personal income releases in February 2026 (Release BEA 26-08), consolidating local reporting at the county level.",
+      "impact": "MSA-level personal income for 2024 is replaced by county-level reporting ($818.5B for Los Angeles County).",
+      "action": "Cited official Los Angeles County personal income ($818.5B, #1 in US) from BEA 26-08 (S06).",
+      "source": "S06"
+    },
+    {
+      "id": "IR-07",
+      "severity": "low",
+      "finding": "U.S. Census QuickFacts marks city-level Annual Building Permits and County Business Patterns with '[X]' (Not Applicable) because those surveys are tabulated at county geography.",
+      "impact": "Reporting county business establishments (304,988) or permits (22,250) as city-only would misstate geographic scope.",
+      "action": "Labelled exact geography ('Los Angeles County' vs 'City of Los Angeles') on every row.",
+      "source": "S03"
+    },
+    {
+      "id": "IR-08",
+      "severity": "low",
+      "finding": "Multiple parallel agent sessions (A through F, plus concurrent 2026-11-07 sessions) have operated on this repository.",
+      "impact": "Editing shared root files during parallel runs risks merge conflicts.",
+      "action": "Kept 100% of Session 18dacdea code and pages inside 'session-18dacdea/' and cross-linked all prior sessions (Root/B, A, C, D, E, F) from our dashboard.",
+      "source": "S17"
+    }
+  ]
+}

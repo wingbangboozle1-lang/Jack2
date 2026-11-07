@@ -998,6 +998,12 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-18dacdea/</code>",
+         "Session H &mdash; 2026-11-07 live BLS (Nov 4) &amp; FRED (Nov 5, 4.84% DGS10) update, 76 metrics across "
+         "26 official sources (resolving LAUSD 86.2% ACGR &amp; $18.42/hr LA City minimum wage), 26 risks, "
+         "15,000-trial Monte Carlo + browser-local &sect;1031 simulator",
+         "10 pages",
+         "<a href='session-18dacdea/index.html'>open &#8599;</a>"],
         ["<code>session-e618ace7/</code>",
          "Session G &mdash; 110 fact rows, 96 verified against 19 official sources, six strategies scored on "
          "risk-adjusted wealth, 30-risk register, line-by-line review of this repository",

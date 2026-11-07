@@ -556,3 +556,46 @@ They leave Session B's build and its CI "generated output up to date" check gree
 | Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/ |
 | PR | recorded below after merge |
 | Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+---
+
+# Session H (`session-18dacdea` / `arena/18dacdea-jack2`) — 2026-11-07
+
+Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are strictly disjoint from Sessions A–G: this session owns `session-18dacdea/**`, adds one additive row to `build_workspaces()` in `tools/build_site.py` so `workspaces.html` lists `session-18dacdea/`, and appends this record to `COORDINATION.md`. Zero files owned by Sessions A–G were overwritten or discarded.
+
+## Task Board (`session-18dacdea`)
+
+| Task ID | Task | Status | Owner | Files / Scope |
+|---|---|---|---|---|
+| `18dacdea-T1` | Claim scope & cross-session repository audit (Sessions A–G line-by-line review + irregularities register) | `done` | `session-18dacdea` | `COORDINATION.md` (append-only), `session-18dacdea/data/irregularities.json` |
+| `18dacdea-T2` | Official-source verification & dataset (26 official Tier A–C sources; 76 metrics: 62 verified, 14 strictly blank; 26 risks: 16 BAU + 10 Black Swan) | `done` | `session-18dacdea` | `session-18dacdea/data/sources.json`, `session-18dacdea/data/metrics.json`, `session-18dacdea/data/risks.json` |
+| `18dacdea-T3` | Deterministic (2026–2040 Bear/Base/Bull + 2030–2035 expiry grid) & 15,000-Trial Monte Carlo Projection Engine (`seed=20261107`) | `done` | `session-18dacdea` | `session-18dacdea/scripts/model.py`, `session-18dacdea/data/model_output.json`, `session-18dacdea/data/decisions.json` |
+| `18dacdea-T4` | Executive Summary & 10-page Clean Dashboard (`session-18dacdea/*.html`) with 100% browser-local NNN / §1031 / Measure ULA / Prop 13 simulator | `done` | `session-18dacdea` | `session-18dacdea/EXECUTIVE_SUMMARY.md`, `session-18dacdea/scripts/build_site.py`, `session-18dacdea/*.html`, `session-18dacdea/assets/*` |
+| `18dacdea-T5` | Automated line-by-line verifier (every table row source-linked, unverified cells blank, zero PII, zero broken links), PR to `main`, merge, & confirm GitHub Pages deployment | `done` | `session-18dacdea` | `session-18dacdea/scripts/verify.py`, `tools/build_site.py` (additive workspace entry), `COORDINATION.md` |
+
+## Sources Verified on 2026-11-07 (`session-18dacdea/data/sources.json`)
+
+26 primary official sources verified on `2026-11-07`:
+- **Labor, Wages & Inflation (`S01`, `S02`, `S09`, `S10`):** U.S. BLS *Los Angeles Area Economic Summary* updated **November 04, 2026** (Sep 2026 unemployment: `4.4%` LA Metro, `4.5%` LA County, `4.5%` LA City, `5.1%` CA, `4.0%` US; Sep 2026 nonfarm payrolls `6,282.1k`, `+30.2k / +0.5% YoY`; Education & Health `+49.1k / +3.8%`, Leisure & Hospitality `+11.5k / +1.5%`, Information `-11.4k / -5.7%`; Sep 2026 CPI-U `+3.7%` All Items, `+2.8%` Food, `+20.3%` Energy; Sep 2026 ECI wages `+3.9% YoY`; Jun 2026 Pacific private employer compensation `$55.49/hr`; 2025 CEX West Region expenditures); CA DIR AB 1228 Fast Food Minimum Wage (`$20.00/hr`) & State Minimum Wage (`$16.90/hr`); City of Los Angeles Office of Wage Standards (`wagesla.lacity.org`) 2026 Minimum Wage Rate Increase Memo (`$18.42/hr` effective July 1, 2026).
+- **Demographics, Income & Schools (`S03`–`S08`):** U.S. Census QuickFacts V2025 & 2020–2024 ACS (`3,869,089` LA City, `9,694,934` LA County; `8,304.2/sq mi` City density; `30.7-min` commute; median HH income `$81,939` City / `$90,112` County; per capita income `$47,685` City / `$45,792` County; poverty `16.5%` City / `13.3%` County; median home value `$921,200` City; `$17.37B` City food/accommodation sales); CA DOF Report P-2A Vintage 2026 (`9,853,435` in 2025 -> `9,727,305` in 2030 -> `9,708,647` in 2035 -> `9,637,524` in 2040) & E-1 May 2026 (`-0.9%` City / `-0.6%` County YoY) + `-240,800` 10-yr county K-12 enrollment projection; BEA Release 26-08 (`$818.5B` LA County personal income, #1 in US); CDE 2025–26 LAUSD District Profile (`497,105` students, `16.4%` EL) & CDE DataQuest 2024–25 Four-Year Adjusted Cohort Graduation Rate (`86.2%` LAUSD Non-Charter default: `25,304` graduates / `29,358` cohort, vs `90.6%` LA County & `91.5%` CA).
+- **Tenant SEC Filings & Net-Lease Benchmarks (`S11`–`S14`):** Jack in the Box Inc. (`CIK 0000807882`) FY2025 Form 10-K & Q3 FY2026 Form 10-Q ended July 5, 2026 (`2,115` system units, `93%` franchised, `44.1%` in CA; `-4.2%` FY25 & YTD Q3 FY26 SSS; `$1,874k` franchise AUV `-3.8%`; `19.6%` FY25 store margin; `$1,472.83M` debt + `$1,008.79M` lease liabilities vs `$46.32M` cash & `-$901.29M` stockholders' deficit; `$115M` Del Taco sale; `86` FY25 + `50–100` FY26 guided closures; market-rate lease renewal policy); `NNN REIT, Inc.` FY2025 Form 10-K (`7.4%` acquisition cap rate / `6.4%` occupied disposition cap rate at `10.2-yr` WALT); `Realty Income` Q4 2025 supplemental (`7.3%` cash yield).
+- **Capital Markets, Taxes, Zoning & Hazards (`S15`–`S26`):** FRED `DGS10` (`4.84%` on `2026-11-05`, `4.90%` on `2026-11-04`, `5.31%` on `2026-10-05`) & `DFEDTARU` (`4.00%` on `2026-11-06`); LA County Assessor Prop 13 (`1%` levy, `2%/yr` cap, 100% FMV reassessment on sale); City of LA Office of Finance Measure ULA (`0.45%` base + `4.0%` surtax `>$5.4M`, `+5.5%` `>=$10.9M` post-July 1, 2026) & County DTT (`0.11%`); IRS Form 8824 (`§1031` `45/180-day` deferral), IRC `§1(h)/§1411` (`23.8%` LTCG / `28.8%` `§1250`), & CA FTB (`13.3%` top rate + Form 3840); LAMC `§12.24-W,17` drive-thru CUP barrier; LA County & CAL FIRE Jan 2025 Eaton/Palisades wildfire reports (`37,469` acres, `16,251` LA County / `16,264` CAL FIRE structures destroyed, `$5.2B–$10.1B` output loss); USGS UCERF3 (`60%` M>=6.7, `46%` M>=7.0, `31%` M>=7.5 30-yr probabilities) & ARkStorm (`~$725B` scenario); CDI Order No. 2025-1 (`$1.0B` FAIR Plan assessment); FEMA NRI (`89.6` score, `97.8` earthquake percentile); CAL FIRE FHSZ & State Water Board GeoTracker.
+
+## Verification Performed & Conflict Resolution
+
+- **Merge Conflict Resolution (`2026-11-07`):** On merging `origin/main` (`fb69f84`, after Session G merged PR #17), the only conflicting path was `COORDINATION.md`. Preserved 100% of Sessions A–G in `COORDINATION.md` verbatim, appended this Session H (`session-18dacdea`) section, and added `session-18dacdea/` to `build_workspaces()` in `tools/build_site.py`.
+- **Automated Verification Checks:**
+  * `python3 session-18dacdea/scripts/model.py` -> Deterministic + 15,000-trial Monte Carlo (`seed=20261107`) regenerated (`S2` Blend-Extend -> §1031 ranks #1 with `$3,822,165` mean 2040 wealth, `$3,354,931` P05 tail floor, and `$3,798,208` CRRA=2.5 certainty equivalent per `$100k` NOI).
+  * `python3 session-18dacdea/scripts/build_site.py` -> Built 10 HTML pages in `session-18dacdea/`.
+  * `python3 session-18dacdea/scripts/verify.py` -> **PASS** (`10 pages | 26 sources | 76 metrics (62 verified, 14 blank/unverified) | 26 risks | 253 HTML table rows | 557 links checked | 0 PII leaks`).
+  * `python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py` -> **PASS** across the entire combined repository.
+
+## Deployment Record (`session-18dacdea`)
+
+| Item | Value |
+|---|---|
+| Session Branch | `arena/18dacdea-jack2` |
+| Published Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/ |
+| Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
+| Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
+
