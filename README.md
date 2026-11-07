@@ -138,13 +138,13 @@ python3 session-a3a8ec08/scripts/verify_all.py
 ```
 
 
-## Session F dashboard (`session-e618ace7/`) — final integration
+## Session G dashboard (`session-e618ace7/`) — final integration
 
 A sixth, independent session (`session-e618ace7` / `arena/e618ace7-jack2`) performed a line-by-line review of
 everything above and published a **source-linked decision dashboard** at
-**https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/**. It is the recommended entry point: the root
-navigation now carries a link to it (a single additive entry in `tools/build_site.py`), so every build in this
-repository is reachable from the landing page.
+**https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/**. It is the recommended entry point: the root navigation now carries an **All workspaces** link to a new
+`workspaces.html` index (a single additive change in `tools/build_site.py`), so all seven builds in this
+repository are reachable from the landing page.
 
 | | |
 |---|---|
@@ -168,7 +168,7 @@ Two findings worth knowing before reading anything else in this repository:
 
 - The root build's Census source URL (`data/sources.json` S2) is malformed — it silently drops the Los Angeles
   County column. The values it is cited for are correct; the link is not. Corrected URL published as S01 in the
-  Session F ledger (flagged R-01).
+  Session G ledger (flagged R-01).
 - Sessions D and E both lead on the tenant's FY2025 net loss without noting that the same SEC dataset shows
   **net income of +$27.9m for the first nine months of FY2026** and a narrowing equity deficit. Both facts are
-  published side by side on the Session F tenant page (flagged R-08).
+  published side by side on the Session G tenant page (flagged R-08).

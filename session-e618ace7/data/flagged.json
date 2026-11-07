@@ -4,7 +4,7 @@
   "owner": "session-e618ace7",
   "access_date": "2026-11-07",
   "policy": "Nothing here blocks anything. Every item is published with either the source that could settle it or the reason it could not be settled. Blank cells in the fact ledger are deliberate: no value was inferred.",
-  "summary": "16 unverified values that require the Owner's documents or a parcel lookup, and 10 irregularities found while reviewing the repository line by line."
+  "summary": "16 unverified values that require the Owner's documents or a parcel lookup, and 12 irregularities found while reviewing the repository line by line."
  },
  "unverified": [
   {
@@ -224,7 +224,7 @@
    "finding": "Six parallel builds now deploy from the same Pages site (root, session-1944e5a3, docs, session-a3a8ec08, session-b4ec6128, and this one). The root navigation links only to the Session A archive, so the newest material has no path to it from the landing page.",
    "evidence": "tools/build_site.py NAV ends with 'Session A archive'. README.md links to three of the other five builds but the published index.html links to one.",
    "effect": "The site is complete but not navigable end to end - the exact usability problem the brief asks to avoid.",
-   "action": "This session is the final integration session and adds one additive entry to the root navigation (logged in COORDINATION.md), so every build is reachable from the landing page.",
+   "action": "This session is the final integration session. It added one nav entry ('All workspaces') and a new workspaces.html index at the root that lists all seven workbooks, so every build is reachable from the landing page. Logged in COORDINATION.md.",
    "source_link": ""
   },
   {
@@ -236,6 +236,26 @@
    "effect": "No irregularity in the checkers themselves as run on 2026-11-07.",
    "action": "All four re-run as part of the final integration.",
    "source_link": ""
+  },
+  {
+   "id": "R-11",
+   "severity": "Medium",
+   "file": "COORDINATION.md, repository-wide",
+   "finding": "Two sessions worked simultaneously on 2026-11-07 and both filed themselves as \"Session F\": arena/5bb36a1b (merged first, PR #15/#16) and this one, arena/e618ace7.",
+   "evidence": "The rebase of this branch onto main hit an add/add conflict in COORDINATION.md at the two Session F headers. PR #15 merged at 2026-11-07T20:15:17Z as 32b3d44.",
+   "effect": "Two different dashboards, both labelled Session F, would be confusing to the Owner and ambiguous in the board.",
+   "action": "This session renamed itself Session G in its own build, README entry and board section, kept the other session's section verbatim above its own, and made every workbook reachable from a single new 'All workspaces' page in the root navigation. Nothing was overwritten.",
+   "source_link": "https://github.com/wingbangboozle1-lang/Jack2/blob/main/COORDINATION.md"
+  },
+  {
+   "id": "R-12",
+   "severity": "Low",
+   "file": "session-5bb36a1b/ and data/metrics.json",
+   "finding": "Both report Los Angeles County unemployment of 4.9% for August 2026. The September 2026 EDD release revises August to 5.0%, and reports September itself at 4.8% seasonally adjusted.",
+   "evidence": "EDD Los Angeles County release published 2026-10-16: 'decreased over the month to 4.8 percent in September 2026 from a revised rate of 5.0 in August 2026'. BLS prints 4.5% unadjusted for September.",
+   "effect": "The 4.9% was the correct published figure when it was read and has since been revised by one tenth. A reader comparing builds will see two different August numbers; neither is wrong for its vintage.",
+   "action": "This session publishes September 2026 instead (F31, F32, F33), with the period and seasonal adjustment stated on every row, and records the revision here.",
+   "source_link": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf"
   }
  ]
 }

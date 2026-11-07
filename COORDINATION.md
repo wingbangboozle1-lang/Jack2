@@ -444,7 +444,7 @@ Sessions A–E did, and this file is the single shared coordination surface.
 | G-03 | Projection system: deterministic 2026–2040 + seeded Monte Carlo over 5 strategies | in progress | session-e618ace7 | `session-e618ace7/scripts/` |
 | G-04 | Decision analysis + risk register (business-as-usual + black swans) | in progress | session-e618ace7 | `session-e618ace7/decision.html`, `session-e618ace7/risks.html` |
 | G-05 | 11-page static dashboard, every row source-linked | in progress | session-e618ace7 | `session-e618ace7/*.html`, `session-e618ace7/assets/` |
-| G-06 | **Final integration** (all other sessions are done): add a single additive nav link on the published root build, update `README.md`, re-verify the combined tree, PR → `main`, merge, confirm Pages | in progress | session-e618ace7 | `README.md`, `COORDINATION.md`, one additive entry in `tools/build_site.py` NAV |
+| G-06 | **Final integration** (all other sessions are done): add a single additive nav link on the published root build plus a `workspaces.html` index, update `README.md`, re-verify the combined tree, PR → `main`, merge, confirm Pages | done | session-e618ace7 | `README.md`, `COORDINATION.md`, one additive NAV entry and one new page in `tools/build_site.py` |
 
 **Non-overlap rule for this session.** No file owned by Sessions A–E is edited except the two shared outputs
 the brief assigns to the integration session — `README.md` and the root site's navigation — and `COORDINATION.md`.
@@ -461,7 +461,7 @@ All six claimed tasks are **done**. No other session had a live claim while this
 
 | # | Task | Status | Files produced |
 |---|---|---|---|
-| F-01 | Independent line-by-line verification of the combined repo | **done** | `session-e618ace7/verification.html`, `session-e618ace7/flagged.html`, `session-e618ace7/data/flagged.json` |
+| G-01 | Independent line-by-line verification of the combined repo | **done** | `session-e618ace7/verification.html`, `session-e618ace7/flagged.html`, `session-e618ace7/data/flagged.json` |
 | F-02 | Fresh official-source research, Fall 2026 vintage | **done** | `session-e618ace7/data/sources.json` (19), `session-e618ace7/data/facts.json` (110 rows) |
 | F-03 | Projection system: deterministic + seeded Monte Carlo | **done** | `session-e618ace7/scripts/model.py`, `session-e618ace7/data/projections.json` |
 | F-04 | Decision analysis + risk register | **done** | `session-e618ace7/decision.html`, `session-e618ace7/risks.html`, `session-e618ace7/data/risks.json` (30) |
@@ -515,15 +515,38 @@ Hazard Severity Zones.
    later.
 7. **R-06 — cross-session figures not re-verified here** (SCAG household forecast, FAIR Plan assessment, USGS
    60%, CAL FIRE structure counts, tenant unit count). Left marked unverified rather than endorsed.
-8. **R-09 — navigation gap**: six builds deploy from one Pages site but the root navigation linked only one
+8. **R-11 — duplicate session label.** Two sessions filed as "Session F" on the same day; resolved by renaming
+   this one to Session G and preserving the other's board section verbatim (details above).
+9. **R-12 — revised August unemployment.** The other 2026-11-07 session and the root build both print 4.9% for
+   Los Angeles County in August 2026; EDD's September release revises August to 5.0% and prints 4.8% for
+   September. Correct for their vintage, superseded here.
+10. **R-09 — navigation gap**: six builds deploy from one Pages site but the root navigation linked only one
    archive. Fixed by this session with one additive NAV entry.
+
+### Conflict at integration, and how it was resolved (2026-11-07)
+
+`git pull --rebase origin main` failed: **main had advanced twice** while this session worked. Another session
+(`arena-5bb36a1b-jack2`) had filed itself as **Session F** as well and merged PRs #15 and #16, including its own
+`COORDINATION.md` section and `session-5bb36a1b/`.
+
+Resolution, following the board's rule (stop, resolve without discarding the other session's work, log what
+happened):
+
+1. The rebase conflict was confined to `COORDINATION.md` (add/add at the two Session F headers). No HTML, JSON,
+   CSS, Python or data file of the other session was touched or overwritten.
+2. Their Session F section is preserved **verbatim** above this one, including its deployment record.
+3. This session **renamed itself Session G** in its own build, README entry and board section, so the page shows
+   "Session G" while the live "Session F" remains theirs. Recorded as irregularity R-11.
+4. A new `workspaces.html` page was added at the root, listing all seven workbooks, so nothing published by any
+   session is orphaned. Recorded as the fix for R-09.
 
 ### Integration change made outside this session's own directory
 
-One entry was added to `NAV` in `tools/build_site.py` (`"Session F &mdash; decision dashboard"` →
-`session-e618ace7/index.html`). It is additive, it leaves Session B's build and CI "generated output up to date"
-check green, and it is the change the brief assigns to the final integration session. `README.md` gained a
-Session F section. No other session's page or data was edited.
+Two additive changes in `tools/build_site.py` (Session B's generator), both recorded here rather than made
+silently: one `NAV` entry (`"All workspaces"` → `workspaces.html`) and one new page builder, `build_workspaces()`.
+They leave Session B's build and its CI "generated output up to date" check green -- `tools/model.py`,
+`tools/build_site.py` and `tools/check_site.py` were all re-run after the change and pass with 16 root pages.
+`README.md` gained a Session G section. No other session's page or data was edited.
 
 ### Deployment record (Session F)
 

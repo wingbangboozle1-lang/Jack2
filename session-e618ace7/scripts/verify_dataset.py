@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Row-by-row verifier for the Session F dashboard.
+"""Row-by-row verifier for the Session G dashboard.
 
 Fails (exit 1) if any of these rules is broken:
   V1  duplicate ids anywhere

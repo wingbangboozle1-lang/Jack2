@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static site builder for the Session F (session-e618ace7) decision dashboard.
+"""Static site builder for the Session G (session-e618ace7) decision dashboard.
 
 Reads ../data/*.json and writes plain HTML into ../ (session-e618ace7/).
 No dependencies, no build server, deterministic.
@@ -176,7 +176,7 @@ def page(slug, title, body, active=None, subtitle=""):
 <link rel="stylesheet" href="assets/style.css">
 </head><body>
 <header class="top"><div class="wrap">
-  <div class="brand"><b>Central LA NNN decision workbook</b><span>Open the box &middot; Session F &middot; data read {ACCESS}</span></div>
+  <div class="brand"><b>Central LA NNN decision workbook</b><span>Open the box &middot; Session G &middot; data read {ACCESS}</span></div>
   <nav class="main">{nav}</nav>
 </div></header>
 <main><div class="wrap">
@@ -184,7 +184,7 @@ def page(slug, title, body, active=None, subtitle=""):
 </div></main>
 <footer><div class="wrap">
   <div class="cols">
-    <div><h4>This session</h4><p class="small mut" style="margin:0">Session F, <code>session-e618ace7</code>. Independent verification and decision workbook. {len(ROWS)} fact rows, {sum(1 for r in ROWS if r['status']=='verified')} verified against {len(SRC)} official sources, {sum(1 for r in ROWS if r['status']=='unverified')} deliberately blank.</p></div>
+    <div><h4>This session</h4><p class="small mut" style="margin:0">Session G, <code>session-e618ace7</code>. Independent verification and decision workbook. {len(ROWS)} fact rows, {sum(1 for r in ROWS if r['status']=='verified')} verified against {len(SRC)} official sources, {sum(1 for r in ROWS if r['status']=='unverified')} deliberately blank.</p></div>
     <div><h4>Pages</h4>{foot}</div>
     <div><h4>Privacy &amp; scope</h4><p class="small mut" style="margin:0">No owner name, street address, APN, account or loan number appears anywhere in this build. All analysis is normalised per $100,000 of annual NOI. Internal decision support only &mdash; not an appraisal, not tax advice, not investment advice.</p></div>
   </div>
@@ -918,7 +918,7 @@ correct, current, or applicable to this parcel. Four specific limits apply:</p>
 </ul>
 
 <h2>Cross-session checks</h2>
-<p>This repository contains six independently built workbooks. As the final integration session, this one ran
+<p>This repository contains seven independently built workbooks. As the final integration session, this one ran
 every other session's automated checker against the combined tree as well as its own. Individual results are
 recorded in <code>COORDINATION.md</code> and reproducible from the commands on
 <a href="projection-model.html">Projection model</a>.</p>
