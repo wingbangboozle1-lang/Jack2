@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decision &middot; Central LA NNN decision workbook</title>
+<meta name="description" content="Verified, source-linked decision workbook for a single-tenant NNN restaurant asset in Central Los Angeles. Sell before expiry, or renew.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>Central LA NNN decision workbook</b><span>Open the box &middot; Session G &middot; data read 2026-11-07</span></div>
+  <nav class="main"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html" class="on">Decision</a><a href="risks.html">Risks</a><a href="projection-model.html">Projection model</a><a href="flagged.html">Flagged for review</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<h1>Decision framework</h1>
+<p class="lead">Six mutually exclusive strategies, scored on the same 10,000 simulated futures. The ranking does
+not depend on a forecast of Central Los Angeles rents; it depends on the fact that lease term can only fall.</p>
+
+<h2>The six strategies</h2>
+<div class="tablewrap"><table class=""><thead><tr><th class="num">Rank</th><th>Strategy</th><th class="num">Certainty equiv. (CRRA 2)</th><th class="num">Mean</th><th class="num">5th pct floor</th><th class="num">95th pct</th><th class="num">Deterministic case</th><th class="num">Beats passive hold</th></tr></thead><tbody><tr><td class="num">1</td><td><b>Sell in 2026 through a Section 1031 exchange</b></td><td class="num">2,398,403</td><td class="num">2,418,526</td><td class="num">2,084,446</td><td class="num">2,843,932</td><td class="num">2,397,137.0</td><td class="num">53%</td></tr><tr><td class="num">2</td><td><b>Extend in 2027, sell in 2030</b></td><td class="num">2,386,488</td><td class="num">2,537,576</td><td class="num">2,157,061</td><td class="num">2,917,205</td><td class="num">2,575,415.0</td><td class="num">60%</td></tr><tr><td class="num">3</td><td><b>Extend in 2027, hold to 2040</b></td><td class="num">2,337,239</td><td class="num">2,637,275</td><td class="num">1,927,220</td><td class="num">3,316,923</td><td class="num">2,751,481.0</td><td class="num">66%</td></tr><tr><td class="num">4</td><td><b>Wait two years, then sell</b></td><td class="num">2,295,982</td><td class="num">2,309,631</td><td class="num">2,041,641</td><td class="num">2,639,723</td><td class="num">2,292,024.0</td><td class="num">48%</td></tr><tr><td class="num">5</td><td><b>Sell in 2026 and pay the tax</b></td><td class="num">2,254,581</td><td class="num">2,269,486</td><td class="num">1,991,065</td><td class="num">2,624,018</td><td class="num">2,251,661.0</td><td class="num">47%</td></tr><tr><td class="num">6</td><td><b>Passive hold to expiry, then react</b></td><td class="num">1,825,966</td><td class="num">2,227,922</td><td class="num">1,127,622</td><td class="num">3,246,897</td><td class="num">2,316,865.0</td><td class="num">50%</td></tr></tbody></table></div>
+<p class="small mut">Per $100,000 of current annual NOI, nominal dollars, after tax, horizon 2040. The
+deterministic column uses the central assumption for every input; the simulation draws growth, remaining term,
+rates and renewal probability around those centres.</p>
+
+<h2>How to read the ranking</h2>
+<div class="cards">
+  <div class="card"><div class="k">Extend, then sell</div><div class="v">$2,386,488</div><div class="n">Best combination of mean and floor</div></div>
+  <div class="card"><div class="k">Sell now, 1031</div><div class="v">$2,398,403</div><div class="n">Statistically tied with the above, more certain</div></div>
+  <div class="card"><div class="k">Extend, hold</div><div class="v">$2,337,239</div><div class="n">Highest mean, widest downside</div></div>
+  <div class="card"><div class="k">Passive hold</div><div class="v">$1,825,966</div><div class="n">Worst on every risk measure</div></div>
+</div>
+<p>The two leaders differ by less than one percent on risk-adjusted wealth, and the choice between them is a
+choice about <b>control</b>: extending first keeps the asset and creates value but exposes the Owner to three to
+six more years of tenant and hazard risk; selling now is certain but gives up the extension premium. That is
+why the recommendation is a sequence rather than a single transaction: <b>extend, then sell</b> &mdash; which is
+the same economic act as a 1031 sale, just executed later and with more term to sell.</p>
+
+<h2>Decision triggers</h2>
+<div class="tablewrap"><table><thead><tr><th>When</th><th>Test</th><th>Action</th></tr></thead><tbody>
+<tr><td>Now &ndash; Q1 2027</td><td>Lease abstract: exact expiry, escalators, options, guarantor, franchisee vs corporate</td><td>If the lease is with a franchisee, get the guaranty or raise the deposit at renewal. Everything else follows from this document.</td></tr>
+<tr><td>Q1&ndash;Q2 2027</td><td>Market rent vs in-place rent; broker opinion of value</td><td>If in-place rent is 10%+ below market, take the sale track and skip the extension track.</td></tr>
+<tr><td>Q2 2027</td><td>Tenant's offer</td><td>Accept only &ge;10 years, rent &ge; in-place, CPI-linked escalators, no co-tenancy or kick-out clause. Otherwise decline and list.</td></tr>
+<tr><td>Q3 2027</td><td>Extension signed?</td><td>Yes: hold, re-appraise annually, sell 2029&ndash;2032. No: list immediately with &ge;5 years of term.</td></tr>
+<tr><td>Any time</td><td>Remaining term</td><td>Hard floor: never let term fall below 5 years without a signed extension. This single rule is worth more than any forecast.</td></tr>
+<tr><td>Any time</td><td>10-year Treasury moves &plusmn;75&nbsp;bp from 4.86%</td><td>Re-run the model. Rates move value faster than rent does.</td></tr>
+<tr><td>Any time</td><td>Parcel hazard class or insurance terms come back adverse</td><td>Bring the exit forward; do not underwrite a tail you cannot price.</td></tr>
+<tr><td>Any time</td><td>Tenant's filings show renewed annual losses or store-count contraction</td><td>Begin the sale process within two quarters.</td></tr>
+</tbody></table></div>
+
+<h2>Walk-away terms</h2>
+<ul class="tight">
+<li><b>Never</b> accept an extension shorter than ten years, or one that reduces the rent.</li>
+<li><b>Never</b> accept a kick-out, co-tenancy or early-termination clause in exchange for term you are being told is valuable.</li>
+<li><b>Never</b> let the 1031 identification window be the reason a closing slips: identify replacement property before closing.</li>
+<li><b>Never</b> treat an unsigned term sheet as an extension. Documented, signed, and recorded matters.</li>
+</ul>
+
+<h2>Sensitivity: where the ranking flips</h2>
+<p>The grid below runs the four principal paths across nine growth and base-cap combinations. Two entries are
+worth memorising: at 2% rent growth with tight cap rates, <b>extend-and-sell</b> wins; at 3% or better growth,
+<b>extend-and-hold</b> wins. Passive hold never wins.</p>
+<div class="tablewrap"><table class=""><thead><tr><th class="num">NOI growth</th><th class="num">Base cap rate</th><th class="num">Passive hold</th><th class="num">Extend &amp; hold</th><th class="num">Extend &amp; sell</th><th class="num">Sell now (taxed)</th><th class="num">Sell now (1031)</th><th>Best</th></tr></thead><tbody><tr><td class="num">2.0%</td><td class="num">4.75%</td><td class="num">2,198,847</td><td class="num">2,608,514</td><td class="num">2,684,504</td><td class="num">2,419,958</td><td class="num">2,599,079</td><td><b>Extend &amp; sell</b></td></tr><tr><td class="num">2.0%</td><td class="num">5.00%</td><td class="num">2,150,392</td><td class="num">2,547,090</td><td class="num">2,586,654</td><td class="num">2,331,914</td><td class="num">2,493,433</td><td><b>Extend &amp; sell</b></td></tr><tr><td class="num">2.0%</td><td class="num">5.25%</td><td class="num">2,105,928</td><td class="num">2,490,743</td><td class="num">2,498,124</td><td class="num">2,251,661</td><td class="num">2,397,137</td><td><b>Extend &amp; sell</b></td></tr><tr><td class="num">2.0%</td><td class="num">5.50%</td><td class="num">2,064,981</td><td class="num">2,438,867</td><td class="num">2,417,641</td><td class="num">2,178,210</td><td class="num">2,309,002</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">2.0%</td><td class="num">5.75%</td><td class="num">2,027,149</td><td class="num">2,390,952</td><td class="num">2,344,158</td><td class="num">2,110,730</td><td class="num">2,228,032</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.0%</td><td class="num">4.75%</td><td class="num">2,423,571</td><td class="num">2,886,489</td><td class="num">2,769,213</td><td class="num">2,419,958</td><td class="num">2,599,079</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.0%</td><td class="num">5.00%</td><td class="num">2,367,926</td><td class="num">2,816,075</td><td class="num">2,667,469</td><td class="num">2,331,914</td><td class="num">2,493,433</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.0%</td><td class="num">5.25%</td><td class="num">2,316,865</td><td class="num">2,751,481</td><td class="num">2,575,415</td><td class="num">2,251,661</td><td class="num">2,397,137</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.0%</td><td class="num">5.50%</td><td class="num">2,269,844</td><td class="num">2,692,013</td><td class="num">2,491,730</td><td class="num">2,178,210</td><td class="num">2,309,002</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.0%</td><td class="num">5.75%</td><td class="num">2,226,401</td><td class="num">2,637,085</td><td class="num">2,415,322</td><td class="num">2,110,730</td><td class="num">2,228,032</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.7%</td><td class="num">4.75%</td><td class="num">2,597,198</td><td class="num">3,101,301</td><td class="num">2,829,956</td><td class="num">2,419,958</td><td class="num">2,599,079</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.7%</td><td class="num">5.00%</td><td class="num">2,535,949</td><td class="num">3,023,883</td><td class="num">2,725,418</td><td class="num">2,331,914</td><td class="num">2,493,433</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.7%</td><td class="num">5.25%</td><td class="num">2,479,745</td><td class="num">2,952,864</td><td class="num">2,630,837</td><td class="num">2,251,661</td><td class="num">2,397,137</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.7%</td><td class="num">5.50%</td><td class="num">2,427,989</td><td class="num">2,887,481</td><td class="num">2,544,853</td><td class="num">2,178,210</td><td class="num">2,309,002</td><td><b>Extend &amp; hold</b></td></tr><tr><td class="num">3.7%</td><td class="num">5.75%</td><td class="num">2,380,172</td><td class="num">2,827,090</td><td class="num">2,466,347</td><td class="num">2,110,730</td><td class="num">2,228,032</td><td><b>Extend &amp; hold</b></td></tr></tbody></table></div>
+<p class="small mut">Per $100,000 of NOI, 2040, after tax. Deterministic; the stochastic ranking is on the table
+at the top of the page. Full inputs on <a href="projection-model.html">Projection model</a>.</p>
+
+</div></main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>This session</h4><p class="small mut" style="margin:0">Session G, <code>session-e618ace7</code>. Independent verification and decision workbook. 110 fact rows, 96 verified against 19 official sources, 14 deliberately blank.</p></div>
+    <div><h4>Pages</h4><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="risks.html">Risk register</a><a href="projection-model.html">Projection model</a><a href="valuation-capital.html">Valuation &amp; capital markets</a><a href="area-economy.html">Area economy</a><a href="demographics-schools.html">Demographics &amp; schools</a><a href="tenant-credit.html">Tenant credit</a><a href="property-lease.html">Property &amp; lease</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a></div>
+    <div><h4>Privacy &amp; scope</h4><p class="small mut" style="margin:0">No owner name, street address, APN, account or loan number appears anywhere in this build. All analysis is normalised per $100,000 of annual NOI. Internal decision support only &mdash; not an appraisal, not tax advice, not investment advice.</p></div>
+  </div>
+</div></footer>
+</body></html>

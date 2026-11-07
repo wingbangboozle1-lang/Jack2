@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "title": "Analyst assumptions - kept strictly separate from the verified fact ledger",
+  "warning": "Nothing in this file is a verified fact. Every number here is a judgement, is used only by the projection model, and is labelled as an assumption everywhere it appears on the site. Changing any of these changes the ranking of the strategies - which is why the site publishes the sensitivity grid rather than a single answer.",
+  "owner": "session-e618ace7",
+  "access_date": "2026-11-07"
+ },
+ "assumptions": [
+  {
+   "id": "A01",
+   "group": "Valuation",
+   "label": "Base capitalisation rate for a single-tenant QSR with about ten years of remaining term, Central Los Angeles",
+   "value": "5.25%",
+   "grid": "4.75% - 5.75%",
+   "basis": "No government body publishes transaction cap rates (flagged U-14). Anchored to the verified 10-year Treasury of 4.86% plus a 0.39% risk premium, which is where long-term net-lease single-tenant QSR trades have generally cleared. It is an assumption, not evidence."
+  },
+  {
+   "id": "A02",
+   "group": "Valuation",
+   "label": "Cap rate widening per year of remaining lease term below ten years",
+   "value": "+10 bp per year, capped at 125 bp",
+   "grid": "5 - 15 bp",
+   "basis": "Buyers price exit risk. Ten years is the conventional threshold below which lenders and buyers begin to discount; the floor of the resulting cap rate is set at 4.50%."
+  },
+  {
+   "id": "A03",
+   "group": "Valuation",
+   "label": "Share of a move in the 10-year Treasury that passes into the cap rate",
+   "value": "0.50",
+   "grid": "0.30 - 0.70",
+   "basis": "Net-lease cap rates are rate-sensitive but not mechanically linked; empirical pass-through is partial."
+  },
+  {
+   "id": "A04",
+   "group": "Income",
+   "label": "Annual NOI growth, base case",
+   "value": "3.0%",
+   "grid": "2.0% / 3.0% / 3.7%",
+   "basis": "Bracketed by the verified local CPI-U of +3.7% (F53) and the statutory 3.5% ceiling on state minimum-wage indexation (S15). 2.0% represents a fixed-bump lease, 3.7% a full-CPI lease."
+  },
+  {
+   "id": "A05",
+   "group": "Lease",
+   "label": "Remaining lease term at valuation date",
+   "value": "6 years",
+   "grid": "4 - 9 years",
+   "basis": "Midpoint of the Owner's stated 2030-2035 expiry window. The true value is not known (flagged U-03) and is the single most important unknown in the analysis."
+  },
+  {
+   "id": "A06",
+   "group": "Lease",
+   "label": "Probability the tenant renews at expiry if the Owner takes no action",
+   "value": "65%",
+   "grid": "40% - 90%",
+   "basis": "Assumption. Supports the base case only; the model reports results at 40% and 90% as well."
+  },
+  {
+   "id": "A07",
+   "group": "Lease",
+   "label": "Downtime and releasing cost if the tenant does not renew",
+   "value": "18 months at 50% of prior NOI, plus 6% of value in leasing costs",
+   "grid": "12-24 months",
+   "basis": "A dark drive-through is hard to re-let; fast-food boxes are purpose-built. Assumption."
+  },
+  {
+   "id": "A08",
+   "group": "Lease",
+   "label": "Terms the Owner could realistically obtain in a 2027 extension",
+   "value": "+10 years at in-place rent, 3.0% annual escalators",
+   "grid": "0% to +5% rent uplift",
+   "basis": "Assumption used to size the extension strategy; the actual offer is unknown. Tenant's own 10-K disclosure is that it 'generally' renews at then-current market rates, but that statement was not re-verified this session (flagged U-16)."
+  },
+  {
+   "id": "A09",
+   "group": "Transaction",
+   "label": "Cost of sale",
+   "value": "2.50% brokerage, plus 1.10 per 1,000 county transfer tax, plus 0.45% city base tax, plus 4.0% Measure ULA where the price reaches $5,400,000",
+   "grid": "1.5% - 3.5% brokerage",
+   "basis": "Transfer taxes are verified (F86-F89). Brokerage is an assumption."
+  },
+  {
+   "id": "A10",
+   "group": "Tax",
+   "label": "Blended tax on a taxable sale",
+   "value": "37.0% of the taxable gain",
+   "grid": "30% - 42%",
+   "basis": "Built from the verified CA top rate of 12.30% (F91) and federal components: 25% on the unrecaptured Section 1250 slice (30% of the gain) and 23.8% (20% capital gain plus 3.8% net investment income tax) on the rest. Federal rates are standard statutory rates and are NOT separately verified in this session."
+  },
+  {
+   "id": "A11",
+   "group": "Tax",
+   "label": "Taxable gain as a share of gross sale price",
+   "value": "55%",
+   "grid": "35% - 75%",
+   "basis": "Basis and depreciation history are unknown (flagged U-06). This is the assumption that moves the after-tax comparison most after the cap rate."
+  },
+  {
+   "id": "A12",
+   "group": "Reinvestment",
+   "label": "Unlevered total return on reinvested proceeds after a taxable sale",
+   "value": "5.50%",
+   "grid": "4.50% - 6.50%",
+   "basis": "Cash yield 5.50% with no growth, i.e. a diversified net-lease position bought at today's rates. Assumption."
+  },
+  {
+   "id": "A13",
+   "group": "Reinvestment",
+   "label": "Unlevered total return on a Section 1031 replacement portfolio",
+   "value": "6.25%",
+   "grid": "5.25% - 7.25%",
+   "basis": "Cash yield 6.25%, growth deferred. The 0.75% uplift over A12 reflects the larger investable base and access to non-urban markets, not a claim about any specific asset. Assumption."
+  },
+  {
+   "id": "A14",
+   "group": "Tax",
+   "label": "Blended tax on annual operating income",
+   "value": "48.0%",
+   "grid": "40% - 52%",
+   "basis": "Federal top rate plus the verified CA top rate. Assumes a high-bracket individual Owner, which is the conservative case for a hold decision."
+  },
+  {
+   "id": "A15",
+   "group": "Risk",
+   "label": "Annual probability of a hazard event that impairs value by more than 20%",
+   "value": "1.00%",
+   "grid": "0.25% - 3.00%",
+   "basis": "Analyst judgement informed by the January 2025 Los Angeles fire pair and regional seismic exposure. The parcel-level hazard class is unknown (flagged U-07, U-08), so this is deliberately coarse."
+  },
+  {
+   "id": "A16",
+   "group": "Risk",
+   "label": "Annual probability of a total loss",
+   "value": "0.25%",
+   "grid": "0.05% - 1.00%",
+   "basis": "Analyst judgement. Insurance recovery is assumed to be partial and slow, which is why a total loss is not modelled as a full recovery."
+  },
+  {
+   "id": "A17",
+   "group": "Model",
+   "label": "Horizon",
+   "value": "2040",
+   "grid": "n/a",
+   "basis": "Long enough to cover the full expiry window plus a post-expiry cycle, without pretending to forecast beyond a generation."
+  },
+  {
+   "id": "A18",
+   "group": "Model",
+   "label": "Monte Carlo trials and seed",
+   "value": "10,000 trials, seed 20261107",
+   "grid": "n/a",
+   "basis": "Deterministic and reproducible: the same seed always produces the same file."
+  },
+  {
+   "id": "A19",
+   "group": "Income",
+   "label": "In-place rent versus market rent",
+   "value": "At market",
+   "grid": "-15% to +15%",
+   "basis": "Unknown (flagged U-02). If the in-place rent is below market, the extension strategy worsens and the sale strategy improves, because a buyer would reprice to market at expiry."
+  },
+  {
+   "id": "A20",
+   "group": "Reinvestment",
+   "label": "Share of the reinvestment total return taken as taxable current income rather than appreciation",
+   "value": "60%",
+   "grid": "50% - 70%",
+   "basis": "A net-lease portfolio bought at today's yields distributes most of its return as rent, with the remainder as slow appreciation. Assumption."
+  }
+ ]
+}
