@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "session_id": "session-18dacdea",
+    "recommended_strategy_id": "S2_blend_extend_then_1031",
+    "headline_recommendation": "Two-Stage Sequence: (1) Open a 90-Day Early 'Blend-and-Extend' Inquiry Now to Lock in a 15-Year Lease Reset; (2) Sell Into an IRC \u00a71031 Like-Kind Exchange While >=6 Years of Term Remain (Whether Extended or Unextended) \u2014 Never Hold Passively Into the Final 3\u20134 Years of the 2030\u20132035 Expiry Window."
+  },
+  "strategies": [
+    {
+      "id": "S2_blend_extend_then_1031",
+      "rank": 1,
+      "verdict": "RECOMMENDED PRIMARY PATH",
+      "title": "Stage 1: Early Blend-and-Extend (2026\u201327) -> Stage 2: IRC \u00a71031 Exchange Sale (2027\u201328)",
+      "base_npv_per_100k": 1907272.0,
+      "mc_mean_wealth_2040": 3822165.0,
+      "mc_p05_tail_floor": 3354931.0,
+      "mc_certainty_equivalent": 3798208.0,
+      "wealth_preservation_score": "5 / 5 (Eliminates LA seismic/fire/credit tail after \u00a71031 exit)",
+      "growth_opportunity_score": "5 / 5 (+13.3% cap-rate compression uplift + 7.1%\u20137.4% \u00a71031 reinvestment)",
+      "summary": "Extending the lease early back to 12\u201315 years compresses the exit cap rate from ~6.95% to ~6.40% (S13), creating +13.3% of instant value uplift before rotating 100% tax-deferred via IRC \u00a71031 (S19) into a diversified multi-property portfolio.",
+      "source": "S13"
+    },
+    {
+      "id": "S1_sell_pre_cliff_1031",
+      "rank": 2,
+      "verdict": "RECOMMENDED IMMEDIATE FALLBACK (IF TENANT DECLINES EXTENSION OR EXPIRY IS 2030\u20132031)",
+      "title": "Sell Pre-Cliff Now via IRC \u00a71031 Like-Kind Exchange (Without Waiting for Expiry)",
+      "base_npv_per_100k": 1752183.0,
+      "mc_mean_wealth_2040": 3696913.0,
+      "mc_p05_tail_floor": 3254006.0,
+      "mc_certainty_equivalent": 3670763.0,
+      "wealth_preservation_score": "5 / 5 (Highest immediate tail-risk protection; avoids WALT <6-yr cliff)",
+      "growth_opportunity_score": "4 / 5 (Captures 7.1%\u20137.4% replacement yield vs ~1.5% in-place rent bumps)",
+      "summary": "If the lease expires in 2030\u20132031 (only 4\u20135 years left) or if the tenant refuses an early extension within 90 days, sell immediately via IRC \u00a71031 while buyer financing is still available.",
+      "source": "S19"
+    },
+    {
+      "id": "S3_hold_and_renew_at_expiry",
+      "rank": 3,
+      "verdict": "CONDITIONAL HOLD (ONLY IF STORE RENT-TO-SALES <= 8% & CORPORATE GUARANTY)",
+      "title": "Hold Single Asset Through 2030\u20132035 Expiry & Renew at Market Rate to 2040",
+      "base_npv_per_100k": 1382820.0,
+      "mc_mean_wealth_2040": 3454245.0,
+      "mc_p05_tail_floor": 2659459.0,
+      "mc_certainty_equivalent": 3361449.0,
+      "wealth_preservation_score": "2 / 5 (100% exposed to LA earthquake, wildfire insurance shock & JACK closures)",
+      "growth_opportunity_score": "3 / 5 (Preserves Prop 13 2% tax cap, but exposed to 28% non-renewal TI/vacancy)",
+      "summary": "Preserves the low Prop 13 tax base (S17), but leaves 100% of owner wealth concentrated in a single aging QSR pad facing -4.2% brand SSS, $20/hr AB 1228 labor compression, and 60% 30-yr M>=6.7 seismic hazard.",
+      "source": "S17"
+    },
+    {
+      "id": "S4_hold_to_expiry_sell_short",
+      "rank": 4,
+      "verdict": "DO NOT PURSUE (VALUE TRAP)",
+      "title": "Hold Unextended Until Final Year of Lease (2030\u20132035), Then Sell",
+      "base_npv_per_100k": 1450224.0,
+      "mc_mean_wealth_2040": 2915215.0,
+      "mc_p05_tail_floor": 2126708.0,
+      "mc_certainty_equivalent": 2832395.0,
+      "wealth_preservation_score": "2 / 5 (Suffers full WALT cap-rate expansion to ~8.15%+ at exit)",
+      "growth_opportunity_score": "2 / 5 (Loses ~18%\u201324% of asset value to term decay)",
+      "summary": "Letting remaining term decay to 1\u20132 years before selling forces a disposition into an all-cash/value-add buyer pool at an ~8.15%+ cap rate, destroying the net-lease premium.",
+      "source": "S13"
+    },
+    {
+      "id": "S5_sell_now_taxable_cash",
+      "rank": 5,
+      "verdict": "AVOID (SEVERE TAX EROSION)",
+      "title": "Sell Now Outright in a Taxable Cash Transaction (No \u00a71031 Exchange)",
+      "base_npv_per_100k": 1025465.0,
+      "mc_mean_wealth_2040": 2181680.0,
+      "mc_p05_tail_floor": 1936340.0,
+      "mc_certainty_equivalent": 2168195.0,
+      "wealth_preservation_score": "3 / 5 (Eliminates property risk but permanently destroys ~26.5%\u201337.1% of capital)",
+      "growth_opportunity_score": "1 / 5 (Shrunken post-tax principal cannot compound to match \u00a71031 or hold)",
+      "summary": "Paying combined Federal LTCG + NIIT (23.8%), \u00a71250 Recapture (28.8%), and California income tax (up to 13.3%) on a low-basis property permanently erodes over a quarter of family wealth (S19).",
+      "source": "S19"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "TR-01",
+      "trigger": "Remaining Primary Lease Term (WALT) vs. 6.0-Year Financing Cliff",
+      "threshold": "If expiry is 2030 or 2031 (<5.5 yrs left) -> Sell/Extend immediately in Q1 2027; if 2033\u20132035 (7\u20139 yrs left) -> Negotiate Blend-and-Extend first",
+      "why": "Lenders curtail 10-year amortizing debt once WALT drops below 6 years, widening cap rates by 75\u2013175 bps.",
+      "source": "S13"
+    },
+    {
+      "id": "TR-02",
+      "trigger": "Store-Level Rent-to-Sales Coverage Ratio (Gross Sales Audit)",
+      "threshold": "<= 8.5% = Strong renewal candidate | 8.5%\u201310.5% = Watchlist | >= 11.0% = High closure/rent-cut risk -> Sell via \u00a71031",
+      "why": "With $20/hr AB 1228 wages (S09) and -4.2% YTD SSS (S12), stores above 10.5% occupancy cost are prime targets for 'JACK on Track' closure.",
+      "source": "S12"
+    },
+    {
+      "id": "TR-03",
+      "trigger": "Reinvestment Yield Spread on IRC \u00a71031 Replacement Assets",
+      "threshold": "Replacement net cash yield >= 6.68% beats passive holding in Base case (Verified REIT benchmark = 7.30%\u20137.40%)",
+      "why": "At >=6.68% replacement yield, tax-deferred \u00a71031 compounding outperforms holding a 1.5%-escalating lease in a +3.7% CPI market.",
+      "source": "S14"
+    },
+    {
+      "id": "TR-04",
+      "trigger": "Early Blend-and-Extend Cap-Rate Compression Test",
+      "threshold": "10\u201315 yr extension compressing exit cap by >=50 bps (6.95% -> 6.40%) creates +$191k of value per $100k NOI (+13.3%)",
+      "why": "Captures the institutional 10+ year WALT buyer tier documented in NNN REIT's FY2025 Form 10-K (6.4% disposition cap, S13).",
+      "source": "S13"
+    },
+    {
+      "id": "TR-05",
+      "trigger": "City of Los Angeles Measure ULA $5,400,000 Gross Sale Price Cliff",
+      "threshold": "If parcel is inside City of LA and valued between $5.40M and $5.68M -> Price at $5.39M to save ~$216,000+ in ULA surtax",
+      "why": "Measure ULA adds a 4.0% gross tax on the entire sale price once consideration exceeds $5,400,000 post-July 1, 2026 (S18).",
+      "source": "S18"
+    },
+    {
+      "id": "TR-06",
+      "trigger": "Proposition 13 Reassessment Pass-Through Impact on Tenant Occupancy Cost",
+      "threshold": "If post-sale Prop 13 tax reassessment (1.0% + bonds on FMV) pushes tenant total occupancy cost >10% of store sales -> Extend lease before marketing",
+      "why": "Buyers underwrite the reassessment tax jump billed to the NNN tenant; locking in the tenant's extension first removes buyer re-leasing discount.",
+      "source": "S17"
+    }
+  ]
+}

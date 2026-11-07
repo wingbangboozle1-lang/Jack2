@@ -1,0 +1,722 @@
+{
+  "meta": {
+    "session_id": "session-18dacdea",
+    "generated_on": "2026-11-07",
+    "seed": 20261107,
+    "trials": 15000,
+    "normalization_unit": "Per $100,000 of current annual NNN NOI",
+    "horizon": "2026\u20132040 (14 years)"
+  },
+  "verified_anchors": {
+    "dgs10_2026_11_05_pct": 4.84,
+    "dgs10_2026_11_04_pct": 4.9,
+    "dgs10_2026_peak_pct": 5.31,
+    "dfedtaru_2026_11_06_pct": 4.0,
+    "la_cpi_sep2026_pct": 3.7,
+    "la_energy_cpi_sep2026_pct": 20.3,
+    "la_eci_wages_sep2026_pct": 3.9,
+    "la_msa_jobs_yoy_sep2026_pct": 0.5,
+    "la_county_unemp_sep2026_pct": 4.5,
+    "dof_pop_cagr_2025_2040_pct": -0.15,
+    "nnn_reit_acq_cap_pct": 7.4,
+    "nnn_reit_disp_cap_pct": 6.4,
+    "realty_income_yield_pct": 7.3,
+    "ca_fast_food_wage_usd": 20.0,
+    "la_city_min_wage_usd": 18.42,
+    "jack_sss_ytd_q3_fy26_pct": -4.2,
+    "jack_auv_fy25_usd": 1874000,
+    "base_transfer_tax_pct": 0.56,
+    "ula_tier1_total_tax_pct": 4.56,
+    "ula_tier1_threshold_usd": 5400000,
+    "combined_tax_rate_cash_sale_pct": 35.5,
+    "usgs_30yr_m67_prob_pct": 60.0
+  },
+  "assumptions": [
+    {
+      "id": "A-01",
+      "parameter": "Normalized Baseline Annual NNN Rent / NOI",
+      "value": "$100,000 / year (scaling unit)",
+      "rationale": "Actual private rent is withheld (M-03). All outputs scale linearly: multiply by 1.5x for $150k NOI or 2.0x for $200k NOI.",
+      "anchor_source": "S11"
+    },
+    {
+      "id": "A-02",
+      "parameter": "Central Lease Expiration Year (within 2030\u20132035 window)",
+      "value": "2032 (~6.0 years remaining from Nov 2026); full sensitivity run for 2030..2035",
+      "rationale": "Midpoint of the owner-stated 2030\u20132035 expiry range (M-02).",
+      "anchor_source": "S18"
+    },
+    {
+      "id": "A-03",
+      "parameter": "Cap-Rate Term Curve (by Remaining Lease Term)",
+      "value": "15+ yr: 6.40% | 8\u20139 yr: 6.65% | 6 yr (2032): 6.95% | 4 yr (2030): 7.45% | <2 yr / dark: 8.35%",
+      "rationale": "Anchored to NNN REIT's 6.40% occupied disposition cap rate at 10.2-yr WALT and 7.40% acquisition cap rate (S13), reflecting buyer financing tightening below 6 years WALT.",
+      "anchor_source": "S13"
+    },
+    {
+      "id": "A-04",
+      "parameter": "In-Place & Renewal Annual Rent Escalation",
+      "value": "In-place: +1.50%/yr | Early Blend-and-Extend: +2.25%/yr (CPI-collared) | Expiry Renewal: +2.00%/yr",
+      "rationale": "Standard QSR NNN leases step up 7.5%\u201310% every 5 years (~1.46%\u20131.92%/yr), trailing current LA CPI of +3.7% (S01).",
+      "anchor_source": "S01"
+    },
+    {
+      "id": "A-05",
+      "parameter": "\u00a71031 Replacement Portfolio Net Cash Yield & Growth",
+      "value": "7.10% net initial yield (after 0.20% friction vs 7.30%\u20137.40% REIT benchmark) + 2.00%/yr escalation",
+      "rationale": "Conservative 20\u201330 bps haircut below Realty Income (7.3%, S14) and NNN REIT (7.4%, S13) acquisition yields.",
+      "anchor_source": "S13"
+    },
+    {
+      "id": "A-06",
+      "parameter": "Sale Transaction Friction (Brokerage + Escrow + Base Transfer Tax)",
+      "value": "4.56% of gross price (4.00% brokerage/legal/closing + 0.56% County/City base transfer tax)",
+      "rationale": "At $100k\u2013$250k NOI, gross price is below the $5.4M Measure ULA cliff; if price > $5.4M in City of LA, friction rises by +4.00% to 8.56% (S18).",
+      "anchor_source": "S18"
+    },
+    {
+      "id": "A-07",
+      "parameter": "Expiry Renewal Probability & Non-Renewal Re-Tenanting Cost",
+      "value": "72% base renewal probability at market rent; 28% non-renewal -> 12 months downtime + $180k TI/LC per $100k NOI",
+      "rationale": "Reflects JACK's 10-K statement that it generally renews at market rates (S11) tempered by -4.2% SSS and 'JACK on Track' closures (S12).",
+      "anchor_source": "S12"
+    },
+    {
+      "id": "A-08",
+      "parameter": "Single-Parcel Black Swan Annual Hazard Overlay",
+      "value": "1.35%/yr combined severe impairment hazard (seismic M>=6.7 uninsurable loss, wildfire/FAIR Plan shock, or Ch. 11 rejection)",
+      "rationale": "Derived from USGS 60% 30-yr M>=6.7 probability (~3.0%/yr regional event x ~30% severe parcel loss) + wildfire/credit tail (S12, S21, S22).",
+      "anchor_source": "S22"
+    }
+  ],
+  "area_projection": {
+    "regimes": {
+      "bear": {
+        "label": "Bear (Stagflation / Out-Migration / QSR Margin Squeeze)",
+        "pop_cagr_pct": -0.35,
+        "job_cagr_pct": -0.1,
+        "cpi_annual_pct": 4.1,
+        "qsr_real_sales_cagr_pct": -1.2,
+        "market_rent_cagr_pct": 0.8,
+        "exit_cap_shift_bps": 75,
+        "reinvest_yield_pct": 6.85,
+        "renewal_prob_pct": 55.0
+      },
+      "base": {
+        "label": "Base (BLS/DOF Consensus: Stable Core Density, Mild County Outflow)",
+        "pop_cagr_pct": -0.15,
+        "job_cagr_pct": 0.45,
+        "cpi_annual_pct": 3.1,
+        "qsr_real_sales_cagr_pct": 0.25,
+        "market_rent_cagr_pct": 2.15,
+        "exit_cap_shift_bps": 0,
+        "reinvest_yield_pct": 7.1,
+        "renewal_prob_pct": 72.0
+      },
+      "bull": {
+        "label": "Bull (2028 Olympics Boost / Rate Normalization / Infill Re-Rating)",
+        "pop_cagr_pct": 0.05,
+        "job_cagr_pct": 0.95,
+        "cpi_annual_pct": 2.45,
+        "qsr_real_sales_cagr_pct": 1.1,
+        "market_rent_cagr_pct": 3.0,
+        "exit_cap_shift_bps": -45,
+        "reinvest_yield_pct": 7.35,
+        "renewal_prob_pct": 86.0
+      }
+    },
+    "yearly_base_trajectory": [
+      {
+        "year": 2026,
+        "la_county_dof_pop": 9828209,
+        "la_msa_jobs_k": 6282.1,
+        "cpi_index_2026_100": 100.0,
+        "qsr_market_rent_index": 100.0,
+        "remaining_term_if_2032_expiry": 6,
+        "unextended_cap_rate_pct": 6.95
+      },
+      {
+        "year": 2027,
+        "la_county_dof_pop": 9802983,
+        "la_msa_jobs_k": 6310.4,
+        "cpi_index_2026_100": 103.1,
+        "qsr_market_rent_index": 102.2,
+        "remaining_term_if_2032_expiry": 5,
+        "unextended_cap_rate_pct": 7.2
+      },
+      {
+        "year": 2028,
+        "la_county_dof_pop": 9777757,
+        "la_msa_jobs_k": 6338.8,
+        "cpi_index_2026_100": 106.3,
+        "qsr_market_rent_index": 104.3,
+        "remaining_term_if_2032_expiry": 4,
+        "unextended_cap_rate_pct": 7.45
+      },
+      {
+        "year": 2029,
+        "la_county_dof_pop": 9752531,
+        "la_msa_jobs_k": 6367.3,
+        "cpi_index_2026_100": 109.6,
+        "qsr_market_rent_index": 106.6,
+        "remaining_term_if_2032_expiry": 3,
+        "unextended_cap_rate_pct": 7.7
+      },
+      {
+        "year": 2030,
+        "la_county_dof_pop": 9727305,
+        "la_msa_jobs_k": 6395.9,
+        "cpi_index_2026_100": 113.0,
+        "qsr_market_rent_index": 108.9,
+        "remaining_term_if_2032_expiry": 2,
+        "unextended_cap_rate_pct": 7.92
+      },
+      {
+        "year": 2031,
+        "la_county_dof_pop": 9723573,
+        "la_msa_jobs_k": 6424.7,
+        "cpi_index_2026_100": 116.5,
+        "qsr_market_rent_index": 111.2,
+        "remaining_term_if_2032_expiry": 1,
+        "unextended_cap_rate_pct": 8.13
+      },
+      {
+        "year": 2032,
+        "la_county_dof_pop": 9719842,
+        "la_msa_jobs_k": 6453.6,
+        "cpi_index_2026_100": 120.1,
+        "qsr_market_rent_index": 113.6,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2033,
+        "la_county_dof_pop": 9716110,
+        "la_msa_jobs_k": 6482.7,
+        "cpi_index_2026_100": 123.8,
+        "qsr_market_rent_index": 116.1,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2034,
+        "la_county_dof_pop": 9712379,
+        "la_msa_jobs_k": 6511.8,
+        "cpi_index_2026_100": 127.7,
+        "qsr_market_rent_index": 118.6,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2035,
+        "la_county_dof_pop": 9708647,
+        "la_msa_jobs_k": 6541.2,
+        "cpi_index_2026_100": 131.6,
+        "qsr_market_rent_index": 121.1,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2036,
+        "la_county_dof_pop": 9694422,
+        "la_msa_jobs_k": 6570.6,
+        "cpi_index_2026_100": 135.7,
+        "qsr_market_rent_index": 123.7,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2037,
+        "la_county_dof_pop": 9680198,
+        "la_msa_jobs_k": 6600.2,
+        "cpi_index_2026_100": 139.9,
+        "qsr_market_rent_index": 126.4,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2038,
+        "la_county_dof_pop": 9665973,
+        "la_msa_jobs_k": 6629.9,
+        "cpi_index_2026_100": 144.2,
+        "qsr_market_rent_index": 129.1,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2039,
+        "la_county_dof_pop": 9651749,
+        "la_msa_jobs_k": 6659.7,
+        "cpi_index_2026_100": 148.7,
+        "qsr_market_rent_index": 131.9,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      },
+      {
+        "year": 2040,
+        "la_county_dof_pop": 9637524,
+        "la_msa_jobs_k": 6689.7,
+        "cpi_index_2026_100": 153.3,
+        "qsr_market_rent_index": 134.7,
+        "remaining_term_if_2032_expiry": 0.0,
+        "unextended_cap_rate_pct": 8.35
+      }
+    ]
+  },
+  "scenarios_2032_midpoint": {
+    "bear": {
+      "expiry_year": 2032,
+      "regime": "bear",
+      "remaining_term_years": 6.0,
+      "implied_cap_now_pct": 7.7,
+      "gross_value_now_per_100k_noi": 1298701.0,
+      "net_1031_equity_now": 1239481.0,
+      "gross_value_extended_2028": 1462247.0,
+      "extension_value_uplift_pct": 12.6,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1454848.0,
+          "terminal_wealth_2040": 3353585.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1594147.0,
+          "terminal_wealth_2040": 3669736.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1240932.0,
+          "terminal_wealth_2040": 2818593.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1284363.0,
+          "terminal_wealth_2040": 2906052.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 925582.0,
+          "terminal_wealth_2040": 2129346.0
+        }
+      }
+    },
+    "base": {
+      "expiry_year": 2032,
+      "regime": "base",
+      "remaining_term_years": 6.0,
+      "implied_cap_now_pct": 6.95,
+      "gross_value_now_per_100k_noi": 1438849.0,
+      "net_1031_equity_now": 1373237.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 13.5,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1752183.0,
+          "terminal_wealth_2040": 4055830.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1382820.0,
+          "terminal_wealth_2040": 3159165.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1450224.0,
+          "terminal_wealth_2040": 3313296.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 1025465.0,
+          "terminal_wealth_2040": 2359132.0
+        }
+      }
+    },
+    "bull": {
+      "expiry_year": 2032,
+      "regime": "bull",
+      "remaining_term_years": 6.0,
+      "implied_cap_now_pct": 6.5,
+      "gross_value_now_per_100k_noi": 1538462.0,
+      "net_1031_equity_now": 1468308.0,
+      "gross_value_extended_2028": 1757153.0,
+      "extension_value_uplift_pct": 14.2,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 2004328.0,
+          "terminal_wealth_2040": 4652265.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 2175320.0,
+          "terminal_wealth_2040": 5064507.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1488096.0,
+          "terminal_wealth_2040": 3411105.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1590068.0,
+          "terminal_wealth_2040": 3656861.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 1096459.0,
+          "terminal_wealth_2040": 2522456.0
+        }
+      }
+    }
+  },
+  "expiry_window_sensitivity_2030_2035": [
+    {
+      "expiry_year": 2030,
+      "regime": "base",
+      "remaining_term_years": 4.0,
+      "implied_cap_now_pct": 7.45,
+      "gross_value_now_per_100k_noi": 1342282.0,
+      "net_1031_equity_now": 1281074.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 21.7,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1634587.0,
+          "terminal_wealth_2040": 3783627.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1376706.0,
+          "terminal_wealth_2040": 3149964.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1465971.0,
+          "terminal_wealth_2040": 3355491.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 956642.0,
+          "terminal_wealth_2040": 2200801.0
+        }
+      }
+    },
+    {
+      "expiry_year": 2031,
+      "regime": "base",
+      "remaining_term_years": 5.0,
+      "implied_cap_now_pct": 7.2,
+      "gross_value_now_per_100k_noi": 1388889.0,
+      "net_1031_equity_now": 1325556.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 17.6,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1691344.0,
+          "terminal_wealth_2040": 3915003.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1380106.0,
+          "terminal_wealth_2040": 3155190.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1457775.0,
+          "terminal_wealth_2040": 3333425.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 989859.0,
+          "terminal_wealth_2040": 2277217.0
+        }
+      }
+    },
+    {
+      "expiry_year": 2032,
+      "regime": "base",
+      "remaining_term_years": 6.0,
+      "implied_cap_now_pct": 6.95,
+      "gross_value_now_per_100k_noi": 1438849.0,
+      "net_1031_equity_now": 1373237.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 13.5,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1752183.0,
+          "terminal_wealth_2040": 4055830.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1382820.0,
+          "terminal_wealth_2040": 3159165.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1450224.0,
+          "terminal_wealth_2040": 3313296.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 1025465.0,
+          "terminal_wealth_2040": 2359132.0
+        }
+      }
+    },
+    {
+      "expiry_year": 2033,
+      "regime": "base",
+      "remaining_term_years": 7.0,
+      "implied_cap_now_pct": 6.86,
+      "gross_value_now_per_100k_noi": 1457195.0,
+      "net_1031_equity_now": 1390747.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 12.1,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1774525.0,
+          "terminal_wealth_2040": 4107544.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1399800.0,
+          "terminal_wealth_2040": 3199364.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1443277.0,
+          "terminal_wealth_2040": 3295007.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 1038540.0,
+          "terminal_wealth_2040": 2389212.0
+        }
+      }
+    },
+    {
+      "expiry_year": 2034,
+      "regime": "base",
+      "remaining_term_years": 8.0,
+      "implied_cap_now_pct": 6.77,
+      "gross_value_now_per_100k_noi": 1476015.0,
+      "net_1031_equity_now": 1408708.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 10.7,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1797443.0,
+          "terminal_wealth_2040": 4160593.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1419642.0,
+          "terminal_wealth_2040": 3247057.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1436895.0,
+          "terminal_wealth_2040": 3278462.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 1051953.0,
+          "terminal_wealth_2040": 2420069.0
+        }
+      }
+    },
+    {
+      "expiry_year": 2035,
+      "regime": "base",
+      "remaining_term_years": 9.0,
+      "implied_cap_now_pct": 6.69,
+      "gross_value_now_per_100k_noi": 1495327.0,
+      "net_1031_equity_now": 1427140.0,
+      "gross_value_extended_2028": 1633604.0,
+      "extension_value_uplift_pct": 9.2,
+      "strategies": {
+        "S1_sell_pre_cliff_1031": {
+          "name": "S1: Sell Pre-Cliff via IRC \u00a71031 Exchange (while >=6 yrs remain)",
+          "npv_2026": 1820961.0,
+          "terminal_wealth_2040": 4215031.0
+        },
+        "S2_blend_extend_then_1031": {
+          "name": "S2: Early Blend-and-Extend (2026\u201327) -> Sell via \u00a71031 (2027\u201328)",
+          "npv_2026": 1907272.0,
+          "terminal_wealth_2040": 4420754.0
+        },
+        "S3_hold_and_renew_at_expiry": {
+          "name": "S3: Hold Through Expiry (2030\u201335) & Renew Single Asset to 2040",
+          "npv_2026": 1440313.0,
+          "terminal_wealth_2040": 3297074.0
+        },
+        "S4_hold_to_expiry_sell_short": {
+          "name": "S4: Hold to Final Year of Lease (2030\u201335), Then Sell Unextended",
+          "npv_2026": 1431042.0,
+          "terminal_wealth_2040": 3263571.0
+        },
+        "S5_sell_now_taxable_cash": {
+          "name": "S5: Sell Now Outright (Taxable Cash Exit \u2014 Pay ~35.5% Fed+CA Tax)",
+          "npv_2026": 1065717.0,
+          "terminal_wealth_2040": 2451733.0
+        }
+      }
+    }
+  ],
+  "cap_rate_valuation_grid": [
+    {
+      "cap_rate_pct": 5.5,
+      "gross_value_per_100k_noi": 1818182.0,
+      "gross_value_at_150k_noi": 2727273.0,
+      "gross_value_at_200k_noi": 3636364.0,
+      "net_1031_equity_per_100k_noi": 1735273.0,
+      "net_taxable_cash_per_100k_noi": 1253455.0
+    },
+    {
+      "cap_rate_pct": 6.0,
+      "gross_value_per_100k_noi": 1666667.0,
+      "gross_value_at_150k_noi": 2500000.0,
+      "gross_value_at_200k_noi": 3333334.0,
+      "net_1031_equity_per_100k_noi": 1590667.0,
+      "net_taxable_cash_per_100k_noi": 1149000.0
+    },
+    {
+      "cap_rate_pct": 6.4,
+      "gross_value_per_100k_noi": 1562500.0,
+      "gross_value_at_150k_noi": 2343750.0,
+      "gross_value_at_200k_noi": 3125000.0,
+      "net_1031_equity_per_100k_noi": 1491250.0,
+      "net_taxable_cash_per_100k_noi": 1077188.0
+    },
+    {
+      "cap_rate_pct": 6.95,
+      "gross_value_per_100k_noi": 1438849.0,
+      "gross_value_at_150k_noi": 2158274.0,
+      "gross_value_at_200k_noi": 2877698.0,
+      "net_1031_equity_per_100k_noi": 1373237.0,
+      "net_taxable_cash_per_100k_noi": 991943.0
+    },
+    {
+      "cap_rate_pct": 7.4,
+      "gross_value_per_100k_noi": 1351351.0,
+      "gross_value_at_150k_noi": 2027026.0,
+      "gross_value_at_200k_noi": 2702702.0,
+      "net_1031_equity_per_100k_noi": 1289729.0,
+      "net_taxable_cash_per_100k_noi": 931621.0
+    },
+    {
+      "cap_rate_pct": 8.0,
+      "gross_value_per_100k_noi": 1250000.0,
+      "gross_value_at_150k_noi": 1875000.0,
+      "gross_value_at_200k_noi": 2500000.0,
+      "net_1031_equity_per_100k_noi": 1193000.0,
+      "net_taxable_cash_per_100k_noi": 861750.0
+    },
+    {
+      "cap_rate_pct": 8.5,
+      "gross_value_per_100k_noi": 1176471.0,
+      "gross_value_at_150k_noi": 1764706.0,
+      "gross_value_at_200k_noi": 2352942.0,
+      "net_1031_equity_per_100k_noi": 1122824.0,
+      "net_taxable_cash_per_100k_noi": 811059.0
+    }
+  ],
+  "monte_carlo_15000_trials": {
+    "S2_blend_extend_then_1031": {
+      "mean_wealth_2040": 3822165.0,
+      "median_p50_wealth_2040": 3833775.0,
+      "p10_downside_wealth_2040": 3472390.0,
+      "p05_tail_floor_2040": 3354931.0,
+      "cvar10_tail_avg_2040": 3326777.0,
+      "p90_upside_wealth_2040": 4152499.0,
+      "certainty_equivalent_crra_2_5": 3798208.0,
+      "multiple_of_initial_net_equity": 2.78
+    },
+    "S1_sell_pre_cliff_1031": {
+      "mean_wealth_2040": 3696913.0,
+      "median_p50_wealth_2040": 3689362.0,
+      "p10_downside_wealth_2040": 3343291.0,
+      "p05_tail_floor_2040": 3254006.0,
+      "cvar10_tail_avg_2040": 3232598.0,
+      "p90_upside_wealth_2040": 4061163.0,
+      "certainty_equivalent_crra_2_5": 3670763.0,
+      "multiple_of_initial_net_equity": 2.69
+    },
+    "S3_hold_and_renew_at_expiry": {
+      "mean_wealth_2040": 3454245.0,
+      "median_p50_wealth_2040": 3552934.0,
+      "p10_downside_wealth_2040": 2807948.0,
+      "p05_tail_floor_2040": 2659459.0,
+      "cvar10_tail_avg_2040": 2575542.0,
+      "p90_upside_wealth_2040": 4005534.0,
+      "certainty_equivalent_crra_2_5": 3361449.0,
+      "multiple_of_initial_net_equity": 2.52
+    },
+    "S4_hold_to_expiry_sell_short": {
+      "mean_wealth_2040": 2915215.0,
+      "median_p50_wealth_2040": 3041831.0,
+      "p10_downside_wealth_2040": 2354075.0,
+      "p05_tail_floor_2040": 2126708.0,
+      "cvar10_tail_avg_2040": 2093374.0,
+      "p90_upside_wealth_2040": 3331066.0,
+      "certainty_equivalent_crra_2_5": 2832395.0,
+      "multiple_of_initial_net_equity": 2.12
+    },
+    "S5_sell_now_taxable_cash": {
+      "mean_wealth_2040": 2181680.0,
+      "median_p50_wealth_2040": 2177400.0,
+      "p10_downside_wealth_2040": 1985318.0,
+      "p05_tail_floor_2040": 1936340.0,
+      "cvar10_tail_avg_2040": 1924726.0,
+      "p90_upside_wealth_2040": 2382840.0,
+      "certainty_equivalent_crra_2_5": 2168195.0,
+      "multiple_of_initial_net_equity": 1.59
+    }
+  },
+  "breakevens": {
+    "required_reinvest_yield_to_beat_passive_hold_pct": 6.68,
+    "verified_reit_reinvest_benchmark_pct": 7.3,
+    "extension_cap_compression_uplift_pct": 13.5,
+    "walt_cliff_remaining_years_threshold": 6.0,
+    "healthy_rent_to_sales_ceiling_pct": 8.5,
+    "danger_rent_to_sales_threshold_pct": 11.0,
+    "measure_ula_cliff_threshold_usd": 5400000
+  }
+}
