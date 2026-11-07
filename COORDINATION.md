@@ -399,3 +399,36 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
   completed research (verified notes 02–07), analysis (08), the 11-page site, and the row-level verifier
   before discovering on PR creation that A–C had merged. Relocated its site to `session-b4ec6128/`,
   merged `main` in without discarding anything, re-ran both checkers, and recorded this section.
+
+---
+
+## Session F (`arena/d0238bc7-jack2`) — claim, 2026-11-07
+
+**Session ID:** `arena/d0238bc7-jack2` (Arena-pinned branch; the `session-<id>/<task>` scheme is not
+executable in this environment — same platform constraint logged by A–E).
+
+**Situation on arrival.** `main` = `fcc8df3` (PR #13). Five prior builds are published: the root workbook
+(Session B), `session-1944e5a3/` (A), `docs/` (C), `session-a3a8ec08/` (D), `session-b4ec6128/` (E).
+All three checkers pass on the merged tree. Session F therefore does **not** add a sixth parallel site.
+It performs the integration/verification pass the brief reserves for a final session, and fixes what the
+line-by-line re-verification finds.
+
+### Claimed scope (file-level, non-overlapping)
+
+| # | Task | Status | Owner | Files touched |
+|---|---|---|---|---|
+| F1 | Re-verify every one of the 87 metric rows and 24 risk rows against its cited official source; record VERIFIED / STALE / UNSUPPORTED | in progress | F | `data/verification.json` (new), `research/09-verification-log.md` (new) |
+| F2 | Correct or blank-and-flag every row that fails re-verification | unclaimed | — | `data/metrics.json`, `data/sources.json` |
+| F3 | Refresh stale series (BLS summary, Treasury/FOMC, CPI) to current official editions | unclaimed | — | `data/metrics.json` |
+| F4 | Fill genuinely missing official values (Census poverty, per-capita income, county median income) | unclaimed | — | `data/metrics.json` |
+| F5 | Publish the verification result on the site (verification + flagged pages) | unclaimed | — | `tools/build_site.py` |
+| F6 | Integrate open PRs #5, #6, #10, #14 or record why not | unclaimed | — | `COORDINATION.md` |
+| F7 | Confirm Pages build health and record the deploy | unclaimed | — | `COORDINATION.md` |
+
+**Read-only for Session F (owned by other sessions, never edited):** `session-1944e5a3/**`, `docs/**`,
+`session-a3a8ec08/**`, `session-b4ec6128/**`, `model/**`, `scripts/verify.py`, `tools/model.py`,
+`tools/export_ledger.py`, `.github/workflows/verify.yml`.
+
+**Not modified by Session F:** the model code and its outputs. Re-verification of *data* does not license
+changing a model result silently; if a corrected data row moves a model input, the change is logged here
+and on the Flagged-for-Review page instead.
