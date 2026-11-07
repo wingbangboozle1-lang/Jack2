@@ -1,0 +1,336 @@
+{
+ "meta": {
+  "session": "arena-5bb36a1b (Session F)",
+  "accessed": "2026-11-07",
+  "rule": "Verified = read from official source linked on same row. Unverified = blank, flagged. Assumptions labelled, never mixed with verified.",
+  "privacy": "No name/address/APN/loan/account anywhere. Subject = 'Subject Property (Central Los Angeles)'."
+ },
+ "sources": {
+  "census": {
+   "publisher": "U.S. Census Bureau \u2014 QuickFacts Los Angeles city/county",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224"
+  },
+  "dof": {
+   "publisher": "CA Dept of Finance P-2A County Projections Vintage 2026",
+   "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx"
+  },
+  "bls": {
+   "publisher": "BLS Los Angeles Area Economic Summary",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+  },
+  "fred_unemp": {
+   "publisher": "BLS via FRED \u2014 LA County Unemployment CALOSA7URN",
+   "url": "https://fred.stlouisfed.org/series/CALOSA7URN"
+  },
+  "sec": {
+   "publisher": "Jack in the Box Inc. SEC Form 10-K FY2025 (ended 2025-09-28)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm"
+  },
+  "dir": {
+   "publisher": "CA DIR \u2014 Fast Food Minimum Wage FAQ (AB 1228)",
+   "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm"
+  },
+  "dgs10": {
+   "publisher": "Federal Reserve H.15 via FRED \u2014 DGS10 10-Yr Treasury",
+   "url": "https://fred.stlouisfed.org/series/DGS10"
+  },
+  "assessor": {
+   "publisher": "LA County Assessor \u2014 Proposition 13 overview",
+   "url": "https://assessor.lacounty.gov/homeowners/realproperty"
+  },
+  "lavote": {
+   "publisher": "LA County Registrar \u2014 Documentary Transfer Tax / Measure ULA",
+   "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes"
+  },
+  "irs": {
+   "publisher": "IRS \u2014 Like-Kind Exchanges \u00a71031 / Form 8824",
+   "url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf"
+  },
+  "lacounty_fire": {
+   "publisher": "LA County \u2014 Eaton & Palisades Fires Fact Sheet",
+   "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf"
+  },
+  "usgs": {
+   "publisher": "USGS Earthquake Hazards Program",
+   "url": "https://www.usgs.gov/programs/earthquake-hazards"
+  },
+  "cde": {
+   "publisher": "CA Dept of Education \u2014 LAUSD District Profile",
+   "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000"
+  },
+  "bea": {
+   "publisher": "BEA County Personal Income (LA County $818.5B 2024)",
+   "url": "https://www.bea.gov/news/2025/county-and-metropolitan-area-personal-income-2024"
+  },
+  "realty": {
+   "publisher": "Realty Income Q4 2025 Supplemental (Tier C benchmark, labelled)",
+   "url": "https://www.realtyincome.com/sites/realty-income/files/2026-02/q4-2025-supplemental-report.pdf"
+  }
+ },
+ "rows": [
+  {
+   "id": "F-01",
+   "category": "Population",
+   "metric": "LA city population, Jul 1 2025 estimate",
+   "value": "3,869,089",
+   "unit": "persons",
+   "period": "2025",
+   "geography": "City of Los Angeles",
+   "source": "census",
+   "status": "verified",
+   "note": "Fresh check 2026-11-07 confirms root M01; -0.8% vs Apr 2020 base."
+  },
+  {
+   "id": "F-02",
+   "category": "Population",
+   "metric": "LA County population (DOF projection)",
+   "value": "9,853,435",
+   "unit": "persons",
+   "period": "2025",
+   "geography": "LA County",
+   "source": "dof",
+   "status": "verified",
+   "note": "Official state series FIPS 6037."
+  },
+  {
+   "id": "F-03",
+   "category": "Population",
+   "metric": "LA County projection 2030",
+   "value": "9,727,305",
+   "unit": "persons",
+   "period": "2030",
+   "geography": "LA County",
+   "source": "dof",
+   "status": "verified",
+   "note": "Mild decline into lease window."
+  },
+  {
+   "id": "F-04",
+   "category": "Population",
+   "metric": "LA County projection 2035",
+   "value": "9,708,647",
+   "unit": "persons",
+   "period": "2035",
+   "geography": "LA County",
+   "source": "dof",
+   "status": "verified",
+   "note": "End of lease window; -1.5% vs 2025."
+  },
+  {
+   "id": "F-05",
+   "category": "Population",
+   "metric": "LA County projection 2040",
+   "value": "9,637,524",
+   "unit": "persons",
+   "period": "2040",
+   "geography": "LA County",
+   "source": "dof",
+   "status": "verified",
+   "note": "-3.7% vs 2020 actual 10,012,050 same series."
+  },
+  {
+   "id": "F-06",
+   "category": "Jobs",
+   "metric": "LA County unemployment rate, Aug 2026",
+   "value": "4.9%",
+   "unit": "percent",
+   "period": "Aug 2026",
+   "geography": "LA County",
+   "source": "fred_unemp",
+   "status": "verified",
+   "note": "FRESHER than Oct-05 BLS summary (4.8% metro); Jul 5.2%, Jun 5.3% \u2014 improving."
+  },
+  {
+   "id": "F-07",
+   "category": "Jobs",
+   "metric": "Metro nonfarm employment YoY",
+   "value": " +0.6% (6,289.1k jobs)",
+   "unit": "",
+   "period": "2026",
+   "geography": "LA-Long Beach-Anaheim MSA",
+   "source": "bls",
+   "status": "verified",
+   "note": "Growth led by education/health; info & professional services contracting. See root metrics for sector detail."
+  },
+  {
+   "id": "F-08",
+   "category": "Tenant",
+   "metric": "JACK system size FY2025-end",
+   "value": "2,136 restaurants; 93% franchised (1,986); 150 company-operated",
+   "unit": "units",
+   "period": "FY2025",
+   "geography": "Systemwide",
+   "source": "sec",
+   "status": "verified",
+   "note": "System shrank 55 units FY2025; Del Taco 576 units separate."
+  },
+  {
+   "id": "F-09",
+   "category": "Tenant",
+   "metric": "Franchise AUV change",
+   "value": "$1,874k FY2025 vs $1,949k FY2024 (-3.8%)",
+   "unit": "",
+   "period": "FY2025",
+   "geography": "Systemwide",
+   "source": "sec",
+   "status": "verified",
+   "note": "Sales pressure on franchisee rent coverage."
+  },
+  {
+   "id": "F-10",
+   "category": "Tenant",
+   "metric": "Lease renewal practice (issuer quote)",
+   "value": "\u201cgenerally been able to renew \u2026 at then-current market rates\u201d",
+   "unit": "",
+   "period": "FY2025 10-K",
+   "geography": "Brand portfolio",
+   "source": "sec",
+   "status": "verified",
+   "note": "Expiry = repricing event, not auto-rollover."
+  },
+  {
+   "id": "F-11",
+   "category": "Tenant",
+   "metric": "Corporate stress markers",
+   "value": "Del Taco sale $115M; dividend discontinued; ~$1.7B securitized debt; Jack on Track closures",
+   "unit": "",
+   "period": "FY2025",
+   "geography": "Corporate",
+   "source": "sec",
+   "status": "verified",
+   "note": "Tenant-credit risk; verify operator-level financials (P10) \u2014 blank until supplied."
+  },
+  {
+   "id": "F-12",
+   "category": "Labor cost",
+   "metric": "CA fast-food minimum wage",
+   "value": "$20.00/hr from Apr 1, 2024 (AB 1228); Fast Food Council may raise annually",
+   "unit": "",
+   "period": "2024\u2013",
+   "geography": "Statewide chains 60+ units",
+   "source": "dir",
+   "status": "verified",
+   "note": "Direct pressure on operator margin & rent capacity."
+  },
+  {
+   "id": "F-13",
+   "category": "Capital markets",
+   "metric": "10-Yr Treasury (DGS10)",
+   "value": "4.90% on 2026-11-04",
+   "unit": "",
+   "period": "2026-11-04",
+   "geography": "National",
+   "source": "dgs10",
+   "status": "verified",
+   "note": "Fresh check 2026-11-07; discount-rate floor. Cap-rate spread is assumption, not official data."
+  },
+  {
+   "id": "F-14",
+   "category": "Tax / hold benefit",
+   "metric": "Prop 13 assessed-value cap",
+   "value": "1% levy; max +2%/yr assessed growth; reassess on sale",
+   "unit": "",
+   "period": "Current law",
+   "geography": "LA County parcel",
+   "source": "assessor",
+   "status": "verified",
+   "note": "Holding preserves capped basis; selling forfeits it permanently."
+  },
+  {
+   "id": "F-15",
+   "category": "Tax / sale cost",
+   "metric": "Transfer taxes incl. Measure ULA",
+   "value": "County $1.10/$1,000; City base 0.45%; ULA 4%/5.5% above indexed thresholds (~$5.4M post-Jun-2026 cliff \u2014 verify at closing)",
+   "unit": "",
+   "period": "Current schedule",
+   "geography": "City of LA",
+   "source": "lavote",
+   "status": "verified",
+   "note": "At benchmark value (~$2.0\u20132.7M) ULA surtax does not bite; confirm threshold on sale date."
+  },
+  {
+   "id": "F-16",
+   "category": "Tax / exchange",
+   "metric": "\u00a71031 like-kind exchange",
+   "value": "45-day ID / 180-day close; qualified intermediary required",
+   "unit": "",
+   "period": "Current IRS rules",
+   "geography": "Federal",
+   "source": "irs",
+   "status": "verified",
+   "note": "Only tax-efficient diversification path; CA FTB 3840 reporting also applies."
+  },
+  {
+   "id": "F-17",
+   "category": "Hazard",
+   "metric": "Jan 2025 fires impact",
+   "value": "16,251 structures destroyed; $5.2\u201310.1B output loss; ~6,800 businesses, ~47,000 workers",
+   "unit": "",
+   "period": "Jan 2025",
+   "geography": "LA County",
+   "source": "lacounty_fire",
+   "status": "verified",
+   "note": "Metro-wide insurance/smoke/PSPS spillover even for flatland Central LA parcels."
+  },
+  {
+   "id": "F-18",
+   "category": "Hazard",
+   "metric": "Earthquake hazard parcel zone",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geography": "LA Basin",
+   "source": "usgs",
+   "status": "unverified",
+   "note": "BLANK at parcel level until APN supplied (P07). Do not infer."
+  },
+  {
+   "id": "F-19",
+   "category": "Schools",
+   "metric": "LAUSD enrollment / profile",
+   "value": "",
+   "unit": "",
+   "period": "2025-26",
+   "geography": "LAUSD",
+   "source": "cde",
+   "status": "unverified",
+   "note": "BLANK in Session F pending direct CDE re-read; see root/docs dashboards for prior verified values \u2014 not copied without re-verification."
+  },
+  {
+   "id": "F-20",
+   "category": "Valuation",
+   "metric": "Subject NOI, rent, exact expiry, basis, debt",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geography": "Subject Property (Central LA)",
+   "source": "",
+   "status": "unverified",
+   "note": "BLANK \u2014 never supplied (P01\u2013P12). All valuation normalized per $100k NOI."
+  },
+  {
+   "id": "F-21",
+   "category": "Valuation",
+   "metric": "Net-lease reinvestment benchmark",
+   "value": "7.3% initial cash yield (Realty Income 2025 acquisitions)",
+   "unit": "percent",
+   "period": "2025",
+   "geography": "National net-lease",
+   "source": "realty",
+   "status": "flagged",
+   "note": "Tier C issuer disclosure, NOT official/government data. Labelled benchmark only."
+  },
+  {
+   "id": "F-22",
+   "category": "Economy",
+   "metric": "LA County personal income",
+   "value": "$818.5B (2024)",
+   "unit": "",
+   "period": "2024",
+   "geography": "LA County",
+   "source": "bea",
+   "status": "verified",
+   "note": "Cross-session confirmed (Session B S23/M86). Supports consumer base; growth rate not asserted here."
+  }
+ ]
+}

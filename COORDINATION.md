@@ -399,3 +399,16 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
   completed research (verified notes 02–07), analysis (08), the 11-page site, and the row-level verifier
   before discovering on PR creation that A–C had merged. Relocated its site to `session-b4ec6128/`,
   merged `main` in without discarding anything, re-ran both checkers, and recorded this section.
+
+---
+
+# Session F (`arena-5bb36a1b-jack2`) — 2026-11-07 — IN PROGRESS
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| F1 | Claim + repo review (no overwrite of A–E) | in progress | arena-5bb36a1b | `COORDINATION.md` (append only), `session-5bb36a1b/**` |
+| F2 | Fresh official-source re-verification 2026-11-07 (Census, BLS/FRED, SEC, DIR, Treasury) | in progress | arena-5bb36a1b | `session-5bb36a1b/data/*.json` |
+| F3 | Reconciled executive summary + projection system + risk/decision | unclaimed→claimed | arena-5bb36a1b | `session-5bb36a1b/*.html`, `EXECUTIVE_SUMMARY.md` |
+| F4 | Verify (links/sources/PII), PR to main, merge, confirm Pages | unclaimed→claimed | arena-5bb36a1b | `session-5bb36a1b/scripts/verify.py` |
+
+Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here. Root site, `docs/`, `session-1944e5a3/`, `session-a3a8ec08/`, `session-b4ec6128/` are untouched. Live URL will be https://wingbangboozle1-lang.github.io/Jack2/session-5bb36a1b/

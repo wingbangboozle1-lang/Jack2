@@ -1,0 +1,26 @@
+{
+ "basis": "Per $100,000 current NOI. Value = NOI / cap rate. Cap rates & growth are ANALYST ASSUMPTIONS (no official source publishes asset cap rates) \u2014 sensitivity only.",
+ "scenarios": [
+  {
+   "case": "Bull \u2014 extend+reset, long WALT",
+   "cap": "5.50%",
+   "noi_growth": "3.0%",
+   "value_today": "$1,818,182",
+   "value_yr10": "$2,443,484"
+  },
+  {
+   "case": "Base \u2014 renew at market",
+   "cap": "6.25%",
+   "noi_growth": "2.0%",
+   "value_today": "$1,600,000",
+   "value_yr10": "$1,950,391"
+  },
+  {
+   "case": "Bear \u2014 vacancy/re-let discount",
+   "cap": "7.25%",
+   "noi_growth": "0.0%",
+   "value_today": "$1,379,310",
+   "value_yr10": "$1,379,310"
+  }
+ ]
+}
