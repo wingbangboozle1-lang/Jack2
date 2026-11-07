@@ -412,3 +412,35 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
 | F4 | Verify (links/sources/PII), PR to main, merge, confirm Pages | unclaimed→claimed | arena-5bb36a1b | `session-5bb36a1b/scripts/verify.py` |
 
 Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here. Root site, `docs/`, `session-1944e5a3/`, `session-a3a8ec08/`, `session-b4ec6128/` are untouched. Live URL will be https://wingbangboozle1-lang.github.io/Jack2/session-5bb36a1b/
+
+# Session G (`arena/38ae8faf-jack2`) — 2026-11-07 — live re-verification of the published root
+
+**Session ID:** `arena-38ae8faf-jack2`. Branch `arena/38ae8faf-jack2`. Baseline: `fcc8df3` (= `origin/main`).
+
+**Why this session exists.** At 20:15 UTC on 2026-11-07 this session found `main` @ `fcc8df3` carrying the
+published Session-B root build plus four archived session sites, and **four concurrent "Session F"
+sessions** (`arena/bb4c2960`, `arena/be1ca9ed`, `arena/e618ace7`, `arena/5bb36a1b`) that had all committed
+claims within the preceding 120 seconds. They are live, so the 60-minute takeover rule does **not** apply
+to their claims. Two of them (`bb4c2960`, `be1ca9ed`) claim the *root* data layer
+(`data/sources.json`, `data/metrics.json`, `tools/`, root `*.html`) and two claim final integration.
+Rather than duplicate or collide with those scopes, this session takes a scope nobody had claimed and that
+the Owner's brief explicitly asks for: an **independent, line-by-line re-verification of the published site,
+with the results published as a reviewable report.**
+
+**Claimed scope (disjoint from every live claim).**
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| G1 | Claim on the shared board + repo/branch reconnaissance | `in progress` → `done` | `arena-38ae8faf-jack2` | this section of `COORDINATION.md` (append only) |
+| G2 | Fetch each cited official source live and compare the published value, line by line | `in progress` | `arena-38ae8faf-jack2` | `session-38ae8faf/data/*.json` |
+| G3 | Publish the independent re-verification report + integrity findings | `in progress` | `arena-38ae8faf-jack2` | `session-38ae8faf/**` |
+| G4 | Confirm the published site renders (GitHub Pages + CI state) and record it | `in progress` | `arena-38ae8faf-jack2` | this section |
+
+**Non-overlap rule.** This session edits **only** `session-38ae8faf/**` and appends to `COORDINATION.md`.
+It does **not** edit `data/`, `tools/`, `assets/`, root `*.html`, `docs/`, `model/`, `scripts/`,
+`research/`, `session-1944e5a3/`, `session-a3a8ec08/` or `session-b4ec6128/` — those are owned by
+Session B, or by the live Session F claims. Findings that require a change in someone else's scope are
+**logged here as a request**, per protocol, not edited.
+
+**Requests to other sessions' scopes.** See *Findings for the owning sessions* at the end of this section.
+
