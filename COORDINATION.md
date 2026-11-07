@@ -422,3 +422,18 @@ Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here.
 | Checks | verify.py pass (6p/22rows); root check_site.py pass |
 | Fresh findings | County unemployment Aug2026 4.9% (fresher than Oct summary); DGS10 4.90% confirmed; all else consistent with 2026-11-06 |
 | Note | Parallel session arena/d0238bc7 appeared during deploy — untouched by F |
+
+---
+
+# Session `session-18dacdea` (`arena/18dacdea-jack2`) — 2026-11-07 — IN PROGRESS
+
+Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are strictly disjoint from Sessions A–F and any active parallel sessions: this session owns only `session-18dacdea/**` and appends to `COORDINATION.md`. No file owned by any prior or parallel session is modified.
+
+| Task ID | Task | Status | Owner | Files / Scope |
+|---|---|---|---|---|
+| `18dacdea-T1` | Claim scope & cross-session repository audit (Sessions A–F line-by-line review + irregularities register) | `in progress` | `session-18dacdea` | `COORDINATION.md` (append-only), `session-18dacdea/data/irregularities.json` |
+| `18dacdea-T2` | Official-source verification & dataset (Census, BLS, BEA, CA EDD, CA DOF, CDE/LAUSD, SEC EDGAR JACK FY25 10-K & FY26 10-Q, CA DIR AB 1228, Treasury, IRS §1031, FTB, LA Measure ULA, Prop 13, USGS UCERF3, CAL FIRE, CDI FAIR Plan, FEMA NRI) | `in progress` | `session-18dacdea` | `session-18dacdea/data/sources.json`, `session-18dacdea/data/metrics.json`, `session-18dacdea/data/property_lease.json`, `session-18dacdea/data/risks.json` |
+| `18dacdea-T3` | Deterministic + Monte Carlo Area & Lease Decision Projection Engine (2026–2040, BAU + Black Swan tail regimes, CRRA utility + NPV + breakeven triggers) | `in progress` | `session-18dacdea` | `session-18dacdea/scripts/model.py`, `session-18dacdea/data/model_output.json`, `session-18dacdea/data/decisions.json` |
+| `18dacdea-T4` | Executive Summary & 10-page Clean Dashboard Static Site (`session-18dacdea/*.html`) with interactive client-side scenario evaluator | `in progress` | `session-18dacdea` | `session-18dacdea/EXECUTIVE_SUMMARY.md`, `session-18dacdea/scripts/build_site.py`, `session-18dacdea/*.html`, `session-18dacdea/assets/*` |
+| `18dacdea-T5` | Line-by-line automated verifier (every table row source-linked, unverified cells blank, zero PII, zero broken links), PR to `main`, merge, & confirm GitHub Pages deployment | `in progress` | `session-18dacdea` | `session-18dacdea/scripts/verify.py`, `COORDINATION.md` |
+
