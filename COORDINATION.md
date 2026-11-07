@@ -448,3 +448,24 @@ claims **only namespaced files** and does not edit any existing session's page o
 **Coordination rule for `COORDINATION.md` / `README.md`:** edited append-only (new sections at the end,
 no reordering of another session's text) so parallel claims cannot clobber each other. If a merge
 conflict occurs, it is resolved by keeping both sessions' appended blocks.
+
+## Session F — completion record (session-643e4aab)
+
+| Item | State | Notes |
+| --- | --- | --- |
+| F1 Market/economic research | done | 129 rows, 29 sources, `session-643e4aab/data/metrics.json` |
+| F2 Risk enumeration for every decision | done | 28 risks incl. business-as-usual and black swans, `data/risks.json` |
+| F3 Projection engine | done | `model/projection.py`, 10,000 trials seed 20261107, `data/projections.json` |
+| F4 Twelve-page site | done | `session-643e4aab/*.html` + `assets/style.css` |
+| F5 Executive summary | done | `session-643e4aab/executive-summary.html` |
+| F6 Automated verifier | done | `scripts/verify.py` — all checks pass; ledger in `data/verification.json` |
+| F7 Integration: PR, merge, Pages | in progress | PR link and merge result appended below once available |
+
+Scope confirmed non-overlapping: this session wrote only `session-643e4aab/**`, appended to `README.md`
+and this file, and added `.github/workflows/session-643e4aab.yml`. Root pages, `data/`, `tools/`,
+`model/` and all other session folders are byte-identical.
+
+**Handoff / stale-claim note:** the claim `4f2865b` remains the authoritative marker for this session's
+scope. If a future session finds this block older than 60 minutes with no commits on
+`arena/643e4aab-jack2`, it may take over `session-643e4aab/**` using the reproduce commands in
+`session-643e4aab/README.md`; the generated HTML is disposable and the three commands rebuild it.
