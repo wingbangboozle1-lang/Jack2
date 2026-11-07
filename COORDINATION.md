@@ -400,6 +400,7 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
   before discovering on PR creation that A–C had merged. Relocated its site to `session-b4ec6128/`,
   merged `main` in without discarding anything, re-ran both checkers, and recorded this section.
 
+
 ---
 
 # Session F (`arena-5bb36a1b-jack2`) — 2026-11-07 — IN PROGRESS
@@ -556,3 +557,33 @@ They leave Session B's build and its CI "generated output up to date" check gree
 | Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-e618ace7/ |
 | PR | recorded below after merge |
 | Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+---
+
+## Session H (`arena/bb4c2960-jack2`) — record
+
+> Named Session H, not F: two other sessions (arena-5bb36a1b and arena-e618ace7) both published a
+> "Session F" on 2026-11-07 before this branch was pushed. No session's record is removed; the collision is
+> logged as irregularity R-13 below.
+
+Started 2026-11-07 from `main` @ `fcc8df3` (Sessions A–E all merged; root = Session B build, plus
+`session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`). Pinned by the Arena
+environment to `arena/bb4c2960-jack2` (same platform constraint as A–E: the `session-<id>/<task>` branch
+scheme is not executable — this branch doubles as the task and integration branch; logged for the record).
+
+**Claimed scope (non-overlapping with the archived sessions' directories).**
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| F-1 | Live re-verification of all 23 root ledger sources (S1–S23) line by line | in progress | `arena/bb4c2960-jack2` | `data/sources.json`, `data/metrics.json` |
+| F-2 | Refresh S1 (BLS LA Economic Summary) rows to the current release vintage; flag superseded values | in progress | `arena/bb4c2960-jack2` | `data/metrics.json`, `flagged.html` (generated) |
+| F-3 | Fill previously-blank rows only where an official source confirms the value (Census, DOF, CDE, IRS, Federal Reserve) | in progress | `arena/bb4c2960-jack2` | `data/metrics.json`, `data/sources.json` |
+| F-4 | Re-verify the root projection model, decisions, risks and site build | in progress | `arena/bb4c2960-jack2` | `tools/*`, `model/*` |
+| F-5 | PII sweep over every published page (all five sessions' output) | in progress | `arena/bb4c2960-jack2` | repo-wide, read-only except `flagged.html` |
+| F-6 | Final integration: rebuild, re-check, PR to `main`, merge, confirm Pages deploy, record here | in progress | `arena/bb4c2960-jack2` | `COORDINATION.md`, `README.md`, root site |
+
+**Scope note.** Sessions A–E are complete and merged; their directories
+(`session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`, `research/`) are treated as
+read-only archives. This session edits only the root data layer, the root generator, and the root pages
+(which are generated), and appends to `COORDINATION.md` / `README.md`.
+ 38e9f08 (coordination: claim Session F tasks (live source re-verification, refresh, integration))
