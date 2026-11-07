@@ -575,15 +575,86 @@ scheme is not executable — this branch doubles as the task and integration bra
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| F-1 | Live re-verification of all 23 root ledger sources (S1–S23) line by line | in progress | `arena/bb4c2960-jack2` | `data/sources.json`, `data/metrics.json` |
-| F-2 | Refresh S1 (BLS LA Economic Summary) rows to the current release vintage; flag superseded values | in progress | `arena/bb4c2960-jack2` | `data/metrics.json`, `flagged.html` (generated) |
-| F-3 | Fill previously-blank rows only where an official source confirms the value (Census, DOF, CDE, IRS, Federal Reserve) | in progress | `arena/bb4c2960-jack2` | `data/metrics.json`, `data/sources.json` |
-| F-4 | Re-verify the root projection model, decisions, risks and site build | in progress | `arena/bb4c2960-jack2` | `tools/*`, `model/*` |
-| F-5 | PII sweep over every published page (all five sessions' output) | in progress | `arena/bb4c2960-jack2` | repo-wide, read-only except `flagged.html` |
+| F-1 | Live re-verification of all 23 root ledger sources (S1–S23) line by line | **done** | `arena/bb4c2960-jack2` | `data/sources.json`, `data/metrics.json` |
+| F-2 | Refresh S1 (BLS LA Economic Summary) rows to the current release vintage; flag superseded values | **done** | `arena/bb4c2960-jack2` | `data/metrics.json`, `flagged.html` (generated) |
+| F-3 | Fill previously-blank rows only where an official source confirms the value (Census, DOF, CDE, IRS, Federal Reserve) | **done** | `arena/bb4c2960-jack2` | `data/metrics.json`, `data/sources.json` |
+| F-4 | Re-verify the root projection model, decisions, risks and site build | **done** | `arena/bb4c2960-jack2` | `tools/*`, `model/*` |
+| F-5 | PII sweep over every published page (all five sessions' output) | **done** | `arena/bb4c2960-jack2` | repo-wide, read-only except `flagged.html` |
 | F-6 | Final integration: rebuild, re-check, PR to `main`, merge, confirm Pages deploy, record here | in progress | `arena/bb4c2960-jack2` | `COORDINATION.md`, `README.md`, root site |
+| F-7 | Fix the two published dead source links and re-tier the provenance error found by F-1 | **done** | `arena/bb4c2960-jack2` | `data/sources.json`, `data/irregularities.json` |
+| F-8 | Re-run the decision model at three rent levels and add the debt module (the missing sensitivity) | **done** | `arena/bb4c2960-jack2` | `tools/model.py`, `tools/build_site.py` |
+| F-9 | Publish the scenario paths and the quarterly early-warning dashboard the brief asked for | **done** | `arena/bb4c2960-jack2` | `decision.html` (generated) |
 
 **Scope note.** Sessions A–E are complete and merged; their directories
 (`session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`, `research/`) are treated as
 read-only archives. This session edits only the root data layer, the root generator, and the root pages
 (which are generated), and appends to `COORDINATION.md` / `README.md`.
- 38e9f08 (coordination: claim Session F tasks (live source re-verification, refresh, integration))
+
+### What F-1 to F-9 actually found and changed (2026-11-07)
+
+All 25 ledger URLs were re-opened and re-read one at a time (the sandbox has no direct egress, so every
+page was read through a fetch tool; no URL was assumed live because it had been live earlier).
+
+1. **S1 had rolled forward a vintage.** The BLS Los Angeles Area Economic Summary moved from the
+   2026-10-05 release to the **2026-11-04** release. Metro nonfarm payrolls are **6,282.1k (+0.5%)**, not
+   6,289.1k (+0.6%); metro unemployment is **4.4%**, not 4.8%; LA metro CPI is **+3.7%**, not 3.6%;
+   ECI **+3.9%**, not +2.8%; energy CPI **+20.3%**, not +17.6%. Two sector signs were wrong as a result
+   (trade/transportation is +2.9k, government is −8.4k). All 23 S1 rows were restated, each carrying the
+   superseded value in its note. Recorded as irregularity **F13**.
+2. **Two published source links were dead (404).** S17 (CAL FIRE / OSFM FHSZ) and S20 (CDI FAIR Plan)
+   both failed on 2026-11-07. Both were replaced with the current page on the same official domain and
+   re-fetched to confirm. Recorded as **F12**.
+3. **One provenance error.** S21 was tiered A ("primary official government record") but is a Los Angeles
+   County Economic Development Corporation study hosted on a City URL, and its forecast horizon ends in
+   2028 — before the lease expiry. Re-tiered to **C**; no data value depends on it. Recorded as **F14**.
+4. **Four rows were published blank that an already-cited official source actually states.** M16 (city
+   poverty 16.5%), M17 (city per-capita income $47,685), M42 (county median household income $90,112) and
+   M63 (City of Los Angeles minimum wage **$18.42** from 2026-07-01, new source **S25**) are now verified.
+   M87 stays blank: BEA does not print the county real-GDP level. Recorded as **F17**.
+5. **Geography mismatch on the Consumer Expenditure rows.** M39–M41 are the **West census region**, not the
+   Los Angeles metro. Relabelled. Recorded as **F18**.
+6. **The model was missing its largest unknown.** The rent level was fixed at one placeholder, so the model
+   could not say whether the answer depended on it. A three-level sweep ($150k / $200k / $250k) was added
+   along with a lender-format debt module. Two findings are now published: the answer is **scale-invariant
+   in rent**, and at a 6.50% cap against an **8.71% debt constant** the asset is in **negative leverage**,
+   which caps an acquirer at ~38.7% LTV on a 1.35x DSCR test. Recorded as **F16**.
+7. **Tenant credit was stated one-sidedly** in two archived sessions (loss quoted, the FY2026 nine-month
+   profit of +$27.9m and the narrowing deficit omitted). The root dashboard now carries both, plus the
+   FY2025 system same-store sales decline of −4.2% and the 86 closures against 31 openings. **S24** (the
+   Q3 FY2026 10-Q) was added to the ledger so the current figures are citable.
+8. **The brief's scenario requirement was under-served.** Base / better / worse / wildfire / earthquake /
+   insurance-capacity paths are now tabulated on `decision.html`, each with the verified indicator that
+   distinguishes it and the action that follows, plus a six-indicator quarterly early-warning dashboard.
+9. **Row counts moved** from 87 to 94 (87 verified, 7 blank and flagged), sources from 23 to 25, and the
+   automated checker was updated to assert the new counts so CI cannot silently drift backwards.
+
+### Irregularities logged by this session
+
+This session's *data* findings are published on the live **Flagged for Review** page
+(`flagged.html`) as F12–F19, because the brief requires them to be visible to the reader, not only on this
+board. The board-level items are:
+
+10. **R-13 — a third use of the label "Session F".** Two other sessions published a "Session F" for
+    2026-11-07 before this branch pushed (one later renamed itself Session G). This session is therefore
+    recorded as **Session H** and no other session's section was edited, removed or reordered. The
+    add/add conflict on this file was resolved by keeping both prior sections verbatim.
+11. **R-14 — generated pages conflicted on rebase.** Because `tools/build_site.py` regenerates every root
+    page, the 16 root HTML files conflicted as generated output, not as authored content. They were
+    resolved by taking `main`'s version and regenerating from source, which is the only correct resolution:
+    the source of truth is `data/*.json` plus `tools/build_site.py`, never the emitted HTML.
+12. **R-15 — CI does not run `scripts/verify.py`.** `.github/workflows/verify.yml` runs `tools/model.py`,
+    `tools/build_site.py`, the dirty check, `tools/check_site.py`, `tools/export_ledger.py` and the
+    Session D regeneration — but not the Session E verifier, which is the only check that audits every
+    emitted table row against a source id. Both were run locally and both pass (391 rows, 267 links, 0 PII
+    hits). Recorded rather than changed, since editing the workflow is a cross-session change.
+
+### Deployment record (Session H)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/bb4c2960-jack2` |
+| Scope edited | root `data/*.json`, `tools/model.py`, `tools/build_site.py`, `assets/style.css`, generated root pages, this board |
+| Not edited | `session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`, `session-5bb36a1b/`, `session-e618ace7/` |
+| Checks run | `tools/model.py`, `tools/build_site.py`, `tools/check_site.py` (16 root pages, 77 with archive, 25 sources, 94 rows), `tools/export_ledger.py`, `scripts/verify.py`, `session-a3a8ec08/scripts/verify_all.py` — all pass |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+| PR / merge SHA / Pages | recorded in the table below after merge |
