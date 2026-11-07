@@ -412,3 +412,39 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
 | F4 | Verify (links/sources/PII), PR to main, merge, confirm Pages | unclaimed→claimed | arena-5bb36a1b | `session-5bb36a1b/scripts/verify.py` |
 
 Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here. Root site, `docs/`, `session-1944e5a3/`, `session-a3a8ec08/`, `session-b4ec6128/` are untouched. Live URL will be https://wingbangboozle1-lang.github.io/Jack2/session-5bb36a1b/
+
+---
+
+## Session F (`arena/643e4aab-jack2`) — claim (2026-11-07)
+
+**Session ID:** `session-643e4aab` · **Branch:** `arena/643e4aab-jack2` (platform-pinned; a separate
+`session-<id>/<task>` branch cannot be created from a pinned Arena branch — same platform constraint
+recorded by Sessions A–E).
+
+**Situation on arrival.** `main` = `fcc8df3`. Five prior sessions (A–E) have published four separate
+sites (root build, `session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`). Three other
+branches (`arena/5bb36a1b-jack2`, `arena/e618ace7-jack2`, `arena/bb4c2960-jack2`) have pushed
+"Session F" claim commits in the last hour and are still active. To avoid collision, this session
+claims **only namespaced files** and does not edit any existing session's page or data file.
+
+**Claim (file scope — non-overlapping):**
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| F1 | Independent live re-verification of every previously published metric value against its official source, on 2026-11-07 | in progress | session-643e4aab | `session-643e4aab/data/verification.json` |
+| F2 | Freshness audit + refresh of time-sensitive series (BLS LA summary, Treasury, CPI) | in progress | session-643e4aab | `session-643e4aab/data/metrics_refreshed.json` |
+| F3 | Risk register reconciliation (BAU + black swan) with per-decision mapping | in progress | session-643e4aab | `session-643e4aab/data/risks.json` |
+| F4 | Projection system + decision ranking, reproducible and labelled | in progress | session-643e4aab | `session-643e4aab/model/*.py`, `session-643e4aab/data/projections.json` |
+| F5 | Dashboard site (landing + category subpages, table-first) | in progress | session-643e4aab | `session-643e4aab/*.html`, `session-643e4aab/assets/*` |
+| F6 | Automated verifier: per-row source resolution, blank-value rule, PII scan, internal links | in progress | session-643e4aab | `session-643e4aab/scripts/verify.py` |
+| F7 | Integration: PR to `main`, merge, confirm GitHub Pages deploy, record result | in progress | session-643e4aab | this file (append-only), `README.md` (append-only nav block) |
+
+**Explicitly NOT claimed** (owned by prior sessions, left byte-identical): `index.html`,
+`executive-summary.html`, `decision.html`, `flagged.html`, `sources.html`, `market-economics.html`,
+`risks.html`, `valuation.html`, `property-lease.html`, `projection-model.html`, `requirements.html`,
+`verification.html`, `privacy.html`, `deployment.html`, `archive.html`, `data/*.json`, `tools/*`,
+`docs/**`, `session-1944e5a3/**`, `session-a3a8ec08/**`, `session-b4ec6128/**`, `research/**`, `model/**`.
+
+**Coordination rule for `COORDINATION.md` / `README.md`:** edited append-only (new sections at the end,
+no reordering of another session's text) so parallel claims cannot clobber each other. If a merge
+conflict occurs, it is resolved by keeping both sessions' appended blocks.
