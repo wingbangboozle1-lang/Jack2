@@ -399,3 +399,46 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
   completed research (verified notes 02–07), analysis (08), the 11-page site, and the row-level verifier
   before discovering on PR creation that A–C had merged. Relocated its site to `session-b4ec6128/`,
   merged `main` in without discarding anything, re-ran both checkers, and recorded this section.
+
+---
+
+## Session F (`arena/be1ca9ed-jack2`) — 2026-11-07 — integration, re-verification, publish
+
+**Why this session exists.** Sessions A–E each built an independent site; `main` now carries five
+overlapping publications (root = B, `session-1944e5a3/` = A, `docs/` = C, `session-a3a8ec08/` = D,
+`session-b4ec6128/` = E). Nobody had performed the *final integration pass* the brief describes:
+one authoritative dataset, re-verified line by line against official sources on a single date, with
+every row source-linked, plus a single clean dashboard for the Owner. That is this session's task.
+
+**Session ID:** `arena-be1ca9ed` (referred to below as Session F).
+
+### Claim (written before work started, per protocol)
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| F1 | Record claim + handoff on the shared board | `in progress` | `arena-be1ca9ed` | `COORDINATION.md` (append-only; earlier sections untouched) |
+| F2 | Independent re-verification of every source and every data row against the official site, on one date | `in progress` | `arena-be1ca9ed` | `research/09-reverification-log.md`, `data/metrics.json`, `data/sources.json` |
+| F3 | Re-verify valuation inputs, risks, decisions, model output against the re-verified data | `in progress` | `arena-be1ca9ed` | `data/valuation.json`, `data/risks.json`, `data/decisions.json`, `data/model_output.json`, `tools/model.py` |
+| F4 | Build the single integrated dashboard (landing + category subpages + flagged page) | `in progress` | `arena-be1ca9ed` | `tools/build_site.py`, root `*.html`, `assets/` |
+| F5 | Automated verifier: per-row official-source link, blank-if-unverified rule, zero-PII gate, link crawl | `in progress` | `arena-be1ca9ed` | `tools/check_site.py`, `.github/workflows/verify.yml` |
+| F6 | PR to `main`, merge, confirm Pages deploy, record result here | `unclaimed` | — | `COORDINATION.md` (append-only) |
+
+**File-scope rules this session follows.** Session F edits only: `COORDINATION.md` (append only),
+`README.md`, `data/`, `tools/`, `assets/`, root `*.html`, and new files under `research/`. It does
+**not** touch `session-1944e5a3/`, `session-a3a8ec08/`, `session-b4ec6128/`, `docs/`, `model/`, or
+`scripts/verify.py` — those are owned by Sessions A–E and remain published exactly as merged.
+
+**Takeover rule.** If this claim is more than 60 minutes old with no commits, any session may take
+over F2–F6 and must note the handoff here.
+
+### Session F work log
+
+- **2026-11-07 — F1 claim committed.** Repository reviewed at `fcc8df3` (== `origin/main`, 0 commits
+  ahead). All three existing checkers run clean before any change:
+  `tools/check_site.py` pass; `tools/build_site.py` reproduces the committed HTML byte-for-byte;
+  `scripts/verify.py` and `session-a3a8ec08/scripts/verify_all.py` untouched.
+- **2026-11-07 — first re-verification finding (F2).** Source **S1** (BLS *Los Angeles Area Economic
+  Summary*) has been **re-issued: "Updated November 04, 2026"**, and its values changed after
+  Sessions B and E read it on 2026-11-06. Rows M18–M37 in `data/metrics.json` no longer match the
+  live source. This is recorded as a new irregularity and the rows are corrected to the live values
+  in `research/09-reverification-log.md`. Full detail in that log.
