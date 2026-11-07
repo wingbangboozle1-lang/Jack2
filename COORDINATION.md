@@ -412,3 +412,13 @@ deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`);
 | F4 | Verify (links/sources/PII), PR to main, merge, confirm Pages | unclaimed→claimed | arena-5bb36a1b | `session-5bb36a1b/scripts/verify.py` |
 
 Scope is disjoint: Session F edits ONLY `session-5bb36a1b/**` plus appends here. Root site, `docs/`, `session-1944e5a3/`, `session-a3a8ec08/`, `session-b4ec6128/` are untouched. Live URL will be https://wingbangboozle1-lang.github.io/Jack2/session-5bb36a1b/
+
+## Session F Deployment Record (2026-11-07)
+| Item | Value |
+|---|---|
+| PR | #15 https://github.com/wingbangboozle1-lang/Jack2/pull/15 MERGED 2026-11-07T20:15:17Z merge 32b3d44 |
+| CI | verify run 42410161578 success; pages-build-deployment 42410160888 success; Pages API latest=built |
+| Live | https://wingbangboozle1-lang.github.io/Jack2/session-5bb36a1b/ (fetched live: title, 4.9% Aug2026, recommendation render) |
+| Checks | verify.py pass (6p/22rows); root check_site.py pass |
+| Fresh findings | County unemployment Aug2026 4.9% (fresher than Oct summary); DGS10 4.90% confirmed; all else consistent with 2026-11-06 |
+| Note | Parallel session arena/d0238bc7 appeared during deploy — untouched by F |
