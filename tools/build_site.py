@@ -229,7 +229,7 @@ def build_index():
 <div class="grid g2">
   <div class="card">
     <h3>1. The local economy is stable, not booming</h3>
-    <p>Metro employment grew <strong>+0.6%</strong> year over year with <strong>6,289.1k</strong> jobs, and unemployment fell from 5.8% to <strong>4.8%</strong> &mdash; but the growth is concentrated in education/health (+42.7k) while information (&minus;12.3k, &minus;6.1%) and professional services (&minus;9.2k) contract. {src_link("S1")}</p>
+    <p>Metro employment grew <strong>+0.5%</strong> year over year to <strong>6,282.1k</strong> jobs in September 2026, and unemployment fell from 5.5% to <strong>4.4%</strong> &mdash; but the growth is concentrated in education/health (+49.1k) while information (&minus;11.4k, &minus;5.7%), financial activities (&minus;5.1k), manufacturing (&minus;5.4k) and professional services (&minus;5.2k) all contract. {src_link("S1")}</p>
     <p>County population is projected to <em>fall</em> from 9.85M (2025) to 9.64M (2040) in the state's official series. {src_link("S3")}</p>
   </div>
   <div class="card">
@@ -303,7 +303,7 @@ def build_exec():
   <p>You need <strong>{MODEL['breakevens']['required_reinvest_yield_pct']['base']:.2f}%</strong> on the proceeds to match holding. One net-lease REIT reported a 7.3% initial weighted average cash yield on 2025 acquisitions; that is a real benchmark, but it is not a guarantee for a small private buyer. {src_link("S10")}</p>
   <p>Section 1031 lets you defer the gain and diversify one parcel into several. {src_link("S16")} That is the strongest argument for selling &mdash; not the cap rate.</p></div>
   <div class="card"><h3>Renewing is defensible &mdash; if the rent resets</h3>
-  <p>Holding keeps a <strong>2%</strong> annual cap on assessed value in a metro where CPI is running <strong>3.6%</strong>. {src_link("S6")} {src_link("S1")} That is a genuine, permanent, non-transferable benefit.</p>
+  <p>Holding keeps a <strong>2%</strong> annual cap on assessed value in a metro where CPI is running <strong>3.7%</strong>. {src_link("S6")} {src_link("S1")} That is a genuine, permanent, non-transferable benefit.</p>
   <p>The cost of holding is concentration: one tenant, one parcel, one metro, with wildfire/earthquake/insurance tail risk that diversification would remove.</p></div>
 </div>
 
@@ -381,13 +381,13 @@ Geographic scope is City of Los Angeles, Los Angeles County or the metro area; n
 <div class="grid g2">
   <div class="card"><h3>Demand side: adequate, softening at the margin</h3>
   <p>City population is flat to slightly down (&minus;0.8% since 2020) and the county is projected to decline to 9.64M by 2040. {src_link("S2")} {src_link("S3")}
-  Households still earn a median $81,939 and spend $11,858 a year on food. {src_link("S2")} {src_link("S1")}
+  Households still earn a median $81,939 and spend $12,447 a year on food. {src_link("S2")} {src_link("S1")}
   A drive-thru on a traffic artery depends on vehicle counts, not regional growth, which is why the parcel itself still matters more than the metro.</p></div>
   <div class="card"><h3>Cost side: labour is the binding constraint</h3>
   <p>Fast-food wages are $20.00/hour against a $16.90 floor, and the Fast Food Council can raise them. {src_link("S5")} {src_link("S4")}
   Franchise AUV fell 3.8% to $1,874k. {src_link("S9")} An 8&ndash;10% occupancy-cost ratio implies $150k&ndash;$187k of annual rent capacity &mdash; which is exactly the benchmark used in the model, and the reason a large rent increase at renewal is unlikely to stick.</p></div>
   <div class="card"><h3>Capital markets: the cap rate is the swing factor</h3>
-  <p>10-year Treasury 4.90%, policy rate 4.00%. {src_link("S11")} {src_link("S12")}
+  <p>10-year Treasury 4.84% (2026-11-05), policy rate 4.00%. {src_link("S11")} {src_link("S12")}
   Net-lease acquisitions cleared at a 7.3% initial cash yield in 2025. {src_link("S10")}
   Each 100bp of cap-rate expansion cuts the exit value by roughly 13&ndash;15% at these levels &mdash; far more than any rent escalation can recover inside the remaining term.</p></div>
   <div class="card"><h3>Tail risk: priced by insurance, not by the cap rate</h3>
@@ -505,6 +505,15 @@ def build_model():
         ["Rent uplift at renewal needed to beat selling into the net-lease benchmark", f'+{MODEL["renewal_value"]["required_rent_uplift_to_beat_sell_netlease_pct"]:.2f}%'],
         ["Rent change at renewal at which holding still beats Treasury redeployment", f'{MODEL["renewal_value"]["required_rent_uplift_to_beat_sell_treasury_pct"]:.2f}% (a cut of that size)'],
     ]
+    rent_rows = []
+    for r in MODEL["rent_level_analysis"]:
+        rent_rows.append([f'{money(r["rent"])} <span class="muted">({e(r["rent_label"])})</span>',
+                          money(r["implied_value_at_6_50_cap"]),
+                          f'{r["transfer_cost_rate_pct"]:.2f}%',
+                          money(r["net_proceeds"]),
+                          e(r["ula_tier"]),
+                          f'{r["dscr"]:.2f}x' if r["dscr"] else 'n/a'])
+    dof = MODEL["dof_los_angeles_county_path"]
     body = f"""
 {head_block("Projection model", "A reproducible 2026&ndash;2040 model, published inputs, and the breakevens rather than a guess at value",
             "Deterministic Python. No randomness. Every published number can be regenerated with one command, and every input is either sourced or labelled as an assumption.")}
@@ -518,7 +527,7 @@ The code is in <code>tools/model.py</code> and is short enough to read in full.<
 <ol>
   <li><strong>Three paths are modeled.</strong> (A) sell now and redeploy the net proceeds; (B) hold through the lease and sell at expiry; (C) renew at a reset rent and hold to 2040. A fourth state, tenant vacates (downtime, $300k of leasing costs, re-let at market), is blended into (C) by a renewal probability.</li>
   <li><strong>Path A</strong> nets out the real cost stack: 3.00% brokerage, 0.50% closing, 0.11% county transfer tax, 0.45% city transfer tax, and the tiered Measure ULA surtax where the price crosses the official thresholds. {src_link("S7")} {src_link("S8")}</li>
-  <li><strong>Proceeds are redeployed at two different rates</strong> so the answer cannot hide inside one assumption: the verified 10-year Treasury (4.90%) and the verified net-lease acquisition benchmark (7.3%). {src_link("S11")} {src_link("S10")}</li>
+  <li><strong>Proceeds are redeployed at two different rates</strong> so the answer cannot hide inside one assumption: the verified 10-year Treasury (4.84%, observation 2026-11-05) and the verified net-lease acquisition benchmark (7.3%). {src_link("S11")} {src_link("S10")}</li>
   <li><strong>Everything is compounded to 2040</strong> in nominal dollars, and discounted at 8% for the NPV view. Pre-tax throughout; the tax layer needs the owner's basis.</li>
   <li><strong>Breakevens are solved numerically</strong> rather than asserted &mdash; that is what turns a forecast into a decision rule.</li>
 </ol>
@@ -533,8 +542,36 @@ The code is in <code>tools/model.py</code> and is short enough to read in full.<
 <h2>Breakevens - the decision rules</h2>
 {table(["Test", "Result"], b_rows, num_cols=(1,))}
 
+<h2>Does the answer survive not knowing the rent? (rent-level sweep)</h2>
+<p>The brief does not contain the subject's contract rent, so the model is run at three rent levels instead of one.
+<strong>The conclusion does not change across the band</strong> &mdash; the sale price scales almost linearly with rent, the transfer-cost rate
+does not cross a Measure ULA threshold anywhere in the band, and DSCR is scale-invariant. That is what makes the sequencing advice
+robust to the missing document, and it is also why the workbook refuses to quote a value.</p>
+{table(["Rent used", "Implied value @ 6.50% cap", "Disposition cost incl. ULA", "Net proceeds", "Measure ULA tier", "DSCR at 60% LTV"],
+       rent_rows, num_cols=(1,2,3,5))}
+
+<h2>Lender-format reality check: the asset is in negative leverage</h2>
+<div class="callout warn">
+<p><strong>Going-in cap {MODEL['debt_meta']['cap_rate_used_pct']:.2f}% versus a {MODEL['debt_meta']['debt_constant_pct']:.2f}% debt constant.</strong>
+{("That is negative leverage: every dollar borrowed costs more than the asset yields. A lender applying a 1.35x DSCR test at a 70% NOI/rent "
+  "assumption would advance only about " + f"{MODEL['debt_meta']['max_ltv_at_target_dscr_pct']:.1f}%" + " of value, not 60%.") if MODEL['debt_meta']['negative_leverage'] else "Positive leverage: borrowing is accretive at the assumed cap and debt constant."}</p>
+<p class="muted">{MODEL['debt_meta']['negative_leverage_note']}</p>
+</div>
+<p>The practical consequence for the decision is not about debt at all. It is that <em>the marginal buyer of this asset is unlevered or lightly
+levered</em> &mdash; typically a 1031 buyer with all-cash equity or a family office. That buyer is exactly the buyer the brief's own sale route
+targets, and it explains why a small single-tenant QSR trades on a different clearing level than a REIT's portfolio disposition.</p>
+
 <h2>Sensitivity grid: exit cap &times; rent escalation (hold + renew, prob-weighted)</h2>
 {table(sens_head, sens_rows, num_cols=(1,2,3))}
+
+<h2>The one forecast that is official, not assumed: population</h2>
+<p>Almost every projection in this workbook is a labelled assumption. The exception is the state's own county series, which is a verified
+forecast produced by the California Department of Finance. {src_link("S3")} It runs <em>against</em> the intuition that Los Angeles always grows,
+and the model therefore does not assume population-driven demand growth anywhere in the 2030&ndash;2040 window.</p>
+{table(["Year", "Los Angeles County population (CA DOF P-2A, Vintage 2026)"],
+       [[k, f"{v:,}"] for k, v in dof["series"].items()], num_cols=(1,))}
+<p class="muted">Change 2025&ndash;2040: <strong>{dof["change_pct_2025_to_2040"]}%</strong>. Read directly from Report P-2A, row FIPS 6037,
+ALL AGES / ALL SEXES / ALL RACES. The city is not forecast in this table, so no city-level trajectory is asserted.</p>
 
 <h2>Which assumptions actually move the answer</h2>
 <p>One-at-a-time from the base case. The ranking is the useful part: cap rate and renewal probability dominate; the rent reset matters more than the escalator.</p>
@@ -747,7 +784,7 @@ Tier D &mdash; industry commentary, broker blogs, data aggregators &mdash; is <s
   <li><strong>Parcel hazard status.</strong> Needs the APN: FEMA panel, CAL FIRE FHSZ, CGS liquefaction (M82&ndash;M84).</li>
   <li><strong>Insurance pricing.</strong> Needs a broker quote; no official rate exists (M85).</li>
   <li><strong>Tax on sale.</strong> Needs the owner's basis and depreciation history (P05).</li>
-  <li><strong>Los Angeles city minimum wage.</strong> DIR states local rates may be higher but the city rate was not confirmed officially here (M63).</li>
+  <li><strong>Los Angeles city minimum wage</strong> was confirmed on the City's Office of Wage Standards site and is now a verified row: $18.42/hour from 2026-07-01 (M63, S25).</li>
 </ul>
 """
     return page("verification.html", "Verification", body,
@@ -814,7 +851,7 @@ def build_sources():
                      f'<a href="{e(s["url"])}" target="_blank" rel="noopener noreferrer">{e(s["title"])} &#8599;</a><br><span class="muted">{e(s["url"])}</span>',
                      e(s["covers"]), e(s["accessed"])])
     body = f"""
-{head_block("Sources", f"{len(SRC)} sources, all official or regulator-filed",
+{head_block("Sources", f"{len(SRC)} sources, every URL re-opened on 2026-11-07",
             "Tier A: government or regulator. Tier B: SEC filing by the tenant. Tier C: issuer investor-relations disclosure, used only where no regulator publishes the figure. Tier D industry commentary is not used for any value.")}
 
 {table(["ID", "Tier", "Publisher", "Title and link", "What it covers", "Accessed"], rows)}
@@ -830,13 +867,13 @@ def build_sources():
 <h2>Notes on scope</h2>
 <ul>
   <li>State and federal fiscal years differ from calendar years. Jack in the Box FY2025 ended 2025-09-28 and every fiscal figure is labelled with that date.</li>
-  <li>BLS metro data are not seasonally adjusted and are subject to revision; the summary used here was updated 2026-10-05.</li>
+  <li>BLS metro data are not seasonally adjusted and are subject to revision; the summary used here was updated 2026-11-04 and every value was re-read on 2026-11-07.</li>
   <li>Census QuickFacts mixes Vintage 2025 population estimates with 2020&ndash;2024 ACS 5-year characteristics; the period column says which is which.</li>
   <li>Rate series are daily and are dated to the observation, not to today.</li>
 </ul>
 """
     return page("sources.html", "Sources", body,
-                "All 22 official sources with publisher, coverage, tier and access date.")
+                "All official sources with publisher, coverage, tier and the date each URL was re-opened and read.")
 
 
 # ----------------------------------------------------------------------------- privacy

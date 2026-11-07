@@ -273,6 +273,74 @@ for label, cap, g, p, rp in [
 drivers.sort(key=lambda d: abs(d["delta_vs_base_hold"]), reverse=True)
 results["assumption_sensitivity"] = drivers
 
+
+# ---- Rent-level analysis -----------------------------------------------------------
+# The single largest missing input is the subject's contract rent. P01-P12 are not in the
+# brief, so instead of guessing once, the model sweeps the plausible band and publishes
+# which conclusion flips where. Every rent level is a labelled sensitivity, not data.
+NOI_SHARE = float(A["A14"]) / 100.0
+DEBT_CONST = float(A["A15"]) / 100.0
+LTV = float(A["A16"]) / 100.0
+DSCR_TARGET = 1.35      # lender underwriting convention; not an official published figure
+
+rent_levels = [float(A["A1"]), float(A["A12"]), float(A["A13"])]
+results["rent_level_analysis"] = []
+for rent in rent_levels:
+    price = value_from_rent(rent, 0.065)
+    rate = transfer_cost_rate(price)
+    net = price * (1.0 - rate)
+    noi = rent * NOI_SHARE
+    loan = price * LTV
+    annual_ds = loan * DEBT_CONST
+    equity = price - loan + price * rate
+    results["rent_level_analysis"].append({
+        "rent": rent,
+        "rent_label": "A1 benchmark" if rent == float(A["A1"]) else ("A12 low sensitivity" if rent == float(A["A12"]) else "A13 high sensitivity"),
+        "implied_value_at_6_50_cap": price,
+        "transfer_cost_rate_pct": round(100 * rate, 3),
+        "net_proceeds": net,
+        "ula_tier": ("tier 2 (5.5%)" if price >= 10_900_000 else "tier 1 (4.0%)" if price >= 5_400_000 else "none"),
+        "noi_at_A14_share": noi,
+        "loan_at_A16_ltv": loan,
+        "annual_debt_service": annual_ds,
+        "dscr": (noi / annual_ds) if annual_ds else None,
+        "max_loan_at_target_dscr": (noi / DSCR_TARGET) / DEBT_CONST if DEBT_CONST else None,
+        "cash_equity_required": equity,
+        "cash_on_cash_pre_debt": (noi / equity) if equity else None,
+    })
+# Negative leverage: cap rate (6.50%) below the debt constant (8.71%). Scale-invariant,
+# so it holds at every rent level and is a market condition, not an asset-specific one.
+CAP_BASE = 0.065
+ltv_at_target = NOI_SHARE * CAP_BASE / (DSCR_TARGET * DEBT_CONST)
+results["debt_meta"] = {
+    "cap_rate_used_pct": 100 * CAP_BASE,
+    "negative_leverage": CAP_BASE < DEBT_CONST,
+    "negative_leverage_note": (
+        "At a 6.50% going-in cap against an 8.71% debt constant, every dollar of acquisition debt costs more than the "
+        "yield on the asset it buys. DSCR is scale-invariant here: NOI / debt service = (70% x 6.50%) / (60% x 8.71%) = "
+        "0.87x at any rent level. Two consequences follow and both matter for the decision: (1) a leveraged buyer cannot "
+        "pay a 6.50% cap today, which thins the bid for the asset if it is sold; (2) the assumption set is internally "
+        "consistent only for an unlevered or low-leverage buyer, so the model's sell-now price should be read as an "
+        "unlevered-clearing number."),
+    "max_ltv_at_target_dscr_pct": round(100 * ltv_at_target, 2),
+    "noi_share_of_rent_pct": 100 * NOI_SHARE, "assumption_noi_share": "A14",
+    "assumption_debt_constant": "A15", "assumption_ltv": "A16",
+    "debt_constant_pct": 100 * DEBT_CONST, "assumption_debt_const": "A15",
+    "ltv_pct": 100 * LTV, "assumption_ltv_pct": "A16",
+    "dscr_target": DSCR_TARGET,
+    "note": ("Lender-format arithmetic on labelled assumptions. No lender has quoted terms for this asset; "
+             "P06 (existing debt) and a current term sheet are required before these figures are relied on."),
+}
+
+# ---- Verified population path (CA DOF P-2A, Vintage 2026), 2025-2040 ----------------
+results["dof_los_angeles_county_path"] = {
+    "source": "S3",
+    "unit": "persons",
+    "note": "Read directly from Report P-2A, row FIPS 6037, ALL AGES / ALL SEXES / ALL RACES.",
+    "series": {"2020": 10_012_050, "2025": 9_853_435, "2030": 9_727_305, "2035": 9_708_647, "2040": 9_637_524},
+    "change_pct_2025_to_2040": round(100 * (9_637_524 / 9_853_435 - 1), 2),
+}
+
 with open(OUT_JSON, "w", encoding="utf-8") as f:
     json.dump(results, f, indent=2)
 
@@ -319,6 +387,21 @@ lines.append("| Change from base case | Hold wealth at 2040 | Delta vs base | De
 lines.append("|---|---|---|---|")
 for d in results["assumption_sensitivity"]:
     lines.append(f"| {d['change']} | {m(d['hold_expected_wealth'])} | {m(d['delta_vs_base_hold'])} | {m(d['delta_vs_sell_netlease'])} |")
+lines.append("\n## Rent-level sweep: does the answer change with the actual rent?\n")
+lines.append("| Rent used | Implied value @ 6.50% cap | Disposition cost incl. ULA | Net proceeds | Measure ULA tier | DSCR at 60% LTV |")
+lines.append("|---|---|---|---|---|---|")
+for r in results["rent_level_analysis"]:
+    lines.append(f"| {m(r['rent'])} ({r['rent_label']}) | {m(r['implied_value_at_6_50_cap'])} | {r['transfer_cost_rate_pct']:.2f}% | "
+                 f"{m(r['net_proceeds'])} | {r['ula_tier']} | {r['dscr']:.2f}x |")
+lines.append("\nDSCR uses NOI = 70% of rent (A14) against 60% LTV (A16) at an 8.71% debt constant (A15). "
+             "A lender would underwrite to roughly 1.35x; below that, the loan shrinks or the equity cheque grows.")
+lines.append("\n## Verified population path, Los Angeles County (CA DOF P-2A, Vintage 2026)\n")
+lines.append("| Year | Population |")
+lines.append("|---|---|")
+for y, v in results["dof_los_angeles_county_path"]["series"].items():
+    lines.append(f"| {y} | {v:,} |")
+lines.append(f"\nChange 2025-2040: {results['dof_los_angeles_county_path']['change_pct_2025_to_2040']}% "
+             "(official state projection; direction is mild decline, so a projection system must not assume population growth).")
 lines.append("\n## What this model does NOT do\n")
 lines.append("- It does not value the actual parcel. Rent, expiration date, basis and debt are placeholders (P01-P12).")
 lines.append("- It does not compute income tax, depreciation recapture, NIIT or California tax. That requires the owner's basis (P05).")

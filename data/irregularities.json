@@ -1,8 +1,9 @@
 {
   "meta": {
     "purpose": "Line-by-line review of the repository as it existed at the start of this session, plus every irregularity found during the build.",
-    "reviewed_at": "2026-11-06",
-    "baseline_commit": "1430b4f04885e701ba4de07756105ff31122ee06"
+    "reviewed_at": "2026-11-07",
+    "baseline_commit": "1430b4f04885e701ba4de07756105ff31122ee06",
+    "second_pass": "A second, independent line-by-line verification pass re-opened every source URL and re-read every published value on 2026-11-07. The findings below record what that pass changed. Nothing was inferred to fill a gap."
   },
   "repo_irregularities": [
     {
@@ -74,6 +75,13 @@
       "finding": "Two sessions interpreted 'official sources' differently: session A also cited LAEDC and UCLA Anderson forecasts, which are not government records; session B restricted values to government, regulator or SEC filings.",
       "impact": "Readers may see different supporting material in the archive.",
       "action": "Labelled the difference on archive.html. The archive is preserved as-is; the root site uses only Tier A-C sources."
+    },
+    {
+      "id": "I11",
+      "severity": "medium",
+      "finding": "Five prior agent sessions published five separate dashboards (root, session-1944e5a3/, docs/, session-a3a8ec08/, session-b4ec6128/) that give different recommendations from partially different vintages of the same sources.",
+      "impact": "A reader has no single answer. Several of the archived dashboards quote the superseded S1 vintage (metro unemployment 4.8%, CPI 3.6%) and one quotes a 10,000-trial Monte Carlo as if it were verified data.",
+      "action": "Left every archived build unmodified, as the coordination protocol requires. This session's corrections apply to the root build only. A reconciliation note is published on the Deployment page, pointing readers to the root pages for current data."
     }
   ],
   "data_irregularities": [
@@ -153,6 +161,62 @@
       "finding": "Jack in the Box fiscal year ends in late September, so 'FY2025' means the year ended 2025-09-28, not calendar 2025.",
       "impact": "Mixing fiscal and calendar periods would distort comparisons.",
       "action": "Every fiscal figure is labelled with its actual end date."
+    },
+    {
+      "id": "F12",
+      "severity": "high",
+      "finding": "Two source URLs in the published ledger returned HTTP 404 on 2026-11-07: S17 (CAL FIRE / OSFM fire hazard severity zone maps) and S20 (California Department of Insurance FAIR Plan).",
+      "impact": "Two of the 25 works-cited links were dead. A reader following them from the live site would reach an error page, which undermines every claim resting on them.",
+      "action": "Replaced both with the current page on the same official publisher domain, verified by fetching them: osfm.fire.ca.gov/.../fire-hazard-severity-zones and insurance.ca.gov/.../California-FAIR-Plan.cfm. Titles and coverage text updated. Both still return 'unverified' for the parcel itself, because the classification needs the APN."
+    },
+    {
+      "id": "F13",
+      "severity": "high",
+      "finding": "The BLS Los Angeles Area Economic Summary (S1) rolled forward from the 2026-10-05 release to the 2026-11-04 release while this workbook was being built. Every S1-derived row was one vintage stale.",
+      "impact": "The dashboard text, 23 metric rows, and the CPI input to the projection model were all a month behind the publisher. Stale is not the same as wrong, but publishing superseded figures without saying so is a verification failure.",
+      "action": "Re-read all 23 S1 rows from the 2026-11-04 release and corrected them: metro nonfarm 6,282.1 (not 6,289.1), unemployment 4.4% (not 4.8%), LA metro CPI +3.7% (not 3.6%), ECI +3.9% (not +2.8%), energy CPI +20.3% (not +17.6%), and eight sector rows plus the Consumer Expenditure table (2025 West region, not 2023-24). Two sector signs flipped (trade/transportation and government are now positive / negative respectively). The superseded value is recorded in each row's note."
+    },
+    {
+      "id": "F14",
+      "severity": "medium",
+      "finding": "S21 was tiered A ('primary official government record') but is a Los Angeles County Economic Development Corporation study, commissioned by the City workforce board, hosted on a City URL.",
+      "impact": "Tier inflation. Presenting a business-funded forecast as a government primary record is the kind of provenance error the brief is designed to catch.",
+      "action": "Re-tiered to C and re-publisher'd. It is also scope-limited: its forecast horizon ends in 2028, before the 2030-2035 lease expiry, so it cannot support a projection past expiry. It is cited for provenance only and no data value depends on it."
+    },
+    {
+      "id": "F15",
+      "severity": "medium",
+      "finding": "The October 2026 federal-funds and Treasury figures were used as if they were current, but the 10-year Treasury observation had moved from 4.90% (2026-11-04) to 4.84% (2026-11-05).",
+      "impact": "The 10-year Treasury is an input to the discount rate, the reinvestment alternative and the narrative. A 6bp move is immaterial to the answer but it is not zero, and the row was labelled with the wrong observation date.",
+      "action": "Updated the verified input to 4.84% @ 2026-11-05 (FRED DGS10), re-ran the model, and updated every narrative reference. The result: the base-case reinvestment breakeven moves to 6.96%."
+    },
+    {
+      "id": "F16",
+      "severity": "medium",
+      "finding": "The projection model swept exit cap, escalation, renewal probability and rent reset, but held the rent level itself at one placeholder value. The model could therefore not show at what rent the decision flips.",
+      "impact": "The single largest unknown in the brief is the subject's contract rent (P01-P12 are not provided). A model that silently fixes it produces a false precision.",
+      "action": "Added a three-level rent sweep ($150k / $200k / $250k, all labelled assumptions A1/A12/A13) with implied value, transfer cost, Measure ULA tier and lender-format DSCR at each level. Added the debt module (A14-A16). The finding, published on the projection page: the answer is scale-invariant in rent, and at a 6.50% cap against an 8.71% debt constant the asset is in negative leverage, which caps leverage at 38.7% LTV at a 1.35x DSCR test."
+    },
+    {
+      "id": "F17",
+      "severity": "low",
+      "finding": "M16, M17, M42 and M63 were published blank as unverified, but three of them were in fact available on an official source that the ledger already cited (Census QuickFacts, City of Los Angeles Office of Wage Standards).",
+      "impact": "Under-claimed verification. Leaving a value blank when the official source states it deprives the reader of a verified fact, and it slightly overstated how much was missing.",
+      "action": "Filled M16 (poverty 16.5%), M17 (per capita income $47,685), M42 (LA County median household income $90,112) and M63 (City of LA minimum wage $18.42 from 2026-07-01, new source S25). M87 stays blank: the BEA release does not print the county real-GDP level, only size-band extremes, so no value can be read off it without a non-reproducible interactive query."
+    },
+    {
+      "id": "F18",
+      "severity": "low",
+      "finding": "The Consumer Expenditure rows (M39-M41) were labelled 'Los Angeles metro area' but BLS publishes that table for the West census region.",
+      "impact": "Geography mismatch. Attributing region-level spending to a metro would be an inference.",
+      "action": "Relabelled to 'West region (Census West)' and the values refreshed to the 2025 table."
+    },
+    {
+      "id": "F19",
+      "severity": "low",
+      "finding": "The dashboard's 'six risks that matter most' depends on a sort on (impact, likelihood). Two rows tie at 4/5 impact, so the visible top six depend on file order.",
+      "impact": "A tie broken by file order is not a ranking, and a reader could reasonably expect the sixth row to be a different risk.",
+      "action": "Left as-is because either set is defensible, and flagged here rather than silently re-ordering. The full 24-row register is published on the risk page."
     }
   ]
 }

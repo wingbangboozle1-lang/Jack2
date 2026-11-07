@@ -1,13 +1,14 @@
 {
   "meta": {
     "title": "Verified metric ledger - Central Los Angeles Jack in the Box NNN decision workbook",
-    "access_date": "2026-11-06",
+    "access_date": "2026-11-07",
     "geography_note": "The subject parcel address is intentionally withheld (privacy). All geography is reported at City of Los Angeles, Los Angeles County, or Los Angeles-Long Beach-Anaheim MSA level. No parcel-level value is asserted anywhere in this file.",
     "status_definitions": {
       "verified": "Value read directly from the official source listed in the source column on the access date.",
       "unverified": "No official value could be confirmed. The value cell is intentionally blank. Nothing was inferred or estimated.",
       "flagged": "A value or condition that needs the owner's manual review before reliance (irregularity, scope mismatch, or time-sensitivity)."
-    }
+    },
+    "vintage_note": "All S1 rows were re-read from the 2026-11-04 release (data through September 2026) on 2026-11-07. The prior build used the 2026-10-05 release (data through August 2026); those values are superseded, not wrong, and are noted in each row."
   },
   "rows": [
     {
@@ -194,105 +195,105 @@
       "id": "M16",
       "category": "Income",
       "metric": "Poverty rate",
-      "value": "",
+      "value": "16.5%",
       "unit": "percent",
       "period": "2020-2024 ACS 5-yr",
       "geography": "City of Los Angeles",
       "source": "S2",
-      "status": "unverified",
-      "note": "Not present in the QuickFacts extract captured. Left blank rather than taken from a secondary aggregator."
+      "status": "verified",
+      "note": "City of Los Angeles, Census QuickFacts (INC110224/IPE120225). Los Angeles County 13.3%."
     },
     {
       "id": "M17",
       "category": "Income",
       "metric": "Per capita income",
-      "value": "",
+      "value": "$47,685",
       "unit": "USD",
       "period": "2020-2024 ACS 5-yr",
       "geography": "City of Los Angeles",
       "source": "S2",
-      "status": "unverified",
-      "note": "Not present in the QuickFacts extract captured (B19301). Left blank."
+      "status": "verified",
+      "note": "City of Los Angeles, per capita income in past 12 months (2024 dollars). Los Angeles County $45,792."
     },
     {
       "id": "M18",
       "category": "Employment",
       "metric": "Total nonfarm employment (not seasonally adjusted)",
-      "value": "6,289.1",
+      "value": "6,282.1",
       "unit": "thousands of jobs",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Prior year Aug 2025 comparison is embedded in S1 (12-month change below)."
+      "note": "Los Angeles metro, total nonfarm, not seasonally adjusted. Updated from the superseded Aug 2026 figure (6,289.1)."
     },
     {
       "id": "M19",
       "category": "Employment",
       "metric": "Total nonfarm employment, 12-month change",
-      "value": "+38.2 thousand (+0.6%)",
+      "value": "+30.2 thousand (+0.5%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Growth is positive but below US trend in the same release (+0.3% US)."
+      "note": "Positive but below the US trend in the same release (+0.3%). Updated from the superseded Aug 2026 figure."
     },
     {
       "id": "M20",
       "category": "Employment",
       "metric": "Unemployment rate",
-      "value": "4.8%",
+      "value": "4.4%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": "Aug 2025: 5.8%. Clear improvement year over year."
+      "note": "Los Angeles metro area. Sep 2025: 5.5%. Updated from the superseded Aug 2026 reading (4.8%)."
     },
     {
       "id": "M21",
       "category": "Employment",
       "metric": "Unemployment rate",
-      "value": "4.9%",
+      "value": "4.5%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles County",
       "source": "S1",
       "status": "verified",
-      "note": "Aug 2025: 6.2%."
+      "note": "Los Angeles County. Sep 2025: 5.9%."
     },
     {
       "id": "M22",
       "category": "Employment",
       "metric": "Unemployment rate",
-      "value": "5.0%",
+      "value": "4.5%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "City of Los Angeles",
       "source": "S1",
       "status": "verified",
-      "note": "Aug 2025: 6.2%."
+      "note": "City of Los Angeles. Sep 2025: 5.9%."
     },
     {
       "id": "M23",
       "category": "Employment",
       "metric": "Unemployment rate - benchmarks",
-      "value": "California 5.4%; United States 4.3%",
+      "value": "California 5.1%; United States 4.0%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "State of California / US",
       "source": "S1",
       "status": "verified",
-      "note": "Local area still above the national rate."
+      "note": "County and city (4.5%) remain above the national rate (4.0%)."
     },
     {
       "id": "M24",
       "category": "Employment",
       "metric": "Leisure and hospitality employment, 12-month change",
-      "value": "+16.8 thousand (+2.2%)",
+      "value": "+11.5 thousand (+1.5%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
@@ -302,9 +303,9 @@
       "id": "M25",
       "category": "Employment",
       "metric": "Education and health services employment, 12-month change",
-      "value": "+42.7 thousand (+3.3%)",
+      "value": "+49.1 thousand (+3.8%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
@@ -314,9 +315,9 @@
       "id": "M26",
       "category": "Employment",
       "metric": "Information sector employment, 12-month change",
-      "value": "-12.3 thousand (-6.1%)",
+      "value": "-11.4 thousand (-5.7%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
@@ -326,21 +327,21 @@
       "id": "M27",
       "category": "Employment",
       "metric": "Professional and business services employment, 12-month change",
-      "value": "-9.2 thousand (-0.9%)",
+      "value": "-5.2 thousand (-0.5%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "White-collar contraction."
+      "note": "White-collar contraction, smaller than the prior vintage reported."
     },
     {
       "id": "M28",
       "category": "Employment",
       "metric": "Manufacturing employment, 12-month change",
-      "value": "-5.2 thousand (-1.1%)",
+      "value": "-5.4 thousand (-1.2%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
@@ -350,21 +351,21 @@
       "id": "M29",
       "category": "Employment",
       "metric": "Trade, transportation and utilities employment, 12-month change",
-      "value": "-2.3 thousand (-0.2%)",
+      "value": "+2.9 thousand (+0.3%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Includes the port/logistics complex."
+      "note": "Includes the port/logistics complex. Sign flipped from the superseded vintage."
     },
     {
       "id": "M30",
       "category": "Employment",
       "metric": "Financial activities employment, 12-month change",
-      "value": "-4.7 thousand (-1.5%)",
+      "value": "-5.1 thousand (-1.7%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
@@ -374,25 +375,25 @@
       "id": "M31",
       "category": "Employment",
       "metric": "Construction employment, 12-month change",
-      "value": "-1.9 thousand (-0.7%)",
+      "value": "+0.1 thousand (0.0%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Rebuild demand after the 2025 fires is not yet visible as construction job growth in this release."
+      "note": "Flat. Rebuild demand after the 2025 fires is not visible as construction job growth in this release."
     },
     {
       "id": "M32",
       "category": "Employment",
       "metric": "Government employment, 12-month change",
-      "value": "+10.7 thousand (+1.5%)",
+      "value": "-8.4 thousand (-1.1%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": ""
+      "note": "Sign flipped from the superseded vintage."
     },
     {
       "id": "M33",
@@ -404,31 +405,31 @@
       "geography": "Los Angeles County",
       "source": "S1",
       "status": "verified",
-      "note": "US average $1,654; metro area $1,721; Orange County $1,766 (QCEW)."
+      "note": "Los Angeles County, QCEW. US average $1,654; metro area $1,721; Orange County $1,766."
     },
     {
       "id": "M34",
       "category": "Wages",
       "metric": "Employment Cost Index, 12-month change",
-      "value": "+2.8%",
+      "value": "+3.9%",
       "unit": "percent",
-      "period": "Jun 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles-Long Beach CSA",
       "source": "S1",
       "status": "verified",
-      "note": "US +3.1%. Wage pressure is cooling versus 2023 (+5.3%)."
+      "note": "Los Angeles-Long Beach CSA, ECI. US +3.1%. Updated from the superseded Jun 2026 figure (+2.8%)."
     },
     {
       "id": "M35",
       "category": "Prices",
       "metric": "CPI-U, all items, 12-month change",
-      "value": "+3.6%",
+      "value": "+3.7%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": "US +3.4%. This is the reference rate for CPI-linked rent escalators."
+      "note": "Los Angeles metro CPI-U, all items. US +3.7%. Reference rate for CPI-linked rent escalators. Updated from the superseded Aug 2026 figure (+3.6%)."
     },
     {
       "id": "M36",
@@ -436,23 +437,23 @@
       "metric": "CPI-U, food, 12-month change",
       "value": "+2.8%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": ""
+      "note": "Los Angeles metro CPI-U, food. US +2.5%."
     },
     {
       "id": "M37",
       "category": "Prices",
       "metric": "CPI-U, energy, 12-month change",
-      "value": "+17.6%",
+      "value": "+20.3%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": "Relevant to operating cost pass-throughs in a NNN structure."
+      "note": "Los Angeles metro CPI-U, energy. US +20.4%. Relevant to NNN operating-cost pass-throughs."
     },
     {
       "id": "M38",
@@ -470,49 +471,49 @@
       "id": "M39",
       "category": "Consumer demand",
       "metric": "Average annual household expenditures - shelter/housing",
-      "value": "$33,126",
+      "value": "$33,016",
       "unit": "USD/year",
-      "period": "2023-2024",
-      "geography": "Los Angeles metro area",
+      "period": "2025",
+      "geography": "West region (Census West)",
       "source": "S1",
       "status": "verified",
-      "note": "US $25,853. High housing cost share compresses discretionary food spending."
+      "note": "West region, Consumer Expenditure Survey. US $27,790. Updated from the superseded 2023-24 table."
     },
     {
       "id": "M40",
       "category": "Consumer demand",
       "metric": "Average annual household expenditures - food",
-      "value": "$11,858",
+      "value": "$12,447",
       "unit": "USD/year",
-      "period": "2023-2024",
-      "geography": "Los Angeles metro area",
+      "period": "2025",
+      "geography": "West region (Census West)",
       "source": "S1",
       "status": "verified",
-      "note": "US $10,077."
+      "note": "West region, Consumer Expenditure Survey. US $10,633. Updated from the superseded 2023-24 table."
     },
     {
       "id": "M41",
       "category": "Consumer demand",
       "metric": "Average annual household expenditures - transportation",
-      "value": "$14,497",
+      "value": "$14,110",
       "unit": "USD/year",
-      "period": "2023-2024",
-      "geography": "Los Angeles metro area",
+      "period": "2025",
+      "geography": "West region (Census West)",
       "source": "S1",
       "status": "verified",
-      "note": "US $13,278. Car dependency supports drive-thru formats."
+      "note": "West region, Consumer Expenditure Survey. US $13,492. Car dependency supports drive-thru formats."
     },
     {
       "id": "M42",
       "category": "Consumer demand",
       "metric": "Median household income (county comparison)",
-      "value": "",
+      "value": "$90,112",
       "unit": "USD",
       "period": "2020-2024 ACS 5-yr",
       "geography": "Los Angeles County",
       "source": "S2",
-      "status": "unverified",
-      "note": "County column was not captured in the QuickFacts extract. Blank by rule; do not substitute an aggregator value."
+      "status": "verified",
+      "note": "Los Angeles County median household income (2024 dollars); city is $81,939. Geography field updated."
     },
     {
       "id": "M43",
@@ -758,13 +759,13 @@
       "id": "M63",
       "category": "Labor regulation",
       "metric": "City of Los Angeles local minimum wage",
-      "value": "",
+      "value": "$18.42",
       "unit": "USD/hour",
-      "period": "2026",
+      "period": "effective 2026-07-01",
       "geography": "City of Los Angeles",
-      "source": "S4",
-      "status": "unverified",
-      "note": "DIR states a local rate may exceed the state rate but the city rate itself was not confirmed on an official city page in this session. Blank by rule."
+      "source": "S25",
+      "status": "verified",
+      "note": "City of Los Angeles minimum wage, Office of Wage Standards. Indexed annually to CPI-W; higher than the $20.00 fast-food minimum applies only if the local rate exceeds it."
     },
     {
       "id": "M64",
@@ -1052,7 +1053,91 @@
       "geography": "Los Angeles County",
       "source": "S23",
       "status": "unverified",
-      "note": "The BEA news release quantifies county personal income ($818.5B for Los Angeles County) but publishes the GDP level only in its interactive tables, which were not machine-readable in this session. Left blank rather than inferred from personal income."
+      "note": "BEA confirms Los Angeles County had the highest total personal income of any US county in 2024 ($818.5 billion). The release table does not print the county real-GDP level, only the top and bottom of each population-size band, so the value stays blank rather than being read off an interactive query that is not reproducible from the URL."
+    },
+    {
+      "id": "M88",
+      "category": "Tenant and brand",
+      "metric": "Net loss attributable to Jack in the Box Inc. (FY2025)",
+      "value": "-$80.7 million",
+      "unit": "USD",
+      "period": "FY ended 2025-09-28",
+      "geography": "Company",
+      "source": "S9",
+      "status": "verified",
+      "note": "Consolidated statements of operations, FY2025. FY2024 was a $36.7M net loss."
+    },
+    {
+      "id": "M89",
+      "category": "Tenant and brand",
+      "metric": "Total stockholders' deficit",
+      "value": "-$938.3 million",
+      "unit": "USD",
+      "period": "2025-09-28",
+      "geography": "Company",
+      "source": "S9",
+      "status": "verified",
+      "note": "Balance sheet: total liabilities exceed total assets. This is the tenant-credit fact that matters most to a landlord."
+    },
+    {
+      "id": "M90",
+      "category": "Tenant and brand",
+      "metric": "Total stockholders' deficit (updated)",
+      "value": "-$901.3 million",
+      "unit": "USD",
+      "period": "2026-07-05",
+      "geography": "Company",
+      "source": "S24",
+      "status": "verified",
+      "note": "Q3 FY2026 10-Q. Deficit narrowed after the Del Taco sale closed, but remains negative."
+    },
+    {
+      "id": "M91",
+      "category": "Tenant and brand",
+      "metric": "Long-term debt, net of current maturities",
+      "value": "$1,428.7 million",
+      "unit": "USD",
+      "period": "2026-07-05",
+      "geography": "Company",
+      "source": "S24",
+      "status": "verified",
+      "note": "Down from $1,674.5M at 2025-09-28; the Del Taco proceeds and cash flow went to debt paydown."
+    },
+    {
+      "id": "M92",
+      "category": "Tenant and brand",
+      "metric": "Systemwide sales, Jack in the Box",
+      "value": "$4,208.9 million",
+      "unit": "USD",
+      "period": "FY2025",
+      "geography": "Company",
+      "source": "S9",
+      "status": "verified",
+      "note": "Down from $4,396.3M in FY2024. System same-store sales -4.2% in FY2025, -7.4% in Q4 FY2025."
+    },
+    {
+      "id": "M93",
+      "category": "Tenant and brand",
+      "metric": "Net (loss) earnings, three quarters to 2026-07-05",
+      "value": "$27.9 million",
+      "unit": "USD",
+      "period": "FY2026 YTD to 2026-07-05",
+      "geography": "Company",
+      "source": "S24",
+      "status": "verified",
+      "note": "Returned to profit after the Del Taco loss on sale and discontinued operations were separated out."
+    },
+    {
+      "id": "M94",
+      "category": "Tenant and brand",
+      "metric": "Jack in the Box restaurants in California",
+      "value": "941",
+      "unit": "restaurants",
+      "period": "2025-09-28",
+      "geography": "California",
+      "source": "S9",
+      "status": "verified",
+      "note": "Company-operated 96; franchise 845. California is the largest single state for the brand."
     }
   ]
 }

@@ -5,7 +5,7 @@
     "horizon_year": 2040,
     "base_rent": 150000.0,
     "discount_rate": 0.08,
-    "reinvest_treasury": 0.049,
+    "reinvest_treasury": 0.0484,
     "reinvest_netlease": 0.073,
     "transfer_cost_formula": "3.00% brokerage + 0.50% closing + 0.11% county DTT + 0.45% city DTT + Measure ULA tier (4.0% above $5.4M / 5.5% at $10.9M)"
   },
@@ -21,16 +21,16 @@
       "sell_now_price": 2000000.0,
       "sell_now_cost_rate": 0.04059999999999999,
       "sell_now_net": 1918800.0,
-      "sell_now_wealth_treasury": 3748750.56742183,
+      "sell_now_wealth_treasury": 3718843.3227320374,
       "sell_now_wealth_netlease": 5145479.085805913,
-      "hold_to_expiry_wealth": 4622408.392318861,
-      "renew_wealth": 5148278.421288623,
-      "vacate_wealth": 3608797.408729828,
-      "hold_expected_wealth": 4455511.965637165,
-      "delta_hold_vs_sell_treasury": 706761.3982153353,
-      "delta_hold_vs_sell_netlease": -689967.1201687483,
-      "npv_treasury": 1276303.5219951773,
-      "npv_hold": 1516928.2436268541,
+      "hold_to_expiry_wealth": 4599016.044480388,
+      "renew_wealth": 5135839.43317144,
+      "vacate_wealth": 3592480.9806296527,
+      "hold_expected_wealth": 4441328.129527636,
+      "delta_hold_vs_sell_treasury": 722484.8067955985,
+      "delta_hold_vs_sell_netlease": -704150.9562782776,
+      "npv_treasury": 1266121.2703237878,
+      "npv_hold": 1512099.2000144795,
       "renewed_rent": 147614.84063225638,
       "market_rent_at_expiry": 164016.48959139598
     },
@@ -45,16 +45,16 @@
       "sell_now_price": 2307692.3076923075,
       "sell_now_cost_rate": 0.04059999999999999,
       "sell_now_net": 2214000.0,
-      "sell_now_wealth_treasury": 4325481.423948265,
+      "sell_now_wealth_treasury": 4290973.0646908125,
       "sell_now_wealth_netlease": 5937091.252852977,
-      "hold_to_expiry_wealth": 5220328.609916682,
-      "renew_wealth": 6201756.414387908,
-      "vacate_wealth": 4155798.231474904,
-      "hold_expected_wealth": 5690266.8686596565,
-      "delta_hold_vs_sell_treasury": 1364785.4447113918,
-      "delta_hold_vs_sell_netlease": -246824.38419332076,
-      "npv_treasury": 1472657.9099944353,
-      "npv_hold": 1937314.1837381606,
+      "hold_to_expiry_wealth": 5194191.291793076,
+      "renew_wealth": 6188738.5813048165,
+      "vacate_wealth": 4137430.335441295,
+      "hold_expected_wealth": 5675911.519838936,
+      "delta_hold_vs_sell_treasury": 1384938.4551481232,
+      "delta_hold_vs_sell_netlease": -261179.73301404156,
+      "npv_treasury": 1460909.158065909,
+      "npv_hold": 1932426.7467295267,
       "renewed_rent": 168924.36288960002,
       "market_rent_at_expiry": 168924.36288960002
     },
@@ -69,28 +69,28 @@
       "sell_now_price": 2727272.727272727,
       "sell_now_cost_rate": 0.04059999999999999,
       "sell_now_net": 2616545.4545454546,
-      "sell_now_wealth_treasury": 5111932.591938859,
+      "sell_now_wealth_treasury": 5071149.985543688,
       "sell_now_wealth_netlease": 7016562.389735336,
-      "hold_to_expiry_wealth": 6032326.481292429,
-      "renew_wealth": 7900633.457209923,
-      "vacate_wealth": 4901802.21830862,
-      "hold_expected_wealth": 7450808.771374728,
-      "delta_hold_vs_sell_treasury": 2338876.1794358687,
-      "delta_hold_vs_sell_netlease": 434246.3816393912,
-      "npv_treasury": 1740413.8936297873,
-      "npv_hold": 2536710.1133000148,
+      "hold_to_expiry_wealth": 6002466.4732038705,
+      "renew_wealth": 7886817.045014226,
+      "vacate_wealth": 4880644.07815215,
+      "hold_expected_wealth": 7435891.099984914,
+      "delta_hold_vs_sell_treasury": 2364741.1144412262,
+      "delta_hold_vs_sell_netlease": 419328.71024957765,
+      "npv_treasury": 1726529.0049869835,
+      "npv_hold": 2531631.2273639254,
       "renewed_rent": 200047.1146417235,
       "market_rent_at_expiry": 173954.0127319335
     }
   ],
   "breakevens": {
     "required_reinvest_yield_pct": {
-      "bear": 6.202,
-      "base": 6.975,
-      "bull": 7.761
+      "bear": 6.178,
+      "base": 6.956,
+      "bull": 7.746
     },
-    "exit_cap_hold_equals_sell_treasury_pct": 11.79,
-    "exit_cap_hold_equals_sell_netlease_pct": 6.012
+    "exit_cap_hold_equals_sell_treasury_pct": 11.944,
+    "exit_cap_hold_equals_sell_netlease_pct": 5.986
   },
   "sensitivity": [
     {
@@ -98,21 +98,21 @@
       "cells": [
         {
           "escalation": 0.015,
-          "wealth": 5968478.5441737175,
-          "delta_vs_sell_netlease": 31387.291320740245,
-          "delta_vs_sell_treasury": 1642997.1202254528
+          "wealth": 5953846.048628898,
+          "delta_vs_sell_netlease": 16754.795775921084,
+          "delta_vs_sell_treasury": 1662872.9839380858
         },
         {
           "escalation": 0.02,
-          "wealth": 6243296.138427509,
-          "delta_vs_sell_netlease": 306204.88557453174,
-          "delta_vs_sell_treasury": 1917814.7144792443
+          "wealth": 6228366.6695833,
+          "delta_vs_sell_netlease": 291275.4167303229,
+          "delta_vs_sell_treasury": 1937393.6048924876
         },
         {
           "escalation": 0.025,
-          "wealth": 6532915.2219913835,
-          "delta_vs_sell_netlease": 595823.9691384062,
-          "delta_vs_sell_treasury": 2207433.798043119
+          "wealth": 6517681.484304676,
+          "delta_vs_sell_netlease": 580590.2314516986,
+          "delta_vs_sell_treasury": 2226708.4196138633
         }
       ]
     },
@@ -121,21 +121,21 @@
       "cells": [
         {
           "escalation": 0.015,
-          "wealth": 5685700.781124476,
-          "delta_vs_sell_netlease": -251390.4717285009,
-          "delta_vs_sell_treasury": 1360219.3571762117
+          "wealth": 5671370.232098846,
+          "delta_vs_sell_netlease": -265721.0207541315,
+          "delta_vs_sell_treasury": 1380397.1674080333
         },
         {
           "escalation": 0.02,
-          "wealth": 5943738.617303257,
-          "delta_vs_sell_netlease": 6647.364450279623,
-          "delta_vs_sell_treasury": 1618257.1933549922
+          "wealth": 5929120.130138436,
+          "delta_vs_sell_netlease": -7971.122714540921,
+          "delta_vs_sell_treasury": 1638147.0654476238
         },
         {
           "escalation": 0.025,
-          "wealth": 6215573.6249647755,
-          "delta_vs_sell_netlease": 278482.37211179826,
-          "delta_vs_sell_treasury": 1890092.2010165108
+          "wealth": 6200660.128302455,
+          "delta_vs_sell_netlease": 263568.8754494777,
+          "delta_vs_sell_treasury": 1909687.0636116425
         }
       ]
     },
@@ -144,21 +144,21 @@
       "cells": [
         {
           "escalation": 0.015,
-          "wealth": 5446427.28931358,
-          "delta_vs_sell_netlease": -490663.96353939734,
-          "delta_vs_sell_treasury": 1120945.8653653152
+          "wealth": 5432352.233496493,
+          "delta_vs_sell_netlease": -504739.0193564845,
+          "delta_vs_sell_treasury": 1141379.1688056802
         },
         {
           "escalation": 0.02,
-          "wealth": 5690266.8686596565,
-          "delta_vs_sell_netlease": -246824.38419332076,
-          "delta_vs_sell_treasury": 1364785.4447113918
+          "wealth": 5675911.519838936,
+          "delta_vs_sell_netlease": -261179.73301404156,
+          "delta_vs_sell_treasury": 1384938.4551481232
         },
         {
           "escalation": 0.025,
-          "wealth": 5947053.812096108,
-          "delta_vs_sell_netlease": 9962.559243130498,
-          "delta_vs_sell_treasury": 1621572.388147843
+          "wealth": 5932411.28860827,
+          "delta_vs_sell_netlease": -4679.9642447074875,
+          "delta_vs_sell_treasury": 1641438.2239174573
         }
       ]
     },
@@ -167,21 +167,21 @@
       "cells": [
         {
           "escalation": 0.015,
-          "wealth": 5241335.72490424,
-          "delta_vs_sell_netlease": -695755.5279487371,
-          "delta_vs_sell_treasury": 915854.3009559754
+          "wealth": 5227479.663265905,
+          "delta_vs_sell_netlease": -709611.5895870719,
+          "delta_vs_sell_treasury": 936506.5985750929
         },
         {
           "escalation": 0.02,
-          "wealth": 5473005.369822286,
-          "delta_vs_sell_netlease": -464085.8830306912,
-          "delta_vs_sell_treasury": 1147523.9458740214
+          "wealth": 5458875.56815365,
+          "delta_vs_sell_netlease": -478215.6846993277,
+          "delta_vs_sell_treasury": 1167902.503462837
         },
         {
           "escalation": 0.025,
-          "wealth": 5716893.972494393,
-          "delta_vs_sell_netlease": -220197.2803585846,
-          "delta_vs_sell_treasury": 1391412.548546128
+          "wealth": 5702483.711727538,
+          "delta_vs_sell_netlease": -234607.5411254391,
+          "delta_vs_sell_treasury": 1411510.6470367257
         }
       ]
     },
@@ -190,87 +190,163 @@
       "cells": [
         {
           "escalation": 0.015,
-          "wealth": 5063589.702416146,
-          "delta_vs_sell_netlease": -873501.5504368311,
-          "delta_vs_sell_treasury": 738108.2784678815
+          "wealth": 5049923.435732728,
+          "delta_vs_sell_netlease": -887167.8171202494,
+          "delta_vs_sell_treasury": 758950.3710419154
         },
         {
           "escalation": 0.02,
-          "wealth": 5284712.070829899,
-          "delta_vs_sell_netlease": -652379.1820230782,
-          "delta_vs_sell_treasury": 959230.6468816344
+          "wealth": 5270777.743359736,
+          "delta_vs_sell_netlease": -666313.5094932411,
+          "delta_vs_sell_treasury": 979804.6786689237
         },
         {
           "escalation": 0.025,
-          "wealth": 5517422.11150624,
-          "delta_vs_sell_netlease": -419669.1413467368,
-          "delta_vs_sell_treasury": 1191940.6875579758
+          "wealth": 5503213.145097572,
+          "delta_vs_sell_netlease": -433878.1077554049,
+          "delta_vs_sell_treasury": 1212240.0804067599
         }
       ]
     }
   ],
   "renewal_value": {
-    "renew_wealth_at_market_rent": 6201756.414387908,
-    "vacate_wealth": 4155798.231474904,
-    "required_rent_uplift_to_beat_sell_netlease_pct": 7.1,
-    "required_rent_uplift_to_beat_sell_treasury_pct": -39.24
+    "renew_wealth_at_market_rent": 6188738.5813048165,
+    "vacate_wealth": 4137430.335441295,
+    "required_rent_uplift_to_beat_sell_netlease_pct": 7.52,
+    "required_rent_uplift_to_beat_sell_treasury_pct": -39.85
   },
   "assumption_sensitivity": [
     {
       "change": "Exit cap 5.50% instead of 6.50%",
-      "hold_expected_wealth": 6243296.138427509,
-      "delta_vs_base_hold": 553029.2697678525,
-      "delta_vs_sell_netlease": 306204.88557453174,
-      "delta_vs_sell_treasury": 1917814.7144792443
+      "hold_expected_wealth": 6228366.6695833,
+      "delta_vs_base_hold": 552455.1497443644,
+      "delta_vs_sell_netlease": 291275.4167303229,
+      "delta_vs_sell_treasury": 1937393.6048924876
     },
     {
       "change": "Rent reset 15% higher at renewal",
-      "hold_expected_wealth": 6211955.114237232,
-      "delta_vs_base_hold": 521688.24557757564,
-      "delta_vs_sell_netlease": 274863.8613842549,
-      "delta_vs_sell_treasury": 1886473.6902889675
+      "hold_expected_wealth": 6197197.552046895,
+      "delta_vs_base_hold": 521286.03220795933,
+      "delta_vs_sell_netlease": 260106.29919391777,
+      "delta_vs_sell_treasury": 1906224.4873560825
     },
     {
       "change": "Renewal probability 55% instead of 75%",
-      "hold_expected_wealth": 5281075.232077057,
-      "delta_vs_base_hold": -409191.63658259995,
-      "delta_vs_sell_netlease": -656016.0207759207,
-      "delta_vs_sell_treasury": 955593.8081287919
+      "hold_expected_wealth": 5265649.870666232,
+      "delta_vs_base_hold": -410261.64917270374,
+      "delta_vs_sell_netlease": -671441.3821867453,
+      "delta_vs_sell_treasury": 974676.8059754195
     },
     {
       "change": "Exit cap 7.50% instead of 6.50%",
-      "hold_expected_wealth": 5284712.070829899,
-      "delta_vs_base_hold": -405554.79782975744,
-      "delta_vs_sell_netlease": -652379.1820230782,
-      "delta_vs_sell_treasury": 959230.6468816344
+      "hold_expected_wealth": 5270777.743359736,
+      "delta_vs_base_hold": -405133.7764791995,
+      "delta_vs_sell_netlease": -666313.5094932411,
+      "delta_vs_sell_treasury": 979804.6786689237
     },
     {
       "change": "Rent reset 10% lower at renewal",
-      "hold_expected_wealth": 5342474.704941273,
-      "delta_vs_base_hold": -347792.16371838376,
-      "delta_vs_sell_netlease": -594616.5479117045,
-      "delta_vs_sell_treasury": 1016993.280993008
+      "hold_expected_wealth": 5328387.498366962,
+      "delta_vs_base_hold": -347524.0214719735,
+      "delta_vs_sell_netlease": -608703.7544860151,
+      "delta_vs_sell_treasury": 1037414.4336761497
     },
     {
       "change": "Escalation 2.5% instead of 2.0%",
-      "hold_expected_wealth": 5947053.812096108,
-      "delta_vs_base_hold": 256786.94343645126,
-      "delta_vs_sell_netlease": 9962.559243130498,
-      "delta_vs_sell_treasury": 1621572.388147843
+      "hold_expected_wealth": 5932411.28860827,
+      "delta_vs_base_hold": 256499.76876933407,
+      "delta_vs_sell_netlease": -4679.9642447074875,
+      "delta_vs_sell_treasury": 1641438.2239174573
     },
     {
       "change": "Escalation 1.5% instead of 2.0%",
-      "hold_expected_wealth": 5446427.28931358,
-      "delta_vs_base_hold": -243839.57934607659,
-      "delta_vs_sell_netlease": -490663.96353939734,
-      "delta_vs_sell_treasury": 1120945.8653653152
+      "hold_expected_wealth": 5432352.233496493,
+      "delta_vs_base_hold": -243559.28634244297,
+      "delta_vs_sell_netlease": -504739.0193564845,
+      "delta_vs_sell_treasury": 1141379.1688056802
     },
     {
       "change": "Renewal probability 85% instead of 75%",
-      "hold_expected_wealth": 5894862.686950957,
-      "delta_vs_base_hold": 204595.8182913009,
-      "delta_vs_sell_netlease": -42228.56590201985,
-      "delta_vs_sell_treasury": 1569381.2630026927
+      "hold_expected_wealth": 5881042.344425288,
+      "delta_vs_base_hold": 205130.82458635233,
+      "delta_vs_sell_netlease": -56048.908427689224,
+      "delta_vs_sell_treasury": 1590069.2797344755
     }
-  ]
+  ],
+  "rent_level_analysis": [
+    {
+      "rent": 150000.0,
+      "rent_label": "A1 benchmark",
+      "implied_value_at_6_50_cap": 2307692.3076923075,
+      "transfer_cost_rate_pct": 4.06,
+      "net_proceeds": 2214000.0,
+      "ula_tier": "none",
+      "noi_at_A14_share": 105000.0,
+      "loan_at_A16_ltv": 1384615.3846153845,
+      "annual_debt_service": 120600.0,
+      "dscr": 0.8706467661691543,
+      "max_loan_at_target_dscr": 892971.0422247733,
+      "cash_equity_required": 1016769.2307692306,
+      "cash_on_cash_pre_debt": 0.1032682705401725
+    },
+    {
+      "rent": 200000.0,
+      "rent_label": "A12 low sensitivity",
+      "implied_value_at_6_50_cap": 3076923.076923077,
+      "transfer_cost_rate_pct": 4.06,
+      "net_proceeds": 2952000.0,
+      "ula_tier": "none",
+      "noi_at_A14_share": 140000.0,
+      "loan_at_A16_ltv": 1846153.8461538462,
+      "annual_debt_service": 160800.00000000003,
+      "dscr": 0.870646766169154,
+      "max_loan_at_target_dscr": 1190628.0562996978,
+      "cash_equity_required": 1355692.3076923077,
+      "cash_on_cash_pre_debt": 0.10326827054017249
+    },
+    {
+      "rent": 250000.0,
+      "rent_label": "A13 high sensitivity",
+      "implied_value_at_6_50_cap": 3846153.846153846,
+      "transfer_cost_rate_pct": 4.06,
+      "net_proceeds": 3690000.0,
+      "ula_tier": "none",
+      "noi_at_A14_share": 175000.0,
+      "loan_at_A16_ltv": 2307692.3076923075,
+      "annual_debt_service": 201000.0,
+      "dscr": 0.8706467661691543,
+      "max_loan_at_target_dscr": 1488285.0703746222,
+      "cash_equity_required": 1694615.3846153845,
+      "cash_on_cash_pre_debt": 0.1032682705401725
+    }
+  ],
+  "debt_meta": {
+    "cap_rate_used_pct": 6.5,
+    "negative_leverage": true,
+    "negative_leverage_note": "At a 6.50% going-in cap against an 8.71% debt constant, every dollar of acquisition debt costs more than the yield on the asset it buys. DSCR is scale-invariant here: NOI / debt service = (70% x 6.50%) / (60% x 8.71%) = 0.87x at any rent level. Two consequences follow and both matter for the decision: (1) a leveraged buyer cannot pay a 6.50% cap today, which thins the bid for the asset if it is sold; (2) the assumption set is internally consistent only for an unlevered or low-leverage buyer, so the model's sell-now price should be read as an unlevered-clearing number.",
+    "max_ltv_at_target_dscr_pct": 38.7,
+    "noi_share_of_rent_pct": 70.0,
+    "assumption_noi_share": "A14",
+    "assumption_debt_constant": "A15",
+    "assumption_ltv": "A16",
+    "debt_constant_pct": 8.71,
+    "assumption_debt_const": "A15",
+    "ltv_pct": 60.0,
+    "assumption_ltv_pct": "A16",
+    "dscr_target": 1.35,
+    "note": "Lender-format arithmetic on labelled assumptions. No lender has quoted terms for this asset; P06 (existing debt) and a current term sheet are required before these figures are relied on."
+  },
+  "dof_los_angeles_county_path": {
+    "source": "S3",
+    "unit": "persons",
+    "note": "Read directly from Report P-2A, row FIPS 6037, ALL AGES / ALL SEXES / ALL RACES.",
+    "series": {
+      "2020": 10012050,
+      "2025": 9853435,
+      "2030": 9727305,
+      "2035": 9708647,
+      "2040": 9637524
+    },
+    "change_pct_2025_to_2040": -2.19
+  }
 }
