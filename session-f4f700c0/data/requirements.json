@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "as_of": "2026-11-08",
+    "note": "All property/owner observed values remain blank until documents are available."
+  },
+  "rows": [
+    {
+      "id": "P01",
+      "category": "Property & owner",
+      "requirement": "Exact jurisdiction and location",
+      "value": "",
+      "source": "S43",
+      "locator": "",
+      "status": "unverified",
+      "why": "Determines city vs county taxes, schools, hazards, zoning and comparable sales.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P02",
+      "category": "Property & owner",
+      "requirement": "Exact lease expiry and all option terms",
+      "value": "",
+      "source": "S20",
+      "locator": "",
+      "status": "unverified",
+      "why": "The 2030-2035 range is too wide for a property-specific decision; options may be unilateral.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P03",
+      "category": "Property & owner",
+      "requirement": "Contract rent, escalations and percentage rent",
+      "value": "",
+      "source": "S20",
+      "locator": "",
+      "status": "unverified",
+      "why": "Actual NOI cannot be inferred from franchise AUV.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P04",
+      "category": "Property & owner",
+      "requirement": "Tenant legal entity and guarantor",
+      "value": "",
+      "source": "S16",
+      "locator": "",
+      "status": "unverified",
+      "why": "Brand affiliation does not establish who owes rent.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P05",
+      "category": "Property & owner",
+      "requirement": "Landlord repair, roof/structure, parking and ADA duties",
+      "value": "",
+      "source": "S21",
+      "locator": "",
+      "status": "unverified",
+      "why": "NNN labels do not eliminate all landlord obligations.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P06",
+      "category": "Property & owner",
+      "requirement": "Store-level sales, rent coverage and payment history",
+      "value": "",
+      "source": "S16",
+      "locator": "",
+      "status": "unverified",
+      "why": "Needed to assess renewal economics and operator capacity.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P07",
+      "category": "Property & owner",
+      "requirement": "Current executable sale offers",
+      "value": "",
+      "source": "S21",
+      "locator": "",
+      "status": "unverified",
+      "why": "Asking prices and portfolio cap rates are not offers.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P08",
+      "category": "Property & owner",
+      "requirement": "Owner tax basis, depreciation recapture and entity type",
+      "value": "",
+      "source": "S27",
+      "locator": "",
+      "status": "unverified",
+      "why": "After-tax proceeds cannot be computed without these inputs.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P09",
+      "category": "Property & owner",
+      "requirement": "Property debt, rate, maturity, prepayment and assumptions",
+      "value": "",
+      "source": "S22",
+      "locator": "",
+      "status": "unverified",
+      "why": "Leverage and refinancing can dominate equity outcomes.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P10",
+      "category": "Property & owner",
+      "requirement": "Insurance coverage, exclusions, deductibles and quotes",
+      "value": "",
+      "source": "S33",
+      "locator": "",
+      "status": "unverified",
+      "why": "Especially earthquake, flood, ordinance/law and business interruption.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P11",
+      "category": "Property & owner",
+      "requirement": "Building/lot size, condition, access, parking and drive-thru rights",
+      "value": "",
+      "source": "S20",
+      "locator": "",
+      "status": "unverified",
+      "why": "Reuse value and re-tenanting costs depend on the actual site.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P12",
+      "category": "Property & owner",
+      "requirement": "Environmental history and Phase I/II findings",
+      "value": "",
+      "source": "S42",
+      "locator": "",
+      "status": "unverified",
+      "why": "Gas-station/restaurant history and nearby cleanup sites matter.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P13",
+      "category": "Property & owner",
+      "requirement": "Owner liquidity needs, concentration and risk tolerance",
+      "value": "",
+      "source": "S28",
+      "locator": "",
+      "status": "unverified",
+      "why": "Wealth preservation/growth trade-off is owner-specific.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    },
+    {
+      "id": "P14",
+      "category": "Property & owner",
+      "requirement": "Extension proposal, concessions and tenant investment commitment",
+      "value": "",
+      "source": "S20",
+      "locator": "",
+      "status": "unverified",
+      "why": "Extension value depends on executable terms, not a signed wish list.",
+      "action": "Obtain and verify the underlying document privately; publish only anonymized, decision-relevant terms."
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "as_of": "2026-11-08",
+    "start_year": 2026,
+    "horizon": 2036,
+    "normalized_current_noi": 100.0,
+    "basis": "Analyst scenarios only. No actual rent, expiry, debt, tax basis, insurance or offer is known.",
+    "excluded": [
+      "income taxes",
+      "transfer taxes/ULA",
+      "debt service",
+      "insurance premiums",
+      "owner liquidity",
+      "probabilities"
+    ],
+    "reinvestment_context": "4.86% is a Treasury CMT observation; 7.4% is a diversified REIT acquisition yield. Neither is a guaranteed executable return."
+  },
+  "assumptions": {
+    "entry_cap": 0.065,
+    "exit_cap": 0.075,
+    "short_term_cap": 0.085,
+    "escalation": 0.02,
+    "reset": 1.0,
+    "extension_cost": 50.0,
+    "downtime": 1,
+    "retenant_cost": 150.0,
+    "reuse_factor": 0.85,
+    "sale_cost": 0.03,
+    "reinvest": 0.0486,
+    "expiry": 2032
+  },
+  "base": {
+    "sell_now": {
+      "fv": 2398.5949,
+      "pv": 1492.3077,
+      "sale_year": 2026,
+      "gross_sale": 1538.4615,
+      "note": "Pre-tax/pre-debt; ULA not applied because NOI units are not dollars."
+    },
+    "sell_before_expiry": {
+      "fv": 2369.546,
+      "pv": 1297.2395,
+      "sale_year": 2031,
+      "gross_sale": 1324.897,
+      "note": "Sells at end of expiry-1; buyer receives expiry-year NOI."
+    },
+    "extend_hold": {
+      "fv": 2891.0309,
+      "pv": 1434.0404,
+      "sale_year": 2036,
+      "gross_sale": 1625.3259,
+      "annual_flows": {
+        "2027": 102.0,
+        "2028": 104.03999999999999,
+        "2029": 106.12080000000002,
+        "2030": 108.243216,
+        "2031": 110.40808032,
+        "2032": 62.61624192640001,
+        "2033": 112.61624192640001,
+        "2034": 114.868566764928,
+        "2035": 117.16593810022657,
+        "2036": 119.5092568622311
+      },
+      "note": "Deterministic renewal branch; no renewal probability assigned."
+    },
+    "extend_sell": {
+      "fv": 2738.3123,
+      "pv": 1408.5116,
+      "sale_year": 2034,
+      "gross_sale": 1562.2125,
+      "note": "Sells two years after expiry when possible; otherwise at horizon."
+    },
+    "vacate_hold": {
+      "fv": 2324.4792,
+      "pv": 1161.2677,
+      "sale_year": 2036,
+      "gross_sale": 1354.4382,
+      "annual_flows": {
+        "2027": 102.0,
+        "2028": 104.03999999999999,
+        "2029": 106.12080000000002,
+        "2030": 108.243216,
+        "2031": 110.40808032,
+        "2032": 112.61624192640001,
+        "2033": -150.0,
+        "2034": 95.72380563744001,
+        "2035": 97.63828175018881,
+        "2036": 99.59104738519258
+      },
+      "note": "Deterministic vacancy branch; not probability-weighted."
+    }
+  },
+  "breakevens": {
+    "required_gross_sale_now_to_match_extend_hold": 1854.310532171005,
+    "current_gross_sale_now_scenario": 1538.4615384615383,
+    "required_renewal_reset_to_match_sell_now": 0.7626914442013837,
+    "note": "Normalized breakevens, pre-tax/pre-debt; not executable prices."
+  },
+  "sensitivity": [
+    {
+      "factor": "expiry",
+      "value": 2030,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2178.32,
+        "extend_hold": 2879.6,
+        "extend_sell": 2565.48,
+        "vacate_hold": 2250.57
+      }
+    },
+    {
+      "factor": "expiry",
+      "value": 2032,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2891.03,
+        "extend_sell": 2738.31,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "expiry",
+      "value": 2035,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2637.27,
+        "extend_hold": 2906.63,
+        "extend_sell": 2906.63,
+        "vacate_hold": 1112.99
+      }
+    },
+    {
+      "factor": "exit_cap",
+      "value": 0.065,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 3133.58,
+        "extend_sell": 2994.65,
+        "vacate_hold": 2526.6
+      }
+    },
+    {
+      "factor": "exit_cap",
+      "value": 0.075,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2891.03,
+        "extend_sell": 2738.31,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "exit_cap",
+      "value": 0.085,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2705.55,
+        "extend_sell": 2542.29,
+        "vacate_hold": 2169.91
+      }
+    },
+    {
+      "factor": "reset",
+      "value": 0.9,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2683.52,
+        "extend_sell": 2546.08,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "reset",
+      "value": 1.0,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2891.03,
+        "extend_sell": 2738.31,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "reset",
+      "value": 1.1,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 3098.54,
+        "extend_sell": 2930.55,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "reinvest",
+      "value": 0.0486,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2891.03,
+        "extend_sell": 2738.31,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "reinvest",
+      "value": 0.074,
+      "fv": {
+        "sell_now": 3047.2,
+        "sell_before_expiry": 2713.34,
+        "extend_hold": 3054.14,
+        "extend_sell": 2980.15,
+        "vacate_hold": 2469.6
+      }
+    },
+    {
+      "factor": "extension_cost",
+      "value": 0.0,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2951.48,
+        "extend_sell": 2798.76,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "extension_cost",
+      "value": 50.0,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2891.03,
+        "extend_sell": 2738.31,
+        "vacate_hold": 2324.48
+      }
+    },
+    {
+      "factor": "extension_cost",
+      "value": 100.0,
+      "fv": {
+        "sell_now": 2398.59,
+        "sell_before_expiry": 2369.55,
+        "extend_hold": 2830.58,
+        "extend_sell": 2677.86,
+        "vacate_hold": 2324.48
+      }
+    }
+  ]
+}

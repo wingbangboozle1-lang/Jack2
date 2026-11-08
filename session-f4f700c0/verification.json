@@ -1,0 +1,169 @@
+{
+  "as_of": "2026-11-08",
+  "passed": true,
+  "checks": [
+    {
+      "name": "source IDs unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "official source domains",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metrics row source links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metrics IDs unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirements row source links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirements IDs unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "risks row source links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "risks IDs unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "decisions row source links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "decisions IDs unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "flags row source links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "flags IDs unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verified/unknown value discipline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "requirements remain blank",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "risk probabilities remain blank",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ULA equality at lower threshold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ULA just above lower threshold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ULA equality at upper threshold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ULA outside city",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "city base transfer tax rounding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "first forecast year NOI",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expiry-year extension cost",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sale-now breakeven consistency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "renewal-reset breakeven consistency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "projection CAGR arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "current-session privacy scan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "internal links resolve",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every table row has an external source link",
+      "passed": true,
+      "detail": "rows=324, missing=0"
+    },
+    {
+      "name": "audit structural errors zero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit current-session privacy zero",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "counts": {
+    "sources": 51,
+    "metrics": 132,
+    "verified": 122,
+    "unknown": 10,
+    "requirements": 14,
+    "risks": 20,
+    "decisions": 8,
+    "flags": 21,
+    "html_table_rows": 324,
+    "audit_files": 305,
+    "audit_lines": 63206
+  }
+}

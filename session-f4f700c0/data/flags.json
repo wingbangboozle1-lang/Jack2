@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "as_of": "2026-11-08",
+    "note": "Open review items are published and nonblocking for a technically sound site."
+  },
+  "rows": [
+    {
+      "id": "F01",
+      "severity": "High",
+      "area": "Property identity",
+      "finding": "No exact location, parcel, lease, rent, tenant entity, debt, basis or offer is available in the public brief.",
+      "evidence": "Historical models use placeholder rent/expiry and precise rankings.",
+      "action": "Keep observed fields blank; publish conditional decision rules and scenarios only.",
+      "source": "S20",
+      "extra_sources": [
+        "S43"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F02",
+      "severity": "High",
+      "area": "Historical model",
+      "finding": "Root model converts 8% of franchise AUV into a $150,000 rent assumption and uses 2032 midpoint expiry, then reports precise wealth differences.",
+      "evidence": "tools/model.py lines 31-47 and data/valuation.json A1/A3; generated root pages inherit these assumptions.",
+      "action": "Do not endorse historical dollar rankings; current model normalizes NOI to 100 and labels every assumption.",
+      "source": "S20",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F03",
+      "severity": "High",
+      "area": "Historical hazard data",
+      "finding": "Prior ledger labels 89.6 composite / 97.8 earthquake as urban-LA or county values, but the cited official viewer URL is a Census tract (06037295103).",
+      "evidence": "session-18dacdea/data/metrics.json M-73 and source S24; FEMA now routes legacy viewer to RAPT.",
+      "action": "County score left blank; tract values are not county or parcel values.",
+      "source": "S34",
+      "extra_sources": [
+        "S35"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F04",
+      "severity": "High",
+      "area": "Tax boundary",
+      "finding": "Historical ULA logic must apply 4% only above $5.4M, not at equality, for post-June-2026 closings; jurisdiction and exemptions also matter.",
+      "evidence": "Official Finance FAQ threshold table; current tests cover equality and both bands.",
+      "action": "Use strict lower-bound comparison and parcel jurisdiction gate; obtain closing-date tax confirmation.",
+      "source": "S24",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F05",
+      "severity": "Medium",
+      "area": "Forecast disagreement",
+      "finding": "DOF projects county population decline while SCAG's adopted planning forecast projects growth; households rise in both official systems.",
+      "evidence": "DOF P-2A vs SCAG Appendix I; different baselines, methods and policy assumptions.",
+      "action": "Show both separately; never average them or convert population growth into rent growth.",
+      "source": "S05",
+      "extra_sources": [
+        "S08",
+        "S47"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F06",
+      "severity": "Medium",
+      "area": "Employment series",
+      "finding": "BLS and EDD payroll/unemployment figures differ because of geography, seasonal adjustment and revision vintage.",
+      "evidence": "BLS November summary vs EDD September preliminary release.",
+      "action": "Label each series; do not splice them into one trend.",
+      "source": "S02",
+      "extra_sources": [
+        "S03"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F07",
+      "severity": "Medium",
+      "area": "School measures",
+      "finding": "DataQuest default non-charter ACGR 86.2% differs from Dashboard combined 86.5% and four-year component 84.6%.",
+      "evidence": "Official CDE report filters and indicator definitions.",
+      "action": "Keep measures separate and do not assign district outcomes to the unknown subject school.",
+      "source": "S10",
+      "extra_sources": [
+        "S11"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F08",
+      "severity": "Medium",
+      "area": "Tenant credit",
+      "finding": "Public franchisor financials are not the subject franchisee's financials; current filing reports franchisee payment delays/deferrals.",
+      "evidence": "JACK Q3 FY2026 liquidity section and restaurant-count note.",
+      "action": "Require operator/guarantor financials and store rent coverage before credit scoring.",
+      "source": "S16",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F09",
+      "severity": "Medium",
+      "area": "Capital-market benchmark",
+      "finding": "NNN acquisition cap 7.4% and portfolio WALT 10.2 years are diversified portfolio statistics, not this asset's cap rate or term.",
+      "evidence": "NNN FY2025 10-K Item 7 definitions.",
+      "action": "Use only as labeled context; subject value remains blank.",
+      "source": "S21",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F10",
+      "severity": "Medium",
+      "area": "Unavailable official endpoint",
+      "finding": "LAHSA 2026 count release and PDF returned runtime errors during review.",
+      "evidence": "Official search excerpt exists, but live primary retrieval failed.",
+      "action": "Leave count blank and flag; do not replace with third-party numbers.",
+      "source": "S39",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F11",
+      "severity": "Medium",
+      "area": "Unavailable hazard download",
+      "finding": "FEMA county NRI ZIP download failed; legacy NRI application is retired.",
+      "evidence": "OpenFEMA download page retrieved; RAPT is current entry point.",
+      "action": "Leave county score blank; use methodology and official parcel portals instead.",
+      "source": "S35",
+      "extra_sources": [
+        "S34"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F12",
+      "severity": "Medium",
+      "area": "Broken legacy hazard link",
+      "finding": "Legacy CAL FIRE FHSZ viewer URL returned 404.",
+      "evidence": "egis.fire.ca.gov/FHSZ retrieval on 2026-11-08.",
+      "action": "Verified OSFM replacement page is now used; parcel lookup remains blank.",
+      "source": "S51",
+      "extra_sources": [
+        "S32"
+      ],
+      "status": "resolved"
+    },
+    {
+      "id": "F13",
+      "severity": "Medium",
+      "area": "Historical crime data",
+      "finding": "City's 2020-2024 UCR dataset is no longer updated; NIBRS replacement uses a different reporting system.",
+      "evidence": "Official dataset notice retrieved 2026-11-08.",
+      "action": "Do not call historical counts current; compute neighborhood trends only from a consistent current series.",
+      "source": "S46",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F14",
+      "severity": "Medium",
+      "area": "Earthquake probability window",
+      "finding": "USGS FAQ probabilities come from UCERF3, a 2014/2015 model family, not a newly estimated 2026-2056 window.",
+      "evidence": "USGS FAQ and 2015 time-dependent publication.",
+      "action": "Label model vintage and regional scope; no parcel damage probability.",
+      "source": "S30",
+      "extra_sources": [
+        "S48"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "F15",
+      "severity": "Medium",
+      "area": "Historical verification claims",
+      "finding": "Existing checkers validate source IDs and text patterns, not agreement between every generated sentence and the underlying source table.",
+      "evidence": "tools/check_site.py and historical verification pages.",
+      "action": "Current checker validates row links, blank unknowns, arithmetic, privacy and internal links; source-value audit is recorded separately.",
+      "source": "S01",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F16",
+      "severity": "Low",
+      "area": "Realty Income source",
+      "finding": "Previously cited supplemental PDF could not be retrieved in this environment.",
+      "evidence": "investor.realtyincome.com Q4 2025 supplemental fetch failed.",
+      "action": "Use SEC-filed NNN benchmark instead; do not assert the inaccessible 7.3% figure as freshly verified.",
+      "source": "S21",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F17",
+      "severity": "Low",
+      "area": "Tourism impact estimate",
+      "finding": "Visitor business sales and jobs are modeled economic impacts from the official tourism organization, not government observations.",
+      "evidence": "2025 report compiled by Tourism Economics and Los Angeles Tourism.",
+      "action": "Label source type and do not treat $42.6B as direct spending or GDP.",
+      "source": "S38",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F18",
+      "severity": "Low",
+      "area": "Port source conflict",
+      "finding": "Third-party search snippets disagreed with the port's own loaded-import figure.",
+      "evidence": "Port release states 545,696 loaded imports for September 2026.",
+      "action": "Use the port release; exclude third-party variants.",
+      "source": "S37",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F19",
+      "severity": "Medium",
+      "area": "Coordination history",
+      "finding": "Historical board contains stale in-progress rows and inconsistent workspace counts; current platform pins one Arena branch.",
+      "evidence": "COORDINATION.md A-H history; Session I appended without editing other claims.",
+      "action": "Preserve history, document branch exception, and change shared navigation only in final integration.",
+      "source": "S01",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F21",
+      "severity": "Low",
+      "area": "Historical privacy pattern",
+      "finding": "Historical education note contains a public institutional mailing-address pattern, not a personal or subject-property identifier.",
+      "evidence": "research/04-education.md line 11; current-session pages have zero identifier-pattern hits.",
+      "action": "Preserve historical file; keep current product anonymized and scan current pages separately.",
+      "source": "S09",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
+      "id": "F20",
+      "severity": "High",
+      "area": "Privacy",
+      "finding": "Public repository and Pages can expose committed files; private owner/operator details must never enter the public product.",
+      "evidence": "No private documents were supplied or persisted in this session.",
+      "action": "Use placeholders, blank unknowns, automated identifier scans and no analytics/forms/uploads.",
+      "source": "S28",
+      "extra_sources": [],
+      "status": "open"
+    }
+  ]
+}

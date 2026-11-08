@@ -1093,3 +1093,19 @@ this session.
 | Pages API status | `built` (`build_type: legacy`, source `main` / `/`, HTTPS enforced) |
 | Live URL | https://wingbangboozle1-lang.github.io/Jack2/ |
 | Verification | `tools/check_site.py` → 16 root pages + archives = **134 total pages**, 24 sources, **89 metric rows (82 verified, 7 blank/flagged)**, 24 risks, 0 broken links, 0 PII leaks. All eight cross-session verifiers pass. |
+# Session I — `session-f4f700c0` — 2026-11-08
+
+Label note: `main` also contains `session-343c7030` with a historical “Session I” label. This Arena session is `session-f4f700c0`; both are preserved. During final integration, `main` had advanced with additional parallel sessions; conflicts were resolved by preserving all session directories, combining CI steps, and regenerating the shared root landing/navigation.
+
+Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-jack2`; no other branch is created or switched to. Existing published builds are preserved. This session's work products are isolated in `session-f4f700c0/**`; shared landing/navigation/CI changes are reserved for the final integration task below. Historical board text and prior session labels are preserved, including inconsistent labels and stale statuses; current claims are the rows below. No active remote Arena branches or open PR heads overlap this session's directory. Open PRs #5, #6, #10, #14, #18 are not this session's work and will not be closed or merged.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| I-01 Repository inventory, privacy and claim audit | done | session-f4f700c0 | `COORDINATION.md` (append), `session-f4f700c0/audit/**` |
+| I-02 Requirements and independently checked official evidence | done | session-f4f700c0 | `session-f4f700c0/data/**`, `session-f4f700c0/research/**` |
+| I-03 Normalized scenario engine, area projections and line-level audit | done | session-f4f700c0 | `session-f4f700c0/scripts/**`, `session-f4f700c0/model/**`, `session-f4f700c0/audit/**` |
+| I-04 Privacy-safe dashboard and executive summary | done | session-f4f700c0 | `session-f4f700c0/*.html`, `session-f4f700c0/assets/**` |
+| I-05 Line-by-line dataset and site validation | done | session-f4f700c0 | `session-f4f700c0/tests/**`, `session-f4f700c0/scripts/check.py`, `session-f4f700c0/verification.json` |
+| I-06 Final integration, PR, merge, Pages deployment confirmation | in progress | session-f4f700c0 | Shared root landing/navigation/README/workflow, additive only; existing research files preserved; `COORDINATION.md` |
+
+Initial observation requiring review: multiple previous builds contain confident numerical recommendations from undisclosed private inputs and inconsistent verification claims. A passing internal-link or regex test is not proof that a statistic matches its cited official source. This session will distinguish primary-source verification, repository-only findings, user-provided facts, and explicitly illustrative assumptions. Unknown private values stay blank in published tables. No owner/parcel identifiers or raw private research will be committed or published.

@@ -5,6 +5,25 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 
 **Live site:** https://wingbangboozle1-lang.github.io/Jack2/
 
+## Current evidence-first dashboard (Session I)
+
+The current anonymized, source-linked dashboard is published at
+**https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/** and is the recommended starting point.
+It keeps unknown property/owner facts blank, separates official observations/projections/rules from analyst scenarios,
+and publishes a **Flagged for Review** page. The root landing page now points to this dashboard while preserving the
+historical root workbook and all parallel-session archives.
+
+Reproduce the current dashboard:
+
+```bash
+python3 session-f4f700c0/scripts/build_research.py
+python3 session-f4f700c0/scripts/analyze.py
+python3 session-f4f700c0/scripts/build_site.py
+python3 session-f4f700c0/scripts/audit.py
+python3 session-f4f700c0/scripts/check.py
+python3 -m unittest discover -s session-f4f700c0/tests -v
+```
+
 > A third, independently built dossier — Monte-Carlo over five strategies, ranked on risk-adjusted
 > after-tax wealth — is published from this same Pages deployment at
 > **https://wingbangboozle1-lang.github.io/Jack2/docs/** (source in `docs/`, engines in `model/`,

@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "as_of": "2026-11-08",
+    "note": "Official projections kept separate by agency/method; growth rates are derived."
+  },
+  "rows": [
+    {
+      "series": "DOF county population",
+      "start": "2025",
+      "end": "2030",
+      "start_value": 9853435,
+      "end_value": 9727305,
+      "total_change_pct": -1.28,
+      "cagr_pct": -0.257,
+      "source": "S05",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "DOF county population",
+      "start": "2025",
+      "end": "2035",
+      "start_value": 9853435,
+      "end_value": 9708647,
+      "total_change_pct": -1.469,
+      "cagr_pct": -0.148,
+      "source": "S05",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "DOF county population",
+      "start": "2025",
+      "end": "2040",
+      "start_value": 9853435,
+      "end_value": 9637524,
+      "total_change_pct": -2.191,
+      "cagr_pct": -0.148,
+      "source": "S05",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "DOF county households",
+      "start": "January 1, 2025",
+      "end": "January 1, 2030",
+      "start_value": 3546497,
+      "end_value": 3635392,
+      "total_change_pct": 2.507,
+      "cagr_pct": 0.496,
+      "source": "S47",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "DOF county households",
+      "start": "January 1, 2025",
+      "end": "January 1, 2035",
+      "start_value": 3546497,
+      "end_value": 3711086,
+      "total_change_pct": 4.641,
+      "cagr_pct": 0.455,
+      "source": "S47",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "DOF county households",
+      "start": "January 1, 2025",
+      "end": "January 1, 2040",
+      "start_value": 3546497,
+      "end_value": 3779507,
+      "total_change_pct": 6.57,
+      "cagr_pct": 0.425,
+      "source": "S47",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "SCAG county population planning forecast",
+      "start": "2019",
+      "end": "2030",
+      "start_value": 10046000,
+      "end_value": 10214000,
+      "total_change_pct": 1.672,
+      "cagr_pct": 0.151,
+      "source": "S08",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "SCAG county population planning forecast",
+      "start": "2019",
+      "end": "2050",
+      "start_value": 10046000,
+      "end_value": 10793000,
+      "total_change_pct": 7.436,
+      "cagr_pct": 0.232,
+      "source": "S08",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "SCAG county household planning forecast",
+      "start": "2019",
+      "end": "2030",
+      "start_value": 3393000,
+      "end_value": 3784000,
+      "total_change_pct": 11.524,
+      "cagr_pct": 0.996,
+      "source": "S08",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "SCAG county household planning forecast",
+      "start": "2019",
+      "end": "2050",
+      "start_value": 3393000,
+      "end_value": 4155000,
+      "total_change_pct": 22.458,
+      "cagr_pct": 0.656,
+      "source": "S08",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "SCAG county employment planning forecast",
+      "start": "2019",
+      "end": "2030",
+      "start_value": 5031000,
+      "end_value": 5277000,
+      "total_change_pct": 4.89,
+      "cagr_pct": 0.435,
+      "source": "S08",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    },
+    {
+      "series": "SCAG county employment planning forecast",
+      "start": "2019",
+      "end": "2050",
+      "start_value": 5031000,
+      "end_value": 5461000,
+      "total_change_pct": 8.547,
+      "cagr_pct": 0.265,
+      "source": "S08",
+      "note": "Derived from official projections; not a rent, value or cap-rate forecast."
+    }
+  ]
+}
