@@ -601,3 +601,41 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
+
+---
+
+# Session I (`session-4ed347de` / `arena/4ed347de-jack2`) — 2026-11-08 — IN PROGRESS
+
+Pinned by the Arena environment to branch `arena/4ed347de-jack2`. Sessions A–H are published and merged.
+This session **does not** rebuild or replace any prior site. Scope is strictly:
+
+- `session-4ed347de/**` (new, owned)
+- `COORDINATION.md` (append-only, this section)
+- `tools/build_site.py` — **one additive NAV/workspace row only** (so `workspaces.html` lists this workbook)
+
+Zero files owned by Sessions A–H are edited, overwritten or discarded.
+
+## Task Board (`session-4ed347de`)
+
+| Task ID | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| `4ed347de-T1` | Claim scope above; detect live parallel sessions; freeze non-overlapping file scope | `done` | `session-4ed347de` | `COORDINATION.md` (append-only) |
+| `4ed347de-T2` | Independent re-verification, dated **2026-11-08**, of the decision-critical values the published site relies on — pulled fresh from the official publisher, not copied from prior sessions | `in progress` | `session-4ed347de` | `session-4ed347de/data/sources.json`, `session-4ed347de/data/verification.json` |
+| `4ed347de-T3` | Line-by-line audit of the published root workbook (Sessions B/G/H) and its flagged register; record agreement / supersession / irregularity per row | `in progress` | `session-4ed347de` | `session-4ed347de/data/audit.json` |
+| `4ed347de-T4` | Decision dashboard: executive summary, decision synthesis, risk view, verification ledger, flagged-for-review page | `unclaimed` | — | `session-4ed347de/*.html`, `session-4ed347de/scripts/*.py` |
+| `4ed347de-T5` | Automated verifier (source-linked rows, blank-if-unverified, zero PII, zero broken links), PR to `main`, merge, confirm Pages | `unclaimed` | — | `session-4ed347de/scripts/verify.py`, `COORDINATION.md` |
+
+## Session detection (T1)
+
+`git ls-remote --heads origin` on 2026-11-08 lists 20 remote `arena/*` branches, several belonging to prior
+sessions that already merged (A–H). No *other* session was found writing to `session-4ed347de/**`.
+`gh pr list` shows two long-open PRs from earlier sessions (#14 Session E, #18 Session F) that were never
+merged. **This session did not touch, close or merge them** — they remain their owners' work, recorded here
+for the human reviewer. Repo root `main` is at `859ed0b` and GitHub Pages is `status: built`, source `main` / root.
+
+## Note on evidence access
+
+Sandbox `bash` egress is limited to GitHub/npm/PyPI, so `curl` cannot reach government hosts. All official
+sources below were read through the agent's page-fetch and search tools, which do reach them. Each value in
+`session-4ed347de/data/verification.json` records the URL, the exact published figure, the publication or
+`updated` date shown *on the page*, and the date read (`2026-11-08`).
