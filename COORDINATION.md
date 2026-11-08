@@ -610,8 +610,8 @@ Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-ja
 
 | Task | Status | Owner | Files / scope |
 |---|---|---|---|
-| I-01 Repository inventory, privacy and claim audit | in progress | session-f4f700c0 | `COORDINATION.md` (append), `session-f4f700c0/audit/**` |
-| I-02 Requirements and independently checked official evidence | unclaimed | session-f4f700c0 | `session-f4f700c0/data/**`, `session-f4f700c0/research/**` |
+| I-01 Repository inventory, privacy and claim audit | done | session-f4f700c0 | `COORDINATION.md` (append), `session-f4f700c0/audit/**` |
+| I-02 Requirements and independently checked official evidence | in progress | session-f4f700c0 | `session-f4f700c0/data/**`, `session-f4f700c0/research/**` |
 | I-03 Transparent scenario engine and decision/risk analysis | unclaimed | session-f4f700c0 | `session-f4f700c0/model/**` |
 | I-04 Privacy-safe dashboard and executive summary | unclaimed | session-f4f700c0 | `session-f4f700c0/*.html`, `session-f4f700c0/assets/**` |
 | I-05 Line-by-line dataset and site validation | unclaimed | session-f4f700c0 | `session-f4f700c0/tests/**`, `session-f4f700c0/verification.json` |
