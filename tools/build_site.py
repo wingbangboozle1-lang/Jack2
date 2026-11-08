@@ -55,6 +55,7 @@ NAV = [
     ("deployment.html", "Deployment"),
     ("archive.html", "Session A archive"),
     ("workspaces.html", "All workspaces"),
+    ("analysis/index.html", "Second model"),
 ]
 
 

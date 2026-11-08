@@ -1,0 +1,112 @@
+{
+  "id": "decision",
+  "recommended": "SELL \u2014 market the property now and close within 12\u201318 months, using a \u00a71031 exchange into a diversified net-lease position. Do not simply hold to the 2030\u20132035 expiry.",
+  "confidence": "Moderate-to-high on the ranking (sell > renew-then-sell > hold), low on the absolute numbers, because the going-in cap rate, rent and basis are unverified placeholders.",
+  "options": [
+    {
+      "id": "OPT-A",
+      "name": "Sell now (Q4 2026 \u2013 2027)",
+      "description": "List at the current bid for 5+ years of NNN term, close, and complete a \u00a71031 exchange into a diversified net-lease portfolio or DST interests.",
+      "model_median": 33.26,
+      "model_p10": 29.49,
+      "model_p90": 37.63,
+      "model_cagr": 0.0714,
+      "wins_vs_hold": 0.9817,
+      "pros": "Captures today's pricing while term remains. Immediately lifts cash yield from an assumed 6.0% to a benchmarked 7.3%. Removes single-tenant, single-asset, single-block risk. Defers gain under \u00a71031 instead of realising it. Removes the 2030\u20132035 rollover from the owner's life.",
+      "cons": "Gives up the land/redevelopment optionality and the (unverified) Prop 13 low basis. Requires a 1031 replacement within statutory deadlines, which is an execution risk. Brokerage and city transfer tax are paid now.",
+      "best_if": "The owner's objective is wealth preservation with manageable risk, and there is no multi-generational estate plan requiring the step-up in basis."
+    },
+    {
+      "id": "OPT-B",
+      "name": "Sell in 2027\u20132028 with 5+ years of term",
+      "description": "Hold for 12\u201324 more months of income, then market the asset while at least five years of term remain. The model does not separately price the delay; the figures shown are the mid-dated sell-now case, which the delay is assumed to approximate.",
+      "model_median": 33.26,
+      "model_p10": 29.49,
+      "model_p90": 37.63,
+      "model_cagr": 0.0714,
+      "wins_vs_hold": 0.9817,
+      "pros": "Nearly identical model outcome to OPT-A. Adds a year or two of rent, and allows time to obtain a broker opinion of value, an ALTA survey, a Phase I and a seismic study before going to market. A cleaner sale process.",
+      "cons": "Each year consumed is a year of lease term burned \u2014 the asset's main pricing lever. Rate risk is live: the 10-year has already moved 65 bp in 2026.",
+      "best_if": "Documents are incomplete (likely, given what is missing here) or the owner needs a tax-planning year."
+    },
+    {
+      "id": "OPT-C",
+      "name": "Negotiate an early extension, then sell",
+      "description": "Offer the tenant a 10-year extension at market rent with a modest TI contribution, then sell into a long-WALT bid.",
+      "model_median": 28.31,
+      "model_p10": 22.23,
+      "model_p90": 36.57,
+      "model_cagr": 0.0543,
+      "wins_vs_hold": 0.7713,
+      "pros": "If it works, the asset becomes a long-lease, bond-like product that trades at a tighter cap: the model gives it the fattest right tail of any single-asset strategy (P90 36.57). Keeps the land.",
+      "cons": "Requires tenant consent that the owner does not control. Any TI or rent concession is paid by the owner. It doubles down on a franchisor that is closing 50\u2013100 units a year.",
+      "best_if": "The tenant will sign a 10-year extension at or above market with a creditworthy guaranty, and the owner wants to keep the real estate."
+    },
+    {
+      "id": "OPT-D",
+      "name": "Hold to expiry (2030\u20132035), then decide",
+      "description": "Collect rent to expiry and deal with the rollover when it arrives.",
+      "model_median": 26.7,
+      "model_p10": 22.19,
+      "model_p90": 29.58,
+      "model_cagr": 0.0481,
+      "wins_vs_hold": 0.0,
+      "pros": "No transaction cost now; keeps the (unverified) low Prop 13 basis and any estate-planning step-up. Highest cumulative rent if the tenant survives.",
+      "cons": "Worst median and worst downside of the four. Concentrates the entire outcome on a tenant with a 19\u201340% modelled default probability and a franchisor in retrenchment. By 2030 the asset may have only a few years of term \u2014 the least liquid point in a net-lease asset's life.",
+      "best_if": "The owner is elderly, intends to hold until death for a basis step-up, and does not need liquidity or diversification."
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G1 \u2014 Verify the lease",
+      "trigger": "Lease, amendments, guaranty and estoppel obtained",
+      "action_if_pass": "Replace the 2030\u20132035 placeholder with actual dates, options and escalators, then re-run the model.",
+      "action_if_fail": "Do not sign anything; a sale cannot be marketed without an estoppel."
+    },
+    {
+      "gate": "G2 \u2014 Verify the tenant",
+      "trigger": "Confirm franchisee vs. corporate; obtain franchisee financials and the franchisor's closure-list answer",
+      "action_if_pass": "If a creditworthy operator with >5 years of term: OPT-B becomes viable.",
+      "action_if_fail": "If the unit is on a closure list or the franchisee is stressed: accelerate to OPT-A."
+    },
+    {
+      "gate": "G3 \u2014 Broker opinion of value",
+      "trigger": "Two independent BOVs quoting a going-in cap",
+      "action_if_pass": "If the indicated cap is 6.5% or higher, the sell-now advantage narrows but persists; re-run the model with the real cap.",
+      "action_if_fail": "If the indicated cap is below 5.5%, selling is even more clearly correct."
+    },
+    {
+      "gate": "G4 \u2014 Replacement property",
+      "trigger": "Identified 1031 replacement yielding \u22657.0% with investment-grade or multi-tenant credit",
+      "action_if_pass": "Execute OPT-A.",
+      "action_if_fail": "If no replacement can be identified, compare a taxable sale plus a diversified liquid portfolio before proceeding \u2014 do not exchange into a worse asset just to defer tax."
+    },
+    {
+      "gate": "G5 \u2014 Estate objective",
+      "trigger": "Owner's age, health and estate plan",
+      "action_if_pass": "If the intent is a hold-until-death basis step-up, OPT-D can dominate on an after-tax, multi-generational basis and the ranking above does not apply.",
+      "action_if_fail": "Proceed with OPT-A or OPT-B."
+    }
+  ],
+  "tax_strategy": [
+    "Any sale should be structured as a \u00a71031 exchange: the gain is deferred, not forgiven, and the old basis carries into the replacement property.",
+    "Expect unrecaptured \u00a71250 gain (the depreciation already taken) to be taxed at up to 25%, with long-term capital gain at up to 20% plus any net investment income tax, on the portion that is not deferred.",
+    "\u00a71031 applies to real property only. A diversified net-lease position can be assembled through a DST or a small portfolio of net-leased assets; both are real property.",
+    "California does not follow every federal deferral automatically. A California basis-tracking form is required when replacement property is outside California \u2014 confirm with a CPA before signing.",
+    "Do not let the tax tail wag the investment dog: exchanging into a worse asset to defer tax converts a good decision into a bad one."
+  ],
+  "risk_budget": {
+    "statement": "The recommended path is the only one of the four whose modelled 10th-percentile outcome stays above today's value (P10 29.33 vs a starting value of ~16.67 per $1 of NOI). Every hold strategy carries a materially wider range and a 4.5\u20135.7% median compound return versus 7.1%.",
+    "max_single_tenant_exposure": "Sell down to zero single-tenant exposure at this location; replace with a portfolio in which no single tenant is material.",
+    "liquidity": "Keep the 1031 replacement in assets that can be sold or fractionalised; DST interests are illiquid for their term, so size the position to the owner's liquidity needs.",
+    "insurance": "Before closing, obtain a seismic study and a binding property quote. If either is unavailable on commercial terms, that is itself a sell signal."
+  },
+  "what_would_change_the_answer": [
+    "A verified going-in cap materially above 7.0% (i.e. the asset is cheaper than assumed) would make holding competitive.",
+    "A signed 10-year extension with a creditworthy guarantor at market rent would move OPT-C to the top of the ranking.",
+    "A credible redevelopment path \u2014 rezoning or a general-plan designation that supports a much higher-and-better use \u2014 would create land value not captured by the income model.",
+    "A hold-until-death estate objective makes the after-tax, multi-generational comparison decisive, and this model does not capture it.",
+    "A sustained fall in long Treasury yields back toward 3.5% would compress cap rates and reward holding \u2014 but it would also raise the value at which the owner could sell."
+  ],
+  "privacy_note": "This recommendation contains no address, parcel number, owner identity, rent, basis or financial statement. It is written so that it can be published without exposing OWNER-01."
+}

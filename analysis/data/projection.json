@@ -1,0 +1,541 @@
+{
+  "generated_at": "2026-11-06T15:00:00Z",
+  "seed": 20261106,
+  "paths_per_case": 20000,
+  "horizon_years": 10.0,
+  "units": "Terminal wealth per $1.00 of current annual NOI. NPV of all cash flows and the terminal sale, compounded at the 10-yr Treasury (4.84%).",
+  "anchors": [
+    {
+      "key": "risk_free",
+      "value": 0.0484,
+      "source_id": "S-TREASURY",
+      "note": "10-yr Treasury par yield, 2026-11-05"
+    },
+    {
+      "key": "cpi_la",
+      "value": 0.037,
+      "source_id": "S-BLS-CPI",
+      "note": "CPI-U Los Angeles, 12 months to Sept 2026"
+    },
+    {
+      "key": "cpi_food_away",
+      "value": 0.028,
+      "source_id": "S-BLS-CPI",
+      "note": "Food away from home, 12 months to Sept 2026"
+    },
+    {
+      "key": "diversified_yield",
+      "value": 0.073,
+      "source_id": "S-O-10K",
+      "note": "Realty Income 2025 initial weighted-average cash yield"
+    },
+    {
+      "key": "diversified_growth",
+      "value": 0.013,
+      "source_id": "S-O-10K",
+      "note": "Realty Income 2025 same-store rental revenue growth"
+    }
+  ],
+  "assumptions": [
+    {
+      "key": "going_in_cap",
+      "base": 0.06,
+      "range": [
+        0.052,
+        0.07
+      ],
+      "basis": "Net-lease pricing band for a 3-9 year NNN QSR in LA. No government publisher produces single-asset cap rates; anchored to the 4.84% 10-yr Treasury plus a 110-215 bp risk premium, and cross-checked against diversified net-lease acquisition yields of 7.0-7.3% (SEC filings).",
+      "type": "model_assumption"
+    },
+    {
+      "key": "exit_cap_2036",
+      "base": 0.065,
+      "range": [
+        0.05,
+        0.09
+      ],
+      "basis": "Exit cap in 2036 = today's cap plus term/rate drift. Range spans 50 bp of compression to 250 bp of expansion.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "contract_rent_growth",
+      "base": 0.025,
+      "range": [
+        0.005,
+        0.045
+      ],
+      "basis": "Typical NNN escalator of 2-3%/yr. CPI-U Los Angeles is 3.7%, so a 2.5% fixed bump is a real (inflation-eroding) escalator.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "market_rent_growth",
+      "base": 0.03,
+      "range": [
+        0.005,
+        0.055
+      ],
+      "basis": "Retail market rent trend for the sub-market; CPI-anchored.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "nonrecoverable_opex",
+      "base": 0.04,
+      "range": [
+        0.04,
+        0.04
+      ],
+      "basis": "4% of NOI kept back for structural/roof/parking-lot reserves and non-recoverable CAM leakage, even under a true NNN lease.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "sale_cost",
+      "base": 0.025,
+      "range": [
+        0.025,
+        0.025
+      ],
+      "basis": "2.0% brokerage plus ~0.45% LA City transfer tax and closing costs. Measure ULA (4%/5.5%) is excluded because it does not bite below $5.4M. [S-LA-ULA]",
+      "type": "model_assumption"
+    },
+    {
+      "key": "renewal_prob",
+      "base": 0.55,
+      "range": [
+        0.35,
+        0.75
+      ],
+      "basis": "Uniform draw 35-75%. The tenant is most likely a franchisee (93% of the Jack in the Box system is franchised) and the brand is executing 50-100 closures in FY2026, so renewal is not the owner's to grant.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "renewal_term",
+      "base": 10,
+      "range": [
+        10,
+        10
+      ],
+      "basis": "Assumed 10-year extension with 2-3% bumps.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "renewal_cost",
+      "base": 0.02,
+      "range": [
+        0.02,
+        0.02
+      ],
+      "basis": "2% of annual rent for renewal TI/leasing commissions.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "vacancy_penalty",
+      "base": 0.0125,
+      "range": [
+        0.0125,
+        0.0125
+      ],
+      "basis": "+125 bp to exit cap when selling an asset facing a rollover (buyer prices 12 months of downtime and TI).",
+      "type": "model_assumption"
+    },
+    {
+      "key": "relet_cost",
+      "base": 0.06,
+      "range": [
+        0.06,
+        0.06
+      ],
+      "basis": "6% of value for 12 months of lost rent plus TI/LC on a re-let.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "walt_premium",
+      "base": 0.0035,
+      "range": [
+        0.0035,
+        0.0035
+      ],
+      "basis": "-35 bp to exit cap for a freshly renewed 10-yr lease (buyers pay for weighted-average lease term).",
+      "type": "model_assumption"
+    },
+    {
+      "key": "p_quake",
+      "base": 0.015,
+      "range": [
+        0.015,
+        0.015
+      ],
+      "basis": "Annual probability that a damaging earthquake causes >$1M of loss at this location. Southern California sits in the highest USGS hazard class [S-USGS-NSHM]; 1.5%/yr is a modelling judgement, not an official USGS probability for this parcel.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "quake_loss",
+      "base": 0.15,
+      "range": [
+        0.15,
+        0.15
+      ],
+      "basis": "15% of value lost to deductible, uninsured code-upgrade and 6 months of business interruption.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "p_disruption",
+      "base": 0.03,
+      "range": [
+        0.03,
+        0.03
+      ],
+      "basis": "Annual probability of a regional shock (smoke event, wildfire-driven disruption, civil disturbance, extended outage) costing 3% of income. CAL FIRE counted 8,232 wildfires and 16,627 structures destroyed in 2025 alone [S-CALFIRE-2025].",
+      "type": "model_assumption"
+    },
+    {
+      "key": "disruption_loss",
+      "base": 0.03,
+      "range": [
+        0.03,
+        0.03
+      ],
+      "basis": "3% of that year's income.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "p_cap_shock",
+      "base": 0.06,
+      "range": [
+        0.06,
+        0.06
+      ],
+      "basis": "Annual probability of a permanent +100 bp repricing of the exit cap.",
+      "type": "model_assumption"
+    },
+    {
+      "key": "p_tenant_default",
+      "base": 0.05,
+      "range": [
+        0.05,
+        0.05
+      ],
+      "basis": "Annual hazard that the franchisee stops paying before lease expiry. Jack in the Box has closed 86 units in FY2025 and guided to 50-100 more in FY2026, and reported higher franchise bad-debt expense [S-JACK-Q4FY25][S-JACK-Q3FY26].",
+      "type": "model_assumption"
+    },
+    {
+      "key": "p_div_shock",
+      "base": 0.03,
+      "range": [
+        0.03,
+        0.03
+      ],
+      "basis": "Annual probability of a +60 bp repricing for the diversified portfolio (portfolio effect reduces single-asset dispersion).",
+      "type": "model_assumption"
+    }
+  ],
+  "cases": [
+    {
+      "id": "EXP-2030",
+      "expiry_label": "Lease expires 2030 (earliest in the stated window)",
+      "years_to_expiry": 3.15,
+      "results": {
+        "A": {
+          "mean": 33.3899,
+          "median": 33.2161,
+          "p10": 29.332,
+          "p25": 31.1296,
+          "p75": 35.4892,
+          "p90": 37.6638,
+          "prob_below_todays_value": 0.0,
+          "cagr_p50": 0.0713
+        },
+        "B": {
+          "mean": 26.6427,
+          "median": 27.2391,
+          "p10": 22.5688,
+          "p25": 25.35,
+          "p75": 28.4129,
+          "p90": 29.3809,
+          "prob_below_todays_value": 0.0001,
+          "cagr_p50": 0.0503
+        },
+        "C": {
+          "mean": 29.9214,
+          "median": 28.9543,
+          "p10": 22.6197,
+          "p25": 26.2232,
+          "p75": 34.1553,
+          "p90": 37.6903,
+          "prob_below_todays_value": 0.0001,
+          "cagr_p50": 0.0567
+        },
+        "win_rates": {
+          "A_beats_B": 0.9933,
+          "A_beats_C": 0.7231,
+          "C_beats_B": 0.4491
+        },
+        "diagnostics": {
+          "renewal_rate": 0.4496,
+          "default_rate": 0.1879,
+          "quake_rate": 0.0568,
+          "median_going_in_cap": 0.0601,
+          "median_exit_cap": 0.0675
+        }
+      }
+    },
+    {
+      "id": "EXP-2032",
+      "expiry_label": "Lease expires mid-2032 (mid-point of the stated window)",
+      "years_to_expiry": 5.65,
+      "results": {
+        "A": {
+          "mean": 33.4331,
+          "median": 33.2634,
+          "p10": 29.4863,
+          "p25": 31.1977,
+          "p75": 35.4835,
+          "p90": 37.6257,
+          "prob_below_todays_value": 0.0,
+          "cagr_p50": 0.0714
+        },
+        "B": {
+          "mean": 26.2131,
+          "median": 26.7003,
+          "p10": 22.1932,
+          "p25": 24.13,
+          "p75": 28.3231,
+          "p90": 29.5815,
+          "prob_below_todays_value": 0.0005,
+          "cagr_p50": 0.0481
+        },
+        "C": {
+          "mean": 28.897,
+          "median": 28.3148,
+          "p10": 22.2289,
+          "p25": 24.4732,
+          "p75": 32.7661,
+          "p90": 36.5734,
+          "prob_below_todays_value": 0.0005,
+          "cagr_p50": 0.0543
+        },
+        "win_rates": {
+          "A_beats_B": 0.9817,
+          "A_beats_C": 0.7713,
+          "C_beats_B": 0.399
+        },
+        "diagnostics": {
+          "renewal_rate": 0.399,
+          "default_rate": 0.2635,
+          "quake_rate": 0.0879,
+          "median_going_in_cap": 0.0601,
+          "median_exit_cap": 0.0688
+        }
+      }
+    },
+    {
+      "id": "EXP-2035",
+      "expiry_label": "Lease expires 2035 (latest in the stated window)",
+      "years_to_expiry": 9.15,
+      "results": {
+        "A": {
+          "mean": 33.4225,
+          "median": 33.2834,
+          "p10": 29.4355,
+          "p25": 31.1977,
+          "p75": 35.497,
+          "p90": 37.5864,
+          "prob_below_todays_value": 0.0,
+          "cagr_p50": 0.0715
+        },
+        "B": {
+          "mean": 25.9071,
+          "median": 26.0141,
+          "p10": 21.7974,
+          "p25": 23.5759,
+          "p75": 28.1513,
+          "p90": 29.9105,
+          "prob_below_todays_value": 0.0004,
+          "cagr_p50": 0.0454
+        },
+        "C": {
+          "mean": 27.7627,
+          "median": 27.0426,
+          "p10": 21.8022,
+          "p25": 23.6978,
+          "p75": 31.1909,
+          "p90": 35.0248,
+          "prob_below_todays_value": 0.0004,
+          "cagr_p50": 0.0495
+        },
+        "win_rates": {
+          "A_beats_B": 0.9596,
+          "A_beats_C": 0.8215,
+          "C_beats_B": 0.3306
+        },
+        "diagnostics": {
+          "renewal_rate": 0.3307,
+          "default_rate": 0.3992,
+          "quake_rate": 0.1426,
+          "median_going_in_cap": 0.0601,
+          "median_exit_cap": 0.0712
+        }
+      }
+    }
+  ],
+  "breakeven_exit_cap": {
+    "EXP-2030": 0.0468,
+    "EXP-2032": 0.0471,
+    "EXP-2035": 0.0472,
+    "meaning": "The 2036 exit cap at which holding to expiry equals selling now. If you believe the 2036 exit cap will be BELOW this number, holding wins. Above it, selling now wins."
+  },
+  "breakeven_grid": [
+    {
+      "going_in_cap": 0.05,
+      "years_to_expiry": 3.15,
+      "breakeven_exit_cap_2036": 0.0353
+    },
+    {
+      "going_in_cap": 0.05,
+      "years_to_expiry": 5.65,
+      "breakeven_exit_cap_2036": 0.0345
+    },
+    {
+      "going_in_cap": 0.05,
+      "years_to_expiry": 9.15,
+      "breakeven_exit_cap_2036": 0.0324
+    },
+    {
+      "going_in_cap": 0.055,
+      "years_to_expiry": 3.15,
+      "breakeven_exit_cap_2036": 0.0409
+    },
+    {
+      "going_in_cap": 0.055,
+      "years_to_expiry": 5.65,
+      "breakeven_exit_cap_2036": 0.0406
+    },
+    {
+      "going_in_cap": 0.055,
+      "years_to_expiry": 9.15,
+      "breakeven_exit_cap_2036": 0.0394
+    },
+    {
+      "going_in_cap": 0.06,
+      "years_to_expiry": 3.15,
+      "breakeven_exit_cap_2036": 0.0468
+    },
+    {
+      "going_in_cap": 0.06,
+      "years_to_expiry": 5.65,
+      "breakeven_exit_cap_2036": 0.0471
+    },
+    {
+      "going_in_cap": 0.06,
+      "years_to_expiry": 9.15,
+      "breakeven_exit_cap_2036": 0.0472
+    },
+    {
+      "going_in_cap": 0.065,
+      "years_to_expiry": 3.15,
+      "breakeven_exit_cap_2036": 0.0528
+    },
+    {
+      "going_in_cap": 0.065,
+      "years_to_expiry": 5.65,
+      "breakeven_exit_cap_2036": 0.0538
+    },
+    {
+      "going_in_cap": 0.065,
+      "years_to_expiry": 9.15,
+      "breakeven_exit_cap_2036": 0.0559
+    },
+    {
+      "going_in_cap": 0.07,
+      "years_to_expiry": 3.15,
+      "breakeven_exit_cap_2036": 0.0591
+    },
+    {
+      "going_in_cap": 0.07,
+      "years_to_expiry": 5.65,
+      "breakeven_exit_cap_2036": 0.061
+    },
+    {
+      "going_in_cap": 0.07,
+      "years_to_expiry": 9.15,
+      "breakeven_exit_cap_2036": 0.0657
+    }
+  ],
+  "sensitivity_hold_minus_sell": [
+    {
+      "going_in_cap": 0.055,
+      "exit_cap_2036": 0.055,
+      "hold_minus_sell": -6.0423
+    },
+    {
+      "going_in_cap": 0.055,
+      "exit_cap_2036": 0.06,
+      "hold_minus_sell": -6.932
+    },
+    {
+      "going_in_cap": 0.055,
+      "exit_cap_2036": 0.065,
+      "hold_minus_sell": -7.7535
+    },
+    {
+      "going_in_cap": 0.055,
+      "exit_cap_2036": 0.07,
+      "hold_minus_sell": -8.5144
+    },
+    {
+      "going_in_cap": 0.055,
+      "exit_cap_2036": 0.075,
+      "hold_minus_sell": -9.2211
+    },
+    {
+      "going_in_cap": 0.06,
+      "exit_cap_2036": 0.055,
+      "hold_minus_sell": -3.6877
+    },
+    {
+      "going_in_cap": 0.06,
+      "exit_cap_2036": 0.06,
+      "hold_minus_sell": -4.5231
+    },
+    {
+      "going_in_cap": 0.06,
+      "exit_cap_2036": 0.065,
+      "hold_minus_sell": -5.2964
+    },
+    {
+      "going_in_cap": 0.06,
+      "exit_cap_2036": 0.07,
+      "hold_minus_sell": -6.0143
+    },
+    {
+      "going_in_cap": 0.06,
+      "exit_cap_2036": 0.075,
+      "hold_minus_sell": -6.6825
+    },
+    {
+      "going_in_cap": 0.065,
+      "exit_cap_2036": 0.055,
+      "hold_minus_sell": -1.7606
+    },
+    {
+      "going_in_cap": 0.065,
+      "exit_cap_2036": 0.06,
+      "hold_minus_sell": -2.5467
+    },
+    {
+      "going_in_cap": 0.065,
+      "exit_cap_2036": 0.065,
+      "hold_minus_sell": -3.2759
+    },
+    {
+      "going_in_cap": 0.065,
+      "exit_cap_2036": 0.07,
+      "hold_minus_sell": -3.9543
+    },
+    {
+      "going_in_cap": 0.065,
+      "exit_cap_2036": 0.075,
+      "hold_minus_sell": -4.5869
+    }
+  ],
+  "sensitivity_note": "Deterministic, base assumptions, 5.6-year expiry. Positive means holding to expiry produces more terminal wealth than selling now."
+}

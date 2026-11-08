@@ -1,0 +1,214 @@
+{
+  "retrieved_at": "2026-11-06",
+  "note": "Every row in every table resolves its source through this registry. Only official publishers (U.S. federal, State of California, County of Los Angeles, City of Los Angeles, SEC/EDGAR) appear here. One 'SRC-INPUT' pseudo-source covers owner-stated facts that have no public record, and every such row is flagged.",
+  "sources": [
+    {
+      "id": "S-BLS-EAG",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "title": "Economy at a Glance — Los Angeles-Long Beach-Anaheim, CA (data extracted 2026-11-05)",
+      "url": "https://www.bls.gov/eag/eag.ca_losangeles_msa.htm",
+      "type": "official",
+      "covers": "Unemployment, payroll employment by sector, CPI"
+    },
+    {
+      "id": "S-BLS-CPI",
+      "publisher": "U.S. Bureau of Labor Statistics, Western Information Office",
+      "title": "Consumer Price Index, Los Angeles area — September 2026 (released 2026-10-14)",
+      "url": "https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm",
+      "type": "official",
+      "covers": "CPI-U detail: food away from home, shelter, energy"
+    },
+    {
+      "id": "S-CENSUS-CITY",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts — Los Angeles city, California (V2025 population; 2020-2024 ACS)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia/PST045225",
+      "type": "official",
+      "covers": "Population, income, poverty, education, housing, retail sales"
+    },
+    {
+      "id": "S-CENSUS-COUNTY",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts — Los Angeles County, California (V2025 population; 2020-2024 ACS)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045225",
+      "type": "official",
+      "covers": "Population, income, poverty, establishments, retail sales"
+    },
+    {
+      "id": "S-TREASURY",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Daily Treasury Par Yield Curve Rates — November 2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+      "type": "official",
+      "covers": "Constant-maturity Treasury yields used as the discount-rate anchor"
+    },
+    {
+      "id": "S-FED-OMO",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Open Market Operations — FOMC target rate history",
+      "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "type": "official",
+      "covers": "Federal funds target range and 2026 policy change"
+    },
+    {
+      "id": "S-JACK-Q4FY25",
+      "publisher": "U.S. Securities and Exchange Commission — Jack in the Box Inc. Form 8-K, Exhibit 99.1",
+      "title": "Jack in the Box Inc. Reports Fourth Quarter and Full-Year 2025 Earnings (2025-11-19)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000070/ex991-q425earningsrelease.htm",
+      "type": "official",
+      "covers": "Same-store sales, unit counts, closures, FY2026 guidance"
+    },
+    {
+      "id": "S-JACK-Q3FY26",
+      "publisher": "U.S. Securities and Exchange Commission — Jack in the Box Inc. Form 8-K, Exhibit 99.1",
+      "title": "Jack in the Box Inc. Reports Third Quarter 2026 Earnings (2026-08-12)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+      "type": "official",
+      "covers": "Latest unit count, same-store sales, Del Taco divestiture completion, refinancing"
+    },
+    {
+      "id": "S-JACK-10K",
+      "publisher": "U.S. Securities and Exchange Commission — Jack in the Box Inc. Form 10-K (FY2025)",
+      "title": "Jack in the Box Inc. Annual Report on Form 10-K for fiscal year ended 2025-09-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+      "type": "official",
+      "covers": "Lease structure, subleasing to franchisees, restaurant AUV, segment data"
+    },
+    {
+      "id": "S-O-10K",
+      "publisher": "U.S. Securities and Exchange Commission — Realty Income Corp. (CIK 726728)",
+      "title": "Realty Income Corp. FY2025 Form 10-K / earnings 8-K (filed 2026-02-24), accession 0000726728-26-000011",
+      "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/0000726728-26-000011-index.htm",
+      "type": "official",
+      "covers": "Net-lease acquisition cash yields and same-store rent growth (diversified benchmark)"
+    },
+    {
+      "id": "S-IRS-946",
+      "publisher": "Internal Revenue Service",
+      "title": "Publication 946 (2025), How To Depreciate Property",
+      "url": "https://www.irs.gov/publications/p946",
+      "type": "official",
+      "covers": "39-year nonresidential recovery period; bonus depreciation rules"
+    },
+    {
+      "id": "S-IRS-1031",
+      "publisher": "Internal Revenue Service",
+      "title": "Like-kind exchanges — Real estate tax tips",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+      "type": "official",
+      "covers": "IRC §1031 deferral, real-property-only rule"
+    },
+    {
+      "id": "S-IRS-409",
+      "publisher": "Internal Revenue Service",
+      "title": "Topic no. 409, Capital gains and losses",
+      "url": "https://www.irs.gov/taxtopics/tc409",
+      "type": "official",
+      "covers": "Long-term capital gain rates; 25% max on unrecaptured §1250 gain; NIIT reference"
+    },
+    {
+      "id": "S-RTC-93",
+      "publisher": "State of California — Legislative Information (Revenue and Taxation Code)",
+      "title": "Revenue and Taxation Code §93 — Property tax rates ($4 per $100 at 25% assessment ratio)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=93",
+      "type": "official",
+      "covers": "The 1% ad valorem levy created by Article XIII A"
+    },
+    {
+      "id": "S-RTC-51",
+      "publisher": "State of California — Legislative Information (Revenue and Taxation Code)",
+      "title": "Revenue and Taxation Code §51 — Base year value; 2% annual inflation factor cap",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=51",
+      "type": "official",
+      "covers": "Assessment growth cap; decline-in-value and disaster adjustments"
+    },
+    {
+      "id": "S-LA-ULA",
+      "publisher": "City of Los Angeles, Office of Finance",
+      "title": "Real Property Transfer Tax and Measure ULA FAQ (thresholds updated for closings after 2026-06-30)",
+      "url": "https://finance.lacity.gov/faq/measure-ula",
+      "type": "official",
+      "covers": "City transfer tax 0.45%; ULA 4% / 5.5% thresholds"
+    },
+    {
+      "id": "S-CALFIRE-2025",
+      "publisher": "CAL FIRE (California Department of Forestry and Fire Protection)",
+      "title": "2025 Fire Season Incident Archive",
+      "url": "https://www.fire.ca.gov/incidents/2025/",
+      "type": "official",
+      "covers": "2025 wildfire acreage, fatalities, structures destroyed; Palisades/Eaton/Hughes"
+    },
+    {
+      "id": "S-FEMA-4856",
+      "publisher": "Federal Emergency Management Agency",
+      "title": "DR-4856-CA California Wildfires and Straight-line Winds",
+      "url": "https://www.fema.gov/disaster/4856",
+      "type": "official",
+      "covers": "January 2025 Los Angeles County disaster declaration"
+    },
+    {
+      "id": "S-USGS-NSHM",
+      "publisher": "U.S. Geological Survey, Earthquake Hazards Program",
+      "title": "National Seismic Hazard Model",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/national-seismic-hazard-model",
+      "type": "official",
+      "covers": "Seismic hazard basis for the Los Angeles basin"
+    },
+    {
+      "id": "S-METRO-DLINE",
+      "publisher": "Los Angeles County Metropolitan Transportation Authority (Metro)",
+      "title": "Metro D Line Subway Extension — Section 1 opened May 8, 2026",
+      "url": "https://www.metro.net/projects/westside/",
+      "type": "official",
+      "covers": "Transit investment along the Wilshire corridor"
+    },
+    {
+      "id": "S-DOF",
+      "publisher": "State of California, Department of Finance",
+      "title": "Population Projections (Baseline 2024, Vintage 2026)",
+      "url": "https://dof.ca.gov/forecasting/demographics/projections/",
+      "type": "official",
+      "covers": "State/county population projections (published as spreadsheet files)"
+    },
+    {
+      "id": "S-ASSESSOR",
+      "publisher": "Los Angeles County Assessor",
+      "title": "Assessor portal — decline-in-value (Prop 8) and disaster relief programs",
+      "url": "https://assessor.lacounty.gov/",
+      "type": "official",
+      "covers": "Assessment relief mechanics for value decline and disaster damage"
+    },
+    {
+      "id": "S-LAHSA",
+      "publisher": "Los Angeles Homeless Services Authority",
+      "title": "Greater Los Angeles Homeless Count",
+      "url": "https://www.lahsa.org/",
+      "type": "official",
+      "covers": "Point-in-time homelessness estimates (2026 results published 2026-07-24)"
+    },
+    {
+      "id": "S-CDE",
+      "publisher": "California Department of Education",
+      "title": "DataQuest / School Accountability Report Cards",
+      "url": "https://www.cde.ca.gov/ds/",
+      "type": "official",
+      "covers": "School enrollment and performance data (not retrieved in this pass)"
+    },
+    {
+      "id": "S-DIR",
+      "publisher": "California Department of Industrial Relations",
+      "title": "Minimum wage / Fast Food Council",
+      "url": "https://www.dir.ca.gov/dlse/",
+      "type": "official",
+      "covers": "Wage floors relevant to QSR tenant economics (page not retrievable in this pass)"
+    },
+    {
+      "id": "SRC-INPUT",
+      "publisher": "OWNER-01 brief (internal, no public record)",
+      "title": "Owner-stated parameters, stored de-identified",
+      "url": "",
+      "type": "input",
+      "covers": "Asset type, brand, approximate sub-market, lease-expiry window"
+    }
+  ]
+}
