@@ -601,3 +601,43 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
+
+---
+
+# Session I (`session-50dbe97d` / `arena/50dbe97d-jack2`) — 2026-11-08
+
+## Claim (written and pushed before any work, per the board rules)
+
+| Task ID | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| `50dbe97d-T0` | Read board, audit repo state, claim scope | `done` | `session-50dbe97d` | `COORDINATION.md` (append-only) |
+| `50dbe97d-T1` | **Live re-verification on 2026-11-08** of the root ledger (`data/metrics.json`, 87 rows) against the official source for each row; correct only what the live source actually says; leave unverifiable cells blank | `in progress` | `session-50dbe97d` | `data/metrics.json`, `data/sources.json`, `session-50dbe97d/verification/*.json` |
+| `50dbe97d-T2` | Repo review line by line: stale vintages, dead links, schema/consistency defects, and an irregularities register with evidence | `in progress` | `session-50dbe97d` | `session-50dbe97d/data/irregularities.json`, `flagged.html` (via generator) |
+| `50dbe97d-T3` | Projection system refresh: re-run the deterministic model on re-verified inputs; publish the projection grid 2026–2040 with formulas | `unclaimed` | — | `tools/model.py`, `data/model_output.json`, `projection-model.html` |
+| `50dbe97d-T4` | Risk register for every decision + black-swan coverage | `unclaimed` | — | `data/risks.json`, `risks.html` |
+| `50dbe97d-T5` | Executive summary refresh | `unclaimed` | — | `executive-summary.html` |
+| `50dbe97d-T6` | Site integration: navigation, no broken links, Pages deploy | `unclaimed` | — | `tools/build_site.py`, `index.html`, `workspaces.html` |
+| `50dbe97d-T7` | PR to `main`, merge, confirm Pages | `unclaimed` | — | this file |
+
+**Scope discipline.** This session edits only the files listed above. It does **not** edit, delete or
+overwrite any file under `session-*/` or `docs/` belonging to Sessions A–H, and it does not touch
+`research/*` notes owned by earlier sessions. Where the root ledger must change, the change is made by
+editing `data/*.json` and **regenerating** the HTML with `tools/build_site.py`, so the published page and
+the data can never drift apart.
+
+## Board state found on arrival (2026-11-08)
+
+- `main` at `859ed0b` (merge of PR #20). GitHub Pages `status: built`, latest build `1349903206` for
+  `859ed0b`, `build_type: legacy`, source `main /`, HTTPS enforced.
+- Eight prior workbooks are published from the single Pages site: root (Session B), `docs/` (C),
+  `session-a3a8ec08/` (D), `session-b4ec6128/` (E), `session-5bb36a1b/` (F), `session-e618ace7/` (G),
+  `session-18dacdea/` (H), `session-1944e5a3/` (A, archived). `workspaces.html` indexes them.
+- Five PRs are still **open** and **conflicting** (`#18`, `#14`, `#10`, `#6`, `#5`). Their branches carry
+  no commits that are not already superseded; they are recorded under `50dbe97d-T2` rather than merged.
+- Root checks pass on arrival: `tools/check_site.py` → `all checks passed` (16 root pages, 87 including
+  the archive, 23 sources, 87 metric rows, 24 risk rows).
+
+## Handoff log
+
+- **2026-11-08, Session I**: started. Claimed T0–T2 immediately; pushed this claim as its own commit
+  before beginning verification so other sessions can see the scope.
