@@ -999,7 +999,7 @@ session's page would hide the defect rather than disclose it.</p>
 def build_workspaces():
     rows = [
         ["<code>session-6ad87c21/</code>",
-         "Session I &mdash; 2026-11-08 independent re-verification: 17 official sources re-read on the access date, "
+         "Session J &mdash; 2026-11-08 independent re-verification: 17 official sources re-read on the access date, "
          "114 fact rows (92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank), 31-risk BAU and "
          "black-swan register, six strategies scored on a seeded 10,000-trial certainty equivalent, and a "
          "line-by-line audit of this repository",

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Session I projection engine - Central Los Angeles Jack in the Box on an NNN lease.
+Session J projection engine - Central Los Angeles Jack in the Box on an NNN lease.
 
 Design rules
 ------------

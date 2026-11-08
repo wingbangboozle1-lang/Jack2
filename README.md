@@ -174,7 +174,7 @@ Two findings worth knowing before reading anything else in this repository:
   published side by side on the Session G tenant page (flagged R-08).
 
 
-## Session I dashboard (`session-6ad87c21/`) — 2026-11-08
+## Session J dashboard (`session-6ad87c21/`) — 2026-11-08
 
 A ninth, independent session (`arena/6ad87c21-jack2`) re-verified the evidence base from scratch on **2026-11-08**
 and published a clean decision dashboard at

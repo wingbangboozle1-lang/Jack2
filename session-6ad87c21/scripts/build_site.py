@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Session I site generator - builds the clean decision dashboard in session-6ad87c21/.
+Session J site generator - builds the clean decision dashboard in session-6ad87c21/.
 
 Hard rules enforced here and in verify.py:
   * a "verified" or "computed" fact must carry a source id that resolves to a real URL;
@@ -120,7 +120,7 @@ def page(slug, title, body, subtitle="", eyebrow=""):
 {body}
 </main>
 <footer class="wrap">
-  <p><b>Session I dashboard</b> &middot; built {ACCESS_DATE} &middot; every published value carries a link to the official source it was read from.
+  <p><b>Session J dashboard</b> &middot; built {ACCESS_DATE} &middot; every published value carries a link to the official source it was read from.
   Values that could not be confirmed are blank and listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
   <p>Internal decision support for the property owner. Not an appraisal, not tax advice, not investment advice.
   The parcel, owner, tenant entity and all rent, basis and loan figures are withheld by policy &mdash; see <a href="privacy.html">Privacy</a>.</p>
@@ -291,7 +291,7 @@ aggregator. Where the official record is silent the cell is empty and the item i
                 body,
                 subtitle="A source-verified decision dashboard for a single-tenant Jack in the Box on a triple-net "
                          "lease in Central Los Angeles, expiring somewhere in 2030&ndash;2035.",
-                eyebrow="Session I &middot; verified 2026-11-08")
+                eyebrow="Session J &middot; verified 2026-11-08")
 
 
 def build_exec():

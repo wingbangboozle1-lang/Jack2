@@ -1,4 +1,4 @@
-# Executive summary — Session I
+# Executive summary — Session J
 
 **Asset:** a single-tenant Jack in the Box restaurant on a triple-net lease in Central Los Angeles.
 **Question:** sell before the lease expires (somewhere in 2030–2035), or renew?

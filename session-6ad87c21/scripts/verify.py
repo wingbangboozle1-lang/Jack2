@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Session I verifier. Fails the build (non-zero exit) on any rule violation.
+Session J verifier. Fails the build (non-zero exit) on any rule violation.
 
 Rules
 -----

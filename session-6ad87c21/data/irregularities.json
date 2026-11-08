@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Session I repository irregularities register",
+    "title": "Session J repository irregularities register",
     "access_date": "2026-11-08",
     "method": "Line-by-line audit of all eight prior sessions' published files, the root data ledger, the git metadata, the CI configuration and the open pull requests. Every finding names the evidence checked and what was done about it. Nothing here is a criticism of another session's work: each is a normal consequence of parallel authorship and each has a stated fix.",
     "status": "All items are non-blocking and are published on the Flagged for Review page, per the brief."
