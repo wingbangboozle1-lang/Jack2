@@ -221,3 +221,26 @@ npm run preview     # local preview on 0.0.0.0:4173
 
 The generated dossier is committed under `session-50002478/` because the existing GitHub Pages source is
 `main` / root (legacy build). `site/` and `reports/` remain ignored scratch/output directories.
+
+## Session F workbook (`session-643e4aab/`)
+
+A fifth independent session (`643e4aab` / `arena/643e4aab-jack2`) published a 12-page, source-verified
+decision workbook at https://wingbangboozle1-lang.github.io/Jack2/session-643e4aab/ without altering any
+prior session's files.
+
+| | |
+|---|---|
+| Recommendation | Do not drift to expiry. Open a renewal priced at a market reset **and** run a §1031 sale in parallel; sell if the achievable price implies a cap rate at or below the **7.18%** breakeven, otherwise keep the asset and take the reset |
+| Model result | HOLD_TO_EXPIRY $4,484,252 > SELL_1031_NOW $4,212,704 > EXTEND_THEN_SELL $3,893,300 > SELL_TAXABLE_NOW $3,525,077 per $100k NOI, nominal 2040; holding wins 67.2% of 10,000 draws (seed 20261107) |
+| Why sell anyway | Concentration (one tenant, one parcel, one metro) and tail risk that cannot be diversified inside one building — 60% chance of an M6.7+ quake in the LA region within 30 years |
+| Data | 129 rows: 97 verified, 4 computed, 3 given, **25 left blank and flagged**, every sourced row carrying a tiered source link from 29 sources |
+| Hazards | Dedicated earthquake / wildfire / insurance-market page, including the $1bn FAIR Plan assessment and the 16,251 structures lost in January 2025 |
+| Privacy | Address, APN and owner withheld (`[REDACTED-PROPERTY-01]`, `[REDACTED-OWNER-01]`); the verifier scans every generated page for email, phone, SSN, parcel and street-address patterns and fails the build on a match |
+
+Rebuild & verify (CI runs the same three commands and fails on stale output):
+
+```bash
+python3 session-643e4aab/model/projection.py    # 10,000-trial Monte Carlo, seed 20261107
+python3 session-643e4aab/scripts/build_site.py  # 12 pages + assets/style.css
+python3 session-643e4aab/scripts/verify.py      # rows, sources, blanks, links, PII, model consistency
+```

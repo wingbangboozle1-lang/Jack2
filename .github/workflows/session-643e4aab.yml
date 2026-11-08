@@ -1,0 +1,36 @@
+name: session-643e4aab-verify
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate the projection model and site
+        run: |
+          python3 session-643e4aab/model/projection.py
+          python3 session-643e4aab/scripts/build_site.py
+
+      - name: Fail if generated output is out of date
+        run: |
+          if [ -n "$(git status --porcelain session-643e4aab)" ]; then
+            echo "Generated output is out of date. Run the model and the site builder and commit the result."
+            git status --porcelain session-643e4aab
+            exit 1
+          fi
+
+      - name: Verify rows, sources, blanks, links, PII and model consistency
+        run: python3 session-643e4aab/scripts/verify.py

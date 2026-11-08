@@ -1,0 +1,872 @@
+{
+ "meta": {
+  "session": "session-643e4aab",
+  "engine": "session-643e4aab/model/projection.py",
+  "basis": "$100,000 current annual net operating income",
+  "unit_of_account": "nominal 2040 dollars; interim cash reinvested at the stated cash reinvestment rate",
+  "deterministic": true,
+  "monte_carlo": {
+   "trials": 10000,
+   "seed": 20261107
+  },
+  "method_note": "Both the subject and the replacement asset are held as property: growing rent, reinvested cash, and a sale at the horizon net of costs and tax. An earlier version of this file compared holding against cash invested at a flat yield, which mechanically favoured holding; it was discarded. See research log item V18.",
+  "verified_inputs": {
+   "CPI_YOY": 0.037000000000000005,
+   "ECI_YOY": 0.039,
+   "T10": 0.0484,
+   "FEDFUNDS": 0.04,
+   "PROP13_LEVY": 0.01,
+   "PROP13_CAP": 0.02,
+   "COUNTY_DTT": 0.0011,
+   "CITY_DTT_BASE": 0.0045,
+   "ULA_T1": 0.04,
+   "ULA_T2": 0.055,
+   "ULA_THRESHOLD_1": 5400000,
+   "ULA_THRESHOLD_2": 10900000,
+   "FED_LTCG": 0.2,
+   "UNRECAP1250": 0.25
+  },
+  "verified_input_rows": {
+   "CPI_YOY": "W03 (S01)",
+   "ECI_YOY": "W02 (S01)",
+   "T10": "C02 (S05)",
+   "FEDFUNDS": "C03 (S06)",
+   "PROP13_LEVY": "T01 (S23)",
+   "PROP13_CAP": "T02 (S23)",
+   "COUNTY_DTT": "T04 (S10)",
+   "CITY_DTT_BASE": "T05 (S11)",
+   "ULA_T1": "T06 (S11)",
+   "ULA_T2": "T07 (S11)",
+   "FED_LTCG": "T11 (S13)",
+   "UNRECAP1250": "T12 (S13)"
+  },
+  "population_projection": {
+   "2025": 9853435.0,
+   "2030": 9727305.0,
+   "2035": 9708647.0,
+   "2040": 9637524.0,
+   "source": "S04 - California Department of Finance P-2A, Baseline 2024, Vintage 2026",
+   "change_2025_to_2040_pct": -2.19
+  },
+  "assumptions": [
+   {
+    "name": "cap_subject",
+    "value": "6.25% base; tested 4.50%-7.25%",
+    "rationale": "No official source publishes asset-level cap rates - metric C04 is deliberately blank. The base sits above the verified 4.84-4.90% 10-year Treasury plus a single-tenant risk premium. The band, not the point, is the answer."
+   },
+   {
+    "name": "cap_replacement",
+    "value": "6.50%",
+    "rationale": "The replacement asset bought with sale proceeds. Set 25 bp ABOVE the subject's cap so the sell path is not flattered by assuming the owner can buy the same yield with less concentration. Net-lease portfolios do trade at tighter caps than a single asset, so 6.50% is conservative."
+   },
+   {
+    "name": "growth",
+    "value": "Bear 1.0% / Base 2.0% / Bull 3.7%",
+    "rationale": "Applied identically to the subject and to the replacement, so it cancels except where term differs. Bull equals the verified LA CPI-U year-over-year rate (W03), i.e. a fully indexed escalation. Base is a typical fixed NNN escalator, deliberately BELOW verified CPI so the base case does not flatter holding."
+   },
+   {
+    "name": "reset_uplift",
+    "value": "+8.0% at extension",
+    "rationale": "Mark-to-market at renewal. Set just above the breakeven the model computes, and stress-tested at 0% and 15%, so the recommendation is not created by this assumption."
+   },
+   {
+    "name": "renew_prob",
+    "value": "60%",
+    "rationale": "The tenant's own renewal practice could not be re-verified this session (metric N12 is blank). 60% is a neutral prior; the Monte Carlo draws 40%-85%."
+   },
+   {
+    "name": "vacancy_months / relet_discount",
+    "value": "9 months / -5%",
+    "rationale": "Downtime and a below-renewal re-let price if the tenant leaves. Typical for a purpose-built QSR box that must be re-permitted and re-fitted."
+   },
+   {
+    "name": "disposition cost",
+    "value": "3.00% brokerage + 0.50% closing + statutory transfer taxes",
+    "rationale": "Brokerage and closing are judgment. The taxes are the verified statutory stack: 0.11% county (S10), 0.45% City base (S11) and Measure ULA 4%/5.5% above $5.4M/$10.9M (S11)."
+   },
+   {
+    "name": "basis_ratio / depreciated share / CA marginal",
+    "value": "55% / 30% / 13.3%",
+    "rationale": "The owner's basis, depreciation history and marginal rates were not provided and are withheld for privacy (metrics L08, T15). Stated only to model the MECHANICS of a taxable sale. They are not a statement of the owner's liability."
+   },
+   {
+    "name": "portfolio_yield",
+    "value": "5.50%",
+    "rationale": "Income yield on the 1031 replacement portfolio after transaction costs. Shown only in the liquidity illustration, not in the main strategies."
+   },
+   {
+    "name": "term_premium",
+    "value": "5% price premium when selling with long remaining term",
+    "rationale": "A buyer pays more for 9-10 years of term than for 3-4. Modelled as a 5% lower exit cap on the extend-then-sell path and stress-tested at 0% and 10%, so the result does not depend on this being right."
+   },
+   {
+    "name": "assessed_today",
+    "value": "$600,000",
+    "rationale": "Illustrative, to quantify the Proposition 13 differential. The actual assessed value was not provided."
+   }
+  ]
+ },
+ "base_case": {
+  "price_today": 1600000.0,
+  "cost_of_sale": 64960.0,
+  "gain_tax_if_taxable": 250560.0,
+  "net_if_taxable": 1284480.0,
+  "net_if_1031": 1535040.0,
+  "deferred_tax_carried_forward": 250560.0,
+  "strategies": {
+   "SELL_TAXABLE_NOW": 3525077.0,
+   "SELL_1031_NOW": 4212704.0,
+   "EXTEND_THEN_SELL": 3893300.0,
+   "HOLD_TO_EXPIRY": 4484252.0
+  },
+  "ranking": [
+   "HOLD_TO_EXPIRY",
+   "SELL_1031_NOW",
+   "EXTEND_THEN_SELL",
+   "SELL_TAXABLE_NOW"
+  ],
+  "spread": 959176.0,
+  "spread_pct": 27.2,
+  "hold_renew_path": 4653518.0,
+  "hold_relet_path": 4230354.0,
+  "breakeven_replacement_cap_pct": 7.18,
+  "breakeven_uplift_vs_best_exit_pct": -2.67
+ },
+ "cap_sensitivity": [
+  {
+   "cap": "4.50%",
+   "price": 2222222.0,
+   "cost_of_sale": 90222.0,
+   "gain_tax_if_taxable": 348000.0,
+   "net_1031": 2132000.0,
+   "net_taxable": 1784000.0,
+   "ula_applies": false,
+   "hold_2040": 5174996.0,
+   "sell_1031_2040": 5850977.0,
+   "winner": "SELL_1031_NOW"
+  },
+  {
+   "cap": "5.00%",
+   "price": 2000000.0,
+   "cost_of_sale": 81200.0,
+   "gain_tax_if_taxable": 313200.0,
+   "net_1031": 1918800.0,
+   "net_taxable": 1605600.0,
+   "ula_applies": false,
+   "hold_2040": 4928302.0,
+   "sell_1031_2040": 5265880.0,
+   "winner": "SELL_1031_NOW"
+  },
+  {
+   "cap": "5.50%",
+   "price": 1818182.0,
+   "cost_of_sale": 73818.0,
+   "gain_tax_if_taxable": 284727.0,
+   "net_1031": 1744364.0,
+   "net_taxable": 1459636.0,
+   "ula_applies": false,
+   "hold_2040": 4726461.0,
+   "sell_1031_2040": 4787163.0,
+   "winner": "SELL_1031_NOW"
+  },
+  {
+   "cap": "6.00%",
+   "price": 1666667.0,
+   "cost_of_sale": 67667.0,
+   "gain_tax_if_taxable": 261000.0,
+   "net_1031": 1599000.0,
+   "net_taxable": 1338000.0,
+   "ula_applies": false,
+   "hold_2040": 4558261.0,
+   "sell_1031_2040": 4388233.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "cap": "6.25%",
+   "price": 1600000.0,
+   "cost_of_sale": 64960.0,
+   "gain_tax_if_taxable": 250560.0,
+   "net_1031": 1535040.0,
+   "net_taxable": 1284480.0,
+   "ula_applies": false,
+   "hold_2040": 4484252.0,
+   "sell_1031_2040": 4212704.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "cap": "6.50%",
+   "price": 1538462.0,
+   "cost_of_sale": 62462.0,
+   "gain_tax_if_taxable": 240923.0,
+   "net_1031": 1476000.0,
+   "net_taxable": 1235077.0,
+   "ula_applies": false,
+   "hold_2040": 4415937.0,
+   "sell_1031_2040": 4050677.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "cap": "7.00%",
+   "price": 1428571.0,
+   "cost_of_sale": 58000.0,
+   "gain_tax_if_taxable": 223714.0,
+   "net_1031": 1370571.0,
+   "net_taxable": 1146857.0,
+   "ula_applies": false,
+   "hold_2040": 4293946.0,
+   "sell_1031_2040": 3761343.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "cap": "7.25%",
+   "price": 1379310.0,
+   "cost_of_sale": 56000.0,
+   "gain_tax_if_taxable": 216000.0,
+   "net_1031": 1323310.0,
+   "net_taxable": 1107310.0,
+   "ula_applies": false,
+   "hold_2040": 4239260.0,
+   "sell_1031_2040": 3631641.0,
+   "winner": "HOLD_TO_EXPIRY"
+  }
+ ],
+ "cap_sensitivity_note": "At a $100,000 NOI anchor the Measure ULA threshold ($5,400,000 for closings after 2026-06-30) is not reached at any cap shown; it would take roughly $337,500 of NOI at a 6.25% cap. If actual NOI is higher, the ULA tiers on the tax page govern and the City transfer tax rises by 4% of price.",
+ "sensitivity_grid": [
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "0%",
+   "cap": "5.50%",
+   "winner": "SELL_1031_NOW",
+   "hold": 4173247.0,
+   "sell_1031": 4387905.0,
+   "extend": 3798644.0,
+   "sell_taxable": 3671681.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "0%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 3971909.0,
+   "sell_1031": 3861357.0,
+   "extend": 3399267.0,
+   "sell_taxable": 3231079.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "0%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 3813715.0,
+   "sell_1031": 3447640.0,
+   "extend": 3085471.0,
+   "sell_taxable": 2884892.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "8%",
+   "cap": "5.50%",
+   "winner": "SELL_1031_NOW",
+   "hold": 4307316.0,
+   "sell_1031": 4387905.0,
+   "extend": 4064895.0,
+   "sell_taxable": 3671681.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "8%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4096314.0,
+   "sell_1031": 3861357.0,
+   "extend": 3633568.0,
+   "sell_taxable": 3231079.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "8%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 3930527.0,
+   "sell_1031": 3447640.0,
+   "extend": 3294668.0,
+   "sell_taxable": 2884892.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "15%",
+   "cap": "5.50%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4424627.0,
+   "sell_1031": 4387905.0,
+   "extend": 4297865.0,
+   "sell_taxable": 3671681.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "15%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4205168.0,
+   "sell_1031": 3861357.0,
+   "extend": 3838581.0,
+   "sell_taxable": 3231079.0
+  },
+  {
+   "growth_case": "Bear",
+   "growth": "1.0%",
+   "reset_uplift": "15%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4032737.0,
+   "sell_1031": 3447640.0,
+   "extend": 3477716.0,
+   "sell_taxable": 2884892.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "0%",
+   "cap": "5.50%",
+   "winner": "SELL_1031_NOW",
+   "hold": 4574794.0,
+   "sell_1031": 4787163.0,
+   "extend": 4071813.0,
+   "sell_taxable": 4005769.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "0%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4343678.0,
+   "sell_1031": 4212704.0,
+   "extend": 3639928.0,
+   "sell_taxable": 3525077.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "0%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4162088.0,
+   "sell_1031": 3761343.0,
+   "extend": 3300590.0,
+   "sell_taxable": 3147390.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "8%",
+   "cap": "5.50%",
+   "winner": "SELL_1031_NOW",
+   "hold": 4726461.0,
+   "sell_1031": 4787163.0,
+   "extend": 4359736.0,
+   "sell_taxable": 4005769.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "8%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4484252.0,
+   "sell_1031": 4212704.0,
+   "extend": 3893300.0,
+   "sell_taxable": 3525077.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "8%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4293946.0,
+   "sell_1031": 3761343.0,
+   "extend": 3526815.0,
+   "sell_taxable": 3147390.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "15%",
+   "cap": "5.50%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4859170.0,
+   "sell_1031": 4787163.0,
+   "extend": 4611669.0,
+   "sell_taxable": 4005769.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "15%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4607255.0,
+   "sell_1031": 4212704.0,
+   "extend": 4115001.0,
+   "sell_taxable": 3525077.0
+  },
+  {
+   "growth_case": "Base",
+   "growth": "2.0%",
+   "reset_uplift": "15%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4409321.0,
+   "sell_1031": 3761343.0,
+   "extend": 3724762.0,
+   "sell_taxable": 3147390.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "0%",
+   "cap": "5.50%",
+   "winner": "SELL_1031_NOW",
+   "hold": 5367016.0,
+   "sell_1031": 5571262.0,
+   "extend": 4597293.0,
+   "sell_taxable": 4661881.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "0%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 5075724.0,
+   "sell_1031": 4902710.0,
+   "extend": 4102813.0,
+   "sell_taxable": 4102456.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "0%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 4846852.0,
+   "sell_1031": 4377420.0,
+   "extend": 3714293.0,
+   "sell_taxable": 3662907.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "8%",
+   "cap": "5.50%",
+   "winner": "SELL_1031_NOW",
+   "hold": 5553765.0,
+   "sell_1031": 5571262.0,
+   "extend": 4926947.0,
+   "sell_taxable": 4661881.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "8%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 5248491.0,
+   "sell_1031": 4902710.0,
+   "extend": 4392908.0,
+   "sell_taxable": 4102456.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "8%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 5008633.0,
+   "sell_1031": 4377420.0,
+   "extend": 3973307.0,
+   "sell_taxable": 3662907.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "15%",
+   "cap": "5.50%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 5717171.0,
+   "sell_1031": 5571262.0,
+   "extend": 5215393.0,
+   "sell_taxable": 4661881.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "15%",
+   "cap": "6.25%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 5399663.0,
+   "sell_1031": 4902710.0,
+   "extend": 4646741.0,
+   "sell_taxable": 4102456.0
+  },
+  {
+   "growth_case": "Bull",
+   "growth": "3.7%",
+   "reset_uplift": "15%",
+   "cap": "7.00%",
+   "winner": "HOLD_TO_EXPIRY",
+   "hold": 5150192.0,
+   "sell_1031": 4377420.0,
+   "extend": 4199943.0,
+   "sell_taxable": 3662907.0
+  }
+ ],
+ "monte_carlo": {
+  "why": "Ranges come from the published sensitivity band and the stated assumption ranges, not from fitted historical data, because no official series publishes asset-level cap rates or NNN rent growth.",
+  "distributions": {
+   "cap_subject": "triangular 4.50% / 6.25% / 7.25%",
+   "cap_replacement": "normal 6.50%, sd 0.60%, floored at 3.00%",
+   "noi_growth": "normal 2.1%, sd 1.2%, floored at 0",
+   "reset_uplift": "uniform 0%-14%",
+   "renew_prob": "uniform 40%-85%",
+   "expiry_year": "uniform 2030-2035 (the stated window)",
+   "cash_reinvest": "normal 6.50%, sd 1.00%, floored at 0"
+  },
+  "results": {
+   "SELL_TAXABLE_NOW": {
+    "mean": 3785852.0,
+    "sd": 612902.0,
+    "p05": 2887580.0,
+    "p25": 3345546.0,
+    "p50": 3728245.0,
+    "p75": 4155841.0,
+    "p95": 4892070.0,
+    "worst": 2235287.0
+   },
+   "SELL_1031_NOW": {
+    "mean": 4524348.0,
+    "sd": 732459.0,
+    "p05": 3450852.0,
+    "p25": 3998153.0,
+    "p50": 4455504.0,
+    "p75": 4966510.0,
+    "p95": 5846353.0,
+    "worst": 2671318.0
+   },
+   "EXTEND_THEN_SELL": {
+    "mean": 4105784.0,
+    "sd": 582850.0,
+    "p05": 3242163.0,
+    "p25": 3686945.0,
+    "p50": 4056057.0,
+    "p75": 4467130.0,
+    "p95": 5153140.0,
+    "worst": 2566515.0
+   },
+   "HOLD_TO_EXPIRY": {
+    "mean": 4663811.0,
+    "sd": 585657.0,
+    "p05": 3781480.0,
+    "p25": 4243694.0,
+    "p50": 4620435.0,
+    "p75": 5028073.0,
+    "p95": 5699931.0,
+    "worst": 3128629.0
+   }
+  },
+  "win_rate_pct": {
+   "SELL_TAXABLE_NOW": 0.0,
+   "SELL_1031_NOW": 32.8,
+   "EXTEND_THEN_SELL": 0.0,
+   "HOLD_TO_EXPIRY": 67.2
+  },
+  "downside": {
+   "SELL_1031_NOW_vs_HOLD": {
+    "p05": -716278.0,
+    "p50": -169307.0,
+    "prob_negative_pct": 67.2
+   },
+   "HOLD_vs_best_exit": {
+    "p05": -541342.0,
+    "p50": 169354.0,
+    "prob_negative_pct": 32.8
+   },
+   "SELL_TAXABLE_vs_HOLD": {
+    "p05": -1393378.0,
+    "p50": -886110.0,
+    "prob_negative_pct": 99.4
+   },
+   "EXTEND_vs_HOLD": {
+    "p05": -1071136.0,
+    "p50": -563151.0,
+    "prob_negative_pct": 95.7
+   }
+  },
+  "stress": {
+   "hold_cap_plus_150bp": 4140472.0,
+   "hold_no_renewal_no_reset": 4230354.0,
+   "sell_1031_into_7_25_cap": 3631641.0,
+   "sell_1031_into_4_50_cap": 5850977.0,
+   "extend_reset_zero": 3639928.0,
+   "extend_reset_15pct": 4115001.0,
+   "hold_expiry_2030": 4490332.0,
+   "hold_expiry_2035": 4476063.0
+  }
+ },
+ "basis_sensitivity": [
+  {
+   "basis_ratio": "30%",
+   "gain_tax_if_sold": 389760.0,
+   "net_if_taxable": 1145280.0,
+   "net_if_1031": 1535040.0,
+   "sell_1031_2040": 4036489.0,
+   "hold_2040": 4291765.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "basis_ratio": "45%",
+   "gain_tax_if_sold": 306240.0,
+   "net_if_taxable": 1228800.0,
+   "net_if_1031": 1535040.0,
+   "sell_1031_2040": 4142218.0,
+   "hold_2040": 4407257.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "basis_ratio": "55%",
+   "gain_tax_if_sold": 250560.0,
+   "net_if_taxable": 1284480.0,
+   "net_if_1031": 1535040.0,
+   "sell_1031_2040": 4212704.0,
+   "hold_2040": 4484252.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "basis_ratio": "70%",
+   "gain_tax_if_sold": 167040.0,
+   "net_if_taxable": 1368000.0,
+   "net_if_1031": 1535040.0,
+   "sell_1031_2040": 4318432.0,
+   "hold_2040": 4599745.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "basis_ratio": "85%",
+   "gain_tax_if_sold": 83520.0,
+   "net_if_taxable": 1451520.0,
+   "net_if_1031": 1535040.0,
+   "sell_1031_2040": 4424161.0,
+   "hold_2040": 4715238.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "basis_ratio": "95%",
+   "gain_tax_if_sold": 27840.0,
+   "net_if_taxable": 1507200.0,
+   "net_if_1031": 1535040.0,
+   "sell_1031_2040": 4494647.0,
+   "hold_2040": 4792233.0,
+   "winner": "HOLD_TO_EXPIRY"
+  }
+ ],
+ "basis_sensitivity_note": "The owner's cost basis was NOT provided (metric L08 is blank), and it is the single largest unverified driver of the sell-versus-hold answer. A high basis makes selling cheap; a low basis makes it expensive. Each row re-runs the whole model with a different basis ratio, holding every other assumption constant.",
+ "term_premium_sensitivity": [
+  {
+   "term_premium": "0%",
+   "extend_then_sell_2040": 3722274.0,
+   "hold_2040": 4484252.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "term_premium": "5%",
+   "extend_then_sell_2040": 3893300.0,
+   "hold_2040": 4484252.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "term_premium": "10%",
+   "extend_then_sell_2040": 4083330.0,
+   "hold_2040": 4484252.0,
+   "winner": "HOLD_TO_EXPIRY"
+  },
+  {
+   "term_premium": "15%",
+   "extend_then_sell_2040": 4295716.0,
+   "hold_2040": 4484252.0,
+   "winner": "HOLD_TO_EXPIRY"
+  }
+ ],
+ "term_premium_sensitivity_note": "Quantifies how much of the extend-then-sell case depends on a buyer paying up for the longer remaining term.",
+ "prop13_illustration": {
+  "assumption": "Illustrative only. A $600,000 assessed value if the owner holds, versus a $1,090,000 sale resetting the base; the verified 1% levy and 2% annual cap (S23) applied to both.",
+  "hold_rows": [
+   {
+    "year": 2026,
+    "assessed": 600000.0,
+    "tax": 6000.0
+   },
+   {
+    "year": 2027,
+    "assessed": 612000.0,
+    "tax": 6120.0
+   },
+   {
+    "year": 2028,
+    "assessed": 624240.0,
+    "tax": 6242.0
+   },
+   {
+    "year": 2029,
+    "assessed": 636725.0,
+    "tax": 6367.0
+   },
+   {
+    "year": 2030,
+    "assessed": 649459.0,
+    "tax": 6495.0
+   },
+   {
+    "year": 2031,
+    "assessed": 662448.0,
+    "tax": 6624.0
+   },
+   {
+    "year": 2032,
+    "assessed": 675697.0,
+    "tax": 6757.0
+   },
+   {
+    "year": 2033,
+    "assessed": 689211.0,
+    "tax": 6892.0
+   },
+   {
+    "year": 2034,
+    "assessed": 702996.0,
+    "tax": 7030.0
+   },
+   {
+    "year": 2035,
+    "assessed": 717056.0,
+    "tax": 7171.0
+   },
+   {
+    "year": 2036,
+    "assessed": 731397.0,
+    "tax": 7314.0
+   },
+   {
+    "year": 2037,
+    "assessed": 746025.0,
+    "tax": 7460.0
+   },
+   {
+    "year": 2038,
+    "assessed": 760945.0,
+    "tax": 7609.0
+   },
+   {
+    "year": 2039,
+    "assessed": 776164.0,
+    "tax": 7762.0
+   },
+   {
+    "year": 2040,
+    "assessed": 791687.0,
+    "tax": 7917.0
+   }
+  ],
+  "reset_rows": [
+   {
+    "year": 2026,
+    "assessed": 1090000.0,
+    "tax": 10900.0
+   },
+   {
+    "year": 2027,
+    "assessed": 1111800.0,
+    "tax": 11118.0
+   },
+   {
+    "year": 2028,
+    "assessed": 1134036.0,
+    "tax": 11340.0
+   },
+   {
+    "year": 2029,
+    "assessed": 1156717.0,
+    "tax": 11567.0
+   },
+   {
+    "year": 2030,
+    "assessed": 1179851.0,
+    "tax": 11799.0
+   },
+   {
+    "year": 2031,
+    "assessed": 1203448.0,
+    "tax": 12034.0
+   },
+   {
+    "year": 2032,
+    "assessed": 1227517.0,
+    "tax": 12275.0
+   },
+   {
+    "year": 2033,
+    "assessed": 1252067.0,
+    "tax": 12521.0
+   },
+   {
+    "year": 2034,
+    "assessed": 1277109.0,
+    "tax": 12771.0
+   },
+   {
+    "year": 2035,
+    "assessed": 1302651.0,
+    "tax": 13027.0
+   },
+   {
+    "year": 2036,
+    "assessed": 1328704.0,
+    "tax": 13287.0
+   },
+   {
+    "year": 2037,
+    "assessed": 1355278.0,
+    "tax": 13553.0
+   },
+   {
+    "year": 2038,
+    "assessed": 1382384.0,
+    "tax": 13824.0
+   },
+   {
+    "year": 2039,
+    "assessed": 1410031.0,
+    "tax": 14100.0
+   },
+   {
+    "year": 2040,
+    "assessed": 1438232.0,
+    "tax": 14382.0
+   }
+  ],
+  "hold_tax_2040": 7917.0,
+  "reset_tax_2040": 14382.0,
+  "cumulative_hold": 103760.0,
+  "cumulative_reset": 188498.0,
+  "differential_2040": 6465.0
+ },
+ "integrity": "ok"
+}
