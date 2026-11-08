@@ -1106,6 +1106,8 @@ Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-ja
 | I-03 Normalized scenario engine, area projections and line-level audit | done | session-f4f700c0 | `session-f4f700c0/scripts/**`, `session-f4f700c0/model/**`, `session-f4f700c0/audit/**` |
 | I-04 Privacy-safe dashboard and executive summary | done | session-f4f700c0 | `session-f4f700c0/*.html`, `session-f4f700c0/assets/**` |
 | I-05 Line-by-line dataset and site validation | done | session-f4f700c0 | `session-f4f700c0/tests/**`, `session-f4f700c0/scripts/check.py`, `session-f4f700c0/verification.json` |
-| I-06 Final integration, PR, merge, Pages deployment confirmation | in progress | session-f4f700c0 | Shared root landing/navigation/README/workflow, additive only; existing research files preserved; `COORDINATION.md` |
+| I-06 Final integration, PR, merge, Pages deployment confirmation | done | session-f4f700c0 | Shared root landing/navigation/README/workflow, additive only; existing research files preserved; `COORDINATION.md` |
+
+Deployment confirmation: PR #33 merged to `main` as `a54daaf`; GitHub Pages build for `a54daaf` reported `built`. Published dashboard: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/ ; Flagged for Review: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/flagged.html . Root landing: https://wingbangboozle1-lang.github.io/Jack2/ .
 
 Initial observation requiring review: multiple previous builds contain confident numerical recommendations from undisclosed private inputs and inconsistent verification claims. A passing internal-link or regex test is not proof that a statistic matches its cited official source. This session will distinguish primary-source verification, repository-only findings, user-provided facts, and explicitly illustrative assumptions. Unknown private values stay blank in published tables. No owner/parcel identifiers or raw private research will be committed or published.
