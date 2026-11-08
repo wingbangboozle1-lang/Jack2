@@ -185,6 +185,11 @@ hold = "S4"
 def pctdiff(a, b):
     return (a - b) / b * 100.0
 
+
+def prob(s):
+    """P(beats hold) — undefined for the hold baseline itself, so show a dash."""
+    return "&mdash;" if s == "S4" else f"{MC[s]['prob_beats_hold']:.0%}"
+
 kpi_cards = f"""
 <div class="grid g4">
   <div class="card"><div class="lbl">Best risk-adjusted</div><div class="big">{e(STRAT[best]['short'])}</div>
@@ -206,7 +211,7 @@ strategy_table = """
 """ + "".join(
     f'<tr><td class="num">{i+1}</td><td><strong>{e(STRAT[s]["short"])}</strong></td>'
     f'<td class="num">{money(MC[s]["ce"])}</td><td class="num">{money(MC[s]["p05"])}</td>'
-    f'<td class="num">{money(MC[s]["median"])}</td><td class="num">{MC[s]["prob_beats_hold"]:.0%}</td>'
+    f'<td class="num">{money(MC[s]["median"])}</td><td class="num">{prob(s)}</td>'
     f'<td class="meta">{e(STRAT[s]["detail"])}</td></tr>'
     for i, s in enumerate(RANK)
 ) + "</tbody></table></div>"
@@ -547,7 +552,7 @@ mc_rows = "".join(
     f'<tr><td class="num">{i+1}</td><td><strong>{e(STRAT[s]["short"])}</strong></td>'
     f'<td class="num">{money(MC[s]["ce"])}</td><td class="num">{money(MC[s]["median"])}</td>'
     f'<td class="num">{money(MC[s]["p05"])}</td><td class="num">{money(MC[s]["p95"])}</td>'
-    f'<td class="num">{MC[s]["prob_beats_hold"]:.0%}</td></tr>'
+    f'<td class="num">{prob(s)}</td></tr>'
     for i, s in enumerate(RANK))
 
 grid_rows = ""
@@ -688,13 +693,13 @@ body_dec = f"""
 """ + "".join(
     f'<tr><td class="num">{i+1}</td><td><strong>{e(STRAT[s]["short"])}</strong></td>'
     f'<td class="num">{money(MC[s]["ce"])}</td><td class="num">{money(MC[s]["p05"])}</td>'
-    f'<td class="num">{money(MC[s]["median"])}</td><td class="num">{MC[s]["prob_beats_hold"]:.0%}</td>'
+    f'<td class="num">{money(MC[s]["median"])}</td><td class="num">{prob(s)}</td>'
     f'<td class="meta">{e(VERDICT.get(s, ""))}</td></tr>'
     for i, s in enumerate(RANK)
 ) + f"""</tbody></table></div>
 
 <h2>Why the leader is only barely ahead — and why that is the point</h2>
-<p>S3 leads S1 by {abs(pctdiff(MC[best]['ce'], MC['S1']['ce'])):.1f}%. That is inside the model's own error bars, so the honest
+<p>S3 leads S1 by {abs(pctdiff(MC['S1']['ce'], MC[best]['ce'])):.1f}% of the leader's certainty-equivalent wealth. That is inside the model's own error bars, so the honest
 conclusion is not "extend at any price". It is: <strong>the extension is worth having if it costs nothing</strong>. If the tenant
 demands a rent cut to extend, the arithmetic moves to sell-now. If the tenant will not engage, sell-now. Either way the owner exits
 before expiry, and the difference between the two exits is small compared with the difference between either of them and waiting.</p>
