@@ -601,3 +601,20 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
+
+---
+
+# Session I — `session-f4f700c0` — 2026-11-08
+
+Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-jack2`; no other branch is created or switched to. Existing published builds are preserved. This session's work products are isolated in `session-f4f700c0/**`; shared landing/navigation/CI changes are reserved for the final integration task below. Historical board text and prior session labels are preserved, including inconsistent labels and stale statuses; current claims are the rows below. No active remote Arena branches or open PR heads overlap this session's directory. Open PRs #5, #6, #10, #14, #18 are not this session's work and will not be closed or merged.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| I-01 Repository inventory, privacy and claim audit | in progress | session-f4f700c0 | `COORDINATION.md` (append), `session-f4f700c0/audit/**` |
+| I-02 Requirements and independently checked official evidence | unclaimed | session-f4f700c0 | `session-f4f700c0/data/**`, `session-f4f700c0/research/**` |
+| I-03 Transparent scenario engine and decision/risk analysis | unclaimed | session-f4f700c0 | `session-f4f700c0/model/**` |
+| I-04 Privacy-safe dashboard and executive summary | unclaimed | session-f4f700c0 | `session-f4f700c0/*.html`, `session-f4f700c0/assets/**` |
+| I-05 Line-by-line dataset and site validation | unclaimed | session-f4f700c0 | `session-f4f700c0/tests/**`, `session-f4f700c0/verification.json` |
+| I-06 Final integration, PR, merge, Pages deployment confirmation | unclaimed | session-f4f700c0 | Shared root landing/navigation/README/workflow, additive only; existing research files preserved; `COORDINATION.md` |
+
+Initial observation requiring review: multiple previous builds contain confident numerical recommendations from undisclosed private inputs and inconsistent verification claims. A passing internal-link or regex test is not proof that a statistic matches its cited official source. This session will distinguish primary-source verification, repository-only findings, user-provided facts, and explicitly illustrative assumptions. Unknown private values stay blank in published tables. No owner/parcel identifiers or raw private research will be committed or published.
