@@ -1,0 +1,797 @@
+{
+  "meta": {
+    "session": "session-24d6cd5f",
+    "generated_at": "2026-11-08",
+    "seed": 20261108,
+    "trials": 20000,
+    "horizon_years": 14,
+    "normalized_noi_usd": 100000.0
+  },
+  "verified_anchors": {
+    "ust_10yr_nov06_2026_pct": 4.86,
+    "ust_10yr_fred_nov05_2026_pct": 4.84,
+    "fed_funds_target_upper_pct": 4.0,
+    "fed_funds_effective_pct": 3.88,
+    "la_cpi_sep2026_pct": 3.7,
+    "la_eci_comp_sep2026_pct": 4.2,
+    "la_county_gdp_2024_usd_b": 810.84,
+    "dof_e1_county_yoy_pct": -0.6,
+    "dof_k12_10yr_change_students": -240800,
+    "ab1228_fast_food_wage_usd": 20.0,
+    "la_city_min_wage_usd": 18.42,
+    "nnn_reit_1h26_acq_cap_pct": 7.4,
+    "realty_income_1h26_us_yield_pct": 7.5,
+    "jack_q3_fy26_units": 2115,
+    "jack_ca_units_fy25": 941,
+    "jack_store_margin_guide_pct": 16.5,
+    "jack_may2031_ard_coupon_pct": 7.624,
+    "base_transfer_tax_pct": 0.56,
+    "ula_tier1_total_tax_pct": 4.56,
+    "ula_tier1_cliff_usd": 5400000,
+    "combined_ca_fed_tax_pct": 37.1,
+    "usgs_30yr_m67_prob_pct": 60.0
+  },
+  "assumptions": [
+    {
+      "id": "A-01",
+      "name": "Normalized Annual NNN NOI Unit",
+      "value": "$100,000 / year",
+      "detail": "Scales linearly for any private contract rent (e.g., 1.8x for $180k NOI).",
+      "source": "S31"
+    },
+    {
+      "id": "A-02",
+      "name": "Lease Expiry Window Midpoint & Full Sweep",
+      "value": "2032 central (~6.0 yrs remaining); sweeps 2030..2035",
+      "detail": "Captures May 2031 $500M 7.624% Class A-2 ARD collision risk inside the expiry window.",
+      "source": "S33"
+    },
+    {
+      "id": "A-03",
+      "name": "Single-Tenant QSR Exit Cap-Rate Curve",
+      "value": "15+ yr: 6.45% | 10 yr: 6.60% | 6 yr (2032): 6.95% | 4 yr (2030): 7.45% | <2 yr / dark: 8.40%",
+      "detail": "Anchored to NNN REIT 1H26 7.40% acquisition / 5.60%\u20137.20% disposition range and Realty Income 7.50% U.S. yield.",
+      "source": "S23"
+    },
+    {
+      "id": "A-04",
+      "name": "Rent Escalations (In-Place vs. Blend-and-Extend)",
+      "value": "In-place: +1.50%/yr | Early Extend: -3% rent reset + 2.25%/yr collared steps | Expiry Reset: -4% avg",
+      "detail": "Reflects standard 7.5%\u201310% 5-year QSR steps lagging +3.70% LA CPI-U (S03) and JACK 16.5% margin squeeze (S32).",
+      "source": "S03"
+    },
+    {
+      "id": "A-05",
+      "name": "Diversified \u00a71031 Replacement Net Yield & Growth",
+      "value": "7.20% net yield (after 30 bps friction vs 7.50% O U.S. / 7.40% NNN) + 2.00%/yr growth",
+      "detail": "Multi-tenant / IG net-lease portfolio eliminates single-site JACK credit & Central LA seismic concentration.",
+      "source": "S24"
+    },
+    {
+      "id": "A-06",
+      "name": "Sale Friction (Base vs. Measure ULA Cliff)",
+      "value": "4.56% below $5.4M (4.00% closing + 0.56% DTT) | 8.56% above $5.4M (+4.00% City ULA)",
+      "detail": "Measure ULA remains intact following withdrawal of initiative 25-0006A1 and Prop 43 defeat (S27, S28).",
+      "source": "S27"
+    },
+    {
+      "id": "A-07",
+      "name": "Taxable Sale Effective Tax Drag (Post-Prop 3)",
+      "value": "25.0% blended effective tax on gross price (~38.5% combined rate x ~65% gain+\u00a71250 basis ratio)",
+      "detail": "Prop 3 (60.3% Yes) permanently preserves 13.30% CA top bracket past 2030 (S28, S30); sensitivity spans 0%\u201375% gain ratio.",
+      "source": "S28"
+    },
+    {
+      "id": "A-08",
+      "name": "Single-Parcel Hazard & May 2031 ARD Shock Overlay",
+      "value": "1.35%/yr severe LA parcel hazard + 2031 tenant refinancing distress factor",
+      "detail": "Calibrated to USGS 60% 30-yr M>=6.7 probability (S34), CDI $1B FAIR Plan pressure (S35), and May 2031 ARD (S33).",
+      "source": "S34"
+    }
+  ],
+  "base_corporate": {
+    "t0_cap_pct": 6.95,
+    "t0_gross_value": 1438849.0,
+    "sell_friction_pct": 4.56,
+    "strategies": [
+      {
+        "mean_2040": 3825391.0,
+        "median_2040": 3823902.0,
+        "p10_2040": 3524072.0,
+        "p90_2040": 4125962.0,
+        "ce_2040": 3810994.0,
+        "std_dev": 234238.0,
+        "downside_dev": 164373.0,
+        "median_irr_pct": 7.23,
+        "sharpe_proxy": 16.33,
+        "prob_below_150k": 0.0,
+        "id": "S4_sell_1031_now",
+        "label": "Immediate Sale + \u00a71031 Into IG Net-Lease Now"
+      },
+      {
+        "mean_2040": 3685920.0,
+        "median_2040": 3686859.0,
+        "p10_2040": 3293275.0,
+        "p90_2040": 4070554.0,
+        "ce_2040": 3659490.0,
+        "std_dev": 310733.0,
+        "downside_dev": 217968.0,
+        "median_irr_pct": 6.95,
+        "sharpe_proxy": 11.86,
+        "prob_below_150k": 0.0,
+        "id": "S3_blend_extend_1031",
+        "label": "Blend-and-Extend + \u00a71031 Exchange at 10+ Yr WALT"
+      },
+      {
+        "mean_2040": 3281565.0,
+        "median_2040": 3336953.0,
+        "p10_2040": 2787520.0,
+        "p90_2040": 3600402.0,
+        "ce_2040": 3249666.0,
+        "std_dev": 304137.0,
+        "downside_dev": 247051.0,
+        "median_irr_pct": 6.19,
+        "sharpe_proxy": 10.79,
+        "prob_below_150k": 0.0,
+        "id": "S6_hold_reposition_land",
+        "label": "Hold to Expiry & Reposition Drive-Thru Parcel"
+      },
+      {
+        "mean_2040": 3218079.0,
+        "median_2040": 3335077.0,
+        "p10_2040": 2704947.0,
+        "p90_2040": 3520894.0,
+        "ce_2040": 3179004.0,
+        "std_dev": 327956.0,
+        "downside_dev": 273760.0,
+        "median_irr_pct": 6.19,
+        "sharpe_proxy": 9.81,
+        "prob_below_150k": 0.0,
+        "id": "S2_blend_extend_hold",
+        "label": "Early Blend-and-Extend (10 Yr), Hold to 2040"
+      },
+      {
+        "mean_2040": 3098337.0,
+        "median_2040": 3199254.0,
+        "p10_2040": 2608611.0,
+        "p90_2040": 3495187.0,
+        "ce_2040": 3049563.0,
+        "std_dev": 365363.0,
+        "downside_dev": 287305.0,
+        "median_irr_pct": 5.87,
+        "sharpe_proxy": 8.48,
+        "prob_below_150k": 0.0,
+        "id": "S1_hold_passive",
+        "label": "Hold Passive Through 2030\u20132035 Expiry"
+      },
+      {
+        "mean_2040": 1550234.0,
+        "median_2040": 1549851.0,
+        "p10_2040": 1493858.0,
+        "p90_2040": 1607243.0,
+        "ce_2040": 1548968.0,
+        "std_dev": 44338.0,
+        "downside_dev": 30974.0,
+        "median_irr_pct": 0.53,
+        "sharpe_proxy": 34.96,
+        "prob_below_150k": 12.7,
+        "id": "S5_sell_taxable_now",
+        "label": "Immediate Taxable Cash Sale -> Treasury/IG Bonds"
+      }
+    ]
+  },
+  "base_franchisee": {
+    "t0_cap_pct": 7.4,
+    "t0_gross_value": 1351351.0,
+    "sell_friction_pct": 4.56,
+    "strategies": [
+      {
+        "mean_2040": 3595080.0,
+        "median_2040": 3591637.0,
+        "p10_2040": 3307338.0,
+        "p90_2040": 3888015.0,
+        "ce_2040": 3581214.0,
+        "std_dev": 222857.0,
+        "downside_dev": 156215.0,
+        "median_irr_pct": 7.23,
+        "sharpe_proxy": 16.13,
+        "prob_below_150k": 0.0,
+        "id": "S4_sell_1031_now",
+        "label": "Immediate Sale + \u00a71031 Into IG Net-Lease Now"
+      },
+      {
+        "mean_2040": 3574545.0,
+        "median_2040": 3549962.0,
+        "p10_2040": 3216435.0,
+        "p90_2040": 3953855.0,
+        "ce_2040": 3550184.0,
+        "std_dev": 299057.0,
+        "downside_dev": 196802.0,
+        "median_irr_pct": 7.14,
+        "sharpe_proxy": 11.95,
+        "prob_below_150k": 0.0,
+        "id": "S3_blend_extend_1031",
+        "label": "Blend-and-Extend + \u00a71031 Exchange at 10+ Yr WALT"
+      },
+      {
+        "mean_2040": 3286794.0,
+        "median_2040": 3345768.0,
+        "p10_2040": 2773745.0,
+        "p90_2040": 3617180.0,
+        "ce_2040": 3253144.0,
+        "std_dev": 312883.0,
+        "downside_dev": 253265.0,
+        "median_irr_pct": 6.69,
+        "sharpe_proxy": 10.5,
+        "prob_below_150k": 0.0,
+        "id": "S6_hold_reposition_land",
+        "label": "Hold to Expiry & Reposition Drive-Thru Parcel"
+      },
+      {
+        "mean_2040": 3159464.0,
+        "median_2040": 3295323.0,
+        "p10_2040": 2641850.0,
+        "p90_2040": 3512475.0,
+        "ce_2040": 3112657.0,
+        "std_dev": 357839.0,
+        "downside_dev": 290676.0,
+        "median_irr_pct": 6.57,
+        "sharpe_proxy": 8.83,
+        "prob_below_150k": 0.0,
+        "id": "S2_blend_extend_hold",
+        "label": "Early Blend-and-Extend (10 Yr), Hold to 2040"
+      },
+      {
+        "mean_2040": 3047829.0,
+        "median_2040": 3116386.0,
+        "p10_2040": 2568050.0,
+        "p90_2040": 3480441.0,
+        "ce_2040": 2995997.0,
+        "std_dev": 376558.0,
+        "downside_dev": 288435.0,
+        "median_irr_pct": 6.15,
+        "sharpe_proxy": 8.09,
+        "prob_below_150k": 0.0,
+        "id": "S1_hold_passive",
+        "label": "Hold Passive Through 2030\u20132035 Expiry"
+      },
+      {
+        "mean_2040": 1455120.0,
+        "median_2040": 1454489.0,
+        "p10_2040": 1400986.0,
+        "p90_2040": 1509927.0,
+        "ce_2040": 1453884.0,
+        "std_dev": 42465.0,
+        "downside_dev": 29511.0,
+        "median_irr_pct": 0.53,
+        "sharpe_proxy": 34.27,
+        "prob_below_150k": 85.6,
+        "id": "S5_sell_taxable_now",
+        "label": "Immediate Taxable Cash Sale -> Treasury/IG Bonds"
+      }
+    ]
+  },
+  "base_ula_over_5_4m": {
+    "t0_cap_pct": 6.95,
+    "t0_gross_value": 1438849.0,
+    "sell_friction_pct": 8.56,
+    "strategies": [
+      {
+        "mean_2040": 3664956.0,
+        "median_2040": 3663847.0,
+        "p10_2040": 3379466.0,
+        "p90_2040": 3951604.0,
+        "ce_2040": 3651326.0,
+        "std_dev": 223141.0,
+        "downside_dev": 156360.0,
+        "median_irr_pct": 6.9,
+        "sharpe_proxy": 16.42,
+        "prob_below_150k": 0.0,
+        "id": "S4_sell_1031_now",
+        "label": "Immediate Sale + \u00a71031 Into IG Net-Lease Now"
+      },
+      {
+        "mean_2040": 3532174.0,
+        "median_2040": 3531587.0,
+        "p10_2040": 3154512.0,
+        "p90_2040": 3898093.0,
+        "ce_2040": 3507036.0,
+        "std_dev": 296899.0,
+        "downside_dev": 207798.0,
+        "median_irr_pct": 6.62,
+        "sharpe_proxy": 11.9,
+        "prob_below_150k": 0.0,
+        "id": "S3_blend_extend_1031",
+        "label": "Blend-and-Extend + \u00a71031 Exchange at 10+ Yr WALT"
+      },
+      {
+        "mean_2040": 3219768.0,
+        "median_2040": 3271013.0,
+        "p10_2040": 2753000.0,
+        "p90_2040": 3520923.0,
+        "ce_2040": 3189788.0,
+        "std_dev": 291874.0,
+        "downside_dev": 237612.0,
+        "median_irr_pct": 6.04,
+        "sharpe_proxy": 11.03,
+        "prob_below_150k": 0.0,
+        "id": "S6_hold_reposition_land",
+        "label": "Hold to Expiry & Reposition Drive-Thru Parcel"
+      },
+      {
+        "mean_2040": 3158144.0,
+        "median_2040": 3273487.0,
+        "p10_2040": 2655922.0,
+        "p90_2040": 3451852.0,
+        "ce_2040": 3119948.0,
+        "std_dev": 320521.0,
+        "downside_dev": 268388.0,
+        "median_irr_pct": 6.05,
+        "sharpe_proxy": 9.85,
+        "prob_below_150k": 0.0,
+        "id": "S2_blend_extend_hold",
+        "label": "Early Blend-and-Extend (10 Yr), Hold to 2040"
+      },
+      {
+        "mean_2040": 3038009.0,
+        "median_2040": 3138444.0,
+        "p10_2040": 2557591.0,
+        "p90_2040": 3425994.0,
+        "ce_2040": 2990634.0,
+        "std_dev": 357369.0,
+        "downside_dev": 280241.0,
+        "median_irr_pct": 5.73,
+        "sharpe_proxy": 8.5,
+        "prob_below_150k": 0.0,
+        "id": "S1_hold_passive",
+        "label": "Hold Passive Through 2030\u20132035 Expiry"
+      },
+      {
+        "mean_2040": 1461820.0,
+        "median_2040": 1461466.0,
+        "p10_2040": 1409775.0,
+        "p90_2040": 1515195.0,
+        "ce_2040": 1460642.0,
+        "std_dev": 41533.0,
+        "downside_dev": 28954.0,
+        "median_irr_pct": 0.11,
+        "sharpe_proxy": 35.2,
+        "prob_below_150k": 82.3,
+        "id": "S5_sell_taxable_now",
+        "label": "Immediate Taxable Cash Sale -> Treasury/IG Bonds"
+      }
+    ]
+  },
+  "scenarios": {
+    "base": {
+      "t0_cap_pct": 6.95,
+      "t0_gross_value": 1438849.0,
+      "sell_friction_pct": 4.56,
+      "strategies": [
+        {
+          "mean_2040": 3825391.0,
+          "median_2040": 3823902.0,
+          "p10_2040": 3524072.0,
+          "p90_2040": 4125962.0,
+          "ce_2040": 3810994.0,
+          "std_dev": 234238.0,
+          "downside_dev": 164373.0,
+          "median_irr_pct": 7.23,
+          "sharpe_proxy": 16.33,
+          "prob_below_150k": 0.0,
+          "id": "S4_sell_1031_now",
+          "label": "Immediate Sale + \u00a71031 Into IG Net-Lease Now"
+        },
+        {
+          "mean_2040": 3685920.0,
+          "median_2040": 3686859.0,
+          "p10_2040": 3293275.0,
+          "p90_2040": 4070554.0,
+          "ce_2040": 3659490.0,
+          "std_dev": 310733.0,
+          "downside_dev": 217968.0,
+          "median_irr_pct": 6.95,
+          "sharpe_proxy": 11.86,
+          "prob_below_150k": 0.0,
+          "id": "S3_blend_extend_1031",
+          "label": "Blend-and-Extend + \u00a71031 Exchange at 10+ Yr WALT"
+        },
+        {
+          "mean_2040": 3281565.0,
+          "median_2040": 3336953.0,
+          "p10_2040": 2787520.0,
+          "p90_2040": 3600402.0,
+          "ce_2040": 3249666.0,
+          "std_dev": 304137.0,
+          "downside_dev": 247051.0,
+          "median_irr_pct": 6.19,
+          "sharpe_proxy": 10.79,
+          "prob_below_150k": 0.0,
+          "id": "S6_hold_reposition_land",
+          "label": "Hold to Expiry & Reposition Drive-Thru Parcel"
+        },
+        {
+          "mean_2040": 3218079.0,
+          "median_2040": 3335077.0,
+          "p10_2040": 2704947.0,
+          "p90_2040": 3520894.0,
+          "ce_2040": 3179004.0,
+          "std_dev": 327956.0,
+          "downside_dev": 273760.0,
+          "median_irr_pct": 6.19,
+          "sharpe_proxy": 9.81,
+          "prob_below_150k": 0.0,
+          "id": "S2_blend_extend_hold",
+          "label": "Early Blend-and-Extend (10 Yr), Hold to 2040"
+        },
+        {
+          "mean_2040": 3098337.0,
+          "median_2040": 3199254.0,
+          "p10_2040": 2608611.0,
+          "p90_2040": 3495187.0,
+          "ce_2040": 3049563.0,
+          "std_dev": 365363.0,
+          "downside_dev": 287305.0,
+          "median_irr_pct": 5.87,
+          "sharpe_proxy": 8.48,
+          "prob_below_150k": 0.0,
+          "id": "S1_hold_passive",
+          "label": "Hold Passive Through 2030\u20132035 Expiry"
+        },
+        {
+          "mean_2040": 1550234.0,
+          "median_2040": 1549851.0,
+          "p10_2040": 1493858.0,
+          "p90_2040": 1607243.0,
+          "ce_2040": 1548968.0,
+          "std_dev": 44338.0,
+          "downside_dev": 30974.0,
+          "median_irr_pct": 0.53,
+          "sharpe_proxy": 34.96,
+          "prob_below_150k": 12.7,
+          "id": "S5_sell_taxable_now",
+          "label": "Immediate Taxable Cash Sale -> Treasury/IG Bonds"
+        }
+      ]
+    },
+    "stagflation": {
+      "t0_cap_pct": 6.95,
+      "t0_gross_value": 1438849.0,
+      "sell_friction_pct": 4.56,
+      "strategies": [
+        {
+          "mean_2040": 4172680.0,
+          "median_2040": 4181515.0,
+          "p10_2040": 3897743.0,
+          "p90_2040": 4436123.0,
+          "ce_2040": 4161930.0,
+          "std_dev": 210290.0,
+          "downside_dev": 152575.0,
+          "median_irr_pct": 7.92,
+          "sharpe_proxy": 19.84,
+          "prob_below_150k": 0.0,
+          "id": "S4_sell_1031_now",
+          "label": "Immediate Sale + \u00a71031 Into IG Net-Lease Now"
+        },
+        {
+          "mean_2040": 3773717.0,
+          "median_2040": 3805752.0,
+          "p10_2040": 3237422.0,
+          "p90_2040": 4259227.0,
+          "ce_2040": 3731502.0,
+          "std_dev": 391361.0,
+          "downside_dev": 287286.0,
+          "median_irr_pct": 7.19,
+          "sharpe_proxy": 9.64,
+          "prob_below_150k": 0.0,
+          "id": "S3_blend_extend_1031",
+          "label": "Blend-and-Extend + \u00a71031 Exchange at 10+ Yr WALT"
+        },
+        {
+          "mean_2040": 3191819.0,
+          "median_2040": 3243177.0,
+          "p10_2040": 2739387.0,
+          "p90_2040": 3485960.0,
+          "ce_2040": 3163607.0,
+          "std_dev": 281898.0,
+          "downside_dev": 230523.0,
+          "median_irr_pct": 5.98,
+          "sharpe_proxy": 11.32,
+          "prob_below_150k": 0.0,
+          "id": "S6_hold_reposition_land",
+          "label": "Hold to Expiry & Reposition Drive-Thru Parcel"
+        },
+        {
+          "mean_2040": 3140766.0,
+          "median_2040": 3257899.0,
+          "p10_2040": 2645935.0,
+          "p90_2040": 3444143.0,
+          "ce_2040": 3102673.0,
+          "std_dev": 320813.0,
+          "downside_dev": 266206.0,
+          "median_irr_pct": 6.01,
+          "sharpe_proxy": 9.79,
+          "prob_below_150k": 0.0,
+          "id": "S2_blend_extend_hold",
+          "label": "Early Blend-and-Extend (10 Yr), Hold to 2040"
+        },
+        {
+          "mean_2040": 3010520.0,
+          "median_2040": 3120887.0,
+          "p10_2040": 2534452.0,
+          "p90_2040": 3405043.0,
+          "ce_2040": 2960704.0,
+          "std_dev": 364626.0,
+          "downside_dev": 284892.0,
+          "median_irr_pct": 5.69,
+          "sharpe_proxy": 8.26,
+          "prob_below_150k": 0.0,
+          "id": "S1_hold_passive",
+          "label": "Hold Passive Through 2030\u20132035 Expiry"
+        },
+        {
+          "mean_2040": 1764217.0,
+          "median_2040": 1762721.0,
+          "p10_2040": 1701346.0,
+          "p90_2040": 1828462.0,
+          "ce_2040": 1762826.0,
+          "std_dev": 49576.0,
+          "downside_dev": 34553.0,
+          "median_irr_pct": 1.46,
+          "sharpe_proxy": 35.59,
+          "prob_below_150k": 0.0,
+          "id": "S5_sell_taxable_now",
+          "label": "Immediate Taxable Cash Sale -> Treasury/IG Bonds"
+        }
+      ]
+    },
+    "soft_landing": {
+      "t0_cap_pct": 6.95,
+      "t0_gross_value": 1438849.0,
+      "sell_friction_pct": 4.56,
+      "strategies": [
+        {
+          "mean_2040": 3546797.0,
+          "median_2040": 3521017.0,
+          "p10_2040": 3155006.0,
+          "p90_2040": 3968918.0,
+          "ce_2040": 3518883.0,
+          "std_dev": 317829.0,
+          "downside_dev": 211661.0,
+          "median_irr_pct": 6.6,
+          "sharpe_proxy": 11.16,
+          "prob_below_150k": 0.0,
+          "id": "S3_blend_extend_1031",
+          "label": "Blend-and-Extend + \u00a71031 Exchange at 10+ Yr WALT"
+        },
+        {
+          "mean_2040": 3500980.0,
+          "median_2040": 3496986.0,
+          "p10_2040": 3196265.0,
+          "p90_2040": 3806306.0,
+          "ce_2040": 3485877.0,
+          "std_dev": 230341.0,
+          "downside_dev": 159394.0,
+          "median_irr_pct": 6.55,
+          "sharpe_proxy": 15.2,
+          "prob_below_150k": 0.0,
+          "id": "S4_sell_1031_now",
+          "label": "Immediate Sale + \u00a71031 Into IG Net-Lease Now"
+        },
+        {
+          "mean_2040": 3328937.0,
+          "median_2040": 3388894.0,
+          "p10_2040": 2802569.0,
+          "p90_2040": 3673084.0,
+          "ce_2040": 3292483.0,
+          "std_dev": 327496.0,
+          "downside_dev": 263926.0,
+          "median_irr_pct": 6.31,
+          "sharpe_proxy": 10.16,
+          "prob_below_150k": 0.0,
+          "id": "S6_hold_reposition_land",
+          "label": "Hold to Expiry & Reposition Drive-Thru Parcel"
+        },
+        {
+          "mean_2040": 3253347.0,
+          "median_2040": 3371328.0,
+          "p10_2040": 2725037.0,
+          "p90_2040": 3563984.0,
+          "ce_2040": 3212872.0,
+          "std_dev": 335454.0,
+          "downside_dev": 280046.0,
+          "median_irr_pct": 6.27,
+          "sharpe_proxy": 9.7,
+          "prob_below_150k": 0.0,
+          "id": "S2_blend_extend_hold",
+          "label": "Early Blend-and-Extend (10 Yr), Hold to 2040"
+        },
+        {
+          "mean_2040": 3145066.0,
+          "median_2040": 3243186.0,
+          "p10_2040": 2631437.0,
+          "p90_2040": 3551773.0,
+          "ce_2040": 3095324.0,
+          "std_dev": 371754.0,
+          "downside_dev": 292767.0,
+          "median_irr_pct": 5.98,
+          "sharpe_proxy": 8.46,
+          "prob_below_150k": 0.0,
+          "id": "S1_hold_passive",
+          "label": "Hold Passive Through 2030\u20132035 Expiry"
+        },
+        {
+          "mean_2040": 1431267.0,
+          "median_2040": 1430255.0,
+          "p10_2040": 1430255.0,
+          "p90_2040": 1430255.0,
+          "ce_2040": 1431246.0,
+          "std_dev": 5605.0,
+          "downside_dev": 985.0,
+          "median_irr_pct": -0.04,
+          "sharpe_proxy": 255.37,
+          "prob_below_150k": 100.0,
+          "id": "S5_sell_taxable_now",
+          "label": "Immediate Taxable Cash Sale -> Treasury/IG Bonds"
+        }
+      ]
+    }
+  },
+  "expiry_sweep": [
+    {
+      "expiry_year": 2030,
+      "rem_years": 4,
+      "t0_cap_pct": 7.38,
+      "t0_gross_value": 1354402.0,
+      "S3_blend_extend_1031_ce": 3552625.0,
+      "S4_sell_1031_now_ce": 3588997.0,
+      "S2_blend_extend_hold_ce": 3179841.0,
+      "S1_hold_passive_ce": 3067593.0,
+      "S5_sell_taxable_now_ce": 1458771.0
+    },
+    {
+      "expiry_year": 2031,
+      "rem_years": 5,
+      "t0_cap_pct": 7.17,
+      "t0_gross_value": 1395349.0,
+      "S3_blend_extend_1031_ce": 3611729.0,
+      "S4_sell_1031_now_ce": 3693320.0,
+      "S2_blend_extend_hold_ce": 3187905.0,
+      "S1_hold_passive_ce": 3057624.0,
+      "S5_sell_taxable_now_ce": 1501114.0
+    },
+    {
+      "expiry_year": 2032,
+      "rem_years": 6,
+      "t0_cap_pct": 6.95,
+      "t0_gross_value": 1438849.0,
+      "S3_blend_extend_1031_ce": 3667150.0,
+      "S4_sell_1031_now_ce": 3813753.0,
+      "S2_blend_extend_hold_ce": 3184693.0,
+      "S1_hold_passive_ce": 3052136.0,
+      "S5_sell_taxable_now_ce": 1547831.0
+    },
+    {
+      "expiry_year": 2033,
+      "rem_years": 7,
+      "t0_cap_pct": 6.86,
+      "t0_gross_value": 1457195.0,
+      "S3_blend_extend_1031_ce": 3680203.0,
+      "S4_sell_1031_now_ce": 3860617.0,
+      "S2_blend_extend_hold_ce": 3198117.0,
+      "S1_hold_passive_ce": 3035341.0,
+      "S5_sell_taxable_now_ce": 1568638.0
+    },
+    {
+      "expiry_year": 2034,
+      "rem_years": 8,
+      "t0_cap_pct": 6.77,
+      "t0_gross_value": 1476015.0,
+      "S3_blend_extend_1031_ce": 3701286.0,
+      "S4_sell_1031_now_ce": 3916378.0,
+      "S2_blend_extend_hold_ce": 3235456.0,
+      "S1_hold_passive_ce": 3035842.0,
+      "S5_sell_taxable_now_ce": 1588593.0
+    },
+    {
+      "expiry_year": 2035,
+      "rem_years": 9,
+      "t0_cap_pct": 6.69,
+      "t0_gross_value": 1495327.0,
+      "S3_blend_extend_1031_ce": 3719280.0,
+      "S4_sell_1031_now_ce": 3962155.0,
+      "S2_blend_extend_hold_ce": 3245561.0,
+      "S1_hold_passive_ce": 3027267.0,
+      "S5_sell_taxable_now_ce": 1609558.0
+    }
+  ],
+  "basis_sweep": [
+    {
+      "gain_ratio_pct": 0,
+      "S4_sell_1031_now_ce": 3813753.0,
+      "S5_sell_taxable_now_ce": 2099858.0,
+      "S1_hold_passive_ce": 3052136.0,
+      "tax_savings_advantage": 1713895.0
+    },
+    {
+      "gain_ratio_pct": 25,
+      "S4_sell_1031_now_ce": 3813753.0,
+      "S5_sell_taxable_now_ce": 1887540.0,
+      "S1_hold_passive_ce": 3052136.0,
+      "tax_savings_advantage": 1926213.0
+    },
+    {
+      "gain_ratio_pct": 50,
+      "S4_sell_1031_now_ce": 3813753.0,
+      "S5_sell_taxable_now_ce": 1675222.0,
+      "S1_hold_passive_ce": 3052136.0,
+      "tax_savings_advantage": 2138531.0
+    },
+    {
+      "gain_ratio_pct": 65,
+      "S4_sell_1031_now_ce": 3813753.0,
+      "S5_sell_taxable_now_ce": 1547831.0,
+      "S1_hold_passive_ce": 3052136.0,
+      "tax_savings_advantage": 2265922.0
+    },
+    {
+      "gain_ratio_pct": 80,
+      "S4_sell_1031_now_ce": 3813753.0,
+      "S5_sell_taxable_now_ce": 1420440.0,
+      "S1_hold_passive_ce": 3052136.0,
+      "tax_savings_advantage": 2393313.0
+    }
+  ],
+  "term_curve": [
+    {
+      "rem_years": 15,
+      "corp_cap_pct": 6.45,
+      "fran_cap_pct": 6.9
+    },
+    {
+      "rem_years": 12,
+      "corp_cap_pct": 6.53,
+      "fran_cap_pct": 6.98
+    },
+    {
+      "rem_years": 10,
+      "corp_cap_pct": 6.6,
+      "fran_cap_pct": 7.05
+    },
+    {
+      "rem_years": 8,
+      "corp_cap_pct": 6.77,
+      "fran_cap_pct": 7.22
+    },
+    {
+      "rem_years": 6,
+      "corp_cap_pct": 6.95,
+      "fran_cap_pct": 7.4
+    },
+    {
+      "rem_years": 5,
+      "corp_cap_pct": 7.17,
+      "fran_cap_pct": 7.62
+    },
+    {
+      "rem_years": 4,
+      "corp_cap_pct": 7.38,
+      "fran_cap_pct": 7.83
+    },
+    {
+      "rem_years": 3,
+      "corp_cap_pct": 7.6,
+      "fran_cap_pct": 8.05
+    },
+    {
+      "rem_years": 2,
+      "corp_cap_pct": 7.95,
+      "fran_cap_pct": 8.4
+    },
+    {
+      "rem_years": 1,
+      "corp_cap_pct": 8.3,
+      "fran_cap_pct": 8.75
+    }
+  ]
+}

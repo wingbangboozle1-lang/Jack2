@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "session": "session-24d6cd5f",
+    "verified_at": "2026-11-08",
+    "total_risks": 28
+  },
+  "rows": [
+    {
+      "id": "RK-01",
+      "category": "Tenant Credit & Debt Wall",
+      "title": "May 2031 $500M 7.624% Class A-2 Securitization ARD Collides Directly With 2030–2035 Lease Expiry",
+      "severity": "Critical",
+      "likelihood": "High",
+      "description": "Jack in the Box issued $500.0M of 7.624% Class A-2 notes in June 2026 carrying a May 2031 Anticipated Repayment Date inside the owner's 2030–2035 lease expiration window. Failure to refinance on affordable terms forces rapid amortization sweep across the securitized estate.",
+      "mitigant_or_trigger": "Exit or execute a minimum 10-year blend-and-extend before WALT drops below 5 years and ahead of the 2030–2031 securitization refinancing cycle.",
+      "source": "S33"
+    },
+    {
+      "id": "RK-02",
+      "category": "Tenant Credit & Debt Wall",
+      "title": "Store Margin Compression (-400 bps YTD to 16.6%; FY26 Guidance Cut to ~16.5%)",
+      "severity": "Critical",
+      "likelihood": "High",
+      "description": "Company store-level margin eroded from 21.7% (FY24) to 19.6% (FY25) and 16.6% (40-week YTD Q3 FY26), with August 12, 2026 full-year guidance cut to ~16.5% amid -4.2% YTD system same-store sales.",
+      "mitigant_or_trigger": "Audit unit-level store sales and rent-to-sales ratio immediately; if rent-to-sales exceeds 10%–11%, price aggressive rent-cut / closure odds.",
+      "source": "S32"
+    },
+    {
+      "id": "RK-03",
+      "category": "Tenant Credit & Debt Wall",
+      "title": "California AB 1228 $20.00/hr Fast-Food Wage Concentration (44.1% of Brand System in CA)",
+      "severity": "High",
+      "likelihood": "Confirmed",
+      "description": "941 of JACK's 2,136 FY25 restaurants (44.1%) sit in California under the $20.00/hr fast-food wage mandate and LA's +4.2% ECI compensation inflation, leaving minimal room for occupancy increases.",
+      "mitigant_or_trigger": "Diversify proceeds via §1031 exchange out of single-state fast-food wage concentration into multi-state IG net-lease assets.",
+      "source": "S17"
+    },
+    {
+      "id": "RK-04",
+      "category": "Tenant Credit & Debt Wall",
+      "title": "Franchisee Liquidity Stress: $11.0M Payment Deferrals & Rising Bad Debt Expense",
+      "severity": "High",
+      "likelihood": "High",
+      "description": "93% of system stores are franchised; Q3 FY26 OCF plunged -52.1% to $56.55M partly due to $11.0M in franchisee payment deferrals and $18.7M franchisee incentives, pulling franchise margin down to 37.4% (vs 39.3%).",
+      "mitigant_or_trigger": "Verify whether subject lease is guaranteed by corporate Jack in the Box Inc. or a single-purpose franchisee LLC.",
+      "source": "S32"
+    },
+    {
+      "id": "RK-05",
+      "category": "Tenant Credit & Debt Wall",
+      "title": "Continuing-Operations & Free-Cash Deterioration Masked by Del Taco Exit & COLI Surrender",
+      "severity": "High",
+      "likelihood": "High",
+      "description": "Headline 9-mo FY26 GAAP net income (+$27.91M) was entirely optical (Del Taco discontinued losses fell from -$161.05M to -$20.06M); continuing-ops profit fell -35.6% ($47.97M) while cash flow leaned on $80.42M COLI policy surrender and $26.68M asset sales.",
+      "mitigant_or_trigger": "Underwrite tenant credit on continuing-ops OCF ($56.55M YTD) and -$901.29M equity deficit, not headline net income.",
+      "source": "S32"
+    },
+    {
+      "id": "RK-06",
+      "category": "Tenant Credit & Debt Wall",
+      "title": "'JACK on Track' Closure Wave (86 FY25 + 50–60 Guided FY26 Closures) & Leadership Turnover",
+      "severity": "High",
+      "likelihood": "High",
+      "description": "Management closed 86 units in FY25 and guided 50–60 FY26 closures (~2,100 YE count) amid interim CEO Mark King, September 2026 President appointment, and activist GreenWood standstill through 2028 AGM.",
+      "mitigant_or_trigger": "Check whether the subject unit is company-subleased (1,020 system units) or flagged inside block closure cohorts.",
+      "source": "S32"
+    },
+    {
+      "id": "RK-07",
+      "category": "Lease Structure & Re-Tenanting",
+      "title": "Binary WALT-Cliff Cap-Rate Expansion Below 5 Years Remaining Term",
+      "severity": "Critical",
+      "likelihood": "High",
+      "description": "As the 2030–2035 expiration narrows under 5 years, institutional net-lease buyer financing dries up and exit cap rates expand ~100–190 bps (from ~6.4%–6.6% long-WALT toward 7.45%–8.35% dark/short-WALT).",
+      "mitigant_or_trigger": "Either execute an early 10-year blend-and-extend before selling or market via §1031 while remaining term >=5–6 years.",
+      "source": "S23"
+    },
+    {
+      "id": "RK-08",
+      "category": "Lease Structure & Re-Tenanting",
+      "title": "Fixed ~1.5% Escalations Eroded by +3.7% LA CPI-U Inflation",
+      "severity": "Medium",
+      "likelihood": "High",
+      "description": "Standard QSR NNN bumps (7.5%–10% per 5 years, ~1.46%–1.92%/yr) lag Sep 2026 LA CPI-U (+3.7% YoY) and Energy CPI (+20.3%), eroding real cash purchasing power ~1.8%–2.2% annually.",
+      "mitigant_or_trigger": "Require CPI-collared annual steps (2.0%–3.0%) in any blend-and-extend negotiation.",
+      "source": "S03"
+    },
+    {
+      "id": "RK-09",
+      "category": "Lease Structure & Re-Tenanting",
+      "title": "Non-Renewal Downtime (12–18 Months) & QSR Re-Tenanting TI/LC Capex (~1.8x–2.2x NOI)",
+      "severity": "High",
+      "likelihood": "Medium",
+      "description": "If JACK declines renewal at 2030–2035 expiry ('at then-current market rates'), re-leasing a 1,372 sq ft drive-thru box incurs 12+ months dark carry (taxes/insurance/security) plus heavy landlord retrofit capex.",
+      "mitigant_or_trigger": "Quantify break-even re-leasing cost vs today's §1031 trade value; sell early if store AUV trails system $1,874k.",
+      "source": "S31"
+    },
+    {
+      "id": "RK-10",
+      "category": "Lease Structure & Re-Tenanting",
+      "title": "Hidden NN Carve-Outs (Roof, Structural Slab, Parking Lot & ADA Retrofit)",
+      "severity": "Medium",
+      "likelihood": "Medium",
+      "description": "Older QSR 'NNN' leases frequently leave structural roof, slab, or parking-lot capital replacement on the landlord; unverified lease text could cut net NOI by 5%–12% annualized.",
+      "mitigant_or_trigger": "Review Section 7/Maintenance of the private lease prior to fixing valuation.",
+      "source": "S31"
+    },
+    {
+      "id": "RK-11",
+      "category": "Lease Structure & Re-Tenanting",
+      "title": "Percentage Rent Sensitivity (~13% of JACK Portfolio Carries 1%–10% Sales Clauses)",
+      "severity": "Low",
+      "likelihood": "Medium",
+      "description": "If the subject lease relies on percentage sales overage, negative comparable sales (-4.2% YTD) directly cut landlord cash flow.",
+      "mitigant_or_trigger": "Audit base vs percentage rent schedule in lease abstract.",
+      "source": "S31"
+    },
+    {
+      "id": "RK-12",
+      "category": "Capital Markets & Interest Rates",
+      "title": "Elevated Long-End Yields (10-Yr Treasury 4.86% Nov 6; Peak 5.31% Oct 5)",
+      "severity": "High",
+      "likelihood": "Confirmed",
+      "description": "With 10-Yr UST near 4.86% and 30-Yr at 5.26%, leveraged private buyers face 6.50%–7.25% commercial mortgage quotes, creating negative leverage at sub-6.50% cap rates.",
+      "mitigant_or_trigger": "Market §1031 exit toward all-cash 1031 exchange buyers or institutional net-lease funds (Realty Income 7.5% U.S. deploy).",
+      "source": "S20"
+    },
+    {
+      "id": "RK-13",
+      "category": "Capital Markets & Interest Rates",
+      "title": "Bifurcated Net-Lease Liquidity (NNN Q2 5.6% vs Q1 7.2% Dispositions; Realty Income 7.5% U.S.)",
+      "severity": "Medium",
+      "likelihood": "High",
+      "description": "Transaction clearing yields span 180+ bps depending on remaining term and tenant credit. Non-IG sub-6-yr WALT assets face wide buyer discounts if listed late.",
+      "mitigant_or_trigger": "Benchmark exit pricing conservatively at 6.95%–7.25% for 6-year WALT unless extended to 10+ years.",
+      "source": "S24"
+    },
+    {
+      "id": "RK-14",
+      "category": "Tax & Regulatory",
+      "title": "Measure ULA Gross-Consideration Cliff (> $5.4M Adds Immediate $216k+ Transfer Tax)",
+      "severity": "Critical",
+      "likelihood": "High",
+      "description": "Inside City of LA boundaries, crossing $5,400,000 triggers a 4.0% City surtax on the ENTIRE sale price (4.56% incl. County), confirmed permanently intact after initiative 25-0006A1 withdrawal and Prop 43 defeat.",
+      "mitigant_or_trigger": "Confirm City vs County boundary privately via ZIMAS; if price hovers near $5.4M–$5.6M, structure under the threshold or adjust ask.",
+      "source": "S27"
+    },
+    {
+      "id": "RK-15",
+      "category": "Tax & Regulatory",
+      "title": "Prop 3 Passage Permanently Locks In 13.30% CA Top Capital Gains Rate Post-2030",
+      "severity": "High",
+      "likelihood": "Confirmed",
+      "description": "Prop 3 (leading 60.3% Yes on Nov 7, 2026) makes Prop 30/55 high-earner rates permanent instead of expiring in 2031, keeping combined Fed+CA taxable exit friction near 37.1%–42.1%.",
+      "mitigant_or_trigger": "Prioritize IRC §1031 exchange over taxable cash sale whenever deferred gain exceeds ~25% of gross price.",
+      "source": "S28"
+    },
+    {
+      "id": "RK-16",
+      "category": "Tax & Regulatory",
+      "title": "California Form FTB 3840 Out-of-State §1031 Tracking & OBBBA Non-Conformity",
+      "severity": "Medium",
+      "likelihood": "Confirmed",
+      "description": "Swapping out of California into zero-income-tax states defers CA tax only until final taxable disposition; FTB enforces strict annual Form 3840 reporting and does not conform to federal OBBBA.",
+      "mitigant_or_trigger": "Model lifetime hold-to-step-up estate parity or reserve deferred CA tax inside exit planning.",
+      "source": "S30"
+    },
+    {
+      "id": "RK-17",
+      "category": "Tax & Regulatory",
+      "title": "Prop 13 Reassessment Upon Property Sale Increases Tenant Occupancy Cost",
+      "severity": "Medium",
+      "likelihood": "High",
+      "description": "Sale resets LA County assessed value to 100% of purchase price (1%+ tax rate + voter bonds). Under NNN leases, the tenant pays that tax spike, hurting unit profitability ahead of renewal.",
+      "mitigant_or_trigger": "Include pro-forma Prop 13 tax jump inside tenant rent-to-sales affordability analysis.",
+      "source": "S25"
+    },
+    {
+      "id": "RK-18",
+      "category": "Tax & Regulatory",
+      "title": "Entitled Drive-Through Scarcity Under LAMC §12.24-W,17 (Land-Value Floor vs. Obsolescence)",
+      "severity": "Medium",
+      "likelihood": "Confirmed",
+      "description": "Strict discretionary CUP rules block competing new drive-thrus within 500 ft of residential zones, protecting subject parcel utility—yet small 1,372 sq ft buildings may require demolition for alternative uses.",
+      "mitigant_or_trigger": "Obtain broker BOV separating dark-building QSR value vs underlying C2/infill land value.",
+      "source": "S19"
+    },
+    {
+      "id": "RK-19",
+      "category": "Hazards & Insurance",
+      "title": "Seismic Tail Risk: 60% 30-Yr M>=6.7 & 46% M>=7.0 Probability in Los Angeles Region",
+      "severity": "Critical",
+      "likelihood": "High",
+      "description": "USGS UCERF3 assigns 60% 30-year probability of an M>=6.7 event. Commercial earthquake policies carry 5%–15% deductibles and are typically excluded from standard NNN casualty obligations.",
+      "mitigant_or_trigger": "Audit lease casualty/condemnation abatement clauses and verify soft-story / seismic retrofit status.",
+      "source": "S34"
+    },
+    {
+      "id": "RK-20",
+      "category": "Hazards & Insurance",
+      "title": "Commercial Property Insurance Repricing & $1.0B FAIR Plan Assessment Shock",
+      "severity": "High",
+      "likelihood": "Confirmed",
+      "description": "January 2025 Eaton/Palisades fires (16,251 structures destroyed, $5.2B–$10.1B lost output) triggered CDI Order No. 2025-1 ($1B FAIR Plan assessment), driving sharp NNN insurance premium pass-throughs.",
+      "mitigant_or_trigger": "Audit current property policy renewal quote, insurer solvency, and pass-through ceiling in NNN lease.",
+      "source": "S35"
+    },
+    {
+      "id": "RK-21",
+      "category": "Hazards & Insurance",
+      "title": "FEMA National Risk Index #1 County Hazard Concentration ($3.9B Expected Annual Loss)",
+      "severity": "High",
+      "likelihood": "Confirmed",
+      "description": "LA County ranks #1 in the nation in FEMA NRI ($3.9B EAL, $5.3B Risk Value, 1.36 CRF). Retaining 100% single-parcel LA equity concentrates catastrophic hazard correlation.",
+      "mitigant_or_trigger": "Diversify into multi-state IG net-lease assets via §1031 rather than remaining concentrated in one LA parcel.",
+      "source": "S36"
+    },
+    {
+      "id": "RK-22",
+      "category": "Hazards & Insurance",
+      "title": "USGS ARkStorm Extreme Atmospheric River Flooding (~$725B Statewide Tail Loss)",
+      "severity": "Medium",
+      "likelihood": "Low",
+      "description": "Multi-week atmospheric river floods pose acute urban drainage and store closure risks beyond FEMA 100-year flood zones.",
+      "mitigant_or_trigger": "Confirm parcel flood zone privately and confirm tenant business-interruption coverage without rent abatement.",
+      "source": "S34"
+    },
+    {
+      "id": "RK-23",
+      "category": "Hazards & Insurance",
+      "title": "Legacy Underground Storage Tank (UST) / Drive-Thru Site Contamination (GeoTracker)",
+      "severity": "Medium",
+      "likelihood": "Medium",
+      "description": "Urban Central LA arterial corners frequently sit near historic gas stations or dry cleaners listed on SWRCB GeoTracker, delaying buyer debt underwriting at closing.",
+      "mitigant_or_trigger": "Commission fresh Phase I ESA prior to marketing so clean environmental status maximizes §1031 buyer pool.",
+      "source": "S36"
+    },
+    {
+      "id": "RK-24",
+      "category": "Demographics & Macro",
+      "title": "Sustained County/City Population Contraction (DOF E-1 -0.6% County / -0.9% City YoY)",
+      "severity": "Medium",
+      "likelihood": "Confirmed",
+      "description": "LA County shed 64,000 residents in 2025 (-96,124 net domestic out-migration in FY25), reversing decades of baseline population growth assumed in older regional plans.",
+      "mitigant_or_trigger": "Discount optimistic SCAG 2024 forecasts; weight DOF contraction and SCAG 2026 downward adjustments.",
+      "source": "S07"
+    },
+    {
+      "id": "RK-25",
+      "category": "Demographics & Macro",
+      "title": "Projected -240,800 County Public K-12 Student Decline Through 2035–36",
+      "severity": "Medium",
+      "likelihood": "High",
+      "description": "CA DOF Aug 2026 K-12 series projects LA County losing 240,800 public school students over 10 years while LAUSD stands at 497,105 students with 86.2% non-charter ACGR.",
+      "mitigant_or_trigger": "Expect softer family/teen daypart unit volume growth across Central LA corridors post-2030.",
+      "source": "S09"
+    },
+    {
+      "id": "RK-26",
+      "category": "Demographics & Macro",
+      "title": "Entertainment & White-Collar Payroll Contraction (Motion Picture -7.3% / Info -5.7% YoY)",
+      "severity": "Medium",
+      "likelihood": "High",
+      "description": "September 2026 EDD/BLS data confirm ongoing losses across Motion Picture (-7.3% County), Information (-5.7% MSA), Finance (-1.7%), and Prof. Services (-0.5%).",
+      "mitigant_or_trigger": "Favor dayparts/corridors anchored by healthcare (+3.8% Ed/Health) rather than studio corridors.",
+      "source": "S05"
+    },
+    {
+      "id": "RK-27",
+      "category": "Demographics & Macro",
+      "title": "Energy Inflation Shock (+20.3% YoY; Gasoline +30.8%) Compressing Core QSR Wallet",
+      "severity": "Medium",
+      "likelihood": "High",
+      "description": "LA Area Sep 2026 gasoline inflation (+30.8% YoY) paired with 16.5% City poverty and $1,933/mo median rent sharply erodes discretionary QSR spending among blue-collar commuters.",
+      "mitigant_or_trigger": "Monitor quarterly QSR traffic comps and franchisee margin pressure closely.",
+      "source": "S03"
+    },
+    {
+      "id": "RK-28",
+      "category": "Governance & Process",
+      "title": "IRC §1031 45-Day Identification Execution Squeeze Amid Thin Net-Lease Inventory",
+      "severity": "Medium",
+      "likelihood": "Medium",
+      "description": "Missing the strict statutory 45-day identification or 180-day closing window converts a tax-deferred swap into an immediate ~37.1%–42.1% taxable event.",
+      "mitigant_or_trigger": "Pre-identify 3 replacement DST/IG-NNN properties and retain Qualified Intermediary BEFORE opening buyer escrow.",
+      "source": "S29"
+    }
+  ]
+}
