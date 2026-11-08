@@ -1,0 +1,495 @@
+{
+ "audited": "2026-11-08",
+ "rows": [
+  {
+   "id": "A01",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA metro unemployment, Sep 2026",
+   "published": "4.4%",
+   "session_i": "4.4%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A02",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA County unemployment, Sep 2026",
+   "published": "4.5%",
+   "session_i": "4.5%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": "LAUS, not seasonally adjusted. The seasonally adjusted EDD figure is 4.8% (L11)."
+  },
+  {
+   "id": "A03",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA city unemployment, Sep 2026",
+   "published": "4.5%",
+   "session_i": "4.5%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A04",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA metro nonfarm payroll, 12-month change",
+   "published": "+30.2k / +0.5%",
+   "session_i": "+30.2k / +0.5%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A05",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA metro information sector, 12-month change",
+   "published": "-11.4k / -5.7%",
+   "session_i": "-11.4k / -5.7%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A06",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA metro CPI-U all items, 12-month change",
+   "published": "3.7%",
+   "session_i": "3.7%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A07",
+   "where": "root site (data/metrics.json)",
+   "claim": "ECI (LA-Long Beach CSA), 12-month change",
+   "published": "3.9%",
+   "session_i": "3.9%",
+   "source": "S01",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A08",
+   "where": "root site (data/metrics.json)",
+   "claim": "Los Angeles city population (V2025)",
+   "published": "3,869,089",
+   "session_i": "3,869,089",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A09",
+   "where": "root site (data/metrics.json)",
+   "claim": "Los Angeles County population (V2025)",
+   "published": "9,694,934",
+   "session_i": "9,694,934",
+   "source": "S05",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A10",
+   "where": "root site (data/metrics.json)",
+   "claim": "City median household income",
+   "published": "$81,939",
+   "session_i": "$81,939",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A11",
+   "where": "root site (data/metrics.json)",
+   "claim": "County median household income",
+   "published": "$90,112",
+   "session_i": "$90,112",
+   "source": "S05",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A12",
+   "where": "root site (data/metrics.json)",
+   "claim": "City poverty rate",
+   "published": "16.5%",
+   "session_i": "16.5%",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A13",
+   "where": "root site (data/metrics.json)",
+   "claim": "County poverty rate",
+   "published": "13.3%",
+   "session_i": "13.3%",
+   "source": "S05",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A14",
+   "where": "root site (data/metrics.json)",
+   "claim": "City per capita income",
+   "published": "$47,685",
+   "session_i": "$47,685",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A15",
+   "where": "root site (data/metrics.json)",
+   "claim": "County per capita income",
+   "published": "$45,792",
+   "session_i": "$45,792",
+   "source": "S05",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A16",
+   "where": "root site (data/metrics.json)",
+   "claim": "City median value of owner-occupied units",
+   "published": "$921,200",
+   "session_i": "$921,200",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A17",
+   "where": "root site (data/metrics.json)",
+   "claim": "City population density",
+   "published": "8,304.2 /sq mi",
+   "session_i": "8,304.2 /sq mi",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A18",
+   "where": "root site (data/metrics.json)",
+   "claim": "City mean travel time to work",
+   "published": "30.7 min",
+   "session_i": "30.7 min",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A19",
+   "where": "root site (data/metrics.json)",
+   "claim": "City accommodation & food services sales (2022)",
+   "published": "$17.37B",
+   "session_i": "$17.367B",
+   "source": "S04",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A20",
+   "where": "root site (data/metrics.json)",
+   "claim": "LA County total personal income, 2024",
+   "published": "$818.5B",
+   "session_i": "$818.5B",
+   "source": "S06",
+   "verdict": "confirmed",
+   "note": "BEA: largest of any U.S. county."
+  },
+  {
+   "id": "A21",
+   "where": "root site (valuation.json S8)",
+   "claim": "Jack in the Box cash, 2026-07-05",
+   "published": "$46.32M",
+   "session_i": "$46,318k",
+   "source": "S08",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A22",
+   "where": "root site (S8)",
+   "claim": "Jack in the Box total debt",
+   "published": "$1,472.83M",
+   "session_i": "$1,472,827k",
+   "source": "S08",
+   "verdict": "confirmed",
+   "note": "Sum of current maturities $44,160k and long-term $1,428,667k."
+  },
+  {
+   "id": "A23",
+   "where": "root site (S8)",
+   "claim": "Jack in the Box operating lease liabilities",
+   "published": "$1,008.79M",
+   "session_i": "$1,008,794k",
+   "source": "S08",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A24",
+   "where": "root site (S8)",
+   "claim": "Jack in the Box stockholders' deficit",
+   "published": "-$901.29M",
+   "session_i": "-$901,286k",
+   "source": "S08",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A25",
+   "where": "root site (S9)",
+   "claim": "JACK system same-store sales, Q3 FY2026",
+   "published": "-1.1%",
+   "session_i": "-1.1%",
+   "source": "S09",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A26",
+   "where": "root site (S9)",
+   "claim": "JACK restaurant count",
+   "published": "2,115",
+   "session_i": "2,115",
+   "source": "S09",
+   "verdict": "confirmed",
+   "note": "149 company-operated + 1,966 franchised."
+  },
+  {
+   "id": "A27",
+   "where": "root site (S9)",
+   "claim": "JACK Q3 FY2026 closures",
+   "published": "17",
+   "session_i": "17",
+   "source": "S09",
+   "verdict": "confirmed",
+   "note": "4 openings in the same quarter."
+  },
+  {
+   "id": "A28",
+   "where": "root site (S11)",
+   "claim": "10-year Treasury yield",
+   "published": "4.84%",
+   "session_i": "4.84% on 2026-11-05",
+   "source": "S10",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A29",
+   "where": "root site",
+   "claim": "Federal funds target range upper limit",
+   "published": "4.00%",
+   "session_i": "4.00% on 2026-11-08",
+   "source": "S11",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A30",
+   "where": "root site (S6)",
+   "claim": "Prop 13: 1% levy, 2%/yr cap, reassessment on sale",
+   "published": "as published",
+   "session_i": "same",
+   "source": "S14",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A31",
+   "where": "root site (S7/S8)",
+   "claim": "Measure ULA: 0.45% base, 4% > $5.4M, 5.5% >= $10.9M",
+   "published": "as published",
+   "session_i": "same",
+   "source": "S15",
+   "verdict": "confirmed",
+   "note": "Also confirmed on the County Recorder schedule for 7/1/26 (S16)."
+  },
+  {
+   "id": "A32",
+   "where": "root site (S7)",
+   "claim": "County documentary transfer tax 0.11%",
+   "published": "0.11%",
+   "session_i": "0.11%",
+   "source": "S16",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A33",
+   "where": "root site (S16)",
+   "claim": "Section 1031: 45-day identification / 180-day receipt",
+   "published": "45 / 180",
+   "session_i": "45 / 180",
+   "source": "S17",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A34",
+   "where": "root site",
+   "claim": "California top marginal rate 13.3%",
+   "published": "13.3%",
+   "session_i": "12.3% (S18) + 1.0% (S19)",
+   "source": "S18",
+   "verdict": "confirmed",
+   "note": "Confirmed, and now cited as its two statutory components rather than as one number."
+  },
+  {
+   "id": "A35",
+   "where": "root site (S5)",
+   "claim": "California fast food minimum wage",
+   "published": "$20.00/hr",
+   "session_i": "$20.00/hr",
+   "source": "S21",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A36",
+   "where": "root site",
+   "claim": "California state minimum wage",
+   "published": "$16.90/hr",
+   "session_i": "$16.90/hr",
+   "source": "S20",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A37",
+   "where": "root site",
+   "claim": "City of Los Angeles minimum wage",
+   "published": "$18.42/hr",
+   "session_i": "$18.42/hr",
+   "source": "S22",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "A38",
+   "where": "root site (S18)",
+   "claim": "USGS 30-year LA probabilities 60 / 46 / 31%",
+   "published": "60 / 46 / 31%",
+   "session_i": "60 / 46 / 31%",
+   "source": "S23",
+   "verdict": "confirmed",
+   "note": ""
+  },
+  {
+   "id": "R39",
+   "where": "root site (S10 / valuation.json)",
+   "claim": "Net-lease reinvestment benchmark",
+   "published": "7.3% (FY2025)",
+   "session_i": "6.8% (Q3 2026, filed 2026-11-02)",
+   "source": "S13",
+   "verdict": "superseded",
+   "note": "The FY2025 figure was correct when published. A newer SEC filing exists. The model's base-case breakeven is 6.975%, so this single input flips the sell-vs-hold sign."
+  },
+  {
+   "id": "R40",
+   "where": "root site",
+   "claim": "Base-case breakeven reinvestment yield",
+   "published": "6.975%",
+   "session_i": "6.975% reproduced",
+   "source": "S10",
+   "verdict": "confirmed",
+   "note": "Independently re-derived by this session's engine; reproduction of all 21 published model values passed."
+  },
+  {
+   "id": "R41",
+   "where": "root site (decision.html)",
+   "claim": "At 7.3%, selling beats holding by ~$0.25M of 2040 wealth",
+   "published": "$246,824",
+   "session_i": "$246,824",
+   "source": "S12",
+   "verdict": "confirmed",
+   "note": "Arithmetic confirmed. At the newer 6.8% input the sign reverses: holding beats selling by $128,982."
+  },
+  {
+   "id": "R42",
+   "where": "root site (S21)",
+   "claim": "Local economic forecast through 2028 (LAEDC/EWDD)",
+   "published": "as published",
+   "session_i": "document exists; horizon ends 2028",
+   "source": "S21",
+   "verdict": "note",
+   "note": "The citation is genuine but covers 2022-2028, which ends before the 2030-2035 lease window. It cannot carry the decision period."
+  },
+  {
+   "id": "R43",
+   "where": "root site (S18)",
+   "claim": "USGS citation for earthquake probabilities",
+   "published": "usgs.gov/programs/earthquake-hazards",
+   "session_i": "program landing page",
+   "source": "S23",
+   "verdict": "irregularity",
+   "note": "Still open on main as of this merge: the cited URL is a program home page, not the record that states 60/46/31%. The specific citable record is the USGS FAQ cited here as S23."
+  },
+  {
+   "id": "R44",
+   "where": "root site (S2)",
+   "claim": "Census QuickFacts citation for the county column",
+   "published": ".../losangelescitycalifornia,lacountycalifornia/PST045224",
+   "session_i": "renders the United States table",
+   "source": "S04",
+   "verdict": "resolved",
+   "note": "RESOLVED on main before this session published: the integration pass (session-343c7030) changed S2 to the correct slug and published the county column. This session independently confirmed the correct slug by re-reading the page, and found the invalid slug silently serves the United States table (FIPS 1). Record retained for the audit trail, not as an open defect."
+  },
+  {
+   "id": "R45",
+   "where": "root site",
+   "claim": "Published model transparency: assumptions separated from verified inputs",
+   "published": "Yes",
+   "session_i": "Yes",
+   "source": "S10",
+   "verdict": "confirmed",
+   "note": "Every assumption (rent, expiry, cap, escalation) is labelled analyst_assumptions, not verified. This is the correct pattern."
+  },
+  {
+   "id": "R46",
+   "where": "root site",
+   "claim": "Federal capital-gains / depreciation recapture rates (23.8% / 28.8%)",
+   "published": "23.8% / 28.8%",
+   "session_i": "not read this session",
+   "source": "",
+   "verdict": "unverified",
+   "note": "Requires IRC section 1(h), section 1411 and section 1250 rates from IRS publications. Left blank rather than assumed."
+  },
+  {
+   "id": "R47",
+   "where": "root site (S22)",
+   "claim": "LA County Auditor-Controller citation",
+   "published": "auditor.lacounty.gov/faqs/",
+   "session_i": "not read this session",
+   "source": "",
+   "verdict": "unverified",
+   "note": "Not opened by this session. Flagged for manual review, not disputed."
+  },
+  {
+   "id": "R48",
+   "where": "root site (S3)",
+   "claim": "CA DOF P-2A county projections",
+   "published": "P2A_County_Total.xlsx",
+   "session_i": "release page confirmed; file not parsed",
+   "source": "S03",
+   "verdict": "note",
+   "note": "The DOF Projections page (Vintage 2026, 2026-03-13) is confirmed. The .xlsx itself was not parsed this session, so the numeric projections are not re-verified here."
+  }
+ ],
+ "summary": {
+  "total": 48,
+  "confirmed": 41,
+  "superseded": 1,
+  "irregularity": 2,
+  "unverified": 2,
+  "note": 2,
+  "resolved": 1
+ },
+ "method": "Each published value was re-read on the official page listed in the source column on 2026-11-08. 'confirmed' means the value matches the official page. 'superseded' means the value was correct when published but a newer official record exists."
+}

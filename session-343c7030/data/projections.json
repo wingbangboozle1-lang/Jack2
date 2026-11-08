@@ -1,0 +1,409 @@
+{
+ "seed": 20261108,
+ "trials": 15000,
+ "gamma": 2.5,
+ "noi0": 100000.0,
+ "buyer_of_record_note": "All figures are per $100,000 of current annual NOI. They are not this asset's value.",
+ "verified_inputs": {
+  "cpi_la_sep2026": 3.7,
+  "ust10y_2026_11_06": 4.86,
+  "quake_30y_m67": 60.0,
+  "ula_threshold_low": 5400000,
+  "ula_threshold_high": 10900000,
+  "city_transfer_base": 0.45
+ },
+ "assumptions": [
+  {
+   "id": "A1",
+   "name": "Going-in capitalisation rate for this asset at 2026",
+   "value": "6.00%",
+   "range": "5.25% \u2013 6.75%",
+   "why": "No official series publishes QSR NNN transaction cap rates. Range spans a 25 bp premium to the 10-year Treasury (4.86%, verified C01) and a typical net-lease spread."
+  },
+  {
+   "id": "A2",
+   "name": "Cap-rate term adjustment",
+   "value": "-25 bp for 10+ yrs of term; 0 for 5\u201310; +50 bp for 2\u20135; +100 bp under 2 yrs",
+   "range": "-50 to +150 bp",
+   "why": "Standard net-lease term pricing: buyers pay up for long contracted income and discount short remaining term. Direction is uncontroversial; the size is a judgement."
+  },
+  {
+   "id": "A3",
+   "name": "NOI growth, base case",
+   "value": "3.0% / yr",
+   "range": "2.0% \u2013 3.7%",
+   "why": "Bracket: 2.0% is a conservative floor; 3.7% is the verified September 2026 LA CPI-U (E18). Tenant rent growth above CPI is not assumed."
+  },
+  {
+   "id": "A4",
+   "name": "Selling costs",
+   "value": "2.5% of price",
+   "range": "2.0% \u2013 3.5%",
+   "why": "Broker plus closing costs, excluding taxes."
+  },
+  {
+   "id": "A5",
+   "name": "Basis and accumulated depreciation",
+   "value": "basis = 40% of current value; depreciation taken = 30% of current value",
+   "range": "basis 20% \u2013 70% of value",
+   "why": "The brief does not disclose the owner's basis. Both figures are placeholders, and the after-tax ranking is re-run across the range in the sensitivity grid."
+  },
+  {
+   "id": "A6",
+   "name": "Federal long-term capital gains + net investment income tax",
+   "value": "23.8%",
+   "range": "23.8%",
+   "why": "Statutory top rate for a high-income individual (IRC \u00a71(h) + \u00a71411)."
+  },
+  {
+   "id": "A7",
+   "name": "Unrecaptured \u00a71250 gain (depreciation recapture), federal",
+   "value": "25%",
+   "range": "25%",
+   "why": "IRC \u00a71(h)(1)(E)."
+  },
+  {
+   "id": "A8",
+   "name": "California income tax on the gain",
+   "value": "13.3%",
+   "range": "13.3%",
+   "why": "Top marginal FTB rate; no preferential capital-gains rate."
+  },
+  {
+   "id": "A9",
+   "name": "Replacement asset after a \u00a71031 exchange (diversified net lease)",
+   "value": "6.25% entry and exit cap, 2.5% NOI growth",
+   "range": "growth 2.0% \u2013 3.0%",
+   "why": "With the same cap on entry and exit the yield cancels and only NOI growth matters, so the tested range is on growth, not on the cap."
+  },
+  {
+   "id": "A10",
+   "name": "Probability the tenant renews at expiry",
+   "value": "65%",
+   "range": "40% \u2013 85%",
+   "why": "The tenant has historically renewed at market rates, but carries negative equity (T05) and a closure programme. Not an official statistic."
+  },
+  {
+   "id": "A11",
+   "name": "Downtime if the tenant vacates at expiry",
+   "value": "12 months, then reletting at 90% of prior NOI",
+   "range": "6 \u2013 24 months",
+   "why": "A drive-through QSR box is single-purpose; reletting or re-tenanting takes time."
+  },
+  {
+   "id": "A12",
+   "name": "Tenant default hazard, any year",
+   "value": "1.5% / yr",
+   "range": "0.5% \u2013 4.0%",
+   "why": "Anchored to the tenant's FY2025 loss and negative equity, not to a published default probability."
+  },
+  {
+   "id": "A13",
+   "name": "Earthquake loss given a major event",
+   "value": "8% of value uninsured/retained, plus 10% of one year's NOI",
+   "range": "0 \u2013 25% of value",
+   "why": "The 30-year M\u22656.7 probability (60%, H01) is official; the loss-given-event is not."
+  },
+  {
+   "id": "A14",
+   "name": "Wildfire loss given a major event",
+   "value": "15% of value, 0.5% / yr event probability",
+   "range": "0.1% \u2013 1.5% / yr",
+   "why": "Central Los Angeles is urban; the parcel's FHSZ class is unknown (H05 blank). Treated as a small but non-zero tail."
+  },
+  {
+   "id": "A15",
+   "name": "Renewal rent relative to in-place rent",
+   "value": "0% change",
+   "range": "-10% \u2013 +10%",
+   "why": "A renewal at market is assumed flat; the brief gives no rent and no market comps."
+  }
+ ],
+ "strategies": {
+  "S1": {
+   "name": "Sell now through a \u00a71031 exchange",
+   "short": "Sell 2026, \u00a71031 into diversified net lease",
+   "detail": "Sell in 2026, roll the proceeds into a diversified net-lease portfolio under IRC \u00a71031, hold that portfolio to 2040 and sell it then."
+  },
+  "S2": {
+   "name": "Sell now, pay the tax",
+   "short": "Sell 2026, taxable",
+   "detail": "Same 2026 sale but no exchange: federal and California tax is paid on the gain and on depreciation recapture, and the net proceeds are reinvested."
+  },
+  "S3": {
+   "name": "Blend-and-extend now, sell in 2032",
+   "short": "Extend now, sell 2032",
+   "detail": "Negotiate an extension now (target 10 years at or above in-place rent), then sell in 2032 with roughly 4\u20139 years of term left, through a \u00a71031 exchange."
+  },
+  "S4": {
+   "name": "Hold to expiry, then sell",
+   "short": "Hold to expiry, sell",
+   "detail": "Leave the lease alone. At the 2030\u20132035 expiry either the tenant renews on market terms or the box goes dark; sell at or near expiry either way."
+  },
+  "S5": {
+   "name": "Renew at expiry and hold to 2040",
+   "short": "Renew at expiry, hold",
+   "detail": "Wait for expiry, renew then, and hold the asset to 2040 collecting rent."
+  }
+ },
+ "deterministic": [
+  {
+   "case": "Bear",
+   "noi_growth": 0.02,
+   "cap0": 0.0675,
+   "results": {
+    "S1": 1452013.4003199767,
+    "S2": 1394332.5304644613,
+    "S3": 1413944.414848198,
+    "S4": 1459775.6102910773,
+    "S5": 1364393.7846099683
+   }
+  },
+  {
+   "case": "Base",
+   "noi_growth": 0.03,
+   "cap0": 0.06,
+   "results": {
+    "S1": 1605723.4086933073,
+    "S2": 1534230.755360916,
+    "S3": 1643710.627254127,
+    "S4": 1705509.6400332921,
+    "S5": 1695189.5634888029
+   }
+  },
+  {
+   "case": "Bull",
+   "noi_growth": 0.037,
+   "cap0": 0.0525,
+   "results": {
+    "S1": 1803350.5623161609,
+    "S2": 1714099.901656357,
+    "S3": 1914139.1372454222,
+    "S4": 1998729.4274410272,
+    "S5": 2073023.624766306
+   }
+  }
+ ],
+ "monte_carlo": {
+  "summary": {
+   "S1": {
+    "mean": 1563771.9427917486,
+    "median": 1560534.353300368,
+    "p05": 1340584.8519973662,
+    "p95": 1799927.8322899311,
+    "ce": 1547829.5992008806,
+    "prob_beats_hold": 0.41906666666666664
+   },
+   "S2": {
+    "mean": 1493708.8839285767,
+    "median": 1491839.8060833407,
+    "p05": 1285400.366577719,
+    "p95": 1710794.2960009663,
+    "ce": 1479369.6522970244,
+    "prob_beats_hold": 0.3589333333333333
+   },
+   "S3": {
+    "mean": 1602067.03459549,
+    "median": 1597396.457807017,
+    "p05": 1347007.5492017935,
+    "p95": 1880916.4072236281,
+    "ce": 1581577.5001955,
+    "prob_beats_hold": 0.35733333333333334
+   },
+   "S4": {
+    "mean": 1537483.7341645465,
+    "median": 1544298.1811491689,
+    "p05": 1170392.167511406,
+    "p95": 1925730.8908252702,
+    "ce": 1491219.2626193264,
+    "prob_beats_hold": 0.0
+   },
+   "S5": {
+    "mean": 1422642.5575236264,
+    "median": 1490704.0095942873,
+    "p05": 847885.7748774023,
+    "p95": 2024427.6913820445,
+    "ce": 1278985.8261817598,
+    "prob_beats_hold": 0.2952
+   }
+  },
+  "ranking": [
+   "S3",
+   "S1",
+   "S4",
+   "S2",
+   "S5"
+  ]
+ },
+ "sensitivity_grid": [
+  {
+   "growth": 0.02,
+   "cap": 0.0525,
+   "best": "S1",
+   "ce": {
+    "S1": 1737231.6046678035,
+    "S2": 1651849.5939090436,
+    "S3": 1688519.4932290013,
+    "S4": 1560457.9064730322,
+    "S5": 1250034.6036631248
+   }
+  },
+  {
+   "growth": 0.02,
+   "cap": 0.06,
+   "best": "S1",
+   "ce": {
+    "S1": 1547436.7538855697,
+    "S2": 1478965.6853345595,
+    "S3": 1504892.8513718657,
+    "S4": 1400718.6630700955,
+    "S5": 1136056.9260507047
+   }
+  },
+  {
+   "growth": 0.02,
+   "cap": 0.0675,
+   "best": "S1",
+   "ce": {
+    "S1": 1399508.892010976,
+    "S2": 1344230.5521502122,
+    "S3": 1361763.5802894938,
+    "S4": 1274727.9929242677,
+    "S5": 1046109.0472020807
+   }
+  },
+  {
+   "growth": 0.03,
+   "cap": 0.0525,
+   "best": "S3",
+   "ce": {
+    "S1": 1737231.6046678035,
+    "S2": 1651849.5939090436,
+    "S3": 1777292.2293530435,
+    "S4": 1654520.9589965155,
+    "S5": 1395979.757304439
+   }
+  },
+  {
+   "growth": 0.03,
+   "cap": 0.06,
+   "best": "S3",
+   "ce": {
+    "S1": 1547436.7538855697,
+    "S2": 1478965.6853345595,
+    "S3": 1582617.3242606735,
+    "S4": 1483517.0905273731,
+    "S5": 1264013.6056006148
+   }
+  },
+  {
+   "growth": 0.03,
+   "cap": 0.0675,
+   "best": "S3",
+   "ce": {
+    "S1": 1399508.892010976,
+    "S2": 1344230.5521502122,
+    "S3": 1430874.549122023,
+    "S4": 1348655.7998738354,
+    "S5": 1159854.2682855038
+   }
+  },
+  {
+   "growth": 0.037,
+   "cap": 0.0525,
+   "best": "S3",
+   "ce": {
+    "S1": 1737231.6046678035,
+    "S2": 1651849.5939090436,
+    "S3": 1842050.7062970733,
+    "S4": 1723397.7291524312,
+    "S5": 1510358.2670770744
+   }
+  },
+  {
+   "growth": 0.037,
+   "cap": 0.06,
+   "best": "S3",
+   "ce": {
+    "S1": 1547436.7538855697,
+    "S2": 1478965.6853345595,
+    "S3": 1639316.2444449717,
+    "S4": 1544147.7137544786,
+    "S5": 1364871.6223438694
+   }
+  },
+  {
+   "growth": 0.037,
+   "cap": 0.0675,
+   "best": "S3",
+   "ce": {
+    "S1": 1399508.892010976,
+    "S2": 1344230.5521502122,
+    "S3": 1481290.03533563,
+    "S4": 1402795.3741646037,
+    "S5": 1249523.2713854092
+   }
+  }
+ ],
+ "reinvest_grid": [
+  {
+   "reinvest_growth": 0.02,
+   "best": "S3",
+   "ce": {
+    "S1": 1456552.8215295654,
+    "S2": 1408920.8852774987,
+    "S3": 1526450.4906918695,
+    "S4": 1450233.7753878084,
+    "S5": 1285697.2178319762
+   }
+  },
+  {
+   "reinvest_growth": 0.025,
+   "best": "S3",
+   "ce": {
+    "S1": 1545735.652801234,
+    "S2": 1477370.9218154317,
+    "S3": 1579562.1246679965,
+    "S4": 1494006.503395353,
+    "S5": 1285697.2178319762
+   }
+  },
+  {
+   "reinvest_growth": 0.03,
+   "best": "S1",
+   "ce": {
+    "S1": 1640755.2434582345,
+    "S2": 1550302.1805664096,
+    "S3": 1634517.808021545,
+    "S4": 1538962.7906857766,
+    "S5": 1285697.2178319762
+   }
+  }
+ ],
+ "expiry_grid": [
+  {
+   "expiry": 2030,
+   "s4_ce": 1692229.352077284
+  },
+  {
+   "expiry": 2031,
+   "s4_ce": 1698861.393097406
+  },
+  {
+   "expiry": 2032,
+   "s4_ce": 1705509.6400332921
+  },
+  {
+   "expiry": 2033,
+   "s4_ce": 1712173.6875730744
+  },
+  {
+   "expiry": 2034,
+   "s4_ce": 1718853.1138967995
+  },
+  {
+   "expiry": 2035,
+   "s4_ce": 1725547.480159976
+  }
+ ]
+}

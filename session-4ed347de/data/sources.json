@@ -1,0 +1,261 @@
+{
+ "accessed": "2026-11-08",
+ "tiers": {
+  "A": "Primary official government / regulator / statute record",
+  "B": "Primary issuer filing with a securities regulator (SEC EDGAR)",
+  "C": "Issuer-published, not regulator-filed (NOT used for any data value here)"
+ },
+ "note": "Every URL in this file was opened on 2026-11-08 by this session. Values were read on the page, not copied from another session.",
+ "sources": [
+  {
+   "id": "S01",
+   "tier": "A",
+   "publisher": "U.S. Bureau of Labor Statistics, Western Information Office",
+   "title": "Los Angeles Area Economic Summary (PDF)",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "published_or_updated_as_shown_on_page": "Updated November 04, 2026",
+   "accessed": "2026-11-08",
+   "covers": "LA metro/County/City/CA/US unemployment (LAUS); nonfarm payroll by sector (CES); CPI-U; PPI; ECI; QCEW weekly wages; CEX spending; OEWS wages"
+  },
+  {
+   "id": "S02",
+   "tier": "A",
+   "publisher": "California Employment Development Department, Labor Market Information Division",
+   "title": "Los Angeles-Long Beach-Glendale MD (Los Angeles County) — Labor Force and Industry Employment (monthly press release, PDF)",
+   "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la%24pds.pdf",
+   "published_or_updated_as_shown_on_page": "October 16, 2026",
+   "accessed": "2026-11-08",
+   "covers": "LA County seasonally adjusted and unadjusted unemployment, civilian labor force, nonfarm payroll by industry, year-over-year changes"
+  },
+  {
+   "id": "S03",
+   "tier": "A",
+   "publisher": "U.S. Bureau of Labor Statistics",
+   "title": "Metropolitan Area Employment and Unemployment — September 2026",
+   "url": "https://www.bls.gov/news.release/pdf/metro.pdf",
+   "published_or_updated_as_shown_on_page": "September 29, 2026",
+   "accessed": "2026-11-08",
+   "covers": "Metro-area unemployment rates and payroll levels (context for LA-Long Beach-Anaheim MSA)"
+  },
+  {
+   "id": "S04",
+   "tier": "A",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "published_or_updated_as_shown_on_page": "V2025 / 2020-2024 ACS",
+   "accessed": "2026-11-08",
+   "covers": "City population and change since 2020; income; poverty; housing tenure, value, gross rent; households; education attainment; density; accommodation & food services sales"
+  },
+  {
+   "id": "S05",
+   "tier": "A",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts: Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+   "published_or_updated_as_shown_on_page": "V2025 / 2020-2024 ACS",
+   "accessed": "2026-11-08",
+   "covers": "County population and change since 2020; median household income; per capita income; poverty rate"
+  },
+  {
+   "id": "S06",
+   "tier": "A",
+   "publisher": "U.S. Bureau of Economic Analysis",
+   "title": "Gross Domestic Product by County and Personal Income by County, 2024 (news release)",
+   "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+   "published_or_updated_as_shown_on_page": "February 5, 2026",
+   "accessed": "2026-11-08",
+   "covers": "County total personal income; Los Angeles County $818.5 billion, the largest of any U.S. county"
+  },
+  {
+   "id": "S07",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — Jack in the Box Inc., CIK 0000807882",
+   "title": "EDGAR filing index: Form 10-K filed 2025-11-19 (FY2025) and Form 10-Q filed 2026-08-12 (period ended 2026-07-05)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=10-&dateb=&owner=include&count=40",
+   "published_or_updated_as_shown_on_page": "filings through 2026-08-12",
+   "accessed": "2026-11-08",
+   "covers": "Filing identity, dates and periods for the tenant's annual and latest quarterly reports"
+  },
+  {
+   "id": "S08",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission — Jack in the Box Inc. Form 10-Q, period ended July 5, 2026",
+   "title": "Condensed Consolidated Balance Sheets (XBRL presentation, R2.htm)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/R2.htm",
+   "published_or_updated_as_shown_on_page": "filed 2026-08-12",
+   "accessed": "2026-11-08",
+   "covers": "Cash; total debt (current maturities + long-term); operating lease liabilities; stockholders' deficit; total assets"
+  },
+  {
+   "id": "S09",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission — Jack in the Box Inc. Form 8-K Exhibit 99.1 (Item 2.02)",
+   "title": "Jack in the Box Inc. Reports Third Quarter 2026 Earnings (quarter ended July 5, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "published_or_updated_as_shown_on_page": "filed 2026-08-12",
+   "accessed": "2026-11-08",
+   "covers": "Same-store sales; restaurant counts and closures; revenues; restaurant- and franchise-level margin; adjusted EBITDA; EPS; effective tax rate; Del Taco disposition"
+  },
+  {
+   "id": "S10",
+   "tier": "A",
+   "publisher": "Board of Governors of the Federal Reserve System, via FRED (Federal Reserve Bank of St. Louis)",
+   "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "published_or_updated_as_shown_on_page": "observation 2026-11-05; updated Nov 6, 2026",
+   "accessed": "2026-11-08",
+   "covers": "10-year Treasury constant-maturity yield, used as the risk-free reinvestment rate"
+  },
+  {
+   "id": "S11",
+   "tier": "A",
+   "publisher": "Board of Governors of the Federal Reserve System, via FRED",
+   "title": "Federal Funds Target Range — Upper Limit (DFEDTARU)",
+   "url": "https://fred.stlouisfed.org/series/DFEDTARU",
+   "published_or_updated_as_shown_on_page": "observation 2026-11-08; updated Nov 8, 2026",
+   "accessed": "2026-11-08",
+   "covers": "Current FOMC policy rate ceiling"
+  },
+  {
+   "id": "S12",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission — Realty Income Corp. (CIK 0000726728) Form 8-K Ex. 99.1",
+   "title": "Realty Income Announces Operating Results for the Three Months and Year Ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm",
+   "published_or_updated_as_shown_on_page": "filed 2026-02-24",
+   "accessed": "2026-11-08",
+   "covers": "FY2025 investments at an initial weighted average cash yield of 7.3% (the benchmark used by the published model)"
+  },
+  {
+   "id": "S13",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission — Realty Income Corp. Form 8-K Ex. 99.1",
+   "title": "Realty Income Announces Operating Results for the Three and Nine Months Ended September 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "published_or_updated_as_shown_on_page": "filed 2026-11-02",
+   "accessed": "2026-11-08",
+   "covers": "Q3 2026 investments at an initial weighted average cash yield of 6.8% (newest SEC-filed net-lease benchmark); rent recapture 103.5%; occupancy 98.8%; WALT 8.5 yrs; 2026 AFFO guidance"
+  },
+  {
+   "id": "S14",
+   "tier": "A",
+   "publisher": "Los Angeles County Office of the Assessor",
+   "title": "Real Property Assessment — An Overview of Property Taxes (Proposition 13)",
+   "url": "https://assessor.lacounty.gov/homeowners/realproperty",
+   "published_or_updated_as_shown_on_page": "site last updated 10/29/2026",
+   "accessed": "2026-11-08",
+   "covers": "1% maximum levy; 2% annual assessed-value cap; reassessment to market value only on change of ownership or new construction"
+  },
+  {
+   "id": "S15",
+   "tier": "A",
+   "publisher": "City of Los Angeles Office of Finance",
+   "title": "Real Property Transfer Tax and Measure ULA FAQ",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "published_or_updated_as_shown_on_page": "thresholds stated effective for closings after June 30, 2026",
+   "accessed": "2026-11-08",
+   "covers": "Base city transfer tax 0.45% ($2.25 per $500); ULA 4% above $5,400,000 and 5.5% at $10,900,000 or more; annual CPI indexation"
+  },
+  {
+   "id": "S16",
+   "tier": "A",
+   "publisher": "Los Angeles County Registrar-Recorder/County Clerk",
+   "title": "Documentary Transfer Tax",
+   "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes",
+   "published_or_updated_as_shown_on_page": "Los Angeles rates shown effective 7/1/25 and 7/1/26",
+   "accessed": "2026-11-08",
+   "covers": "County DTT $0.55 per $500 (0.11%); City of Los Angeles schedule ($2.25 per $500 plus ULA tiers)"
+  },
+  {
+   "id": "S17",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Instructions for Form 8824 — Like-Kind Exchanges (2025)",
+   "url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf",
+   "published_or_updated_as_shown_on_page": "2025 revision",
+   "accessed": "2026-11-08",
+   "covers": "Section 1031 rules: 45-day written identification; replacement property received by the earlier of 180 days or the return due date"
+  },
+  {
+   "id": "S18",
+   "tier": "A",
+   "publisher": "California Franchise Tax Board",
+   "title": "2025 California Tax Rate Schedules (Form 540)",
+   "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
+   "published_or_updated_as_shown_on_page": "tax year 2025",
+   "accessed": "2026-11-08",
+   "covers": "Top marginal bracket 12.3% (single, over $742,953); the 13.3% headline rate is 12.3% plus the 1% surtax in S19"
+  },
+  {
+   "id": "S19",
+   "tier": "A",
+   "publisher": "California Legislative Information (official statutes)",
+   "title": "Revenue and Taxation Code §17043 — additional 1% tax on taxable income over $1,000,000 (Proposition 63)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=17043",
+   "published_or_updated_as_shown_on_page": "current code text",
+   "accessed": "2026-11-08",
+   "covers": "The 1% surtax that, added to the 12.3% top bracket, produces California's 13.3% top marginal rate"
+  },
+  {
+   "id": "S20",
+   "tier": "A",
+   "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+   "title": "Minimum Wage Frequently Asked Questions",
+   "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+   "published_or_updated_as_shown_on_page": "effective January 1, 2026 rate",
+   "accessed": "2026-11-08",
+   "covers": "California statewide minimum wage $16.90/hour effective 2026; indexation capped at 3.5% per year"
+  },
+  {
+   "id": "S21",
+   "tier": "A",
+   "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+   "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228 / Labor Code 1474-1476)",
+   "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+   "published_or_updated_as_shown_on_page": "current guidance",
+   "accessed": "2026-11-08",
+   "covers": "$20.00/hour fast food minimum wage from April 1, 2024; applies to franchisees; local minimum wages may exceed it"
+  },
+  {
+   "id": "S22",
+   "tier": "A",
+   "publisher": "City of Los Angeles Office of Wage Standards",
+   "title": "Minimum Wage & Paid Sick Leave — 2026 Minimum Wage Ordinance Wage Rate Increase Memo",
+   "url": "https://wagesla.lacity.gov/",
+   "published_or_updated_as_shown_on_page": "effective July 1, 2026",
+   "accessed": "2026-11-08",
+   "covers": "City of Los Angeles minimum wage $18.42/hour effective July 1, 2026, indexed to LA-area CPI-W"
+  },
+  {
+   "id": "S23",
+   "tier": "A",
+   "publisher": "U.S. Geological Survey",
+   "title": "What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)",
+   "url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+   "published_or_updated_as_shown_on_page": "current FAQ citing UCERF3",
+   "accessed": "2026-11-08",
+   "covers": "30-year probability in the Los Angeles region: 60% M>=6.7, 46% M>=7.0, 31% M>=7.5"
+  },
+  {
+   "id": "S24",
+   "tier": "A",
+   "publisher": "California Department of Forestry and Fire Protection (CAL FIRE)",
+   "title": "Eaton Fire incident report (Los Angeles County, January 2025)",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "published_or_updated_as_shown_on_page": "contained 01/31/2025",
+   "accessed": "2026-11-08",
+   "covers": "14,021 acres; 9,419 structures destroyed; 1,076 damaged; 19 civilian fatalities"
+  },
+  {
+   "id": "S25",
+   "tier": "A",
+   "publisher": "California Department of Education",
+   "title": "Adjusted Cohort Graduation Rate and Outcome Data (downloadable files)",
+   "url": "https://www.cde.ca.gov/ds/ad/filesacgr.asp",
+   "published_or_updated_as_shown_on_page": "2025-26 file posted 15-Oct-2026",
+   "accessed": "2026-11-08",
+   "covers": "Official district- and county-level four-year adjusted cohort graduation rates (file used for any school-performance row)"
+  }
+ ]
+}

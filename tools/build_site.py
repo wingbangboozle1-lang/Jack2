@@ -1004,6 +1004,33 @@ def build_workspaces():
          "14 blank private inputs, normalized pre-tax scenarios, line-level audit and Flagged for Review",
          "12 pages",
          "<a href='session-f4f700c0/index.html'>open &#8599;</a>"],
+        ["<code>session-24d6cd5f/</code>",
+         "Session K (branch <code>arena/24d6cd5f-jack2</code>) &mdash; 2026-11-08 independent re-verification: "
+         "36 official Tier A/B sources live-verified (incl. Nov 6 Treasury par curve, Sep 2026 BLS/EDD/CPI, BEA 2024 GDP, "
+         "Prop 3 passing 60.3% Yes locking 13.30% CA top tax rate past 2030, Measure ULA intact), 94 metrics "
+         "(79 verified, 15 blank), 28 risks, 16 repository audit findings, 20,000-trial seeded Monte Carlo (seed 20261108) "
+         "and client-side &sect;1031 / ULA / Prop 13 simulator",
+         "11 pages",
+         "<a href='session-24d6cd5f/index.html'>open &#8599;</a>"],
+        ["<code>session-6ad87c21/</code>",
+         "Session J &mdash; 2026-11-08 independent re-verification: 17 official sources re-read on the access date, "
+         "114 fact rows (92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank), 31-risk BAU and "
+         "black-swan register, six strategies scored on a seeded 10,000-trial certainty equivalent, and a "
+         "line-by-line audit of this repository",
+         "14 pages",
+         "<a href='session-6ad87c21/index.html'>open &#8599;</a>"],
+        ["<code>session-343c7030/</code>",
+         "Session I &mdash; final integration: 98 fact rows (84 verified against 16 official sources read 2026-11-08, "
+         "14 deliberately blank), 30 risks, 15 documented assumptions, 15,000-trial Monte Carlo (seed 20261108) and a "
+         "13-item repository review. Fixes the Census URL defect carried by the root build.",
+         "12 pages",
+         "<a href='session-343c7030/index.html'>open &#8599;</a>"],
+        ["<code>session-4ed347de/</code>",
+         "Session L &mdash; 2026-11-08 re-verification of 25 official sources (98 ledger rows, 82 verified), "
+         "line-by-line audit of the published workbook, independent reproduction of this model (21/21 values), "
+         "and a 20,000-trial Monte Carlo with earthquake, wildfire and tenant-default hazards",
+         "10 pages",
+         "<a href='session-4ed347de/index.html'>open &#8599;</a>"],
         ["<code>session-18dacdea/</code>",
          "Session H &mdash; 2026-11-07 live BLS (Nov 4) &amp; FRED (Nov 5, 4.84% DGS10) update, 76 metrics across "
          "26 official sources (resolving LAUSD 86.2% ACGR &amp; $18.42/hr LA City minimum wage), 26 risks, "
@@ -1043,21 +1070,26 @@ def build_workspaces():
     ]
     body = f"""
 {head_block("All workspaces",
-            "Eight independent workbooks, one repository",
+            "Parallel workbooks, one repository",
             "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
 
 <div class="callout warn">
 <p><strong>Where to start.</strong> Open the current evidence-first dashboard:
-<a href="session-f4f700c0/index.html"><strong>session-f4f700c0</strong></a> (Session I). It keeps unknown property facts blank,
+<a href="session-f4f700c0/index.html"><strong>session-f4f700c0</strong></a> (Arena Session I). It keeps unknown property facts blank,
 links every evidence row to an official source, separates projections from observations, and publishes a Flagged for Review page.</p>
-<p class="muted">Earlier workbooks are preserved because deleting another session's work is never the right resolution to a conflict.
-Their precise rankings should be treated as historical and assumption-driven unless independently re-underwritten with actual lease, rent, debt, tax and offer inputs.</p>
+<p><strong>Parallel 2026-11-08 passes are preserved.</strong> <a href="session-24d6cd5f/index.html">session-24d6cd5f</a> (Session K),
+<a href="session-6ad87c21/index.html">session-6ad87c21</a> (Session J),
+<a href="session-343c7030/index.html">session-343c7030</a> (historical label Session I) and
+<a href="session-4ed347de/index.html">session-4ed347de</a> (Session L) each published independent workbooks. Their precise rankings
+should be treated as historical and assumption-driven unless re-underwritten with actual lease, rent, debt, tax and offer inputs.</p>
+<p class="muted">Earlier workbooks remain accessible because deleting another session's work is never the right resolution to a conflict.
+The root historical pages carry a banner and are not endorsed by the current dashboard.</p>
 </div>
 
 <h2>The workbooks</h2>
 {table(["Folder", "What it is", "Size", "Open"], rows)}
 
-<h2>Why there are eight</h2>
+<h2>Why there are multiple workbooks</h2>
 <p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
 each other. In practice each session started from a nearly empty repository, built a complete workbook, and
 discovered the others only when pushing. Every time, the resolution was the same: preserve what already exists,

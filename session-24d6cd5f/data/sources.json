@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "session": "session-24d6cd5f",
+    "session_label": "Session J",
+    "verified_at": "2026-11-08",
+    "policy": "Zero Tier-3/secondary sources used for data values. Every source is Tier A (official government, statistical agency, Federal Reserve, regulator, or court/election body) or Tier B (official SEC EDGAR issuer filing) fetched live on 2026-11-08."
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics (BLS), Western Information Office",
+      "title": "Los Angeles Area Economic Summary (Updated November 4, 2026)",
+      "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Sep 2026 & Aug 2026 MSA/County/City unemployment, nonfarm payrolls by supersector, Q1 2026 QCEW average weekly wages, May 2025 OEWS hourly wage, Sep 2026 CPI-U & ECI, and consumer expenditure shares."
+    },
+    {
+      "id": "S02",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics (BLS)",
+      "title": "Los Angeles Area Employment — September 2026 (Released November 4, 2026)",
+      "url": "https://www.bls.gov/regions/west/ca_losangeles_msa.htm",
+      "accessed": "2026-11-08",
+      "covers": "Sep 2026 preliminary LA-LB-Anaheim MSA nonfarm payrolls (6,282.1k, +30.2k / +0.5% YoY), LA-LB-Glendale & Anaheim MD breakdown, and Sep 2025–Sep 2026 industry changes."
+    },
+    {
+      "id": "S03",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics (BLS)",
+      "title": "Consumer Price Index, Los Angeles Area — September 2026 (Released October 14, 2026)",
+      "url": "https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm",
+      "accessed": "2026-11-08",
+      "covers": "Sep 2026 CPI-U (+3.7% YoY, +0.4% MoM), Core (+2.6%), Shelter (+3.7%), Food & Food-Away (+2.8%), Energy (+20.3%), Gasoline (+30.8%), plus Oct 2025 funding-lapse gap note."
+    },
+    {
+      "id": "S04",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics (BLS)",
+      "title": "Employment Cost Index, Los Angeles–Long Beach CSA — September 2026 (Released October 30, 2026)",
+      "url": "https://www.bls.gov/regions/west/news-release/employmentcostindex_losangeles.htm",
+      "accessed": "2026-11-08",
+      "covers": "Sep 2026 12-month LA CSA private-industry ECI: +4.2% total compensation and +3.9% wages & salaries (vs +3.4% / +3.1% U.S. average)."
+    },
+    {
+      "id": "S05",
+      "tier": "A",
+      "publisher": "California Employment Development Department (EDD)",
+      "title": "Los Angeles County Labor Market Summary — September 2026 (la$pds.pdf)",
+      "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Sep 2026 LA County SA unemployment (4.8% vs 5.0% rev. Aug 2026; 4.5% NSA), SA nonfarm jobs (4,539,800, +0.4% YoY), Limited-Service Eating Places (192,100, +1.5% YoY), and Motion Picture & Sound Recording (93,000, -7.3% YoY)."
+    },
+    {
+      "id": "S06",
+      "tier": "A",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts: Los Angeles city, California & Los Angeles County, California (PST045225)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225",
+      "accessed": "2026-11-08",
+      "covers": "V2025 population (City 3,869,089; County 9,694,934), 2020–24 ACS median household income ($81,939 / $90,112), per-capita income ($47,685 / $45,792), poverty (16.5% / 13.3%), owner rate, rents, education, 2025 County permits (22,250), and 2022 Economic Census dining/retail sales."
+    },
+    {
+      "id": "S07",
+      "tier": "A",
+      "publisher": "California Department of Finance (CA DOF), Demographic Research Unit",
+      "title": "E-1 City/County Population and Housing Estimates (Released May 1, 2026)",
+      "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/estimates/E-1_2026_Press_Release.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Jan 1, 2026 population: LA County 9,837,286 (-0.6% YoY; -64,000 loss across wildfires, domestic outflow, deportations), City of LA 3,806,201 (-0.9% YoY), CA 39,593,000 (-0.14%), and LA City +11,260 net housing units (+7,061 multifamily)."
+    },
+    {
+      "id": "S08",
+      "tier": "A",
+      "publisher": "California Department of Finance (CA DOF), Demographic Research Unit",
+      "title": "Revised July 1, 2025 County Population Estimates & Components of Change (Released February 4, 2026)",
+      "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/estimates/July2025_Population_Estimates_Feb26_release.pdf",
+      "accessed": "2026-11-08",
+      "covers": "July 1, 2025 LA County population 9,853,435 (-44,822 / -0.45% vs Jul 2024 9,898,257), natural increase +20,997, net domestic migration -96,124, net foreign migration +30,305."
+    },
+    {
+      "id": "S09",
+      "tier": "A",
+      "publisher": "California Department of Finance (CA DOF), Demographic Research Unit",
+      "title": "Public K-12 Graded Enrollment Projections (2026 Series, Released August 2026)",
+      "url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/",
+      "accessed": "2026-11-08",
+      "covers": "10-year projection to 2035–36: LA County loses 240,800 public K-12 students (largest decline of any CA county); statewide public K-12 falls from 5,731,300 to 5,020,800 (-12.4%)."
+    },
+    {
+      "id": "S10",
+      "tier": "A",
+      "publisher": "California Department of Finance (CA DOF), Demographic Research Unit",
+      "title": "Population Projections Portal (Report P-2A, Vintage 2026, Released March 13, 2026)",
+      "url": "https://dof.ca.gov/forecasting/demographics/projections/",
+      "accessed": "2026-11-08",
+      "covers": "Official state county population projection landing page and Vintage 2026 methodology (binary Excel P2A_County_Total.xlsx cells unparsed directly and transparently flagged)."
+    },
+    {
+      "id": "S11",
+      "tier": "A",
+      "publisher": "Southern California Association of Governments (SCAG)",
+      "title": "Connect SoCal 2024 Demographics & Growth Forecast Technical Report (Adopted April 4, 2024)",
+      "url": "https://www.scag.ca.gov/sites/default/files/2024-05/23-2987-tr-demographics-growth-forecast-final-040424.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Table 12 LA County 2019–2050 baseline growth forecast (+7.4% pop to 10.793M, +22.5% HH to 4.155M, +8.6% employment to 5.461M) and SCAG 2026 Connect SoCal 2050 downward growth revision notice."
+    },
+    {
+      "id": "S12",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Economic Analysis (BEA)",
+      "title": "Gross Domestic Product by County and Personal Income by County, 2024 (Released February 5, 2026)",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+      "accessed": "2026-11-08",
+      "covers": "2024 LA County nominal personal income $818.5B (#1 among 3,116 U.S. counties) and Feb 2026 notice discontinuing standalone MSA GDP/PI tables."
+    },
+    {
+      "id": "S13",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Economic Analysis via Federal Reserve Bank of St. Louis (FRED)",
+      "title": "Real Gross Domestic Product: All Industries in Los Angeles County, CA (REALGDPALL06037)",
+      "url": "https://fred.stlouisfed.org/series/REALGDPALL06037",
+      "accessed": "2026-11-08",
+      "covers": "2024 LA County real GDP $810,842,127k chained 2017$ (+2.07% YoY vs Sep 2025 NIPA-revised 2023 real GDP $794.41B)."
+    },
+    {
+      "id": "S14",
+      "tier": "A",
+      "publisher": "California Department of Education (CDE)",
+      "title": "District Profile: Los Angeles Unified School District (CDS 19-64733)",
+      "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+      "accessed": "2026-11-08",
+      "covers": "2025–26 LAUSD certified enrollment 497,105 (#1 in CA), English Learners 81,328 (16.4%), 1,291 schools."
+    },
+    {
+      "id": "S15",
+      "tier": "A",
+      "publisher": "California Department of Education (CDE) DataQuest",
+      "title": "2024–25 Four-Year Adjusted Cohort Graduation Rate — LAUSD (Non-Charter) vs. LA County & California",
+      "url": "https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?agglevel=district&year=2024-25&cds=1964733",
+      "accessed": "2026-11-08",
+      "covers": "2024–25 non-charter 4-year ACGR: LAUSD 86.2% (25,304 / 29,358) vs LA County 90.6% and California 91.5%."
+    },
+    {
+      "id": "S16",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations (CA DIR)",
+      "title": "Minimum Wage Frequently Asked Questions",
+      "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+      "accessed": "2026-11-08",
+      "covers": "California statewide statutory minimum wage $16.90/hr effective January 1, 2026 (annual CPI indexation up to 3.5%)."
+    },
+    {
+      "id": "S17",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations (CA DIR)",
+      "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228 / Labor Code §§1474–1476)",
+      "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+      "accessed": "2026-11-08",
+      "covers": "$20.00/hr statutory minimum wage for covered national fast-food chains (>=60 units nationwide) and Fast Food Council annual escalation authority."
+    },
+    {
+      "id": "S18",
+      "tier": "A",
+      "publisher": "City of Los Angeles Office of Wage Standards",
+      "title": "Wages LA — City Minimum Wage Ordinance Schedule",
+      "url": "https://wagesla.lacity.org/",
+      "accessed": "2026-11-08",
+      "covers": "City of Los Angeles local minimum wage $18.42/hr effective July 1, 2026 (general non-AB-1228 employers)."
+    },
+    {
+      "id": "S19",
+      "tier": "A",
+      "publisher": "Los Angeles Department of City Planning",
+      "title": "Conditional Use Permit Instructions & LAMC §12.24-W,17 / §12.24-W,27 (Drive-Through & Late-Night Fast Food)",
+      "url": "https://planning.lacity.gov/odocument/d97a7e0b-ea11-4323-98ec-b4628d640238/CP13-7772_Conditional_Use_June_2023.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Discretionary CUP requirements under LAMC §12.24-W,17 (Drive-Through Fast-Food adjacent/within 500 ft of R zones) and §12.24-W,27 (11 PM–7 AM hours), establishing entrenched drive-thru scarcity."
+    },
+    {
+      "id": "S20",
+      "tier": "A",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Daily Treasury Par Yield Curve Rates — November 2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+      "accessed": "2026-11-08",
+      "covers": "Nov 6, 2026 par yields: 1-Mo 4.02%, 2-Yr 4.51%, 5-Yr 4.64%, 10-Yr 4.86%, 20-Yr 5.29%, 30-Yr 5.26%."
+    },
+    {
+      "id": "S21",
+      "tier": "A",
+      "publisher": "Board of Governors of the Federal Reserve System via FRED",
+      "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "accessed": "2026-11-08",
+      "covers": "DGS10 daily closes: 4.84% (2026-11-05), 4.90% (2026-11-04), 4.95% (2026-11-03), 5.31% 2026 peak (2026-10-05)."
+    },
+    {
+      "id": "S22",
+      "tier": "A",
+      "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+      "title": "FOMC Target Range Upper Limit (DFEDTARU) & Effective Federal Funds Rate (DFF)",
+      "url": "https://fred.stlouisfed.org/series/DFEDTARU",
+      "accessed": "2026-11-08",
+      "covers": "FOMC target range 3.75%–4.00% (DFEDTARU 4.00% on 2026-11-08); effective Fed Funds rate DFF 3.88% (2026-11-05)."
+    },
+    {
+      "id": "S23",
+      "tier": "B",
+      "publisher": "U.S. SEC EDGAR — NNN REIT, Inc. (CIK 0000751364)",
+      "title": "NNN REIT Q2 2026 Form 8-K Earnings Release (Aug 5, 2026) & FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/751364/000119312526333958/nnn-ex99_1.htm",
+      "accessed": "2026-11-08",
+      "covers": "1H 2026 acquisitions $436.4M at 7.4% cap (Q2 $291.0M at 7.3%, 17.9-yr WALT; Q1 7.5%), Q2 occupied dispositions 5.6% (Q1 10-Q 7.2%; FY25 6.4%), 3,774 properties, 10.1-yr WALT, 8.7% GLA expiring 2031."
+    },
+    {
+      "id": "S24",
+      "tier": "B",
+      "publisher": "U.S. SEC EDGAR — Realty Income Corporation (CIK 0000726728)",
+      "title": "Realty Income Q2 2026 Supplemental Operating & Financial Data (Form 8-K Ex. 99.1; Q3 2026 10-Q Filed Nov 3, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000044/realtyincomeq22026supple.htm",
+      "accessed": "2026-11-08",
+      "covers": "1H 2026 U.S. wholly-owned acquisitions $1,259.7M at 7.5% initial cash yield (10.5-yr WALT), U.S./other 7.4%, total investments 7.2% (Q2 7.3%); Q3 2026 Form 10-Q (o-20260930.htm) filed Nov 3, 2026."
+    },
+    {
+      "id": "S25",
+      "tier": "A",
+      "publisher": "Los Angeles County Office of the Assessor",
+      "title": "Proposition 13 — Real Property Assessment Overview",
+      "url": "https://assessor.lacounty.gov/homeowners/realproperty",
+      "accessed": "2026-11-08",
+      "covers": "1.0% general property tax levy (+ voter-approved debt), max 2.0%/yr inflation cap on assessed value, 100% FMV reassessment on change of ownership."
+    },
+    {
+      "id": "S26",
+      "tier": "A",
+      "publisher": "Los Angeles County Registrar-Recorder / County Clerk",
+      "title": "Documentary Transfer Taxes (County & City Schedules)",
+      "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes",
+      "accessed": "2026-11-08",
+      "covers": "LA County documentary transfer tax $0.55 per $500 ($1.10/$1,000 = 0.11%) plus City of LA $4.50/$1,000 (0.45%) base and Measure ULA thresholds."
+    },
+    {
+      "id": "S27",
+      "tier": "A",
+      "publisher": "City of Los Angeles Office of Finance",
+      "title": "Measure ULA — Real Property Transfer Tax FAQ (Thresholds Effective July 1, 2026)",
+      "url": "https://finance.lacity.gov/faq/measure-ula",
+      "accessed": "2026-11-08",
+      "covers": "Effective July 1, 2026: +4.0% City ULA surtax (4.45% City / 4.56% incl. County) > $5,400,000 to < $10,900,000; +5.5% surtax (5.95% City / 6.06% incl. County) >= $10,900,000, indexed annually each July 1."
+    },
+    {
+      "id": "S28",
+      "tier": "A",
+      "publisher": "California Secretary of State & Legislative Analyst's Office (LAO)",
+      "title": "2026 General Election Unofficial Returns (Nov 7, 2026), PR26-95 Withdrawal Notice & Prop 3 / Prop 43 Analyses",
+      "url": "https://electionresults.sos.ca.gov/returns/ballot-measures",
+      "accessed": "2026-11-08",
+      "covers": "Initiative 25-0006A1 (ULA repeal) withdrawn Jun 25, 2026 (PR26-95); Prop 43 failing 56.8% No (43.2% Yes); Prop 3 passing 60.3% Yes, permanently extending CA high-income brackets past 2030."
+    },
+    {
+      "id": "S29",
+      "tier": "A",
+      "publisher": "U.S. Internal Revenue Service (IRS)",
+      "title": "Instructions for Form 8824 — Like-Kind Exchanges (IRC §1031)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Real-property-only tax deferral, strict 45-day identification / 180-day closing windows via Qualified Intermediary, boot & debt-relief rules (noting P.L. 119-21 OBBBA)."
+    },
+    {
+      "id": "S30",
+      "tier": "A",
+      "publisher": "California Franchise Tax Board (FTB)",
+      "title": "Form 540 Tax Booklet & Form FTB 3840 Instructions (California Like-Kind Exchanges)",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-3840-instructions.html",
+      "accessed": "2026-11-08",
+      "covers": "12.30% top base bracket + 1.00% Behavioral Health Services Tax (> $1M) = 13.30% statutory cap-gains rate, annual Form 3840 clawback on out-of-state §1031 exchanges, and CA non-conformity to federal OBBBA."
+    },
+    {
+      "id": "S31",
+      "tier": "B",
+      "publisher": "U.S. SEC EDGAR — Jack in the Box Inc. (CIK 0000807882)",
+      "title": "Form 10-K for the Fiscal Year Ended September 28, 2025 (Filed Nov 19, 2025)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+      "accessed": "2026-11-08",
+      "covers": "2,136 system units (941 CA = 44.1%; ~70% CA+TX), 729 co-owned / 1,020 co-leased / 387 franchise-direct buildings, $1,874k FY25 AUV (-3.8%), ~13% percentage leases (1%–10%), renewal quote ('generally been able to renew... at then-current market rates'), FY25 GAAP loss -$80.72M, 19.6% store margin."
+    },
+    {
+      "id": "S32",
+      "tier": "B",
+      "publisher": "U.S. SEC EDGAR — Jack in the Box Inc. (CIK 0000807882)",
+      "title": "Form 10-Q for Q3 FY2026 Ended July 5, 2026 & Q3 Earnings Release Form 8-K (Aug 12, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+      "accessed": "2026-11-08",
+      "covers": "2,115 units (149 co-op / 1,966 franchised, 93%), 9-mo revenue -4.2%, continuing-ops $47.97M (-35.6%), OCF $56.55M (-52.1%, $11.0M franchisee deferrals), YTD store margin 16.6% (Q3 17.6%; guidance cut to ~16.5%), franchise margin 37.4% vs 39.3% (bad debt), 50–60 closures guidance, -$901.3M equity, $1,472.83M debt, $71.77M cash+restricted, $80.42M COLI surrender + $26.68M asset sales."
+    },
+    {
+      "id": "S33",
+      "tier": "B",
+      "publisher": "U.S. SEC EDGAR — Jack in the Box Inc. (CIK 0000807882)",
+      "title": "Form 8-K Securitization Refinancing ($500M Series 2026-1 Class A-2 Notes, June 23, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000082/jack-20260623.htm",
+      "accessed": "2026-11-08",
+      "covers": "$500.0M 7.624% Fixed Rate Senior Secured Notes (Class A-2) carrying a May 2031 Anticipated Repayment Date (ARD) directly inside the subject 2030–2035 lease expiration window."
+    },
+    {
+      "id": "S34",
+      "tier": "A",
+      "publisher": "U.S. Geological Survey (USGS)",
+      "title": "UCERF3 30-Year Earthquake Probabilities (Los Angeles Region) & ARkStorm Scenario",
+      "url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+      "accessed": "2026-11-08",
+      "covers": "30-year Los Angeles region earthquake probabilities: 60% (>=M6.7), 46% (>=M7.0), 31% (>=M7.5); ARkStorm ~$725B California extreme-storm benchmark."
+    },
+    {
+      "id": "S35",
+      "tier": "A",
+      "publisher": "County of Los Angeles & California Department of Insurance (CDI)",
+      "title": "2025 Eaton & Palisades Fires Fact Sheet & CDI Order No. 2025-1 ($1.0B FAIR Plan Assessment)",
+      "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf",
+      "accessed": "2026-11-08",
+      "covers": "Jan 2025 Eaton & Palisades fires: 37,469 acres burned, 16,251 structures destroyed, 2,047 damaged, 31 dead, $5.2B–$10.1B lost output, ~6,800 businesses / ~47,000 workers; paired with CDI Order No. 2025-1 $1.0B FAIR Plan assessment."
+    },
+    {
+      "id": "S36",
+      "tier": "A",
+      "publisher": "Federal Emergency Management Agency (FEMA) National Risk Index & CA OSFM",
+      "title": "FEMA National Risk Index County Methodology & Rankings (Los Angeles County #1 Nationally)",
+      "url": "https://preptoolkit.fema.gov/documents/d/national-risk-index/1d_national-risk-index-_sheehan?download=true",
+      "accessed": "2026-11-08",
+      "covers": "LA County ranks #1 nationally in FEMA NRI with $3.9B Expected Annual Loss, 1.36 Community Risk Factor, and $5.3B Risk Value (correcting prior sessions' misattribution of single Census Tract 06037295103 score 89.6 to the County)."
+    }
+  ]
+}

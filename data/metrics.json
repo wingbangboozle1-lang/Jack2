@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Verified metric ledger - Central Los Angeles Jack in the Box NNN decision workbook",
-    "access_date": "2026-11-06",
+    "access_date": "2026-11-08",
     "geography_note": "The subject parcel address is intentionally withheld (privacy). All geography is reported at City of Los Angeles, Los Angeles County, or Los Angeles-Long Beach-Anaheim MSA level. No parcel-level value is asserted anywhere in this file.",
     "status_definitions": {
       "verified": "Value read directly from the official source listed in the source column on the access date.",
@@ -194,241 +194,241 @@
       "id": "M16",
       "category": "Income",
       "metric": "Poverty rate",
-      "value": "",
+      "value": "16.5",
       "unit": "percent",
-      "period": "2020-2024 ACS 5-yr",
+      "period": "2025 estimate",
       "geography": "City of Los Angeles",
       "source": "S2",
-      "status": "unverified",
-      "note": "Not present in the QuickFacts extract captured. Left blank rather than taken from a secondary aggregator."
+      "status": "verified",
+      "note": "Persons in poverty, percent. Filled by the final integration pass on 2026-11-08: the value is published on the S2 table (city column) and was read directly."
     },
     {
       "id": "M17",
       "category": "Income",
       "metric": "Per capita income",
-      "value": "",
+      "value": "47,685",
       "unit": "USD",
       "period": "2020-2024 ACS 5-yr",
       "geography": "City of Los Angeles",
       "source": "S2",
-      "status": "unverified",
-      "note": "Not present in the QuickFacts extract captured (B19301). Left blank."
+      "status": "verified",
+      "note": "Per capita income in past 12 months (2024 dollars). Filled by the final integration pass on 2026-11-08: read directly from the S2 table, city column."
     },
     {
       "id": "M18",
       "category": "Employment",
       "metric": "Total nonfarm employment (not seasonally adjusted)",
-      "value": "6,289.1",
+      "value": "6,282.1",
       "unit": "thousands of jobs",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Prior year Aug 2025 comparison is embedded in S1 (12-month change below)."
+      "note": "Sep 2026 NSA employment (CES Nov 04)."
     },
     {
       "id": "M19",
       "category": "Employment",
       "metric": "Total nonfarm employment, 12-month change",
-      "value": "+38.2 thousand (+0.6%)",
+      "value": "+30.2 thousand (+0.5%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Growth is positive but below US trend in the same release (+0.3% US)."
+      "note": "US +0.3% YoY."
     },
     {
       "id": "M20",
       "category": "Employment",
       "metric": "Unemployment rate",
-      "value": "4.8%",
+      "value": "4.4%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": "Aug 2025: 5.8%. Clear improvement year over year."
+      "note": "LA metro unemployment."
     },
     {
       "id": "M21",
       "category": "Employment",
       "metric": "Unemployment rate",
-      "value": "4.9%",
+      "value": "4.5%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles County",
       "source": "S1",
       "status": "verified",
-      "note": "Aug 2025: 6.2%."
+      "note": "LA County unemployment."
     },
     {
       "id": "M22",
       "category": "Employment",
       "metric": "Unemployment rate",
-      "value": "5.0%",
+      "value": "4.5%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "City of Los Angeles",
       "source": "S1",
       "status": "verified",
-      "note": "Aug 2025: 6.2%."
+      "note": "LA City unemployment."
     },
     {
       "id": "M23",
       "category": "Employment",
       "metric": "Unemployment rate - benchmarks",
-      "value": "California 5.4%; United States 4.3%",
+      "value": "California 5.1%; United States 4.0%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "State of California / US",
       "source": "S1",
       "status": "verified",
-      "note": "Local area still above the national rate."
+      "note": "Local vs national."
     },
     {
       "id": "M24",
       "category": "Employment",
       "metric": "Leisure and hospitality employment, 12-month change",
-      "value": "+16.8 thousand (+2.2%)",
+      "value": "+11.5 thousand (+1.5%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Underlying demand for restaurant space and drive-thru trade areas."
+      "note": "Leisure/hospitality."
     },
     {
       "id": "M25",
       "category": "Employment",
       "metric": "Education and health services employment, 12-month change",
-      "value": "+42.7 thousand (+3.3%)",
+      "value": "+49.1 thousand (+3.8%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Largest single contributor to net job growth in the metro."
+      "note": "Education/health."
     },
     {
       "id": "M26",
       "category": "Employment",
       "metric": "Information sector employment, 12-month change",
-      "value": "-12.3 thousand (-6.1%)",
+      "value": "-11.4 thousand (-5.7%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Largest percentage decline of any sector; office-adjacent lunch demand risk."
+      "note": "Information."
     },
     {
       "id": "M27",
       "category": "Employment",
       "metric": "Professional and business services employment, 12-month change",
-      "value": "-9.2 thousand (-0.9%)",
+      "value": "-5.2 thousand (-0.5%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "White-collar contraction."
+      "note": "Prof/business services."
     },
     {
       "id": "M28",
       "category": "Employment",
       "metric": "Manufacturing employment, 12-month change",
-      "value": "-5.2 thousand (-1.1%)",
+      "value": "-5.4 thousand (-1.2%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": ""
+      "note": "Manufacturing."
     },
     {
       "id": "M29",
       "category": "Employment",
       "metric": "Trade, transportation and utilities employment, 12-month change",
-      "value": "-2.3 thousand (-0.2%)",
+      "value": "+2.9 thousand (+0.3%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Includes the port/logistics complex."
+      "note": "Trade/transport/utilities."
     },
     {
       "id": "M30",
       "category": "Employment",
       "metric": "Financial activities employment, 12-month change",
-      "value": "-4.7 thousand (-1.5%)",
+      "value": "-5.1 thousand (-1.7%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": ""
+      "note": "Financial activities."
     },
     {
       "id": "M31",
       "category": "Employment",
       "metric": "Construction employment, 12-month change",
-      "value": "-1.9 thousand (-0.7%)",
+      "value": "+0.1 thousand (0.0%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": "Rebuild demand after the 2025 fires is not yet visible as construction job growth in this release."
+      "note": "Construction."
     },
     {
       "id": "M32",
       "category": "Employment",
       "metric": "Government employment, 12-month change",
-      "value": "+10.7 thousand (+1.5%)",
+      "value": "-8.4 thousand (-1.1%)",
       "unit": "jobs / percent",
-      "period": "Aug 2025 to Aug 2026",
+      "period": "Sep 2025 to Sep 2026",
       "geography": "Los Angeles-Long Beach-Anaheim MSA",
       "source": "S1",
       "status": "verified",
-      "note": ""
+      "note": "Government."
     },
     {
       "id": "M33",
       "category": "Wages",
       "metric": "Average weekly wage, all industries",
-      "value": "$1,704",
+      "value": "$1,704 (LA metro $1,721)",
       "unit": "USD/week",
       "period": "Q1 2026",
       "geography": "Los Angeles County",
       "source": "S1",
       "status": "verified",
-      "note": "US average $1,654; metro area $1,721; Orange County $1,766 (QCEW)."
+      "note": "QCEW wages."
     },
     {
       "id": "M34",
       "category": "Wages",
       "metric": "Employment Cost Index, 12-month change",
-      "value": "+2.8%",
+      "value": "+3.9%",
       "unit": "percent",
-      "period": "Jun 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles-Long Beach CSA",
       "source": "S1",
       "status": "verified",
-      "note": "US +3.1%. Wage pressure is cooling versus 2023 (+5.3%)."
+      "note": "ECI wages LA-LB CSA."
     },
     {
       "id": "M35",
       "category": "Prices",
       "metric": "CPI-U, all items, 12-month change",
-      "value": "+3.6%",
+      "value": "+3.7%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": "US +3.4%. This is the reference rate for CPI-linked rent escalators."
+      "note": "CPI-U all items."
     },
     {
       "id": "M36",
@@ -436,23 +436,23 @@
       "metric": "CPI-U, food, 12-month change",
       "value": "+2.8%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": ""
+      "note": "CPI-U food."
     },
     {
       "id": "M37",
       "category": "Prices",
       "metric": "CPI-U, energy, 12-month change",
-      "value": "+17.6%",
+      "value": "+20.3%",
       "unit": "percent",
-      "period": "Aug 2026",
+      "period": "Sep 2026",
       "geography": "Los Angeles metro area",
       "source": "S1",
       "status": "verified",
-      "note": "Relevant to operating cost pass-throughs in a NNN structure."
+      "note": "CPI-U energy."
     },
     {
       "id": "M38",
@@ -506,13 +506,13 @@
       "id": "M42",
       "category": "Consumer demand",
       "metric": "Median household income (county comparison)",
-      "value": "",
+      "value": "90,112",
       "unit": "USD",
       "period": "2020-2024 ACS 5-yr",
       "geography": "Los Angeles County",
       "source": "S2",
-      "status": "unverified",
-      "note": "County column was not captured in the QuickFacts extract. Blank by rule; do not substitute an aggregator value."
+      "status": "verified",
+      "note": "Median household income (2024 dollars). Filled by the final integration pass on 2026-11-08: read directly from the county column of the corrected S2 URL."
     },
     {
       "id": "M43",
@@ -578,13 +578,13 @@
       "id": "M48",
       "category": "Capital markets",
       "metric": "10-year Treasury constant maturity yield",
-      "value": "4.90%",
+      "value": "4.84%",
       "unit": "percent",
-      "period": "2026-11-04",
+      "period": "2026-11-05",
       "geography": "United States",
       "source": "S11",
       "status": "verified",
-      "note": "Five prior observations in the same series range 4.91%-4.98% - no rate relief in the recent window."
+      "note": "DGS10."
     },
     {
       "id": "M49",
@@ -758,13 +758,13 @@
       "id": "M63",
       "category": "Labor regulation",
       "metric": "City of Los Angeles local minimum wage",
-      "value": "",
+      "value": "$18.42",
       "unit": "USD/hour",
-      "period": "2026",
+      "period": "effective 2026-07-01",
       "geography": "City of Los Angeles",
-      "source": "S4",
-      "status": "unverified",
-      "note": "DIR states a local rate may exceed the state rate but the city rate itself was not confirmed on an official city page in this session. Blank by rule."
+      "source": "S24",
+      "status": "verified",
+      "note": "LA City MW."
     },
     {
       "id": "M64",
@@ -1053,6 +1053,30 @@
       "source": "S23",
       "status": "unverified",
       "note": "The BEA news release quantifies county personal income ($818.5B for Los Angeles County) but publishes the GDP level only in its interactive tables, which were not machine-readable in this session. Left blank rather than inferred from personal income."
+    },
+    {
+      "id": "M88",
+      "category": "Income",
+      "metric": "Per capita income (county)",
+      "value": "$45,792",
+      "unit": "USD (2024 dollars)",
+      "period": "2020-2024 ACS 5-yr",
+      "geography": "Los Angeles County",
+      "source": "S2",
+      "status": "verified",
+      "note": "PCI, V2025/ACS."
+    },
+    {
+      "id": "M89",
+      "category": "Income",
+      "metric": "Poverty rate (county)",
+      "value": "13.3%",
+      "unit": "percent",
+      "period": "2020-2024 ACS 5-yr",
+      "geography": "Los Angeles County",
+      "source": "S2",
+      "status": "verified",
+      "note": "Poverty rate, V2025/ACS."
     }
   ]
 }

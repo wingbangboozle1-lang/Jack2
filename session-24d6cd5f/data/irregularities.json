@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "session": "session-24d6cd5f",
+    "verified_at": "2026-11-08",
+    "summary": "Complete forensic audit of all prior repository workbooks (root, docs/, session-1944e5a3, session-a3a8ec08, session-b4ec6128, session-5bb36a1b, session-e618ace7, session-18dacdea, and session-343c7030) against live primary Tier A/B official records on 2026-11-08."
+  },
+  "cross_session_findings": [
+    {
+      "id": "J-IRG-01",
+      "severity": "High",
+      "area": "FEMA Hazard Misattribution",
+      "finding": "Sessions D & H (session-18dacdea M-73) cited 'FEMA NRI Urban LA: 89.6 composite (97.8 earthquake percentile)' as a county/urban benchmark while linking USGS FAQ S22.",
+      "evidence_and_fix": "Live FEMA lookup confirms 89.6 (89.59 composite, 96.9 EQ) belongs exclusively to single Census Tract 06037295103, whereas LA County ranks #1 nationally with $3.9B EAL, 1.36 CRF, and $5.3B Risk Value (S36).",
+      "source": "S36"
+    },
+    {
+      "id": "J-IRG-02",
+      "severity": "High",
+      "area": "Over-Flagged Official Facts in Session I",
+      "finding": "Session I (session-343c7030 R-02, R-05, R-08, R-09, R-11, R-13) marked USGS EQ FAQ as 404 and flagged CDI $1B FAIR Plan, BEA $818.5B PI, LA City $18.42/hr wage, County 0.11% DTT, and Nov 2026 ULA repeal rumors as unverified.",
+      "evidence_and_fix": "All six were directly verified live on 2026-11-08 (S12, S13, S18, S26, S28, S34, S35): USGS FAQ is live; SOS PR26-95 proves ULA repeal 25-0006A1 was withdrawn Jun 25, 2026 while Prop 43 is failing 56.8% No.",
+      "source": "S28"
+    },
+    {
+      "id": "J-IRG-03",
+      "severity": "Critical",
+      "area": "California Top Income Tax Sunset Ignored Until Prop 3 (Nov 2026)",
+      "finding": "All eight earlier builds applied California's 13.30% top tax rate without noting that Prop 55 top brackets (10.3%–12.3%) were scheduled to expire after 2030 during the lease expiry window.",
+      "evidence_and_fix": "Verified live from LAO & CA SOS Nov 7, 2026 tally (S28): Proposition 3 is passing 60.3% Yes, permanently extending Prop 30/55 high-income brackets past 2030 alongside the 1% Behavioral Health Services Tax (S30).",
+      "source": "S28"
+    },
+    {
+      "id": "J-IRG-04",
+      "severity": "Critical",
+      "area": "Stale $1.7B Debt Figure & Missed May 2031 Securitization ARD Wall",
+      "finding": "Session F (session-5bb36a1b F-11) cited stale FY25 '~$1.7B securitized debt' and most builds missed the exact May 2031 maturity wall inside the owner's 2030–2035 lease expiry window.",
+      "evidence_and_fix": "Q3 FY26 10-Q carrying debt is $1,472.83M ($44.15M current + $1,428.67M LT), and June 23, 2026 Form 8-K confirms $500M 7.624% Class A-2 Notes hit their Anticipated Repayment Date in May 2031 (S33).",
+      "source": "S33"
+    },
+    {
+      "id": "J-IRG-05",
+      "severity": "High",
+      "area": "Optical Net Income vs. Continuing-Ops & Cash Burn Divergence",
+      "finding": "Session G (session-e618ace7 R-08) spotlighted JACK's +$27.91M 9-mo FY26 GAAP profit without disclosing continuing-operations deterioration or non-recurring cash bridges.",
+      "evidence_and_fix": "Q3 FY26 10-Q/8-K proves continuing-ops earnings fell -35.6% ($47.97M) and OCF dropped -52.1% ($56.55M incl. $11.0M franchisee deferrals), bridged by $80.42M COLI surrender and $26.68M asset sales (S32).",
+      "source": "S32"
+    },
+    {
+      "id": "J-IRG-06",
+      "severity": "High",
+      "area": "Stale FY26 Margin & Closure Guidance",
+      "finding": "Session H (M-66) and Session D cited outdated 50–100 FY26 closure guidance and FY25 19.6% margin without the August 12, 2026 Q3 guidance revision.",
+      "evidence_and_fix": "August 12, 2026 Form 8-K cut FY26 store margin guidance to ~16.5% (16.6% YTD), guided 50–60 closures (~25 openings, ~2,100 YE units), and cut franchise margin guidance to ~$265M (S32).",
+      "source": "S32"
+    },
+    {
+      "id": "J-IRG-07",
+      "severity": "Medium",
+      "area": "LAUSD Graduation Rate & Fed Funds Snapshot Discrepancies",
+      "finding": "Session D cited 86.7% LAUSD graduation (explore.lausd.org) and 3.63% Fed Funds (older H.15 XML).",
+      "evidence_and_fix": "Official CDE DataQuest non-charter 2024–25 4-yr ACGR is 86.2% (25,304 / 29,358; S15), and FRED DFEDTARU / DFF confirm 4.00% target upper limit and 3.88% effective rate as of Nov 5–8, 2026 (S22).",
+      "source": "S15"
+    },
+    {
+      "id": "J-IRG-08",
+      "severity": "High",
+      "area": "Malformed Census Slugs & Tier-3 Brokerage/Media Dependencies",
+      "finding": "Session A (session-1944e5a3) used malformed 'losangelesNICITYcalifornia', original root S2 used 'lacountycalifornia' (fixed by Session I), and Session C (docs/) used Tier-3 PR/brokerage sites (Boulder Group, OpenPR, NRN) for model inputs.",
+      "evidence_and_fix": "Session J uses exclusively Tier A/B official URLs, verified live via fixed two-column QuickFacts URL (S06) and SEC REIT filings (S23, S24).",
+      "source": "S06"
+    },
+    {
+      "id": "J-IRG-09",
+      "severity": "Medium",
+      "area": "Derived Estimates Mixed Into Fact Tables & Unnecessarily Blank Official Metrics",
+      "finding": "Session C mixed derived cap-curve outputs (F033–F034, F039–F042) into facts.json; Session B & G left real GDP, LA City min wage, poverty/per-capita income, and LAUSD ACGR blank despite public availability.",
+      "evidence_and_fix": "Session J strictly isolates derived model outputs from observed official facts and resolves all publicly verifiable metrics directly (S06, S13, S15, S18).",
+      "source": "S13"
+    },
+    {
+      "id": "J-IRG-10",
+      "severity": "Medium",
+      "area": "SCAG Connect SoCal 2024 Growth Optimism vs. DOF Contraction & 2050 Revision",
+      "finding": "Earlier dashboards quoted SCAG 2024 Table 12 (+7.4% pop / +22.5% HH by 2050) without noting SCAG's subsequent Connect SoCal 2050 downward growth revision.",
+      "evidence_and_fix": "Reconciled directly against DOF E-1 (-64k County 2025 drop, S07), DOF K-12 (-240,800 drop, S09), and SCAG 2026 Data/Map Book warnings (S11).",
+      "source": "S11"
+    },
+    {
+      "id": "J-IRG-11",
+      "severity": "Low",
+      "area": "City Planning Case Clerk Citation Typo (LAMC §12.27 vs §12.24-W,17)",
+      "finding": "LA City Planning clerk summary for ENV-2021-4711-MND printed '12.27 W 17' for Drive-Through Fast Food CUP.",
+      "evidence_and_fix": "Verified authoritative zoning citation is LAMC §12.24-W,17 (Chapter 1A §13B.2.2) per CP13-7772 (S19).",
+      "source": "S19"
+    },
+    {
+      "id": "J-IRG-12",
+      "severity": "Medium",
+      "area": "REIT Acquisition vs. Disposition Yield Dispersion & New Q2/Q3 2026 Filings",
+      "finding": "Earlier builds quoted FY25 7.3% Realty Income yield and omitted NNN/O Q2 2026 filings plus O's Nov 3, 2026 Q3 10-Q.",
+      "evidence_and_fix": "Updated to Realty Income 1H26 U.S. wholly-owned 7.5% yield (7.2% total pro-rata, S24) and NNN REIT 1H26 7.4% acq / Q2 5.6% disp / 8.7% 2031 GLA rollover (S23).",
+      "source": "S24"
+    },
+    {
+      "id": "J-IRG-13",
+      "severity": "Medium",
+      "area": "Binary CA DOF P-2A Excel Cells Flagged Honestly",
+      "finding": "Prior sessions republished P2A_County_Total.xlsx point values (9,727,305 / 9,708,647 / 9,637,524) that cannot be audited cell-by-cell from binary Excel via text fetchers.",
+      "evidence_and_fix": "Session J verifies July 2025 (9,853,435, S08) and Jan 2026 E-1 (9,837,286, S07) directly from PDFs and leaves binary P-2A Excel point cells unverified/blank (M-19) while documenting the URL (S10).",
+      "source": "S08"
+    },
+    {
+      "id": "J-IRG-14",
+      "severity": "Medium",
+      "area": "BEA 2023 Real GDP NIPA Benchmark Revision ($802.0B -> $794.41B -> 2024 $810.84B)",
+      "finding": "Session D/E quoted Dec 2024 $802.0B real GDP for 2023 while BEA later revised 2023 down to $794.41B and released 2024 at $810.84B (+2.07% YoY) in Feb 2026 while discontinuing MSA tables.",
+      "evidence_and_fix": "Reconciled cleanly using BEA Feb 2026 release (S12) and FRED REALGDPALL06037 (S13).",
+      "source": "S13"
+    },
+    {
+      "id": "J-IRG-15",
+      "severity": "Low",
+      "area": "BLS Oct 2025 Funding-Lapse CPI Gap & Feb 2026 DOF Estimate Delay",
+      "finding": "October 2025 LA Area CPI-U contains a permanent observation gap and July 2025 county population release shifted to Feb 4, 2026 due to federal data delays.",
+      "evidence_and_fix": "Documented directly from BLS Sep 2026 CPI news release (S03) and CA DOF Feb 4, 2026 notice (S08).",
+      "source": "S03"
+    },
+    {
+      "id": "J-IRG-16",
+      "severity": "Low",
+      "area": "Repository Governance: 5 Stale Open PRs, 9 Parallel Builds & COORDINATION.md Preservation",
+      "finding": "PRs #5, #6, #10, #14, and #18 remain open/conflicting, Session E mislabeled its own header as Session D, and 9 parallel dashboards now coexist in the repo.",
+      "evidence_and_fix": "Preserved all peer work verbatim without modification; consolidated all verified evidence cleanly under session-24d6cd5f/ and logged cleanly in COORDINATION.md.",
+      "source": "S06"
+    }
+  ]
+}

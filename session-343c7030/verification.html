@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification · Central LA Jack in the Box NNN</title>
+<meta name="description" content="Source-verified sell-versus-renew analysis for a single-tenant Jack in the Box on an NNN lease in Central Los Angeles, lease expiry 2030-2035.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brandbar">
+      <div class="brand"><span class="dot">JB</span><span>Central LA Jack in the Box · NNN<span><small>Independent decision workbook · session 343c7030 · data read 2026-11-08</small></span></span></div>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="executive-summary.html">Executive summary</a>
+      <a href="market.html">Market &amp; people</a>
+      <a href="economy.html">Economy &amp; jobs</a>
+      <a href="property-lease.html">Property &amp; lease</a>
+      <a href="valuation-tax.html">Valuation &amp; tax</a>
+      <a href="projection.html">Projection model</a>
+      <a href="decision.html">Decision</a>
+      <a href="risks.html">Risks</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html" aria-current="page">Verification</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="crumb"><a href="../workspaces.html">All workspaces</a> / session-343c7030</div>
+    <h1>Verification</h1>
+    <p class="lede">The rules, the source-by-source account of the verification pass, the rejected sources and the limits of the analysis.</p>
+
+<div class="note"><strong>What was actually done.</strong> On 2026-11-08 this session read 16 official pages and recorded
+the values it could see, row by row, with the link on the row. It did not carry forward a single figure it could not see. Where a
+page was dead — and three commonly cited ones were — the link was replaced or the value was left out and flagged.</div>
+<div class="grid g4">
+  <div class="card"><div class="lbl">Verified rows</div><div class="big">84</div><div class="meta">value + source link + access date</div></div>
+  <div class="card"><div class="lbl">Blank rows</div><div class="big">14</div><div class="meta">published on the flagged page</div></div>
+  <div class="card"><div class="lbl">Official sources</div><div class="big">16</div><div class="meta">all read 2026-11-08</div></div>
+  <div class="card"><div class="lbl">Automated rules</div><div class="big">7</div><div class="meta">build fails if any is violated</div></div>
+</div>
+
+<h2>The seven publication rules</h2>
+<ol class="tight">
+<li>A "verified" row must have a non-empty value <em>and</em> a source id that resolves to an https URL.</li>
+<li>A "blank" row must have an empty value and must appear on the flagged page.</li>
+<li>Every source must be cited by at least one row; an orphan source is an error.</li>
+<li>No source may be an aggregator, a news article, a broker survey or a language model.</li>
+<li>Every internal link must resolve to a file that exists.</li>
+<li>No page may contain an e-mail address, a phone number, a street address, an APN, an account number or a person's name.</li>
+<li>The published strategy figures must equal the figures in the model output — the site cannot drift from the engine.</li>
+</ol>
+
+<h2>What was read, and what it showed</h2>
+<div class="tablewrap"><table><caption>Source-by-source account of the verification pass</caption>
+<thead><tr><th>Source</th><th>Read</th><th>Outcome</th></tr></thead><tbody>
+<tr><td>S01 BLS Los Angeles summary</td><td class="num">2026-11-08</td><td>All unemployment, payroll, CPI, ECI, wage and benefit figures transcribed as shown; updated 2026-11-04.</td></tr>
+<tr><td>S02 Census QuickFacts, city</td><td class="num">2026-11-08</td><td>City rows D01–D24 read directly. The combined city+county URL only works with the correct county slug.</td></tr>
+<tr><td>S03 Census QuickFacts, county</td><td class="num">2026-11-08</td><td>County rows D03–D29 read directly. This is the fix for irregularity R-01.</td></tr>
+<tr><td>S04 Treasury par yields</td><td class="num">2026-11-08</td><td>Six dated rates transcribed from the November 2026 table.</td></tr>
+<tr><td>S05 / S06 SEC filing indexes</td><td class="num">2026-11-08</td><td>Both filings confirmed present, with accession numbers and filing dates recorded.</td></tr>
+<tr><td>S07 XBRL net income</td><td class="num">2026-11-08</td><td>FY2025 loss, the nine-month profit, both quarterly profits and the comparatives read from the filed series.</td></tr>
+<tr><td>S08 XBRL stockholders' equity</td><td class="num">2026-11-08</td><td>Three balance-sheet dates, showing the deficit and its narrowing.</td></tr>
+<tr><td>S09 Measure ULA FAQ</td><td class="num">2026-11-08</td><td>All-in rates 0.45% / 4.45% / 5.95%, thresholds, effective date and indexation confirmed.</td></tr>
+<tr><td>S10 Proposition 13</td><td class="num">2026-11-08</td><td>1% levy, 2% cap and reassessment triggers confirmed on the Assessor's page.</td></tr>
+<tr><td>S11 IRS FS-2008-18</td><td class="num">2026-11-08</td><td>45-day and 180-day limits, qualified intermediary, carryover basis confirmed.</td></tr>
+<tr><td>S12 USGS UCERF3</td><td class="num">2026-11-08</td><td>60% / 46% / 31% for M6.7 / 7.0 / 7.5 over 30 years confirmed. Replaces a dead URL (R-02).</td></tr>
+<tr><td>S13 CAL FIRE FHSZ</td><td class="num">2026-11-08</td><td>Classes and mapping framework confirmed. Parcel class cannot be asserted without the address.</td></tr>
+<tr><td>S14 CDE LAUSD</td><td class="num">2026-11-08</td><td>Enrollment 497,105 and 81,328 English learners for 2025-26 confirmed.</td></tr>
+<tr><td>S15 / S16 DIR</td><td class="num">2026-11-08</td><td>$16.90 state and $20.00 fast-food floors confirmed with effective dates.</td></tr>
+</tbody></table></div>
+
+<h2>Sources that were tried and rejected</h2>
+<ul class="tight">
+<li>Four previously cited government URLs returned 404 and were replaced or flagged: the USGS FAQ (R-02), the BOE Proposition 13 page (R-03),
+  two IRS §1031 pages (R-04) and the BEA county-income release (R-05).</li>
+<li>Broker and news cap-rate estimates for Los Angeles net lease were found but not used, because no official statistical series publishes
+  transaction cap rates (M01, M02).</li>
+<li>Search results about Measure ULA and the November 2026 ballot measure were not used as sources; only the City's own FAQ page was (R-09).</li>
+</ul>
+
+<h2>Reproduce</h2>
+<div class="card"><pre class="meta" style="white-space:pre-wrap;margin:0">python3 session-343c7030/scripts/model.py        # data/projections.json (deterministic, seed 20261108)
+python3 session-343c7030/scripts/build_site.py   # 12 pages
+python3 session-343c7030/scripts/verify.py       # 7 rule families, exits non-zero on failure</pre></div>
+
+<h2>Limitations stated plainly</h2>
+<ul class="tight">
+<li>This is decision support, not an appraisal, tax advice or investment advice.</li>
+<li>No rent, address, size, basis, loan or lease document was supplied, so nothing here asserts this parcel's value.</li>
+<li>Eight earlier sessions reached overlapping but not identical conclusions. This workbook reconciles their <em>evidence</em>,
+  not their recommendations; where they differ, the difference is analytical judgement, and it is visible on
+  <a href="../workspaces.html">the workspaces page</a>.</li>
+<li>Cap rates, basis, renewal probability and loss given hazard are assumptions. They are published with ranges and tested.</li>
+</ul>
+
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Internal decision support. Not an appraisal, not tax advice, not investment advice. Every value is traceable to the source shown on its row.</div>
+    <div>Accessed 2026-11-08 · <a href="verification.html">verification log</a> · <a href="flagged.html">flagged items</a></div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
