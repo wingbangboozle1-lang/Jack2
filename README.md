@@ -195,3 +195,29 @@ Two findings worth knowing before reading anything else in this repository:
 - Sessions D and E both lead on the tenant's FY2025 net loss without noting that the same SEC dataset shows
   **net income of +$27.9m for the first nine months of FY2026** and a narrowing equity deficit. Both facts are
   published side by side on the Session G tenant page (flagged R-08).
+
+## Session E dossier (`session-50002478/`, `scripts/`, `tests/`, `data/research.json`)
+
+A fifth independently built, source-linked dashboard is published from the same legacy Pages deployment at
+**https://wingbangboozle1-lang.github.io/Jack2/session-50002478/**. It does not replace the root workbook,
+the Session A archive, the `docs/` dossier or the `session-a3a8ec08/` dashboard.
+
+| | |
+|---|---|
+| Question | Sell before expiry, hold, or pursue a tenant-supported extension under an unverified 2030–2035 expiry range |
+| Method | Deterministic normalized monthly cash-flow model; 16 scenario/tail paths and 15 one-way sensitivities; no Monte-Carlo probabilities or property-specific price target |
+| Conclusion | Conditional dual-track: obtain executable market bids while reviewing the executed lease and negotiating an extension; no blind hold or automatic renewal |
+| Data | 66 regional/tenant evidence rows, 9 official forecast rows, 28 blank property inputs, 30 risks, 16 alternatives, 44 flags, 34 issuing-source records |
+| Privacy | Placeholder-only public outputs; no address, APN, owner/tenant personal identifiers, contacts or account data |
+
+Rebuild and verify:
+
+```bash
+python research/assemble.py
+npm ci
+npm run check       # build + 23 Node tests + deterministic/source/link/privacy verification
+npm run preview     # local preview on 0.0.0.0:4173
+```
+
+The generated dossier is committed under `session-50002478/` because the existing GitHub Pages source is
+`main` / root (legacy build). `site/` and `reports/` remain ignored scratch/output directories.
