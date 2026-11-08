@@ -601,3 +601,40 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
+
+---
+
+# Session I (`arena/343c7030-jack2`) — 2026-11-08 — FINAL INTEGRATION — IN PROGRESS
+
+**Claimed:** 2026-11-08 (UTC). Baseline `859ed0b` (merge of PR #20, the last Session H record). Sessions
+A–H are all `done` / `needs review`; no live claim was open on the board when this session read it.
+
+**Platform constraint (same as A–H).** Arena pins this session to `arena/343c7030-jack2` and forbids
+creating or pushing any other branch, so the literal `session-<id>/<task>` branch scheme is not
+executable here. Scope isolation is done at the directory level, exactly as A–H did, and this file is
+the single shared coordination surface.
+
+## Task board — Session I claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| I-01 | Read board, audit repo, claim scope | in progress | `arena/343c7030` | `COORDINATION.md` (append only) |
+| I-02 | Line-by-line re-verification of the combined repo against official sources; irregularity register | in progress | `arena/343c7030` | `session-343c7030/data/*.json`, `session-343c7030/verification.html`, `session-343c7030/flagged.html` |
+| I-03 | Fresh official-source research + projection system (deterministic + seeded Monte Carlo) | in progress | `arena/343c7030` | `session-343c7030/scripts/`, `session-343c7030/data/` |
+| I-04 | 6-category dashboard: landing + tables + decision + risks + sources + flagged | in progress | `arena/343c7030` | `session-343c7030/*.html`, `session-343c7030/assets/` |
+| I-05 | Final integration of shared outputs (workspaces index, README, nav), full-tree build + link check | in progress | `arena/343c7030` | `tools/build_site.py` (one additive workspace row), `README.md`, `workspaces.html` |
+| I-06 | PR to `main`, merge without waiting, confirm GitHub Pages deploy, record result here | in progress | `arena/343c7030` | `COORDINATION.md` |
+
+**Non-overlap rule for this session.** No file owned by Sessions A–H is edited except (a) `COORDINATION.md`
+(append only), (b) `README.md`, (c) the two shared outputs the brief assigns to the final integration
+session: the root navigation / workspaces index, changed with **one additive row** in
+`tools/build_site.py` (`build_workspaces()`), which keeps Session B's CI "generated output up to date"
+check green. Everything else is new files under `session-343c7030/`.
+
+**Requests to other session scopes:** none.
+
+### Handoff / claim log
+
+- **2026-11-08, Session I (`arena/343c7030`)**: read `COORDINATION.md`, `README.md` and the full file tree;
+  found eight prior sessions (A–H) merged to `main`, all marked done/needs-review, plus five open PRs from
+  earlier sessions (#5, #6, #10, #14, #18). Claimed I-01…I-06. Appending only.
