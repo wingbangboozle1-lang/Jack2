@@ -7,7 +7,7 @@
 </head><body>
 <header class="top">
   <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
-  <div class="sub">Session I &middot; independent re-verification dated 2026-11-08 &middot;
+  <div class="sub">Session K &middot; independent re-verification dated 2026-11-08 &middot;
   single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
 </header>
 <nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html" aria-current="page">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html">Method &amp; privacy</a></nav>
@@ -27,10 +27,10 @@ that are <em>not</em> settled, published so they can be reviewed rather than bur
 <p class="small"><strong>What is being done:</strong> Not an error in the published work - a newer official record. The recommendation is re-framed rather than rewritten: the decision is inside the noise band and should not be made on this input alone.</p>
 <p class="small"><a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. (CIK 0000726728) Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three Months and Year Ended December 31, 2025">S12 &#8599;</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three and Nine Months Ended September 30, 2026">S13 &#8599;</a></p>
 </div><div class="card">
-<h3><span class="badge neutral">low</span>
-<code>F2</code> &nbsp;Census QuickFacts county citation renders the national table</h3>
-<p>The root site&#x27;s QuickFacts URL uses the slug &#x27;lacountycalifornia&#x27;. QuickFacts does not recognise it and serves the United States table (FIPS 1). The published county figures are correct but the link does not show their source.</p>
-<p class="small"><strong>What is being done:</strong> Corrected link published on this session&#x27;s verification page: &#x27;losangelescountycalifornia&#x27;.</p>
+<h3><span class="badge ok">none</span>
+<code>F2</code> &nbsp;Census QuickFacts slug defect: already resolved on main, retained for the audit trail</h3>
+<p>The root site&#x27;s QuickFacts URL once used the slug &#x27;lacountycalifornia&#x27;, which QuickFacts does not recognise; it silently serves the United States table (FIPS 1, land area 3,533,038 sq mi). The integration pass (session-343c7030) corrected the slug on 2026-11-08 and published the county column. This session re-confirmed the correct slug independently and verified the published county values.</p>
+<p class="small"><strong>What is being done:</strong> No action required. Not reported as an open defect, because reporting a fixed issue as open would be its own kind of inaccuracy. The correct slug is published in this session&#x27;s ledger as S05.</p>
 <p class="small"><a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)">S04 &#8599;</a> <a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)">S05 &#8599;</a></p>
 </div><div class="card">
 <h3><span class="badge neutral">low</span>
@@ -101,7 +101,7 @@ advice and not a legal opinion. Every value shown links to the official page it 
 2026-11-08; values that could not be confirmed are blank and listed on the
 <a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
 address or contact detail appears anywhere in this workbook.</p>
-<p>Session I (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+<p>Session K (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
 82 of 98 ledger rows verified &middot;
 reproduction of the published root model: <strong>pass</strong>
 &middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;

@@ -7,7 +7,7 @@
 </head><body>
 <header class="top">
   <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
-  <div class="sub">Session I &middot; independent re-verification dated 2026-11-08 &middot;
+  <div class="sub">Session K &middot; independent re-verification dated 2026-11-08 &middot;
   single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
 </header>
 <nav class="main" aria-label="Sections"><a href="index.html" aria-current="page">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html">Method &amp; privacy</a></nav>
@@ -50,8 +50,8 @@ Detail on <a href="decision.html">Decision</a>.</p>
 <table><thead><tr><th>Item</th><th>Published in the repository</th><th>Verified 2026-11-08</th><th>Effect</th><th>Source</th></tr></thead><tbody>
 <tr><td>Net-lease acquisition yield</td><td>7.3% (FY2025)</td><td><strong>6.8%</strong> (Q3 2026, filed 2026-11-02)</td>
 <td>Reverses the base-case sign against a 6.975% breakeven</td><td><a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. (CIK 0000726728) Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three Months and Year Ended December 31, 2025">S12 &#8599;</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three and Nine Months Ended September 30, 2026">S13 &#8599;</a></td></tr>
-<tr><td>Census county citation</td><td>QuickFacts slug <code>lacountycalifornia</code></td><td>Slug is invalid; page silently renders the <em>United States</em> table</td>
-<td>Values are right, but the link does not show its own source</td><td><a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)">S04 &#8599;</a> <a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)">S05 &#8599;</a></td></tr>
+<tr><td>Census county citation</td><td>QuickFacts slug <code>lacountycalifornia</code></td><td>Slug is invalid and silently renders the <em>United States</em> table &mdash; <strong>already corrected on main</strong> by the integration pass</td>
+<td>Resolved before this workbook published; re-confirmed independently here</td><td><a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)">S04 &#8599;</a> <a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)">S05 &#8599;</a></td></tr>
 <tr><td>USGS earthquake citation</td><td>Program landing page</td><td>Specific UCERF3 FAQ record: 60 / 46 / 31%</td>
 <td>Now citable to the exact record</td><td><a class="src" href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener noreferrer" title="U.S. Geological Survey &mdash; What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)">S23 &#8599;</a></td></tr>
 <tr><td>Local forecast horizon</td><td>LAEDC / City WDB report, 2022&ndash;2028</td><td>Report genuine; horizon ends before the 2030&ndash;2035 window</td>
@@ -87,7 +87,7 @@ advice and not a legal opinion. Every value shown links to the official page it 
 2026-11-08; values that could not be confirmed are blank and listed on the
 <a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
 address or contact detail appears anywhere in this workbook.</p>
-<p>Session I (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+<p>Session K (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
 82 of 98 ledger rows verified &middot;
 reproduction of the published root model: <strong>pass</strong>
 &middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;

@@ -28,7 +28,7 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 |---|---|
 | Question | Sell the property before the lease expires, or renew and hold? |
 | Answer format | A ranked strategy plus six testable decision triggers — not a guess at value |
-| Evidence base | 87 metric rows, 76 verified against 23 official sources, 11 deliberately blank and flagged |
+| Evidence base | 87 metric rows, 79 verified against 23 official sources, 8 deliberately blank and flagged (three blanks were filled on 2026-11-08 by the Session I integration pass) |
 | Model | Deterministic 2026–2040 projection in `tools/model.py`, published inputs, breakevens and sensitivity |
 | Risk | 24-row register mapped to each decision, including wildfire/earthquake/insurance tail scenarios |
 | Privacy | No name, address, APN, loan number or account anywhere in the repo or the site (enforced in code) |
@@ -172,3 +172,76 @@ Two findings worth knowing before reading anything else in this repository:
 - Sessions D and E both lead on the tenant's FY2025 net loss without noting that the same SEC dataset shows
   **net income of +$27.9m for the first nine months of FY2026** and a narrowing equity deficit. Both facts are
   published side by side on the Session G tenant page (flagged R-08).
+
+
+## Session J dashboard (`session-6ad87c21/`) — 2026-11-08
+
+A ninth, independent session (`arena/6ad87c21-jack2`) re-verified the evidence base from scratch on **2026-11-08**
+and published a clean decision dashboard at
+**https://wingbangboozle1-lang.github.io/Jack2/session-6ad87c21/**. It supersedes nothing: the root build, `docs/`
+and Sessions A–I are unchanged and remain live.
+
+| | |
+|---|---|
+| Recommendation | **Dual track: pursue an early 10–15 year extension at or above in-place rent, prepare a §1031 exit in parallel, sell 2029–2032 with more than ten years of term.** If the extension fails by 31 Dec 2027, sell in 2028. Never let the lease expire. |
+| Evidence | 114 fact rows — **92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank** — against **17 official sources opened and read on the access date** |
+| Model | Six strategies carried to 2040, deterministic Bear/Base/Bull, a **seeded 10,000-trial Monte Carlo** (seed 20261108), a 7-column sensitivity grid, a 5-point cap-rate break-even and 8 robustness stress cases; **21 assumptions published with the range tested** |
+| Risks | 31 rows — 19 business-as-usual and 12 black-swan — each mapped to the four decisions it affects |
+| Review | **10 repository irregularities** (I-01…I-10) plus 15 unverified data items, published with evidence and a stated fix |
+| Privacy | No address, APN, rent, basis, loan or owner identity anywhere; enforced by a build-failing scan in `scripts/verify.py` |
+
+Headline numbers per $100,000 of in-place NOI at 2040, after tax: hold-to-expiry-and-renew ranks first on the
+risk-adjusted measure ($4.26m), extend-then-sell second ($4.15m), sell-now-through-a-§1031 third ($4.00m, and the
+best worst-5% floor at $3.47m). A §1031 exchange is worth **+$646,520** against a taxable sale; letting the lease
+expire is **−23%** against the leader.
+
+Rebuild and verify:
+
+```bash
+python3 session-6ad87c21/scripts/model.py            # deterministic + seeded Monte Carlo
+python3 session-6ad87c21/scripts/build_site.py       # 14 pages
+python3 session-6ad87c21/scripts/verify.py           # 1,367 checks: sources, blanks, links, PII, model
+```
+
+Two facts worth knowing before reading any other workbook in this repository:
+
+- **The tenant is not the brand.** 93.0% of Jack in the Box's 2,115 restaurants are franchised, so the lease on a
+  franchised unit is credit to a franchisee entity, not to the issuer. Every dashboard here should be read with that
+  in mind.
+- **There is no verified cap rate anywhere in this repository**, including here. There is no official public
+  cap-rate series; every valuation in every workbook is conditional on an assumption. Obtain a broker opinion of
+  value before relying on a level.
+
+## Session I dashboard (`session-343c7030/`) — final integration
+
+A ninth, independent session (`arena/343c7030-jack2`) performed the final integration pass on 2026-11-08 and published
+**https://wingbangboozle1-lang.github.io/Jack2/session-343c7030/**. It is now the first entry on
+[`workspaces.html`](https://wingbangboozle1-lang.github.io/Jack2/workspaces.html), which lists all nine builds.
+
+| | |
+|---|---|
+| Question | Sell the NNN lease before it expires in 2030–2035, or renew? |
+| Recommendation | **Do not hold to expiry.** Extend now at or above in-place rent, then sell in 2032 with term through a §1031 exchange (S3). Selling now through the same exchange (S1) is 2.1% behind and wins when rent growth disappoints. A taxable sale (S2) costs 4.4% of certainty-equivalent wealth. Holding to expiry (S4) has the higher median and a 5th-percentile outcome $176,615 worse per $100k NOI. |
+| Evidence | 98 fact rows: **84 verified** against **16 official sources** read on 2026-11-08, **14 deliberately blank** and published on the flagged page. Nothing inferred. |
+| Model | Five strategies, deterministic 2026–2040 plus 15,000-trial seeded Monte Carlo (seed `20261108`), CRRA-2.5 certainty equivalent, 15 published assumptions, 9-cell sensitivity grid, replacement-growth and expiry-year grids |
+| Risk | 30-row register: 18 business-as-usual and 12 black-swan events, each mapped to the strategies it bites |
+| Review | 13 repository irregularities with evidence and action — including the Census URL defect carried by the root build, which this session **fixed** |
+| Privacy | No address, APN, rent, basis, loan term or owner identity anywhere; enforced by a build-failing scan |
+
+Rebuild:
+
+```bash
+python3 session-343c7030/scripts/model.py        # data/projections.json
+python3 session-343c7030/scripts/build_site.py   # 12 pages
+python3 session-343c7030/scripts/verify.py       # 7 rule families, exits non-zero on failure
+```
+
+Two things worth knowing before reading anything in this repository:
+
+- **The root build's Census URL is now fixed.** `data/sources.json` S2 pointed at a slug
+  (`lacountycalifornia`) that renders a *United States* table and silently drops the county column. Session G flagged it;
+  Session G's own corrected URL was published alongside it; Session I has now corrected the shared file itself, re-read both
+  columns on 2026-11-08, and rebuilt the root site. No value changed. Evidence: `session-343c7030/flagged.html` R-01.
+- **Four commonly cited government URLs return 404** and are flagged rather than copied: the USGS earthquake FAQ, the BOE
+  Proposition 13 page, two IRS §1031 pages and the BEA county-income release. Replacement URLs are published with the rows
+  they support; the BEA figure is *not* republished because no working official page was found.

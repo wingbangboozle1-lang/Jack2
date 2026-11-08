@@ -63,7 +63,7 @@ def src(id_):
 
 def badge(status):
     cls = {"verified": "ok", "unverified": "warn", "confirmed": "ok", "superseded": "warn",
-           "irregularity": "bad", "note": "neutral"}.get(status, "neutral")
+           "irregularity": "bad", "note": "neutral", "resolved": "ok"}.get(status, "neutral")
     return f'<span class="badge {cls}">{e(status)}</span>'
 
 
@@ -157,7 +157,7 @@ def page(title, subtitle, body, current):
 </head><body>
 <header class="top">
   <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
-  <div class="sub">Session I &middot; independent re-verification dated {AS_OF} &middot;
+  <div class="sub">Session K &middot; independent re-verification dated {AS_OF} &middot;
   single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
 </header>
 <nav class="main" aria-label="Sections">{nav}</nav>
@@ -171,7 +171,7 @@ advice and not a legal opinion. Every value shown links to the official page it 
 {AS_OF}; values that could not be confirmed are blank and listed on the
 <a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
 address or contact detail appears anywhere in this workbook.</p>
-<p>Session I (<code>session-4ed347de</code>) &middot; {len(SRC)} official sources &middot;
+<p>Session K (<code>session-4ed347de</code>) &middot; {len(SRC)} official sources &middot;
 {VER['summary']['verified']} of {VER['summary']['total']} ledger rows verified &middot;
 reproduction of the published root model: <strong>{MOD['reproduction_of_published_model']['status']}</strong>
 &middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
@@ -274,8 +274,8 @@ Detail on <a href="decision.html">Decision</a>.</p>
 <table><thead><tr><th>Item</th><th>Published in the repository</th><th>Verified {AS_OF}</th><th>Effect</th><th>Source</th></tr></thead><tbody>
 <tr><td>Net-lease acquisition yield</td><td>{FY25:.1f}% (FY2025)</td><td><strong>{Q3:.1f}%</strong> (Q3 2026, filed 2026-11-02)</td>
 <td>Reverses the base-case sign against a {BREAKEVEN:.3f}% breakeven</td><td>{src('S12')} {src('S13')}</td></tr>
-<tr><td>Census county citation</td><td>QuickFacts slug <code>lacountycalifornia</code></td><td>Slug is invalid; page silently renders the <em>United States</em> table</td>
-<td>Values are right, but the link does not show its own source</td><td>{src('S04')} {src('S05')}</td></tr>
+<tr><td>Census county citation</td><td>QuickFacts slug <code>lacountycalifornia</code></td><td>Slug is invalid and silently renders the <em>United States</em> table &mdash; <strong>already corrected on main</strong> by the integration pass</td>
+<td>Resolved before this workbook published; re-confirmed independently here</td><td>{src('S04')} {src('S05')}</td></tr>
 <tr><td>USGS earthquake citation</td><td>Program landing page</td><td>Specific UCERF3 FAQ record: 60 / 46 / 31%</td>
 <td>Now citable to the exact record</td><td>{src('S23')}</td></tr>
 <tr><td>Local forecast horizon</td><td>LAEDC / City WDB report, 2022&ndash;2028</td><td>Report genuine; horizon ends before the 2030&ndash;2035 window</td>

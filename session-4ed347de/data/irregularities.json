@@ -14,14 +14,14 @@
   },
   {
    "id": "F2",
-   "severity": "low",
-   "title": "Census QuickFacts county citation renders the national table",
-   "detail": "The root site's QuickFacts URL uses the slug 'lacountycalifornia'. QuickFacts does not recognise it and serves the United States table (FIPS 1). The published county figures are correct but the link does not show their source.",
+   "severity": "none",
+   "title": "Census QuickFacts slug defect: already resolved on main, retained for the audit trail",
+   "detail": "The root site's QuickFacts URL once used the slug 'lacountycalifornia', which QuickFacts does not recognise; it silently serves the United States table (FIPS 1, land area 3,533,038 sq mi). The integration pass (session-343c7030) corrected the slug on 2026-11-08 and published the county column. This session re-confirmed the correct slug independently and verified the published county values.",
    "sources": [
     "S04",
     "S05"
    ],
-   "action": "Corrected link published on this session's verification page: 'losangelescountycalifornia'."
+   "action": "No action required. Not reported as an open defect, because reporting a fixed issue as open would be its own kind of inaccuracy. The correct slug is published in this session's ledger as S05."
   },
   {
    "id": "F3",

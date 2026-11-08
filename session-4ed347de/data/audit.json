@@ -429,7 +429,7 @@
    "session_i": "program landing page",
    "source": "S23",
    "verdict": "irregularity",
-   "note": "The URL resolves but is a program home page, not the record that states 60/46/31. The specific citable record is the USGS FAQ (S23)."
+   "note": "Still open on main as of this merge: the cited URL is a program home page, not the record that states 60/46/31%. The specific citable record is the USGS FAQ cited here as S23."
   },
   {
    "id": "R44",
@@ -438,8 +438,8 @@
    "published": ".../losangelescitycalifornia,lacountycalifornia/PST045224",
    "session_i": "renders the United States table",
    "source": "S04",
-   "verdict": "irregularity",
-   "note": "The slug 'lacountycalifornia' is not a valid geography. QuickFacts silently falls back to the national table (FIPS 1, land area 3.53M sq mi). The published values themselves are correct; the citation does not display its own source. Correct slug: losangelescountycalifornia (S05)."
+   "verdict": "resolved",
+   "note": "RESOLVED on main before this session published: the integration pass (session-343c7030) changed S2 to the correct slug and published the county column. This session independently confirmed the correct slug by re-reading the page, and found the invalid slug silently serves the United States table (FIPS 1). Record retained for the audit trail, not as an open defect."
   },
   {
    "id": "R45",
@@ -488,7 +488,8 @@
   "superseded": 1,
   "irregularity": 2,
   "unverified": 2,
-  "note": 2
+  "note": 2,
+  "resolved": 1
  },
  "method": "Each published value was re-read on the official page listed in the source column on 2026-11-08. 'confirmed' means the value matches the official page. 'superseded' means the value was correct when published but a newer official record exists."
 }
