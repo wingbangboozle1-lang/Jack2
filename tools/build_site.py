@@ -998,6 +998,14 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-24d6cd5f/</code>",
+         "Session K (branch <code>arena/24d6cd5f-jack2</code>) &mdash; 2026-11-08 independent re-verification: "
+         "36 official Tier A/B sources live-verified (incl. Nov 6 Treasury par curve, Sep 2026 BLS/EDD/CPI, BEA 2024 GDP, "
+         "Prop 3 passing 60.3% Yes locking 13.30% CA top tax rate past 2030, Measure ULA intact), 94 metrics "
+         "(79 verified, 15 blank), 28 risks, 16 repository audit findings, 20,000-trial seeded Monte Carlo (seed 20261108) "
+         "and client-side &sect;1031 / ULA / Prop 13 simulator",
+         "11 pages",
+         "<a href='session-24d6cd5f/index.html'>open &#8599;</a>"],
         ["<code>session-6ad87c21/</code>",
          "Session J &mdash; 2026-11-08 independent re-verification: 17 official sources re-read on the access date, "
          "114 fact rows (92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank), 31-risk BAU and "
@@ -1012,7 +1020,7 @@ def build_workspaces():
          "12 pages",
          "<a href='session-343c7030/index.html'>open &#8599;</a>"],
         ["<code>session-4ed347de/</code>",
-         "Session K &mdash; 2026-11-08 re-verification of 25 official sources (98 ledger rows, 82 verified), "
+         "Session L &mdash; 2026-11-08 re-verification of 25 official sources (98 ledger rows, 82 verified), "
          "line-by-line audit of the published workbook, independent reproduction of this model (21/21 values), "
          "and a 20,000-trial Monte Carlo with earthquake, wildfire and tenant-default hazards",
          "10 pages",
@@ -1056,10 +1064,16 @@ def build_workspaces():
     ]
     body = f"""
 {head_block("All workspaces",
-            "Nine independent workbooks, one repository",
+            "Eleven independent workbooks, one repository",
             "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
 
 <div class="callout warn">
+<p><strong>Newest 2026-11-08 36-source pass.</strong> Open
+<a href="session-24d6cd5f/index.html"><strong>session-24d6cd5f</strong></a> (Session K): 94 metrics across
+36 official sources verified live on 2026-11-08 (79 verified, 15 blank, including Nov 6 Treasury yields, Sep 2026
+BLS/EDD payrolls &amp; CPI, Prop 3 passing 60.3% Yes locking California&rsquo;s 13.30% top tax rate past 2030,
+and Measure ULA intact), 28 BAU/black-swan risks, 16 cross-session audit findings, a 20,000-trial seeded Monte Carlo
+model (seed <code>20261108</code>), and a browser-local &sect;1031 / Measure ULA / Prop 13 calculator.</p>
 <p><strong>Where to start.</strong> Open
 <a href="session-343c7030/index.html"><strong>session-343c7030</strong></a> (Session I), the final integration pass dated
 2026-11-08: 98 fact rows against 16 official sources read that day with 14 values deliberately left blank, five
@@ -1076,7 +1090,7 @@ repository line by line on 2026-11-07, publishes 110 fact rows against 19 offici
 deliberately left blank, scores six exit and hold strategies on risk-adjusted after-tax wealth, and lists every
 irregularity it found.</p>
 <p class="muted">If you want the original deterministic model with its decision triggers, this root site remains
-the reference build. The eight others are preserved because deleting another session's work is never the right
+the reference build. The ten others are preserved because deleting another session's work is never the right
 resolution to a conflict.</p>
 </div>
 

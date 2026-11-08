@@ -157,7 +157,7 @@ def page(title, subtitle, body, current):
 </head><body>
 <header class="top">
   <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
-  <div class="sub">Session K &middot; independent re-verification dated {AS_OF} &middot;
+  <div class="sub">Session L &middot; independent re-verification dated {AS_OF} &middot;
   single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
 </header>
 <nav class="main" aria-label="Sections">{nav}</nav>
@@ -171,7 +171,7 @@ advice and not a legal opinion. Every value shown links to the official page it 
 {AS_OF}; values that could not be confirmed are blank and listed on the
 <a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
 address or contact detail appears anywhere in this workbook.</p>
-<p>Session K (<code>session-4ed347de</code>) &middot; {len(SRC)} official sources &middot;
+<p>Session L (<code>session-4ed347de</code>) &middot; {len(SRC)} official sources &middot;
 {VER['summary']['verified']} of {VER['summary']['total']} ledger rows verified &middot;
 reproduction of the published root model: <strong>{MOD['reproduction_of_published_model']['status']}</strong>
 &middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
