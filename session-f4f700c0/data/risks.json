@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "as_of": "2026-11-08",
+    "note": "Qualitative mechanisms and mitigations; no invented probabilities."
+  },
+  "rows": [
+    {
+      "id": "R01",
+      "type": "BAU",
+      "name": "Lease-term erosion",
+      "mechanism": "Shorter remaining term can reduce buyer financing depth and increase renewal uncertainty even while rent is paid.",
+      "mitigation": "Start price discovery and extension discussions before the final marketing window; compare net proceeds, not headline price.",
+      "source": "S20",
+      "extra_sources": [
+        "S21"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R02",
+      "type": "BAU",
+      "name": "Tenant/operator default",
+      "mechanism": "The rent obligor may be a franchise entity, not the publicly traded franchisor; store sales and guarantor capacity are unknown.",
+      "mitigation": "Obtain rent roll, payment history, store P&L, guaranty and entity credit before relying on brand credit.",
+      "source": "S16",
+      "extra_sources": [],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R03",
+      "type": "BAU",
+      "name": "Renewal at lower rent or with concessions",
+      "mechanism": "Market-rate renewal can reset rent down; free rent, TI and landlord work reduce effective NOI.",
+      "mitigation": "Underwrite effective rent after concessions and compare with executable sale offers.",
+      "source": "S20",
+      "extra_sources": [],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R04",
+      "type": "BAU",
+      "name": "Vacancy and re-tenanting",
+      "mechanism": "Drive-thru use, zoning, parking, grease interceptor, ADA and building condition can constrain reuse and extend downtime.",
+      "mitigation": "Verify entitlements/access and obtain contractor/leasing estimates; stress 0/12/24-month downtime without assigning probabilities.",
+      "source": "S20",
+      "extra_sources": [
+        "S43"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R05",
+      "type": "BAU",
+      "name": "NNN leakage",
+      "mechanism": "Roof/structure, parking, capital replacements, insurance gaps or environmental duties may remain with the landlord.",
+      "mitigation": "Read every lease clause and property-condition report; reserve for non-recoverable costs.",
+      "source": "S21",
+      "extra_sources": [],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R06",
+      "type": "BAU",
+      "name": "Cap-rate and financing shock",
+      "mechanism": "Higher required yields reduce value; buyer debt terms can change independently of property NOI.",
+      "mitigation": "Stress entry/exit caps and financing separately; keep liquidity for carry and avoid forced-sale timing.",
+      "source": "S22",
+      "extra_sources": [
+        "S21"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R07",
+      "type": "BAU",
+      "name": "Inflation above fixed escalators",
+      "mechanism": "Fixed bumps may lag operating costs and market rents; CPI is not automatically the lease escalator.",
+      "mitigation": "Compare contract escalator with cost exposure; negotiate resets only if economics justify it.",
+      "source": "S02",
+      "extra_sources": [
+        "S20"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R08",
+      "type": "BAU",
+      "name": "Labor and food-cost pressure",
+      "mechanism": "Higher wages and volatile food/energy costs can compress operator margins and rent coverage even if brand sales hold.",
+      "mitigation": "Review store-level coverage, pricing power and franchisee liquidity; do not infer from system AUV.",
+      "source": "S14",
+      "extra_sources": [
+        "S02",
+        "S16"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R09",
+      "type": "BAU",
+      "name": "Concentration and liquidity",
+      "mechanism": "A single building, tenant and location cannot be diversified or sold instantly without transaction costs.",
+      "mitigation": "Set owner-level liquidity reserve and concentration limit; compare with genuinely executable alternatives.",
+      "source": "S21",
+      "extra_sources": [
+        "S28"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R10",
+      "type": "BAU",
+      "name": "Tax and exchange execution",
+      "mechanism": "ULA boundary, recapture, NIIT, debt relief and missed 1031 deadlines can materially reduce net proceeds.",
+      "mitigation": "Model jurisdiction-specific taxes and use qualified tax/exchange professionals before signing.",
+      "source": "S24",
+      "extra_sources": [
+        "S26",
+        "S27",
+        "S29"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R11",
+      "type": "BAU",
+      "name": "Environmental liability",
+      "mechanism": "Prior fuel/restaurant uses or nearby cleanup sites can create investigation, remediation and financing friction.",
+      "mitigation": "Phase I ESA, GeoTracker review and insurance/indemnity analysis; indemnity is only as strong as the obligor.",
+      "source": "S42",
+      "extra_sources": [
+        "S21"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R12",
+      "type": "BAU",
+      "name": "Construction and access disruption",
+      "mechanism": "Nearby transit/street work can temporarily alter visibility, parking and customer access; long-run transit benefits are site-specific.",
+      "mitigation": "Check current project notices and actual frontage/access before underwriting a location premium.",
+      "source": "S36",
+      "extra_sources": [],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R13",
+      "type": "BAU",
+      "name": "Public-realm and demand shifts",
+      "mechanism": "Crime, homelessness, office attendance, tourism and household budgets can affect a specific block differently from city averages.",
+      "mitigation": "Use current official neighborhood data and site visits; leave unavailable current counts blank.",
+      "source": "S46",
+      "extra_sources": [
+        "S39",
+        "S01"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R14",
+      "type": "BAU",
+      "name": "Insurance cost and availability",
+      "mechanism": "Premiums, deductibles, exclusions and FAIR Plan-related surcharges can change NOI and financeability.",
+      "mitigation": "Bindable quotes, replacement-cost review, ordinance/law and business-interruption limits; stress non-recoverable premiums.",
+      "source": "S33",
+      "extra_sources": [],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R15",
+      "type": "Rare / severe",
+      "name": "Earthquake and lifeline outage",
+      "mechanism": "Shaking, liquefaction, fault rupture or utility interruption can damage the building and stop sales even without total loss.",
+      "mitigation": "Site-specific seismic review, retrofit options, earthquake coverage and liquidity; do not convert regional odds into parcel loss.",
+      "source": "S30",
+      "extra_sources": [
+        "S41",
+        "S48"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R16",
+      "type": "Rare / severe",
+      "name": "Wind-driven wildfire / ember event",
+      "mechanism": "The 2025 fires show severe losses can occur beyond intuitive forest-edge locations; smoke and evacuation also interrupt business.",
+      "mitigation": "Parcel fire/ember review, hardening, insurance and continuity plan; no parcel probability assigned.",
+      "source": "S32",
+      "extra_sources": [
+        "S33"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R17",
+      "type": "Rare / severe",
+      "name": "Extreme atmospheric-river flooding",
+      "mechanism": "ARkStorm illustrates correlated property damage, business interruption and weeks-to-months lifeline restoration.",
+      "mitigation": "Flood mapping, drainage/elevation review, flood and BI coverage, emergency liquidity; scenario is not an annual forecast.",
+      "source": "S31",
+      "extra_sources": [
+        "S40"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R18",
+      "type": "Rare / severe",
+      "name": "Franchisee or supply-chain failure",
+      "mechanism": "Operator bankruptcy, payment deferrals, food-safety event or distributor failure can interrupt rent and brand demand.",
+      "mitigation": "Tenant financial surveillance, guaranty review, guarantor diversification and lease-remedy analysis.",
+      "source": "S16",
+      "extra_sources": [
+        "S20"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R19",
+      "type": "Rare / severe",
+      "name": "Debt/capital-market freeze",
+      "mechanism": "Refinancing may be unavailable or expensive at the owner or tenant level precisely when sale bids are weak.",
+      "mitigation": "Stagger maturities, avoid near-term forced sales, maintain reserves and test covenant/headroom scenarios.",
+      "source": "S22",
+      "extra_sources": [
+        "S16"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    },
+    {
+      "id": "R20",
+      "type": "Rare / severe",
+      "name": "Correlated regional shock",
+      "mechanism": "Trade disruption, entertainment contraction, disaster and fiscal stress can hit demand, costs and exit liquidity together.",
+      "mitigation": "Use combined downside scenarios rather than treating every risk as independent; preserve optionality.",
+      "source": "S03",
+      "extra_sources": [
+        "S37",
+        "S32",
+        "S45"
+      ],
+      "status": "analysis",
+      "probability": "",
+      "severity": "Not quantified",
+      "note": "Analyst risk pathway; no parcel-specific probability or loss estimate."
+    }
+  ]
+}
