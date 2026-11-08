@@ -231,6 +231,17 @@
       "status": "open"
     },
     {
+      "id": "F21",
+      "severity": "Low",
+      "area": "Historical privacy pattern",
+      "finding": "Historical education note contains a public institutional mailing-address pattern, not a personal or subject-property identifier.",
+      "evidence": "research/04-education.md line 11; current-session pages have zero identifier-pattern hits.",
+      "action": "Preserve historical file; keep current product anonymized and scan current pages separately.",
+      "source": "S09",
+      "extra_sources": [],
+      "status": "open"
+    },
+    {
       "id": "F20",
       "severity": "High",
       "area": "Privacy",
