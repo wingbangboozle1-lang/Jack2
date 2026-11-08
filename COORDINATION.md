@@ -601,3 +601,28 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
+---
+
+# Session `bc31f630` (`arena/bc31f630-jack2`) — 2026-11-08 — IN PROGRESS
+
+**Claimed:** 2026-11-08 (UTC). Baseline `859ed0b` (merge of PR #20). Sessions A–H are all `done` / `needs review`.
+Detected parallel branch `arena/343c7030-jack2` claiming `session-343c7030/**` on 2026-11-08; keeping strictly
+disjoint directory scope `session-bc31f630/**` so zero files collide or get overwritten.
+
+**Platform constraint (same as A–H).** Arena pins this session to `arena/bc31f630-jack2` and forbids creating or
+pushing any other branch, so scope isolation is enforced at the directory level (`session-bc31f630/**`) plus
+append-only updates to `COORDINATION.md` and an additive workspace entry at integration time.
+
+## Task board — Session `bc31f630` claims
+
+| # | Task | Status | Owner | Files / Scope |
+|---|---|---|---|---|
+| `bc31f630-T1` | Read board, full repo & privacy audit (line-by-line review of `main` & Sessions A–H; flag irregularities) | `in progress` | `session-bc31f630` | `COORDINATION.md` (append-only), `session-bc31f630/data/audit_irregularities.json` |
+| `bc31f630-T2` | Live official-source verification as of 2026-11-08 (Census, BLS, CA EDD, CA DOF, BEA, CDE, SEC EDGAR, Treasury/FRED, IRS/FTB, City of LA, CAL FIRE, USGS, CDI, FEMA, SCAG) | `in progress` | `session-bc31f630` | `session-bc31f630/data/sources.json`, `session-bc31f630/data/metrics.json` |
+| `bc31f630-T3` | Quantitative area & wealth projection system (2026–2040 deterministic Bear/Base/Bull + seeded Monte Carlo across 6 strategies + sensitivity/breakevens) | `in progress` | `session-bc31f630` | `session-bc31f630/scripts/model.py`, `session-bc31f630/data/model_output.json` |
+| `bc31f630-T4` | Risk register (BAU + Black Swan), Executive Summary & multi-page clean dashboard + private client-side scenario calculator | `in progress` | `session-bc31f630` | `session-bc31f630/EXECUTIVE_SUMMARY.md`, `session-bc31f630/*.html`, `session-bc31f630/assets/*`, `session-bc31f630/scripts/build_site.py` |
+| `bc31f630-T5` | Automated line-by-line verifier (every row source-linked, unverified cells blank, zero PII, zero broken links), additive integration, PR → `main`, merge, & live Pages verification | `in progress` | `session-bc31f630` | `session-bc31f630/scripts/verify.py`, `tools/build_site.py` (additive workspace row), `README.md`, `COORDINATION.md` |
+
+**Non-overlap rule:** Zero files belonging to Sessions A–H or `session-343c7030/**` are touched, except append-only entries in `COORDINATION.md` and `README.md`, and one additive row in `tools/build_site.py` (`build_workspaces()`) at integration time. If `main` advances while working, merge `origin/main` non-destructively without discarding any session's work.
+
+
