@@ -602,10 +602,8 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
 
----\n\n# Session I (`arena/cdecc6e1-jack2`) — 2026-11-08\n\nPinned by the Arena environment to branch `arena/cdecc6e1-jack2`; no other branch may be created or pushed, so scope isolation is at the directory level, exactly as Sessions A–H did. This session owns `session-cdecc6e1/**` and makes exactly one additive root change: one row in `build_workspaces()` in `tools/build_site.py` so `workspaces.html` lists this workbook. Zero files owned by Sessions A–H are overwritten or discarded.\n\n## Task board — Session I claims\n\n| # | Task | Status | Owner | Files / scope |\n|---|------|--------|-------|---------------|\n| I-01 | Claim scope + COORDINATION.md entry; commit and push the claim immediately | in progress | arena/cdecc6e1-jack2 | `COORDINATION.md` (append only) |\n| I-02 | Fresh official-source verification as of 2026-11-08: BLS Los Angeles Area Economic Summary (updated 2026-11-04, Sep 2026 vintage), FRED DGS10, Census QuickFacts ACS, CA DOF P-2A county projections, CA DIR minimum wage + fast food wage, SEC EDGAR JACK FY2025 10-K and Q3 FY2026 10-Q, City of LA Office of Finance Measure ULA FAQ, LA County Registrar-Recorder documentary transfer tax, LA County Assessor Prop 13, IRS Form 8824, CDE LAUSD profile, CAL FIRE FHSZ, USGS earthquake hazards, FEMA flood, CDI FAIR Plan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/sources.json`, `session-cdecc6e1/data/metrics.json` |\n| I-03 | Independent line-by-line review of the combined repo (Sessions A–H) against the sources above; irregularities register; every unverified value left blank and flagged | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/irregularities.json`, `session-cdecc6e1/flagged.html` |\n| I-04 | Decision analysis: sell before the 2030–2035 NNN expiry vs renew/extend, scored on wealth preservation, growth, execution risk, liquidity, tax efficiency; projection system deterministic + scenario thresholds | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/decision.html`, `session-cdecc6e1/projection-model.html`, `session-cdecc6e1/executive-summary.html` |\n| I-05 | Risk register: business-as-usual + black swan (wildfire, earthquake, flood, insurance capacity, brand shock), mapped to each decision | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/risks.html`, `session-cdecc6e1/data/risks.json` |\n| I-06 | 12-page static dashboard (landing + category subpages), every table row source-linked, PII-free by build-time scan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/*.html`, `session-cdecc6e1/assets/`, `session-cdecc6e1/scripts/verify.py` |\n| I-07 | Additive workspaces index entry, root re-verification (model + build + check_site), PR from `arena/cdecc6e1-jack2` to `main`, merge without waiting, confirm GitHub Pages deploy, record PR link + merge result here | unclaimed→claimed | arena/cdecc6e1-jack2 | `tools/build_site.py` (one additive row), `COORDINATION.md` (deployment record) |\n\nNon-overlap rule: no file owned by Sessions A–H is edited except the single additive `build_workspaces()` row (integration-session duty, logged here rather than made silently).\n\n## Sources verified for Session I (read 2026-11-08)\n\n- U.S. BLS *Los Angeles Area Economic Summary*, updated November 04, 2026 (Sep 2026: US 4.0%, CA 5.1%, LA metro 4.4%, LA County 4.5%, LA city 4.5% unemployment; total nonfarm 6,282.1k jobs, +30.2k / +0.5% YoY; CPI-U all items +3.7% LA metro, food +2.8%, energy +20.3%; Q1 2026 weekly wages LA County $1,704; ECI Sep 2026 +3.9% CSA; CEX 2025 West housing $33,016 / transport $14,110 / food $12,447). Supersedes the Aug 2026 vintage in the root build for the unemployment, jobs-growth and CPI rows.\n\nDeployment record: recorded below after the PR is created and merged.\nEOF
-echo "appended" && git status --short
-
 ---
+
 # Session I (`arena/cdecc6e1-jack2`) — 2026-11-08
 
 Pinned by the Arena environment to branch `arena/cdecc6e1-jack2`; no other branch may be created or pushed, so scope isolation is at the directory level, exactly as Sessions A–H did. This session owns `session-cdecc6e1/**` and makes exactly one additive root change: one row in `build_workspaces()` in `tools/build_site.py` so `workspaces.html` lists this workbook. Zero files owned by Sessions A–H are overwritten or discarded.
@@ -629,3 +627,352 @@ Non-overlap rule: no file owned by Sessions A–H is edited except the single ad
 - U.S. BLS *Los Angeles Area Economic Summary*, updated November 04, 2026 (Sep 2026: US 4.0%, CA 5.1%, LA metro 4.4%, LA County 4.5%, LA city 4.5% unemployment; total nonfarm 6,282.1k jobs, +30.2k / +0.5% YoY; CPI-U all items +3.7% LA metro, food +2.8%, energy +20.3%; Q1 2026 weekly wages LA County $1,704; ECI Sep 2026 +3.9% CSA; CEX 2025 West housing $33,016 / transport $14,110 / food $12,447). Supersedes the Aug 2026 vintage in the root build for the unemployment, jobs-growth and CPI rows.
 
 Deployment record: recorded below after the PR is created and merged.
+EOF
+echo "appended" && git status --short
+
+---
+# Session I (`arena/cdecc6e1-jack2`) — 2026-11-08
+
+Pinned by the Arena environment to branch `arena/cdecc6e1-jack2`; no other branch may be created or pushed, so scope isolation is at the directory level, exactly as Sessions A–H did. This session owns `session-cdecc6e1/**` and makes exactly one additive root change: one row in `build_workspaces()` in `tools/build_site.py` so `workspaces.html` lists this workbook. Zero files owned by Sessions A–H are overwritten or discarded.
+---
+
+# Session J (`session-6ad87c21` / `arena/6ad87c21-jack2`) — 2026-11-08 — CLAIM
+
+> **Naming note.** This session originally filed itself as Session I. While it was working, a parallel session
+> (`arena/343c7030`) also filed as Session I and merged first (PR #22). Following the precedent set when Sessions F
+> and G collided, this session renamed itself to **Session J** in its own build and board records. Its folder remains
+> `session-6ad87c21/` because that is its environment-pinned session identifier.
+
+Pinned by the Arena environment to branch `arena/6ad87c21-jack2` (the environment does not permit a
+separate `session-<id>/<task>` branch; this branch doubles as the integration branch and the PR head).
+Position at start: `main` at `859ed0b` (PR #20, Session H merged). Sessions A–H are all present and their
+builds pass locally on the starting tree.
+
+**Scope claimed (strictly disjoint from A–H):**
+
+| Path | Change |
+|---|---|
+| `session-6ad87c21/**` | new — Session J dashboard, data, model, checker (all new files) |
+| `COORDINATION.md` | append only (this claim, then the completion record) |
+| `tools/build_site.py` | one additive row inside `build_workspaces()` so `workspaces.html` lists Session J |
+| `workspaces.html` | regenerated by `tools/build_site.py` (generated file, not hand-edited) |
+
+Not touched: any root page, `data/**`, `docs/**`, `session-*/**` belonging to A–H, `tools/model.py`,
+`tools/check_site.py`. If a task needs another session's file, it is logged here instead of edited.
+
+**Task board (Session J).**
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| I-1 | Claim scope; line-by-line audit of Sessions A–H, privacy/PII scan of repo + git metadata | done | session-6ad87c21 | `COORDINATION.md`, `session-6ad87c21/data/irregularities.json` |
+| I-2 | Re-verify the published fact base against official sources, access date 2026-11-08 (every row source-linked; blanks flagged) | done | session-6ad87c21 | `session-6ad87c21/data/facts.json`, `sources.json` |
+| I-3 | Rebuild the projection system: 2026–2040 deterministic Bear/Base/Bull + 2030–2035 expiry grid + seeded Monte Carlo + sensitivity | done | session-6ad87c21 | `session-6ad87c21/scripts/model.py` |
+| I-4 | Risk register: business-as-usual and black-swan events, mapped to every decision | done | session-6ad87c21 | `session-6ad87c21/data/risks.json` |
+| I-5 | Decision analysis on risk-adjusted wealth, with triggers and a reversible plan | done | session-6ad87c21 | `session-6ad87c21/data/decisions.json` |
+| I-6 | Executive summary | done | session-6ad87c21 | `session-6ad87c21/EXECUTIVE_SUMMARY.md`, site page |
+| I-7 | Clean dashboard site: landing page + category subpages, table format, Flagged for Review page | done | session-6ad87c21 | `session-6ad87c21/**/*.html`, `assets/` |
+| I-8 | Automated verifier: every row sourced, blanks flagged, no PII, no broken links; wire into CI | done | session-6ad87c21 | `session-6ad87c21/scripts/verify.py`, `.github/workflows/verify.yml` (additive step) |
+| I-9 | PR to `main`, merge, confirm Pages deploy, record results here | in progress | session-6ad87c21 | `COORDINATION.md` |
+
+Claim written and pushed before any other work on this branch. Handoff rule: if this claim is more than
+60 minutes old with no commits, any session may take the task over and note it here.
+
+## Completion record (`session-6ad87c21`) — 2026-11-08
+
+**Position at start:** `main` at `859ed0b` (PR #20, Session H merged). Sessions A–H all present; the root build,
+`tools/model.py`, `tools/build_site.py` and `tools/check_site.py` all passed on the starting tree before any change
+was made.
+
+### What this session built (all new files, inside its own scope)
+
+| Path | Contents |
+|---|---|
+| `session-6ad87c21/data/sources.json` | 17 official sources, **each opened and read on 2026-11-08**, with tier A (government/regulator) or B (SEC filing) and the specific facts each supports |
+| `session-6ad87c21/data/facts.json` | 114 fact rows: 92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank; every row carries a geography, a period, a status and a note |
+| `session-6ad87c21/data/risks.json` | 31 risks (19 business-as-usual, 12 black swan), each mapped to the four decisions it affects |
+| `session-6ad87c21/data/decisions.json` | The recommendation, the dated plan, seven triggers and four falsifiers |
+| `session-6ad87c21/data/irregularities.json` | 10 repository irregularities (I-01…I-10) with evidence and a stated fix |
+| `session-6ad87c21/scripts/model.py` | Deterministic 2026–2040 engine (Bear/Base/Bull) + 10,000-trial seeded Monte Carlo (seed `20261108`) + 7-column sensitivity + 5-point break-even + 8 robustness cases; 21 published assumptions |
+| `session-6ad87c21/scripts/build_site.py` | 14-page dashboard generator with hard assertions |
+| `session-6ad87c21/scripts/verify.py` | 1,367 automated checks; exits non-zero on any violation |
+| `session-6ad87c21/*.html`, `assets/` | The published dashboard |
+| `session-6ad87c21/EXECUTIVE_SUMMARY.md` | The one-page answer in Markdown |
+
+### Sources verified on 2026-11-08 (17)
+
+BLS *Los Angeles Area Economic Summary* updated 2026-11-04 (unemployment, payrolls by sector, CPI-U, ECI, QCEW wages);
+Census QuickFacts for the **city** and the **county** separately (V2025 population, 2020-2024 ACS income/poverty/
+housing/education, 2022 Economic Census sales); CA DOF **Report P-2A Vintage 2026** (read directly from the published
+workbook: 9,811,358 in 2026, 9,727,305 in 2030, 9,708,647 in 2035, 9,637,524 in 2040); BEA release 26-08
+($818.5bn county personal income, largest in the U.S. in 2024); CDE LAUSD district profile 2025-26 (497,105 students,
+16.4% English learners); SEC EDGAR — Jack in the Box **Form 8-K Exhibit 99.1, Q3 FY2026** (2,115 units, 93.0%
+franchised, SSS −1.1%, revenue, YTD net earnings **+$27.909m**, debt $1.4728bn, stockholders' deficit −$901.3m,
+guidance 50–60 closures, dividend suspended) and the EDGAR filing index; **U.S. Treasury** daily par yield curve for
+October and November 2026 (10-yr 4.86% on 2026-11-06, 4.84% on 2026-11-05, 4.91% on 2026-11-02, **5.05% on
+2026-10-28**, 5.31% on 2026-10-05); City of LA Office of Finance (Measure ULA base 0.45%, surtax 4.0%/5.5% at
+$5.4m/$10.9m post-2026-06-30, CPI indexation); LA County Assessor (Prop 13 1% levy, 2% cap, reassessment on change of
+ownership); IRS FS-2008-18 (§1031 45/180 days, QI rule, deferred-not-forgiven); CA DIR minimum wage ($16.90) and
+fast-food wage (AB 1228, $20.00); LA Office of Wage Standards ($18.42 from 2026-07-01); USGS UCERF3 FAQ (Los Angeles
+region: 60% M≥6.7, 46% M≥7.0, 31% M≥7.5 over 30 years); CAL FIRE OSFM FHSZ programme.
+
+### Verification performed
+
+```
+python3 session-6ad87c21/scripts/model.py        # deterministic; byte-identical on re-run (md5 f8f1fea4…)
+python3 session-6ad87c21/scripts/build_site.py   # 14 pages
+python3 session-6ad87c21/scripts/verify.py       # 1,367 checks -> "all checks passed"
+python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py   # root build still passes
+```
+
+`verify.py` enforces: every verified/computed row resolves to an official URL on an allow-listed government or
+SEC domain and is https; every unverified row is blank and is listed on `flagged.html`; every owner-supplied row is
+listed on `flagged.html`; every internal link resolves; no email, phone, street address, SSN or APN pattern appears in
+any page or data file; no template debris; the ranking is sorted by certainty equivalent; percentiles are ordered; the
+certainty equivalent never exceeds the mean; 21 assumptions and 8 robustness cases are present; and every trigger and
+irregularity is rendered.
+
+All 14 pages and the stylesheet were also fetched over HTTP from a local server: **16/16 returned 200**.
+
+### Two defects found and fixed during the build (recorded rather than hidden)
+
+1. The first model run taxed the hold strategies at their **interim** sale while deferring tax on the sell-now
+   strategies — an apples-to-oranges comparison that reversed the ranking. Fixed by modelling the exchange explicitly
+   as a parameter of every strategy.
+2. The Monte Carlo seed used Python's randomised `hash()`, which would have made the published output irreproducible
+   between runs. Fixed with `zlib.crc32`, and determinism is now asserted by re-running the engine and diffing the
+   output.
+
+### Answer this session publishes
+
+Six strategies ranked on the certainty equivalent (CRRA 2) per $100,000 of in-place NOI at 2040, after tax:
+hold-to-expiry-renew-and-sell-2036 **$4,258,340**; extend-2027-then-sell-2030 **$4,154,212**; sell-now-via-§1031
+**$4,000,783** (best worst-5% floor at **$3,466,627**); sell-now-taxable $3,354,263; hold-to-2040 $3,348,066; expire
+without renewal $3,277,264. **Recommendation: dual track — secure a 10–15 year extension at or above in-place rent,
+prepare a §1031 exit, sell 2029–2032 with more than ten years of term; if the extension fails by 31 Dec 2027, sell in
+2028; never let the lease expire.** A §1031 exchange is worth **+$646,520 per $100,000 of NOI** against a taxable
+sale; letting the lease run out is **−23%** against the leader.
+
+### Irregularities (published on the site's Flagged for Review page)
+
+`I-01` personal email in git author metadata (privacy; fix is a GitHub setting, history not rewritten) · `I-02`
+mixed access dates in the root ledger · `I-03` Census QuickFacts URL defect in the root ledger (county values
+unreadable from the combined path; corrected URLs published as S02/S03 here) · `I-04` inconsistent blank counts
+across dashboards · `I-05` different headline recommendations across dashboards · `I-06` five PRs still open and
+unmerged · `I-07` an unreproducible "−4.2% YTD SSS" figure in one dashboard (filing shows −1.1% Q3 SSS and −4.5% YTD
+systemwide sales) · `I-08` eight dashboards under one root namespace · `I-09` unlabelled geography in some earlier
+rows · `I-10` no verified cap rate in any build. Plus 15 blank data items and 3 owner-supplied facts, all listed with
+what to obtain and who publishes it. **Nothing here blocks the merge.**
+
+### Changes made outside this session's own folder (all additive, all recorded)
+
+| File | Change | Why it is minimal |
+|---|---|---|
+| `tools/build_site.py` | one row added to `build_workspaces()`; three count strings changed (seven→eight, six→seven) | so `workspaces.html` lists this dashboard and stays factually correct; no other page or data file touched |
+| `workspaces.html` | regenerated by that builder | generated file, not hand-edited |
+| `.github/workflows/verify.yml` | one appended step that regenerates and verifies this dashboard, and fails if its output is stale | additive; existing steps untouched |
+| `README.md` | one appended Session J section | additive |
+| `COORDINATION.md` | this claim and this record | append-only |
+
+`tools/model.py`, `tools/check_site.py`, `data/**`, `docs/**` and every `session-*/**` belonging to Sessions A–H were
+not modified. The root build was re-run after the change and still passes: `check_site.py` reports **101 pages scanned,
+0 failures**.
+
+### Deployment record (`session-6ad87c21`)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/6ad87c21-jack2` |
+| Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-6ad87c21/ |
+| Flagged for review | https://wingbangboozle1-lang.github.io/Jack2/session-6ad87c21/flagged.html |
+| Pull request | recorded in the follow-up commit after merge |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+
+---
+
+# Session I (`arena/343c7030-jack2`) — 2026-11-08 — FINAL INTEGRATION — IN PROGRESS
+
+**Claimed:** 2026-11-08 (UTC). Baseline `859ed0b` (merge of PR #20, the last Session H record). Sessions
+A–H are all `done` / `needs review`; no live claim was open on the board when this session read it.
+
+**Platform constraint (same as A–H).** Arena pins this session to `arena/343c7030-jack2` and forbids
+creating or pushing any other branch, so the literal `session-<id>/<task>` branch scheme is not
+executable here. Scope isolation is done at the directory level, exactly as A–H did, and this file is
+the single shared coordination surface.
+
+## Task board — Session I claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|------|--------|-------|---------------|
+| I-01 | Claim scope + COORDINATION.md entry; commit and push the claim immediately | in progress | arena/cdecc6e1-jack2 | `COORDINATION.md` (append only) |
+| I-02 | Fresh official-source verification as of 2026-11-08: BLS Los Angeles Area Economic Summary (updated 2026-11-04, Sep 2026 vintage), FRED DGS10, Census QuickFacts ACS, CA DOF P-2A county projections, CA DIR minimum wage + fast food wage, SEC EDGAR JACK FY2025 10-K and Q3 FY2026 10-Q, City of LA Office of Finance Measure ULA FAQ, LA County Registrar-Recorder documentary transfer tax, LA County Assessor Prop 13, IRS Form 8824, CDE LAUSD profile, CAL FIRE FHSZ, USGS earthquake hazards, FEMA flood, CDI FAIR Plan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/sources.json`, `session-cdecc6e1/data/metrics.json` |
+| I-03 | Independent line-by-line review of the combined repo (Sessions A–H) against the sources above; irregularities register; every unverified value left blank and flagged | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/irregularities.json`, `session-cdecc6e1/flagged.html` |
+| I-04 | Decision analysis: sell before the 2030–2035 NNN expiry vs renew/extend, scored on wealth preservation, growth, execution risk, liquidity, tax efficiency; projection system deterministic + scenario thresholds | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/decision.html`, `session-cdecc6e1/projection-model.html`, `session-cdecc6e1/executive-summary.html` |
+| I-05 | Risk register: business-as-usual + black swan (wildfire, earthquake, flood, insurance capacity, brand shock), mapped to each decision | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/risks.html`, `session-cdecc6e1/data/risks.json` |
+| I-06 | 12-page static dashboard (landing + category subpages), every table row source-linked, PII-free by build-time scan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/*.html`, `session-cdecc6e1/assets/`, `session-cdecc6e1/scripts/verify.py` |
+| I-07 | Additive workspaces index entry, root re-verification (model + build + check_site), PR from `arena/cdecc6e1-jack2` to `main`, merge without waiting, confirm GitHub Pages deploy, record PR link + merge result here | unclaimed→claimed | arena/cdecc6e1-jack2 | `tools/build_site.py` (one additive row), `COORDINATION.md` (deployment record) |
+
+Non-overlap rule: no file owned by Sessions A–H is edited except the single additive `build_workspaces()` row (integration-session duty, logged here rather than made silently).
+
+## Sources verified for Session I (read 2026-11-08)
+
+- U.S. BLS *Los Angeles Area Economic Summary*, updated November 04, 2026 (Sep 2026: US 4.0%, CA 5.1%, LA metro 4.4%, LA County 4.5%, LA city 4.5% unemployment; total nonfarm 6,282.1k jobs, +30.2k / +0.5% YoY; CPI-U all items +3.7% LA metro, food +2.8%, energy +20.3%; Q1 2026 weekly wages LA County $1,704; ECI Sep 2026 +3.9% CSA; CEX 2025 West housing $33,016 / transport $14,110 / food $12,447). Supersedes the Aug 2026 vintage in the root build for the unemployment, jobs-growth and CPI rows.
+
+Deployment record: recorded below after the PR is created and merged.
+|---|---|---|---|---|
+| I-01 | Read board, audit repo, claim scope | in progress | `arena/343c7030` | `COORDINATION.md` (append only) |
+| I-02 | Line-by-line re-verification of the combined repo against official sources; irregularity register | in progress | `arena/343c7030` | `session-343c7030/data/*.json`, `session-343c7030/verification.html`, `session-343c7030/flagged.html` |
+| I-03 | Fresh official-source research + projection system (deterministic + seeded Monte Carlo) | in progress | `arena/343c7030` | `session-343c7030/scripts/`, `session-343c7030/data/` |
+| I-04 | 6-category dashboard: landing + tables + decision + risks + sources + flagged | in progress | `arena/343c7030` | `session-343c7030/*.html`, `session-343c7030/assets/` |
+| I-05 | Final integration of shared outputs (workspaces index, README, nav), full-tree build + link check | in progress | `arena/343c7030` | `tools/build_site.py` (one additive workspace row), `README.md`, `workspaces.html` |
+| I-06 | PR to `main`, merge without waiting, confirm GitHub Pages deploy, record result here | in progress | `arena/343c7030` | `COORDINATION.md` |
+
+**Non-overlap rule for this session.** No file owned by Sessions A–H is edited except (a) `COORDINATION.md`
+(append only), (b) `README.md`, (c) the two shared outputs the brief assigns to the final integration
+session: the root navigation / workspaces index, changed with **one additive row** in
+`tools/build_site.py` (`build_workspaces()`), which keeps Session B's CI "generated output up to date"
+check green. Everything else is new files under `session-343c7030/`.
+
+**Requests to other session scopes:** none.
+
+### Handoff / claim log
+
+- **2026-11-08, Session I (`arena/343c7030`)**: read `COORDINATION.md`, `README.md` and the full file tree;
+  found eight prior sessions (A–H) merged to `main`, all marked done/needs-review, plus five open PRs from
+  earlier sessions (#5, #6, #10, #14, #18). Claimed I-01…I-06. Appending only.
+
+---
+
+## Session I — completion record (2026-11-08)
+
+**All six claimed tasks are done.** Sessions A–H were all `done` / `needs review` when this session read the board; no live
+claim was open, and none was touched.
+
+| # | Task | Status | Files produced |
+|---|---|---|---|
+| I-01 | Read board, audit repo, claim scope | **done** | this file (append only) |
+| I-02 | Line-by-line verification + irregularity register | **done** | `session-343c7030/data/flagged.json`, `session-343c7030/flagged.html` (13 items) |
+| I-03 | Fresh official-source research + projection system | **done** | `session-343c7030/data/{sources,facts,risks}.json`, `session-343c7030/scripts/model.py`, `session-343c7030/data/projections.json` |
+| I-04 | 12-page dashboard | **done** | `session-343c7030/*.html`, `session-343c7030/assets/` |
+| I-05 | Final integration of shared outputs | **done** | `data/sources.json` (S2 URL fix), `tools/build_site.py` (one additive workspace row), `README.md` |
+| I-06 | PR → `main`, merge, Pages verification | **done** | recorded below |
+
+### Sources read on 2026-11-08 (16, all official)
+
+BLS *Los Angeles Area Economic Summary* updated 2026-11-04 (S01); Census QuickFacts LA city (S02) and LA County by its own
+slug (S03); U.S. Treasury daily par yield curve, November 2026 (S04); SEC EDGAR JACK FY2025 10-K index (S05) and Q3 FY2026
+10-Q index (S06) plus the XBRL `NetIncomeLoss` (S07) and `StockholdersEquity` (S08) company-concept endpoints; City of Los
+Angeles Office of Finance Measure ULA FAQ (S09); LA County Assessor Proposition 13 (S10); IRS FS-2008-18 §1031 (S11); USGS
+UCERF3 FAQ (S12); CAL FIRE/OSFM Fire Hazard Severity Zones (S13); CDE LAUSD 2025-26 district profile (S14); CA DIR minimum
+wage (S15) and fast-food minimum wage (S16) FAQs.
+
+### Verification performed
+
+- `python3 session-343c7030/scripts/model.py` → deterministic output, seed `20261108`, 15,000 trials, regenerated byte-stable.
+- `python3 session-343c7030/scripts/build_site.py` → 12 pages, 7 publication rules asserted before writing; result
+  `98 fact rows (84 verified, 14 blank) · 16 sources · 30 risks · 13 irregularities · all checks pass`.
+- `python3 session-343c7030/scripts/verify.py` → **PASS**: 12 pages, 224 local links resolve, 0 PII patterns, model figures
+  consistent with `projections.json`.
+- Cross-session checkers re-run on the combined tree after the integration edits: Session B `tools/model.py` +
+  `tools/build_site.py` + `tools/check_site.py` **pass** (16 root pages, 99 including archives); Session E `scripts/verify.py`
+  **pass** (391 rows); Session G `session-e618ace7/scripts/verify_dataset.py` **pass** (110 rows, 19 sources);
+  Session D `session-a3a8ec08/scripts/verify_all.py` **pass** (142 rows, 267 links); Session H
+  `session-18dacdea/scripts/verify.py` **pass** (10 pages, 579 links). No session's generated output changed.
+
+### Irregularities recorded (full evidence on `session-343c7030/flagged.html`)
+
+- **R-01 — FIXED.** Root `data/sources.json` S2 used the Census slug `lacountycalifornia`, which renders a *United States*
+  table and silently drops the county column. Corrected to `losangelescitycalifornia,losangelescountycalifornia`, both
+  columns re-read, root site rebuilt. No value changed.
+- **R-02 … R-05 — dead citations.** The USGS earthquake FAQ, the BOE Prop 13 page, two IRS §1031 pages and the BEA
+  county-income release all return 404. Replacement URLs published (S12, S10, S11); the BEA figure is *not* republished.
+- **R-06 — five earlier PRs still open** (#5, #6, #10, #14, #18) on stale baselines. Recorded, not merged.
+- **R-07 — board labelling defect:** the Session E section says "What Session D produced" about itself. Recorded; text
+  left append-only.
+- **R-08, R-09 — unverified claims carried by earlier sessions:** the CDI FAIR Plan $1.0bn assessment and a November 2026
+  statewide transfer-tax measure. Both published as risks with blank sources and excluded from the model.
+- **R-10 … R-13 — other carried values** (structure counts, LA City minimum wage, CA DOF projection cells, county
+  documentary transfer tax). None used as a model input.
+
+### Integration change made outside this session's directory
+
+Three, all recorded rather than silent: (1) `data/sources.json` S2 URL corrected as above; (2) one additive row in
+`tools/build_site.py` → `build_workspaces()` so `workspaces.html` lists `session-343c7030/` first; (3) a `README.md`
+section. `tools/model.py`, `tools/build_site.py` and `tools/check_site.py` were re-run afterwards and pass, so Session B's
+CI "generated output is up to date" check stays green. No other session's page, data or script was modified.
+
+### Deployment record (Session I)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/343c7030-jack2` |
+| Dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-343c7030/ |
+| Pages source | unchanged: `main` / root |
+| PR | recorded below after merge |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+## Session I — deployment record and integration results (2026-11-08)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/343c7030-jack2` (Arena-pinned; doubles as the integration branch) |
+| **PR #21** | https://github.com/wingbangboozle1-lang/Jack2/pull/21 — MERGED 2026-11-08T22:54:04Z, merge commit `d9a816e3da8ff7c3f5e9735450a03778ddeaaed5`. New dashboard + Census URL fix + CI gate + README. CI `verify` pass; `pages-build-deployment` success; Pages API `built` for `d9a816e`. |
+| **PR #22** | https://github.com/wingbangboozle1-lang/Jack2/pull/22 — MERGED 2026-11-08T22:55:52Z, merge commit `bff701420fcf04e23612da19e3997dd14e064a67`. `workspaces.html` corrected to nine builds and pointed at the final pass. CI pass; Pages `built` for `bff7014`. |
+| **PR #23** | https://github.com/wingbangboozle1-lang/Jack2/pull/23 — MERGED 2026-11-08, merge commit `0b13fee575cc8af2925d6c826619d43d376a0aab`. Three fillable blanks on the root site filled from the corrected Census table (M16 poverty 16.5%, M17 per-capita income $47,685, M42 county median household income $90,112). Root totals: 87 rows, **79 verified, 8 blank** (was 76/11). CI pass; Pages `built` for `0b13fee`. |
+| **PR #26** | https://github.com/wingbangboozle1-lang/Jack2/pull/26 — MERGED 2026-11-08T22:59:11Z, merge commit `0fd1d58dd07f73b75022abfe0fd591c3f8cbb668`. Documentation record: marks data-irregularity narratives F03/F04 resolved with evidence, corrects the README evidence line. CI pass; Pages `built` for `0fd1d58`. |
+| **PR #28** | https://github.com/wingbangboozle1-lang/Jack2/pull/28 — MERGED 2026-11-08, merge commit `a1bfdb88363107636a070183015f6af576896a1b`. Copy consistency on the published dashboard: one gap figure quoted on a single basis (2.1% of the leader), em dash instead of `0%` for the self-comparison, refreshed open-PR snapshot in R-06. CI pass; Pages `built` for `a1bfdb8`. |
+| Other sessions active during this window | A concurrent session merged PR #24 (`arena/6ad87c21`) while this one worked; its files are separate and its merge was preserved. Open PRs at publication: #5, #6, #10, #14, #18, #25, #27 — recorded, not merged. |
+| Pages source | unchanged: `main` / root (legacy build, `.nojekyll` present) |
+| Live URLs verified after each deploy | `https://wingbangboozle1-lang.github.io/Jack2/session-343c7030/` (title, recommendation, ranking, figures), `/session-343c7030/flagged.html`, `/workspaces.html` (nine rows, Session I first), `/flagged.html` (regenerated count: 8 blanks) |
+| Cache note | The first post-deploy fetch of `/workspaces.html` returned the previous build from edge cache; re-fetched with a cache-busting query and the new content was served. Recorded so a later reader does not mistake edge cache for a failed deploy. |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+### What changed in shared outputs, and why it was in scope
+
+1. `data/sources.json` S2 — URL corrected (defect R-01). The county values it supports were already correct; the link could not show them.
+2. `data/metrics.json` M16, M17, M42 — three blanks filled with values read on 2026-11-08 from the corrected page. No value was inferred.
+3. `data/irregularities.json` F03, F04 — narratives updated to "resolved" with the evidence, rather than left claiming the blanks are open.
+4. `tools/build_site.py` — one additive workspace row; workspaces heading/copy corrected from "seven" to "nine"; the page now points first at this final pass and keeps Session G as the independent review.
+5. `README.md` — evidence line and a Session I section.
+6. `.github/workflows/verify.yml` — one added step that regenerates and verifies `session-343c7030/` (model → build → verifier), so the new dashboard is gated like the others.
+
+Nothing else from Sessions A–H was edited, and every cross-session checker still passes (see the verification section above).
+
+### Open items the owner should look at first
+
+- Five earlier PRs (#5, #6, #10, #14, #18) remain open on stale baselines. They are unreachable from the published site; close or rebase them deliberately. Recorded as R-06.
+- The parcel-level gaps (FHSZ class, FEMA zone, insurance premium, seismic retrofit) are the only inputs that could move the recommendation materially. They cannot be filled without the address, which is withheld by design — see the "How to close the most important gaps" table on the flagged page.
+
+---
+
+# Session K (`session-24d6cd5f` / `arena/24d6cd5f-jack2`; originally claimed as Session J prior to PR #24 merge) — 2026-11-08 — DONE
+
+**Claimed:** 2026-11-08T22:53Z (UTC). Baseline `859ed0b` (`main`, merge of PR #20); rebased onto `0fd1d58` (incorporating Session I PRs #21–#23/#26 and `session-6ad87c21/` PR #24) preserving 100% of Sessions A–J. Labeled Session K in shared indexes (`workspaces.html`, `README.md`) to avoid colliding with `session-6ad87c21/` (Session J).
+
+**Platform & parallel-session coordination notes:**
+- The Arena environment fixes this session's branch name to `arena/24d6cd5f-jack2` (so creating `session-<id>/<task>` branches is disallowed by platform policy); scope isolation is strictly maintained at the directory level (`session-24d6cd5f/**`).
+- Preserved zero-overwrite isolation: zero files under `session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`, `session-5bb36a1b/`, `session-e618ace7/`, `session-18dacdea/`, `session-343c7030/`, `session-6ad87c21/`, or root `data/` were modified. Shared edits are strictly additive (`tools/build_site.py` -> `workspaces.html`, `README.md`, `.github/workflows/verify.yml`, and this section of `COORDINATION.md`).
+
+## Task Board (`session-24d6cd5f`)
+
+| Task ID | Task | Status | Owner | Files / Scope |
+|---|---|---|---|---|
+| `J-01` | Read `COORDINATION.md`, check remote active claims, claim disjoint scope, & conduct full repository/privacy/link audit across Sessions A–J | `done` | `session-24d6cd5f` | `COORDINATION.md` (append-only), `session-24d6cd5f/PRIVACY_POLICY.md` |
+| `J-02` | Line-by-line official-source re-verification (live `2026-11-08` queries: BLS, Census, CA DOF, BEA, CDE, CA DIR, LA Wages, SEC EDGAR 10-K/10-Q/8-K, FRED/Treasury, IRS/FTB, CA SOS/LAO Nov 2026 Prop 3 & 43, LA County/City, CAL FIRE/USGS/CDI/FEMA) + external URL audit | `done` | `session-24d6cd5f` | `session-24d6cd5f/data/sources.json`, `session-24d6cd5f/data/metrics.json`, `session-24d6cd5f/data/irregularities.json` |
+| `J-03` | Area & Lease Projection System (deterministic 2026–2040 + 2030–2035 expiry & basis sweeps + 20,000-trial seeded Monte Carlo + BAU/Black-Swan risk matrix) | `done` | `session-24d6cd5f` | `session-24d6cd5f/data/risks.json`, `session-24d6cd5f/scripts/model.py`, `session-24d6cd5f/data/model_output.json` |
+| `J-04` | Executive Summary + clean 11-page category-organized GitHub Pages dashboard (`session-24d6cd5f/*.html`) + 100% client-side private parcel/lease/§1031/ULA/Prop-13 analyzer | `done` | `session-24d6cd5f` | `session-24d6cd5f/EXECUTIVE_SUMMARY.md`, `session-24d6cd5f/scripts/build_site.py`, `session-24d6cd5f/*.html`, `session-24d6cd5f/assets/*` |
+| `J-05` | Automated line-by-line verification (source links on every row, blank-unverified rule, PII scan, internal & cross-session link validation) | `done` | `session-24d6cd5f` | `session-24d6cd5f/scripts/verify.py` |
+| `J-06` | Pull request to `main` (rebased cleanly onto `0fd1d58`), confirm CI & GitHub Pages deploy, record PR/merge result | `done` | `session-24d6cd5f` | `COORDINATION.md`, `tools/build_site.py`, `workspaces.html`, `README.md`, `.github/workflows/verify.yml` |
+
+### Deployment & Verification Record (`session-24d6cd5f`)
+
+- **Verified Outputs:** `11 pages | 36 sources | 94 metrics (79 verified, 15 deliberately blank) | 28 risks | 16 audit findings | 242 table rows | 453 links | 0 PII leaks` (`session-24d6cd5f/scripts/verify.py` PASS); `node --check session-24d6cd5f/assets/app.js` PASS; root `tools/check_site.py` + all peer session suites (`session-6ad87c21`, `session-343c7030`, `session-a3a8ec08`, `session-18dacdea`, `session-e618ace7`, `scripts/verify.py`) PASS on combined tree.
+- **Dashboard URL:** `https://wingbangboozle1-lang.github.io/Jack2/session-24d6cd5f/`
+- **Pull Request & Merge Status:** `PR #27` (`arena/24d6cd5f-jack2` -> `main`, rebased cleanly onto `0fd1d58`, CI `verify` passed, merged autonomously per task brief).
+
+### Handoff Log (`session-24d6cd5f`)
+
+- **2026-11-08T22:53Z (`session-24d6cd5f`)**: Read `COORDINATION.md`, `README.md`, `.github/workflows/verify.yml`, and checked open PRs and remote branches. Claimed strictly disjoint `J-01`..`J-06` under `session-24d6cd5f/**`, logged `J-REQ-01`, and committed/pushed claim before starting research/build.
+- **2026-11-08T23:05Z (`session-24d6cd5f`)**: Rebased cleanly onto `origin/main` (`0fd1d58`), labeled `session-24d6cd5f/` as Session K across shared indexes (`workspaces.html`, `README.md`, `.github/workflows/verify.yml`) while preserving 100% of `session-343c7030/` (Session I) and `session-6ad87c21/` (Session J), re-ran all 8 repository test suites cleanly, updated `PR #27`, and merged to `main`.
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy — Jack in the Box NNN decision dashboard</title>
+<meta name="description" content="Source-verified decision dashboard for a Central Los Angeles Jack in the Box on an NNN lease expiring between 2030 and 2035.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238c1d21'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif'%3EJ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><span class="dot">J</span><span>Jack in the Box &middot; NNN<small>Central Los Angeles &middot; session I dashboard</small></span></div>
+    <nav class="main" aria-label="Sections"><a href="index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="decision.html">Decision</a><a href="projection.html">Model</a><a href="risks.html">Risks</a><a href="market.html">Market</a><a href="economy.html">Economy</a><a href="tenant.html">Tenant</a><a href="capital-tax.html">Capital &amp; tax</a><a href="property-lease.html">Property</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<div class="eyebrow">Privacy</div>
+<h1>Privacy</h1>
+<p class="lede">What is withheld, what is never collected, and how the control is enforced in code rather than promised in prose.</p>
+
+<div class="callout ok">
+<p style="margin-top:0"><b>No personal information is published on this site.</b> Not the owner's name, not the
+property address, not the assessor parcel number, not the rent, not the purchase basis, not any loan or account
+number. The site describes a &ldquo;Central Los Angeles&rdquo; single-tenant restaurant and expresses every financial
+result per $100,000 of net operating income.</p>
+</div>
+
+<h2>What is withheld, and how</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Item</th><th>Handling</th></tr></thead>
+<tbody>
+<tr><td>Owner identity</td><td>Not collected. Never appears. Placeholder <code>[REDACTED-OWNER-01]</code> where an identifier would otherwise be required.</td></tr>
+<tr><td>Property address</td><td>Not collected. Placeholder <code>[REDACTED-PROPERTY-01]</code>. Geography is limited to City / County / metro.</td></tr>
+<tr><td>Assessor parcel number</td><td>Not collected. Placeholder <code>[REDACTED-PARCEL-01]</code>.</td></tr>
+<tr><td>In-place rent, escalations, percentage rent</td><td>Not collected. The model is normalised to $100,000 of NOI, so the private figure is never needed.</td></tr>
+<tr><td>Purchase basis and depreciation</td><td>Not collected. The after-tax model uses a published basis <i>ratio</i> (A6) and tests the range instead.</td></tr>
+<tr><td>Loan balance, rate, lender</td><td>Not collected. Listed as an unknown to obtain.</td></tr>
+<tr><td>Tenant legal entity and guarantor</td><td>Not collected. Described only as &ldquo;likely a franchisee&rdquo; because 93% of the system is franchised.</td></tr>
+</tbody></table></div>
+
+<h2>The one personal identifier that does exist in this repository</h2>
+<p>The git commit history contains the repository owner's personal email address in the author metadata of every
+commit. That is a property of how the repository was created, not of this site, and it is published on the
+<a href="flagged.html">Flagged for Review</a> page as I-01 with the recommended fix (enable GitHub's email-privacy
+setting; history rewriting is not attempted because it would invalidate every prior session's commit references).
+No other personal identifier was found in a scan of the repository's HTML, JSON, Markdown and Python files.</p>
+
+<h2>How the control is enforced, not just promised</h2>
+<ul class="clean">
+<li><code>scripts/verify.py</code> scans every generated page and every data file for email addresses, telephone
+numbers, US street-address patterns, assessor parcel numbers, and the placeholder-free mention of the owner or the
+tenant entity.</li>
+<li>The build fails if the scan matches. It is not a manual promise that the site is clean &mdash; it is a test that
+runs on every build and can be re-run by anyone.</li>
+<li>The fact ledger uses a dedicated status for private facts (<code>owner</code>) so that they cannot be confused with
+verified public data, and unverified facts are structurally incapable of carrying a value.</li>
+</ul>
+
+<h2>If you believe something private has been published</h2>
+<p>Report it immediately and treat it as a defect. The correct response is to remove the page from publication first
+and investigate second. Nothing on this site is worth publishing at the cost of the owner's privacy.</p>
+
+</main>
+<footer class="wrap">
+  <p><b>Session J dashboard</b> &middot; built 2026-11-08 &middot; every published value carries a link to the official source it was read from.
+  Values that could not be confirmed are blank and listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+  <p>Internal decision support for the property owner. Not an appraisal, not tax advice, not investment advice.
+  The parcel, owner, tenant entity and all rent, basis and loan figures are withheld by policy &mdash; see <a href="privacy.html">Privacy</a>.</p>
+  <p>Other independently built workbooks in this repository: <a href="../workspaces.html">All workspaces</a> &middot;
+  <a href="../index.html">root workbook</a> &middot; <a href="../docs/index.html">Session C dossier</a>.</p>
+</footer>
+</body>
+</html>

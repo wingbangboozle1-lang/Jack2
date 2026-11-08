@@ -998,6 +998,27 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-24d6cd5f/</code>",
+         "Session K (branch <code>arena/24d6cd5f-jack2</code>) &mdash; 2026-11-08 independent re-verification: "
+         "36 official Tier A/B sources live-verified (incl. Nov 6 Treasury par curve, Sep 2026 BLS/EDD/CPI, BEA 2024 GDP, "
+         "Prop 3 passing 60.3% Yes locking 13.30% CA top tax rate past 2030, Measure ULA intact), 94 metrics "
+         "(79 verified, 15 blank), 28 risks, 16 repository audit findings, 20,000-trial seeded Monte Carlo (seed 20261108) "
+         "and client-side &sect;1031 / ULA / Prop 13 simulator",
+         "11 pages",
+         "<a href='session-24d6cd5f/index.html'>open &#8599;</a>"],
+        ["<code>session-6ad87c21/</code>",
+         "Session J &mdash; 2026-11-08 independent re-verification: 17 official sources re-read on the access date, "
+         "114 fact rows (92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank), 31-risk BAU and "
+         "black-swan register, six strategies scored on a seeded 10,000-trial certainty equivalent, and a "
+         "line-by-line audit of this repository",
+         "14 pages",
+         "<a href='session-6ad87c21/index.html'>open &#8599;</a>"],
+        ["<code>session-343c7030/</code>",
+         "Session I &mdash; final integration: 98 fact rows (84 verified against 16 official sources read 2026-11-08, "
+         "14 deliberately blank), 30 risks, 15 documented assumptions, 15,000-trial Monte Carlo (seed 20261108) and a "
+         "13-item repository review. Fixes the Census URL defect carried by the root build.",
+         "12 pages",
+         "<a href='session-343c7030/index.html'>open &#8599;</a>"],
         ["<code>session-18dacdea/</code>",
          "Session H &mdash; 2026-11-07 live BLS (Nov 4) &amp; FRED (Nov 5, 4.84% DGS10) update, 76 metrics across "
          "26 official sources (resolving LAUSD 86.2% ACGR &amp; $18.42/hr LA City minimum wage), 26 risks, "
@@ -1044,24 +1065,40 @@ def build_workspaces():
     ]
     body = f"""
 {head_block("All workspaces",
-            "Eight independent workbooks, one repository",
+            "Twelve independent workbooks, one repository",
             "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
 
 <div class="callout warn">
-<p><strong>Where to start.</strong> If you want one answer and the audit trail behind it, open
-<a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G). It re-verified this
+<p><strong>Newest 2026-11-08 36-source pass.</strong> Open
+<a href="session-24d6cd5f/index.html"><strong>session-24d6cd5f</strong></a> (Session K): 94 metrics across
+36 official sources verified live on 2026-11-08 (79 verified, 15 blank, including Nov 6 Treasury yields, Sep 2026
+BLS/EDD payrolls &amp; CPI, Prop 3 passing 60.3% Yes locking California&rsquo;s 13.30% top tax rate past 2030,
+and Measure ULA intact), 28 BAU/black-swan risks, 16 cross-session audit findings, a 20,000-trial seeded Monte Carlo
+model (seed <code>20261108</code>), and a browser-local &sect;1031 / Measure ULA / Prop 13 calculator.</p>
+<p><strong>Where to start.</strong> Open
+<a href="session-343c7030/index.html"><strong>session-343c7030</strong></a> (Session I), the final integration pass dated
+2026-11-08: 98 fact rows against 16 official sources read that day with 14 values deliberately left blank, five
+strategies scored on certainty-equivalent after-tax wealth, a 30-risk register and 13 repository findings &mdash;
+including the source-ledger defect in this root site, which that session fixed.</p>
+<p><strong>For a second, independently built 2026-11-08 pass</strong> that reaches the same structural conclusion from
+a different model, open <a href="session-6ad87c21/index.html"><strong>session-6ad87c21</strong></a> (Session J): 114
+fact rows against 17 official sources, 31 risks including twelve black swans, six strategies on a seeded
+certainty-equivalent ranking, and a 1,367-check verifier that fails the build on an unsourced row or a stray personal
+detail.</p>
+<p><strong>Then read the independent review.</strong>
+<a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G) re-verified this
 repository line by line on 2026-11-07, publishes 110 fact rows against 19 official sources with 14 values
 deliberately left blank, scores six exit and hold strategies on risk-adjusted after-tax wealth, and lists every
-irregularity it found &mdash; including one in this root site's own source ledger.</p>
+irregularity it found.</p>
 <p class="muted">If you want the original deterministic model with its decision triggers, this root site remains
-the reference build. The six others are preserved because deleting another session's work is never the right
+the reference build. The eleven others are preserved because deleting another session's work is never the right
 resolution to a conflict.</p>
 </div>
 
 <h2>The workbooks</h2>
 {table(["Folder", "What it is", "Size", "Open"], rows)}
 
-<h2>Why there are seven</h2>
+<h2>Why there are twelve</h2>
 <p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
 each other. In practice each session started from a nearly empty repository, built a complete workbook, and
 discovered the others only when pushing. Every time, the resolution was the same: preserve what already exists,
