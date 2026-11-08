@@ -1029,7 +1029,14 @@ def build_workspaces():
          "Session A &mdash; the original build, archived verbatim with its own stylesheet and scripts",
          "10 pages",
          "<a href='session-1944e5a3/index.html'>open &#8599;</a>"],
-        ["This root site",
+        ["<code>session-cdecc6e1/</code>",
+         "Session I &mdash; 2026-11-08 full re-verification: BLS Sep 2026 (4.4% metro unemployment, 6,282.1k jobs), "
+         "DGS10 4.84% (Nov 5) and Fed funds upper limit 4.00% (Nov 8), Census city income/poverty confirmed, "
+         "CA DOF P-2A county projections, Measure ULA + Prop 13 transaction stack, SEC Q3 FY2026 10-Q index; "
+         "91 metrics across 22 official sources, 24 risks, 4 scored strategies, deterministic projection model, "
+         "14-page subsite with Flagged for Review page",
+         "14 pages",
+         "<a href='session-cdecc6e1/index.html'>open &#8599;</a>"], ["This root site",
          "Session B &mdash; the deterministic model, 23 sources, 87 metric rows and the decision triggers currently "
          "served at the site root",
          "15 pages",
@@ -1037,7 +1044,7 @@ def build_workspaces():
     ]
     body = f"""
 {head_block("All workspaces",
-            "Seven independent workbooks, one repository",
+            "Eight independent workbooks, one repository",
             "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
 
 <div class="callout warn">
