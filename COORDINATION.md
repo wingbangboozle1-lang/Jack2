@@ -601,3 +601,29 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 | Flagged for Review URL | https://wingbangboozle1-lang.github.io/Jack2/session-18dacdea/flagged.html |
 | Merge Policy | Merged to `main` without waiting for approval per task brief; flagged items published on `flagged.html` |
 
+
+---
+
+# Session I (`session-54e86ab3` / `arena/54e86ab3-jack2`) — 2026-11-08
+
+Pinned by the Arena environment to branch `arena/54e86ab3-jack2`. This session acts as the **final
+integration pass**: all build tasks (1–15) are recorded done by Sessions A–H, but five pull requests from
+completed, stale (>60 min old) session branches were never merged to `main`, and the brief requires the
+final integration session to merge the branches, re-verify, and publish. Scope: merge/verify the unmerged
+session PRs, keep all existing session work intact, re-run every check, publish to Pages, record results.
+
+## Task board (`session-54e86ab3`)
+
+| Task ID | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| `54e86ab3-T1` | Claim scope; baseline re-verification of current `main` (model → build → check → CI) | in progress | `session-54e86ab3` | `COORDINATION.md` (append-only) |
+| `54e86ab3-T2` | Integrate PR #14 (`arena/b4ec6128-jack2` — Session E deployment record, 1 file) | unclaimed | `session-54e86ab3` | `COORDINATION.md` |
+| `54e86ab3-T3` | Integrate PR #5 (`arena/ffe3bdfd-jack2` — "PARCEL-01" workbook under `analysis/`) | unclaimed | `session-54e86ab3` | `analysis/**`, additive `README.md` / `COORDINATION.md` hunks |
+| `54e86ab3-T4` | Integrate PR #10 (`arena/50002478-jack2` — source-linked dashboard under `session-50002478/`) | unclaimed | `session-54e86ab3` | `session-50002478/**`, additive shared-file hunks |
+| `54e86ab3-T5` | Integrate PR #18 (`arena/643e4aab-jack2` — Source-verified workbook under `session-643e4aab/`, conflicts DIRTY) | unclaimed | `session-54e86ab3` | `session-643e4aab/**`, additive shared-file hunks |
+| `54e86ab3-T6` | PR #6 (`arena/8149683c-jack2`) — CI **failing**; modifies generated root `index.html`/`archive.html`. Investigate; do **not** merge a broken site; publish as needs-review either way | unclaimed | `session-54e86ab3` | none (read-only unless fixable in-branch) |
+| `54e86ab3-T7` | Re-verify combined tree line by line (model/build/check/PII/links), regenerate workspace index, final PR to `main`, merge, confirm Pages deploy, record | unclaimed | `session-54e86ab3` | `tools/build_site.py` (additive NAV/workspace rows only), `README.md`, `COORDINATION.md` |
+
+Rules this session follows: no session's files deleted or rewritten; conflicts resolved additively; a red
+check blocks merge; flagged items publish on the relevant flagged page and never block; this branch only,
+push only to `arena/54e86ab3-jack2`.
