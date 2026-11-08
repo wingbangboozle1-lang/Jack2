@@ -1081,3 +1081,15 @@ Requested but **not** made, per the board's rule: `README.md` (Session B) does n
 `workspaces.html` links it, so it is discoverable; the README edit is left for whoever owns that file. No page, dataset or script owned by Sessions A–H was edited,
 overwritten or discarded. The two long-open PRs (#14 Session E, #18 Session F) were **not** closed or merged by
 this session.
+
+## Deployment record (Session J / PR #25)
+
+| Item | Value |
+|---|---|
+| PR | **#25** — https://github.com/wingbangboozle1-lang/Jack2/pull/25 |
+| Merge commit | `f1c2062520df476712f81106151222c4f5db2838`, merged 2026-11-08T23:04:09Z |
+| CI (verify) | Run `42533267427` → **success** (7s) |
+| Pages build & deploy | Run `42533328901` → build **success** (23s), deploy **success** |
+| Pages API status | `built` (`build_type: legacy`, source `main` / `/`, HTTPS enforced) |
+| Live URL | https://wingbangboozle1-lang.github.io/Jack2/ |
+| Verification | `tools/check_site.py` → 16 root pages + archives = **134 total pages**, 24 sources, **89 metric rows (82 verified, 7 blank/flagged)**, 24 risks, 0 broken links, 0 PII leaks. All eight cross-session verifiers pass. |
