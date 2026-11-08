@@ -50,3 +50,15 @@ jobs:
           python3 session-a3a8ec08/scripts/projection_engine.py
           python3 session-a3a8ec08/scripts/build_site.py
           python3 session-a3a8ec08/scripts/verify_all.py
+
+      - name: Regenerate and verify the Session I dashboard
+        run: |
+          python3 session-6ad87c21/scripts/model.py
+          python3 session-6ad87c21/scripts/build_site.py
+          python3 session-6ad87c21/scripts/verify.py
+          if [ -n "$(git status --porcelain -- session-6ad87c21/)" ]; then
+            echo "Session I generated output is out of date."
+            git status --porcelain -- session-6ad87c21/
+            git diff --stat -- session-6ad87c21/
+            exit 1
+          fi

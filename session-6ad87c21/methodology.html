@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method and limitations — Jack in the Box NNN decision dashboard</title>
+<meta name="description" content="Source-verified decision dashboard for a Central Los Angeles Jack in the Box on an NNN lease expiring between 2030 and 2035.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238c1d21'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif'%3EJ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><span class="dot">J</span><span>Jack in the Box &middot; NNN<small>Central Los Angeles &middot; session I dashboard</small></span></div>
+    <nav class="main" aria-label="Sections"><a href="index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="decision.html">Decision</a><a href="projection.html">Model</a><a href="risks.html">Risks</a><a href="market.html">Market</a><a href="economy.html">Economy</a><a href="tenant.html">Tenant</a><a href="capital-tax.html">Capital &amp; tax</a><a href="property-lease.html">Property</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html" aria-current="page">Method</a><a href="privacy.html">Privacy</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<div class="eyebrow">Method</div>
+<h1>Method and limitations</h1>
+<p class="lede">The verification rules, how the model was tested, two defects found and fixed during the build, and what would falsify the recommendation.</p>
+
+<h2>The rules this workbook follows</h2>
+<ol class="clean">
+<li><b>A value is published only if it was read from the official source on 2026-11-08 and that source is linked
+on the same row.</b> Not from memory, not from a summary, not from another dashboard in this repository.</li>
+<li><b>If no official value exists, the cell is blank.</b> Nothing is inferred, interpolated, annualised or copied from
+an aggregator. The row appears on the <a href="flagged.html">Flagged for Review</a> page with what to obtain.</li>
+<li><b>Computed values are labelled computed</b>, cite the official series they are computed from, and show the
+arithmetic in the note.</li>
+<li><b>Assumptions are labelled assumptions</b> and are never presented as observations. All 21 of them
+are published with the range tested.</li>
+<li><b>The build fails</b> if a verified row lacks a source, if an unverified row carries a value, if an internal link
+is broken, or if a possible personal identifier appears. See <code>scripts/verify.py</code>.</li>
+<li><b>Privacy overrides convenience.</b> If a fact cannot be published without identifying the owner, the parcel or
+the tenant entity, it is not published.</li>
+</ol>
+
+<h2>How the review was actually done</h2>
+<p>The session opened each official document, read the specific table or paragraph, and recorded the value with the
+document it came from. Where a retrieval returned something unexpected, that is recorded rather than smoothed over:
+for example, a Census QuickFacts request for the county returned <i>national</i> figures on one URL form, which is why
+the county rows here cite the separate county slug and why the county education rows are blank instead of filled from
+the national table.</p>
+
+<h2>How the model was built and tested</h2>
+<ul class="clean">
+<li>Six strategies, each carried to 2040 so the comparison is like-for-like.</li>
+<li>All figures normalised to $100,000 of in-place NOI, so the workbook never needs the private rent.</li>
+<li>A deterministic engine across Bear / Base / Bull, a 10,000-trial seeded Monte Carlo, a seven-column sensitivity
+grid, a five-point cap-rate break-even, and eight robustness stress cases.</li>
+<li>The ranking metric is the certainty equivalent at CRRA = 2, which penalises downside &mdash; not the mean, which
+rewards it.</li>
+<li>Two defects were found and fixed during the build and are recorded here rather than hidden: the hold strategies
+were initially taxed at their interim sale (inconsistent with the exchange strategies), and the Monte Carlo seed
+initially used Python's randomised <code>hash()</code>, which would have made the published output irreproducible.</li>
+</ul>
+
+<h2>What would falsify the recommendation</h2>
+<ul class="clean">
+<li>A verified cap rate materially different from the 6.00% base &mdash; for example a broker opinion of value implying
+5.25% or 7.25%.</li>
+<li>Lease terms that give the tenant a below-market fixed-price renewal option, which converts the option into a
+liability rather than an asset.</li>
+<li>A corporate guaranty or a letter of credit that removes the franchisee credit risk.</li>
+<li>Evidence of redevelopment value in the land that exceeds the net-lease value.</li>
+</ul>
+
+<h2>Reproduce everything</h2>
+<div class="card tight">
+<pre class="mono" style="margin:0;white-space:pre-wrap">python3 session-6ad87c21/scripts/model.py       # deterministic + 10,000-trial Monte Carlo
+python3 session-6ad87c21/scripts/build_site.py  # all 14 pages
+python3 session-6ad87c21/scripts/verify.py      # source, blank-value, link and PII checks</pre>
+</div>
+<p>Python 3.11, standard library only. No network access is needed to rebuild, and the model output is deterministic
+across runs.</p>
+
+<h2>Scope and limitations</h2>
+<p>This is internal decision support for one owner. It is not an appraisal, not tax advice, not investment advice and
+not legal advice. It does not value the parcel; it values a dollar of net operating income. The address, rent, basis,
+loan terms and lease itself were not supplied and are not guessed at. Before relying on any number here, obtain an
+appraisal or broker opinion of value, read the lease, and take tax advice from a CPA who has seen the basis
+schedule.</p>
+
+</main>
+<footer class="wrap">
+  <p><b>Session J dashboard</b> &middot; built 2026-11-08 &middot; every published value carries a link to the official source it was read from.
+  Values that could not be confirmed are blank and listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+  <p>Internal decision support for the property owner. Not an appraisal, not tax advice, not investment advice.
+  The parcel, owner, tenant entity and all rent, basis and loan figures are withheld by policy &mdash; see <a href="privacy.html">Privacy</a>.</p>
+  <p>Other independently built workbooks in this repository: <a href="../workspaces.html">All workspaces</a> &middot;
+  <a href="../index.html">root workbook</a> &middot; <a href="../docs/index.html">Session C dossier</a>.</p>
+</footer>
+</body>
+</html>

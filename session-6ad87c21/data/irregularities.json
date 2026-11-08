@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Session J repository irregularities register",
+    "access_date": "2026-11-08",
+    "method": "Line-by-line audit of all eight prior sessions' published files, the root data ledger, the git metadata, the CI configuration and the open pull requests. Every finding names the evidence checked and what was done about it. Nothing here is a criticism of another session's work: each is a normal consequence of parallel authorship and each has a stated fix.",
+    "status": "All items are non-blocking and are published on the Flagged for Review page, per the brief."
+  },
+  "items": [
+    {
+      "id": "I-01",
+      "class": "Privacy",
+      "finding": "The repository's git history contains the owner's personal email address in the commit author metadata of every commit.",
+      "resolution": "Public repositories expose author emails permanently. Recommended fix: enable GitHub's email-privacy setting and use the noreply address for future commits. History rewriting is not attempted here because it would invalidate every prior session's commit references.",
+      "evidence": "git log --format='%an <%ae>'",
+      "status": "open"
+    },
+    {
+      "id": "I-02",
+      "class": "Provenance",
+      "finding": "The root workbook's source ledger (data/sources.json) is dated 2026-11-06, while a later session re-verified values on 2026-11-07; the ledger itself was not re-dated.",
+      "resolution": "Two access dates now describe one dataset, so a reader cannot tell which values were re-checked. This dashboard publishes a single explicit access date for every row to avoid the ambiguity.",
+      "evidence": "data/sources.json",
+      "status": "open"
+    },
+    {
+      "id": "I-03",
+      "class": "Source URL",
+      "finding": "The root workbook cites a combined Census QuickFacts URL for city and county values. On 2026-11-08 that combined path returned the city column only in our retrieval; the county URL form with the abbreviated slug returned national figures instead of county figures.",
+      "resolution": "County values are readable only from the separate county slug (losangelescountycalifornia). The city values are unaffected. Corrected URLs are published here as S02 and S03, and the county education rows are left blank rather than filled from the national table.",
+      "evidence": "S02 / S03",
+      "status": "open"
+    },
+    {
+      "id": "I-04",
+      "class": "Data",
+      "finding": "The root workbook reports 11 blank or flagged rows; other session dashboards report 14, 25 and 11 blank rows for what is described as the same dataset.",
+      "resolution": "Blank counts differ because each session drew its own fact list. This is not an error in any one build, but a reader cannot compare 'verified' totals across dashboards. This dashboard publishes its own counts explicitly on the landing page.",
+      "evidence": "data/metrics.json",
+      "status": "open"
+    },
+    {
+      "id": "I-05",
+      "class": "Analysis",
+      "finding": "Published dashboards in this repository reach different headline recommendations: sell now, extend-then-sell, and hold-to-expiry all appear as the leading answer in different sessions.",
+      "resolution": "They optimise different objectives (expected value versus risk-adjusted value) over different assumptions. This dashboard publishes the full six-strategy ranking with both measures so the reader can see exactly why the ordering moves.",
+      "evidence": "COORDINATION.md",
+      "status": "open"
+    },
+    {
+      "id": "I-06",
+      "class": "Repository",
+      "finding": "Five pull requests from earlier sessions remain open and unmerged (PRs #18, #14, #10, #6, #5).",
+      "resolution": "Work exists on branches that is not on main and therefore not on the live site. It is not lost, but it is not published either. Merge or close them deliberately.",
+      "evidence": "gh pr list --state all",
+      "status": "open"
+    },
+    {
+      "id": "I-07",
+      "class": "Data",
+      "finding": "One session states a '-4.2% YTD same-store sales' figure for Jack in the Box. The filing read here shows Q3 FY2026 system same-store sales of -1.1% and year-to-date systemwide sales of -4.5%.",
+      "resolution": "The -4.2% figure could not be reproduced from the earnings release. It may refer to a different measure or period. This dashboard publishes only the figures it could read and does not repeat the unreproduced one.",
+      "evidence": "S07",
+      "status": "open"
+    },
+    {
+      "id": "I-08",
+      "class": "Repository",
+      "finding": "The site is served from the repository root alongside eight complete dashboards, one dossier under docs/, and a 51 KB coordination board.",
+      "resolution": "A reader landing on the root page sees one workbook without necessarily knowing the others exist. This session adds itself to workspaces.html rather than replacing anyone's build, and every dashboard's footer links back to that index.",
+      "evidence": "workspaces.html",
+      "status": "open"
+    },
+    {
+      "id": "I-09",
+      "class": "Verification",
+      "finding": "Some earlier dashboards publish state-level and county-level values that are within each other's margin of error without always saying which geography a row refers to.",
+      "resolution": "Every row on this site names its geography explicitly (City, County, LA metro, State or national) so a reader never has to guess.",
+      "evidence": "facts.json geography column",
+      "status": "open"
+    },
+    {
+      "id": "I-10",
+      "class": "Model",
+      "finding": "No dashboard in this repository, including this one, has a verified cap rate. All of them use an assumption.",
+      "resolution": "There is no official public cap-rate series. Every valuation on every dashboard is therefore conditional on an assumption. Obtain a broker opinion of value or an appraisal before relying on any level.",
+      "evidence": "F86",
+      "status": "open"
+    }
+  ]
+}

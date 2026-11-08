@@ -1,0 +1,1166 @@
+{
+  "meta": {
+    "generated_by": "session-6ad87c21/scripts/model.py",
+    "seed": 20261108,
+    "horizon": "2026-2040",
+    "normalisation": "All figures are per $100,000 of in-place annual NOI.",
+    "access_date": "2026-11-08",
+    "engine_version": "1.0"
+  },
+  "assumptions": [
+    {
+      "id": "A1",
+      "name": "Base-case net operating income growth",
+      "value": 0.02,
+      "range": "1.0% to 3.0% a year",
+      "note": "Stands in for the lease's contractual escalations. LA metro CPI-U is +3.7% and ECI +3.9% (S01), so 2.0% is deliberately conservative for a legacy NNN lease. Replace with the actual escalation clause."
+    },
+    {
+      "id": "A2",
+      "name": "Remaining lease term at the access date",
+      "value": 6,
+      "range": "4 to 9 years",
+      "note": "Derived from the owner-supplied 2030-2035 expiry window and a 2032 midpoint. The exact date is unknown (F108); the 2030 and 2035 endpoints are both tested in the sensitivity grid."
+    },
+    {
+      "id": "A3",
+      "name": "Base-case capitalisation rate for a 10-year-or-longer term",
+      "value": 0.06,
+      "range": "5.50% to 6.75%",
+      "note": "No official public cap-rate series exists (F86). The level is anchored to the 4.86% 10-year Treasury (S09) plus a property and credit spread, and must be replaced by a broker opinion of value or an appraisal."
+    },
+    {
+      "id": "A4",
+      "name": "Term premium: cap-rate widening per year of term below 10 years",
+      "value": 0.0025,
+      "range": "0.15% to 0.35% a year",
+      "note": "The market penalty for a lease that will roll soon. Capped at 1.50% in total."
+    },
+    {
+      "id": "A5",
+      "name": "Sale costs",
+      "value": 0.0481,
+      "range": "4.0% to 6.5%",
+      "note": "Broker 4.0% + City base transfer tax 0.45% (F90) + assumed County documentary transfer tax 0.11% (F97, unverified) + title/legal 0.25%. The 4.0%-5.5% Measure ULA surtax (F91, F92) is added automatically when the modelled price crosses the official threshold."
+    },
+    {
+      "id": "A6",
+      "name": "Adjusted cost basis as a share of 2026 value",
+      "value": 0.45,
+      "range": "0.25 to 0.75",
+      "note": "Private tax data (F113) are never collected. This ratio only sets the size of the tax bill in the after-tax comparison; the ranking is tested across the range."
+    },
+    {
+      "id": "A7",
+      "name": "Tax on appreciation (federal + California)",
+      "value": 0.371,
+      "range": "0.30 to 0.41",
+      "note": "20% federal long-term capital gain + 3.8% net investment income tax + 13.3% California top rate (F98, unverified). Replace with the owner's actual marginal position."
+    },
+    {
+      "id": "A8",
+      "name": "Tax on unrecaptured depreciation",
+      "value": 0.383,
+      "range": "0.25 to 0.41",
+      "note": "25% federal unrecaptured Section 1250 rate + 13.3% California. Applied to the share of gain treated as recapture."
+    },
+    {
+      "id": "A9",
+      "name": "Share of gain treated as depreciation recapture",
+      "value": 0.4,
+      "range": "0.20 to 0.60",
+      "note": "Depends on holding period and prior depreciation taken."
+    },
+    {
+      "id": "A10",
+      "name": "Discount rate for present values",
+      "value": 0.05,
+      "range": "4.5% to 6.0%",
+      "note": "Anchored to the 4.86% 10-year Treasury on 2026-11-06 (F81)."
+    },
+    {
+      "id": "A11",
+      "name": "Reinvestment cap rate after a sale (diversified NNN)",
+      "value": 0.065,
+      "range": "6.0% to 7.5%",
+      "note": "Where the proceeds go after a Section 1031 exchange. A diversified net-lease portfolio is assumed to trade wider than a single asset because it carries no single-tenant risk."
+    },
+    {
+      "id": "A12",
+      "name": "Reinvestment income growth",
+      "value": 0.02,
+      "range": "1.5% to 2.5%",
+      "note": "Contractual escalations in the replacement portfolio."
+    },
+    {
+      "id": "A13",
+      "name": "Probability the tenant renews at or above in-place rent",
+      "value": 0.65,
+      "range": "0.40 to 0.85",
+      "note": "Informed by the closure programme and negative same-store sales (F68, F76), which push it down, and by the scarcity of drive-thru sites, which pushes it up. It is a judgement, not an observation."
+    },
+    {
+      "id": "A14",
+      "name": "Rent reset on renewal",
+      "value": 0.0,
+      "range": "-15% to +10%",
+      "note": "The brand's stated policy is to renew at market. A zero reset is the neutral case."
+    },
+    {
+      "id": "A15",
+      "name": "Vacancy period if the tenant does not renew",
+      "value": 1.5,
+      "range": "0.75 to 3.0 years",
+      "note": "Drive-thru re-tenanting takes time; the site is desirable but the conditional-use permit is not automatic."
+    },
+    {
+      "id": "A16",
+      "name": "Re-leasing cost and capital",
+      "value": 0.05,
+      "range": "0.03 to 0.10",
+      "note": "Share of value spent on tenant improvements, leasing commissions and downtime make-ready."
+    },
+    {
+      "id": "A17",
+      "name": "Cap rate on a re-let asset with no credit tenant",
+      "value": 0.0675,
+      "range": "6.0% to 8.0%",
+      "note": "A local operator is weaker credit than a national brand."
+    },
+    {
+      "id": "A18",
+      "name": "Annual volatility of NOI growth",
+      "value": 0.015,
+      "range": "0.010 to 0.025",
+      "note": "Used only in the Monte Carlo."
+    },
+    {
+      "id": "A19",
+      "name": "Annual volatility of the cap rate",
+      "value": 0.0015,
+      "range": "0.0010 to 0.0025",
+      "note": "A 15 basis point annual standard deviation on the cap rate compounds to a wide band by 2040."
+    },
+    {
+      "id": "A20",
+      "name": "Black-swan impairment",
+      "value": 0.25,
+      "range": "0.15 to 0.40",
+      "note": "Value loss, applied in 4% of Monte Carlo trials, from a severe earthquake, an urban fire, a pandemic-style closure order or a forced sale. The 30-year M>=6.7 probability in the LA region is 60% (F99), so a 4% chance over 15 years is not a tail that can be ignored - it is a tail that is insured against, which is why it is modest here and discussed at length on the risk page."
+    },
+    {
+      "id": "A21",
+      "name": "Risk aversion (CRRA coefficient) for the certainty equivalent",
+      "value": 2.0,
+      "range": "1.0 to 3.0",
+      "note": "A coefficient of 2 means the owner would accept a materially lower certain amount instead of a risky gamble with the same average. This is the measure that ranks the strategies."
+    }
+  ],
+  "scenarios": {
+    "Bear": {
+      "growth": 0.01,
+      "base_cap": 0.0675,
+      "cap_drift": 0.0015,
+      "label": "Recession, cap-rate expansion, tenant weakness"
+    },
+    "Base": {
+      "growth": 0.02,
+      "base_cap": 0.06,
+      "cap_drift": 0.0,
+      "label": "Slow growth, flat cap rates, tenant performs"
+    },
+    "Bull": {
+      "growth": 0.03,
+      "base_cap": 0.055,
+      "cap_drift": -0.001,
+      "label": "Rate relief, strong trade area, early extension"
+    }
+  },
+  "expiry_used": 2032,
+  "strategies": {
+    "S1_sell_now_1031": {
+      "label": "Sell now through a Section 1031 exchange",
+      "deterministic": {
+        "Bear": {
+          "strategy": "S1_sell_now_1031",
+          "scenario": "Bear",
+          "sale_notes": [
+            "Sold at 1,290,323 on a 6-year remaining term. Costs 62,065, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,620,660."
+          ],
+          "cash": {
+            "2026": 1228258.06,
+            "2027": 79836.77,
+            "2028": 81433.51,
+            "2029": 83062.18,
+            "2030": 84723.42,
+            "2031": 86417.89,
+            "2032": 88146.25,
+            "2033": 89909.17,
+            "2034": 91707.36,
+            "2035": 93541.51,
+            "2036": 95412.34,
+            "2037": 97320.58,
+            "2038": 99266.99,
+            "2039": 101252.33,
+            "2040": 1255146.31
+          },
+          "terminal_after_tax": 3655434.68,
+          "npv": 2697744.72,
+          "value_now": 1290322.58
+        },
+        "Base": {
+          "strategy": "S1_sell_now_1031",
+          "scenario": "Base",
+          "sale_notes": [
+            "Sold at 1,428,571 on a 6-year remaining term. Costs 68,714, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,794,303."
+          ],
+          "cash": {
+            "2026": 1359857.14,
+            "2027": 88390.71,
+            "2028": 90158.53,
+            "2029": 91961.7,
+            "2030": 93800.93,
+            "2031": 95676.95,
+            "2032": 97590.49,
+            "2033": 99542.3,
+            "2034": 101533.15,
+            "2035": 103563.81,
+            "2036": 105635.09,
+            "2037": 107747.79,
+            "2038": 109902.74,
+            "2039": 112100.8,
+            "2040": 1389626.27
+          },
+          "terminal_after_tax": 4047088.4,
+          "npv": 2986788.79,
+          "value_now": 1428571.43
+        },
+        "Bull": {
+          "strategy": "S1_sell_now_1031",
+          "scenario": "Bull",
+          "sale_notes": [
+            "Sold at 1,538,462 on a 6-year remaining term. Costs 74,000, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,932,326."
+          ],
+          "cash": {
+            "2026": 1464461.54,
+            "2027": 95190.0,
+            "2028": 97093.8,
+            "2029": 99035.68,
+            "2030": 101016.39,
+            "2031": 103036.72,
+            "2032": 105097.45,
+            "2033": 107199.4,
+            "2034": 109343.39,
+            "2035": 111530.26,
+            "2036": 113760.86,
+            "2037": 116036.08,
+            "2038": 118356.8,
+            "2039": 120723.94,
+            "2040": 1496520.6
+          },
+          "terminal_after_tax": 4358402.89,
+          "npv": 3216541.78,
+          "value_now": 1538461.54
+        }
+      },
+      "monte_carlo": {
+        "trials": 10000,
+        "seed": 20261108,
+        "mean": 4036952.65,
+        "p05": 3466626.62,
+        "p50": 4033516.45,
+        "p95": 4643753.38,
+        "certainty_equivalent": 4000783.4,
+        "multiple_of_value_now": 2.83,
+        "value_now": 1428571.43
+      },
+      "sensitivity": [
+        {
+          "case": "Expiry 2030 (earliest)",
+          "terminal_after_tax": 3777282.51,
+          "npv": 2787669.54
+        },
+        {
+          "case": "Expiry 2032 (midpoint)",
+          "terminal_after_tax": 4047088.4,
+          "npv": 2986788.79
+        },
+        {
+          "case": "Expiry 2035 (latest)",
+          "terminal_after_tax": 4532739.01,
+          "npv": 3345203.45
+        },
+        {
+          "case": "Cap rate -50 bp",
+          "terminal_after_tax": 4358402.89,
+          "npv": 3216541.78
+        },
+        {
+          "case": "Cap rate +50 bp",
+          "terminal_after_tax": 3777282.51,
+          "npv": 2787669.54
+        },
+        {
+          "case": "NOI growth 1.0%",
+          "terminal_after_tax": 4047088.4,
+          "npv": 2986788.79
+        },
+        {
+          "case": "NOI growth 3.0%",
+          "terminal_after_tax": 4047088.4,
+          "npv": 2986788.79
+        }
+      ]
+    },
+    "S2_sell_now_taxable": {
+      "label": "Sell now and pay the tax",
+      "deterministic": {
+        "Bear": {
+          "strategy": "S2_sell_now_taxable",
+          "scenario": "Bear",
+          "sale_notes": [
+            "Sold at 1,290,323 on a 6-year remaining term. Costs 62,065, tax 266,697 (paid now).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,268,760."
+          ],
+          "cash": {
+            "2026": 961561.29,
+            "2027": 62501.48,
+            "2028": 63751.51,
+            "2029": 65026.54,
+            "2030": 66327.07,
+            "2031": 67653.62,
+            "2032": 69006.69,
+            "2033": 70386.82,
+            "2034": 71794.56,
+            "2035": 73230.45,
+            "2036": 74695.06,
+            "2037": 76188.96,
+            "2038": 77712.74,
+            "2039": 79266.99,
+            "2040": 1173139.53
+          },
+          "terminal_after_tax": 3052243.33,
+          "npv": 2208201.97,
+          "value_now": 1290322.58
+        },
+        "Base": {
+          "strategy": "S2_sell_now_taxable",
+          "scenario": "Base",
+          "sale_notes": [
+            "Sold at 1,428,571 on a 6-year remaining term. Costs 68,714, tax 295,271 (paid now).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,404,698."
+          ],
+          "cash": {
+            "2026": 1064585.71,
+            "2027": 69198.07,
+            "2028": 70582.03,
+            "2029": 71993.67,
+            "2030": 73433.55,
+            "2031": 74902.22,
+            "2032": 76400.26,
+            "2033": 77928.27,
+            "2034": 79486.83,
+            "2035": 81076.57,
+            "2036": 82698.1,
+            "2037": 84352.06,
+            "2038": 86039.1,
+            "2039": 87759.89,
+            "2040": 1298833.05
+          },
+          "terminal_after_tax": 3379269.4,
+          "npv": 2444795.04,
+          "value_now": 1428571.43
+        },
+        "Bull": {
+          "strategy": "S2_sell_now_taxable",
+          "scenario": "Bull",
+          "sale_notes": [
+            "Sold at 1,538,462 on a 6-year remaining term. Costs 74,000, tax 317,985 (paid now).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,512,752."
+          ],
+          "cash": {
+            "2026": 1146476.92,
+            "2027": 74521.0,
+            "2028": 76011.42,
+            "2029": 77531.65,
+            "2030": 79082.28,
+            "2031": 80663.93,
+            "2032": 82277.21,
+            "2033": 83922.75,
+            "2034": 85601.2,
+            "2035": 87313.23,
+            "2036": 89059.49,
+            "2037": 90840.68,
+            "2038": 92657.5,
+            "2039": 94510.65,
+            "2040": 1398743.29
+          },
+          "terminal_after_tax": 3639213.2,
+          "npv": 2632856.19,
+          "value_now": 1538461.54
+        }
+      },
+      "monte_carlo": {
+        "trials": 10000,
+        "seed": 20261108,
+        "mean": 3381728.85,
+        "p05": 2912206.31,
+        "p50": 3374353.43,
+        "p95": 3887201.6,
+        "certainty_equivalent": 3354263.3,
+        "multiple_of_value_now": 2.37,
+        "value_now": 1428571.43
+      },
+      "sensitivity": [
+        {
+          "case": "Expiry 2030 (earliest)",
+          "terminal_after_tax": 3153984.77,
+          "npv": 2281808.7
+        },
+        {
+          "case": "Expiry 2032 (midpoint)",
+          "terminal_after_tax": 3379269.4,
+          "npv": 2444795.04
+        },
+        {
+          "case": "Expiry 2035 (latest)",
+          "terminal_after_tax": 3784781.72,
+          "npv": 2738170.44
+        },
+        {
+          "case": "Cap rate -50 bp",
+          "terminal_after_tax": 3639213.2,
+          "npv": 2632856.19
+        },
+        {
+          "case": "Cap rate +50 bp",
+          "terminal_after_tax": 3153984.77,
+          "npv": 2281808.7
+        },
+        {
+          "case": "NOI growth 1.0%",
+          "terminal_after_tax": 3379269.4,
+          "npv": 2444795.04
+        },
+        {
+          "case": "NOI growth 3.0%",
+          "terminal_after_tax": 3379269.4,
+          "npv": 2444795.04
+        }
+      ]
+    },
+    "S3_hold_to_expiry_renew_then_sell": {
+      "label": "Hold to expiry, renew at market, sell in 2036",
+      "deterministic": {
+        "Bear": {
+          "strategy": "S3_hold_to_expiry_renew_then_sell",
+          "scenario": "Bear",
+          "sale_notes": [
+            "Held to the 2032 expiry, renewed at market on a 10-year term, sold in 2036.",
+            "Sold at 1,477,569 in 2036. Costs 71,071, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,522,439."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 108243.22,
+            "2031": 110408.08,
+            "2032": 112616.24,
+            "2033": 114868.57,
+            "2034": 117165.94,
+            "2035": 119509.26,
+            "2036": 1528397.37,
+            "2037": 91422.37,
+            "2038": 93250.81,
+            "2039": 95115.83,
+            "2040": 1192301.47
+          },
+          "terminal_after_tax": 4095459.94,
+          "npv": 2577068.02,
+          "value_now": 1290322.58
+        },
+        "Base": {
+          "strategy": "S3_hold_to_expiry_renew_then_sell",
+          "scenario": "Base",
+          "sale_notes": [
+            "Held to the 2032 expiry, renewed at market on a 10-year term, sold in 2036.",
+            "Sold at 2,031,657 in 2036. Costs 97,723, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 2,093,353."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 108243.22,
+            "2031": 110408.08,
+            "2032": 112616.24,
+            "2033": 114868.57,
+            "2034": 117165.94,
+            "2035": 119509.26,
+            "2036": 2055834.09,
+            "2037": 125705.75,
+            "2038": 128219.87,
+            "2039": 130784.26,
+            "2040": 1580966.36
+          },
+          "terminal_after_tax": 5116482.43,
+          "npv": 3155603.19,
+          "value_now": 1428571.43
+        },
+        "Bull": {
+          "strategy": "S3_hold_to_expiry_renew_then_sell",
+          "scenario": "Bull",
+          "sale_notes": [
+            "Held to the 2032 expiry, renewed at market on a 10-year term, sold in 2036.",
+            "Sold at 2,708,876 in 2036. Costs 130,297, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 2,791,137."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 108243.22,
+            "2031": 110408.08,
+            "2032": 112616.24,
+            "2033": 114868.57,
+            "2034": 117165.94,
+            "2035": 119509.26,
+            "2036": 2700478.97,
+            "2037": 167607.67,
+            "2038": 170959.82,
+            "2039": 174379.02,
+            "2040": 2046010.09
+          },
+          "terminal_after_tax": 6354407.68,
+          "npv": 3857655.53,
+          "value_now": 1538461.54
+        }
+      },
+      "monte_carlo": {
+        "trials": 10000,
+        "seed": 20261108,
+        "mean": 4537598.64,
+        "p05": 2875073.08,
+        "p50": 4614130.93,
+        "p95": 6320452.5,
+        "certainty_equivalent": 4258339.77,
+        "multiple_of_value_now": 3.18,
+        "value_now": 1428571.43
+      },
+      "sensitivity": [
+        {
+          "case": "Expiry 2030 (earliest)",
+          "terminal_after_tax": 5100376.72,
+          "npv": 3147468.71
+        },
+        {
+          "case": "Expiry 2032 (midpoint)",
+          "terminal_after_tax": 5116482.43,
+          "npv": 3155603.19
+        },
+        {
+          "case": "Expiry 2035 (latest)",
+          "terminal_after_tax": 5145472.72,
+          "npv": 3170245.25
+        },
+        {
+          "case": "Cap rate -50 bp",
+          "terminal_after_tax": 5467613.69,
+          "npv": 3353898.15
+        },
+        {
+          "case": "Cap rate +50 bp",
+          "terminal_after_tax": 4818990.17,
+          "npv": 2987622.62
+        },
+        {
+          "case": "NOI growth 1.0%",
+          "terminal_after_tax": 4713079.72,
+          "npv": 2917738.93
+        },
+        {
+          "case": "NOI growth 3.0%",
+          "terminal_after_tax": 5555263.11,
+          "npv": 3413971.17
+        }
+      ]
+    },
+    "S4_extend_then_sell": {
+      "label": "Extend early in 2027, sell in 2030 with 12 years of term",
+      "deterministic": {
+        "Bear": {
+          "strategy": "S4_extend_then_sell",
+          "scenario": "Bear",
+          "sale_notes": [
+            "Tenant agrees in 2027 to add 10 years at or above in-place rent; the asset is sold in 2030 with about 12 years of term left.",
+            "Sold at 1,472,697 in 2030. Costs 70,837, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,708,860."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 1510103.32,
+            "2031": 91120.91,
+            "2032": 92943.32,
+            "2033": 94802.19,
+            "2034": 96698.23,
+            "2035": 98632.2,
+            "2036": 100604.84,
+            "2037": 102616.94,
+            "2038": 104669.28,
+            "2039": 106762.66,
+            "2040": 1311578.41
+          },
+          "terminal_after_tax": 4122693.11,
+          "npv": 2861800.1,
+          "value_now": 1290322.58
+        },
+        "Base": {
+          "strategy": "S4_extend_then_sell",
+          "scenario": "Base",
+          "sale_notes": [
+            "Tenant agrees in 2027 to add 10 years at or above in-place rent; the asset is sold in 2030 with about 12 years of term left.",
+            "Sold at 1,804,054 in 2030. Costs 86,775, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 2,093,353."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 1825521.84,
+            "2031": 111623.11,
+            "2032": 113855.57,
+            "2033": 116132.68,
+            "2034": 118455.34,
+            "2035": 120824.44,
+            "2036": 123240.93,
+            "2037": 125705.75,
+            "2038": 128219.87,
+            "2039": 130784.26,
+            "2040": 1580966.36
+          },
+          "terminal_after_tax": 4907490.96,
+          "npv": 3386463.71,
+          "value_now": 1428571.43
+        },
+        "Bull": {
+          "strategy": "S4_extend_then_sell",
+          "scenario": "Bull",
+          "sale_notes": [
+            "Tenant agrees in 2027 to add 10 years at or above in-place rent; the asset is sold in 2030 with about 12 years of term left.",
+            "Sold at 2,122,416 in 2030. Costs 102,088, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 2,462,768."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 2128571.01,
+            "2031": 131321.31,
+            "2032": 133947.73,
+            "2033": 136626.69,
+            "2034": 139359.22,
+            "2035": 142146.41,
+            "2036": 144989.33,
+            "2037": 147889.12,
+            "2038": 150846.9,
+            "2039": 153863.84,
+            "2040": 1835911.17
+          },
+          "terminal_after_tax": 5657633.52,
+          "npv": 3888593.15,
+          "value_now": 1538461.54
+        }
+      },
+      "monte_carlo": {
+        "trials": 10000,
+        "seed": 20261108,
+        "mean": 4364403.83,
+        "p05": 2828149.41,
+        "p50": 4538759.39,
+        "p95": 5689988.03,
+        "certainty_equivalent": 4154212.15,
+        "multiple_of_value_now": 3.06,
+        "value_now": 1428571.43
+      },
+      "sensitivity": [
+        {
+          "case": "Expiry 2030 (earliest)",
+          "terminal_after_tax": 4891385.25,
+          "npv": 3378329.23
+        },
+        {
+          "case": "Expiry 2032 (midpoint)",
+          "terminal_after_tax": 4907490.96,
+          "npv": 3386463.71
+        },
+        {
+          "case": "Expiry 2035 (latest)",
+          "terminal_after_tax": 4936481.25,
+          "npv": 3401105.77
+        },
+        {
+          "case": "Cap rate -50 bp",
+          "terminal_after_tax": 5302938.23,
+          "npv": 3649687.21
+        },
+        {
+          "case": "Cap rate +50 bp",
+          "terminal_after_tax": 4572500.54,
+          "npv": 3163543.6
+        },
+        {
+          "case": "NOI growth 1.0%",
+          "terminal_after_tax": 4736993.9,
+          "npv": 3269660.2
+        },
+        {
+          "case": "NOI growth 3.0%",
+          "terminal_after_tax": 5082975.59,
+          "npv": 3506661.54
+        }
+      ]
+    },
+    "S5_expire_no_renewal": {
+      "label": "Do not renew: go dark at expiry, re-let, sell in 2036",
+      "deterministic": {
+        "Bear": {
+          "strategy": "S5_expire_no_renewal",
+          "scenario": "Bear",
+          "sale_notes": [
+            "Tenant leaves at expiry; the site is dark for the vacancy period, re-let to a local operator at 90% of prior rent, and sold in 2036 without brand credit.",
+            "Sold at 1,625,326 in 2036. Costs 159,444, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,586,717."
+          ],
+          "cash": {
+            "2026": 0.0,
+            "2027": 0.0,
+            "2028": 0.0,
+            "2029": 0.0,
+            "2030": 0.0,
+            "2031": 0.0,
+            "2032": 0.0,
+            "2033": 0.0,
+            "2034": 105449.34,
+            "2035": 107558.33,
+            "2036": 1575590.92,
+            "2037": 95282.29,
+            "2038": 97187.94,
+            "2039": 99131.7,
+            "2040": 1233428.56
+          },
+          "terminal_after_tax": 3313629.08,
+          "npv": 1893345.83,
+          "value_now": 1290322.58
+        },
+        "Base": {
+          "strategy": "S5_expire_no_renewal",
+          "scenario": "Base",
+          "sale_notes": [
+            "Tenant leaves at expiry; the site is dark for the vacancy period, re-let to a local operator at 90% of prior rent, and sold in 2036 without brand credit.",
+            "Sold at 1,625,326 in 2036. Costs 159,444, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,586,717."
+          ],
+          "cash": {
+            "2026": 0.0,
+            "2027": 0.0,
+            "2028": 0.0,
+            "2029": 0.0,
+            "2030": 0.0,
+            "2031": 0.0,
+            "2032": 0.0,
+            "2033": 0.0,
+            "2034": 105449.34,
+            "2035": 107558.33,
+            "2036": 1575590.92,
+            "2037": 95282.29,
+            "2038": 97187.94,
+            "2039": 99131.7,
+            "2040": 1256807.82
+          },
+          "terminal_after_tax": 3337008.35,
+          "npv": 1905153.95,
+          "value_now": 1428571.43
+        },
+        "Bull": {
+          "strategy": "S5_expire_no_renewal",
+          "scenario": "Bull",
+          "sale_notes": [
+            "Tenant leaves at expiry; the site is dark for the vacancy period, re-let to a local operator at 90% of prior rent, and sold in 2036 without brand credit.",
+            "Sold at 1,625,326 in 2036. Costs 159,444, tax 0 (deferred under 1031).",
+            "Proceeds reinvested at 6.50% and liquidated in 2040 at 1,586,717."
+          ],
+          "cash": {
+            "2026": 0.0,
+            "2027": 0.0,
+            "2028": 0.0,
+            "2029": 0.0,
+            "2030": 0.0,
+            "2031": 0.0,
+            "2032": 0.0,
+            "2033": 0.0,
+            "2034": 105449.34,
+            "2035": 107558.33,
+            "2036": 1575590.92,
+            "2037": 95282.29,
+            "2038": 97187.94,
+            "2039": 99131.7,
+            "2040": 1275391.34
+          },
+          "terminal_after_tax": 3355591.86,
+          "npv": 1914539.89,
+          "value_now": 1538461.54
+        }
+      },
+      "monte_carlo": {
+        "trials": 10000,
+        "seed": 20261108,
+        "mean": 3342134.33,
+        "p05": 2609097.38,
+        "p50": 3324771.19,
+        "p95": 4142680.26,
+        "certainty_equivalent": 3277264.16,
+        "multiple_of_value_now": 2.34,
+        "value_now": 1428571.43
+      },
+      "sensitivity": [
+        {
+          "case": "Expiry 2030 (earliest)",
+          "terminal_after_tax": 3525638.96,
+          "npv": 2046123.3
+        },
+        {
+          "case": "Expiry 2032 (midpoint)",
+          "terminal_after_tax": 3337008.35,
+          "npv": 1905153.95
+        },
+        {
+          "case": "Expiry 2035 (latest)",
+          "terminal_after_tax": 3043281.46,
+          "npv": 1711738.57
+        },
+        {
+          "case": "Cap rate -50 bp",
+          "terminal_after_tax": 3355591.86,
+          "npv": 1914539.89
+        },
+        {
+          "case": "Cap rate +50 bp",
+          "terminal_after_tax": 3320902.63,
+          "npv": 1897019.47
+        },
+        {
+          "case": "NOI growth 1.0%",
+          "terminal_after_tax": 3049446.53,
+          "npv": 1739760.04
+        },
+        {
+          "case": "NOI growth 3.0%",
+          "terminal_after_tax": 3650828.06,
+          "npv": 2085626.35
+        }
+      ]
+    },
+    "S6_hold_to_2040": {
+      "label": "Hold the asset through 2040 and never sell",
+      "deterministic": {
+        "Bear": {
+          "strategy": "S6_hold_to_2040",
+          "scenario": "Bear",
+          "sale_notes": [
+            "Held throughout; renewed in 2032 on a 10-year term. The 2040 position is marked to market at 1,274,859 net of notional sale costs, with no sale tax assumed because no sale has occurred."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 108243.22,
+            "2031": 110408.08,
+            "2032": 112616.24,
+            "2033": 114868.57,
+            "2034": 117165.94,
+            "2035": 119509.26,
+            "2036": 121899.44,
+            "2037": 124337.43,
+            "2038": 126824.18,
+            "2039": 129360.66,
+            "2040": 1345485.88
+          },
+          "terminal_after_tax": 2942879.7,
+          "npv": 1847069.27,
+          "value_now": 1290322.58
+        },
+        "Base": {
+          "strategy": "S6_hold_to_2040",
+          "scenario": "Base",
+          "sale_notes": [
+            "Held throughout; renewed in 2032 on a 10-year term. The 2040 position is marked to market at 1,759,305 net of notional sale costs, with no sale tax assumed because no sale has occurred."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 108243.22,
+            "2031": 110408.08,
+            "2032": 112616.24,
+            "2033": 114868.57,
+            "2034": 117165.94,
+            "2035": 119509.26,
+            "2036": 121899.44,
+            "2037": 124337.43,
+            "2038": 126824.18,
+            "2039": 129360.66,
+            "2040": 1806630.32
+          },
+          "terminal_after_tax": 3404024.14,
+          "npv": 2079978.55,
+          "value_now": 1428571.43
+        },
+        "Bull": {
+          "strategy": "S6_hold_to_2040",
+          "scenario": "Bull",
+          "sale_notes": [
+            "Held throughout; renewed in 2032 on a 10-year term. The 2040 position is marked to market at 2,356,212 net of notional sale costs, with no sale tax assumed because no sale has occurred."
+          ],
+          "cash": {
+            "2026": 100000.0,
+            "2027": 102000.0,
+            "2028": 104040.0,
+            "2029": 106120.8,
+            "2030": 108243.22,
+            "2031": 110408.08,
+            "2032": 112616.24,
+            "2033": 114868.57,
+            "2034": 117165.94,
+            "2035": 119509.26,
+            "2036": 121899.44,
+            "2037": 124337.43,
+            "2038": 126824.18,
+            "2039": 129360.66,
+            "2040": 2374826.15
+          },
+          "terminal_after_tax": 3972219.97,
+          "npv": 2366956.05,
+          "value_now": 1538461.54
+        }
+      },
+      "monte_carlo": {
+        "trials": 10000,
+        "seed": 20261108,
+        "mean": 3436198.96,
+        "p05": 2610034.23,
+        "p50": 3388592.14,
+        "p95": 4444671.26,
+        "certainty_equivalent": 3348065.59,
+        "multiple_of_value_now": 2.41,
+        "value_now": 1428571.43
+      },
+      "sensitivity": [
+        {
+          "case": "Expiry 2030 (earliest)",
+          "terminal_after_tax": 3404024.14,
+          "npv": 2079978.55
+        },
+        {
+          "case": "Expiry 2032 (midpoint)",
+          "terminal_after_tax": 3404024.14,
+          "npv": 2079978.55
+        },
+        {
+          "case": "Expiry 2035 (latest)",
+          "terminal_after_tax": 3461771.81,
+          "npv": 2109145.04
+        },
+        {
+          "case": "Cap rate -50 bp",
+          "terminal_after_tax": 3523644.31,
+          "npv": 2140394.86
+        },
+        {
+          "case": "Cap rate +50 bp",
+          "terminal_after_tax": 3299356.48,
+          "npv": 2027114.27
+        },
+        {
+          "case": "NOI growth 1.0%",
+          "terminal_after_tax": 3068602.23,
+          "npv": 1895929.5
+        },
+        {
+          "case": "NOI growth 3.0%",
+          "terminal_after_tax": 3779670.27,
+          "npv": 2285221.72
+        }
+      ]
+    }
+  },
+  "ranking_by_certainty_equivalent": [
+    {
+      "rank": 1,
+      "strategy": "S3_hold_to_expiry_renew_then_sell",
+      "label": "Hold to expiry, renew at market, sell in 2036",
+      "certainty_equivalent": 4258339.77,
+      "p05": 2875073.08,
+      "mean": 4537598.64
+    },
+    {
+      "rank": 2,
+      "strategy": "S4_extend_then_sell",
+      "label": "Extend early in 2027, sell in 2030 with 12 years of term",
+      "certainty_equivalent": 4154212.15,
+      "p05": 2828149.41,
+      "mean": 4364403.83
+    },
+    {
+      "rank": 3,
+      "strategy": "S1_sell_now_1031",
+      "label": "Sell now through a Section 1031 exchange",
+      "certainty_equivalent": 4000783.4,
+      "p05": 3466626.62,
+      "mean": 4036952.65
+    },
+    {
+      "rank": 4,
+      "strategy": "S2_sell_now_taxable",
+      "label": "Sell now and pay the tax",
+      "certainty_equivalent": 3354263.3,
+      "p05": 2912206.31,
+      "mean": 3381728.85
+    },
+    {
+      "rank": 5,
+      "strategy": "S6_hold_to_2040",
+      "label": "Hold the asset through 2040 and never sell",
+      "certainty_equivalent": 3348065.59,
+      "p05": 2610034.23,
+      "mean": 3436198.96
+    },
+    {
+      "rank": 6,
+      "strategy": "S5_expire_no_renewal",
+      "label": "Do not renew: go dark at expiry, re-let, sell in 2036",
+      "certainty_equivalent": 3277264.16,
+      "p05": 2609097.38,
+      "mean": 3342134.33
+    }
+  ],
+  "breakeven": [
+    {
+      "cap_shift_bp": -100,
+      "sell_now": 4721603.13,
+      "extend_then_sell": 5776855.5,
+      "advantage_of_extend": 1055252.37
+    },
+    {
+      "cap_shift_bp": -50,
+      "sell_now": 4358402.89,
+      "extend_then_sell": 5302938.23,
+      "advantage_of_extend": 944535.34
+    },
+    {
+      "cap_shift_bp": 0,
+      "sell_now": 4047088.4,
+      "extend_then_sell": 4907490.96,
+      "advantage_of_extend": 860402.56
+    },
+    {
+      "cap_shift_bp": 50,
+      "sell_now": 3777282.51,
+      "extend_then_sell": 4572500.54,
+      "advantage_of_extend": 795218.03
+    },
+    {
+      "cap_shift_bp": 100,
+      "sell_now": 3541202.35,
+      "extend_then_sell": 4285078.29,
+      "advantage_of_extend": 743875.94
+    }
+  ],
+  "robustness": [
+    {
+      "case": "Hold-to-expiry plan with a 10% rent cut on renewal",
+      "strategy": "S3_hold_to_expiry_renew_then_sell",
+      "terminal_after_tax": 4692073.97,
+      "npv": 2908118.68,
+      "deterministic_base": 5116482.43,
+      "delta_vs_base": -424408.46
+    },
+    {
+      "case": "Hold-to-expiry plan, expiry at the 2035 end of the window",
+      "strategy": "S3_hold_to_expiry_renew_then_sell",
+      "terminal_after_tax": 5145472.72,
+      "npv": 3170245.25,
+      "deterministic_base": 5116482.43,
+      "delta_vs_base": 28990.29
+    },
+    {
+      "case": "Hold-to-expiry plan, expiry at the 2030 end of the window",
+      "strategy": "S3_hold_to_expiry_renew_then_sell",
+      "terminal_after_tax": 5100376.72,
+      "npv": 3147468.71,
+      "deterministic_base": 5116482.43,
+      "delta_vs_base": -16105.71
+    },
+    {
+      "case": "Extend-then-sell with no rent increase on extension",
+      "strategy": "S4_extend_then_sell",
+      "terminal_after_tax": 4736993.9,
+      "npv": 3269660.2,
+      "deterministic_base": 4907490.96,
+      "delta_vs_base": -170497.06
+    },
+    {
+      "case": "Sell now, replacement portfolio only yields 6.0%",
+      "strategy": "S1_sell_now_1031",
+      "terminal_after_tax": 3938477.03,
+      "npv": 2911186.73,
+      "deterministic_base": 4047088.4,
+      "delta_vs_base": -108611.37
+    },
+    {
+      "case": "Sell now, replacement portfolio yields 7.5%",
+      "strategy": "S1_sell_now_1031",
+      "terminal_after_tax": 4264311.14,
+      "npv": 3137992.92,
+      "deterministic_base": 4047088.4,
+      "delta_vs_base": 217222.74
+    },
+    {
+      "case": "Sell now, cap rates 50 bp higher (weaker pricing)",
+      "strategy": "S1_sell_now_1031",
+      "terminal_after_tax": 3777282.51,
+      "npv": 2787669.54,
+      "deterministic_base": 4047088.4,
+      "delta_vs_base": -269805.89
+    },
+    {
+      "case": "Sell now, cap rates 50 bp lower (stronger pricing)",
+      "strategy": "S1_sell_now_1031",
+      "terminal_after_tax": 4358402.89,
+      "npv": 3216541.78,
+      "deterministic_base": 4047088.4,
+      "delta_vs_base": 311314.49
+    }
+  ],
+  "checked_inputs": {
+    "ten_year_treasury_2026_11_06": 0.0486,
+    "cpi_u_los_angeles_sep_2026": 0.037,
+    "eci_los_angeles_csa_sep_2026": 0.039,
+    "measure_ula_threshold_2026": 5400000,
+    "prop_13_levy": 0.01,
+    "prop_13_cap": 0.02
+  }
+}

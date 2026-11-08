@@ -998,6 +998,13 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-6ad87c21/</code>",
+         "Session J &mdash; 2026-11-08 independent re-verification: 17 official sources re-read on the access date, "
+         "114 fact rows (92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank), 31-risk BAU and "
+         "black-swan register, six strategies scored on a seeded 10,000-trial certainty equivalent, and a "
+         "line-by-line audit of this repository",
+         "14 pages",
+         "<a href='session-6ad87c21/index.html'>open &#8599;</a>"],
         ["<code>session-343c7030/</code>",
          "Session I &mdash; final integration: 98 fact rows (84 verified against 16 official sources read 2026-11-08, "
          "14 deliberately blank), 30 risks, 15 documented assumptions, 15,000-trial Monte Carlo (seed 20261108) and a "
@@ -1052,6 +1059,11 @@ def build_workspaces():
 2026-11-08: 98 fact rows against 16 official sources read that day with 14 values deliberately left blank, five
 strategies scored on certainty-equivalent after-tax wealth, a 30-risk register and 13 repository findings &mdash;
 including the source-ledger defect in this root site, which that session fixed.</p>
+<p><strong>For a second, independently built 2026-11-08 pass</strong> that reaches the same structural conclusion from
+a different model, open <a href="session-6ad87c21/index.html"><strong>session-6ad87c21</strong></a> (Session J): 114
+fact rows against 17 official sources, 31 risks including twelve black swans, six strategies on a seeded
+certainty-equivalent ranking, and a 1,367-check verifier that fails the build on an unsourced row or a stray personal
+detail.</p>
 <p><strong>Then read the independent review.</strong>
 <a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G) re-verified this
 repository line by line on 2026-11-07, publishes 110 fact rows against 19 official sources with 14 values

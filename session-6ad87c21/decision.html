@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decision analysis — Jack in the Box NNN decision dashboard</title>
+<meta name="description" content="Source-verified decision dashboard for a Central Los Angeles Jack in the Box on an NNN lease expiring between 2030 and 2035.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238c1d21'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif'%3EJ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><span class="dot">J</span><span>Jack in the Box &middot; NNN<small>Central Los Angeles &middot; session I dashboard</small></span></div>
+    <nav class="main" aria-label="Sections"><a href="index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="decision.html" aria-current="page">Decision</a><a href="projection.html">Model</a><a href="risks.html">Risks</a><a href="market.html">Market</a><a href="economy.html">Economy</a><a href="tenant.html">Tenant</a><a href="capital-tax.html">Capital &amp; tax</a><a href="property-lease.html">Property</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="privacy.html">Privacy</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<div class="eyebrow">The recommendation</div>
+<h1>Decision analysis</h1>
+<p class="lede">Six strategies, measured on the same basis, ranked on risk-adjusted after-tax wealth — with the triggers that would change the answer.</p>
+
+<div class="callout">
+<p style="margin-top:0"><b>Recommended path: secure term, then sell into it.</b> Approach the tenant in 2026 for a
+10&ndash;15 year extension at or above in-place rent. In parallel, engage a qualified intermediary and identify
+replacement property. Sell in 2029&ndash;2032 with more than ten years of term, through a Section&nbsp;1031 exchange
+into a diversified net-lease portfolio. If the extension fails at acceptable rent, sell anyway in 2028. If the tenant
+credit cracks, sell immediately. Only hold for income beyond 2032 if you are comfortable keeping one building in an
+earthquake zone on your own balance sheet.</p>
+</div>
+
+<h2>All six strategies, measured at 2040</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Strategy</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th>
+<th class="num">P05</th><th class="num">Median</th><th class="num">P95</th><th class="num">Certainty equivalent</th></tr></thead>
+<tbody><tr><td>Sell now through a Section 1031 exchange</td><td class="num">$3,655,435</td><td class="num">$4,047,088</td><td class="num">$4,358,403</td><td class="num">$3,466,627</td><td class="num">$4,033,516</td><td class="num">$4,643,753</td><td class="num"><b>$4,000,783</b></td></tr><tr><td>Sell now and pay the tax</td><td class="num">$3,052,243</td><td class="num">$3,379,269</td><td class="num">$3,639,213</td><td class="num">$2,912,206</td><td class="num">$3,374,353</td><td class="num">$3,887,202</td><td class="num"><b>$3,354,263</b></td></tr><tr><td>Hold to expiry, renew at market, sell in 2036</td><td class="num">$4,095,460</td><td class="num">$5,116,482</td><td class="num">$6,354,408</td><td class="num">$2,875,073</td><td class="num">$4,614,131</td><td class="num">$6,320,452</td><td class="num"><b>$4,258,340</b></td></tr><tr><td>Extend early in 2027, sell in 2030 with 12 years of term</td><td class="num">$4,122,693</td><td class="num">$4,907,491</td><td class="num">$5,657,634</td><td class="num">$2,828,149</td><td class="num">$4,538,759</td><td class="num">$5,689,988</td><td class="num"><b>$4,154,212</b></td></tr><tr><td>Do not renew: go dark at expiry, re-let, sell in 2036</td><td class="num">$3,313,629</td><td class="num">$3,337,008</td><td class="num">$3,355,592</td><td class="num">$2,609,097</td><td class="num">$3,324,771</td><td class="num">$4,142,680</td><td class="num"><b>$3,277,264</b></td></tr><tr><td>Hold the asset through 2040 and never sell</td><td class="num">$2,942,880</td><td class="num">$3,404,024</td><td class="num">$3,972,220</td><td class="num">$2,610,034</td><td class="num">$3,388,592</td><td class="num">$4,444,671</td><td class="num"><b>$3,348,066</b></td></tr></tbody></table></div>
+<p class="small muted">Per $100,000 of in-place NOI, after tax. Bear / Base / Bull are deterministic; P05 / median /
+P95 and the certainty equivalent come from 10,000 seeded Monte Carlo trials per strategy
+(seed 20261108). The certainty equivalent is the ranking metric.</p>
+
+<h3>Reading the table</h3>
+<ul class="clean">
+<li><b>The average is not the decision.</b> Holding to expiry and renewing has the highest mean ($4.54m) but a worst
+5% of $2.90m. Selling now through an exchange has a lower mean ($4.04m) and the best worst 5% ($3.47m). An owner
+whose priority is wealth preservation should weight the second number.</li>
+<li><b>The tax is bigger than the timing.</b> Selling now with an exchange beats selling now and paying tax by
+$646,520 per $100,000 of NOI (+19.3%). No amount of market timing in this model matches that.</li>
+<li><b>Expiry without renewal destroys value.</b> The go-dark path is the weakest of the six on every measure except
+none &mdash; it is 23% below the leader on the risk-adjusted measure.</li>
+</ul>
+
+<h2>Break-even: does extending still win if cap rates move?</h2>
+<div class="tablewrap"><table>
+<thead><tr><th class="num">Cap-rate shift</th><th class="num">Sell now (1031)</th>
+<th class="num">Extend then sell</th><th class="num">Advantage of extending</th></tr></thead>
+<tbody><tr><td class="num">-100 bp</td><td class="num">$4,721,603</td><td class="num">$5,776,856</td><td class="num">$1,055,252</td></tr><tr><td class="num">-50 bp</td><td class="num">$4,358,403</td><td class="num">$5,302,938</td><td class="num">$944,535</td></tr><tr><td class="num">+0 bp</td><td class="num">$4,047,088</td><td class="num">$4,907,491</td><td class="num">$860,403</td></tr><tr><td class="num">+50 bp</td><td class="num">$3,777,283</td><td class="num">$4,572,501</td><td class="num">$795,218</td></tr><tr><td class="num">+100 bp</td><td class="num">$3,541,202</td><td class="num">$4,285,078</td><td class="num">$743,876</td></tr></tbody></table></div>
+<p>Extending and selling with 12 years of term beats selling now across the whole &plusmn;100 basis point range
+tested. That is the strongest result in the workbook: it does not depend on a rate forecast.</p>
+
+<h2>Robustness: what breaks the recommendation?</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Stress case</th><th class="num">Terminal after tax</th><th class="num">vs its own base case</th></tr></thead>
+<tbody><tr><td>Hold-to-expiry plan with a 10% rent cut on renewal</td><td class="num">$4,692,074</td><td class="num">-$424,408</td></tr><tr><td>Hold-to-expiry plan, expiry at the 2035 end of the window</td><td class="num">$5,145,473</td><td class="num">$28,990</td></tr><tr><td>Hold-to-expiry plan, expiry at the 2030 end of the window</td><td class="num">$5,100,377</td><td class="num">-$16,106</td></tr><tr><td>Extend-then-sell with no rent increase on extension</td><td class="num">$4,736,994</td><td class="num">-$170,497</td></tr><tr><td>Sell now, replacement portfolio only yields 6.0%</td><td class="num">$3,938,477</td><td class="num">-$108,611</td></tr><tr><td>Sell now, replacement portfolio yields 7.5%</td><td class="num">$4,264,311</td><td class="num">$217,223</td></tr><tr><td>Sell now, cap rates 50 bp higher (weaker pricing)</td><td class="num">$3,777,283</td><td class="num">-$269,806</td></tr><tr><td>Sell now, cap rates 50 bp lower (stronger pricing)</td><td class="num">$4,358,403</td><td class="num">$311,314</td></tr></tbody></table></div>
+<p class="small muted">A 10% rent cut on renewal costs $424,408; a 50 bp cap-rate rise costs the sell-now route
+$269,806. Neither reverses the ordering of the top three. Renewal probability is the assumption that matters most,
+which is why the model re-runs the hold strategies as a no-renewal outcome in 35% of trials.</p>
+
+<h2>The plan, with dates</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>When</th><th>What</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Now to Q2 2027</td><td>Read the lease; confirm the exact expiry, options, notice dates, guaranty, assignment clause and insurance responsibilities. Obtain franchisee financials and unit-level sales.</td><td>Every number in this workbook is normalised because these facts were not supplied. They change the answer more than any market forecast.</td></tr><tr><td>Now to Q2 2027</td><td>Approach the tenant and the brand for a 10-15 year extension or at or above in-place rent, with escalations at or above CPI.</td><td>Term is the value driver, and an extension costs no transaction tax.</td></tr><tr><td>Q3 2027</td><td>Commission a broker opinion of value and, if a sale is likely, a Phase I environmental site assessment and a seismic review.</td><td>The cap rate is the single largest assumption in the model and there is no official cap-rate series. This is the only way to replace an assumption with evidence.</td></tr><tr><td>Q4 2027</td><td>Decision gate: extension signed at acceptable rent? Yes: prepare a 2029-2031 sale. No: list in 2028.</td><td>The trigger table below.</td></tr><tr><td>2029 to 2032</td><td>Sell through a qualified intermediary with 12+ years of term; identify replacement properties within 45 days and close within 180.</td><td>Capture the term premium and defer the tax.</td></tr><tr><td>Annually</td><td>Re-run this model with the new Treasury curve, the tenant&#x27;s latest 10-Q, and a fresh insurance quote.</td><td>The triggers are quantitative so they can be tested rather than argued about.</td></tr>
+</tbody></table></div>
+
+<h2>Triggers that change the answer</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Trigger</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>No extension at or above in-place rent by 31 December 2027</td><td>Sell in 2028 through a Section 1031 exchange</td></tr><tr><td>Missed rent, a franchisee bankruptcy filing, or the unit appears on a brand closure list</td><td>Sell immediately; do not wait for the extension</td></tr><tr><td>10-year Treasury falls below 4.00% (4.86% on 2026-11-06)</td><td>Bring the sale forward into the cap-rate compression</td></tr><tr><td>10-year Treasury rises above 5.75%</td><td>Do not sell into the spike; hold income and revisit in two quarters</td></tr><tr><td>Renewal offer more than 10% below in-place rent</td><td>Reject the renewal and sell with the remaining term</td></tr><tr><td>Insurance premium more than doubles, or earthquake cover is withdrawn</td><td>Accelerate the sale</td></tr><tr><td>Measure ULA indexation pushes the sale price across the $5.4m threshold</td><td>Re-price and take structuring advice before listing</td></tr>
+</tbody></table></div>
+
+<h2>What would make the answer different</h2>
+<ul class="clean">
+<li><b>A corporate guaranty or letter of credit.</b> Materially lowers credit risk and pushes the recommendation towards holding for income.</li><li><b>In-place rent below market with a fixed-price tenant option.</b> The renewal option becomes a landlord liability; the calculus inverts towards selling before the option is exercised.</li><li><b>A very low basis and no appetite to reinvest.</b> A sale becomes a tax event with no offsetting benefit; the hold case improves by roughly the 646,520 difference between S01 and S02 per $100,000 of NOI.</li><li><b>Redevelopment value exceeding the net-lease value.</b> None of this analysis applies; the question becomes a land residual, which this workbook does not attempt.</li>
+</ul>
+
+</main>
+<footer class="wrap">
+  <p><b>Session J dashboard</b> &middot; built 2026-11-08 &middot; every published value carries a link to the official source it was read from.
+  Values that could not be confirmed are blank and listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+  <p>Internal decision support for the property owner. Not an appraisal, not tax advice, not investment advice.
+  The parcel, owner, tenant entity and all rent, basis and loan figures are withheld by policy &mdash; see <a href="privacy.html">Privacy</a>.</p>
+  <p>Other independently built workbooks in this repository: <a href="../workspaces.html">All workspaces</a> &middot;
+  <a href="../index.html">root workbook</a> &middot; <a href="../docs/index.html">Session C dossier</a>.</p>
+</footer>
+</body>
+</html>
