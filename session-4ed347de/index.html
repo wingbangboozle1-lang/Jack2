@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard &middot; Session I workbook</title>
+<meta name="description" content="One property, one question, and an honest answer about how much the numbers can actually tell you.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top">
+  <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
+  <div class="sub">Session I &middot; independent re-verification dated 2026-11-08 &middot;
+  single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
+</header>
+<nav class="main" aria-label="Sections"><a href="index.html" aria-current="page">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html">Method &amp; privacy</a></nav>
+<main>
+<h1>Dashboard</h1>
+<p class="lede">One property, one question, and an honest answer about how much the numbers can actually tell you.</p>
+
+<div class="kpis"><div class="kpi"><div class="l">The answer</div><div class="v">Negotiate, then price</div><div class="n">Extend with a market reset before selling. Neither blind sell nor passive hold survives the range.</div></div><div class="kpi"><div class="l">Base-case breakeven</div><div class="v">6.97%</div><div class="n">Reinvestment yield at which sell ties hold. Independently reproduced from the published model.</div></div><div class="kpi"><div class="l">Current SEC benchmark</div><div class="v">6.8%</div><div class="n">Realty Income Q3 2026, filed 2026-11-02. The published model uses 7.3% (FY2025).</div></div><div class="kpi"><div class="l">Simulated outcome</div><div class="v">46% sell / 54% hold</div><div class="n">20,000 trials with black-swan hazards. A coin flip, not a signal.</div></div><div class="kpi"><div class="l">Tail risk, holding</div><div class="v">58%</div><div class="n">99th-percentile single-asset hazard loss over 2026-2040, after modelled insurance recovery.</div></div><div class="kpi"><div class="l">Tail risk, exchanged</div><div class="v">21%</div><div class="n">Same trials on the reinvested path. This asymmetry, not the mean, is the argument.</div></div></div>
+
+<div class="callout">
+<p><strong>What this workbook is.</strong> Eight agent sessions have already published work in this
+repository. This one does not replace any of them. It re-verifies the decision-critical facts from the
+original official publishers on 2026-11-08, audits the published workbook line by line, and adds the one
+thing that was missing: an honest treatment of the fact that <em>the answer sits inside the noise</em>.</p>
+</div>
+
+<h2>The decision, in one page</h2>
+<p>The financial comparison does not resolve. At the net-lease yield the published model uses
+(<strong>7.3%</strong>, Realty Income FY2025) selling wins by -$0.25M of
+2040 wealth. At the newest SEC-filed yield (<strong>6.8%</strong>, Q3 2026, filed 2026-11-02) holding wins
+by $0.13M. The flip point is <strong>6.97%</strong>, which sits
+between those two official numbers.</p>
+<p>Two independent facts therefore decide this asset, and neither is a market forecast:</p>
+<ul class="tight">
+<li><strong>The eight owner facts are missing.</strong> Contract rent, exact expiry, escalations, renewal
+options, basis, debt, recovery structure and parcel geometry. Every model in this repository, including
+this one, substitutes an assumption for each. Until they exist, any buying or selling decision is being
+made on a placeholder.</li>
+<li><strong>The hazard tail is asymmetric.</strong> Holding one parcel puts a
+58th-percentile loss on the table; the
+exchanged path puts 21%. The mean barely moves;
+the tail moves a lot.</li>
+</ul>
+<p>The recommendation follows from those two facts, not from the spread: <strong>do not choose between
+selling and renewing yet</strong>. Fix the lease first &mdash; a market reset plus term plus a guaranty
+raises both the sale price and the hold economics &mdash; and decide with real numbers in hand.
+Detail on <a href="decision.html">Decision</a>.</p>
+
+<h2>What changed since the last published session</h2>
+<table><thead><tr><th>Item</th><th>Published in the repository</th><th>Verified 2026-11-08</th><th>Effect</th><th>Source</th></tr></thead><tbody>
+<tr><td>Net-lease acquisition yield</td><td>7.3% (FY2025)</td><td><strong>6.8%</strong> (Q3 2026, filed 2026-11-02)</td>
+<td>Reverses the base-case sign against a 6.975% breakeven</td><td><a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. (CIK 0000726728) Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three Months and Year Ended December 31, 2025">S12 &#8599;</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three and Nine Months Ended September 30, 2026">S13 &#8599;</a></td></tr>
+<tr><td>Census county citation</td><td>QuickFacts slug <code>lacountycalifornia</code></td><td>Slug is invalid; page silently renders the <em>United States</em> table</td>
+<td>Values are right, but the link does not show its own source</td><td><a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)">S04 &#8599;</a> <a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)">S05 &#8599;</a></td></tr>
+<tr><td>USGS earthquake citation</td><td>Program landing page</td><td>Specific UCERF3 FAQ record: 60 / 46 / 31%</td>
+<td>Now citable to the exact record</td><td><a class="src" href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener noreferrer" title="U.S. Geological Survey &mdash; What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)">S23 &#8599;</a></td></tr>
+<tr><td>Local forecast horizon</td><td>LAEDC / City WDB report, 2022&ndash;2028</td><td>Report genuine; horizon ends before the 2030&ndash;2035 window</td>
+<td>Cannot carry the decision period</td><td><a class="src" href="https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm" target="_blank" rel="noopener noreferrer" title="California Department of Industrial Relations, Labor Commissioner&#x27;s Office &mdash; Fast Food Minimum Wage Frequently Asked Questions (AB 1228 / Labor Code 1474-1476)">S21 &#8599;</a></td></tr>
+<tr><td>California 13.3% top rate</td><td>Single cited rate</td><td>12.3% bracket (FTB) + 1.0% surtax (RTC &sect;17043)</td>
+<td>Now cited as its two statutory parts</td><td><a class="src" href="https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf" target="_blank" rel="noopener noreferrer" title="California Franchise Tax Board &mdash; 2025 California Tax Rate Schedules (Form 540)">S18 &#8599;</a> <a class="src" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&amp;sectionNum=17043" target="_blank" rel="noopener noreferrer" title="California Legislative Information (official statutes) &mdash; Revenue and Taxation Code §17043 — additional 1% tax on taxable income over $1,000,000 (Proposition 63)">S19 &#8599;</a></td></tr>
+</tbody></table>
+
+<h2>Coverage at a glance</h2>
+<div class="kpis">
+<div class="kpi"><div class="l">Ledger rows</div><div class="v">98</div><div class="n">82 verified, 16 left blank</div></div>
+<div class="kpi"><div class="l">Official sources</div><div class="v">25</div><div class="n">every one opened on 2026-11-08</div></div>
+<div class="kpi"><div class="l">Published rows audited</div><div class="v">48</div><div class="n">41 confirmed &middot; 1 superseded &middot; 2 irregular</div></div>
+<div class="kpi"><div class="l">Flagged for review</div><div class="v">10</div><div class="n"><a href="flagged.html">open the register</a></div></div>
+</div>
+
+<h2>Sections</h2>
+<ul class="toc">
+<li><a href="summary.html">Executive summary</a> &mdash; the recommendation and the action windows</li>
+<li><a href="decision.html">Decision</a> &mdash; four strategies, scored, with explicit triggers</li>
+<li><a href="facts.html">Verified facts</a> &mdash; 98 rows, each with its source</li>
+<li><a href="projection.html">Projection &amp; Monte Carlo</a> &mdash; scenarios, the yield grid, 20,000 trials</li>
+<li><a href="risk.html">Risks</a> &mdash; business as usual and black swans, with sizing</li>
+<li><a href="audit.html">Repository audit</a> &mdash; line-by-line on the published workbook</li>
+<li><a href="flagged.html">Flagged for review</a> &mdash; 10 open items</li>
+<li><a href="sources.html">Sources</a> &mdash; the ledger behind every number</li>
+<li><a href="method.html">Method &amp; privacy</a> &mdash; how this was done and what is withheld</li>
+</ul>
+
+<footer>
+<p><strong>Internal decision support.</strong> Not an appraisal, not tax advice, not investment
+advice and not a legal opinion. Every value shown links to the official page it was read from on
+2026-11-08; values that could not be confirmed are blank and listed on the
+<a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
+address or contact detail appears anywhere in this workbook.</p>
+<p>Session I (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+82 of 98 ledger rows verified &middot;
+reproduction of the published root model: <strong>pass</strong>
+&middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
+python3 session-4ed347de/scripts/build_site.py</code></p>
+</footer>
+</main></body></html>
