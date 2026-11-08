@@ -1,0 +1,134 @@
+{
+  "accessed": "2026-11-08",
+  "note": "Two kinds of item are published here: (1) repository irregularities found during this session's line-by-line review, each with the evidence and the action taken; (2) values that earlier sessions publish but that this session could not re-verify against an official source. Nothing on this page blocks the publication of the site, and nothing here is silently corrected in another session's files.",
+  "irregularities": [
+    {
+      "id": "R-01",
+      "title": "The published root build cited a Census URL that silently drops the county column",
+      "detail": "data/sources.json source S2 (used by the live root site for every Los Angeles County row) pointed at .../table/losangelescitycalifornia,lacountycalifornia/PST045224. Read on 2026-11-08, that slug renders a table titled 'United States' with no county data at all. The correct slug is losangelescountycalifornia.",
+      "evidence": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224 returns a table whose only column is the City of Los Angeles; https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224 returns Los Angeles County with population 9,694,934.",
+      "impact": "The county values themselves are correct (re-verified here as D03, D04, D06, D08, D10), but a reader following the link could not see them. A citation that does not show its own value is a verification failure even when the number is right.",
+      "action": "FIXED in this integration session: S2 in data/sources.json now points at the two-column URL with the correct county slug, and the root site was rebuilt and re-checked. Recorded here rather than changed silently.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-02",
+      "title": "A USGS FAQ URL cited by earlier sessions now returns HTTP 404",
+      "detail": "Several earlier pages cite https://www.usgs.gov/faqs/what-probability-earthquake-magnitude-67-or-greater-occurring-california. On 2026-11-08 that address serves a 404 page.",
+      "evidence": "The live replacement is https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area, which carries the same 60% / 46% / 31% figures and is the link used for H01-H03 here.",
+      "impact": "Dead citation on earlier pages; the values are correct.",
+      "action": "Not edited in other sessions' files (out of this session's scope). The corrected URL is published as S12 and used for every hazard row on this site.",
+      "status": "open"
+    },
+    {
+      "id": "R-03",
+      "title": "A California BOE Proposition 13 URL cited by earlier sessions returns HTTP 404",
+      "detail": "https://www.boe.ca.gov/proptaxes/prop13.htm served a 'File or Page Not Found' page on 2026-11-08.",
+      "evidence": "The working official page is https://assessor.lacounty.gov/real-estate-toolkit/proposition-13 (1% levy, 2% cap, reassessment triggers), which is S10 here.",
+      "impact": "Dead citation; the mechanics are unchanged.",
+      "action": "Corrected link published as S10. Earlier pages left untouched.",
+      "status": "open"
+    },
+    {
+      "id": "R-04",
+      "title": "Two IRS §1031 URLs cited by earlier sessions return HTTP 404",
+      "detail": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-under-irc-code-section-1031 and https://www.irs.gov/newsroom/like-kind-exchanges-real-estate-tax-tips both serve 404 pages.",
+      "evidence": "https://www.irs.gov/pub/irs-news/fs-08-18.pdf (FS-2008-18) is live and is the source used for X09 and X10 here.",
+      "impact": "Dead citations; the 45/180-day rules are unchanged and were re-read.",
+      "action": "Corrected link published as S11.",
+      "status": "open"
+    },
+    {
+      "id": "R-05",
+      "title": "A BEA county personal-income release URL cited by earlier sessions returns HTTP 404",
+      "detail": "https://www.bea.gov/news/2025/personal-income-county-metro-and-other-areas-2024 served a 'Page You Requested Was Not Found' page on 2026-11-08.",
+      "evidence": "BEA re-organises release URLs by year; the 2024 county personal-income release is not reachable at that address.",
+      "impact": "The $818.5 billion Los Angeles County personal-income figure is therefore NOT re-verified in this session and does not appear as a verified row here.",
+      "action": "Left out rather than copied. Listed as carried-unverified below. The county income measure used on this site is the Census median household income (D06), which was read directly.",
+      "status": "open"
+    },
+    {
+      "id": "R-06",
+      "title": "Five earlier-session pull requests are still open on main",
+      "detail": "PR #5 (arena/ffe3bdfd), #6 (arena/8149683c), #10 (arena/50002478), #14 (arena/b4ec6128, a coordination record only) and #18 (arena/643e4aab) remain open while their branches are built on older baselines.",
+      "evidence": "gh pr list --state all on 2026-11-08.",
+      "impact": "Duplicate, non-published work sits in the repository. It is not reachable from the published site and does not affect the live build.",
+      "action": "Recorded, not merged: merging unknown-baseline branches would create unverifiable conflicts with the eight published builds. The owner can close or rebase them deliberately.",
+      "status": "open"
+    },
+    {
+      "id": "R-07",
+      "title": "COORDINATION.md mislabels one section",
+      "detail": "The section headed 'Session E (arena-b4ec6128-jack2) — record' contains the sentence 'What Session D produced (all preserved in this merge)' and then describes Session E's own dashboard. The session letters D and E are swapped inside that paragraph.",
+      "evidence": "COORDINATION.md, Session E section, first bullet.",
+      "impact": "Documentation only; no data or site file is affected.",
+      "action": "Recorded. The board text is append-only for this session, so the paragraph was not rewritten; this note is the correction.",
+      "status": "open"
+    },
+    {
+      "id": "R-08",
+      "title": "The CDI FAIR Plan $1.0 billion assessment is published by two earlier sessions but was not verified here",
+      "detail": "Sessions D and E cite 'CDI Order No. 2025-1' and a $1.0 billion FAIR Plan assessment as a verified risk input.",
+      "evidence": "This session did not retrieve a California Department of Insurance order or bulletin, so no official link can be published for it.",
+      "impact": "The risk direction (insurer stress after January 2025) is real; the specific $1.0 billion number is unconfirmed.",
+      "action": "Appears as risk RK21 with the number deliberately omitted and the source blank.",
+      "status": "open"
+    },
+    {
+      "id": "R-09",
+      "title": "A November 2026 statewide measure affecting local real-estate transfer taxes was reported but not verified",
+      "detail": "Secondary sources describe a ballot measure that would raise the approval threshold for local special taxes and bar charter cities from real-estate transfer taxes above the 0.11% state-authorized rate.",
+      "evidence": "No official Secretary of State or Legislative Analyst page was read in this session.",
+      "impact": "If enacted it would change the Measure ULA economics materially. It is mentioned on the tax page only as an unverified watch item and is not used in any calculation.",
+      "action": "Risk RK23 carries it with a blank source.",
+      "status": "open"
+    },
+    {
+      "id": "R-10",
+      "title": "Two incompatible structure-destruction counts for January 2025 appear in the repository",
+      "detail": "Session H publishes '16,251 LA County / 16,264 CAL FIRE structures destroyed' in the same sentence. Two different authoritative counts can legitimately differ, but presenting both without attribution invites misreading.",
+      "evidence": "COORDINATION.md, Session H sources section.",
+      "impact": "No effect on the sell-vs-renew arithmetic; both are far larger than any single-parcel exposure.",
+      "action": "Recorded. Not used as a model input and not republished here.",
+      "status": "open"
+    },
+    {
+      "id": "R-11",
+      "title": "City of Los Angeles minimum wage of $18.42/hour is carried, not verified",
+      "detail": "Session H cites a City of Los Angeles Office of Wage Standards memo setting $18.42/hour from 2026-07-01.",
+      "evidence": "Not re-read in this session. Only the state ($16.90) and fast-food ($20.00) floors were verified (W01, W02).",
+      "impact": "The local floor matters to the tenant's cost base; the state and fast-food figures already bound the analysis directionally.",
+      "action": "Left out of the verified tables; noted here.",
+      "status": "open"
+    },
+    {
+      "id": "R-12",
+      "title": "California DOF population projections are cited from a workbook this session could not read",
+      "detail": "Sessions C and H publish Los Angeles County projections for 2030, 2035 and 2040 from CA DOF Report P-2A (Vintage 2026).",
+      "evidence": "The DOF projections page was read and does publish P-2A (Vintage 2026, released 2026-03-13), but the data itself is in an .xlsx workbook that this session's tooling cannot parse, so the individual year values could not be confirmed cell by cell.",
+      "impact": "Long-run population decline is well supported by the verified Census change figures (D02 -0.8%, D04 -3.2%), which is what the model needs.",
+      "action": "The projection link is published here as the official page; the individual year values are not republished as verified.",
+      "status": "open"
+    },
+    {
+      "id": "R-13",
+      "title": "Los Angeles County documentary transfer tax of 0.11% is used by earlier sessions but not verified here",
+      "detail": "Several earlier pages apply a 0.11% county documentary transfer tax alongside the City rate.",
+      "evidence": "The County Registrar-Recorder page was not read in this session.",
+      "impact": "At a $1.7m price the difference is about $1,900 — immaterial to the ranking, material to a closing statement.",
+      "action": "The city transfer tax and Measure ULA (X01-X05, S09) are verified and used; the county component is omitted from this model rather than assumed.",
+      "status": "open"
+    }
+  ],
+  "carried_unverified": [
+    {"item": "Los Angeles County personal income, $818.5 billion (2024), BEA", "why": "Release URL returns 404 (R-05).", "used_in_model": "no"},
+    {"item": "California DOF county population projections for 2030 / 2035 / 2040", "why": "Values live in an .xlsx this session cannot parse (R-12).", "used_in_model": "no"},
+    {"item": "Tenant unit count (2,115), franchised share (93%), California share (44.1%), same-store sales change", "why": "10-K narrative indexed but statistics not transcribed in this session (T08).", "used_in_model": "no"},
+    {"item": "LAUSD four-year cohort graduation rate 86.2%", "why": "CDE DataQuest not re-read (K03).", "used_in_model": "no"},
+    {"item": "CDI FAIR Plan assessment of $1.0 billion", "why": "No CDI order retrieved (R-08).", "used_in_model": "no"},
+    {"item": "Structures destroyed in the January 2025 Eaton and Palisades fires", "why": "Not re-verified; two incompatible counts in the repo (R-10).", "used_in_model": "no"},
+    {"item": "County documentary transfer tax 0.11%", "why": "County page not read (R-13).", "used_in_model": "no"},
+    {"item": "City of Los Angeles minimum wage $18.42/hour from 2026-07-01", "why": "City memo not read (R-11).", "used_in_model": "no"},
+    {"item": "A November 2026 statewide ballot measure on local transfer taxes", "why": "No official elections source read (R-09).", "used_in_model": "no"}
+  ]
+}

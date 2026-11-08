@@ -1,0 +1,170 @@
+{
+  "accessed": "2026-11-08",
+  "session": "arena/343c7030-jack2",
+  "note": "Every value in facts.json is either read directly from one of these pages on 2026-11-08 by this session, or is labelled 'assumption' / 'derived' and carries the formula. No value is taken from an aggregator or a news article. Where a page could not be read, the value is blank and the row is on flagged.html.",
+  "sources": [
+    {
+      "id": "S01",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics (BLS), Western Information Office",
+      "title": "Los Angeles Area Economic Summary — updated November 04, 2026",
+      "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+      "covers": "Unemployment (US, CA, LA metro, LA County, LA city), nonfarm payroll and 12-month change by sector, CPI-U, ECI, QCEW average weekly wage, OEWS hourly wages, ECEC",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S02",
+      "tier": "A",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts: Los Angeles city, California (V2025 population estimates; 2020–2024 ACS 5-year)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia/PST045224",
+      "covers": "City population, income, poverty, housing, tenure, education, commuting, density, households, Economic Census sales",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S03",
+      "tier": "A",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts: Los Angeles County, California (V2025 population estimates; 2020–2024 ACS 5-year)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+      "covers": "County population, income, poverty, businesses, payroll, employment, density, land area, commuting",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "The slug must be losangelescountycalifornia. The slug lacountycalifornia (used by the published root build, source S2) resolves to a United States table and silently drops the county column — see irregularity R-01 on flagged.html."
+    },
+    {
+      "id": "S04",
+      "tier": "A",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Daily Treasury Par Yield Curve Rates — November 2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+      "covers": "Par constant-maturity yields, 1 month to 30 years, 2026-11-02 to 2026-11-06",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S05",
+      "tier": "B",
+      "publisher": "U.S. Securities and Exchange Commission — EDGAR",
+      "title": "Jack in the Box Inc. (CIK 0000807882) Form 10-K for fiscal year ended 2025-09-28, filed 2025-11-19 (Acc-no 0000807882-25-000072)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/0000807882-25-000072-index.htm",
+      "covers": "Tenant filing index; FY2025 net loss, unit count, franchising, same-store sales, closure program, lease renewal language",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S06",
+      "tier": "B",
+      "publisher": "U.S. Securities and Exchange Commission — EDGAR",
+      "title": "Jack in the Box Inc. Form 10-Q for the quarter ended 2026-07-05, filed 2026-08-12 (Acc-no 0000807882-26-000091)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/0000807882-26-000091-index.htm",
+      "covers": "Most recent quarterly report; nine-month and quarterly results, balance sheet",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S07",
+      "tier": "B",
+      "publisher": "U.S. Securities and Exchange Commission — XBRL company concept API",
+      "title": "Jack in the Box Inc. — us-gaap:NetIncomeLoss (all periods)",
+      "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/NetIncomeLoss.json",
+      "covers": "Net income (loss) attributable to parent by period, including FY2025 and the first nine months of FY2026",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S08",
+      "tier": "B",
+      "publisher": "U.S. Securities and Exchange Commission — XBRL company concept API",
+      "title": "Jack in the Box Inc. — us-gaap:StockholdersEquity (all periods)",
+      "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0000807882/us-gaap/StockholdersEquity.json",
+      "covers": "Stockholders' equity by balance-sheet date, showing the equity deficit and its direction",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S09",
+      "tier": "A",
+      "publisher": "City of Los Angeles, Office of Finance",
+      "title": "Real Property Transfer Tax and Measure ULA FAQ",
+      "url": "https://finance.lacity.gov/faq/measure-ula",
+      "covers": "City base transfer tax 0.45%, ULA 4%/5.5% surtax, all-in 4.45%/5.95%, thresholds $5,400,000 and $10,900,000 for closings after 2026-06-30, effective date, annual CPI indexing",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S10",
+      "tier": "A",
+      "publisher": "Los Angeles County Office of the Assessor",
+      "title": "Proposition 13",
+      "url": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13",
+      "covers": "1% general levy, 2% annual assessed-value cap, reassessment on change of ownership / new construction, Proposition 8 decline-in-value exception",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S11",
+      "tier": "A",
+      "publisher": "Internal Revenue Service",
+      "title": "Like-Kind Exchanges Under IRC Section 1031 — Fact Sheet FS-2008-18",
+      "url": "https://www.irs.gov/pub/irs-news/fs-08-18.pdf",
+      "covers": "Qualifying property, 45-day identification period, 180-day exchange period, qualified intermediary, deferred (not forgiven) gain and carryover basis",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S12",
+      "tier": "A",
+      "publisher": "U.S. Geological Survey",
+      "title": "What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)",
+      "url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+      "covers": "30-year probability of M≥6.7 (60%), M≥7.0 (46%) and M≥7.5 (31%) in the Los Angeles region",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "The older USGS FAQ URL .../what-probability-earthquake-magnitude-67-or-greater-occurring-california now returns HTTP 404; several earlier sessions cite it. See irregularity R-05."
+    },
+    {
+      "id": "S13",
+      "tier": "A",
+      "publisher": "CAL FIRE — Office of the State Fire Marshal",
+      "title": "Fire Hazard Severity Zones (FHSZ)",
+      "url": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones",
+      "covers": "FHSZ classes (moderate / high / very high), SRA vs LRA mapping, 2026 SRA update comment period, statewide FHSZ viewers",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Hazard is mapped, not risk. A parcel-level zone cannot be asserted without the address, so that row is blank and flagged (B09)."
+    },
+    {
+      "id": "S14",
+      "tier": "A",
+      "publisher": "California Department of Education",
+      "title": "District Profile: Los Angeles Unified, school year 2025-26",
+      "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+      "covers": "LAUSD enrollment and English-learner counts for 2025-26",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S15",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+      "title": "Minimum Wage Frequently Asked Questions",
+      "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+      "covers": "California statewide minimum wage $16.90/hour effective 2026-01-01 and the CPI-W indexation mechanism",
+      "accessed": "2026-11-08",
+      "verified": true
+    },
+    {
+      "id": "S16",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+      "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228)",
+      "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+      "covers": "Fast-food minimum wage $20.00/hour from 2024-04-01, coverage test (60+ national units, limited service), Fast Food Council",
+      "accessed": "2026-11-08",
+      "verified": true
+    }
+  ]
+}
