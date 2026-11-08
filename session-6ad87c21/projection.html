@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projection system — Jack in the Box NNN decision dashboard</title>
+<meta name="description" content="Source-verified decision dashboard for a Central Los Angeles Jack in the Box on an NNN lease expiring between 2030 and 2035.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238c1d21'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='sans-serif'%3EJ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><span class="dot">J</span><span>Jack in the Box &middot; NNN<small>Central Los Angeles &middot; session I dashboard</small></span></div>
+    <nav class="main" aria-label="Sections"><a href="index.html">Overview</a><a href="executive-summary.html">Summary</a><a href="decision.html">Decision</a><a href="projection.html" aria-current="page">Model</a><a href="risks.html">Risks</a><a href="market.html">Market</a><a href="economy.html">Economy</a><a href="tenant.html">Tenant</a><a href="capital-tax.html">Capital &amp; tax</a><a href="property-lease.html">Property</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged</a><a href="methodology.html">Method</a><a href="privacy.html">Privacy</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<div class="eyebrow">How the numbers were produced</div>
+<h1>Projection system</h1>
+<p class="lede">A deterministic 2026–2040 model, a seeded Monte Carlo, a sensitivity grid and the break-evens — with every assumption published.</p>
+
+<p>This page is the whole projection system: the inputs, the two independent engines (a deterministic 2026&ndash;2040
+model and a seeded Monte Carlo), the sensitivity grid, and the break-evens. Everything is expressed per
+<b>$100,000 of in-place annual net operating income</b>, so no private rent figure is needed and the owner can scale
+any output by (actual NOI &divide; 100,000).</p>
+
+<h2>The equations</h2>
+<div class="card tight">
+<p class="mono">value(t) = NOI(t) &divide; cap(t)</p>
+<p class="mono">cap(t) = base_cap + min(1.50%, 0.25% &times; (10 &minus; remaining_term(t))) + drift &times; (t &minus; 2026)</p>
+<p class="mono">sale_proceeds = value &minus; (4.375% + transfer_tax) &times; value &minus; income_tax_on_gain</p>
+<p class="mono">transfer_tax = 0.45% (&le; $5.4m) | 4.45% ($5.4m&ndash;$10.9m) | 5.95% (&ge; $10.9m)</p>
+<p class="mono">certainty_equivalent = [ E( u(wealth) ) &times; (1&minus;&gamma;) ] ^ (1/(1&minus;&gamma)), &gamma; = 2</p>
+</div>
+<p>That is the entire model. There is no machine learning, no proprietary data and no hidden adjustment. Every
+parameter is in the table below and every one can be replaced with a real figure from the lease, an appraisal or a
+CPA.</p>
+
+<h2>Scenarios</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Scenario</th><th>Story</th><th class="num">NOI growth</th><th class="num">Base cap rate</th>
+<th class="num">Cap drift</th></tr></thead><tbody><tr><td><b>Bear</b></td><td>Recession, cap-rate expansion, tenant weakness</td><td class="num">1.0%</td><td class="num">6.75%</td><td class="num">+15 bp/yr</td></tr><tr><td><b>Base</b></td><td>Slow growth, flat cap rates, tenant performs</td><td class="num">2.0%</td><td class="num">6.00%</td><td class="num">+0 bp/yr</td></tr><tr><td><b>Bull</b></td><td>Rate relief, strong trade area, early extension</td><td class="num">3.0%</td><td class="num">5.50%</td><td class="num">-10 bp/yr</td></tr></tbody></table></div>
+
+<h2>Assumptions — all 21, with the range tested</h2>
+<p class="small muted">These are analyst assumptions, not observations. The two official anchors in the model are the
+10-year Treasury at 4.86% (S09) and the Measure ULA thresholds (S10); everything else is a stated judgement so the
+reader can disagree with it explicitly.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>ID</th><th>Assumption</th><th class="num">Base value</th><th>Range tested</th><th>What it stands in for</th></tr></thead>
+<tbody><tr><td class="code">A1</td><td>Base-case net operating income growth</td><td class="num">2.00%</td><td>1.0% to 3.0% a year</td><td class="small muted">Stands in for the lease&#x27;s contractual escalations. LA metro CPI-U is +3.7% and ECI +3.9% (S01), so 2.0% is deliberately conservative for a legacy NNN lease. Replace with the actual escalation clause.</td></tr><tr><td class="code">A2</td><td>Remaining lease term at the access date</td><td class="num">6</td><td>4 to 9 years</td><td class="small muted">Derived from the owner-supplied 2030-2035 expiry window and a 2032 midpoint. The exact date is unknown (F108); the 2030 and 2035 endpoints are both tested in the sensitivity grid.</td></tr><tr><td class="code">A3</td><td>Base-case capitalisation rate for a 10-year-or-longer term</td><td class="num">6.00%</td><td>5.50% to 6.75%</td><td class="small muted">No official public cap-rate series exists (F86). The level is anchored to the 4.86% 10-year Treasury (S09) plus a property and credit spread, and must be replaced by a broker opinion of value or an appraisal.</td></tr><tr><td class="code">A4</td><td>Term premium: cap-rate widening per year of term below 10 years</td><td class="num">0.25%</td><td>0.15% to 0.35% a year</td><td class="small muted">The market penalty for a lease that will roll soon. Capped at 1.50% in total.</td></tr><tr><td class="code">A5</td><td>Sale costs</td><td class="num">4.81%</td><td>4.0% to 6.5%</td><td class="small muted">Broker 4.0% + City base transfer tax 0.45% (F90) + assumed County documentary transfer tax 0.11% (F97, unverified) + title/legal 0.25%. The 4.0%-5.5% Measure ULA surtax (F91, F92) is added automatically when the modelled price crosses the official threshold.</td></tr><tr><td class="code">A6</td><td>Adjusted cost basis as a share of 2026 value</td><td class="num">45.00%</td><td>0.25 to 0.75</td><td class="small muted">Private tax data (F113) are never collected. This ratio only sets the size of the tax bill in the after-tax comparison; the ranking is tested across the range.</td></tr><tr><td class="code">A7</td><td>Tax on appreciation (federal + California)</td><td class="num">37.10%</td><td>0.30 to 0.41</td><td class="small muted">20% federal long-term capital gain + 3.8% net investment income tax + 13.3% California top rate (F98, unverified). Replace with the owner&#x27;s actual marginal position.</td></tr><tr><td class="code">A8</td><td>Tax on unrecaptured depreciation</td><td class="num">38.30%</td><td>0.25 to 0.41</td><td class="small muted">25% federal unrecaptured Section 1250 rate + 13.3% California. Applied to the share of gain treated as recapture.</td></tr><tr><td class="code">A9</td><td>Share of gain treated as depreciation recapture</td><td class="num">40.00%</td><td>0.20 to 0.60</td><td class="small muted">Depends on holding period and prior depreciation taken.</td></tr><tr><td class="code">A10</td><td>Discount rate for present values</td><td class="num">5.00%</td><td>4.5% to 6.0%</td><td class="small muted">Anchored to the 4.86% 10-year Treasury on 2026-11-06 (F81).</td></tr><tr><td class="code">A11</td><td>Reinvestment cap rate after a sale (diversified NNN)</td><td class="num">6.50%</td><td>6.0% to 7.5%</td><td class="small muted">Where the proceeds go after a Section 1031 exchange. A diversified net-lease portfolio is assumed to trade wider than a single asset because it carries no single-tenant risk.</td></tr><tr><td class="code">A12</td><td>Reinvestment income growth</td><td class="num">2.00%</td><td>1.5% to 2.5%</td><td class="small muted">Contractual escalations in the replacement portfolio.</td></tr><tr><td class="code">A13</td><td>Probability the tenant renews at or above in-place rent</td><td class="num">65.00%</td><td>0.40 to 0.85</td><td class="small muted">Informed by the closure programme and negative same-store sales (F68, F76), which push it down, and by the scarcity of drive-thru sites, which pushes it up. It is a judgement, not an observation.</td></tr><tr><td class="code">A14</td><td>Rent reset on renewal</td><td class="num">0.0</td><td>-15% to +10%</td><td class="small muted">The brand&#x27;s stated policy is to renew at market. A zero reset is the neutral case.</td></tr><tr><td class="code">A15</td><td>Vacancy period if the tenant does not renew</td><td class="num">1.5</td><td>0.75 to 3.0 years</td><td class="small muted">Drive-thru re-tenanting takes time; the site is desirable but the conditional-use permit is not automatic.</td></tr><tr><td class="code">A16</td><td>Re-leasing cost and capital</td><td class="num">5.00%</td><td>0.03 to 0.10</td><td class="small muted">Share of value spent on tenant improvements, leasing commissions and downtime make-ready.</td></tr><tr><td class="code">A17</td><td>Cap rate on a re-let asset with no credit tenant</td><td class="num">6.75%</td><td>6.0% to 8.0%</td><td class="small muted">A local operator is weaker credit than a national brand.</td></tr><tr><td class="code">A18</td><td>Annual volatility of NOI growth</td><td class="num">1.50%</td><td>0.010 to 0.025</td><td class="small muted">Used only in the Monte Carlo.</td></tr><tr><td class="code">A19</td><td>Annual volatility of the cap rate</td><td class="num">0.15%</td><td>0.0010 to 0.0025</td><td class="small muted">A 15 basis point annual standard deviation on the cap rate compounds to a wide band by 2040.</td></tr><tr><td class="code">A20</td><td>Black-swan impairment</td><td class="num">25.00%</td><td>0.15 to 0.40</td><td class="small muted">Value loss, applied in 4% of Monte Carlo trials, from a severe earthquake, an urban fire, a pandemic-style closure order or a forced sale. The 30-year M&gt;=6.7 probability in the LA region is 60% (F99), so a 4% chance over 15 years is not a tail that can be ignored - it is a tail that is insured against, which is why it is modest here and discussed at length on the risk page.</td></tr><tr><td class="code">A21</td><td>Risk aversion (CRRA coefficient) for the certainty equivalent</td><td class="num">2.0</td><td>1.0 to 3.0</td><td class="small muted">A coefficient of 2 means the owner would accept a materially lower certain amount instead of a risky gamble with the same average. This is the measure that ranks the strategies.</td></tr></tbody></table></div>
+
+<h2>Deterministic results and the Monte Carlo</h2>
+<p>10,000 trials per strategy, seed 20261108, reproducible byte-for-byte. Trial inputs: NOI growth
+drawn from a normal distribution around the base case; a cumulative cap-rate shock; a 35% chance that a hold strategy
+falls into the no-renewal path; and a 4% chance of a severe impairment event.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Strategy</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th>
+<th class="num">P05</th><th class="num">Median</th><th class="num">P95</th><th class="num">CE</th></tr></thead>
+<tbody><tr><td>Sell now through a Section 1031 exchange</td><td class="num">$3,655,435</td><td class="num">$4,047,088</td><td class="num">$4,358,403</td><td class="num">$3,466,627</td><td class="num">$4,033,516</td><td class="num">$4,643,753</td><td class="num"><b>$4,000,783</b></td></tr><tr><td>Sell now and pay the tax</td><td class="num">$3,052,243</td><td class="num">$3,379,269</td><td class="num">$3,639,213</td><td class="num">$2,912,206</td><td class="num">$3,374,353</td><td class="num">$3,887,202</td><td class="num"><b>$3,354,263</b></td></tr><tr><td>Hold to expiry, renew at market, sell in 2036</td><td class="num">$4,095,460</td><td class="num">$5,116,482</td><td class="num">$6,354,408</td><td class="num">$2,875,073</td><td class="num">$4,614,131</td><td class="num">$6,320,452</td><td class="num"><b>$4,258,340</b></td></tr><tr><td>Extend early in 2027, sell in 2030 with 12 years of term</td><td class="num">$4,122,693</td><td class="num">$4,907,491</td><td class="num">$5,657,634</td><td class="num">$2,828,149</td><td class="num">$4,538,759</td><td class="num">$5,689,988</td><td class="num"><b>$4,154,212</b></td></tr><tr><td>Do not renew: go dark at expiry, re-let, sell in 2036</td><td class="num">$3,313,629</td><td class="num">$3,337,008</td><td class="num">$3,355,592</td><td class="num">$2,609,097</td><td class="num">$3,324,771</td><td class="num">$4,142,680</td><td class="num"><b>$3,277,264</b></td></tr><tr><td>Hold the asset through 2040 and never sell</td><td class="num">$2,942,880</td><td class="num">$3,404,024</td><td class="num">$3,972,220</td><td class="num">$2,610,034</td><td class="num">$3,388,592</td><td class="num">$4,444,671</td><td class="num"><b>$3,348,066</b></td></tr></tbody></table></div>
+
+<h2>Sensitivity grid</h2>
+<p>Each column re-runs all six strategies with one input moved. The ordering of the top three does not change in any
+column, which is the test the recommendation has to pass.</p>
+<div class="tablewrap"><table>
+<thead><tr><th>Strategy</th><th class="num">Expiry 2030 (earliest)</th><th class="num">Expiry 2032 (midpoint)</th><th class="num">Expiry 2035 (latest)</th><th class="num">Cap rate -50 bp</th><th class="num">Cap rate +50 bp</th><th class="num">NOI growth 1.0%</th><th class="num">NOI growth 3.0%</th></tr></thead><tbody><tr><td>Sell now through a Section 1031 exchange</td><td class="num">$3,777,283</td><td class="num">$4,047,088</td><td class="num">$4,532,739</td><td class="num">$4,358,403</td><td class="num">$3,777,283</td><td class="num">$4,047,088</td><td class="num">$4,047,088</td></tr><tr><td>Sell now and pay the tax</td><td class="num">$3,153,985</td><td class="num">$3,379,269</td><td class="num">$3,784,782</td><td class="num">$3,639,213</td><td class="num">$3,153,985</td><td class="num">$3,379,269</td><td class="num">$3,379,269</td></tr><tr><td>Hold to expiry, renew at market, sell in 2036</td><td class="num">$5,100,377</td><td class="num">$5,116,482</td><td class="num">$5,145,473</td><td class="num">$5,467,614</td><td class="num">$4,818,990</td><td class="num">$4,713,080</td><td class="num">$5,555,263</td></tr><tr><td>Extend early in 2027, sell in 2030 with 12 years of term</td><td class="num">$4,891,385</td><td class="num">$4,907,491</td><td class="num">$4,936,481</td><td class="num">$5,302,938</td><td class="num">$4,572,501</td><td class="num">$4,736,994</td><td class="num">$5,082,976</td></tr><tr><td>Do not renew: go dark at expiry, re-let, sell in 2036</td><td class="num">$3,525,639</td><td class="num">$3,337,008</td><td class="num">$3,043,281</td><td class="num">$3,355,592</td><td class="num">$3,320,903</td><td class="num">$3,049,447</td><td class="num">$3,650,828</td></tr><tr><td>Hold the asset through 2040 and never sell</td><td class="num">$3,404,024</td><td class="num">$3,404,024</td><td class="num">$3,461,772</td><td class="num">$3,523,644</td><td class="num">$3,299,356</td><td class="num">$3,068,602</td><td class="num">$3,779,670</td></tr></tbody></table></div>
+
+<h2>Break-even between selling now and extending first</h2>
+<div class="tablewrap"><table>
+<thead><tr><th class="num">Cap-rate shift</th><th class="num">Sell now</th><th class="num">Extend then sell</th>
+<th class="num">Advantage of extending</th></tr></thead>
+<tbody><tr><td class="num">-100 bp</td><td class="num">$4,721,603</td><td class="num">$5,776,856</td><td class="num">$1,055,252</td></tr><tr><td class="num">-50 bp</td><td class="num">$4,358,403</td><td class="num">$5,302,938</td><td class="num">$944,535</td></tr><tr><td class="num">+0 bp</td><td class="num">$4,047,088</td><td class="num">$4,907,491</td><td class="num">$860,403</td></tr><tr><td class="num">+50 bp</td><td class="num">$3,777,283</td><td class="num">$4,572,501</td><td class="num">$795,218</td></tr><tr><td class="num">+100 bp</td><td class="num">$3,541,202</td><td class="num">$4,285,078</td><td class="num">$743,876</td></tr></tbody></table></div>
+
+<h2>What the model cannot do</h2>
+<ul class="clean">
+<li>It cannot price the subject parcel. It prices <i>a dollar of NOI</i>. Substitute the real NOI to get a real number,
+and get an appraisal before relying on the level.</li>
+<li>It cannot know the lease. The expiry, options, escalations, percentage rent and guaranty are unknown; the expiry
+window is tested at both ends.</li>
+<li>It cannot see the franchisee. A franchisee balance sheet, a personal guaranty or a letter of credit would change
+the credit spread, and therefore the cap rate, materially.</li>
+<li>It cannot forecast rates. The Treasury curve is treated as a fact and a range, not a forecast.</li>
+<li>It does not model a land redevelopment alternative, which may dominate everything else if the site is
+under-improved.</li>
+</ul>
+<hr>
+<p class="small">Reproduce: <code>python3 session-6ad87c21/scripts/model.py</code> then
+<code>python3 session-6ad87c21/scripts/build_site.py</code> and
+<code>python3 session-6ad87c21/scripts/verify.py</code>. Python 3.11, standard library only, no network needed.</p>
+
+</main>
+<footer class="wrap">
+  <p><b>Session I dashboard</b> &middot; built 2026-11-08 &middot; every published value carries a link to the official source it was read from.
+  Values that could not be confirmed are blank and listed on the <a href="flagged.html">Flagged for Review</a> page.</p>
+  <p>Internal decision support for the property owner. Not an appraisal, not tax advice, not investment advice.
+  The parcel, owner, tenant entity and all rent, basis and loan figures are withheld by policy &mdash; see <a href="privacy.html">Privacy</a>.</p>
+  <p>Other independently built workbooks in this repository: <a href="../workspaces.html">All workspaces</a> &middot;
+  <a href="../index.html">root workbook</a> &middot; <a href="../docs/index.html">Session C dossier</a>.</p>
+</footer>
+</body>
+</html>

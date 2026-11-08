@@ -172,3 +172,42 @@ Two findings worth knowing before reading anything else in this repository:
 - Sessions D and E both lead on the tenant's FY2025 net loss without noting that the same SEC dataset shows
   **net income of +$27.9m for the first nine months of FY2026** and a narrowing equity deficit. Both facts are
   published side by side on the Session G tenant page (flagged R-08).
+
+
+## Session I dashboard (`session-6ad87c21/`) — 2026-11-08
+
+A ninth, independent session (`arena/6ad87c21-jack2`) re-verified the evidence base from scratch on **2026-11-08**
+and published a clean decision dashboard at
+**https://wingbangboozle1-lang.github.io/Jack2/session-6ad87c21/**. It supersedes nothing: the root build, `docs/`
+and Sessions A–H are unchanged and remain live.
+
+| | |
+|---|---|
+| Recommendation | **Dual track: pursue an early 10–15 year extension at or above in-place rent, prepare a §1031 exit in parallel, sell 2029–2032 with more than ten years of term.** If the extension fails by 31 Dec 2027, sell in 2028. Never let the lease expire. |
+| Evidence | 114 fact rows — **92 verified, 4 computed, 3 owner-supplied, 15 deliberately blank** — against **17 official sources opened and read on the access date** |
+| Model | Six strategies carried to 2040, deterministic Bear/Base/Bull, a **seeded 10,000-trial Monte Carlo** (seed 20261108), a 7-column sensitivity grid, a 5-point cap-rate break-even and 8 robustness stress cases; **21 assumptions published with the range tested** |
+| Risks | 31 rows — 19 business-as-usual and 12 black-swan — each mapped to the four decisions it affects |
+| Review | **10 repository irregularities** (I-01…I-10) plus 15 unverified data items, published with evidence and a stated fix |
+| Privacy | No address, APN, rent, basis, loan or owner identity anywhere; enforced by a build-failing scan in `scripts/verify.py` |
+
+Headline numbers per $100,000 of in-place NOI at 2040, after tax: hold-to-expiry-and-renew ranks first on the
+risk-adjusted measure ($4.26m), extend-then-sell second ($4.15m), sell-now-through-a-§1031 third ($4.00m, and the
+best worst-5% floor at $3.47m). A §1031 exchange is worth **+$646,520** against a taxable sale; letting the lease
+expire is **−23%** against the leader.
+
+Rebuild and verify:
+
+```bash
+python3 session-6ad87c21/scripts/model.py            # deterministic + seeded Monte Carlo
+python3 session-6ad87c21/scripts/build_site.py       # 14 pages
+python3 session-6ad87c21/scripts/verify.py           # 1,271 checks: sources, blanks, links, PII, model
+```
+
+Two facts worth knowing before reading any other workbook in this repository:
+
+- **The tenant is not the brand.** 93.0% of Jack in the Box's 2,115 restaurants are franchised, so the lease on a
+  franchised unit is credit to a franchisee entity, not to the issuer. Every dashboard here should be read with that
+  in mind.
+- **There is no verified cap rate anywhere in this repository**, including here. There is no official public
+  cap-rate series; every valuation in every workbook is conditional on an assumption. Obtain a broker opinion of
+  value before relying on a level.
