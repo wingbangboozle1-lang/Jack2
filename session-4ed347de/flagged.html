@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flagged for review &middot; Session I workbook</title>
+<meta name="description" content="10 items that are not settled, with the source that would settle each one.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top">
+  <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
+  <div class="sub">Session L &middot; independent re-verification dated 2026-11-08 &middot;
+  single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
+</header>
+<nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html" aria-current="page">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html">Method &amp; privacy</a></nav>
+<main>
+<h1>Flagged for review</h1>
+<p class="lede">10 items that are not settled, with the source that would settle each one.</p>
+
+<div class="callout warn">
+<p><strong>Nothing on this page blocks the publication of this workbook.</strong> It is the list of things
+that are <em>not</em> settled, published so they can be reviewed rather than buried. 10 items,
+16 of them blank data rows.</p>
+</div>
+<div class="card">
+<h3><span class="badge warn">material</span>
+<code>F1</code> &nbsp;The net-lease reinvestment benchmark has moved since the published model was built</h3>
+<p>The site root uses a 7.3% net-lease acquisition yield (Realty Income FY2025, filed 2026-02-24). Realty Income&#x27;s Q3 2026 release, filed 2026-11-02, reports 6.8%. The published base-case breakeven is 6.975%, so the newer number reverses the base-case sign: at 7.3% selling wins by $246,824; at 6.8% holding wins by $128,982.</p>
+<p class="small"><strong>What is being done:</strong> Not an error in the published work - a newer official record. The recommendation is re-framed rather than rewritten: the decision is inside the noise band and should not be made on this input alone.</p>
+<p class="small"><a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. (CIK 0000726728) Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three Months and Year Ended December 31, 2025">S12 &#8599;</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm" target="_blank" rel="noopener noreferrer" title="U.S. Securities and Exchange Commission — Realty Income Corp. Form 8-K Ex. 99.1 &mdash; Realty Income Announces Operating Results for the Three and Nine Months Ended September 30, 2026">S13 &#8599;</a></p>
+</div><div class="card">
+<h3><span class="badge ok">none</span>
+<code>F2</code> &nbsp;Census QuickFacts slug defect: already resolved on main, retained for the audit trail</h3>
+<p>The root site&#x27;s QuickFacts URL once used the slug &#x27;lacountycalifornia&#x27;, which QuickFacts does not recognise; it silently serves the United States table (FIPS 1, land area 3,533,038 sq mi). The integration pass (session-343c7030) corrected the slug on 2026-11-08 and published the county column. This session re-confirmed the correct slug independently and verified the published county values.</p>
+<p class="small"><strong>What is being done:</strong> No action required. Not reported as an open defect, because reporting a fixed issue as open would be its own kind of inaccuracy. The correct slug is published in this session&#x27;s ledger as S05.</p>
+<p class="small"><a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)">S04 &#8599;</a> <a class="src" href="https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau &mdash; QuickFacts: Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)">S05 &#8599;</a></p>
+</div><div class="card">
+<h3><span class="badge neutral">low</span>
+<code>F3</code> &nbsp;USGS citation points at a program landing page, not the record</h3>
+<p>The root site cites usgs.gov/programs/earthquake-hazards for the 60/46/31% probabilities. That page is a program home page; the figures come from the USGS FAQ record citing UCERF3.</p>
+<p class="small"><strong>What is being done:</strong> Specific record linked on this session&#x27;s pages.</p>
+<p class="small"><a class="src" href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener noreferrer" title="U.S. Geological Survey &mdash; What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)">S23 &#8599;</a></p>
+</div><div class="card">
+<h3><span class="badge warn">medium</span>
+<code>F4</code> &nbsp;The only local forecast cited stops before the decision window</h3>
+<p>The root site cites an LAEDC report commissioned by the City of Los Angeles Workforce Development Board. The document is genuine, but covers 2022-2028 and is built on 2022 ACS data. The lease runs to 2030-2035.</p>
+<p class="small"><strong>What is being done:</strong> For 2030-2035 the defensible official series is the CA DOF county projection programme (P-2A, Vintage 2026). The .xlsx was not parsed this session, so the numbers are not restated here.</p>
+<p class="small"><a class="src" href="https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm" target="_blank" rel="noopener noreferrer" title="California Department of Industrial Relations, Labor Commissioner&#x27;s Office &mdash; Fast Food Minimum Wage Frequently Asked Questions (AB 1228 / Labor Code 1474-1476)">S21 &#8599;</a> <a class="src" href="https://www.bls.gov/news.release/pdf/metro.pdf" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics &mdash; Metropolitan Area Employment and Unemployment — September 2026">S03 &#8599;</a></p>
+</div><div class="card">
+<h3><span class="badge neutral">low</span>
+<code>F5</code> &nbsp;Two federal tax rates are published without a source read this session</h3>
+<p>23.8% long-term capital gains and 28.8% unrecaptured section 1250 rates appear on the root site. They are plausible and widely used, but this session did not read them on an IRS page.</p>
+<p class="small"><strong>What is being done:</strong> Left blank and flagged rather than confirmed. Manual review against IRC 1(h), 1411 and 1250.</p>
+<p class="small"><a class="src" href="https://www.irs.gov/pub/irs-pdf/i8824.pdf" target="_blank" rel="noopener noreferrer" title="Internal Revenue Service &mdash; Instructions for Form 8824 — Like-Kind Exchanges (2025)">S17 &#8599;</a></p>
+</div><div class="card">
+<h3><span class="badge neutral">low</span>
+<code>F6</code> &nbsp;Two pull requests from earlier sessions were never merged</h3>
+<p>PR #14 (session E) and PR #18 (session F) are still open. Their content is largely published through other sessions&#x27; work, but the PRs themselves are unresolved.</p>
+<p class="small"><strong>What is being done:</strong> Recorded in COORDINATION.md. Not closed or merged by this session - they belong to their owners.</p>
+<p class="small"><span class="blank">no external source &mdash; a repository or completeness issue</span></p>
+</div><div class="card">
+<h3><span class="badge warn">medium</span>
+<code>F7</code> &nbsp;Eight workbooks, several headline numbers, one property</h3>
+<p>Sessions A-H each published a workbook under their own directory. They agree on most verified facts but differ in headline framing. A reader arriving at the site root sees one answer while other directories show others.</p>
+<p class="small"><strong>What is being done:</strong> The workspaces index links all of them. This session adds an explicit reconciliation rather than a ninth competing answer.</p>
+<p class="small"><span class="blank">no external source &mdash; a repository or completeness issue</span></p>
+</div><div class="card">
+<h3><span class="badge bad">high</span>
+<code>F8</code> &nbsp;The eight owner-supplied facts that actually decide this asset are missing</h3>
+<p>Contract rent, exact expiry date, escalation formula, renewal option terms, tax basis, secured debt, lease recovery structure, and parcel geometry are not in the repository. Every model in it, including this one, substitutes an assumption for each.</p>
+<p class="small"><strong>What is being done:</strong> Published as blank rows (P01-P08) with no value. Nothing is inferred.</p>
+<p class="small"><span class="blank">no external source &mdash; a repository or completeness issue</span></p>
+</div><div class="card">
+<h3><span class="badge bad">high</span>
+<code>F9</code> &nbsp;Parcel-level hazard and insurance status is unverified</h3>
+<p>FEMA flood zone, CAL FIRE FHSZ class, CGS seismic zone and a live insurance quotation cannot be determined without the parcel identifier, which is deliberately not published.</p>
+<p class="small"><strong>What is being done:</strong> Blank rows H07-H10. These are decision triggers, not footnotes: an uninsurable parcel overrides the financial ranking.</p>
+<p class="small"><a class="src" href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener noreferrer" title="U.S. Geological Survey &mdash; What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)">S23 &#8599;</a> <a class="src" href="https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire" target="_blank" rel="noopener noreferrer" title="California Department of Forestry and Fire Protection (CAL FIRE) &mdash; Eaton Fire incident report (Los Angeles County, January 2025)">S24 &#8599;</a></p>
+</div><div class="card">
+<h3><span class="badge ok">none</span>
+<code>F10</code> &nbsp;Privacy scan: one address found, reviewed and cleared</h3>
+<p>A repository-wide scan for emails, phone numbers, street addresses and parcel numbers returned one hit: the public headquarters street address of the Los Angeles Unified School District, in research/04-education.md. The specific address is not reproduced here, on purpose.</p>
+<p class="small"><strong>What is being done:</strong> Public agency address, not personal information. Quoted nowhere in this session&#x27;s output. No owner identity, parcel number, street address or contact detail appears in this workbook.</p>
+<p class="small"><span class="blank">no external source &mdash; a repository or completeness issue</span></p>
+</div>
+
+<h2>Blank data rows: 16 items, no value inferred</h2>
+<p>Every one of these is a value that this session could not confirm from an official source. Per the
+verification rule they carry no number at all &mdash; not an estimate, not a range, not a figure carried over
+from another session.</p>
+<table><thead><tr><th>ID</th><th>What is missing</th><th>Why it could not be confirmed</th></tr></thead>
+<tbody><tr><td><code>T18</code></td><td>Jack in the Box corporate credit rating</td><td class="small muted">Not published in the SEC filings read this session. Obtain from the rating agency or the 10-K debt note before relying on any rating statement.</td></tr><tr><td><code>E01</code></td><td>Los Angeles Unified School District four-year adjusted cohort graduation rate (2025-26)</td><td class="small muted">The official CDE file (acgr26, posted 2026-10-15) was located, but the district-level rate was not read this session. Left blank rather than copied from another session.</td></tr><tr><td><code>E02</code></td><td>Los Angeles Unified School District enrollment (2025-26)</td><td class="small muted">Not re-verified this session. CDE district profile required. Prior sessions publish 497,105; treated as unconfirmed here.</td></tr><tr><td><code>H07</code></td><td>Subject parcel FEMA flood zone designation</td><td class="small muted">Parcel-level. Requires the assessor parcel number, which is deliberately not published. Obtain from FEMA&#x27;s Flood Map Service Center.</td></tr><tr><td><code>H08</code></td><td>Subject parcel CAL FIRE Fire Hazard Severity Zone</td><td class="small muted">Parcel-level. Requires the parcel geometry. Use CAL FIRE&#x27;s FHSZ viewer / LRA maps with the APN.</td></tr><tr><td><code>H09</code></td><td>Subject parcel CGS seismic hazard zone (liquefaction / landslide)</td><td class="small muted">Parcel-level. Requires the APN and the CGS Seismic Hazards Program maps.</td></tr><tr><td><code>H10</code></td><td>Current property insurance quotation and availability</td><td class="small muted">Not obtainable without the owner&#x27;s cooperation and a broker. The published decision triggers make this a sell trigger if the quote exceeds 1.5% of value or coverage is unavailable.</td></tr><tr><td><code>H11</code></td><td>FEMA National Risk Index composite score, Los Angeles County</td><td class="small muted">Only third-party reproductions of NRI v1.20 were reachable this session. FEMA&#x27;s own NRI data (OpenFEMA / NRI viewer) must be read directly. Left blank.</td></tr><tr><td><code>P01</code></td><td>Actual contract base rent payable by the tenant</td><td class="small muted">The published model assumes $150,000. That is an analyst assumption, not a verified fact.</td></tr><tr><td><code>P02</code></td><td>Exact lease expiration date</td><td class="small muted">The brief supplies only a 2030-2035 window. The model uses 2032 as the midpoint assumption.</td></tr><tr><td><code>P03</code></td><td>Contract rent escalations (fixed, CPI, or none)</td><td class="small muted">The model assumes 2.0% per year.</td></tr><tr><td><code>P04</code></td><td>Renewal option terms (number, length, rent basis, notice window)</td><td class="small muted">Decision-critical: a below-market fixed option reverses the recommendation.</td></tr><tr><td><code>P05</code></td><td>Owner&#x27;s acquisition price and adjusted tax basis</td><td class="small muted">Drives the tax cost of selling and the section 1031 analysis.</td></tr><tr><td><code>P06</code></td><td>Debt secured by the property (balance, rate, maturity, prepayment terms)</td><td class="small muted">Drives net proceeds and whether a sale is even feasible.</td></tr><tr><td><code>P07</code></td><td>Lease structure detail (NNN vs modified; CAM, tax and insurance recovery)</td><td class="small muted">The brief says NNN; the recoveries still need confirming against the lease.</td></tr><tr><td><code>P08</code></td><td>Building size, land area, and drive-thru entitlement status</td><td class="small muted">LAMC drive-thru conditional use permit constraints affect re-tenanting value.</td></tr></tbody></table>
+
+<h2>How to request a correction</h2>
+<p>Each item above names the source that would settle it. If you can supply any of P01&ndash;P08, or a
+parcel-level hazard or insurance document, the whole workbook can be re-run: the data lives in JSON files and
+every page is generated by a single script, so a corrected input propagates everywhere and the checks re-run
+in seconds.</p>
+
+<footer>
+<p><strong>Internal decision support.</strong> Not an appraisal, not tax advice, not investment
+advice and not a legal opinion. Every value shown links to the official page it was read from on
+2026-11-08; values that could not be confirmed are blank and listed on the
+<a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
+address or contact detail appears anywhere in this workbook.</p>
+<p>Session L (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+82 of 98 ledger rows verified &middot;
+reproduction of the published root model: <strong>pass</strong>
+&middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
+python3 session-4ed347de/scripts/build_site.py</code></p>
+</footer>
+</main></body></html>

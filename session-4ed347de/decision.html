@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decision &middot; Session I workbook</title>
+<meta name="description" content="Four strategies, one breakeven that both official yields straddle, and the triggers that should change your mind.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top">
+  <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
+  <div class="sub">Session L &middot; independent re-verification dated 2026-11-08 &middot;
+  single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
+</header>
+<nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html" aria-current="page">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html">Method &amp; privacy</a></nav>
+<main>
+<h1>Decision</h1>
+<p class="lede">Four strategies, one breakeven that both official yields straddle, and the triggers that should change your mind.</p>
+
+<div class="callout">
+<p><strong>The core arithmetic.</strong> "Sell and reinvest" produces wealth that rises with the yield you can
+actually buy. "Hold" produces wealth that does not depend on it. They cross at
+<strong>6.97%</strong>. Both of the official net-lease yields in evidence straddle that line:
+7.3% (FY2025) sits above it, 6.8% (Q3 2026) sits below it. That is the whole decision compressed
+into one number you can go and find out.</p>
+</div>
+
+<h2>Strategies, scored</h2>
+<p class="small muted">Scores are analyst judgements on a 1&ndash;4.5 scale weighted for wealth preservation
+(35%), growth (25%), execution risk (20%), liquidity (10%) and tax efficiency (10%). They are not
+measurements, and they are shown with their reasoning so you can disagree with them.</p>
+<table><thead><tr><th>ID</th><th>Strategy</th><th class="num">Score</th><th>For</th><th>Against</th></tr></thead>
+<tbody><tr><td><strong>S1</strong></td><td><strong>Sell now into a 1031 exchange</strong>
+<div class="small muted">Capture today&#x27;s price, defer gain, and break the single-asset concentration immediately.</div></td>
+<td class="num"><strong>3.35</strong><div class="bar"><i class="warn" style="width:74%"></i></div></td>
+<td><ul class="tight small"><li>Removes single-tenant and single-parcel concentration at once.</li><li>Defers tax; the 45/180-day regime is available and the asset is far below the Measure ULA tier.</li></ul></td>
+<td><ul class="tight small"><li>Forfeits the 2% Prop 13 cap on a permanent basis.</li><li>Gives away the rent reset that the 2030&ndash;2035 window can convert into price.</li><li>At the newest SEC yield the arithmetic actually favours holding, so you may be selling a discount.</li></ul></td></tr><tr><td><strong>S2</strong></td><td><strong>Renew at market, hold indefinitely</strong>
+<div class="small muted">Take the option rent, repricing at market, and keep collecting.</div></td>
+<td class="num"><strong>2.95</strong><div class="bar"><i class="bad" style="width:66%"></i></div></td>
+<td><ul class="tight small"><li>No transaction cost and no tax event.</li><li>Beats selling whenever the replacement yield is below the breakeven.</li></ul></td>
+<td><ul class="tight small"><li>Keeps a 57.9% 99th-percentile hazard tail on a single parcel.</li><li>Keeps full exposure to one franchisee with negative book equity.</li><li>Zero optionality: no reset negotiation, no price discovery.</li></ul></td></tr><tr><td><strong>S3</strong></td><td><strong>Extend with a reset, then price the asset</strong>
+<div class="small muted">Trade the tenant term for a fair-market reset and a guaranty; sell the re-priced asset into a deeper buyer pool.</div></td>
+<td class="num"><strong>4.10</strong><div class="bar"><i class="" style="width:91%"></i></div></td>
+<td><ul class="tight small"><li>Raises both the sale price and the hold economics &mdash; the only option that improves both sides.</li><li>Preserves the Prop 13 basis while the negotiation runs.</li><li>Turns time into information: the appraisal arrives before the sale decision.</li><li>The tenant's own renewal policy is to reprice to market, so the ask is aligned, not adversarial.</li></ul></td>
+<td><ul class="tight small"><li>Requires tenant consent and a guaranty the franchisee may not be able to give.</li><li>Two-step execution: negotiate, then market, with rate timing risk between the steps.</li><li>A weak tenant could use the negotiation to delay rather than commit.</li></ul></td></tr><tr><td><strong>S4</strong></td><td><strong>Extend 5 years only, keep every option open</strong>
+<div class="small muted">A shorter extension with a reset, then a second decision at the new expiry.</div></td>
+<td class="num"><strong>3.75</strong><div class="bar"><i class="warn" style="width:83%"></i></div></td>
+<td><ul class="tight small"><li>Locks a reset while preserving the sale option and the tax basis.</li><li>Buys time to close the parcel-level hazard and insurance gaps.</li></ul></td>
+<td><ul class="tight small"><li>Leaves a short WALT at the next decision point.</li><li>Defers the concentration problem instead of solving it.</li><li>Splits the difference on every axis without a clear reason to.</li></ul></td></tr></tbody></table>
+
+<h2>The sensitivity that decides it</h2>
+<p>Base case, all other inputs held at the published model's own assumptions. The only thing that changes
+down this column is the net-lease acquisition yield available to you on reinvestment.</p>
+<table><thead><tr><th class="num">Replacement yield</th><th class="num">Sell, then reinvest</th>
+<th class="num">Hold minus sell</th><th>Winner</th><th>Note</th></tr></thead>
+<tbody><tr><td class="num">5.50%</td><td class="num">$4.69M</td><td class="num">$1.01M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">5.60%</td><td class="num">$4.75M</td><td class="num">$0.94M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">5.70%</td><td class="num">$4.81M</td><td class="num">$0.88M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">5.80%</td><td class="num">$4.88M</td><td class="num">$0.82M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">5.90%</td><td class="num">$4.94M</td><td class="num">$0.75M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.00%</td><td class="num">$5.01M</td><td class="num">$0.68M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.10%</td><td class="num">$5.07M</td><td class="num">$0.62M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.20%</td><td class="num">$5.14M</td><td class="num">$0.55M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.30%</td><td class="num">$5.21M</td><td class="num">$0.48M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.40%</td><td class="num">$5.28M</td><td class="num">$0.41M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.50%</td><td class="num">$5.35M</td><td class="num">$0.34M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.60%</td><td class="num">$5.42M</td><td class="num">$0.27M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.70%</td><td class="num">$5.49M</td><td class="num">$0.20M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">6.80%</td><td class="num">$5.56M</td><td class="num">$0.13M</td><td><span class="badge warn">hold wins</span></td><td class="small"><strong>Q3 2026 &mdash; newest SEC filing</strong></td></tr><tr><td class="num">6.90%</td><td class="num">$5.63M</td><td class="num">$0.06M</td><td><span class="badge warn">hold wins</span></td><td class="small"></td></tr><tr><td class="num">7.00%</td><td class="num">$5.71M</td><td class="num">-$0.02M</td><td><span class="badge ok">sell wins</span></td><td class="small"></td></tr><tr><td class="num">7.10%</td><td class="num">$5.78M</td><td class="num">-$0.09M</td><td><span class="badge ok">sell wins</span></td><td class="small"></td></tr><tr><td class="num">7.20%</td><td class="num">$5.86M</td><td class="num">-$0.17M</td><td><span class="badge ok">sell wins</span></td><td class="small"></td></tr><tr><td class="num">7.30%</td><td class="num">$5.94M</td><td class="num">-$0.25M</td><td><span class="badge ok">sell wins</span></td><td class="small"><strong>FY2025 &mdash; published input</strong></td></tr><tr><td class="num">7.40%</td><td class="num">$6.02M</td><td class="num">-$0.32M</td><td><span class="badge ok">sell wins</span></td><td class="small"></td></tr><tr><td class="num">7.50%</td><td class="num">$6.09M</td><td class="num">-$0.40M</td><td><span class="badge ok">sell wins</span></td><td class="small"></td></tr></tbody></table>
+<p class="small muted">Crossing point 6.975%. Sell wealth at 7.3%:
+$5.94M; at 6.8%: $5.56M. Hold wealth in both columns:
+$5.69M.</p>
+
+<h2>Why the plan is "extend, then price" rather than either end point</h2>
+<p>S1 and S2 are the ends of a spectrum whose middle is unknown. S3 is not a compromise between them; it is
+the only strategy that changes the inputs instead of betting on them. Concretely:</p>
+<table><thead><tr><th>Action</th><th>Effect on the sell price</th><th>Effect on the hold case</th></tr></thead><tbody>
+<tr><td>Market rent reset at the 2030&ndash;2035 window</td><td>Raises NOI, and therefore price at a given cap rate</td><td>Raises the renewed rent &mdash; the published model needs only about +7% uplift to clear the net-lease comparison</td></tr>
+<tr><td>Ten-year term instead of an expiry risk</td><td>Removes the short-WALT discount and widens the buyer pool to 1031 buyers who need term</td><td>Removes the vacancy and downtime risk from the hold case</td></tr>
+<tr><td>A guaranty</td><td>Improves the credit story a buyer underwrites</td><td>Directly offsets the tenant's negative book equity</td></tr>
+<tr><td>An appraisal obtained before selling</td><td>Replaces an assumed cap rate with an observed one</td><td>Tells you whether to sell at all</td></tr>
+</tbody></table>
+
+<h2>Decision triggers</h2>
+<table><thead><tr><th>Observation</th><th>Action</th></tr></thead><tbody>
+<tr><td>Appraisal cap rate &le; 6.0%</td><td>Sell and exchange into diversified net lease.</td></tr>
+<tr><td>Appraisal cap rate &gt; 7.0%</td><td>Hold, extend, and re-test in 24 months.</td></tr>
+<tr><td>A replacement book is genuinely available at &ge; 7.0%</td><td>Sell and exchange; the arithmetic now favours it.</td></tr>
+<tr><td>Tenant signs a 10-year extension at market with a guaranty</td><td>Take it, then market the asset with long WALT (S3).</td></tr>
+<tr><td>Renewal option fixes rent below market</td><td>Do not extend. Market the asset before the discount deepens.</td></tr>
+<tr><td>Insurance exceeds ~1.5% of value, or is unavailable</td><td>Sell trigger regardless of cap rate.</td></tr>
+<tr><td>Parcel in a very-high fire hazard or liquefaction zone</td><td>Reduce hold bias; engineering clarity before any extension.</td></tr>
+</tbody></table>
+
+<h2>The risk of being wrong</h2>
+<p>If the true replacement yield is 6.8% and you sell anyway, you give up roughly
+$0.13M of 2040 wealth to buy tail protection worth up to
+$0.12M
+in expected hazard losses, plus liquidity and sleep. If the true yield is 7.3% and you hold, you
+leave $0.25M on the table. Both mistakes are the same size. That is why
+the answer is "buy information, then decide", not "pick a side now".</p>
+
+<footer>
+<p><strong>Internal decision support.</strong> Not an appraisal, not tax advice, not investment
+advice and not a legal opinion. Every value shown links to the official page it was read from on
+2026-11-08; values that could not be confirmed are blank and listed on the
+<a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
+address or contact detail appears anywhere in this workbook.</p>
+<p>Session L (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+82 of 98 ledger rows verified &middot;
+reproduction of the published root model: <strong>pass</strong>
+&middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
+python3 session-4ed347de/scripts/build_site.py</code></p>
+</footer>
+</main></body></html>

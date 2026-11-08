@@ -1,0 +1,101 @@
+{
+ "generated": "2026-11-08",
+ "items": [
+  {
+   "id": "F1",
+   "severity": "material",
+   "title": "The net-lease reinvestment benchmark has moved since the published model was built",
+   "detail": "The site root uses a 7.3% net-lease acquisition yield (Realty Income FY2025, filed 2026-02-24). Realty Income's Q3 2026 release, filed 2026-11-02, reports 6.8%. The published base-case breakeven is 6.975%, so the newer number reverses the base-case sign: at 7.3% selling wins by $246,824; at 6.8% holding wins by $128,982.",
+   "sources": [
+    "S12",
+    "S13"
+   ],
+   "action": "Not an error in the published work - a newer official record. The recommendation is re-framed rather than rewritten: the decision is inside the noise band and should not be made on this input alone."
+  },
+  {
+   "id": "F2",
+   "severity": "none",
+   "title": "Census QuickFacts slug defect: already resolved on main, retained for the audit trail",
+   "detail": "The root site's QuickFacts URL once used the slug 'lacountycalifornia', which QuickFacts does not recognise; it silently serves the United States table (FIPS 1, land area 3,533,038 sq mi). The integration pass (session-343c7030) corrected the slug on 2026-11-08 and published the county column. This session re-confirmed the correct slug independently and verified the published county values.",
+   "sources": [
+    "S04",
+    "S05"
+   ],
+   "action": "No action required. Not reported as an open defect, because reporting a fixed issue as open would be its own kind of inaccuracy. The correct slug is published in this session's ledger as S05."
+  },
+  {
+   "id": "F3",
+   "severity": "low",
+   "title": "USGS citation points at a program landing page, not the record",
+   "detail": "The root site cites usgs.gov/programs/earthquake-hazards for the 60/46/31% probabilities. That page is a program home page; the figures come from the USGS FAQ record citing UCERF3.",
+   "sources": [
+    "S23"
+   ],
+   "action": "Specific record linked on this session's pages."
+  },
+  {
+   "id": "F4",
+   "severity": "medium",
+   "title": "The only local forecast cited stops before the decision window",
+   "detail": "The root site cites an LAEDC report commissioned by the City of Los Angeles Workforce Development Board. The document is genuine, but covers 2022-2028 and is built on 2022 ACS data. The lease runs to 2030-2035.",
+   "sources": [
+    "S21",
+    "S03"
+   ],
+   "action": "For 2030-2035 the defensible official series is the CA DOF county projection programme (P-2A, Vintage 2026). The .xlsx was not parsed this session, so the numbers are not restated here."
+  },
+  {
+   "id": "F5",
+   "severity": "low",
+   "title": "Two federal tax rates are published without a source read this session",
+   "detail": "23.8% long-term capital gains and 28.8% unrecaptured section 1250 rates appear on the root site. They are plausible and widely used, but this session did not read them on an IRS page.",
+   "sources": [
+    "S17"
+   ],
+   "action": "Left blank and flagged rather than confirmed. Manual review against IRC 1(h), 1411 and 1250."
+  },
+  {
+   "id": "F6",
+   "severity": "low",
+   "title": "Two pull requests from earlier sessions were never merged",
+   "detail": "PR #14 (session E) and PR #18 (session F) are still open. Their content is largely published through other sessions' work, but the PRs themselves are unresolved.",
+   "sources": [],
+   "action": "Recorded in COORDINATION.md. Not closed or merged by this session - they belong to their owners."
+  },
+  {
+   "id": "F7",
+   "severity": "medium",
+   "title": "Eight workbooks, several headline numbers, one property",
+   "detail": "Sessions A-H each published a workbook under their own directory. They agree on most verified facts but differ in headline framing. A reader arriving at the site root sees one answer while other directories show others.",
+   "sources": [],
+   "action": "The workspaces index links all of them. This session adds an explicit reconciliation rather than a ninth competing answer."
+  },
+  {
+   "id": "F8",
+   "severity": "high",
+   "title": "The eight owner-supplied facts that actually decide this asset are missing",
+   "detail": "Contract rent, exact expiry date, escalation formula, renewal option terms, tax basis, secured debt, lease recovery structure, and parcel geometry are not in the repository. Every model in it, including this one, substitutes an assumption for each.",
+   "sources": [],
+   "action": "Published as blank rows (P01-P08) with no value. Nothing is inferred."
+  },
+  {
+   "id": "F9",
+   "severity": "high",
+   "title": "Parcel-level hazard and insurance status is unverified",
+   "detail": "FEMA flood zone, CAL FIRE FHSZ class, CGS seismic zone and a live insurance quotation cannot be determined without the parcel identifier, which is deliberately not published.",
+   "sources": [
+    "S23",
+    "S24"
+   ],
+   "action": "Blank rows H07-H10. These are decision triggers, not footnotes: an uninsurable parcel overrides the financial ranking."
+  },
+  {
+   "id": "F10",
+   "severity": "none",
+   "title": "Privacy scan: one address found, reviewed and cleared",
+   "detail": "A repository-wide scan for emails, phone numbers, street addresses and parcel numbers returned one hit: the public headquarters street address of the Los Angeles Unified School District, in research/04-education.md. The specific address is not reproduced here, on purpose.",
+   "sources": [],
+   "action": "Public agency address, not personal information. Quoted nowhere in this session's output. No owner identity, parcel number, street address or contact detail appears in this workbook."
+  }
+ ]
+}

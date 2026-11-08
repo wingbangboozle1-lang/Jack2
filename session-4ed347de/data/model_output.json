@@ -1,0 +1,838 @@
+{
+ "generated_by": "session-4ed347de/scripts/model.py",
+ "generated_for": "2026-11-08",
+ "verified_inputs": {
+  "treasury_10y_pct": 4.84,
+  "treasury_source": "C01/S10",
+  "netlease_fy2025_pct": 7.3,
+  "netlease_fy2025_source": "C03/S12",
+  "netlease_q3_2026_pct": 6.8,
+  "netlease_q3_2026_source": "C04/S13",
+  "county_dtt_pct": 0.11,
+  "city_dtt_pct": 0.45,
+  "ula_tier1_pct": 4.0,
+  "ula_tier2_pct": 5.5,
+  "ula_thresholds": [
+   5400000.0,
+   10900000.0
+  ]
+ },
+ "analyst_assumptions": {
+  "A1": 150000.0,
+  "A2": 0.02,
+  "A3": 2032,
+  "A4": 0.08,
+  "A5": 0.065,
+  "A8": 18,
+  "A9": 300000.0,
+  "A10": 0.049,
+  "A11": 2040,
+  "A7": 0.75
+ },
+ "observation_reinvestment_rate": {
+  "published_model_uses_pct": 4.9,
+  "verified_10y_treasury_pct": 4.84,
+  "effect_on_base_case_sell_wealth_usd": -34508.0,
+  "note": "The root model's A10 'Reinvestment yield if sold' is 4.90%, labelled an analyst assumption. The verified 10-year Treasury print on 2026-11-05 was 4.84%. Using the verified print lowers the sell-path wealth figure slightly. Not an error; recorded so the assumption is not read as a verified value."
+ },
+ "reproduction_of_published_model": {
+  "status": "pass",
+  "checked": [
+   {
+    "scenario": "bear",
+    "key": "sell_now_net",
+    "session_i": 1918800.0,
+    "published": 1918800.0,
+    "match": true
+   },
+   {
+    "scenario": "bear",
+    "key": "sell_now_wealth_treasury",
+    "session_i": 3748750.57,
+    "published": 3748750.57,
+    "match": true
+   },
+   {
+    "scenario": "bear",
+    "key": "sell_now_wealth_netlease",
+    "session_i": 5145479.09,
+    "published": 5145479.09,
+    "match": true
+   },
+   {
+    "scenario": "bear",
+    "key": "hold_expected_wealth",
+    "session_i": 4455511.97,
+    "published": 4455511.97,
+    "match": true
+   },
+   {
+    "scenario": "bear",
+    "key": "delta_hold_vs_sell_treasury",
+    "session_i": 706761.4,
+    "published": 706761.4,
+    "match": true
+   },
+   {
+    "scenario": "bear",
+    "key": "delta_hold_vs_sell_netlease",
+    "session_i": -689967.12,
+    "published": -689967.12,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "sell_now_net",
+    "session_i": 2214000.0,
+    "published": 2214000.0,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "sell_now_wealth_treasury",
+    "session_i": 4325481.42,
+    "published": 4325481.42,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "sell_now_wealth_netlease",
+    "session_i": 5937091.25,
+    "published": 5937091.25,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "hold_expected_wealth",
+    "session_i": 5690266.87,
+    "published": 5690266.87,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "delta_hold_vs_sell_treasury",
+    "session_i": 1364785.44,
+    "published": 1364785.44,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "delta_hold_vs_sell_netlease",
+    "session_i": -246824.38,
+    "published": -246824.38,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "sell_now_net",
+    "session_i": 2616545.45,
+    "published": 2616545.45,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "sell_now_wealth_treasury",
+    "session_i": 5111932.59,
+    "published": 5111932.59,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "sell_now_wealth_netlease",
+    "session_i": 7016562.39,
+    "published": 7016562.39,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "hold_expected_wealth",
+    "session_i": 7450808.77,
+    "published": 7450808.77,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "delta_hold_vs_sell_treasury",
+    "session_i": 2338876.18,
+    "published": 2338876.18,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "delta_hold_vs_sell_netlease",
+    "session_i": 434246.38,
+    "published": 434246.38,
+    "match": true
+   },
+   {
+    "scenario": "bear",
+    "key": "breakevens.required_reinvest_yield_pct",
+    "session_i": 6.202,
+    "published": 6.202,
+    "match": true
+   },
+   {
+    "scenario": "base",
+    "key": "breakevens.required_reinvest_yield_pct",
+    "session_i": 6.975,
+    "published": 6.975,
+    "match": true
+   },
+   {
+    "scenario": "bull",
+    "key": "breakevens.required_reinvest_yield_pct",
+    "session_i": 7.761,
+    "published": 7.761,
+    "match": true
+   }
+  ],
+  "mismatches": []
+ },
+ "scenarios": [
+  {
+   "id": "bear",
+   "label": "Bear",
+   "exit_cap": 0.075,
+   "escalation": 0.015,
+   "renewal_probability": 0.55,
+   "rent_reset": 0.9,
+   "sell_now_price": 2000000.0,
+   "sell_now_cost_rate": 0.04,
+   "sell_now_net": 1918800.0,
+   "sell_now_wealth_treasury": 3748750.57,
+   "sell_now_wealth_netlease": 5145479.09,
+   "renew_wealth": 5148278.42,
+   "vacate_wealth": 3608797.41,
+   "hold_expected_wealth": 4455511.97,
+   "delta_hold_vs_sell_treasury": 706761.4,
+   "delta_hold_vs_sell_netlease": -689967.12,
+   "renewed_rent": 147614.84,
+   "market_rent_at_expiry": 164016.49
+  },
+  {
+   "id": "base",
+   "label": "Base",
+   "exit_cap": 0.065,
+   "escalation": 0.02,
+   "renewal_probability": 0.75,
+   "rent_reset": 1.0,
+   "sell_now_price": 2307692.31,
+   "sell_now_cost_rate": 0.04,
+   "sell_now_net": 2214000.0,
+   "sell_now_wealth_treasury": 4325481.42,
+   "sell_now_wealth_netlease": 5937091.25,
+   "renew_wealth": 6201756.41,
+   "vacate_wealth": 4155798.23,
+   "hold_expected_wealth": 5690266.87,
+   "delta_hold_vs_sell_treasury": 1364785.44,
+   "delta_hold_vs_sell_netlease": -246824.38,
+   "renewed_rent": 168924.36,
+   "market_rent_at_expiry": 168924.36
+  },
+  {
+   "id": "bull",
+   "label": "Bull",
+   "exit_cap": 0.055,
+   "escalation": 0.025,
+   "renewal_probability": 0.85,
+   "rent_reset": 1.15,
+   "sell_now_price": 2727272.73,
+   "sell_now_cost_rate": 0.04,
+   "sell_now_net": 2616545.45,
+   "sell_now_wealth_treasury": 5111932.59,
+   "sell_now_wealth_netlease": 7016562.39,
+   "renew_wealth": 7900633.46,
+   "vacate_wealth": 4901802.22,
+   "hold_expected_wealth": 7450808.77,
+   "delta_hold_vs_sell_treasury": 2338876.18,
+   "delta_hold_vs_sell_netlease": 434246.38,
+   "renewed_rent": 200047.11,
+   "market_rent_at_expiry": 173954.01
+  }
+ ],
+ "yield_sensitivity": {
+  "grid": [
+   {
+    "netlease_yield": 5.5,
+    "sell_wealth": 4685026.496506938,
+    "delta_hold_minus_sell": 1005240.3721527187,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 5.6,
+    "sell_wealth": 4747581.96420195,
+    "delta_hold_minus_sell": 942684.904457707,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 5.7,
+    "sell_wealth": 4810912.286659798,
+    "delta_hold_minus_sell": 879354.5819998588,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 5.8,
+    "sell_wealth": 4875026.315038967,
+    "delta_hold_minus_sell": 815240.5536206895,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 5.9,
+    "sell_wealth": 4939932.993090991,
+    "delta_hold_minus_sell": 750333.8755686656,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.0,
+    "sell_wealth": 5005641.358040299,
+    "delta_hold_minus_sell": 684625.5106193572,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.1,
+    "sell_wealth": 5072160.54147135,
+    "delta_hold_minus_sell": 618106.3271883065,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.2,
+    "sell_wealth": 5139499.770223576,
+    "delta_hold_minus_sell": 550767.0984360809,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.3,
+    "sell_wealth": 5207668.367293716,
+    "delta_hold_minus_sell": 482598.5013659401,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.4,
+    "sell_wealth": 5276675.75274608,
+    "delta_hold_minus_sell": 413591.11591357645,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.5,
+    "sell_wealth": 5346531.444630308,
+    "delta_hold_minus_sell": 343735.4240293484,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.6,
+    "sell_wealth": 5417245.059907188,
+    "delta_hold_minus_sell": 273021.8087524688,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.7,
+    "sell_wealth": 5488826.315382087,
+    "delta_hold_minus_sell": 201440.55327756982,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 6.8,
+    "sell_wealth": 5561285.028646552,
+    "delta_hold_minus_sell": 128981.84001310449,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": true
+   },
+   {
+    "netlease_yield": 6.9,
+    "sell_wealth": 5634631.119027643,
+    "delta_hold_minus_sell": 55635.74963201303,
+    "hold_wins": true,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 7.0,
+    "sell_wealth": 5708874.608545564,
+    "delta_hold_minus_sell": -18607.73988590762,
+    "hold_wins": false,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 7.1,
+    "sell_wealth": 5784025.622879138,
+    "delta_hold_minus_sell": -93758.75421948172,
+    "hold_wins": false,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 7.2,
+    "sell_wealth": 5860094.392339703,
+    "delta_hold_minus_sell": -169827.5236800462,
+    "hold_wins": false,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 7.3,
+    "sell_wealth": 5937091.252852977,
+    "delta_hold_minus_sell": -246824.38419332076,
+    "hold_wins": false,
+    "is_fy2025_published_input": true,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 7.4,
+    "sell_wealth": 6015026.646949472,
+    "delta_hold_minus_sell": -324759.7782898154,
+    "hold_wins": false,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   },
+   {
+    "netlease_yield": 7.5,
+    "sell_wealth": 6093911.124762988,
+    "delta_hold_minus_sell": -403644.2561033312,
+    "hold_wins": false,
+    "is_fy2025_published_input": false,
+    "is_current_sec_q3_2026": false
+   }
+  ],
+  "breakeven_yield_pct": 6.975,
+  "base_hold_wealth": 5690266.8686596565
+ },
+ "area_panel": [
+  {
+   "id": "L02",
+   "label": "Los Angeles County unemployment rate (LAUS, not seasonally adjusted)",
+   "value": "4.5",
+   "unit": "%",
+   "as_of": "Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L07",
+   "label": "LA metro total nonfarm payroll, 12-month change",
+   "value": "+30.2 (+0.5%)",
+   "unit": "thousand jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L08",
+   "label": "LA metro education & health services, 12-month change",
+   "value": "+49.1 (+3.8%)",
+   "unit": "thousand jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L09",
+   "label": "LA metro leisure & hospitality, 12-month change",
+   "value": "+11.5 (+1.5%)",
+   "unit": "thousand jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L10",
+   "label": "LA metro information sector, 12-month change",
+   "value": "-11.4 (-5.7%)",
+   "unit": "thousand jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L12",
+   "label": "LA County total nonfarm employment, 12-month change",
+   "value": "+20,300 (+0.4%)",
+   "unit": "jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S02",
+   "source_url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la%24pds.pdf",
+   "source_publisher": "California Employment Development Department, Labor Market Information Division"
+  },
+  {
+   "id": "L13",
+   "label": "LA County education & health services, 12-month change",
+   "value": "+37,500",
+   "unit": "jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S02",
+   "source_url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la%24pds.pdf",
+   "source_publisher": "California Employment Development Department, Labor Market Information Division"
+  },
+  {
+   "id": "L14",
+   "label": "LA County information sector, 12-month change",
+   "value": "-10,200",
+   "unit": "jobs",
+   "as_of": "Sep 2025 to Sep 2026",
+   "source": "S02",
+   "source_url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la%24pds.pdf",
+   "source_publisher": "California Employment Development Department, Labor Market Information Division"
+  },
+  {
+   "id": "L15",
+   "label": "LA metro CPI-U, all items, 12-month change",
+   "value": "3.7",
+   "unit": "%",
+   "as_of": "Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L18",
+   "label": "Employment Cost Index, LA-Long Beach CSA, 12-month change",
+   "value": "3.9",
+   "unit": "%",
+   "as_of": "Sep 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "L19",
+   "label": "LA County average weekly wage, all industries (QCEW)",
+   "value": "$1,704",
+   "unit": "USD/week",
+   "as_of": "Q1 2026",
+   "source": "S01",
+   "source_url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "source_publisher": "U.S. Bureau of Labor Statistics, Western Information Office"
+  },
+  {
+   "id": "D01",
+   "label": "Los Angeles city population",
+   "value": "3,869,089",
+   "unit": "persons",
+   "as_of": "July 1, 2025 (V2025)",
+   "source": "S04",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D02",
+   "label": "Los Angeles city population change, April 2020 to July 2025",
+   "value": "-0.8",
+   "unit": "%",
+   "as_of": "2020-2025",
+   "source": "S04",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D03",
+   "label": "Los Angeles County population",
+   "value": "9,694,934",
+   "unit": "persons",
+   "as_of": "July 1, 2025 (V2025)",
+   "source": "S05",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D04",
+   "label": "Los Angeles County population change, April 2020 to July 2025",
+   "value": "-3.2",
+   "unit": "%",
+   "as_of": "2020-2025",
+   "source": "S05",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D05",
+   "label": "Los Angeles city median household income (2024 dollars)",
+   "value": "$81,939",
+   "unit": "USD",
+   "as_of": "2020-2024 ACS",
+   "source": "S04",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D06",
+   "label": "Los Angeles County median household income (2024 dollars)",
+   "value": "$90,112",
+   "unit": "USD",
+   "as_of": "2020-2024 ACS",
+   "source": "S05",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D09",
+   "label": "Los Angeles city poverty rate",
+   "value": "16.5",
+   "unit": "%",
+   "as_of": "V2025",
+   "source": "S04",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D10",
+   "label": "Los Angeles County poverty rate",
+   "value": "13.3",
+   "unit": "%",
+   "as_of": "V2025",
+   "source": "S05",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D11",
+   "label": "Los Angeles city median value of owner-occupied housing units",
+   "value": "$921,200",
+   "unit": "USD",
+   "as_of": "2020-2024 ACS",
+   "source": "S04",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D15",
+   "label": "Los Angeles city population per square mile",
+   "value": "8,304.2",
+   "unit": "persons/sq mi",
+   "as_of": "2020 Census",
+   "source": "S04",
+   "source_url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+   "source_publisher": "U.S. Census Bureau"
+  },
+  {
+   "id": "D18",
+   "label": "Los Angeles County total personal income",
+   "value": "$818.5",
+   "unit": "billion USD",
+   "as_of": "2024",
+   "source": "S06",
+   "source_url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+   "source_publisher": "U.S. Bureau of Economic Analysis"
+  },
+  {
+   "id": "T07",
+   "label": "Jack in the Box system same-store sales, Q3 FY2026",
+   "value": "-1.1",
+   "unit": "%",
+   "as_of": "12 weeks to 2026-07-05",
+   "source": "S09",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "source_publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 8-K Exhibit 99.1 (Item 2.02)"
+  },
+  {
+   "id": "T09",
+   "label": "Jack in the Box restaurant count at end of Q3 FY2026",
+   "value": "2,115",
+   "unit": "restaurants",
+   "as_of": "2026-07-05",
+   "source": "S09",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "source_publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 8-K Exhibit 99.1 (Item 2.02)"
+  },
+  {
+   "id": "T11",
+   "label": "Jack in the Box total revenues, Q3 FY2026",
+   "value": "$257.7 (-1.8%)",
+   "unit": "million USD",
+   "as_of": "Q3 FY2026",
+   "source": "S09",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "source_publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 8-K Exhibit 99.1 (Item 2.02)"
+  },
+  {
+   "id": "T12",
+   "label": "Jack in the Box restaurant-level margin, Q3 FY2026",
+   "value": "17.6",
+   "unit": "%",
+   "as_of": "Q3 FY2026",
+   "source": "S09",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "source_publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 8-K Exhibit 99.1 (Item 2.02)"
+  },
+  {
+   "id": "C01",
+   "label": "10-year U.S. Treasury constant-maturity yield",
+   "value": "4.84",
+   "unit": "%",
+   "as_of": "2026-11-05",
+   "source": "S10",
+   "source_url": "https://fred.stlouisfed.org/series/DGS10",
+   "source_publisher": "Board of Governors of the Federal Reserve System, via FRED (Federal Reserve Bank of St. Louis)"
+  },
+  {
+   "id": "C02",
+   "label": "Federal funds target range, upper limit",
+   "value": "4.00",
+   "unit": "%",
+   "as_of": "2026-11-08",
+   "source": "S11",
+   "source_url": "https://fred.stlouisfed.org/series/DFEDTARU",
+   "source_publisher": "Board of Governors of the Federal Reserve System, via FRED"
+  },
+  {
+   "id": "C05",
+   "label": "Realty Income rent recapture rate on re-leased properties",
+   "value": "103.5",
+   "unit": "%",
+   "as_of": "Q3 2026",
+   "source": "S13",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "source_publisher": "U.S. Securities and Exchange Commission \u2014 Realty Income Corp. Form 8-K Ex. 99.1"
+  },
+  {
+   "id": "C06",
+   "label": "Realty Income portfolio occupancy",
+   "value": "98.8",
+   "unit": "%",
+   "as_of": "2026-09-30",
+   "source": "S13",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "source_publisher": "U.S. Securities and Exchange Commission \u2014 Realty Income Corp. Form 8-K Ex. 99.1"
+  },
+  {
+   "id": "H01",
+   "label": "30-year probability of a M>=6.7 earthquake in the Los Angeles region",
+   "value": "60",
+   "unit": "%",
+   "as_of": "UCERF3 (current USGS FAQ)",
+   "source": "S23",
+   "source_url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+   "source_publisher": "U.S. Geological Survey"
+  },
+  {
+   "id": "H04",
+   "label": "Eaton Fire (Los Angeles County, Jan 2025) area burned",
+   "value": "14,021",
+   "unit": "acres",
+   "as_of": "final CAL FIRE incident page",
+   "source": "S24",
+   "source_url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "source_publisher": "California Department of Forestry and Fire Protection (CAL FIRE)"
+  },
+  {
+   "id": "H05",
+   "label": "Eaton Fire structures destroyed",
+   "value": "9,419",
+   "unit": "structures",
+   "as_of": "final CAL FIRE incident page",
+   "source": "S24",
+   "source_url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "source_publisher": "California Department of Forestry and Fire Protection (CAL FIRE)"
+  }
+ ],
+ "monte_carlo": {
+  "config": {
+   "trials": 20000,
+   "seed": 424242,
+   "distributions": {
+    "exit_cap": "triangular(5.5%, 6.5%, 7.5%)",
+    "escalation": "uniform(1.5%, 2.5%)",
+    "rent_reset_at_renewal": "triangular(0.90, 1.00, 1.15)",
+    "renewal_probability": "uniform(55%, 85%)",
+    "netlease_yield_for_reinvestment": "triangular(5.8%, 6.8%, 7.4%)  [range of SEC-filed net-lease yields read this session]",
+    "earthquake_M6.7plus_near_site_per_year": "3.0%  [derived: USGS gives 60% over 30 years -> 1-(1-p)^30 = 0.60]",
+    "earthquake_loss_if_it_hits": "triangular(5%, 20%, 50%) of asset value",
+    "earthquake_insurance_recovery": "uniform(0%, 80%) of the loss",
+    "wildfire_affecting_parcel_per_year": "0.2%",
+    "wildfire_loss_if_it_hits": "triangular(5%, 30%, 100%) of asset value",
+    "wildfire_insurance_recovery": "uniform(0%, 90%) of the loss",
+    "tenant_credit_event_per_year": "2.0%  -> vacancy of 18 months plus a full re-tenanting cost",
+    "diversification_factor_on_reinvested_portfolio": "0.40  ANALYST: a multi-property net-lease book absorbs the same shock at about 40% of single-asset severity"
+   },
+   "notes": [
+    "The sell path is modelled as: sell, reinvest in diversified net lease at the drawn yield, then absorb the same hazards at the diversification factor. It is NOT modelled as risk-free.",
+    "The hold path keeps one tenant and one parcel, so it absorbs the full single-asset severity.",
+    "Rates and caps are held at the drawn values for the whole horizon; no path re-levers."
+   ]
+  },
+  "sell_path": {
+   "mean": 5390289.0,
+   "p05": 4670262.0,
+   "p50": 5381700.0,
+   "p95": 6148528.0,
+   "ce_crra2_5": 5343580.0,
+   "per_100k_noi": {
+    "mean": 3593526.0,
+    "p05": 3113508.0,
+    "p50": 3587800.0,
+    "p95": 4099019.0,
+    "ce_crra2_5": 3562387.0
+   }
+  },
+  "hold_path": {
+   "mean": 5416935.0,
+   "p05": 4572587.0,
+   "p50": 5451676.0,
+   "p95": 6139260.0,
+   "ce_crra2_5": 5358921.0,
+   "per_100k_noi": {
+    "mean": 3611290.0,
+    "p05": 3048391.0,
+    "p50": 3634451.0,
+    "p95": 4092840.0,
+    "ce_crra2_5": 3572614.0
+   }
+  },
+  "hazard_loss_distribution": {
+   "single_asset_hold_path": {
+    "mean_loss_usd": 180016.0,
+    "loss_pct_of_value_p25": 0.0,
+    "loss_pct_of_value_p50": 0.0,
+    "loss_pct_of_value_p75": 12.42,
+    "loss_pct_of_value_p90": 26.81,
+    "loss_pct_of_value_p99": 57.91,
+    "prob_any_loss_pct": 36.2
+   },
+   "diversified_sell_path": {
+    "mean_loss_usd": 62548.0,
+    "loss_pct_of_value_p25": 0.0,
+    "loss_pct_of_value_p50": 0.0,
+    "loss_pct_of_value_p75": 4.57,
+    "loss_pct_of_value_p90": 9.57,
+    "loss_pct_of_value_p99": 20.83,
+    "prob_any_loss_pct": 36.9
+   },
+   "value_used_usd": 2307692.0
+  },
+  "prob_sell_beats_hold": 0.4612,
+  "prob_hold_beats_sell": 0.5388,
+  "mean_difference_sell_minus_hold": -26647.0,
+  "eq_annual_probability_used": 0.03008
+ }
+}

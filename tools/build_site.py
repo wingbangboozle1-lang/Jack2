@@ -1019,6 +1019,12 @@ def build_workspaces():
          "13-item repository review. Fixes the Census URL defect carried by the root build.",
          "12 pages",
          "<a href='session-343c7030/index.html'>open &#8599;</a>"],
+        ["<code>session-4ed347de/</code>",
+         "Session L &mdash; 2026-11-08 re-verification of 25 official sources (98 ledger rows, 82 verified), "
+         "line-by-line audit of the published workbook, independent reproduction of this model (21/21 values), "
+         "and a 20,000-trial Monte Carlo with earthquake, wildfire and tenant-default hazards",
+         "10 pages",
+         "<a href='session-4ed347de/index.html'>open &#8599;</a>"],
         ["<code>session-18dacdea/</code>",
          "Session H &mdash; 2026-11-07 live BLS (Nov 4) &amp; FRED (Nov 5, 4.84% DGS10) update, 76 metrics across "
          "26 official sources (resolving LAUSD 86.2% ACGR &amp; $18.42/hr LA City minimum wage), 26 risks, "

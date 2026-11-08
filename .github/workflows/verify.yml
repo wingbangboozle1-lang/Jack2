@@ -25,6 +25,12 @@ jobs:
       - name: Rebuild the site from data
         run: python3 tools/build_site.py
 
+      - name: Regenerate and verify the session-4ed347de workbook
+        run: |
+          python3 session-4ed347de/scripts/model.py
+          python3 session-4ed347de/scripts/build_site.py
+          python3 session-4ed347de/scripts/verify.py
+
       - name: Fail if generated files are out of date
         run: |
           if [ -n "$(git status --porcelain)" ]; then

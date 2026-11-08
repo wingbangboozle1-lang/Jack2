@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method &amp;amp; privacy &middot; Session I workbook</title>
+<meta name="description" content="How every number here was produced, what was deliberately withheld, and how to regenerate the whole workbook.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top">
+  <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
+  <div class="sub">Session L &middot; independent re-verification dated 2026-11-08 &middot;
+  single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
+</header>
+<nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html" aria-current="page">Method &amp; privacy</a></nav>
+<main>
+<h1>Method &amp; privacy</h1>
+<p class="lede">How every number here was produced, what was deliberately withheld, and how to regenerate the whole workbook.</p>
+
+<h2>How the work was done</h2>
+<ol class="tight">
+<li><strong>Claimed scope on the shared board first.</strong> <code>COORDINATION.md</code> records this
+session's file scope before any file was written, and the claim was committed and pushed immediately. Eight
+prior sessions' work is preserved untouched.</li>
+<li><strong>Read the primary record, not a summary.</strong> Every value was read from the publisher's own
+page &mdash; BLS, Census, BEA, SEC EDGAR, FRED, the California DOF, DIR, FTB, the Legislature, USGS, CAL FIRE
+and the City and County of Los Angeles. Where a page printed a publication or "updated" date, that date was
+recorded alongside the value.</li>
+<li><strong>Wrote the value down, or wrote nothing.</strong> If the primary record could not be reached, the
+row was left blank and flagged. This is why 16 of
+98 rows carry no value.</li>
+<li><strong>Re-implemented the published model independently.</strong> Not to catch the other sessions out &mdash;
+to establish that the numbers are reproducible. All 21
+checked figures matched, which is what makes it legitimate to then vary one input and report what happens.</li>
+<li><strong>Modelled the tail, not just the central case.</strong> 20,000 seeded paths with
+earthquake, wildfire and tenant-default hazards on both the hold and the sell path. The sell path absorbs the
+same hazards at a diversification factor, because pretending a 1031 exchange is risk-free would be the
+easiest way to produce a wrong answer.</li>
+<li><strong>Audited the repository line by line</strong> and published the exceptions, including the ones that
+argue against this session's own conclusion.</li>
+</ol>
+
+<h2>Privacy: what is deliberately absent</h2>
+<div class="callout ok">
+<p><strong>No personal information appears in this workbook, and none is required to use it.</strong> The
+owner is never identified. The property is described only as a single-tenant net-leased Jack in the Box
+restaurant in Central Los Angeles within a 2030&ndash;2035 lease-expiry window.</p>
+</div>
+<table><thead><tr><th>Withheld</th><th>Why</th><th>Effect on the analysis</th></tr></thead><tbody>
+<tr><td>Owner name, entity, contact details</td><td>Personal information. Never collected, never used, never published.</td>
+<td>None. The analysis is about the asset and the decision, not the person.</td></tr>
+<tr><td>Property street address and parcel number (APN)</td><td>An APN plus a public records search can identify an owner. It is the single most re-identifying field available.</td>
+<td>Parcel-level hazard and insurance verification cannot be completed here. Published as blank rows H07&ndash;H10 and named as a decision trigger.</td></tr>
+<tr><td>Exact contract rent, expiry date, basis, debt</td><td>Commercially sensitive and not supplied.</td>
+<td>Every model substitutes an assumption, and each assumption is labelled as one. Nothing is presented as fact.</td></tr>
+<tr><td>Franchisee identity and its financial statements</td><td>Not public, and identifying it would identify the site.</td>
+<td>The franchisor's SEC filings are used as a proxy for credit quality. That proxy is stated, not hidden.</td></tr>
+</tbody></table>
+<p>A repository-wide scan for email addresses, telephone numbers, street addresses and parcel numbers was run
+across all 1 of this workbook's files and returns one hit in the wider repository: a public school
+district's headquarters street address in an earlier session's research notes. The address itself is not
+reproduced here, so that this workbook stays clean under its own scan. That is a public agency address, not
+personal information; it is logged as F10 on <a href="flagged.html">Flagged for review</a> rather than
+silently altered in another session's file.</p>
+
+<h2>Reproducing this workbook</h2>
+<pre class="card small">python3 session-4ed347de/scripts/model.py       # regenerates the model and Monte Carlo output
+python3 session-4ed347de/scripts/build_site.py  # regenerates every page from the JSON data
+python3 session-4ed347de/scripts/verify.py      # source links, blank-value rule, PII, internal links</pre>
+<p class="small muted">The model is deterministic except the Monte Carlo, which is seeded
+(424242) and therefore also deterministic. Two runs produce byte-identical output.</p>
+
+<h2>Limitations, stated plainly</h2>
+<ul class="tight">
+<li>This is a decision framework, not an appraisal. It contains no valuation of the building.</li>
+<li>It is not tax, legal or investment advice. The section 1031, Measure ULA and Proposition 13 material is a
+summary of published rules with citations, not an opinion on your situation.</li>
+<li>The eight owner facts would change the analysis materially. They are not present.</li>
+<li>Parcel-level hazard and insurance status is unverified and could override the financial ranking entirely.</li>
+<li>Hazard loss severities and insurance recovery ranges are analyst judgements, published in full so they can
+be challenged.</li>
+</ul>
+
+<footer>
+<p><strong>Internal decision support.</strong> Not an appraisal, not tax advice, not investment
+advice and not a legal opinion. Every value shown links to the official page it was read from on
+2026-11-08; values that could not be confirmed are blank and listed on the
+<a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
+address or contact detail appears anywhere in this workbook.</p>
+<p>Session L (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+82 of 98 ledger rows verified &middot;
+reproduction of the published root model: <strong>pass</strong>
+&middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
+python3 session-4ed347de/scripts/build_site.py</code></p>
+</footer>
+</main></body></html>

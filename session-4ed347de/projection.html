@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projection &amp;amp; Monte Carlo &middot; Session I workbook</title>
+<meta name="description" content="The published model reproduced to the cent, then re-run as a distribution with earthquakes, wildfires and tenant default in it.">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top">
+  <div class="brand">Central LA NNN asset &mdash; decision workbook</div>
+  <div class="sub">Session L &middot; independent re-verification dated 2026-11-08 &middot;
+  single-tenant Jack in the Box, net lease, expiry window 2030&ndash;2035</div>
+</header>
+<nav class="main" aria-label="Sections"><a href="index.html">Dashboard</a><a href="summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="facts.html">Verified facts</a><a href="projection.html" aria-current="page">Projection &amp; Monte Carlo</a><a href="risk.html">Risks</a><a href="audit.html">Repository audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="method.html">Method &amp; privacy</a></nav>
+<main>
+<h1>Projection &amp; Monte Carlo</h1>
+<p class="lede">The published model reproduced to the cent, then re-run as a distribution with earthquakes, wildfires and tenant default in it.</p>
+
+<div class="callout">
+<p><strong>Two engines, one answer about the answer.</strong> First this session re-implements the published
+root model from its own inputs and checks it, value by value: <strong>pass</strong> on
+21 published figures. Then it adds what the published model deliberately does not have
+&mdash; a distribution over the unknowns, and the black-swan hazards that a deterministic scenario table
+cannot carry.</p>
+</div>
+
+<h2>1. Reproduction of the published model</h2>
+<p>If an independent re-implementation does not land on the same numbers, the published output cannot be
+trusted as a basis for anything. It lands on every one, to the cent.</p>
+<details><summary class="small muted">Show all 21 checked values</summary>
+<table><thead><tr><th>Scenario</th><th>Value</th><th class="num">This session</th><th class="num">Published</th><th>Result</th></tr></thead>
+<tbody><tr><td>bear</td><td><code>sell_now_net</code></td><td class="num">$1.92M</td><td class="num">$1.92M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bear</td><td><code>sell_now_wealth_treasury</code></td><td class="num">$3.75M</td><td class="num">$3.75M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bear</td><td><code>sell_now_wealth_netlease</code></td><td class="num">$5.15M</td><td class="num">$5.15M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bear</td><td><code>hold_expected_wealth</code></td><td class="num">$4.46M</td><td class="num">$4.46M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bear</td><td><code>delta_hold_vs_sell_treasury</code></td><td class="num">$0.71M</td><td class="num">$0.71M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bear</td><td><code>delta_hold_vs_sell_netlease</code></td><td class="num">-$0.69M</td><td class="num">-$0.69M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>sell_now_net</code></td><td class="num">$2.21M</td><td class="num">$2.21M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>sell_now_wealth_treasury</code></td><td class="num">$4.33M</td><td class="num">$4.33M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>sell_now_wealth_netlease</code></td><td class="num">$5.94M</td><td class="num">$5.94M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>hold_expected_wealth</code></td><td class="num">$5.69M</td><td class="num">$5.69M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>delta_hold_vs_sell_treasury</code></td><td class="num">$1.36M</td><td class="num">$1.36M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>delta_hold_vs_sell_netlease</code></td><td class="num">-$0.25M</td><td class="num">-$0.25M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>sell_now_net</code></td><td class="num">$2.62M</td><td class="num">$2.62M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>sell_now_wealth_treasury</code></td><td class="num">$5.11M</td><td class="num">$5.11M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>sell_now_wealth_netlease</code></td><td class="num">$7.02M</td><td class="num">$7.02M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>hold_expected_wealth</code></td><td class="num">$7.45M</td><td class="num">$7.45M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>delta_hold_vs_sell_treasury</code></td><td class="num">$2.34M</td><td class="num">$2.34M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>delta_hold_vs_sell_netlease</code></td><td class="num">$0.43M</td><td class="num">$0.43M</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bear</td><td><code>breakevens.required_reinvest_yield_pct</code></td><td class="num">6.202</td><td class="num">6.202</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>base</td><td><code>breakevens.required_reinvest_yield_pct</code></td><td class="num">6.975</td><td class="num">6.975</td><td><span class="badge ok">confirmed</span></td></tr><tr><td>bull</td><td><code>breakevens.required_reinvest_yield_pct</code></td><td class="num">7.761</td><td class="num">7.761</td><td><span class="badge ok">confirmed</span></td></tr></tbody></table></details>
+<div class="callout warn">
+<p><strong>One assumption is worth naming.</strong> The published model's reinvestment rate (A10) is
+<strong>4.90%</strong>, labelled as an analyst assumption. The verified 10-year Treasury print on
+2026-11-05 was <strong>4.84%</strong>. Using the verified print reduces the sell-path wealth by about
+$0.03M. This is not an
+error &mdash; the model is transparent that it is an assumption &mdash; but an assumption should not be
+mistaken for a verified value. <a class="src" href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener noreferrer" title="Board of Governors of the Federal Reserve System, via FRED (Federal Reserve Bank of St. Louis) &mdash; Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)">S10 &#8599;</a></p>
+</div>
+
+<h2>2. Deterministic scenarios</h2>
+<table><thead><tr><th>Case</th><th class="num">Exit cap</th><th class="num">Escalation</th>
+<th class="num">Renew prob.</th><th class="num">Value today</th><th class="num">Net proceeds</th>
+<th class="num">Sell &amp; reinvest @ 6.8%</th><th class="num">Hold (expected)</th><th class="num">Hold minus sell</th></tr></thead>
+<tbody><tr><td><strong>Bear</strong></td><td class="num">7.50%</td><td class="num">1.5%</td><td class="num">55%</td><td class="num">$2.00M</td><td class="num">$1.92M</td><td class="num">$5.15M</td><td class="num">$4.46M</td><td class="num">-$0.69M</td></tr><tr><td><strong>Base</strong></td><td class="num">6.50%</td><td class="num">2.0%</td><td class="num">75%</td><td class="num">$2.31M</td><td class="num">$2.21M</td><td class="num">$5.94M</td><td class="num">$5.69M</td><td class="num">-$0.25M</td></tr><tr><td><strong>Bull</strong></td><td class="num">5.50%</td><td class="num">2.5%</td><td class="num">85%</td><td class="num">$2.73M</td><td class="num">$2.62M</td><td class="num">$7.02M</td><td class="num">$7.45M</td><td class="num">$0.43M</td></tr></tbody></table>
+<p class="small muted">Rent of $150,000/yr is an assumption, not a verified
+fact, because the actual contract rent is not in the repository. Expiry is modelled at
+2032, the midpoint of the 2030&ndash;2035 window, because the exact date is
+not available either.</p>
+
+<h2>3. The flip point</h2>
+<p>Sell wealth rises with the replacement yield; hold wealth does not depend on it. Solving for the crossing
+point gives <strong>6.975%</strong>. The distance between the two official yields in evidence
+(7.3% and 6.8%) is 50 basis points, and it is wide enough to move you from
+one side of that line to the other. See the full grid on <a href="decision.html">Decision</a>.</p>
+
+<h2>4. Monte Carlo with black-swan hazards</h2>
+<p>20,000 independent paths, seed 424242, so this table is exactly
+reproducible. Every path draws an exit cap, an escalation rate, a renewal outcome and a replacement yield,
+and then absorbs earthquakes, wildfires and tenant credit events over 2026&ndash;2040. The sell path is
+<em>not</em> modelled as risk-free: the reinvested book takes the same hazards at a
+0.40 severity
+factor.</p>
+<table><thead><tr><th>Path</th><th class="num">Mean wealth</th><th class="num">P05</th><th class="num">Median</th>
+<th class="num">P95</th><th class="num">Certainty equivalent (CRRA 2.5)</th></tr></thead><tbody>
+<tr><td><strong>Hold</strong> &mdash; one tenant, one parcel</td><td class="num">$5.42M</td>
+<td class="num">$4.57M</td><td class="num">$5.45M</td>
+<td class="num">$6.14M</td><td class="num">$5.36M</td></tr>
+<tr><td><strong>Sell and exchange</strong> &mdash; diversified book</td><td class="num">$5.39M</td>
+<td class="num">$4.67M</td><td class="num">$5.38M</td>
+<td class="num">$6.15M</td><td class="num">$5.34M</td></tr>
+</tbody></table>
+<p><strong>Selling beats holding in 46.1% of paths; holding beats selling in 53.9%.</strong>
+That is the honest headline: on terminal wealth the two strategies are not distinguishable. The difference in
+the mean is $0.03M &mdash; under
+0.5% &mdash; and on a
+risk-adjusted (certainty-equivalent) basis holding is ahead by
+$0.02M. Neither gap is a strategy.</p>
+
+<h2>5. Where the strategies actually differ: the tail</h2>
+<p>This is the part that the mean hides, and it is the reason the recommendation is not "flip a coin".</p>
+<table><thead><tr><th>Hazard outcome, 2026&ndash;2040</th><th class="num">Mean loss</th><th class="num">P90 loss</th>
+<th class="num">P99 loss</th><th class="num">Paths with any loss</th></tr></thead><tbody>
+<tr><td>Single asset (hold path), as % of asset value</td><td class="num">$0.18M</td><td class="num">26.8%</td><td class="num">57.9%</td><td class="num">36%</td></tr>
+<tr><td>Diversified book (sell path), as % of book value</td><td class="num">$0.06M</td><td class="num">9.6%</td><td class="num">20.8%</td><td class="num">37%</td></tr>
+</tbody></table>
+<p class="small muted">Base asset value used for the percentages:
+$2,307,692. A median path suffers <em>no</em> hazard loss at all in either case &mdash;
+the losses are genuinely tail events, and that is exactly why they are easy to ignore and expensive to
+ignore. The single-asset book has the same probability of being hit but a much worse outcome when it is.</p>
+
+<h2>6. Every distribution used, published in full</h2>
+<table><thead><tr><th>Input</th><th>Distribution or value</th></tr></thead><tbody><tr><td><code>exit_cap</code></td><td>triangular(5.5%, 6.5%, 7.5%)</td></tr><tr><td><code>escalation</code></td><td>uniform(1.5%, 2.5%)</td></tr><tr><td><code>rent_reset_at_renewal</code></td><td>triangular(0.90, 1.00, 1.15)</td></tr><tr><td><code>renewal_probability</code></td><td>uniform(55%, 85%)</td></tr><tr><td><code>netlease_yield_for_reinvestment</code></td><td>triangular(5.8%, 6.8%, 7.4%)  [range of SEC-filed net-lease yields read this session]</td></tr><tr><td><code>earthquake_M6.7plus_near_site_per_year</code></td><td>3.0%  [derived: USGS gives 60% over 30 years -&gt; 1-(1-p)^30 = 0.60]</td></tr><tr><td><code>earthquake_loss_if_it_hits</code></td><td>triangular(5%, 20%, 50%) of asset value</td></tr><tr><td><code>earthquake_insurance_recovery</code></td><td>uniform(0%, 80%) of the loss</td></tr><tr><td><code>wildfire_affecting_parcel_per_year</code></td><td>0.2%</td></tr><tr><td><code>wildfire_loss_if_it_hits</code></td><td>triangular(5%, 30%, 100%) of asset value</td></tr><tr><td><code>wildfire_insurance_recovery</code></td><td>uniform(0%, 90%) of the loss</td></tr><tr><td><code>tenant_credit_event_per_year</code></td><td>2.0%  -&gt; vacancy of 18 months plus a full re-tenanting cost</td></tr><tr><td><code>diversification_factor_on_reinvested_portfolio</code></td><td>0.40  ANALYST: a multi-property net-lease book absorbs the same shock at about 40% of single-asset severity</td></tr></tbody></table>
+<div class="callout warn">
+<p><strong>Honesty about the hazard parameters.</strong> The earthquake annual probability
+(3.008%) is derived from the USGS 60%-in-30-years figure
+<a class="src" href="https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area" target="_blank" rel="noopener noreferrer" title="U.S. Geological Survey &mdash; What is the probability that an earthquake will occur in the Los Angeles Area? (UCERF3)">S23 &#8599;</a> by assuming events are independent &mdash; a simplification, since earthquakes cluster on fault
+systems. Loss severities and insurance recovery ranges are analyst judgements informed by the January 2025
+Eaton Fire outcome (9,419 structures destroyed <a class="src" href="https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire" target="_blank" rel="noopener noreferrer" title="California Department of Forestry and Fire Protection (CAL FIRE) &mdash; Eaton Fire incident report (Los Angeles County, January 2025)">S24 &#8599;</a>), not measurements. They are
+published here so you can replace them, and the workbook is regenerated by rerunning one script.</p>
+</div>
+
+<footer>
+<p><strong>Internal decision support.</strong> Not an appraisal, not tax advice, not investment
+advice and not a legal opinion. Every value shown links to the official page it was read from on
+2026-11-08; values that could not be confirmed are blank and listed on the
+<a href="flagged.html">Flagged for review</a> page. No owner identity, parcel number, street
+address or contact detail appears anywhere in this workbook.</p>
+<p>Session L (<code>session-4ed347de</code>) &middot; 25 official sources &middot;
+82 of 98 ledger rows verified &middot;
+reproduction of the published root model: <strong>pass</strong>
+&middot; reproduction: <code>python3 session-4ed347de/scripts/model.py &amp;&amp;
+python3 session-4ed347de/scripts/build_site.py</code></p>
+</footer>
+</main></body></html>
