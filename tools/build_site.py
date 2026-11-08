@@ -39,7 +39,7 @@ ACCESS = SOURCES["accessed"]
 e = html.escape
 
 NAV = [
-    ("index.html", "Dashboard"),
+    ("index.html", "Current overview"),
     ("executive-summary.html", "Executive summary"),
     ("decision.html", "Decision"),
     ("market-economics.html", "Market economics"),
@@ -119,6 +119,7 @@ def page(slug, title, body, description="", wide=False):
   <nav class="main" aria-label="Sections">{nav}</nav>
 </div></header>
 <main id="main" class="wrap">
+<div class="callout warn" role="note"><p><strong>Historical root workbook page.</strong> This page is preserved for audit and may contain assumption-driven historical numbers. The current evidence-first dashboard is <a href="session-f4f700c0/index.html">session-f4f700c0</a>; start there for the anonymized, source-linked decision framework.</p></div>
 {body}
 </main>
 <footer class="site"><div class="wrap">
@@ -998,6 +999,11 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-f4f700c0/</code>",
+         "Session I &mdash; current evidence-first dashboard: 51 official sources, 132 source-checked rows, "
+         "14 blank private inputs, normalized pre-tax scenarios, line-level audit and Flagged for Review",
+         "12 pages",
+         "<a href='session-f4f700c0/index.html'>open &#8599;</a>"],
         ["<code>session-18dacdea/</code>",
          "Session H &mdash; 2026-11-07 live BLS (Nov 4) &amp; FRED (Nov 5, 4.84% DGS10) update, 76 metrics across "
          "26 official sources (resolving LAUSD 86.2% ACGR &amp; $18.42/hr LA City minimum wage), 26 risks, "
@@ -1029,32 +1035,29 @@ def build_workspaces():
          "Session A &mdash; the original build, archived verbatim with its own stylesheet and scripts",
          "10 pages",
          "<a href='session-1944e5a3/index.html'>open &#8599;</a>"],
-        ["This root site",
-         "Session B &mdash; the deterministic model, 23 sources, 87 metric rows and the decision triggers currently "
-         "served at the site root",
+        ["Historical root pages",
+         "Session B &mdash; deterministic model, 23 sources, 87 metric rows and decision triggers; preserved with a historical banner. "
+         "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",
          "15 pages",
-         "<a href='index.html'>you are here</a>"],
+         "<a href='executive-summary.html'>open historical summary &#8599;</a>"],
     ]
     body = f"""
 {head_block("All workspaces",
-            "Seven independent workbooks, one repository",
+            "Eight independent workbooks, one repository",
             "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
 
 <div class="callout warn">
-<p><strong>Where to start.</strong> If you want one answer and the audit trail behind it, open
-<a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G). It re-verified this
-repository line by line on 2026-11-07, publishes 110 fact rows against 19 official sources with 14 values
-deliberately left blank, scores six exit and hold strategies on risk-adjusted after-tax wealth, and lists every
-irregularity it found &mdash; including one in this root site's own source ledger.</p>
-<p class="muted">If you want the original deterministic model with its decision triggers, this root site remains
-the reference build. The six others are preserved because deleting another session's work is never the right
-resolution to a conflict.</p>
+<p><strong>Where to start.</strong> Open the current evidence-first dashboard:
+<a href="session-f4f700c0/index.html"><strong>session-f4f700c0</strong></a> (Session I). It keeps unknown property facts blank,
+links every evidence row to an official source, separates projections from observations, and publishes a Flagged for Review page.</p>
+<p class="muted">Earlier workbooks are preserved because deleting another session's work is never the right resolution to a conflict.
+Their precise rankings should be treated as historical and assumption-driven unless independently re-underwritten with actual lease, rent, debt, tax and offer inputs.</p>
 </div>
 
 <h2>The workbooks</h2>
 {table(["Folder", "What it is", "Size", "Open"], rows)}
 
-<h2>Why there are seven</h2>
+<h2>Why there are eight</h2>
 <p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
 each other. In practice each session started from a nearly empty repository, built a complete workbook, and
 discovered the others only when pushing. Every time, the resolution was the same: preserve what already exists,
@@ -1076,8 +1079,37 @@ to method and which are artefacts of an assumption.</p>
                 "Index of every independent workbook published from this repository, with guidance on where to start.")
 
 
+def build_current_index():
+    """Root landing delegates to the current isolated dashboard, preserving historical navigation."""
+    src = os.path.join(ROOT, "session-f4f700c0", "index.html")
+    with open(src, encoding="utf-8") as f:
+        text = f.read()
+
+    def fix_href(m):
+        href = m.group(1)
+        if href.startswith(("http://", "https://", "#", "mailto:")):
+            return m.group(0)
+        if href.startswith("../"):
+            href = href[3:]
+        else:
+            href = "session-f4f700c0/" + href
+        return f'href="{href}"'
+
+    text = re.sub(r'href="([^"]+)"', fix_href, text)
+    text = text.replace('href="session-f4f700c0/assets/style.css"', 'href="session-f4f700c0/assets/style.css"')
+    historical = "".join(f'<a href="{href}">{label}</a>' for href, label in NAV)
+    legacy = f"""
+<details class="legacy-nav wrap" style="max-width:1240px;margin:24px auto;padding:0 22px">
+<summary>Historical root workbook and parallel-session archive (preserved, assumption-driven)</summary>
+<nav class="main" aria-label="Historical root workbook">{historical}</nav>
+</details>
+"""
+    text = text.replace("</body>", legacy + "\n</body>")
+    return text
+
+
 BUILDERS = {
-    "index.html": build_index,
+    "index.html": build_current_index,
     "executive-summary.html": build_exec,
     "market-economics.html": build_market,
     "property-lease.html": build_property,

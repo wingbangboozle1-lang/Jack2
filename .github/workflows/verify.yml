@@ -19,25 +19,40 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Regenerate the projection model
+      - name: Regenerate the historical root projection model
         run: python3 tools/model.py
 
-      - name: Rebuild the site from data
+      - name: Build current evidence ledger, normalized model and dashboard
+        run: |
+          python3 session-f4f700c0/scripts/build_research.py
+          python3 session-f4f700c0/scripts/analyze.py
+          python3 session-f4f700c0/scripts/build_site.py
+
+      - name: Rebuild the historical root site and current landing
         run: python3 tools/build_site.py
+
+      - name: Line-level repository inventory and privacy scan
+        run: python3 session-f4f700c0/scripts/audit.py
+
+      - name: Verify current dashboard data, model, links and privacy
+        run: python3 session-f4f700c0/scripts/check.py
+
+      - name: Run current model unit tests
+        run: python3 -m unittest discover -s session-f4f700c0/tests -v
+
+      - name: Run historical root link, source, PII and consistency checks
+        run: python3 tools/check_site.py
+
+      - name: Export the historical manual-review ledger
+        run: python3 tools/export_ledger.py
 
       - name: Fail if generated files are out of date
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            echo "Generated output is out of date. Run tools/model.py and tools/build_site.py and commit the result."
+            echo "Generated output is out of date. Rebuild and commit the result."
             git status --porcelain
             exit 1
           fi
-
-      - name: Run link, source, PII and consistency checks
-        run: python3 tools/check_site.py
-
-      - name: Export the manual-review ledger
-        run: python3 tools/export_ledger.py
 
       - name: Regenerate and verify session-a3a8ec08 dashboard
         run: |

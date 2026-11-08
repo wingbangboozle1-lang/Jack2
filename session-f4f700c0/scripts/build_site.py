@@ -317,10 +317,10 @@ flagged_body += table(["ID", "Severity", "Area", "Finding", "Evidence", "Action 
 
 # ---------------------------------------------------------------- verification
 verify_body = cards([
-    ("Files inventoried", str(AUDIT.get("files", "pending")), "Every tracked/nonignored file read line by line for structural and privacy patterns."),
-    ("Lines inventoried", f'{AUDIT.get("lines", 0):,}', "Hashes and line counts recorded; historical files preserved."),
-    ("Current-session privacy hits", str(AUDIT.get("current_session_privacy_hits", "pending")), "Emails, phones, street addresses and APNs scanned in this dashboard; historical institutional pattern flagged separately."),
-    ("Structural errors", str(AUDIT.get("structural_errors", "pending")), "JSON parse, Python compile and HTML parse checks."),
+    ("Line-level inventory", "JSON", "Every tracked/nonignored file read line by line; hashes, line counts and structural checks recorded."),
+    ("Current-session privacy", "scan", "Emails, phones, street addresses and APNs scanned in this dashboard; historical institutional pattern flagged separately."),
+    ("Build verification", "JSON", "Source links, blank unknowns, model arithmetic, table-row sources and internal links checked."),
+    ("Historical preservation", "additive", "Earlier workspaces remain accessible and are labeled historical/assumption-driven."),
 ])
 verify_body += section("What was checked", """
 <ul>

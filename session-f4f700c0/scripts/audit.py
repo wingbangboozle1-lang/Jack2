@@ -36,7 +36,9 @@ class Parser(HTMLParser):
 
 def files():
     raw = subprocess.check_output(["git", "ls-files", "--cached", "--others", "--exclude-standard"], cwd=REPO).decode()
-    return sorted(set(raw.splitlines()))
+    paths = sorted(set(raw.splitlines()))
+    # Exclude self-referential generated audit/verification artifacts so the inventory is stable in CI.
+    return [p for p in paths if not p.startswith("session-f4f700c0/audit/") and p != "session-f4f700c0/verification.json"]
 
 
 def workspace(path):
