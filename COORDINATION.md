@@ -620,10 +620,10 @@ Zero files owned by Sessions A–H are edited, overwritten or discarded.
 | Task ID | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
 | `4ed347de-T1` | Claim scope above; detect live parallel sessions; freeze non-overlapping file scope | `done` | `session-4ed347de` | `COORDINATION.md` (append-only) |
-| `4ed347de-T2` | Independent re-verification, dated **2026-11-08**, of the decision-critical values the published site relies on — pulled fresh from the official publisher, not copied from prior sessions | `in progress` | `session-4ed347de` | `session-4ed347de/data/sources.json`, `session-4ed347de/data/verification.json` |
-| `4ed347de-T3` | Line-by-line audit of the published root workbook (Sessions B/G/H) and its flagged register; record agreement / supersession / irregularity per row | `in progress` | `session-4ed347de` | `session-4ed347de/data/audit.json` |
-| `4ed347de-T4` | Decision dashboard: executive summary, decision synthesis, risk view, verification ledger, flagged-for-review page | `unclaimed` | — | `session-4ed347de/*.html`, `session-4ed347de/scripts/*.py` |
-| `4ed347de-T5` | Automated verifier (source-linked rows, blank-if-unverified, zero PII, zero broken links), PR to `main`, merge, confirm Pages | `unclaimed` | — | `session-4ed347de/scripts/verify.py`, `COORDINATION.md` |
+| `4ed347de-T2` | Independent re-verification, dated **2026-11-08**, of the decision-critical values the published site relies on — pulled fresh from the official publisher, not copied from prior sessions | `done` | `session-4ed347de` | `session-4ed347de/data/sources.json` (25 sources), `session-4ed347de/data/verification.json` (98 rows: 82 verified, 16 blank) |
+| `4ed347de-T3` | Line-by-line audit of the published root workbook (Sessions B/G/H) and its flagged register; record agreement / supersession / irregularity per row | `done` | `session-4ed347de` | `session-4ed347de/data/audit.json` (48 rows: 41 confirmed, 1 superseded, 2 irregularity, 2 unverified, 2 note), `session-4ed347de/data/irregularities.json` (10 items) |
+| `4ed347de-T4` | Decision dashboard: executive summary, decision synthesis, risk view, verification ledger, flagged-for-review page | `done` | `session-4ed347de` | `session-4ed347de/*.html` (10 pages), `session-4ed347de/scripts/*.py` |
+| `4ed347de-T5` | Automated verifier (source-linked rows, blank-if-unverified, zero PII, zero broken links), PR to `main`, merge, confirm Pages | `in progress` | `session-4ed347de` | `session-4ed347de/scripts/verify.py`, `tools/build_site.py` (one NAV/workspace row), `COORDINATION.md` |
 
 ## Session detection (T1)
 
@@ -639,3 +639,83 @@ Sandbox `bash` egress is limited to GitHub/npm/PyPI, so `curl` cannot reach gove
 sources below were read through the agent's page-fetch and search tools, which do reach them. Each value in
 `session-4ed347de/data/verification.json` records the URL, the exact published figure, the publication or
 `updated` date shown *on the page*, and the date read (`2026-11-08`).
+
+
+## Session I — findings, sources and verification performed (2026-11-08)
+
+### Sources (25, all opened on 2026-11-08; `session-4ed347de/data/sources.json`)
+
+Tier A official records: BLS *Los Angeles Area Economic Summary* updated **2026-11-04** (S01); CA EDD LA County
+press release **2026-10-16** (S02); BLS metro release **2026-09-29** (S03); Census QuickFacts Los Angeles city
+(S04) and **county, correct slug `losangelescountycalifornia`** (S05); BEA county personal income release
+**2026-02-05** (S06); FRED `DGS10` (**4.84% on 2026-11-05**, S10) and `DFEDTARU` (**4.00% on 2026-11-08**,
+S11); LA County Assessor Prop 13 (S14); City of LA Office of Finance Measure ULA FAQ (S15); LA County
+Registrar-Recorder documentary transfer tax, LA schedule effective 7/1/26 (S16); IRS Instructions for Form
+8824 (45/180-day rule, S17); CA FTB 2025 rate schedules, top bracket 12.3% (S18); RTC §17043, the additional
+1% over $1,000,000 (S19) — S18 + S19 are cited separately rather than as one 13.3% number; CA DIR statewide
+minimum wage $16.90 (S20) and fast-food minimum wage $20.00 (S21); City of LA Office of Wage Standards $18.42
+effective 2026-07-01 (S22); USGS UCERF3 FAQ, 60% / 46% / 31% (S23); CAL FIRE Eaton Fire final report (S24);
+CDE ACGR index (S25).
+Tier B SEC filings: Jack in the Box CIK 0000807882 10-K/10-Q index (S07), 10-Q balance sheet for period ended
+2026-07-05 (S08), Q3 FY2026 earnings 8-K Ex. 99.1 (S09); Realty Income FY2025 8-K Ex. 99.1, **7.3%** initial
+weighted average cash yield (S12) and Q3 2026 8-K Ex. 99.1, **6.8%** (S13).
+
+### Verification performed
+
+- `python3 session-4ed347de/scripts/model.py` → model + Monte Carlo regenerated.
+  **Reproduction of the published root model: PASS, 21/21 values matched to the cent**, including its
+  6.975% breakeven. (Getting there required matching the root model's *assumed* reinvestment rate of 4.90%;
+  the verified `DGS10` print is 4.84%, and the difference is recorded in
+  `model_output.json.observation_reinvestment_rate` rather than silently absorbed.)
+- `python3 session-4ed347de/scripts/build_site.py` → 10 pages + stylesheet.
+- `python3 session-4ed347de/scripts/verify.py` → **PASS** (`10 pages | 25 sources | 98 ledger rows,
+  82 verified / 16 blank | 48 audit rows | 10 flagged | 346 links | 0 PII leaks | reproduction pass`).
+- `python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py` → **PASS** across the
+  combined repository (`16 pages at root, 97 including archives; 23 sources; 87 metric rows; 24 risk rows`).
+  Only `workspaces.html` changed as generated output, which is the expected consequence of the one added row.
+
+### Headline findings (all published on the site, none hidden)
+
+1. **`R39` — the net-lease benchmark has moved.** Realty Income's Q3 2026 8-K (filed **2026-11-02**) reports a
+   **6.8%** initial weighted average cash yield; the root workbook uses **7.3%** (FY2025, filed 2026-02-24).
+   The root model's base-case breakeven is **6.975%**, so this single official input flips the sign: at 7.3%
+   selling wins by **$246,824** of 2040 wealth; at 6.8% holding wins by **$128,982**. This is *not* an error in
+   the prior work — it is a newer official record — and it is the reason this session re-frames the
+   recommendation as "negotiate, then price" rather than picking a side.
+2. **`R44` — Census QuickFacts county citation renders the national table.** The root site's URL uses the slug
+   `lacountycalifornia`, which QuickFacts does not recognise: it silently serves the **United States** table
+   (FIPS 1, land area 3,533,038 sq mi). The published county *values* are correct; the *link* does not show its
+   own source. Correct slug `losangelescountycalifornia` is published in this session's ledger (S05).
+3. **`R43` — USGS citation points at a program landing page** (`usgs.gov/programs/earthquake-hazards`) rather
+   than the record that states 60/46/31%. Specific FAQ record now cited as S23.
+4. **`R42` — the only local forecast cited ends before the decision window.** The LAEDC / City WDB report
+   (genuine, EWDD-hosted) covers 2022–2028 and is built on 2022 ACS data; the lease runs to 2030–2035.
+5. **Monte Carlo with black swans.** 20,000 seeded paths (seed 424242): **P(sell beats hold) = 46.1%**, a mean
+   difference under 1%. The strategies are *not* distinguishable on terminal wealth — but the 99th-percentile
+   hazard loss is **57.9% of value on the single-asset hold path** versus **20.8% on the diversified
+   reinvested path**. That asymmetry, not the mean, is the argument for exchanging.
+6. **The eight owner facts are missing** (published as blank rows P01–P08, no value inferred): contract rent,
+   exact expiry, escalations, renewal option terms, basis, secured debt, recovery structure, parcel geometry.
+   Every model in this repository, including this one, substitutes an assumption for each.
+
+### Irregularities logged for review (10, published on the workbook's `flagged.html`)
+
+`F1` benchmark supersession (material) · `F2` QuickFacts slug (low) · `F3` USGS citation (low) · `F4` forecast
+horizon (medium) · `F5` federal 23.8% / 28.8% rates not read this session — left blank (low) · `F6` PRs #14 and
+#18 still open from earlier sessions (low) · `F7` eight workbooks, several framings (medium) · `F8` eight owner
+facts missing (high) · `F9` parcel-level hazard and insurance unverified (high) · `F10` privacy scan, one hit
+cleared (none).
+
+`F10` detail for the reviewer: a repository-wide scan for emails, phone numbers, street addresses and parcel
+numbers returned exactly one hit — the **public headquarters street address of the Los Angeles Unified School
+District** in `research/04-education.md`. It is a public agency address, not personal information. It is
+**logged rather than edited**, because that file belongs to another session, and the address is deliberately
+**not reproduced** anywhere in this session's output so that the workbook stays clean under its own PII scan.
+
+### Scope discipline
+
+Files written by this session: `session-4ed347de/**` (new) and this section of `COORDINATION.md`. Exactly one
+line of another session's file was touched: one additive row in `build_workspaces()` in `tools/build_site.py`
+so `workspaces.html` lists this workbook. No page, dataset or script owned by Sessions A–H was edited,
+overwritten or discarded. The two long-open PRs (#14 Session E, #18 Session F) were **not** closed or merged by
+this session.
