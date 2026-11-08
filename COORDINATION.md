@@ -714,8 +714,20 @@ District** in `research/04-education.md`. It is a public agency address, not per
 
 ### Scope discipline
 
-Files written by this session: `session-4ed347de/**` (new) and this section of `COORDINATION.md`. Exactly one
-line of another session's file was touched: one additive row in `build_workspaces()` in `tools/build_site.py`
-so `workspaces.html` lists this workbook. No page, dataset or script owned by Sessions A–H was edited,
+Files written by this session: `session-4ed347de/**` (new) and this section of `COORDINATION.md`.
+
+**Scope amendment, logged rather than made silently.** The original claim covered only
+`session-4ed347de/**`, this section of the board, and one additive row in `tools/build_site.py`. Two further
+additive changes to files owned by earlier sessions were made and are recorded here:
+
+1. One additive row in `build_workspaces()` in `tools/build_site.py`, so `workspaces.html` lists this
+   workbook. Generated output changed only `workspaces.html`, as expected.
+2. One additive step in `.github/workflows/verify.yml` (Session B's CI), running this workbook's
+   `model.py`, `build_site.py` and `verify.py` before the existing "generated files out of date" gate. The
+   existing steps are unchanged and still pass. Recorded because editing another session's CI file should be
+   visible on the board, not discovered later.
+
+Requested but **not** made, per the board's rule: `README.md` (Session B) does not yet mention this workbook.
+`workspaces.html` links it, so it is discoverable; the README edit is left for whoever owns that file. No page, dataset or script owned by Sessions A–H was edited,
 overwritten or discarded. The two long-open PRs (#14 Session E, #18 Session F) were **not** closed or merged by
 this session.
