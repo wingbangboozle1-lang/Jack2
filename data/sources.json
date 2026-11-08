@@ -21,11 +21,12 @@
       "id": "S2",
       "tier": "A",
       "publisher": "U.S. Census Bureau",
-      "title": "QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)",
-      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
-      "covers": "Population, age, race/Hispanic origin, housing tenure and values, income, education, labor force, businesses",
-      "accessed": "2026-11-06",
-      "verified": true
+      "title": "QuickFacts: Los Angeles city and Los Angeles County, California (V2025 population estimates; 2020-2024 ACS 5-year)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+      "covers": "Population, age, race/Hispanic origin, housing tenure and values, income, education, labor force, businesses - city and county columns",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "URL corrected by the Session I integration pass: the previous slug (lacountycalifornia) resolved to a United States table and silently dropped the county column. Both columns were re-read on 2026-11-08; every value cited to S2 is unchanged. See session-343c7030/flagged.html item R-01."
     },
     {
       "id": "S3",

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projection model · Central LA Jack in the Box NNN</title>
+<meta name="description" content="Source-verified sell-versus-renew analysis for a single-tenant Jack in the Box on an NNN lease in Central Los Angeles, lease expiry 2030-2035.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brandbar">
+      <div class="brand"><span class="dot">JB</span><span>Central LA Jack in the Box · NNN<span><small>Independent decision workbook · session 343c7030 · data read 2026-11-08</small></span></span></div>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <a href="index.html">Overview</a>
+      <a href="executive-summary.html">Executive summary</a>
+      <a href="market.html">Market &amp; people</a>
+      <a href="economy.html">Economy &amp; jobs</a>
+      <a href="property-lease.html">Property &amp; lease</a>
+      <a href="valuation-tax.html">Valuation &amp; tax</a>
+      <a href="projection.html" aria-current="page">Projection model</a>
+      <a href="decision.html">Decision</a>
+      <a href="risks.html">Risks</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="crumb"><a href="../workspaces.html">All workspaces</a> / session-343c7030</div>
+    <h1>Projection model</h1>
+    <p class="lede">Five strategies, 2026–2040, deterministic and seeded Monte-Carlo, with every assumption published and stress-tested.</p>
+
+<div class="note"><strong>What is modelled.</strong> Five courses of action, each projected from 2026 to 2040 on the same
+random paths, then ranked on <em>certainty-equivalent</em> wealth — the risk-free amount that a risk-averse owner would accept in
+place of the uncertain distribution — with a CRRA coefficient of 2.5. Expected value alone would reward the strategy
+with the fattest tail; the certainty equivalent does not.</div>
+
+<div class="grid g4">
+  <div class="card"><div class="lbl">Trials</div><div class="big">15,000</div><div class="meta">seed 20261108 — reproducible</div></div>
+  <div class="card"><div class="lbl">Horizon</div><div class="big">2026–2040</div><div class="meta">expiry sampled 2030–2035</div></div>
+  <div class="card"><div class="lbl">Unit of account</div><div class="big">$100k NOI</div><div class="meta">normalised, never this asset's rent</div></div>
+  <div class="card"><div class="lbl">Assumptions</div><div class="big">15</div><div class="meta">all published, none claimed as fact</div></div>
+</div>
+
+<h2>The formulas</h2>
+<div class="card">
+<pre class="meta" style="white-space:pre-wrap;margin:0">NOI(t)        = 100,000 × (1 + g)^(t − 2026)
+cap(t)        = cap₀ + term adjustment (0–100 bp depending on years of term remaining)
+price(t)      = NOI(t) ÷ cap(t)
+city tax      = 0.45% × price + Measure ULA (4% if price &gt; $5.4m, 5.5% if ≥ $10.9m)
+net proceeds  = price − 2.5% selling costs − city tax − income tax (0 if §1031 is used)
+terminal      = net proceeds × (1 + reinvestment growth)^(2040 − sale year), then taxed on exit
+utility       = W^(1−γ)/(1−γ);  CE = [ mean(utility) ]^(1/(1−γ))
+hazard        = annual quake probability derived from the verified 30-year 60% (1 − 0.40^(1/30))</pre>
+</div>
+
+<h2>Assumptions</h2>
+<p class="lede">Every number below is a modelling choice, not an official statistic. Each is shown with the range that was tested.
+The verified inputs the model does use are the September 2026 LA CPI (3.7%), the 10-year Treasury (4.86%), the earthquake
+probability (60% / 30 years) and the Measure ULA schedule.</p>
+<div class="tablewrap"><table data-filterable><caption>All fifteen assumptions, with the tested range and the reason</caption>
+<thead><tr><th>ID</th><th>Assumption</th><th>Base value</th><th>Tested range</th><th>Why this value</th></tr></thead>
+<tbody><tr><td><strong>A1</strong></td><td>Going-in capitalisation rate for this asset at 2026</td><td>6.00%</td><td>5.25% – 6.75%</td><td class="meta">No official series publishes QSR NNN transaction cap rates. Range spans a 25 bp premium to the 10-year Treasury (4.86%, verified C01) and a typical net-lease spread.</td></tr><tr><td><strong>A2</strong></td><td>Cap-rate term adjustment</td><td>-25 bp for 10+ yrs of term; 0 for 5–10; +50 bp for 2–5; +100 bp under 2 yrs</td><td>-50 to +150 bp</td><td class="meta">Standard net-lease term pricing: buyers pay up for long contracted income and discount short remaining term. Direction is uncontroversial; the size is a judgement.</td></tr><tr><td><strong>A3</strong></td><td>NOI growth, base case</td><td>3.0% / yr</td><td>2.0% – 3.7%</td><td class="meta">Bracket: 2.0% is a conservative floor; 3.7% is the verified September 2026 LA CPI-U (E18). Tenant rent growth above CPI is not assumed.</td></tr><tr><td><strong>A4</strong></td><td>Selling costs</td><td>2.5% of price</td><td>2.0% – 3.5%</td><td class="meta">Broker plus closing costs, excluding taxes.</td></tr><tr><td><strong>A5</strong></td><td>Basis and accumulated depreciation</td><td>basis = 40% of current value; depreciation taken = 30% of current value</td><td>basis 20% – 70% of value</td><td class="meta">The brief does not disclose the owner&#x27;s basis. Both figures are placeholders, and the after-tax ranking is re-run across the range in the sensitivity grid.</td></tr><tr><td><strong>A6</strong></td><td>Federal long-term capital gains + net investment income tax</td><td>23.8%</td><td>23.8%</td><td class="meta">Statutory top rate for a high-income individual (IRC §1(h) + §1411).</td></tr><tr><td><strong>A7</strong></td><td>Unrecaptured §1250 gain (depreciation recapture), federal</td><td>25%</td><td>25%</td><td class="meta">IRC §1(h)(1)(E).</td></tr><tr><td><strong>A8</strong></td><td>California income tax on the gain</td><td>13.3%</td><td>13.3%</td><td class="meta">Top marginal FTB rate; no preferential capital-gains rate.</td></tr><tr><td><strong>A9</strong></td><td>Replacement asset after a §1031 exchange (diversified net lease)</td><td>6.25% entry and exit cap, 2.5% NOI growth</td><td>growth 2.0% – 3.0%</td><td class="meta">With the same cap on entry and exit the yield cancels and only NOI growth matters, so the tested range is on growth, not on the cap.</td></tr><tr><td><strong>A10</strong></td><td>Probability the tenant renews at expiry</td><td>65%</td><td>40% – 85%</td><td class="meta">The tenant has historically renewed at market rates, but carries negative equity (T05) and a closure programme. Not an official statistic.</td></tr><tr><td><strong>A11</strong></td><td>Downtime if the tenant vacates at expiry</td><td>12 months, then reletting at 90% of prior NOI</td><td>6 – 24 months</td><td class="meta">A drive-through QSR box is single-purpose; reletting or re-tenanting takes time.</td></tr><tr><td><strong>A12</strong></td><td>Tenant default hazard, any year</td><td>1.5% / yr</td><td>0.5% – 4.0%</td><td class="meta">Anchored to the tenant&#x27;s FY2025 loss and negative equity, not to a published default probability.</td></tr><tr><td><strong>A13</strong></td><td>Earthquake loss given a major event</td><td>8% of value uninsured/retained, plus 10% of one year&#x27;s NOI</td><td>0 – 25% of value</td><td class="meta">The 30-year M≥6.7 probability (60%, H01) is official; the loss-given-event is not.</td></tr><tr><td><strong>A14</strong></td><td>Wildfire loss given a major event</td><td>15% of value, 0.5% / yr event probability</td><td>0.1% – 1.5% / yr</td><td class="meta">Central Los Angeles is urban; the parcel&#x27;s FHSZ class is unknown (H05 blank). Treated as a small but non-zero tail.</td></tr><tr><td><strong>A15</strong></td><td>Renewal rent relative to in-place rent</td><td>0% change</td><td>-10% – +10%</td><td class="meta">A renewal at market is assumed flat; the brief gives no rent and no market comps.</td></tr></tbody></table></div>
+
+<h2>Deterministic paths</h2>
+<div class="tablewrap"><table data-filterable><caption>Terminal after-tax wealth per $100,000 of NOI — three deterministic cases</caption>
+<thead><tr><th>Case</th><th>NOI growth</th><th>Entry cap</th><th>Strategy</th><th class="num">Terminal wealth 2040</th></tr></thead>
+<tbody><tr><td>Bear</td><td>2.0%</td><td>6.75%</td><td>Sell 2026, §1031 into diversified net lease</td><td class="num">$1,452,013</td></tr><tr><td>Bear</td><td>2.0%</td><td>6.75%</td><td>Sell 2026, taxable</td><td class="num">$1,394,333</td></tr><tr><td>Bear</td><td>2.0%</td><td>6.75%</td><td>Extend now, sell 2032</td><td class="num">$1,413,944</td></tr><tr><td>Bear</td><td>2.0%</td><td>6.75%</td><td>Hold to expiry, sell</td><td class="num">$1,459,776</td></tr><tr><td>Bear</td><td>2.0%</td><td>6.75%</td><td>Renew at expiry, hold</td><td class="num">$1,364,394</td></tr><tr><td>Base</td><td>3.0%</td><td>6.00%</td><td>Sell 2026, §1031 into diversified net lease</td><td class="num">$1,605,723</td></tr><tr><td>Base</td><td>3.0%</td><td>6.00%</td><td>Sell 2026, taxable</td><td class="num">$1,534,231</td></tr><tr><td>Base</td><td>3.0%</td><td>6.00%</td><td>Extend now, sell 2032</td><td class="num">$1,643,711</td></tr><tr><td>Base</td><td>3.0%</td><td>6.00%</td><td>Hold to expiry, sell</td><td class="num">$1,705,510</td></tr><tr><td>Base</td><td>3.0%</td><td>6.00%</td><td>Renew at expiry, hold</td><td class="num">$1,695,190</td></tr><tr><td>Bull</td><td>3.7%</td><td>5.25%</td><td>Sell 2026, §1031 into diversified net lease</td><td class="num">$1,803,351</td></tr><tr><td>Bull</td><td>3.7%</td><td>5.25%</td><td>Sell 2026, taxable</td><td class="num">$1,714,100</td></tr><tr><td>Bull</td><td>3.7%</td><td>5.25%</td><td>Extend now, sell 2032</td><td class="num">$1,914,139</td></tr><tr><td>Bull</td><td>3.7%</td><td>5.25%</td><td>Hold to expiry, sell</td><td class="num">$1,998,729</td></tr><tr><td>Bull</td><td>3.7%</td><td>5.25%</td><td>Renew at expiry, hold</td><td class="num">$2,073,024</td></tr></tbody></table></div>
+
+<h2>Monte Carlo, 15,000 trials</h2>
+<div class="tablewrap"><table><caption>Ranked on certainty-equivalent wealth (CRRA 2.5), with the tail shown</caption>
+<thead><tr><th>Rank</th><th>Strategy</th><th class="num">Certainty equivalent</th><th class="num">Median</th>
+<th class="num">5th percentile</th><th class="num">95th percentile</th><th class="num">P(beats hold)</th></tr></thead>
+<tbody><tr><td class="num">1</td><td><strong>Extend now, sell 2032</strong></td><td class="num">$1,581,578</td><td class="num">$1,597,396</td><td class="num">$1,347,008</td><td class="num">$1,880,916</td><td class="num">36%</td></tr><tr><td class="num">2</td><td><strong>Sell 2026, §1031 into diversified net lease</strong></td><td class="num">$1,547,830</td><td class="num">$1,560,534</td><td class="num">$1,340,585</td><td class="num">$1,799,928</td><td class="num">42%</td></tr><tr><td class="num">3</td><td><strong>Hold to expiry, sell</strong></td><td class="num">$1,491,219</td><td class="num">$1,544,298</td><td class="num">$1,170,392</td><td class="num">$1,925,731</td><td class="num">0%</td></tr><tr><td class="num">4</td><td><strong>Sell 2026, taxable</strong></td><td class="num">$1,479,370</td><td class="num">$1,491,840</td><td class="num">$1,285,400</td><td class="num">$1,710,794</td><td class="num">36%</td></tr><tr><td class="num">5</td><td><strong>Renew at expiry, hold</strong></td><td class="num">$1,278,986</td><td class="num">$1,490,704</td><td class="num">$847,886</td><td class="num">$2,024,428</td><td class="num">30%</td></tr></tbody></table></div>
+
+<h2>Sensitivity: does the ranking survive the assumptions?</h2>
+<div class="tablewrap"><table><caption>Nine cells on NOI growth × entry cap. Bold is the best strategy in that cell.</caption>
+<thead><tr><th>NOI growth</th><th>Entry cap</th><th class="num">S1 sell now</th><th class="num">S2 taxable</th>
+<th class="num">S3 extend→sell</th><th class="num">S4 hold→sell</th><th class="num">S5 renew→hold</th><th>Best</th></tr></thead>
+<tbody><tr><td>2.0%</td><td>5.25%</td><td class="num winner">$1,737,232</td><td class="num">$1,651,850</td><td class="num">$1,688,519</td><td class="num">$1,560,458</td><td class="num">$1,250,035</td><td><span class="tag t-ok">Sell 2026, §1031 into diversified net lease</span></td></tr><tr><td>2.0%</td><td>6.00%</td><td class="num winner">$1,547,437</td><td class="num">$1,478,966</td><td class="num">$1,504,893</td><td class="num">$1,400,719</td><td class="num">$1,136,057</td><td><span class="tag t-ok">Sell 2026, §1031 into diversified net lease</span></td></tr><tr><td>2.0%</td><td>6.75%</td><td class="num winner">$1,399,509</td><td class="num">$1,344,231</td><td class="num">$1,361,764</td><td class="num">$1,274,728</td><td class="num">$1,046,109</td><td><span class="tag t-ok">Sell 2026, §1031 into diversified net lease</span></td></tr><tr><td>3.0%</td><td>5.25%</td><td class="num">$1,737,232</td><td class="num">$1,651,850</td><td class="num winner">$1,777,292</td><td class="num">$1,654,521</td><td class="num">$1,395,980</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>3.0%</td><td>6.00%</td><td class="num">$1,547,437</td><td class="num">$1,478,966</td><td class="num winner">$1,582,617</td><td class="num">$1,483,517</td><td class="num">$1,264,014</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>3.0%</td><td>6.75%</td><td class="num">$1,399,509</td><td class="num">$1,344,231</td><td class="num winner">$1,430,875</td><td class="num">$1,348,656</td><td class="num">$1,159,854</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>3.7%</td><td>5.25%</td><td class="num">$1,737,232</td><td class="num">$1,651,850</td><td class="num winner">$1,842,051</td><td class="num">$1,723,398</td><td class="num">$1,510,358</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>3.7%</td><td>6.00%</td><td class="num">$1,547,437</td><td class="num">$1,478,966</td><td class="num winner">$1,639,316</td><td class="num">$1,544,148</td><td class="num">$1,364,872</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>3.7%</td><td>6.75%</td><td class="num">$1,399,509</td><td class="num">$1,344,231</td><td class="num winner">$1,481,290</td><td class="num">$1,402,795</td><td class="num">$1,249,523</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr></tbody></table></div>
+<p class="meta">The ranking is not fragile: S3 leads in most cells, and S1 takes over exactly when growth disappoints (2.0%) —
+which is the economically sensible direction, because low growth removes the reason to wait for it.</p>
+
+<div class="tablewrap"><table><caption>Replacement-asset growth (A9). S1 takes the lead when the replacement grows faster than the subject.</caption>
+<thead><tr><th>Reinvest growth</th><th class="num">S1</th><th class="num">S2</th><th class="num">S3</th><th class="num">S4</th><th class="num">S5</th><th>Best</th></tr></thead>
+<tbody><tr><td>2.0%</td><td class="num">$1,456,553</td><td class="num">$1,408,921</td><td class="num"><strong>$1,526,450</strong></td><td class="num">$1,450,234</td><td class="num">$1,285,697</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>2.5%</td><td class="num">$1,545,736</td><td class="num">$1,477,371</td><td class="num"><strong>$1,579,562</strong></td><td class="num">$1,494,007</td><td class="num">$1,285,697</td><td><span class="tag t-ok">Extend now, sell 2032</span></td></tr><tr><td>3.0%</td><td class="num"><strong>$1,640,755</strong></td><td class="num">$1,550,302</td><td class="num">$1,634,518</td><td class="num">$1,538,963</td><td class="num">$1,285,697</td><td><span class="tag t-ok">Sell 2026, §1031 into diversified net lease</span></td></tr></tbody></table></div>
+
+<h2>The expiry ambiguity, priced</h2>
+<div class="tablewrap"><table><caption>S4 (hold to expiry) under a certain expiry in each year — the value of not knowing</caption>
+<thead><tr><th>Assumed expiry</th><th class="num">Terminal wealth per $100k NOI</th></tr></thead><tbody><tr><td class="num">2030</td><td class="num">$1,692,229</td></tr><tr><td class="num">2031</td><td class="num">$1,698,861</td></tr><tr><td class="num">2032</td><td class="num">$1,705,510</td></tr><tr><td class="num">2033</td><td class="num">$1,712,174</td></tr><tr><td class="num">2034</td><td class="num">$1,718,853</td></tr><tr><td class="num">2035</td><td class="num">$1,725,547</td></tr></tbody></table></div>
+<p class="meta">Moving the expiry from 2030 to 2035 changes the hold outcome by $33,318 —
+2.0% — for a fact the owner already knows and a buyer cannot see. Fixing it in a lease
+document is worth more than a year of rent escalation.</p>
+
+<h2>Limitations</h2>
+<ul class="tight">
+<li>No rent, address, size, basis or loan terms were supplied, so this measures a decision, not a parcel.</li>
+<li>The cap rate is an assumption. If the asset trades at 7.0% rather than 6.0%, every dollar figure falls by about 14%.</li>
+<li>The hazard module uses the verified <em>probability</em> of a major earthquake but an assumed loss given event (A13).</li>
+<li>The owner's own tax position (bracket, state, entity, depreciation history) is deliberately not collected; flat top rates are applied.</li>
+<li>No forecast of a recession, an earthquake or a wildfire is made. They are sampled as risks, not predicted.</li>
+</ul>
+
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Internal decision support. Not an appraisal, not tax advice, not investment advice. Every value is traceable to the source shown on its row.</div>
+    <div>Accessed 2026-11-08 · <a href="verification.html">verification log</a> · <a href="flagged.html">flagged items</a></div>
+  </div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
