@@ -1043,24 +1043,29 @@ def build_workspaces():
     ]
     body = f"""
 {head_block("All workspaces",
-            "Seven independent workbooks, one repository",
+            "Nine independent workbooks, one repository",
             "Each agent session that worked on this repository published its own analysis without overwriting anyone else's. This page is the single index to all of them, so nothing published here is orphaned.")}
 
 <div class="callout warn">
-<p><strong>Where to start.</strong> If you want one answer and the audit trail behind it, open
-<a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G). It re-verified this
+<p><strong>Where to start.</strong> Open
+<a href="session-343c7030/index.html"><strong>session-343c7030</strong></a> (Session I), the final integration pass dated
+2026-11-08: 98 fact rows against 16 official sources read that day with 14 values deliberately left blank, five
+strategies scored on certainty-equivalent after-tax wealth, a 30-risk register and 13 repository findings &mdash;
+including the source-ledger defect in this root site, which that session fixed.</p>
+<p><strong>Then read the independent review.</strong>
+<a href="session-e618ace7/index.html"><strong>session-e618ace7</strong></a> (Session G) re-verified this
 repository line by line on 2026-11-07, publishes 110 fact rows against 19 official sources with 14 values
 deliberately left blank, scores six exit and hold strategies on risk-adjusted after-tax wealth, and lists every
-irregularity it found &mdash; including one in this root site's own source ledger.</p>
+irregularity it found.</p>
 <p class="muted">If you want the original deterministic model with its decision triggers, this root site remains
-the reference build. The six others are preserved because deleting another session's work is never the right
+the reference build. The eight others are preserved because deleting another session's work is never the right
 resolution to a conflict.</p>
 </div>
 
 <h2>The workbooks</h2>
 {table(["Folder", "What it is", "Size", "Open"], rows)}
 
-<h2>Why there are seven</h2>
+<h2>Why there are nine</h2>
 <p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
 each other. In practice each session started from a nearly empty repository, built a complete workbook, and
 discovered the others only when pushing. Every time, the resolution was the same: preserve what already exists,
