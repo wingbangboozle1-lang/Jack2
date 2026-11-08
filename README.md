@@ -28,7 +28,7 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 |---|---|
 | Question | Sell the property before the lease expires, or renew and hold? |
 | Answer format | A ranked strategy plus six testable decision triggers — not a guess at value |
-| Evidence base | 87 metric rows, 76 verified against 23 official sources, 11 deliberately blank and flagged |
+| Evidence base | 87 metric rows, 79 verified against 23 official sources, 8 deliberately blank and flagged (three blanks were filled on 2026-11-08 by the Session I integration pass) |
 | Model | Deterministic 2026–2040 projection in `tools/model.py`, published inputs, breakevens and sensitivity |
 | Risk | 24-row register mapped to each decision, including wildfire/earthquake/insurance tail scenarios |
 | Privacy | No name, address, APN, loan number or account anywhere in the repo or the site (enforced in code) |

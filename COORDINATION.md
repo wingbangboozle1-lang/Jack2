@@ -708,3 +708,33 @@ CI "generated output is up to date" check stays green. No other session's page, 
 | Pages source | unchanged: `main` / root |
 | PR | recorded below after merge |
 | Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+## Session I — deployment record and integration results (2026-11-08)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/343c7030-jack2` (Arena-pinned; doubles as the integration branch) |
+| **PR #21** | https://github.com/wingbangboozle1-lang/Jack2/pull/21 — MERGED 2026-11-08T22:54:04Z, merge commit `d9a816e3da8ff7c3f5e9735450a03778ddeaaed5`. New dashboard + Census URL fix + CI gate + README. CI `verify` pass; `pages-build-deployment` success; Pages API `built` for `d9a816e`. |
+| **PR #22** | https://github.com/wingbangboozle1-lang/Jack2/pull/22 — MERGED 2026-11-08T22:55:52Z, merge commit `bff701420fcf04e23612da19e3997dd14e064a67`. `workspaces.html` corrected to nine builds and pointed at the final pass. CI pass; Pages `built` for `bff7014`. |
+| **PR #23** | https://github.com/wingbangboozle1-lang/Jack2/pull/23 — MERGED 2026-11-08, merge commit `0b13fee575cc8af2925d6c826619d43d376a0aab`. Three fillable blanks on the root site filled from the corrected Census table (M16 poverty 16.5%, M17 per-capita income $47,685, M42 county median household income $90,112). Root totals: 87 rows, **79 verified, 8 blank** (was 76/11). CI pass; Pages `built` for `0b13fee`. |
+| **PR #24** | This record (documentation only): resolves data-irregularity narratives F03/F04 as fixed, corrects the README evidence line, and records the above. |
+| Pages source | unchanged: `main` / root (legacy build, `.nojekyll` present) |
+| Live URLs verified after each deploy | `https://wingbangboozle1-lang.github.io/Jack2/session-343c7030/` (title, recommendation, ranking, figures), `/session-343c7030/flagged.html`, `/workspaces.html` (nine rows, Session I first), `/flagged.html` (regenerated count: 8 blanks) |
+| Cache note | The first post-deploy fetch of `/workspaces.html` returned the previous build from edge cache; re-fetched with a cache-busting query and the new content was served. Recorded so a later reader does not mistake edge cache for a failed deploy. |
+| Merge policy | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+
+### What changed in shared outputs, and why it was in scope
+
+1. `data/sources.json` S2 — URL corrected (defect R-01). The county values it supports were already correct; the link could not show them.
+2. `data/metrics.json` M16, M17, M42 — three blanks filled with values read on 2026-11-08 from the corrected page. No value was inferred.
+3. `data/irregularities.json` F03, F04 — narratives updated to "resolved" with the evidence, rather than left claiming the blanks are open.
+4. `tools/build_site.py` — one additive workspace row; workspaces heading/copy corrected from "seven" to "nine"; the page now points first at this final pass and keeps Session G as the independent review.
+5. `README.md` — evidence line and a Session I section.
+6. `.github/workflows/verify.yml` — one added step that regenerates and verifies `session-343c7030/` (model → build → verifier), so the new dashboard is gated like the others.
+
+Nothing else from Sessions A–H was edited, and every cross-session checker still passes (see the verification section above).
+
+### Open items the owner should look at first
+
+- Five earlier PRs (#5, #6, #10, #14, #18) remain open on stale baselines. They are unreachable from the published site; close or rebase them deliberately. Recorded as R-06.
+- The parcel-level gaps (FHSZ class, FEMA zone, insurance premium, seismic retrofit) are the only inputs that could move the recommendation materially. They cannot be filled without the address, which is withheld by design — see the "How to close the most important gaps" table on the flagged page.
