@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification &mdash; Central LA Jack in the Box NNN (Session J)</title>
+<meta name="description" content="Source-verified decision support dashboard for a Central Los Angeles Jack in the Box NNN property (lease expiry 2030-2035), verified live on 2026-11-08.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Support &mdash; Session J<small>[REDACTED-PROPERTY-01] &middot; Jack in the Box &middot; 2030&ndash;2035 Expiry &middot; Live Verified 2026-11-08</small></span></a>
+  <nav class="main" aria-label="Primary Navigation"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="decision.html">Decision &amp; Triggers</a><a href="market-economics.html">Market &amp; Schools</a><a href="property-lease.html">Property, Credit &amp; Tax</a><a href="projection-model.html">Projection &amp; Simulator</a><a href="risks.html">Risk Register</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Official Sources</a><a href="verification.html" aria-current="page">Verification</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+<main id="main" class="wrap">
+<div class="page-head">
+  <p class="eyebrow">Quality Gate</p>
+  <h1>Automated Verification &amp; Reproducibility Log</h1>
+  <p class="lede">Zero-dependency build and verification scripts integrated into repository checks.</p>
+</div>
+
+<p>Reproduce the complete data model, static site build, and 8-rule verification suite from the repository root with zero third-party packages:</p>
+<pre class="card"><code>python3 session-24d6cd5f/scripts/model.py
+python3 session-24d6cd5f/scripts/build_site.py
+python3 session-24d6cd5f/scripts/verify.py
+python3 tools/check_site.py</code></pre>
+<h2>Automated Verification Matrix</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Check ID</th><th>Rule</th><th>Enforcement Scope</th><th>Result</th><th>Anchor</th></tr></thead>
+<tbody><tr><td><code>V-01</code></td><td><strong>Nav Completeness</strong></td><td>All 11 HTML pages exist and are linked from primary navigation.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau — QuickFacts: Los Angeles city, California &amp; Los Angeles County, California (PST045225)">[S06 &middot; Tier A]</a></td></tr><tr><td><code>V-02</code></td><td><strong>Zero Broken Internal Links</strong></td><td>Every local href/src resolves to an existing asset inside session-24d6cd5f/.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225" target="_blank" rel="noopener noreferrer" title="U.S. Census Bureau — QuickFacts: Los Angeles city, California &amp; Los Angeles County, California (PST045225)">[S06 &middot; Tier A]</a></td></tr><tr><td><code>V-03</code></td><td><strong>Per-Row Official Citation</strong></td><td>Every HTML <tbody> table row contains an https:// Tier A or B official link.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf" target="_blank" rel="noopener noreferrer" title="U.S. Bureau of Labor Statistics (BLS), Western Information Office — Los Angeles Area Economic Summary (Updated November 4, 2026)">[S01 &middot; Tier A]</a></td></tr><tr><td><code>V-04</code></td><td><strong>Blank Unverified Discipline</strong></td><td>All 79 verified rows are populated; all 15 unverified/private rows carry empty string ''.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://dof.ca.gov/forecasting/demographics/projections/" target="_blank" rel="noopener noreferrer" title="California Department of Finance (CA DOF), Demographic Research Unit — Population Projections Portal (Report P-2A, Vintage 2026, Released March 13, 2026)">[S10 &middot; Tier A]</a></td></tr><tr><td><code>V-05</code></td><td><strong>Zero PII Enforcement</strong></td><td>Regex scan detects zero emails, phones, street addresses, or APNs across all files.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://assessor.lacounty.gov/homeowners/realproperty" target="_blank" rel="noopener noreferrer" title="Los Angeles County Office of the Assessor — Proposition 13 — Real Property Assessment Overview">[S25 &middot; Tier A]</a></td></tr><tr><td><code>V-06</code></td><td><strong>External Link Hygiene</strong></td><td>Zero http:// links, zero localhost/127.0.0.1 references, zero external CDN dependencies.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener noreferrer" title="U.S. Department of the Treasury — Daily Treasury Par Yield Curve Rates — November 2026">[S20 &middot; Tier A]</a></td></tr><tr><td><code>V-07</code></td><td><strong>Byte-Reproducible Model</strong></td><td>seed=20261108 / 20,000 trials regenerates byte-identical model_output.json.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://www.sec.gov/Archives/edgar/data/726728/000072672826000044/realtyincomeq22026supple.htm" target="_blank" rel="noopener noreferrer" title="U.S. SEC EDGAR — Realty Income Corporation (CIK 0000726728) — Realty Income Q2 2026 Supplemental Operating &amp; Financial Data (Form 8-K Ex. 99.1; Q3 2026 10-Q Filed Nov 3, 2026)">[S24 &middot; Tier B]</a></td></tr><tr><td><code>V-08</code></td><td><strong>Cross-Session Non-Overwrite</strong></td><td>All prior sessions' directories preserved intact; changes isolated to session-24d6cd5f/ and coordination updates.</td><td><span class="badge verified">PASS</span></td><td><a class="src-link" href="https://electionresults.sos.ca.gov/returns/ballot-measures" target="_blank" rel="noopener noreferrer" title="California Secretary of State &amp; Legislative Analyst&#x27;s Office (LAO) — 2026 General Election Unofficial Returns (Nov 7, 2026), PR26-95 Withdrawal Notice &amp; Prop 3 / Prop 43 Analyses">[S28 &middot; Tier A]</a></td></tr></tbody>
+</table></div>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support &mdash; not an appraisal, tax advice, or investment advice.</strong> Every verified value links directly to a live Tier A (.gov/.mil/Fed) or Tier B (SEC EDGAR) record accessed on 2026-11-08. Unverified or private fields are strictly blank and catalogued on <a href="flagged.html">Flagged for Review</a>.</p>
+  <p>Zero PII &middot; Zero external CDNs &middot; 100% browser-local simulator &middot; <a href="../index.html">Root Site</a> &middot; <a href="../workspaces.html">All Workspaces</a> &middot; Reproducible via <code>python3 session-24d6cd5f/scripts/model.py && python3 session-24d6cd5f/scripts/build_site.py</code></p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

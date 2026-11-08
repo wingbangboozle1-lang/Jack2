@@ -245,3 +245,25 @@ Two things worth knowing before reading anything in this repository:
 - **Four commonly cited government URLs return 404** and are flagged rather than copied: the USGS earthquake FAQ, the BOE
   Proposition 13 page, two IRS §1031 pages and the BEA county-income release. Replacement URLs are published with the rows
   they support; the BEA figure is *not* republished because no working official page was found.
+
+## Session K dashboard (`session-24d6cd5f/`) — 2026-11-08 (originally claimed on `arena/24d6cd5f-jack2`)
+
+An independent 2026-11-08 verification and decision pass (`arena/24d6cd5f-jack2`, labeled Session K on `workspaces.html`
+so it does not collide with `session-6ad87c21/`) published an 11-page offline-capable dashboard at
+**https://wingbangboozle1-lang.github.io/Jack2/session-24d6cd5f/** while preserving Sessions A–J untouched.
+
+| | |
+|---|---|
+| Recommendation | **60-day fast-track blend-and-extend probe -> `S4` Immediate Sale + §1031 Exchange.** If an unconditional 10–15 yr NNN extension clears investment-committee hurdles within 60 days, execute before marketing; otherwise sell immediately into a §1031 exchange (`S4` CE **$3,810,994** vs `S3` **$3,659,490** vs `S1` **$3,049,563** vs `S5` **$1,548,968** per `$100k` NOI, 2040 horizon). |
+| Evidence | **94 metrics** (**79 verified** live on 2026-11-08 across **36 official Tier A/B sources**, **15 deliberately blank**): Treasury Nov 6 curve (`2Y 4.51%`, `10Y 4.86%`), BLS/EDD Sep 2026 MSA/County jobs & CPI (`+3.7%`), BEA 2024 County GDP (`$810.84B`), Census QuickFacts V2025, CA DOF & SCAG 2024 vs 2026, CDE 2024–25 ACGR (`86.2%` LAUSD), CA DIR `$20.00` AB 1228 / LA `$18.42`, SEC EDGAR Q3 FY26 (`2,115` units, `$500M` `7.624%` Class A-2 May 2031 ARD), Nov 2026 California **Prop 3 (`60.3% Yes`)** permanently locking **13.30%** top personal income tax rate past 2030, and Measure ULA thresholds (`$5.4M` / `$10.9M`, `25-0006A1` withdrawn & Prop 43 trailing `56.8% No`). |
+| Model | Six strategies (`S1`–`S6`), 2026–2040 deterministic paths, 2030–2035 expiry sweep, basis-gain sweep, **20,000-trial seeded Monte Carlo** (`seed=20261108`, deterministic `SHA256`), corporate vs franchisee split (`93.0%` franchised). |
+| Risks & Audit | **28-row BAU & Black-Swan risk register** (`RK-01`–`RK-28`), **16 cross-session repository audit findings** (`J-IRG-01`–`J-IRG-16`), and a **100% browser-local parcel/lease/§1031/ULA/Prop 13 simulator** (zero external CDNs, zero PII). |
+
+Rebuild and verify:
+
+```bash
+python3 session-24d6cd5f/scripts/model.py        # 20,000-trial model_output.json
+python3 session-24d6cd5f/scripts/build_site.py   # 11 HTML pages
+python3 session-24d6cd5f/scripts/verify.py       # 8 rule families + PII & link checks
+```
+
