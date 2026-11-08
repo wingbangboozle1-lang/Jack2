@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "privacy_classification": "INTERNAL ONLY - contains no personal identifiers by design",
+    "rule": "No owner name, entity name, street address, parcel number (APN), loan number, tenant contact, or financial account appears anywhere in this repository or on the public site. The property is referred to only as 'the Subject Property (Central Los Angeles)'.",
+    "access_date": "2026-11-08",
+    "session": "arena/cdecc6e1-jack2 (Session I)"
+  },
+  "identified_property": {
+    "asset_type": "Single-tenant quick-service restaurant with drive-thru, ground/building leased to a Jack in the Box operator",
+    "brand": "Jack in the Box",
+    "lease_structure": "NNN (triple net)",
+    "geography": "Central Los Angeles, California",
+    "lease_expiration_window": "2030-2035",
+    "address": "[WITHHELD - placeholder]",
+    "apn": "[WITHHELD - placeholder]",
+    "owner_name": "[WITHHELD - placeholder]",
+    "current_rent": "[WITHHELD - placeholder]",
+    "current_market_value": "[WITHHELD - placeholder]"
+  },
+  "fields_required_before_a_binding_decision": [
+    { "id": "P01", "field": "Executed lease and all amendments", "why": "Renewal options, option rent mechanism (fixed vs CPI vs fair market value), notice windows, percentage-rent clause, co-tenancy and go-dark provisions", "status": "MISSING - owner to supply" },
+    { "id": "P02", "field": "Exact expiration date and any partial-termination rights", "why": "The 2030-2035 window contains both a base term end and possibly one or more 5-year options; the difference in value is material", "status": "MISSING" },
+    { "id": "P03", "field": "Current rent roll (base rent, reimbursements, percentage rent history)", "why": "All valuation math keys off actual NOI, not the benchmark rent used in this model", "status": "MISSING" },
+    { "id": "P04", "field": "Operating expense history and CAM/tax/insurance reconciliations", "why": "Confirms the lease is genuinely triple net and quantifies leakage", "status": "MISSING" },
+    { "id": "P05", "field": "Original purchase price, adjusted basis, and depreciation taken", "why": "Required to size the capital-gains, depreciation-recapture, and 1031 analysis", "status": "MISSING" },
+    { "id": "P06", "field": "Existing debt: balance, rate, prepayment penalty, maturity, DSCR covenants", "why": "A sale may trigger defeasance; a renewal may require refinancing at today's 4.84% 10-year Treasury", "status": "MISSING" },
+    { "id": "P07", "field": "Parcel APN and legal description", "why": "Needed for parcel-level FEMA, CAL FIRE FHSZ, CGS seismic, zoning, and Assessor lookups that are currently flagged unverified", "status": "MISSING" },
+    { "id": "P08", "field": "Building and site condition report / property condition assessment", "why": "Capital reserve sizing and insurability", "status": "MISSING" },
+    { "id": "P09", "field": "Insurance declarations page (property, liability, rent loss)", "why": "Verifies NNN recovery, wildfire/quake deductibles, and whether coverage is adequate given the 2025 fire losses", "status": "MISSING" },
+    { "id": "P10", "field": "Franchisee entity information and financial statements", "why": "Tenant credit is the single largest driver of cap-rate spread on a single-tenant asset", "status": "MISSING" },
+    { "id": "P11", "field": "Seller-side broker opinion of value or appraisal within 12 months", "why": "No official source publishes asset-level cap rates; M56 is unverified without this", "status": "MISSING" },
+    { "id": "P12", "field": "Zoning and general plan designation", "why": "Determines whether the site can be re-tenanted or redeveloped if the tenant does not renew", "status": "MISSING" },
+    { "id": "P13", "field": "Q3 FY2026 Form 10-Q figures (period ended 2026-07-05)", "why": "Most recent tenant filing (filed 2026-08-12, accession 0000807882-26-000091); net income, sales trends, and closure guidance update the FY2025 10-K picture", "status": "MISSING - pull at decision time" }
+  ],
+  "tenant_brand_facts_verified": [
+    { "fact": "Jack in the Box system size at FY2025 year-end", "value": "2,136 restaurants; 1,986 (93%) franchised; 150 company-operated", "source": "T09" },
+    { "fact": "System count change over FY2025", "value": "-55 units; company attributes part to the 'Jack on Track' block-closure program", "source": "T09" },
+    { "fact": "Franchise agreement form", "value": "20-year term, $50,000 initial fee, 5.0% royalty", "source": "T09" },
+    { "fact": "Franchise AUV", "value": "$1,874 thousand FY2025 vs $1,949 thousand FY2024 (-3.8%)", "source": "T09" },
+    { "fact": "Geographic concentration", "value": "~70% of restaurants in California and Texas; the company names severe weather and natural disasters as a risk factor", "source": "T09" },
+    { "fact": "Lease structure in the brand's own portfolio", "value": "Fixed rent with cost-of-living adjustments plus real estate taxes, insurance and other expenses (NNN-like); ~13% of Jack in the Box leases carry contingent rent of 1%-10% of sales", "source": "T09" },
+    { "fact": "Renewal practice", "value": "'We have generally been able to renew our restaurant leases as they expire at then-current market rates.'", "source": "T09" },
+    { "fact": "Corporate actions", "value": "Del Taco sale to Yadav Enterprises for $115 million (subsequent event); dividend discontinued; ~$1.7 billion securitized debt; stockholders' deficit -$901.3 million at 2025-09-28", "source": "T09" },
+    { "fact": "Most recent tenant filing", "value": "Q3 FY2026 Form 10-Q, period ended 2026-07-05, filed 2026-08-12 (accession 0000807882-26-000091); figures not quoted in this workbook - pull at decision time", "source": "T10" }
+  ],
+  "lease_clauses_to_audit": [
+    "Option rent: fixed step-up vs CPI vs fair market value with arbitration - determines who captures the 2030-2035 re-pricing",
+    "Option notice deadline and consequence of missing it (a missed window can forfeit renewal)",
+    "Percentage rent breakpoint and reporting obligations",
+    "Assignment/sublease consent standard and recapture rights",
+    "Tenant termination or go-dark rights, and any co-tenancy condition",
+    "Landlord obligations that could erode NNN purity (roof, structure, parking lot, HVAC)",
+    "Environmental indemnity and existing-recognition of any dry-cleaner/fuel contamination nearby",
+    "Condemnation and casualty provisions - critical after the 2025 fire losses and for seismic events",
+    "Estoppel and SNDA requirements",
+    "Guaranty by franchisee parent and any personal guaranty (personally identifying details must never be published)"
+  ]
+}
