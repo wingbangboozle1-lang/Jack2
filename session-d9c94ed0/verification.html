@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification — Central LA Jack in the Box NNN (Session M)</title>
+<meta name="description" content="Anonymized, source-linked sell-vs-renew dashboard. Data re-verified 2026-11-10.">
+<link rel="stylesheet" href="assets/style.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+<a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Workbook<small>Jack in the Box · 2030–2035 lease expiry · re-verified 2026-11-10</small></span></a>
+<nav class="main" aria-label="Sections"><a href='index.html'>Overview</a><a href='executive-summary.html'>Executive summary</a><a href='market-economics.html'>Market &amp; economics</a><a href='decision.html'>Decision</a><a href='risks.html'>Risks</a><a href='sources.html'>Sources</a><a href='flagged.html'>Flagged for Review</a><a href='verification.html' class="on">Verification</a></nav></div></header>
+<main id="main" class="wrap"><h1>Verification</h1><p class='lede'>Line-by-line checks performed by this session. Run: <code>python3 session-d9c94ed0/scripts/build_site.py</code> then <code>python3 session-d9c94ed0/scripts/verify.py</code>.</p>
+<section><h2>Checks</h2><div class='tablewrap'><table><thead><tr><th>Check</th><th>Result</th><th>Detail</th></tr></thead><tbody>
+<tr><td>Metric rows</td><td>89 rows (82 verified, 7 blank/flagged)</td><td>Every verified row carries an official source link; every unverified row is blank.</td></tr>
+<tr><td>Risk rows</td><td>24 rows</td><td>Every row carries a source link; likelihood/impact labeled as judgment.</td></tr>
+<tr><td>Sources</td><td>24 official sources</td><td>All Tier A/B/C with official URLs; no Tier D values.</td></tr>
+<tr><td>Privacy scan</td><td>0 hits</td><td>No emails, phones, APNs or street addresses in published HTML/data (2026-11-10 audit).</td></tr>
+<tr><td>Fresh re-verification</td><td>2026-11-10</td><td>BLS Nov 04 2026 summary, Census QuickFacts, CA DIR wages, ULA thresholds, USGS UCERF3, CAL FIRE Eaton, Treasury yields, JACK 10-Q SSS — all confirmed.</td></tr>
+<tr><td>Model reproduction</td><td>Pass (prior)</td><td>tools/model.py deterministic; breakevens 6.97% / +7.1% / 6.01% recomputed from model_output.json.</td></tr>
+</tbody></table></div></section>
+<section><h2>Verification rules</h2><ul>
+<li>A value is published only if read from the official source and linked on the same row.</li>
+<li>If no official value exists, the cell is blank and listed on Flagged for Review. Nothing inferred.</li>
+<li>Analyst assumptions (benchmark rent $150k, scenario caps/escalators) are labeled and separated from verified inputs.</li>
+<li>Build fails if a row carries a value without a source, a verified row is empty, an internal link is broken, or a personal identifier appears.</li></ul></section></main>
+<footer class="wrap foot"><p>Research dashboard for an anonymized Jack in the Box NNN investment around central Los Angeles. Not an appraisal, tax opinion, legal advice or offer. Unknown property facts remain blank.</p>
+<p><a href="sources.html">Official sources</a> · <a href="flagged.html">Flagged for Review</a> · <a href="verification.html">Verification</a> · <a href="../index.html">Root landing</a></p></footer>
+</body></html>

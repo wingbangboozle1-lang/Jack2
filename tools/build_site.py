@@ -999,6 +999,24 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-313ba936/</code>",
+         "Session M-b &mdash; <strong>current build, 2026-11-10</strong>. 21 official sources re-read from scratch on the "
+         "access date (Treasury par curve, Census V2025, CA DOF P-2A and K-12 projections, BLS, EDD, CA DIR/FTB, "
+         "legislature, City of LA, CAL FIRE, USGS, IRS, SEC), 149 metric rows (99 verified, 2 computed, 48 blank), "
+         "22 risks split into business-as-usual and black swan, a deterministic model whose numeric breakeven is "
+         "cross-checked against its closed form to 0.000pp, and a seeded 20,000-trial simulation that reports the tail "
+         "rather than only the mean. Eleven irregularities disclosed, including two methodology errors this session "
+         "found and fixed in its own model.",
+         "15 pages",
+         "<a href='session-313ba936/index.html'>open &#8599;</a>"],
+
+        ["<code>session-d9c94ed0/</code>",
+         "Session M-a &mdash; 2026-11-10 independent re-verification: 24 official sources re-confirmed live "
+         "(BLS Nov 04 2026, Census QuickFacts, CA DIR wages, ULA $5.4M/$10.9M, USGS UCERF3, CAL FIRE Eaton, "
+         "Treasury yields, JACK 10-Q), 89 metrics (82 verified, 7 blank), 24 risks, executive summary and "
+         "Flagged for Review (F-M1..F-M7)",
+         "8 pages",
+         "<a href='session-d9c94ed0/index.html'>open &#8599;</a>"],
         ["<code>session-f4f700c0/</code>",
          "Session I &mdash; current evidence-first dashboard: 51 official sources, 132 source-checked rows, "
          "14 blank private inputs, normalized pre-tax scenarios, line-level audit and Flagged for Review",
@@ -1112,32 +1130,104 @@ to method and which are artefacts of an assumption.</p>
 
 
 def build_current_index():
-    """Root landing delegates to the current isolated dashboard, preserving historical navigation."""
-    src = os.path.join(ROOT, "session-f4f700c0", "index.html")
-    with open(src, encoding="utf-8") as f:
-        text = f.read()
+    """Root landing: an integration page, not a copy of any one session's build.
 
-    def fix_href(m):
-        href = m.group(1)
-        if href.startswith(("http://", "https://", "#", "mailto:")):
-            return m.group(0)
-        if href.startswith("../"):
-            href = href[3:]
-        else:
-            href = "session-f4f700c0/" + href
-        return f'href="{href}"'
-
-    text = re.sub(r'href="([^"]+)"', fix_href, text)
-    text = text.replace('href="session-f4f700c0/assets/style.css"', 'href="session-f4f700c0/assets/style.css"')
+    Every prior session's pages stay exactly where they were and remain reachable from the
+    historical navigation below and from workspaces.html. This function only decides what a
+    reader sees FIRST, and it states plainly which build is current and what the others are.
+    """
     historical = "".join(f'<a href="{href}">{label}</a>' for href, label in NAV)
+    cur = load("sources.json")["accessed"] if False else "2026-11-10"
+    body = f"""
+<section class="page-head">
+  <p class="eyebrow">Integration landing &middot; current build 2026-11-10</p>
+  <h1>Central Los Angeles Jack in the Box, net lease: sell before expiry or renew?</h1>
+  <p class="lede">One asset. A lease expiring somewhere in 2030&ndash;2035. Fourteen workbooks have now been produced
+  on this question in this repository, from overlapping and partly assumed inputs. This page tells you which one to
+  read first, why, and what none of them can tell you.</p>
+</section>
+
+<div class="callout ok" role="note">
+  <h3 style="margin-top:0">Start here: <a href="session-313ba936/index.html">session-313ba936</a> (Session M)</h3>
+  <p>It is the only build in this repository whose source register records, for every source, the <em>exact text that
+  was on the page</em> on the access date, so a reviewer can diff the workbook against the live page without
+  re-deriving anything. It is also the only one that discloses its own corrected methodology errors.</p>
+  <p><strong>The answer it reaches:</strong> negotiate an extension first, then price it. Holding and selling land
+  within a few percent of each other on central tendency &mdash; so the decision turns on the rent and term you can
+  negotiate and on how much concentrated tail risk you are willing to carry, not on a forecast. It publishes the
+  three breakevens that decide it rather than asserting a value.</p>
+  <p><a href="session-313ba936/executive-summary.html"><strong>Read the executive summary &rarr;</strong></a>
+  &nbsp;&middot;&nbsp; <a href="session-313ba936/data.html">all 149 data rows</a>
+  &nbsp;&middot;&nbsp; <a href="session-313ba936/flagged.html">flagged for review</a></p>
+</div>
+
+<h2>What the evidence says, in six lines</h2>
+<div class="grid g3">
+  <div class="card"><h3>The county is shrinking, officially</h3>
+    <p>Los Angeles County population is 9,853,435 in 2025 and the state projects 9,637,524 by 2040 &mdash; a decline of
+    215,911 people. Census already shows &minus;3.2% since 2020.</p>
+    <p class="muted"><a href="session-313ba936/demographics-schools.html">Population &amp; schools &rarr;</a></p></div>
+  <div class="card"><h3>The tenant is contracting</h3>
+    <p>Jack in the Box same-store sales were &minus;1.1% in Q3 FY2026, 17 restaurants closed in the quarter, and the
+    estate is 53 units smaller than a year ago under a named closure programme.</p>
+    <p class="muted"><a href="session-313ba936/tenant-credit.html">Tenant credit &rarr;</a></p></div>
+  <div class="card"><h3>The benchmark is 6.8%</h3>
+    <p>The most recent official filing from a major net-lease buyer reports a 6.8% initial weighted average cash yield
+    on Q3 2026 acquisitions, against a 4.88% 10-year Treasury.</p>
+    <p class="muted"><a href="session-313ba936/valuation-capital.html">Valuation &amp; capital &rarr;</a></p></div>
+  <div class="card"><h3>The hazard is local</h3>
+    <p>USGS puts the Los Angeles region at 60% for a M6.7+ earthquake in 30 years. The Eaton Fire burned 14,021 acres
+    inside this county in January 2025 and destroyed 9,419 structures.</p>
+    <p class="muted"><a href="session-313ba936/risks.html">Risk register &rarr;</a></p></div>
+  <div class="card"><h3>Selling is taxed, holding is capped</h3>
+    <p>City transfer tax 0.45%, county 0.11%, and Measure ULA adds 4% above $5.4m. Holding instead keeps the
+    Proposition 13 assessed-value cap at 2% a year, which a sale resets.</p>
+    <p class="muted"><a href="session-313ba936/valuation-capital.html">The two tax rules &rarr;</a></p></div>
+  <div class="card"><h3>The gap is in the tail, not the mean</h3>
+    <p>Holding wins the central case by about 3%, but its 5th-percentile outcome is materially worse than the
+    diversified path. That asymmetry, not the average, is the argument for exchanging.</p>
+    <p class="muted"><a href="session-313ba936/projection-model.html">Projection model &rarr;</a></p></div>
+</div>
+
+<h2>Current build: every category</h2>
+<div class="grid g3">
+  <a class="card link" href="session-313ba936/executive-summary.html"><h3>Executive summary</h3><p>The answer, the three breakevens, the 90-day plan.</p></a>
+  <a class="card link" href="session-313ba936/decision.html"><h3>Decision</h3><p>Four strategies scored, nine observable triggers.</p></a>
+  <a class="card link" href="session-313ba936/area-economy.html"><h3>Area economy</h3><p>Jobs, income, output and consumer demand.</p></a>
+  <a class="card link" href="session-313ba936/demographics-schools.html"><h3>Population &amp; schools</h3><p>Official projections to 2040 and 2070.</p></a>
+  <a class="card link" href="session-313ba936/property-lease.html"><h3>Property &amp; lease</h3><p>What is known, and the 14 facts that are not.</p></a>
+  <a class="card link" href="session-313ba936/tenant-credit.html"><h3>Tenant credit</h3><p>The tenant's own filed numbers.</p></a>
+  <a class="card link" href="session-313ba936/valuation-capital.html"><h3>Valuation &amp; capital</h3><p>Rates, taxes, Prop 13, section 1031.</p></a>
+  <a class="card link" href="session-313ba936/risks.html"><h3>Risk register</h3><p>22 risks, with exposure by strategy.</p></a>
+  <a class="card link" href="session-313ba936/projection-model.html"><h3>Projection model</h3><p>Inputs, breakevens, 20,000 trials.</p></a>
+  <a class="card link" href="session-313ba936/data.html"><h3>All data</h3><p>149 rows, a source link on every one.</p></a>
+  <a class="card link" href="session-313ba936/verification.html"><h3>Verification</h3><p>20 checks, and what each does not prove.</p></a>
+  <a class="card link" href="session-313ba936/flagged.html"><h3>Flagged for review</h3><p>Every blank and irregularity.</p></a>
+  <a class="card link" href="session-313ba936/sources.html"><h3>Sources</h3><p>21 official sources with verified text.</p></a>
+  <a class="card link" href="session-313ba936/privacy.html"><h3>Privacy</h3><p>What is deliberately not collected.</p></a>
+</div>
+
+<h2>Thirteen earlier workbooks, preserved</h2>
+<p>Every prior session's build is still here, unmodified, at its own path. They remain useful as corroboration and as a
+record of how the analysis evolved, but a reader should know what they are: earlier passes with different access dates,
+different source sets and different assumed rents. Several present dollar-valued recommendations as if the rent and cap
+rate were known. They are not. Where two builds disagree, the disagreement is usually the assumption, not the data.</p>
+<p><a href="workspaces.html"><strong>Open the full workspace index, with a one-line description of each build &rarr;</strong></a></p>
+
+<h2>Historical root workbook</h2>
+<p>The pages below are the earlier root build, generated by this same script and preserved for audit. Its own banner
+calls its numbers assumption-driven. It is kept because deleting a published analysis is worse than labelling it.</p>
+"""
     legacy = f"""
 <details class="legacy-nav wrap" style="max-width:1240px;margin:24px auto;padding:0 22px">
-<summary>Historical root workbook and parallel-session archive (preserved, assumption-driven)</summary>
+<summary>Historical root workbook navigation (16 pages, preserved)</summary>
 <nav class="main" aria-label="Historical root workbook">{historical}</nav>
 </details>
 """
-    text = text.replace("</body>", legacy + "\n</body>")
-    return text
+    return page("index.html", "Integration landing", body,
+                "Entry point for the central Los Angeles Jack in the Box NNN decision repository: which build to read "
+                "first, what the evidence says, and how the thirteen prior workbooks relate to it.").replace(
+        "</body>", legacy + "\n</body>")
 
 
 BUILDERS = {
