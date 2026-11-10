@@ -1158,3 +1158,118 @@ audit must still scan every line of every file (including the board) for privacy
 errors on each CI run, must still report pr@ivacy hits for it, but must not assert a byte-identical snapshot
 of a log that is append-only by design. No other behaviour changes; `check.py`'s independent
 `current-session privacy zero` assertion is untouched and still enforced.
+
+## Session N — N-01 result: fresh live verification, 2026-11-10
+
+Every value below was read on 2026-11-10 in the cited page. Nothing was carried over from another session's
+ledger. `session-8bee1905/data/sources.json` records 19 sources with the URL, publisher and retrieval date;
+`session-8bee1905/data/metrics.json` records 57 rows, each with a locator naming the table or row inside the
+source where the figure appears, so a reviewer can re-read the exact cell.
+
+**Confirmed unchanged, live, against the publisher:**
+
+| Value | Read | Source |
+|---|---|---|
+| Los Angeles city population 3,869,089; county 9,694,934 | July 1 2025 (V2025) | Census QuickFacts |
+| City population change -0.8%; county -3.2% | 2020 base to July 2025 | Census QuickFacts |
+| City median household income $81,939; county $90,112 | 2020-2024 ACS | Census QuickFacts |
+| City per capita income $47,685; county $45,792 | 2020-2024 ACS | Census QuickFacts |
+| Poverty 16.5% city / 13.3% county | release vintage | Census QuickFacts |
+| City food services sales $17.37bn; county $44.00bn | 2022 Economic Census | Census QuickFacts |
+| Unemployment county 4.5%, city 4.5%, metro 4.4%, US 4.0% | Sep 2026, NSA | BLS LA summary (Nov 04 2026) |
+| Metro payrolls 6,282.1k, +0.5%; education/health +3.8%; information -5.7% | Sep 2026 | BLS LA summary |
+| County average weekly wage $1,704 (Q1 2026); metro average hourly $37.15 | Q1 2026 / May 2025 | BLS LA summary |
+| CPI-U all items 3.7%, food 2.8%; ECI 3.9% | Sep 2026 | BLS LA summary |
+| 10-yr Treasury 4.88%, 30-yr 5.26% | 2026-11-09 | U.S. Treasury daily par yields |
+| 10-yr Treasury 4.86% | 2026-11-06 | U.S. Treasury (kept as a separate row) |
+| ULA thresholds $5,400,000 / $10,900,000; rates 4% / 5.5%; city base 0.45% | closings after 2026-06-30 | LA Office of Finance |
+| County documentary transfer tax $0.55/$500; $1.10/$1,000 for the five special cities | current | LA County Registrar-Recorder |
+| CA top marginal rate 12.30%; no preferential capital gains rate | 2025 schedules | FTB |
+| Federal recapture ceiling 25%; capital gain ceiling 20%; NIIT 3.8% | 2025 | IRS Topic 409 / NIIT page |
+| Sec. 1031 windows 45 and 180 days | current | IRS FS-2008-18 |
+| Prop 13: 1% levy, 2% annual cap, reassessment on change of ownership | current | CA BOE Pub 800-10; LA County Assessor |
+| Earthquake 30-yr: 60% M>=6.7, 46% M>=7.0, 31% M>=7.5 | UCERF3 | USGS FAQ |
+| FHSZ classes Moderate/High/Very High; hazard is not risk | current | CAL FIRE OSFM |
+| CA DOF projections: 2024 baseline, Vintage 2026 released 2026-03-13, P-2A / P-4 | current | CA DOF |
+| JACK cash $46,318k; total assets $1,901,029k; LTD $1,428,667k; equity deficit -$901,286k | as of 2026-07-05 | SEC EDGAR 10-Q XBRL R2 |
+| Most recent 10-Q: quarter ended 2026-07-05, filed 2026-08-12 | EDGAR index | SEC EDGAR |
+
+**Deliberately NOT published as verified** (blank and flagged, never copied from another workbook):
+
+1. **CA DOF county projection values.** The page and vintage are verified; the numbers are in `.xlsx`
+   workbooks this session's tooling cannot parse cell by cell. Carrying another session's projected years
+   forward as "verified" would be exactly the unverified transcription the brief forbids.
+2. **No cap rate, rent, price or property value.** No official publisher produces one for this asset. The
+   cost stack in `data/decisions.json` uses a **$4,000,000 demonstration price**, labelled as such in the data
+   file, in the pages, and asserted by the verifier. It is not a valuation.
+3. **Parcel-level hazards** (FHSZ class, FEMA flood zone, seismic zone, retrofit status) and **insurance
+   terms**. All require an address or APN, which is withheld by design.
+4. **School indicators for the subject property.** Attendance areas are assigned per parcel; a district
+   statistic attached to an unknown school would be an inference.
+5. **Brokerage and closing costs.** No official rate exists, so the line is blank rather than invented.
+
+## Session N — N-02 result: the shared CI gate is fixed
+
+See the claim note at the top of this section for the diagnosis. Summary of the repair:
+
+- `session-f4f700c0/scripts/audit.py`: `COORDINATION.md` is excluded from the *stored fingerprint* only. It is
+  still enumerated, still read line by line, still counted for URL and privacy patterns, and still reported in
+  the per-workspace totals. The summary now states `fingerprint_excluded` and the reason explicitly, so the
+  exclusion is visible in the generated artifact rather than silent.
+- Verified by replaying every workflow step in the real job order in a **fresh clone** of the branch at
+  `/tmp/citest`, checking `git status --porcelain` after each stage. Result: clean at every stage, including
+  after the final "generated files out of date" gate. The same replay in the original tree is also clean.
+- The gate caught a real defect in this session's own verifier before publication: `verify.py` was writing
+  absolute checkout paths into the committed `verification.json`, so the report differed between a local tree
+  and CI. Fixed to repo-relative; recorded as commit `verify.py: record repo-relative link paths`.
+
+**Scope amendment, part 2 (logged rather than made silently).** Three further additive edits to shared files
+were required for the new workbook to be visible and gated, and are recorded here for the same reason as part 1:
+
+1. `.github/workflows/verify.yml` — one added step that regenerates `session-8bee1905/` and runs its verifier
+   before the out-of-date gate. Existing steps are untouched and still pass.
+2. `tools/build_site.py` — one additive row in `build_workspaces()`, so `workspaces.html` lists this workbook.
+3. `tools/build_site.py` — the root landing (`index.html`) now delegates to this workbook's overview instead of
+   `session-f4f700c0`'s, because the brief requires the published landing page to be current and the previous
+   entry point described a 122-row ledger while the newest verified pass is this one. The historical workbook
+   is unchanged, still published, and still reachable from the preserved-navigation block appended to the root
+   landing and from `workspaces.html`.
+
+No page, dataset, script or report owned by Sessions A–M was edited, overwritten or discarded. Session M
+(`session-d9c94ed0/`) was live and unmerged throughout; its directory was not touched and its work was not
+duplicated.
+
+## Session N — N-03 result: workbook, verification and published findings
+
+**Published:** `session-8bee1905/` — 13 pages, built entirely from `data/*.json` by
+`scripts/build_site.py`, and checked line by line by `scripts/verify.py`:
+
+`13 pages | 19 sources | 57 metric rows (57 verified, 0 unverified-with-a-value) | 22 risks | 6 decision
+branches | 7 ordered gates | 18 requirements traced | 15 published blanks | 1,018 assertions PASS`
+
+**What the answer actually is, and why it is a rule rather than a number.** The brief asks whether to sell
+before the 2030–2035 expiry or renew. Rent, exact expiry, option structure, guaranty, tax basis, debt and
+jurisdiction are not public, and they decide the question. Every prior workbook that published a confident
+dollar ranking had to assume them. This one publishes the ordered rule instead:
+
+> Fix the lease before pricing the building, and settle the jurisdiction before costing the sale.
+
+The structural recommendation is **extend on market terms, then sell with long remaining term**, because short
+remaining term is what a buyer discounts and because it does not foreclose holding. The two decisive cost facts
+are that California taxes the gain as ordinary income with no preferential capital-gains rate (top 12.30%), and
+that a City of Los Angeles sale above $5,400,000 adds 4% ULA on the whole consideration — 5.5% at or above
+$10,900,000 — which makes jurisdiction the first gate and the largest single swing in net proceeds.
+
+**Corrections to earlier work, reported not silently fixed:**
+
+| # | Finding | Evidence | Action |
+|---|---|---|---|
+| N-01 | A USGS FAQ URL cited by earlier sessions returns HTTP 404 | The live replacement was located and read; it carries the same 60/46/31% figures | Correct URL published as S13 and used for every hazard row here; earlier pages left unmodified |
+| N-02 | Two contradictory county transfer-tax statements on the LA County Registrar-Recorder page ($0.55/$500 vs full $1.10/$1,000 for the five special cities) | Both sentences read on the same official page on 2026-11-10 | The higher published figure is used in the cost stack and the ambiguity is published, rather than quietly taking the cheaper option |
+| N-03 | Two different average weekly wage figures on adjacent bases in the same BLS release ($1,704 QCEW county; $1,721 area header) | Same release, 2026-11-10 | Both published separately with their bases; neither treated as a trend |
+| N-04 | Six earlier-session PRs open on stale baselines (#5, #6, #10, #14, #18, #30) | `gh pr list --state open`, 2026-11-10 | Recorded, not merged; they are unreachable from the live site |
+
+**Owner-facing gaps, in priority order.** Each is published on the workbook's `flagged.html` with what would
+close it: (1) jurisdiction, which decides ULA; (2) exact expiry and option terms; (3) the obligor and any
+guaranty; (4) contract rent and escalations; (5) tax basis and depreciation taken; (6) parcel hazard
+designations; (7) insurance terms.
