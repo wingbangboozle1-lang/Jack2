@@ -1111,3 +1111,15 @@ Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-ja
 Deployment confirmation: PR #33 merged to `main` as `a54daaf`; GitHub Pages build for `a54daaf` reported `built`. Published dashboard: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/ ; Flagged for Review: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/flagged.html . Root landing: https://wingbangboozle1-lang.github.io/Jack2/ .
 
 Initial observation requiring review: multiple previous builds contain confident numerical recommendations from undisclosed private inputs and inconsistent verification claims. A passing internal-link or regex test is not proof that a statistic matches its cited official source. This session will distinguish primary-source verification, repository-only findings, user-provided facts, and explicitly illustrative assumptions. Unknown private values stay blank in published tables. No owner/parcel identifiers or raw private research will be committed or published.
+
+# Session M — `session-d9c94ed0` — 2026-11-10
+
+Platform constraint: all work stays on fixed Arena branch `arena/d9c94ed0-jack2`; no other branch created/switched. Existing published builds preserved. This session's work isolated in `session-d9c94ed0/**`; shared landing/navigation/CI changes additive only. Historical board text preserved. Open PRs #5, #6, #10, #14, #18, #30 are other sessions' work — will not close/merge. No owner/parcel identifiers committed or published; unknowns stay blank.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| M-01 Repo inventory, privacy + claim audit | in progress | session-d9c94ed0 | `COORDINATION.md` (append), `session-d9c94ed0/audit/**` |
+| M-02 Fresh official-source re-verification (2026-11-10) | unclaimed | session-d9c94ed0 | `session-d9c94ed0/data/**`, `session-d9c94ed0/research/**` |
+| M-03 Executive summary + sell-vs-renew synthesis incl. black swans | unclaimed | session-d9c94ed0 | `session-d9c94ed0/*.html` |
+| M-04 Dashboard build + line-by-line validation | unclaimed | session-d9c94ed0 | `session-d9c94ed0/scripts/**`, `session-d9c94ed0/tests/**` |
+| M-05 Integration, PR, merge, Pages confirmation | unclaimed | session-d9c94ed0 | Shared root landing/navigation/README/workflow additive only; `COORDINATION.md` |
