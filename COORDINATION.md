@@ -1175,3 +1175,57 @@ Files written: `session-d9c94ed0/**` (new), additive row in `tools/build_site.py
 | M-03 Executive summary + sell-vs-renew synthesis incl. black swans | done | session-d9c94ed0 |
 | M-04 Dashboard build + line-by-line validation | done | session-d9c94ed0 |
 | M-05 Integration, PR, merge, Pages confirmation | done | session-d9c94ed0 |
+
+---
+
+# `session-0fa4444f` (branch `arena/0fa4444f-jack2`) — claim 2026-11-10T00:52Z
+
+**Label.** No letter is used. Letter labels M and N are already claimed twice each on this board
+(`session-5f296f9d`, `session-d9c94ed0`, `session-313ba936` filed as M; `session-a5f8f119`,
+`session-8bee1905` filed as N). This session is identified only by its Arena id, `0fa4444f`, which is unique.
+
+**Platform constraint (same as every earlier session).** Arena pins this session to
+`arena/0fa4444f-jack2` and forbids creating, switching to or pushing any other branch, so the literal
+`session-<id>/<task>` branch scheme in the brief is not executable. Scope isolation is done at the
+**directory / PR** level and this branch doubles as the integration branch and the PR head.
+
+## Session detection at claim time (2026-11-10T00:50Z)
+
+| Check | Result |
+|---|---|
+| `main` head | `c3599f5` (merge of PR #36, Session M / `session-d9c94ed0`, 2026-11-10T00:37Z). CI `verify` **success** on `c3599f5`; Pages **built** for `c3599f5`. |
+| Live parallel sessions (claim pushed 2026-11-10T00:30–00:40Z) | `arena/5f296f9d-jack2` (M-01…M-07 full pipeline), `arena/fe942801-jack2` (FE-01…FE-08 full pipeline), `arena/4f075d7e-jack2` (K-01…K-07 full pipeline), `arena/a5f8f119-jack2` (N-01…N-09 consolidation + gated final integration), `arena/8bee1905-jack2` (N-01…N-04 CI-gate repair + workbook), `arena/313ba936-jack2` (M-01…M-06 full pipeline). None overlaps the scope below. |
+| Stale open PRs from **crashed** sessions (heads last committed 2026-11-06 … 2026-11-08, far beyond the 60-minute handoff rule) | **#5** `arena/ffe3bdfd-jack2` (`analysis/`, 57 files) · **#6** `arena/8149683c-jack2` (`session-8149683c/`, 28 files) · **#10** `arena/50002478-jack2` (`session-50002478/` + Node tooling, 54 files) · **#14** `arena/b4ec6128-jack2` (Session E board corrections, 1 file) · **#18** `arena/643e4aab-jack2` (`session-643e4aab/`, 26 files) · **#30** `arena/cdecc6e1-jack2` (`session-cdecc6e1/`, 30 files). Every live session has explicitly disclaimed these PRs, so **no live claim covers them**; irregularity `R-06` / `I-06` has flagged them for six sessions without resolution. |
+
+## Task board — `session-0fa4444f` claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 0F-01 | Read the board, detect live sessions, claim a disjoint scope, push the claim before any other work | in progress | session-0fa4444f | `COORDINATION.md` (append only) |
+| 0F-02 | **Take over the six crashed-session PRs** under the board's 60-minute handoff rule: merge each head into this branch; conflicts resolved by keeping `main`'s published root build and taking each PR's unique directories verbatim; apply PR #14's Session E board corrections; PII-scan everything taken over; run each recovered workbook's own verifier where one exists | unclaimed → claimed | session-0fa4444f (branch merges of `origin/arena/{ffe3bdfd,8149683c,50002478,b4ec6128,643e4aab,cdecc6e1}-jack2`); recovered content lands in `analysis/`, `session-8149683c/`, `session-50002478/`, `session-643e4aab/`, `session-cdecc6e1/` (their own namespaces, no live session owns them) |
+| 0F-03 | **Publish the recovered workbooks**: one additive workspace-index row per recovered directory in `build_workspaces()` (`tools/build_site.py`), regenerate `workspaces.html` from the generator so nothing recovered is orphaned; one additive CI step only if a recovered verifier is proven green locally | unclaimed → claimed | `tools/build_site.py` (additive rows only), regenerated `workspaces.html`, `.github/workflows/verify.yml` (additive step only, only if green) |
+| 0F-04 | **Line-by-line verification of the combined tree**: run every verifier in the repository (root `tools/*`, and each `session-*/` / recovered workbook's checker); flag anything that fails instead of editing another session's files; privacy scan across all recovered content | unclaimed → claimed | read-only across all session scopes; findings appended to this section |
+| 0F-05 | **Final integration**: `git pull --rebase`/merge `origin/main` before pushing (keep every other session's lines on conflict), PR → `main`, merge without waiting for approval, confirm the GitHub Pages deploy, close the six superseded PRs with pointers to where their work now lives, record PR link + merge result + verification here | unclaimed → claimed | `COORDINATION.md` (this section), PR operations on #5/#6/#10/#14/#18/#30 (close only, after their content is on `main`) |
+
+**Non-overlap rule.** This session will **not** create, edit, regenerate or delete anything under
+`session-5f296f9d/`, `session-fe942801/`, `session-4f075d7e/`, `session-a5f8f119/`, `session-8bee1905/`,
+`session-313ba936/`, `session-d9c94ed0/`, `session-f4f700c0/` or any earlier session's published files.
+In particular: `session-f4f700c0/scripts/audit.py` is claimed by `session-8bee1905` (N-02) and is **not**
+touched here — this session only *regenerates* its committed outputs (`session-f4f700c0/audit/*.json`) when
+the append-only board invalidates the CI fingerprint, exactly as Session M did in `a0c9cce`, and logs that
+as a scope amendment. The root landing pointer is claimed by `session-a5f8f119` (N-09) and is **not**
+repointed here; this session adds only workspace-index rows. Fresh research/model/dashboard pipelines are
+claimed by five other live sessions and are **not** duplicated.
+
+**Requests to other session scopes:** none. Corrections found in a live session's files are logged here and
+published as flagged items, not applied.
+
+**Handoff rule.** If this claim is more than 60 minutes old with no commits on `arena/0fa4444f-jack2`, any
+session may take these tasks over and note the handoff here.
+
+### Log — `session-0fa4444f`
+
+- **2026-11-10T00:52Z** — read `COORDINATION.md` (1,114 lines), `README.md`, the CI workflow, the open-PR
+  list and every remote `arena/*` head with last-commit times; six live sessions detected, all with scopes
+  limited to their own directories plus additive shared edits; the six crashed-session PRs are unclaimed by
+  every one of them. Claim written and pushed before any merge or build work. Baseline `c3599f5`.
