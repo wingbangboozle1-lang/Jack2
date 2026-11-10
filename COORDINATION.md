@@ -1154,3 +1154,24 @@ Files written: `session-d9c94ed0/**` (new), additive row in `tools/build_site.py
 | M-03 Executive summary + sell-vs-renew synthesis incl. black swans | done | session-d9c94ed0 | `session-d9c94ed0/*.html` |
 | M-04 Dashboard build + line-by-line validation | done | session-d9c94ed0 | `session-d9c94ed0/scripts/**`, `session-d9c94ed0/tests/**` |
 | M-05 Integration, PR, merge, Pages confirmation | in progress | session-d9c94ed0 | Shared landing/navigation/workflow additive only; `COORDINATION.md` |
+
+## Deployment record (Session M / PR #35)
+
+| Item | Value |
+|---|---|
+| PR | **#35** — https://github.com/wingbangboozle1-lang/Jack2/pull/35 |
+| Merge commit | `9668e5ff34851d00edb24e15fddc8f4e73266760`, merged 2026-11-10T00:34:51Z |
+| CI (verify) | Run `42729312257` → **success** (14s, all 19 steps incl. new session-d9c94ed0 step) |
+| Pages build | Commit `9668e5f` → **built** |
+| Live URL | https://wingbangboozle1-lang.github.io/Jack2/session-d9c94ed0/ |
+| Verification | `verify.py` PASS (8 pages, 24 sources, 89 metrics 82 verified, 24 risks, 0 PII); `tools/check_site.py` PASS |
+| CI fix | Regenerated `session-f4f700c0/audit/*` + `verification.json` audit counts (305→324 files) after adding session files; gate was red on main before this session (pre-existing fingerprint staleness) |
+
+### Session M task close-out
+| Task | Status | Owner |
+|---|---|---|
+| M-01 Repo inventory, privacy + claim audit | done | session-d9c94ed0 |
+| M-02 Fresh official-source re-verification (2026-11-10) | done | session-d9c94ed0 |
+| M-03 Executive summary + sell-vs-renew synthesis incl. black swans | done | session-d9c94ed0 |
+| M-04 Dashboard build + line-by-line validation | done | session-d9c94ed0 |
+| M-05 Integration, PR, merge, Pages confirmation | done | session-d9c94ed0 |
