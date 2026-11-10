@@ -999,6 +999,13 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-d9c94ed0/</code>",
+         "Session M &mdash; 2026-11-10 independent re-verification: 24 official sources re-confirmed live "
+         "(BLS Nov 04 2026, Census QuickFacts, CA DIR wages, ULA $5.4M/$10.9M, USGS UCERF3, CAL FIRE Eaton, "
+         "Treasury yields, JACK 10-Q), 89 metrics (82 verified, 7 blank), 24 risks, executive summary and "
+         "Flagged for Review (F-M1..F-M7)",
+         "8 pages",
+         "<a href='session-d9c94ed0/index.html'>open &#8599;</a>"],
         ["<code>session-f4f700c0/</code>",
          "Session I &mdash; current evidence-first dashboard: 51 official sources, 132 source-checked rows, "
          "14 blank private inputs, normalized pre-tax scenarios, line-level audit and Flagged for Review",
