@@ -1124,13 +1124,13 @@ integration branch for the pull request to `main`. Work products are isolated in
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| M-01 | Read board, detect parallel sessions, claim disjoint scope | in progress | session-5f296f9d | `COORDINATION.md` (append only) |
-| M-02 | Fresh official-source verification, access date 2026-11-10; every row source-linked, unverified values blank + flagged | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/data/sources.json`, `session-5f296f9d/data/metrics.json` |
-| M-03 | Projection system: deterministic 2026–2040 scenarios + seeded Monte Carlo over the decision strategies, 2030–2035 expiry grid | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/scripts/model.py`, `session-5f296f9d/data/model_output.json` |
-| M-04 | Risk register (business-as-usual + black swan) mapped to every decision; decision analysis; executive summary | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/data/risks.json`, `session-5f296f9d/data/decisions.json`, `session-5f296f9d/EXECUTIVE_SUMMARY.md` |
-| M-05 | Clean dashboard: landing page + category subpages + Flagged for Review, all findings in table format | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/*.html`, `session-5f296f9d/assets/` |
-| M-06 | Automated verifier (source per row, blank-if-unverified, PII scan, link check) wired additively into CI | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/scripts/verify.py`, `.github/workflows/verify.yml` (additive step only) |
-| M-07 | Final integration: one additive workspace row + README section, PR to `main`, merge without waiting, confirm Pages deploy, record results here | unclaimed→claimed | session-5f296f9d | `tools/build_site.py` (one additive row in `build_workspaces()`), `README.md` (additive section), this file |
+| M-01 | Read board, detect parallel sessions, claim disjoint scope | done | session-5f296f9d | `COORDINATION.md` (append only) |
+| M-02 | Fresh official-source verification, access date 2026-11-10; every row source-linked, unverified values blank + flagged | done | session-5f296f9d | `session-5f296f9d/data/sources.json`, `session-5f296f9d/data/metrics.json` |
+| M-03 | Projection system: deterministic 2026–2040 scenarios + seeded Monte Carlo over the decision strategies, 2030–2035 expiry grid | done | session-5f296f9d | `session-5f296f9d/scripts/model.py`, `session-5f296f9d/data/model_output.json` |
+| M-04 | Risk register (business-as-usual + black swan) mapped to every decision; decision analysis; executive summary | done | session-5f296f9d | `session-5f296f9d/data/risks.json`, `session-5f296f9d/data/decisions.json`, `session-5f296f9d/executive-summary.html` |
+| M-05 | Clean dashboard: landing page + category subpages + Flagged for Review, all findings in table format | done | session-5f296f9d | `session-5f296f9d/*.html`, `session-5f296f9d/assets/` |
+| M-06 | Automated verifier (source per row, blank-if-unverified, PII scan, link check) wired additively into CI | done | session-5f296f9d | `session-5f296f9d/scripts/verify.py`, `.github/workflows/verify.yml` (additive step only) |
+| M-07 | Final integration: one additive workspace row + README section, PR to `main`, merge without waiting, confirm Pages deploy, record results here | done | session-5f296f9d | `tools/build_site.py` (one additive row in `build_workspaces()`), `README.md` (additive section), this file |
 
 ## Session detection at claim time (2026-11-10)
 
@@ -1244,3 +1244,30 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+---
+
+# Deployment record (Session M / PR #39) — session-5f296f9d
+
+**Claim:** 2026-11-10 (block above, `# Session M — session-5f296f9d`).
+**Outcome:** all tasks M-01..M-07 **done** and verified.
+
+| Item | Result |
+|---|---|
+| Claim commit | `7d06627` — board claim, pushed before any work |
+| Workspace commit | `d364b0c` — 25 files: 6 JSON ledgers, 3 scripts, 15 pages, CSS |
+| Integration commit | `8e231e5` — additive `build_workspaces()` row, CI step, README section, `workspaces.html` |
+| Inventory commit | `ebbf278` — regenerated Session I audit (305 → 330 files) by its own `audit.py` |
+| Conflict-resolution merge | `0f02afa` — merged `origin/main` (PRs #35–#37) keeping Session M-a/M-b steps, rows and records intact; label note extended to a third same-day "Session M" |
+| Pull request | **#39** `Session M: deep-research dashboard + sell-vs-renew decision workspace` → `main`, merged `ab596f93` 2026-11-10T01:23:29Z without waiting for approval |
+| CI | `build-and-check` **pass** on the merge (14s): full root + 7-session regenerate-and-verify incl. the new `session-5f296f9d` step and its in-scope git-clean gate |
+| GitHub Pages | `pages-build-deployment` run `42735454618` **success**; deployment `7670856417` (sha `ab596f93`, env `github-pages`) status **success**; site state `built` at `https://wingbangboozle1-lang.github.io/Jack2/` |
+| Live URLs | `https://wingbangboozle1-lang.github.io/Jack2/session-5f296f9d/` (dashboard), `.../flagged.html`, root `workspaces.html` carries the Session M row |
+
+**Verification evidence (linked):**
+- `session-5f296f9d/scripts/verify.py` → PASS, 0 errors, 0 warnings (V1 schema: 127 rows, 113 verified / 12 blank-with-flags / 1 unofficial; V3 links; V4 every metric row source- or flag-linked; V5 https allowlist; V6 PII scan; V7 anchors for all 31 sources + 19 flags).
+- `python3 tools/check_site.py` → all checks passed (16 root pages, 184 with archive).
+- Determinism: `model.py` + `build_site.py` re-run byte-identical (CI git-clean gate green).
+
+**Content summary:** 31 official Tier A/B sources accessed 2026-11-10; 127 metric rows; 28-risk BAU + black-swan register; deterministic 2030–2035 expiry grids + break-evens + 10,000-trial seeded Monte Carlo (seed 20261110) on a per-$1 NOI index basis; decision page ranks §1031 exchange first on the risk-adjusted criterion (CVaR5 21.1 vs 16.0) while publishing HOLD as the expected-value winner (+8.3 index units) and a 7.06% break-even reinvestment rate; 19 flagged items (F-01..F-12 private-fact blanks, X-01..X-07 repository/citation notes) on the Flagged page — none block merge, per the brief. No PII published: rent, basis, debt, option terms and parcel identity are blank by design.
+
+**Notes for the board:** three sessions used the label "Session M" on 2026-11-10 (`session-d9c94ed0` = M-a PR #35/#36, `session-313ba936` = M-b PR #37, this session = deep-research PR #39); the label note above keeps all three. Stale PRs #5/#6/#10/#14/#18/#30 remain open and untouched.
