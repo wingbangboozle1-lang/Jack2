@@ -1000,7 +1000,7 @@ session's page would hide the defect rather than disclose it.</p>
 def build_workspaces():
     rows = [
         ["<code>session-313ba936/</code>",
-         "Session M &mdash; <strong>current build, 2026-11-10</strong>. 21 official sources re-read from scratch on the "
+         "Session M-b &mdash; <strong>current build, 2026-11-10</strong>. 21 official sources re-read from scratch on the "
          "access date (Treasury par curve, Census V2025, CA DOF P-2A and K-12 projections, BLS, EDD, CA DIR/FTB, "
          "legislature, City of LA, CAL FIRE, USGS, IRS, SEC), 149 metric rows (99 verified, 2 computed, 48 blank), "
          "22 risks split into business-as-usual and black swan, a deterministic model whose numeric breakeven is "
@@ -1009,6 +1009,14 @@ def build_workspaces():
          "found and fixed in its own model.",
          "15 pages",
          "<a href='session-313ba936/index.html'>open &#8599;</a>"],
+
+        ["<code>session-d9c94ed0/</code>",
+         "Session M-a &mdash; 2026-11-10 independent re-verification: 24 official sources re-confirmed live "
+         "(BLS Nov 04 2026, Census QuickFacts, CA DIR wages, ULA $5.4M/$10.9M, USGS UCERF3, CAL FIRE Eaton, "
+         "Treasury yields, JACK 10-Q), 89 metrics (82 verified, 7 blank), 24 risks, executive summary and "
+         "Flagged for Review (F-M1..F-M7)",
+         "8 pages",
+         "<a href='session-d9c94ed0/index.html'>open &#8599;</a>"],
         ["<code>session-f4f700c0/</code>",
          "Session I &mdash; current evidence-first dashboard: 51 official sources, 132 source-checked rows, "
          "14 blank private inputs, normalized pre-tax scenarios, line-level audit and Flagged for Review",
