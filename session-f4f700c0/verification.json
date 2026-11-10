@@ -163,7 +163,7 @@
     "decisions": 8,
     "flags": 21,
     "html_table_rows": 324,
-    "audit_files": 305,
-    "audit_lines": 63206
+    "audit_files": 324,
+    "audit_lines": 65805
   }
 }
