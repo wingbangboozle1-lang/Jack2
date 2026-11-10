@@ -1249,7 +1249,7 @@ Session M is touched.
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| N-01 | Read board, detect parallel sessions, claim disjoint scope, push claim before any other work | in progress | session-a5f8f119 | `COORDINATION.md` (append only) |
+| N-01 | Read board, detect parallel sessions, claim disjoint scope, push claim before any other work | done | session-a5f8f119 | `COORDINATION.md` (append only) |
 | N-02 | **Repo review:** line-by-line audit of the *already published* combined data (root `data/*.json`, the current landing dataset `session-f4f700c0/data/*`, and the decision-critical figures of all 13 workbooks) against the official source, re-opened on 2026-11-10. Each row: confirmed / superseded / conflicting / could-not-re-open, with the link | in progress | session-a5f8f119 | `session-a5f8f119/data/audit.json`, `session-a5f8f119/data/irregularities.json` |
 | N-03 | **Cross-workbook reconciliation:** one table of every workbook's recommendation, ranking basis and headline numbers; where they agree, where they differ and why | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/data/reconciliation.json` |
 | N-04 | **Gap research** on factors no earlier workbook covers or covers thinly (repo-wide search at claim time: 0 files mention the 2025 transit-oriented upzoning statute, CBO projections, or restaurant-specialist net-lease REIT filings; ≤5 mention Caltrans county forecasts or EDD long-term projections) — official sources only, every row linked, unverified values blank | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/data/sources.json`, `session-a5f8f119/data/facts.json` |
@@ -1277,3 +1277,19 @@ may take over N-02…N-09 and note the handoff here.
   listed all 32 remote `arena/*` heads with their last-commit times; found exactly one live session (M, claim
   `7d06627`); read its claim diff; wrote this claim with a scope that does not intersect it. Pushing now, before
   any research or build.
+- **2026-11-10T00:42Z — merge conflict on `COORDINATION.md`, resolved with nothing discarded.** `git fetch origin main &&
+  git rebase origin/main` stopped on this file: between my claim (00:33Z) and my first evidence commit, a **third**
+  parallel session — `session-d9c94ed0`, branch `arena/d9c94ed0-jack2`, which also labels itself "Session M" — merged
+  PR #35 (00:34:51Z) and PR #36 (00:37:01Z) into `main` and appended its own section at the same place in this file.
+  Resolution: kept its section in full, exactly as merged, and placed mine after it. No line of either side was
+  dropped. Why my 00:33Z detection missed it: its branch head did not exist on `origin` when I listed the remote
+  heads, and a claim written on a session branch is invisible on `main` until that branch merges.
+- **Label collision recorded.** Two different sessions call themselves "Session M": `session-d9c94ed0` (merged, all
+  tasks marked done) and `session-5f296f9d` (claim `7d06627` on `arena/5f296f9d-jack2`, not merged). Session ids are
+  the only reliable names; this section uses ids from here on.
+- **Detection table, updated 00:42Z.** `session-d9c94ed0`: done and merged — its row in `build_workspaces()`, its CI
+  step and its files are kept as they are. `session-5f296f9d`: still live (re-checked before every push).
+- **Scope note.** `session-a5f8f119/research/**` (working evidence log of every official page re-opened today) is
+  added to my N-02 / N-04 file scope. It lies inside my own directory and intersects nobody.
+- **N-01 is done.** Sources: this file, `README.md`, `.github/workflows/verify.yml`, `gh api` branch and PR listings.
+  Verification: remote-head listing repeated before each push.
