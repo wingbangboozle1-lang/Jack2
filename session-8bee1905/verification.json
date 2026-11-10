@@ -3820,1272 +3820,1272 @@
     {
       "check": "decision.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "decision.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "decision.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "decision.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "decision.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "decision.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "decision.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "decision.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "decision.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "decision.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "decision.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "decision.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "decision.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "decision.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "decision.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "decision.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "decision.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "economy.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "economy.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "economy.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "economy.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "economy.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "economy.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "economy.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "economy.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "economy.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "economy.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "economy.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "economy.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "economy.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "economy.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "economy.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "economy.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "economy.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "executive-summary.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "executive-summary.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "executive-summary.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "executive-summary.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "executive-summary.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "executive-summary.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "executive-summary.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "executive-summary.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "executive-summary.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "executive-summary.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "executive-summary.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "executive-summary.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "executive-summary.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "executive-summary.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "executive-summary.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "executive-summary.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "executive-summary.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "executive-summary.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "executive-summary.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "executive-summary.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "flagged.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "flagged.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "flagged.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "flagged.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "flagged.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "flagged.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "flagged.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "flagged.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "flagged.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "flagged.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "flagged.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "flagged.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "flagged.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "flagged.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "flagged.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "flagged.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "flagged.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "index.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "index.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "index.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "index.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "index.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "index.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "index.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "index.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "index.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "index.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "index.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "index.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "index.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "index.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "index.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "index.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "index.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "index.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "index.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "index.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "index.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "index.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "index.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "index.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "privacy.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "privacy.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "privacy.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "privacy.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "privacy.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "privacy.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "privacy.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "privacy.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "privacy.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "privacy.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "privacy.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "privacy.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "privacy.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "privacy.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "privacy.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "privacy.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "privacy.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "privacy.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "projection.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "projection.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "projection.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "projection.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "projection.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "projection.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "projection.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "projection.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "projection.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "projection.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "projection.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "projection.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "projection.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "projection.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "projection.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "projection.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "projection.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "requirements.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "requirements.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "requirements.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "requirements.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "requirements.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "requirements.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "requirements.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "requirements.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "requirements.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "requirements.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "requirements.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "requirements.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "requirements.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "requirements.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "requirements.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "requirements.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "requirements.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "requirements.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "requirements.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "requirements.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "requirements.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "requirements.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "requirements.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "requirements.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "requirements.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "requirements.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "requirements.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "requirements.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "requirements.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "requirements.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "requirements.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "requirements.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "requirements.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "requirements.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "requirements.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "requirements.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "risks.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "risks.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "risks.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "risks.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "risks.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "risks.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "risks.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "risks.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "risks.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "risks.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "risks.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "risks.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "risks.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "risks.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "risks.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "risks.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "risks.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "sources.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "sources.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "sources.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "sources.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "sources.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "sources.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "sources.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "sources.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "sources.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "sources.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "sources.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "sources.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "sources.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "sources.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "sources.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "sources.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "sources.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "sources.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "taxes.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "taxes.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "taxes.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "taxes.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "taxes.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "taxes.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "taxes.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "taxes.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "taxes.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "taxes.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "taxes.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "taxes.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "taxes.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "taxes.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "taxes.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "taxes.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "taxes.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "tenant-lease.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "tenant-lease.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "tenant-lease.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "tenant-lease.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "tenant-lease.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "tenant-lease.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "tenant-lease.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "tenant-lease.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "tenant-lease.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "tenant-lease.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "tenant-lease.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "tenant-lease.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "tenant-lease.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "tenant-lease.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "tenant-lease.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "tenant-lease.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "tenant-lease.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "tenant-lease.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "verification.html link assets/style.css resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+      "detail": "session-8bee1905/assets/style.css"
     },
     {
       "check": "verification.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "verification.html link index.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+      "detail": "session-8bee1905/index.html"
     },
     {
       "check": "verification.html link executive-summary.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+      "detail": "session-8bee1905/executive-summary.html"
     },
     {
       "check": "verification.html link decision.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+      "detail": "session-8bee1905/decision.html"
     },
     {
       "check": "verification.html link economy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+      "detail": "session-8bee1905/economy.html"
     },
     {
       "check": "verification.html link tenant-lease.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+      "detail": "session-8bee1905/tenant-lease.html"
     },
     {
       "check": "verification.html link taxes.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+      "detail": "session-8bee1905/taxes.html"
     },
     {
       "check": "verification.html link projection.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+      "detail": "session-8bee1905/projection.html"
     },
     {
       "check": "verification.html link risks.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+      "detail": "session-8bee1905/risks.html"
     },
     {
       "check": "verification.html link requirements.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+      "detail": "session-8bee1905/requirements.html"
     },
     {
       "check": "verification.html link sources.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+      "detail": "session-8bee1905/sources.html"
     },
     {
       "check": "verification.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "verification.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "verification.html link privacy.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+      "detail": "session-8bee1905/privacy.html"
     },
     {
       "check": "verification.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "verification.html link flagged.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+      "detail": "session-8bee1905/flagged.html"
     },
     {
       "check": "verification.html link verification.html resolves",
       "ok": true,
-      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+      "detail": "session-8bee1905/verification.html"
     },
     {
       "check": "no personal identifiers in this session's output",

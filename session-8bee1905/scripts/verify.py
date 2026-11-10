@@ -178,7 +178,13 @@ for page in pages:
         if not target:
             continue
         resolved = (page.parent / target).resolve()
-        check(f"{page.name} link {href} resolves", resolved.exists(), str(resolved))
+        # store repo-relative paths: an absolute path makes this generated report differ
+        # between a local checkout and CI, which would fail the reproducibility gate.
+        try:
+            shown = str(resolved.relative_to(ROOT))
+        except ValueError:
+            shown = target
+        check(f"{page.name} link {href} resolves", resolved.exists(), shown)
 
 # ----------------------------------------------------------------- 8. privacy
 PII = [
