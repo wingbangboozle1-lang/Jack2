@@ -1,8 +1,9 @@
 {
   "as_of": "2026-11-10",
   "files": 328,
-  "lines": 72858,
-  "bytes": 5672922,
+  "lines": 71708,
+  "bytes": 5669265,
+  "scanned_but_not_totalled_note": "Append-only files are scanned on every line but excluded from totals and fingerprints.",
   "fingerprint_excluded": [
     "COORDINATION.md"
   ],
@@ -19,7 +20,7 @@
   "workspaces": {
     "root/config": {
       "files": 22,
-      "lines": 2667,
+      "lines": 1507,
       "bytes": 299273,
       "privacy_hits": 0,
       "structural_errors": 0
@@ -82,8 +83,8 @@
     },
     "session-8bee1905": {
       "files": 23,
-      "lines": 9515,
-      "bytes": 512543,
+      "lines": 9521,
+      "bytes": 508511,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -110,8 +111,8 @@
     },
     "session-f4f700c0": {
       "files": 33,
-      "lines": 5901,
-      "bytes": 528671,
+      "lines": 5905,
+      "bytes": 529046,
       "privacy_hits": 0,
       "structural_errors": 0
     }

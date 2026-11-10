@@ -107,7 +107,7 @@ def main():
         fp = fingerprintable(rel)
         rows.append(dict(
             path=rel, workspace=workspace(rel),
-            bytes=len(raw) if fp else None, lines=len(lines),
+            bytes=len(raw) if fp else None, lines=len(lines), counted=fp,
             sha256=hashlib.sha256(raw).hexdigest() if fp else None,
             fingerprint_excluded=not fp, kind=kind,
             url_count=url_count, pii_pattern_hits=pii_hits,
@@ -118,8 +118,11 @@ def main():
     for r in rows:
         w = by_ws[r["workspace"]]
         w["files"] += 1
-        w["lines"] += r["lines"]
-        w["bytes"] += r["bytes"] or 0
+        # Only fingerprintable files contribute to the aggregate totals: an append-only file
+        # would otherwise leak into the sums and defeat the exclusion above.
+        if r["counted"]:
+            w["lines"] += r["lines"]
+            w["bytes"] += r["bytes"] or 0
         w["privacy_hits"] += r["pii_pattern_hits"]
         if r["status"] == "structural-error":
             w["structural_errors"] += 1
@@ -128,8 +131,9 @@ def main():
     summary = dict(
         as_of="2026-11-10",
         files=len(rows),
-        lines=sum(r["lines"] for r in rows),
-        bytes=sum(r["bytes"] or 0 for r in rows),
+        lines=sum(r["lines"] for r in rows if r["counted"]),
+        bytes=sum(r["bytes"] or 0 for r in rows if r["counted"]),
+        scanned_but_not_totalled_note="Append-only files are scanned on every line but excluded from totals and fingerprints.",
         fingerprint_excluded=sorted(FINGERPRINT_EXCLUDED),
         fingerprint_exclusion_reason="Append-only shared board; scanned on every run, but not asserted byte-stable (Session N, task N-02).",
         privacy_pattern_hits=sum(r["pii_pattern_hits"] for r in rows),
