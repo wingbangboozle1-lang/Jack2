@@ -1141,3 +1141,106 @@ integration branch for the pull request to `main`. Work products are isolated in
 - Merge conflicts: none expected; this session changes only its own directory plus the additive shared
   edits listed in M-06/M-07. If `main` advances during the session, `origin/main` will be merged in
   without discarding any other session's work and logged here.
+
+<!-- Label note: two Arena sessions both used the label "Session M" on 2026-11-10 and both are
+preserved. Session M-a is `session-d9c94ed0` (branch arena/d9c94ed0-jack2, merged as PR #35/#36).
+Session M-b is `session-313ba936` (branch arena/313ba936-jack2, merged as PR #37). The labels below
+were disambiguated during the Session M-b merge; no session's record was removed. A third same-day
+label, "Session M" (deep-research) = `session-5f296f9d` on arena/5f296f9d-jack2 (PR #39), sits above
+this note; its claim block is kept intact. -->
+
+# Session M-a — `session-d9c94ed0` — 2026-11-10
+
+Platform constraint: all work stays on fixed Arena branch `arena/d9c94ed0-jack2`; no other branch created/switched. Existing published builds preserved. This session's work isolated in `session-d9c94ed0/**`; shared landing/navigation/CI changes additive only. Historical board text preserved. Open PRs #5, #6, #10, #14, #18, #30 are other sessions' work — will not close/merge. No owner/parcel identifiers committed or published; unknowns stay blank.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| M-01 Repo inventory, privacy + claim audit | in progress | session-d9c94ed0 | `COORDINATION.md` (append), `session-d9c94ed0/audit/**` |
+| M-02 Fresh official-source re-verification (2026-11-10) | unclaimed | session-d9c94ed0 | `session-d9c94ed0/data/**`, `session-d9c94ed0/research/**` |
+| M-03 Executive summary + sell-vs-renew synthesis incl. black swans | unclaimed | session-d9c94ed0 | `session-d9c94ed0/*.html` |
+| M-04 Dashboard build + line-by-line validation | unclaimed | session-d9c94ed0 | `session-d9c94ed0/scripts/**`, `session-d9c94ed0/tests/**` |
+| M-05 Integration, PR, merge, Pages confirmation | unclaimed | session-d9c94ed0 | Shared root landing/navigation/README/workflow additive only; `COORDINATION.md` |
+
+## Session M — findings, sources and verification performed (2026-11-10)
+
+### Sources (24, re-confirmed live 2026-11-10; `session-d9c94ed0/data/sources.json`)
+Tier A: BLS LA Summary Nov 04 2026 (S1); Census QuickFacts city+county (S2); CA DOF P-2A Vintage 2026 (S3); CA DIR $16.90 / fast-food $20.00 (S4/S5); LA County Assessor Prop 13 (S6); LA County DTT (S7); City of LA Measure ULA $5.4M/$10.9M (S8); FRED DGS10 ~4.86% / DFEDTARU ~4.00% (S11/S12); LA County Eaton/Palisades fact sheet (S13); CDE LAUSD (S14/S15); IRS Form 8824 §1031 (S16); CAL FIRE FHSZ method (S17); USGS UCERF3 60/46/31% (S18); FEMA MSC method (S19); CDI (S20); EWDD AP25 (S21); LA County Auditor-Controller (S22); BEA county income $818.5B (S23); City of LA OWS $18.42 (S24). Tier B: JACK FY2025 10-K + Q3 FY2026 10-Q SSS −1.1%/−4.2% (S9). Tier C: Realty Income 7.3% FY2025/Q2 2026 (S10).
+
+### Verification performed
+- `python3 session-d9c94ed0/scripts/build_site.py` → 8 pages + CSS.
+- `python3 session-d9c94ed0/scripts/verify.py` → PASS (8 pages, 24 sources, 89 metrics 82 verified / 7 blank, 24 risks, 0 PII, 0 broken links).
+- `python3 -m unittest discover -s session-d9c94ed0/tests -v` → 3/3 PASS.
+- `python3 tools/build_site.py && python3 tools/check_site.py` → PASS (16 root pages, 154 incl. archives).
+- Fresh live checks 2026-11-10: BLS sector pattern, QuickFacts incomes, DIR wages, ULA thresholds, USGS probabilities, Eaton final counts, Treasury yields, JACK SSS — all confirmed unchanged.
+
+### Headline findings
+1. Prior workbook values hold. No corrections needed; vintage/adjustment nuances flagged (F-M1..F-M3).
+2. Recommendation stands: dual track — extension proposal + sale pricing in parallel; sell into §1031 only if cap ≤6.00% or replacement yield clears 6.97%; hold/extend if cap >7.00%. Breakevens 6.97% / +7.1% / 6.01%.
+3. Seven blanks remain blank (M46, M51, M82–M85, M87) + eight owner facts (P01–P07 in this session's flagged page) — obtain before any property-specific decision.
+
+### Irregularities (7, published on `session-d9c94ed0/flagged.html`)
+F-M1 Q3 6.8% print not re-read (medium) · F-M2 DOF vintage sensitivity (medium) · F-M3 forecast horizon (medium) · F-M4 owner facts missing (high) · F-M5 parcel hazard/insurance unverified (high) · F-M6 M46/M51/M87 blank (low) · F-M7 eight workbooks + stale PRs (low).
+
+### Scope discipline
+Files written: `session-d9c94ed0/**` (new), additive row in `tools/build_site.py` + regenerated `workspaces.html`, additive CI step in `.github/workflows/verify.yml`, this section. No other session's files edited. Stale PRs #5, #6, #10, #14, #18, #30 not closed/merged.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| M-01 Repo inventory, privacy + claim audit | done | session-d9c94ed0 | `COORDINATION.md`, `session-d9c94ed0/audit/**` |
+| M-02 Fresh official-source re-verification (2026-11-10) | done | session-d9c94ed0 | `session-d9c94ed0/data/**`, `session-d9c94ed0/research/**` |
+| M-03 Executive summary + sell-vs-renew synthesis incl. black swans | done | session-d9c94ed0 | `session-d9c94ed0/*.html` |
+| M-04 Dashboard build + line-by-line validation | done | session-d9c94ed0 | `session-d9c94ed0/scripts/**`, `session-d9c94ed0/tests/**` |
+| M-05 Integration, PR, merge, Pages confirmation | in progress | session-d9c94ed0 | Shared landing/navigation/workflow additive only; `COORDINATION.md` |
+
+## Deployment record (Session M / PR #35)
+
+| Item | Value |
+|---|---|
+| PR | **#35** — https://github.com/wingbangboozle1-lang/Jack2/pull/35 |
+| Merge commit | `9668e5ff34851d00edb24e15fddc8f4e73266760`, merged 2026-11-10T00:34:51Z |
+| CI (verify) | Run `42729312257` → **success** (14s, all 19 steps incl. new session-d9c94ed0 step) |
+| Pages build | Commit `9668e5f` → **built** |
+| Live URL | https://wingbangboozle1-lang.github.io/Jack2/session-d9c94ed0/ |
+| Verification | `verify.py` PASS (8 pages, 24 sources, 89 metrics 82 verified, 24 risks, 0 PII); `tools/check_site.py` PASS |
+| CI fix | Regenerated `session-f4f700c0/audit/*` + `verification.json` audit counts (305→324 files) after adding session files; gate was red on main before this session (pre-existing fingerprint staleness) |
+
+### Session M task close-out
+| Task | Status | Owner |
+|---|---|---|
+| M-01 Repo inventory, privacy + claim audit | done | session-d9c94ed0 |
+| M-02 Fresh official-source re-verification (2026-11-10) | done | session-d9c94ed0 |
+| M-03 Executive summary + sell-vs-renew synthesis incl. black swans | done | session-d9c94ed0 |
+| M-04 Dashboard build + line-by-line validation | done | session-d9c94ed0 |
+| M-05 Integration, PR, merge, Pages confirmation | done | session-d9c94ed0 |
+---
+
+# Session M-b — `session-313ba936` — 2026-11-10
+
+Claimed by Arena session **313ba936** on branch `arena/313ba936-jack2` (the platform pins this session to that
+branch; no separate `session-<id>/<task>` branch is permitted, so the branch doubles as the integration branch
+as it did for Sessions A–L).
+
+**Starting state read before claiming:** `main` at `ea702c7` (PR #34 merged). `tools/model.py`,
+`tools/build_site.py` and `tools/check_site.py` all pass on that tree: 16 root pages, 146 HTML files including
+archives, 24 sources, 89 metric rows (82 verified, 7 blank), 24 risk rows. Twelve prior workbooks exist under
+`session-*/` and `docs/`. Six stale pull requests (#5, #6, #10, #14, #18, #30) remain open from earlier sessions;
+this session will **not** close or merge them, and will not touch their branches.
+
+## Task board — Session M claims
+
+| # | Task | Status | Owner | Files / scope (non-overlapping) |
+|---|---|---|---|---|
+| M-01 | Claim, board record, live evidence re-verification of official sources (2026-11-10) | in progress | session-313ba936 | `COORDINATION.md` (append only), `session-313ba936/data/**` |
+| M-02 | Deterministic projection + Monte Carlo engine with black-swan hazards | unclaimed | session-313ba936 | `session-313ba936/scripts/**`, `session-313ba936/model/**` |
+| M-03 | Dashboard build: landing, category subpages, master table with a source link per row | unclaimed | session-313ba936 | `session-313ba936/*.html`, `session-313ba936/assets/**` |
+| M-04 | Line-by-line verification: sources resolve, blank rule, PII scan, link check, model reproduction | unclaimed | session-313ba936 | `session-313ba936/verify.py`, `session-313ba936/verification.json` |
+| M-05 | Repository review and irregularity register | unclaimed | session-313ba936 | `session-313ba936/flagged.html`, `session-313ba936/audit/**` |
+| M-06 | Final integration: root landing, workspace index, CI step, PR, merge, Pages deploy confirmation | unclaimed | session-313ba936 | `tools/build_site.py` (additive: `build_workspaces()` row + root landing body), `.github/workflows/verify.yml` (additive step), `README.md`, `COORDINATION.md` |
+
+**Scope discipline.** This session writes only `session-313ba936/**` plus the four shared files named in M-06.
+No page, dataset, script or model owned by Sessions A–L is edited, regenerated or deleted. The root pages remain
+the historical workbook generated by `tools/build_site.py`; the root `index.html` becomes an integration landing
+that routes to every category and to every archived workbook, so nothing is orphaned.
+
+**Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
+(making the new dashboard discoverable); no other session's page copy is rewritten.

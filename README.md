@@ -5,13 +5,38 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 
 **Live site:** https://wingbangboozle1-lang.github.io/Jack2/
 
-## Current evidence-first dashboard (Session I)
+## Current build (Session M, 2026-11-10)
 
-The current anonymized, source-linked dashboard is published at
-**https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/** and is the recommended starting point.
-It keeps unknown property/owner facts blank, separates official observations/projections/rules from analyst scenarios,
-and publishes a **Flagged for Review** page. The root landing page now points to this dashboard while preserving the
-historical root workbook and all parallel-session archives.
+The current dashboard is published at
+**https://wingbangboozle1-lang.github.io/Jack2/session-313ba936/** and is the recommended starting point.
+
+It is the only build in this repository whose source register records, for every source, the **exact text that was on
+the page** when it was read, so a reviewer can diff the workbook against the live page without re-deriving anything.
+It re-read 21 official sources from scratch on 2026-11-10 rather than carrying figures forward, publishes **149 metric
+rows (99 verified, 2 computed, 48 deliberately blank)**, a 22-item risk register split into business-as-usual and
+black-swan events, and a deterministic model whose numeric breakeven matches its closed-form solution to 0.000
+percentage points. It also discloses two methodology errors it found and fixed in its own model.
+
+**The answer it reaches: negotiate an extension first, then price it.** Holding and selling land within a few percent
+of each other on central tendency, so the decision turns on the rent and term the owner can negotiate and on how much
+concentrated tail risk the owner will carry — not on a forecast. The workbook publishes the three breakevens that
+decide it instead of asserting a property value.
+
+Reproduce it:
+
+```bash
+python3 session-313ba936/scripts/model.py        # deterministic engine, no network
+python3 session-313ba936/scripts/build_site.py   # 15 pages
+python3 session-313ba936/scripts/verify.py       # 20 checks
+```
+
+## Earlier dashboard (Session I)
+
+The previous recommended dashboard remains published at
+**https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/**. It keeps unknown property/owner facts blank,
+separates official observations, projections and rules from analyst scenarios, and publishes a **Flagged for Review**
+page. The root landing page points to the current build first and preserves the historical root workbook and every
+parallel-session archive.
 
 Reproduce the current dashboard:
 
