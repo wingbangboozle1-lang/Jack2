@@ -1,0 +1,84 @@
+{
+  "session": "session-313ba936",
+  "as_of": "2026-11-10",
+  "rule": "An irregularity is recorded, not silently fixed. Where a prior session's published number is affected, the finding is described without editing that session's files.",
+  "items": [
+    {
+      "id": "F01",
+      "severity": "high",
+      "title": "Twelve prior workbooks in this repository reach different conclusions from overlapping, partly assumed inputs",
+      "detail": "The repository contains twelve independent session workbooks (session-1944e5a3 through session-f4f700c0, plus docs/). They use different access dates, different source sets, different rent assumptions and different cap-rate assumptions, and several present dollar-valued recommendations as if the rent and cap rate were known. They are not. A reader arriving at the repository root has no way to tell which workbook is authoritative, and the root landing page still presents a historical workbook whose own banner calls its numbers assumption-driven.",
+      "action": "Read this workbook's breakevens, not any workbook's dollar totals. This session does not edit or delete the prior workbooks, per the coordination rule; the root landing is updated only additively to route readers here with an explicit statement of which build is current."
+    },
+    {
+      "id": "F02",
+      "severity": "medium",
+      "title": "Two methodology errors were found and fixed inside this session's own model, and are disclosed rather than hidden",
+      "detail": "(1) The first draft compared a growing asset against a non-growing yield, which mechanically favours holding by the entire growth term. It was rebuilt so that both strategies run through the same cash-flow engine with the same escalation and exit cap. (2) The first Monte Carlo applied a rate shock by lowering the reinvestment yield while raising the cap rate, double-penalising the sell path; a rate shock must raise reinvestment yields as well as cap rates. Both are visible in the git history of session-313ba936/scripts/model.py.",
+      "action": "None outstanding. Disclosed because a model that silently corrects itself is less trustworthy than one that shows its corrections."
+    },
+    {
+      "id": "F03",
+      "severity": "high",
+      "title": "The property's own cap rate cannot come from an official source, and is therefore an assumption",
+      "detail": "No government or regulator publishes transaction cap rates for individual assets. The workbook anchors the going-in cap at the verified 6.8% Q3 2026 net-lease acquisition cash yield, which is a portfolio average across property types and geographies. Using it for a single central-LA drive-through is a labelled assumption, not a valuation.",
+      "action": "Obtain a broker opinion of value or an appraisal. Then read the sensitivity table on the Valuation page, which shows the answer at eight cap rates from 4.8% to 8.3%."
+    },
+    {
+      "id": "F04",
+      "severity": "high",
+      "title": "Fourteen owner-specific fields are blank and every dollar figure depends on at least one of them",
+      "detail": "Contract rent, exact expiry, escalations, renewal terms and notice date, recovery structure, building and land area, year built, APN, zoning, drive-through entitlement, debt, prepayment penalty, assessed value and tax bill are all unverified. The model is therefore denominated per $100,000 of annual rent and reported as breakevens rather than totals.",
+      "action": "Pull the lease first. Rows L01-L14, X10-X13, C13, T13-T14 and O01-O06 on the Flagged for review page list every field with what to obtain."
+    },
+    {
+      "id": "F05",
+      "severity": "high",
+      "title": "No parcel-level hazard or insurance fact was obtained, including the fire zone, flood zone, seismic screening and premium",
+      "detail": "USGS regional earthquake probabilities and CAL FIRE's county-level loss history are verified, and they are used. But the parcel's Fire Hazard Severity Zone, its FEMA flood zone, its liquefaction exposure and its current insurance premium are all unknown. The model applies an assumed hazard process with an assumed 60% insurance recovery, and the fire annual probability of 0.5% is an analyst assumption with no official per-parcel basis.",
+      "action": "Perform the three free address-based lookups named on the Flagged page, and obtain the declarations page and a current quote. Re-run the model with the verified inputs before committing either way."
+    },
+    {
+      "id": "F06",
+      "severity": "medium",
+      "title": "The local forecast horizon problem: official projections are used, but no local forecast covers the full lease window",
+      "detail": "California Department of Finance projects population and K-12 enrollment to 2035-36 and 2070, which does cover the expiry window and is used directly. Employment projections at the county level were not retrieved this session (row J17 is blank). The workbook therefore does not claim a local economic forecast for 2030-2035; it uses official demographic projections and the verified current labour-market series, and treats the rest as scenario assumptions.",
+      "action": "If a forward employment view is required, retrieve the EDD long-term industry and occupational projections directly rather than relying on a third-party forecast."
+    },
+    {
+      "id": "F07",
+      "severity": "medium",
+      "title": "Six stale pull requests from earlier sessions remain open and were deliberately not touched",
+      "detail": "PRs #5, #6, #10, #14, #18 and #30 target branches from earlier sessions, some more than four days old, and several contain work that has already been superseded. This session did not close, merge or rebase them, because doing so would modify another session's branch.",
+      "action": "A maintainer should review and close the superseded ones individually. They do not affect the published site."
+    },
+    {
+      "id": "F08",
+      "severity": "low",
+      "title": "Census QuickFacts reports several city-level business fields as unavailable while the county field is populated",
+      "detail": "On the QuickFacts city/county table, the business statistics (employer establishments, total employment, payroll, firm ownership counts) carry an 'X' flag for the City of Los Angeles column while showing values for the county. The county values are used; no city business figure is published. Rows C06 and C07 are county-only for this reason.",
+      "action": "None. Recorded so a reader does not assume the city column was overlooked."
+    },
+    {
+      "id": "F09",
+      "severity": "medium",
+      "title": "Two official sources cited by earlier sessions returned 404 on the access date and were not used",
+      "detail": "Several earlier workbooks cite a USGS FAQ URL for the 60%/46%/31% earthquake probabilities and a Los Angeles County Registrar-Recorder transfer-tax page. On 2026-11-10 the USGS FAQ URL returned a 404 error page and the Registrar page returned 'The resource you are looking for has been removed'. This workbook therefore cites the USGS Fact Sheet PDF that actually contains Table 1 (S18) and the Revenue and Taxation Code that authorises the county tax (S11) instead.",
+      "action": "This is a citation defect in the prior workbooks, not a data defect - the values themselves are correct. Recorded so that any re-verification does not chase the dead URLs."
+    },
+    {
+      "id": "F10",
+      "severity": "low",
+      "title": "The scored decision ranking depends on weights the analyst chose",
+      "detail": "The four strategies are scored 1-5 on wealth, growth, liquidity, risk and tax, with weights of 30/25/15/20/10. Those weights reflect the owner's stated priorities in the brief, but they are a judgement. A different weighting can change the ranking of the second and third strategies, though not the first.",
+      "action": "The weights are published on the Decision page so the owner can re-weight them. The recommendation's direction of travel rests on the breakevens and the tail asymmetry, not on the scorecard."
+    },
+    {
+      "id": "F11",
+      "severity": "low",
+      "title": "Business-interruption and pandemic-risk treatment is qualitative only",
+      "detail": "The model prices property damage from earthquake and fire on the hold path. It does not price business interruption, rent abatement during closure, or a pandemic-type demand shock as a separate stochastic process, because no official parameter exists for any of them at this level. They are recorded as risks R16 and R20 and mitigated contractually, not modelled.",
+      "action": "At renewal, negotiate a rent-abatement cap and confirm business-interruption coverage."
+    }
+  ]
+}

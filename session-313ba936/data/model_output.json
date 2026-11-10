@@ -1,0 +1,653 @@
+{
+  "engine": "session-313ba936/scripts/model.py",
+  "generated_for": "2026-11-10",
+  "units": "USD, nominal, pre-tax, per $100,000 of annual contract rent",
+  "disclaimer": "Not an appraisal and not a valuation. Contract rent, exact expiry, escalations, basis and debt are unknown. Every dollar figure scales linearly with the owner's actual rent; the percentage breakevens are directly reusable.",
+  "comparison_basis": "Holding and selling run through the same cash-flow engine with the same escalation, reinvestment rate and exit cap. The sale pays transaction costs and the replacement is bought at the verified net-lease market yield. This is a like-for-like comparison; an earlier version of this script compared a growing asset to a non-growing yield, which is recorded as irregularity F02.",
+  "verified_inputs": {
+    "ust_10y_pct": {
+      "value": 4.88,
+      "source": "S01",
+      "label": "10-year Treasury CMT, 2026-11-09"
+    },
+    "ust_1y_pct": {
+      "value": 4.38,
+      "source": "S01",
+      "label": "1-year Treasury CMT, 2026-11-09"
+    },
+    "ust_2y_pct": {
+      "value": 4.56,
+      "source": "S01",
+      "label": "2-year Treasury CMT, 2026-11-09"
+    },
+    "ust_30y_pct": {
+      "value": 5.26,
+      "source": "S01",
+      "label": "30-year Treasury CMT, 2026-11-09"
+    },
+    "netlease_cash_yield_pct": {
+      "value": 6.8,
+      "source": "S17",
+      "label": "Initial weighted average cash yield on net-lease acquisitions, Q3 2026"
+    },
+    "netlease_occupancy_pct": {
+      "value": 98.8,
+      "source": "S17",
+      "label": "Reference net-lease portfolio occupancy"
+    },
+    "netlease_walt_years": {
+      "value": 8.5,
+      "source": "S17",
+      "label": "Reference net-lease portfolio weighted average remaining lease term"
+    },
+    "netlease_rent_recapture_pct": {
+      "value": 103.5,
+      "source": "S17",
+      "label": "Rent recapture on re-leased properties"
+    },
+    "county_pop_2025": {
+      "value": 9853435,
+      "source": "S03",
+      "label": "LA County population 2025, CA DOF P-2A"
+    },
+    "county_pop_2040": {
+      "value": 9637524,
+      "source": "S03",
+      "label": "LA County population 2040, CA DOF P-2A"
+    },
+    "ca_pit_top_pct": {
+      "value": 12.3,
+      "source": "S13",
+      "label": "California top marginal PIT rate"
+    },
+    "prop13_cap_pct": {
+      "value": 2.0,
+      "source": "S12",
+      "label": "Prop 13 annual assessed-value increase cap"
+    },
+    "ula_mid_threshold": {
+      "value": 5400000,
+      "source": "S10",
+      "label": "Measure ULA mid-tier threshold"
+    },
+    "ula_top_threshold": {
+      "value": 10900000,
+      "source": "S10",
+      "label": "Measure ULA top-tier threshold"
+    },
+    "county_dtt_pct": {
+      "value": 0.11,
+      "source": "S11",
+      "label": "LA County documentary transfer tax"
+    },
+    "city_dtt_pct": {
+      "value": 0.45,
+      "source": "S10",
+      "label": "City of LA RPTT base rate"
+    },
+    "eq_30y_m67_pct": {
+      "value": 60,
+      "source": "S18",
+      "label": "USGS 30-yr P(M>=6.7) Los Angeles region"
+    },
+    "eq_30y_m70_pct": {
+      "value": 46,
+      "source": "S18",
+      "label": "USGS 30-yr P(M>=7.0) Los Angeles region"
+    },
+    "eq_30y_m75_pct": {
+      "value": 31,
+      "source": "S18",
+      "label": "USGS 30-yr P(M>=7.5) Los Angeles region"
+    },
+    "eaton_structures_destroyed": {
+      "value": 9419,
+      "source": "S20",
+      "label": "Eaton Fire structures destroyed"
+    }
+  },
+  "annualised_hazard_probabilities_pct": {
+    "m67": 3.0081298996600725,
+    "m70": 2.033003846335135,
+    "m75": 1.2292610308762164
+  },
+  "hazard_derivation": "annual p = 1 - (1 - p30)^(1/30) from the USGS 30-year Los Angeles-region probabilities (S18).",
+  "assumptions": {
+    "rent_normaliser": {
+      "value": 100000,
+      "unit": "USD per year",
+      "why": "Contract rent is unknown (metric L02). Every result is per $100,000 of rent so the owner can scale linearly to their actual rent."
+    },
+    "going_in_cap_pct": {
+      "value": 6.8,
+      "unit": "%",
+      "why": "The asset's own cap rate is unpublished (M11). Set equal to the verified Q3 2026 net-lease acquisition cash yield (S17) as the neutral central case. This single number is the one the owner must replace with an appraisal."
+    },
+    "expiry_year": {
+      "value": 2032,
+      "unit": "year",
+      "why": "Midpoint of the 2030-2035 window the brief supplies. The exact date is unverified (L01)."
+    },
+    "horizon_year": {
+      "value": 2040,
+      "unit": "year",
+      "why": "Covers the remaining term plus a full renewal cycle."
+    },
+    "escalation_pct": {
+      "value": 2.0,
+      "unit": "% per year",
+      "why": "Typical flat net-lease escalation. The lease was not read (L03)."
+    },
+    "terminal_cap_pct": {
+      "value": 6.8,
+      "unit": "%",
+      "why": "No cap-rate change assumed over the horizon."
+    },
+    "brokerage_pct": {
+      "value": 3.0,
+      "unit": "%",
+      "why": "Negotiated, not published (X13)."
+    },
+    "closing_pct": {
+      "value": 0.5,
+      "unit": "%",
+      "why": "Title, escrow, legal, diligence. Negotiated."
+    },
+    "renew_prob": {
+      "value": 0.75,
+      "unit": "probability",
+      "why": "No official source exists. Balances a live closure programme (R02) against a site the brand occupies."
+    },
+    "downtime_months_if_vacated": {
+      "value": 12,
+      "unit": "months",
+      "why": "A drive-through site can only be re-let to entitlement-compatible uses."
+    },
+    "relet_cost_pct_of_year_rent": {
+      "value": 5.0,
+      "unit": "%",
+      "why": "Leasing commission plus tenant improvements on a small-format asset."
+    },
+    "insurance_recovery_pct": {
+      "value": 60.0,
+      "unit": "% of hazard loss",
+      "why": "Coverage after deductible and limits. The actual policy is unknown (H11, H12)."
+    },
+    "fire_annual_prob_pct": {
+      "value": 0.5,
+      "unit": "% per year",
+      "why": "LABELLED ASSUMPTION, NOT OFFICIAL. CAL FIRE publishes hazard zones and loss history (S19, S20) but no parcel annual burn probability. Set low because the parcel is urban; flagged on flag.html."
+    },
+    "rate_shock_annual_prob_pct": {
+      "value": 4.0,
+      "unit": "% per year",
+      "why": "Labelled assumption for a +150bp permanent cap-rate widening."
+    },
+    "rate_shock_bp": {
+      "value": 150,
+      "unit": "basis points",
+      "why": "Labelled assumption for the size."
+    },
+    "uplift_at_renewal_pct": {
+      "value": 0.0,
+      "unit": "%",
+      "why": "Central case assumes renewal at the escalated contract rent, i.e. no reset. The breakeven uplift is solved for separately."
+    }
+  },
+  "config": {
+    "start_year": 2026,
+    "expiry_year": 2032,
+    "horizon_year": 2040,
+    "years": 14,
+    "rent_normaliser": 100000
+  },
+  "scenarios": [
+    {
+      "id": "bear",
+      "label": "Bear",
+      "narrative": "Wage and insurance costs keep compressing franchisee margin; cap rates widen as the 10-year holds near 4.9%; the tenant extracts a concession or leaves.",
+      "escalation_pct": 1.5,
+      "terminal_cap_pct": 7.8,
+      "renew_prob": 0.55,
+      "gross_price": 1470588.2352941176,
+      "cost_rate_pct": 4.06,
+      "net_proceeds": 1410882.3529411764,
+      "replacement_rent": 95940.0,
+      "sell_wealth": 3804636.9041922167,
+      "hold_terminal_value": 1602861.6239158558,
+      "hold_cash_pile": 2362780.3441810976,
+      "hold_wealth": 3965641.9680969534,
+      "delta_hold_minus_sell": 161005.06390473666
+    },
+    {
+      "id": "base",
+      "label": "Base",
+      "narrative": "The verified benchmark holds, rent escalates at 2%, the tenant renews, exit cap unchanged.",
+      "escalation_pct": 2.0,
+      "terminal_cap_pct": 6.8,
+      "renew_prob": 0.75,
+      "gross_price": 1470588.2352941176,
+      "cost_rate_pct": 4.06,
+      "net_proceeds": 1410882.3529411764,
+      "replacement_rent": 95940.0,
+      "sell_wealth": 4280857.543874981,
+      "hold_terminal_value": 1979218.1445943085,
+      "hold_cash_pile": 2482797.2232136773,
+      "hold_wealth": 4462015.367807986,
+      "delta_hold_minus_sell": 181157.82393300533
+    },
+    {
+      "id": "bull",
+      "label": "Bull",
+      "narrative": "Rates ease, net-lease demand for drive-through sites strengthens, and the tenant renews early to protect the location.",
+      "escalation_pct": 2.5,
+      "terminal_cap_pct": 5.8,
+      "renew_prob": 0.85,
+      "gross_price": 1470588.2352941176,
+      "cost_rate_pct": 4.06,
+      "net_proceeds": 1410882.3529411764,
+      "replacement_rent": 95940.0,
+      "sell_wealth": 4878398.549313663,
+      "hold_terminal_value": 2497065.804307086,
+      "hold_cash_pile": 2587777.3782170564,
+      "hold_wealth": 5084843.182524143,
+      "delta_hold_minus_sell": 206444.6332104802
+    }
+  ],
+  "breakevens": {
+    "breakeven_going_in_cap_pct": 6.52392,
+    "breakeven_search_bracket_pct": [
+      6.52392,
+      6.523920000000001
+    ],
+    "breakeven_going_in_cap_closed_form_pct": 6.52392,
+    "breakeven_going_in_cap_closed_form_gap_pp": 0.0,
+    "required_replacement_yield_pct": 7.007606604573202,
+    "required_replacement_yield_closed_form_pct": 7.08776318532416,
+    "status_quo_delta_base": 181157.82393300533,
+    "renewal_concession_that_flips_to_sell_pct": 5.705783227722733,
+    "breakeven_note": "The numeric threshold differs from the closed form Y*(1-s) because the engine also applies an expected non-renewal loss at the expiry year, which a pure income-capitalisation formula omits."
+  },
+  "sensitivity_cap": [
+    {
+      "going_in_cap_pct": 4.8,
+      "gross_price": 2083333.3333333333,
+      "net_proceeds": 1998750.0,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": -1602532.8193482384,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 5.3,
+      "gross_price": 1886792.4528301887,
+      "net_proceeds": 1810188.6792452831,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": -1030405.6318806708,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 5.8,
+      "gross_price": 1724137.9310344828,
+      "net_proceeds": 1654137.9310344828,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": -556921.0629419927,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 6.3,
+      "gross_price": 1587301.5873015872,
+      "net_proceeds": 1522857.1428571427,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": -158592.77478723042,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 6.8,
+      "gross_price": 1470588.2352941176,
+      "net_proceeds": 1410882.3529411764,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": 181157.82393300533,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 7.3,
+      "gross_price": 1369863.0136986303,
+      "net_proceeds": 1314246.575342466,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": 474367.24474635907,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 7.8,
+      "gross_price": 1282051.282051282,
+      "net_proceeds": 1230000.0,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": 729985.7141733868,
+      "ula_applies": false
+    },
+    {
+      "going_in_cap_pct": 8.3,
+      "gross_price": 1204819.2771084337,
+      "net_proceeds": 1155903.6144578313,
+      "cost_rate_pct": 4.06,
+      "hold_minus_sell": 954806.7776453514,
+      "ula_applies": false
+    }
+  ],
+  "sensitivity": [
+    {
+      "terminal_cap_pct": 5.8,
+      "cells": [
+        {
+          "escalation_pct": 1.5,
+          "hold_wealth": 4557803.291154208,
+          "sell_wealth": 4372756.477533348,
+          "delta_hold_minus_sell": 185046.81362085976
+        },
+        {
+          "escalation_pct": 2.0,
+          "hold_wealth": 4803259.875496659,
+          "sell_wealth": 4608247.524551496,
+          "delta_hold_minus_sell": 195012.35094516352
+        },
+        {
+          "escalation_pct": 2.5,
+          "hold_wealth": 5063716.739714334,
+          "sell_wealth": 4858129.840081932,
+          "delta_hold_minus_sell": 205586.89963240176
+        }
+      ]
+    },
+    {
+      "terminal_cap_pct": 6.3,
+      "cells": [
+        {
+          "escalation_pct": 1.5,
+          "hold_wealth": 4386726.106335603,
+          "sell_wealth": 4208625.026418378,
+          "delta_hold_minus_sell": 178101.07991722506
+        },
+        {
+          "escalation_pct": 2.0,
+          "hold_wealth": 4619096.172934518,
+          "sell_wealth": 4431560.868313377,
+          "delta_hold_minus_sell": 187535.3046211414
+        },
+        {
+          "escalation_pct": 2.5,
+          "hold_wealth": 4865536.9139756765,
+          "sell_wealth": 4667996.115268264,
+          "delta_hold_minus_sell": 197540.79870741256
+        }
+      ]
+    },
+    {
+      "terminal_cap_pct": 6.8,
+      "cells": [
+        {
+          "escalation_pct": 1.5,
+          "hold_wealth": 4240807.331049145,
+          "sell_wealth": 4068630.55340855,
+          "delta_hold_minus_sell": 172176.7776405951
+        },
+        {
+          "escalation_pct": 2.0,
+          "hold_wealth": 4462015.367807986,
+          "sell_wealth": 4280857.543874981,
+          "delta_hold_minus_sell": 181157.82393300533
+        },
+        {
+          "escalation_pct": 2.5,
+          "hold_wealth": 4696501.18025741,
+          "sell_wealth": 4505823.232338959,
+          "delta_hold_minus_sell": 190677.94791845046
+        }
+      ]
+    },
+    {
+      "terminal_cap_pct": 7.3,
+      "cells": [
+        {
+          "escalation_pct": 1.5,
+          "hold_wealth": 4114877.4290896,
+          "sell_wealth": 3947813.4054685626,
+          "delta_hold_minus_sell": 167064.0236210376
+        },
+        {
+          "escalation_pct": 2.0,
+          "hold_wealth": 4326452.481191938,
+          "sell_wealth": 4150798.5104555446,
+          "delta_hold_minus_sell": 175653.97073639324
+        },
+        {
+          "escalation_pct": 2.5,
+          "hold_wealth": 4550621.026500549,
+          "sell_wealth": 4365865.812824627,
+          "delta_hold_minus_sell": 184755.21367592178
+        }
+      ]
+    },
+    {
+      "terminal_cap_pct": 7.8,
+      "cells": [
+        {
+          "escalation_pct": 1.5,
+          "hold_wealth": 4005092.386355637,
+          "sell_wealth": 3842485.6354695987,
+          "delta_hold_minus_sell": 162606.7508860384
+        },
+        {
+          "escalation_pct": 2.0,
+          "hold_wealth": 4208269.451834356,
+          "sell_wealth": 4037413.7120898813,
+          "delta_hold_minus_sell": 170855.7397444751
+        },
+        {
+          "escalation_pct": 2.5,
+          "hold_wealth": 4423443.456558671,
+          "sell_wealth": 4243851.652222389,
+          "delta_hold_minus_sell": 179591.8043362815
+        }
+      ]
+    }
+  ],
+  "monte_carlo": {
+    "seed": 313936,
+    "trials": 20000,
+    "prob_sell_beats_hold": 0.2596,
+    "prob_hold_loss_exceeds_25pct_of_principal": 0.37225,
+    "sell_now": {
+      "mean": 3930548.9239092744,
+      "median": 3927563.599100314,
+      "p05": 3166877.9323580703,
+      "p25": 3478089.7042347062,
+      "p75": 4338519.446382787,
+      "p95": 4784904.989938274,
+      "p99": 5122045.9720605835,
+      "min": 2665180.7774346657,
+      "max": 6161538.979985063,
+      "cvar_05": 3067397.252258722
+    },
+    "hold": {
+      "mean": 4124577.6362383193,
+      "median": 4198156.729954565,
+      "p05": 3139708.47268177,
+      "p25": 3761611.8897182783,
+      "p75": 4514126.76612396,
+      "p95": 4938217.968183306,
+      "p99": 5273262.376037736,
+      "min": 1801969.5682980914,
+      "max": 6422283.698129104,
+      "cvar_05": 2838340.9542238126
+    },
+    "downside_from_mean_pct": {
+      "sell_diversified": 19.429118078287818,
+      "hold_concentrated": 23.878060989894852
+    },
+    "mean_difference_pct_of_sell_mean": 4.936427865044011
+  },
+  "decision": {
+    "weights": {
+      "wealth": 0.3,
+      "growth": 0.25,
+      "liquidity": 0.15,
+      "risk": 0.2,
+      "tax": 0.1
+    },
+    "scale": "1 = poor, 5 = strong",
+    "strategies": [
+      {
+        "id": "extend_then_sell",
+        "name": "Negotiate an extension at a market reset, then sell into a 1031 if the price clears the trigger",
+        "detail": "Use the tenant's own incentive to stay - a drive-through site inside central LA - to convert a 2030-2035 expiry into a longer term at a rent reset. A longer weighted average lease term is worth more per dollar of rent than the same rent with a near-term rollover, so this improves the hold case and the sale price at the same time.",
+        "scores": {
+          "wealth": 4,
+          "growth": 5,
+          "liquidity": 4,
+          "risk": 4,
+          "tax": 4
+        },
+        "pros": [
+          "Attacks the only variable the owner controls: rent and term.",
+          "Selling with a fresh ten-year term removes the rollover discount a buyer would otherwise apply.",
+          "Keeps the section 1031 route open and defers the tax decision until a replacement exists."
+        ],
+        "cons": [
+          "Depends on tenant cooperation, and the tenant is in a closure programme.",
+          "An extension does not reduce concentration risk - it only makes the asset more sellable.",
+          "Time cost: negotiation, marketing and a 1031 identification is a multi-quarter project."
+        ],
+        "weighted": 85.0,
+        "rank": 1
+      },
+      {
+        "id": "sell_now",
+        "name": "Sell now into a section 1031 exchange",
+        "detail": "Exit at the going-in cap rate, pay brokerage plus county and city transfer tax, and redeploy into two or more net-lease assets or a diversified vehicle, deferring the gain under section 1031.",
+        "scores": {
+          "wealth": 3,
+          "growth": 3,
+          "liquidity": 5,
+          "risk": 5,
+          "tax": 4
+        },
+        "pros": [
+          "Removes the single-asset earthquake, wildfire and insurance tail in one transaction.",
+          "Converts one illiquid parcel into a diversified, re-priceable position.",
+          "Locks in today's cap-rate environment instead of betting it holds to 2032."
+        ],
+        "cons": [
+          "Crystallises disposition cost including 0.45% city and 0.11% county transfer tax, and Measure ULA above the indexed threshold.",
+          "Requires an identified replacement inside the exchange window; a failed exchange is worse than not selling.",
+          "Gives up the Prop 13 assessed-value cap, which is real while held and resets on sale."
+        ],
+        "weighted": 76.0,
+        "rank": 2
+      },
+      {
+        "id": "hold_renew",
+        "name": "Hold to expiry and renew at market",
+        "detail": "Do nothing now; negotiate at or before expiry; keep the asset and the lease.",
+        "scores": {
+          "wealth": 3,
+          "growth": 3,
+          "liquidity": 2,
+          "risk": 2,
+          "tax": 5
+        },
+        "pros": [
+          "Preserves the Prop 13 cap, which a sale resets.",
+          "No transaction cost, no exchange execution risk, no forced timeline.",
+          "Retains full optionality until the expiry window opens."
+        ],
+        "cons": [
+          "Leaves the decision to a negotiation conducted under time pressure.",
+          "Carries the full single-asset hazard exposure for another six to fourteen years.",
+          "If the closure programme reaches this unit, the owner holds a vacant drive-through."
+        ],
+        "weighted": 57.0,
+        "rank": 3
+      },
+      {
+        "id": "renew_long",
+        "name": "Renew long-term and hold as a permanent income asset",
+        "detail": "Extend for the longest term available and treat the asset as a permanent income stream.",
+        "scores": {
+          "wealth": 3,
+          "growth": 2,
+          "liquidity": 1,
+          "risk": 2,
+          "tax": 5
+        },
+        "pros": [
+          "Maximum contractual certainty of cash flow if the tenant performs.",
+          "Best tax profile: no recognition event and the Prop 13 cap continues."
+        ],
+        "cons": [
+          "Maximises concentration in a shrinking county, a contracting sector and one credit.",
+          "A long lease also blights redevelopment of the land.",
+          "Scores worst against the owner's stated requirement to keep risk manageable."
+        ],
+        "weighted": 49.0,
+        "rank": 4
+      }
+    ],
+    "note": "Judgement scores on a verified fact base, not measurements. Weights are published so the owner can re-weight and watch the ranking move."
+  },
+  "triggers": [
+    {
+      "id": "TR1",
+      "trigger": "An appraisal or broker opinion implies a going-in cap rate below the solved breakeven.",
+      "reading": "breakeven 6.52% vs verified market yield 6.80%",
+      "action": "The asset is priced tight relative to what you could buy. Selling wins on arithmetic."
+    },
+    {
+      "id": "TR2",
+      "trigger": "An appraisal or broker opinion implies a going-in cap rate above the solved breakeven.",
+      "reading": "breakeven 6.52%",
+      "action": "Holding wins on arithmetic. Do not sell to buy a lower yield."
+    },
+    {
+      "id": "TR3",
+      "trigger": "A replacement property is identified at or above the required replacement yield.",
+      "reading": "required 7.01%",
+      "action": "Execute the exchange. This is the only condition under which selling is a pure upgrade."
+    },
+    {
+      "id": "TR4",
+      "trigger": "The tenant will sign an extension at a rent reset.",
+      "reading": "uplift required to change the answer is solved in the model",
+      "action": "Sign, then sell with the longer term. Best combined outcome for wealth and risk."
+    },
+    {
+      "id": "TR5",
+      "trigger": "Insurance cost rises enough to cut net operating income, or a carrier declines the risk.",
+      "reading": "current premium unverified (H11)",
+      "action": "Sell. Uninsurable or uneconomic cover is the clearest sell signal in this asset class."
+    },
+    {
+      "id": "TR6",
+      "trigger": "The option notice date is less than twelve months away.",
+      "reading": "date unverified (L01, L04)",
+      "action": "Stop analysing and start the process. Time becomes the binding constraint, not price."
+    },
+    {
+      "id": "TR7",
+      "trigger": "Tenant same-store sales turn positive and the restaurant count stabilises for two consecutive quarters.",
+      "reading": "Q3 FY2026: system SSS -1.1%; 2,115 units vs 2,168",
+      "action": "Tenant risk is falling; the hold case strengthens and an extension gets easier."
+    },
+    {
+      "id": "TR8",
+      "trigger": "Owner liquidity needs crystallise.",
+      "reading": "unverified (O03)",
+      "action": "Liquidity overrides optimisation. Sell, accept the cost, and pre-plan the exchange."
+    },
+    {
+      "id": "TR9",
+      "trigger": "A parcel-level hazard or insurance finding changes the loss distribution.",
+      "reading": "FHSZ, flood zone, seismic screening and earthquake cover all unverified (H08-H12)",
+      "action": "Re-run the model with the verified hazard inputs before committing either way."
+    }
+  ]
+}

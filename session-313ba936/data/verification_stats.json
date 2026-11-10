@@ -1,0 +1,30 @@
+{
+  "session": "session-313ba936",
+  "verified_on": "2026-11-10",
+  "counts": {
+    "pages": 15,
+    "html_files": 15,
+    "sources": 21,
+    "metric_rows": 149,
+    "verified": 99,
+    "computed": 2,
+    "blank": 48,
+    "risk_rows": 22,
+    "irregularities": 11,
+    "requirements": 26,
+    "checks": 20
+  },
+  "notes": [
+    "V16 all sources are tier A (government/regulator) or tier B (SEC filing)",
+    "blank-value rule: 48 rows deliberately blank, 99 verified, 2 computed",
+    "links: 15 HTML files scanned, all internal links and nav entries resolve",
+    "privacy: 0 hits for email, phone, street address or parcel pattern across all pages and data files",
+    "reproducibility: model.py regenerated model_output.json byte-identically (22,983 bytes)",
+    "model cross-check: numeric breakeven matches closed form to 0.000pp",
+    "model: 20 verified inputs, 16 labelled assumptions, 9 triggers",
+    "audit: 11 irregularities recorded (4 high)",
+    "requirements: 26/26 satisfied"
+  ],
+  "failures": [],
+  "result": "pass"
+}
