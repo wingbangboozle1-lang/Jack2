@@ -1,0 +1,80 @@
+{
+  "session": "session-5f296f9d",
+  "access_date": "2026-11-10",
+  "question": "Sell a single-tenant Jack in the Box (NNN, Central Los Angeles, expiry window 2030-2035) before the lease expires, or renew and hold — for an owner whose priorities are wealth preservation with a manageable level of risk and room for growth.",
+  "normalization": "The owner's contract rent, basis and debt are private and blank (flags F-01, F-05). Every number below is therefore published on an index basis: value = 1.00 equals one year of current net operating income (NOI). Dollar outcomes scale linearly with actual NOI. No private fact was assumed.",
+  "strategies": [
+    {
+      "id": "S-HOLD",
+      "name": "HOLD — renew/extend the NNN lease and keep the asset to and beyond expiry",
+      "summary": "Negotiate renewal now (2026-2028) with CPI-linked escalators above metro ECI (3.9% YoY, S01), then hold to the 2030-2035 window and either renew again or sell at expiry.",
+      "pros": ["Captures contracted income while area labor market improves (county unemployment 4.8% SA, S02)", "Defers all transfer-tax friction (ULA 4.45% if in City limits, S10)", "Defers capital-gains tax indefinitely while 10-year Treasury yields 4.86% (S08)"],
+      "cons": ["Single-tenant concentration: tenant SSS -1.1% and elevated closures into 2028 (S04)", "Structural demand headwinds: county population -3.2% since 2020 (S03), K-12 enrollment -240,800 by 2035-36 (S30)", "Carries 100% of earthquake (60% in 30 yrs, S13) and wildfire (S14/S15) exposure on one parcel"],
+      "official_evidence": ["S04", "S01", "S02", "S03", "S30", "S13", "S14", "S15", "S10", "S08"]
+    },
+    {
+      "id": "S-SELL",
+      "name": "SELL before expiry (target closing 2027-2029) and diversify into a broad portfolio",
+      "summary": "Run a sale process now against the official net-lease benchmark (6.8% initial cash yield, Q3 2026, S07), pay transfer tax and any capital-gains tax, and reinvest net proceeds in a diversified income portfolio.",
+      "pros": ["Removes single-tenant and single-parcel black-swan exposure (R17, R18, R20)", "Locks a price while the official benchmark yield is 6.8% and benchmark occupancy 98.8%", "Converts a declining-population county asset into diversified exposure"],
+      "cons": ["ULA adds 4.45% (tier 1) or 5.95% (tier 2) of gross consideration if the parcel is in City limits (S10)", "Capital-gains tax depends on private basis (F-10) — deferred if §1031 is used instead", "Sells into a market where the tenant's brand is shrinking (S04)"],
+      "official_evidence": ["S07", "S10", "S08", "S17", "S18", "S16", "S04"]
+    },
+    {
+      "id": "S-EXCHANGE",
+      "name": "EXCHANGE — sell before expiry and roll proceeds via IRC §1031 into diversified NNN real estate",
+      "summary": "Same timing as SELL, but replacement property of equal or greater value is acquired within the 45/180-day framework (S16), deferring federal capital-gains tax; transfer tax still applies at sale.",
+      "pros": ["Keeps real-estate exposure (no forced portfolio change) while diversifying away from one parcel/one tenant", "Defers capital-gains tax: gain is 'deferred, not forgiven' (S16)", "Benchmark shows institutional net-lease demand is deep: 15,536-asset benchmark portfolio at 98.8% occupancy (S07)"],
+      "cons": ["45-day identification and 180-day close are hard deadlines — only extendable in a presidentially declared disaster (S16)", "ULA transfer tax is NOT deferred by §1031 — it is a tax on conveyance (S10)", "Reinvestment at today's benchmark yield (6.8%) may be below the asset's going-in cap if the market tightens"],
+      "official_evidence": ["S16", "S10", "S07", "S08"]
+    },
+    {
+      "id": "S-GRID",
+      "name": "HOLD-TO-EXPIRY then SELL at expiry (2030-2035 grid)",
+      "summary": "Keep the lease through expiry and sell in the expiry year; the model publishes a 2030-2035 grid of exit-cap outcomes on the index basis.",
+      "pros": ["Maximizes contracted income years", "Optionality: sell at expiry with no pre-expiry vacancy risk if re-tenanting is avoided"],
+      "cons": ["Exposes the full terminal value to the 2030-2035 cap-rate and local-demand path", "Tenant may not renew (R01/R02/R20), leaving a rollover sale instead of a income sale"],
+      "official_evidence": ["S04", "S08", "S03", "S30"]
+    }
+  ],
+  "model_evidence": {
+    "file": "model_output.json",
+    "index_basis": "1.00 = one year of current NOI; horizon end-2040; seed 20261110; 10,000 trials",
+    "expected_value": {"mean_hold": 33.9489, "mean_sell_2027_diversified": 25.6871, "mean_hold_with_default": 30.5274, "cost_of_diversifying_index_units": 8.2617},
+    "risk_adjusted": {"cvar5_hold": 15.9905, "cvar5_sell": 21.1134, "P_sell_gt_hold": 0.1715, "P_hold_default_lt_sell": 0.3112},
+    "tail": {"p99_single_asset_loss": 15.113, "p99_diversified_loss": 5.1897, "P_single_asset_loss_gt_10": 0.0889, "P_diversified_loss_gt_10": 0.0001},
+    "breakeven_reinvestment_base_2032_pct": 7.061,
+    "hazard": {"annual_quake_probability_official_derived": 0.03008, "P_one_quake_2026_2035": 0.2403, "basis": "USGS 60% in 30 years (S13/O08)"},
+    "reading": "Holding wins on expected wealth (+8.3 index units) only because the asset's ~6.8% yield exceeds the officially anchored 4.86% reinvestment anchor. Selling/exchanging wins on risk-adjusted wealth: the worst-5% outcome is 5.1 index units better, and the chance of an idiosyncratic loss above 10 index units falls from 8.9% to 0.01%. The break-even reinvestment rate for the base 2032 case is 7.06%: below that, holding is the expected-value winner; above it, selling wins outright. The user's stated objective (wealth preservation with growth at manageable risk) is therefore served by ranking the risk-adjusted winner first, with the hold case retained as the expected-value benchmark and the triggers as the switching rules."
+  },
+  "recommendation": {
+    "headline": "NEGOTIATE FIRST, PRICE SECOND: extend/renew the lease on CPI-linked terms in 2026-2028 while the local labor market is strong, run a parallel disciplined sale process with a reserve price set above break-even, and execute a §1031 exchange if either (a) the best bid clears break-even after the 4.45% City transfer stack, or (b) the owner weighs the risk-adjusted case — the model shows diversifying improves the worst-5% outcome by 5.1 index units at a cost of 8.3 index units of expected wealth.",
+    "ranking": [
+      {"rank": 1, "id": "S-EXCHANGE", "why": "Risk-adjusted winner in the model: CVaR5 21.1 vs 16.0 for holding, and P(idiosyncratic loss > 10 index units) falls from 8.9% to 0.01%. Keeps real-estate income exposure (growth) while removing single-parcel black swans (60% quake in 30 yrs, twin Jan-2025 fires) and the single-tenant bet on a brand with -1.1% SSS (O11), and defers capital-gains tax under S16. Cost: 8.3 index units of expected wealth versus holding."},
+      {"rank": 2, "id": "S-HOLD", "why": "Expected-value winner (mean 33.9 vs 25.7) because the ~6.8% asset yield beats the officially anchored 4.86% reinvestment rate — but only while renewal terms are strong (escalators >= metro ECI 3.9%, S01) and tenant credit holds (S04). Population and school-age trajectories (S03, S30) argue against a passive hold into 2035."},
+      {"rank": 3, "id": "S-SELL", "why": "Same exit logic as rank 1 but pays capital-gains tax now on unknown basis (F-10); dominated by S-EXCHANGE unless the owner wants out of real estate entirely."},
+      {"rank": 4, "id": "S-GRID", "why": "Highest terminal-value variance: the whole bet sits on 2030-2035 cap rates in a county losing population. Acceptable only as the outcome of a failed renewal negotiation, not as a plan."}
+    ],
+    "conditions": [
+      "If the best bid (net of 4.45%/5.95% City transfer stack and closing costs) exceeds hold-value at the model's base break-even cap, sell/exchange.",
+      "If the tenant offers renewal with escalators >= metro ECI (3.9% YoY, S01) and the renewal term runs past 2032, hold through the extension and re-price in 2030.",
+      "If tenant SSS falls again for a second consecutive fiscal year, or guidance turns to net system closures above 100/yr, move to rank 1 immediately regardless of price (R01, R02).",
+      "If earthquake coverage cannot be bound at acceptable cost after any fault-map finding, exit via rank 1 (R17, R19)."
+    ]
+  },
+  "triggers": [
+    {"id":"T1","trigger":"Best bid < base break-even cap on the model's 2027-2029 grid","action":"Hold and renew","source_model":"model_output.json"},
+    {"id":"T2","trigger":"Best bid > base break-even cap after transfer tax","action":"Sell / §1031 exchange (rank 1)","source_model":"model_output.json"},
+    {"id":"T3","trigger":"JACK fiscal-year SSS decline >= 2 consecutive years or FY guidance cut below -3%","action":"Accelerate exit to 2027","source":"S04"},
+    {"id":"T4","trigger":"DGS10 > 5.5% for a full quarter","action":"Pause sale; cap-rate risk elevated (R04)","source":"S08"},
+    {"id":"T5","trigger":"Renewal escalator < CPI-U metro (3.7% YoY, S01)","action":"Reject renewal; prefer exit","source":"S01"},
+    {"id":"T6","trigger":"Bound insurance quote rises > 50% vs expiring premium","action":"Re-underwrite hold case; treat as R19 warning","source":"S25"},
+    {"id":"T7","trigger":"SoS certifies Prop 3 differently than the unofficial 60.4% Yes","action":"Re-check CA top-rate assumption (M92-M94)","source":"S28"}
+  ],
+  "falsifiers": [
+    "The recommendation is wrong if the owner's actual basis makes the after-tax cost of selling exceed the single-asset risk premium by a wide margin (basis is blank — F-05/F-10).",
+    "The recommendation is wrong if the parcel is outside City of Los Angeles limits (no ULA applies — F-08), which materially lowers exit friction and favors selling sooner.",
+    "The recommendation is wrong if the tenant's next fiscal-year SSS turns positive and the closure program ends (R01/R02 reverse).",
+    "The recommendation is wrong if the official net-lease benchmark yield moves materially away from 6.8% before execution (S07 is a dated print, 2026-11-02)."
+  ]
+}

@@ -1,0 +1,2453 @@
+{
+ "session": "session-5f296f9d",
+ "generated_by": "scripts/model.py",
+ "seed": 20261110,
+ "index_basis": "NOI_2026 = 1.00",
+ "observations": {
+  "O01": {
+   "label": "10-year Treasury constant maturity, 2026-11-06",
+   "value": 4.86,
+   "unit": "%",
+   "source": "S08"
+  },
+  "O02": {
+   "label": "Federal funds target range upper limit, 2026-11-09",
+   "value": 4.0,
+   "unit": "%",
+   "source": "S09"
+  },
+  "O03": {
+   "label": "Realty Income Q3-2026 initial weighted average cash yield",
+   "value": 6.8,
+   "unit": "%",
+   "source": "S07"
+  },
+  "O04": {
+   "label": "LA metro unemployment rate, 2026-09 (NSA)",
+   "value": 4.4,
+   "unit": "%",
+   "source": "S01"
+  },
+  "O05": {
+   "label": "LA County unemployment rate, 2026-09 (SA)",
+   "value": 4.8,
+   "unit": "%",
+   "source": "S02"
+  },
+  "O06": {
+   "label": "LA metro CPI-U, 12 months to 2026-09",
+   "value": 3.7,
+   "unit": "%",
+   "source": "S01"
+  },
+  "O07": {
+   "label": "LA metro Employment Cost Index, 12 months to 2026-09",
+   "value": 3.9,
+   "unit": "%",
+   "source": "S01"
+  },
+  "O08": {
+   "label": "USGS UCERF3 30-year probability of M6.7+ earthquake, LA region",
+   "value": 60.0,
+   "unit": "%",
+   "source": "S13"
+  },
+  "O09": {
+   "label": "Measure ULA + City base transfer stack, tier 1 (after 2026-06-30)",
+   "value": 4.45,
+   "unit": "%",
+   "source": "S10"
+  },
+  "O10": {
+   "label": "Measure ULA + City base transfer stack, tier 2 (after 2026-06-30)",
+   "value": 5.95,
+   "unit": "%",
+   "source": "S10"
+  },
+  "O11": {
+   "label": "JACK system same-store sales, FY2026 Q3",
+   "value": -1.1,
+   "unit": "%",
+   "source": "S04"
+  },
+  "O12": {
+   "label": "JACK restaurant count 2026-07-05 vs a year earlier",
+   "value": "2,115 vs 2,168",
+   "unit": "restaurants",
+   "source": "S04"
+  }
+ },
+ "assumptions": {
+  "A01": {
+   "label": "Index basis",
+   "value": "NOI_2026 = 1.00",
+   "note": "All money results scale linearly by actual NOI. Private rent is never guessed."
+  },
+  "A02": {
+   "label": "Annual NOI growth, bear",
+   "value": 0.5,
+   "unit": "%",
+   "note": "Anchors: county population -0.6% (S29), tenant SSS -1.1% (S04); below CPI."
+  },
+  "A03": {
+   "label": "Annual NOI growth, base",
+   "value": 2.0,
+   "unit": "%",
+   "note": "Anchors: between typical NNN escalators and metro CPI 3.7% (O06); explicitly an assumption."
+  },
+  "A04": {
+   "label": "Annual NOI growth, bull",
+   "value": 3.0,
+   "unit": "%",
+   "note": "Anchors: near metro ECI 3.9% (O07); requires successful renewal with strong escalators."
+  },
+  "A05": {
+   "label": "Reinvestment / discount rate",
+   "value": 4.86,
+   "unit": "%",
+   "note": "Anchored to the official 10-year Treasury print O01; held flat, no curve extrapolation."
+  },
+  "A06": {
+   "label": "Exit cap-rate distribution (MC)",
+   "value": "Normal(6.50%, 0.75%), clipped to [5.00%, 8.50%]",
+   "note": "Centered just inside the official net-lease benchmark yield 6.8% (O03). Distribution shape is an assumption."
+  },
+  "A07": {
+   "label": "Reinvestment yield distribution (MC)",
+   "value": "Normal(4.86%, 0.50%), clipped to [2.50%, 7.00%]",
+   "note": "Centered on O01."
+  },
+  "A08": {
+   "label": "Rent growth distribution (MC)",
+   "value": "Triangular(-2.0%, 2.0%, 3.5%)",
+   "note": "Mode = A03 (A02..A04 bear/base/bull); lower bound admits tenant SSS -1.1% (O11) and county population decline (S03/S29). An assumption, not a forecast."
+  },
+  "A09": {
+   "label": "Earthquake annual hazard, hold path",
+   "value": 0.030081298996600725,
+   "unit": "probability/yr",
+   "note": "Derived ONLY from official 60% in 30 years (O08): p = 1-(1-0.60)^(1/30) = 3.03%/yr. Loss magnitude is separate (A10)."
+  },
+  "A10": {
+   "label": "Single-asset physical loss severity when a quake/fire hits",
+   "value": "Uniform(15%, 60%) of asset value",
+   "note": "ASSUMPTION \u2014 no official severity distribution for this parcel exists; parcel data withheld (F-11)."
+  },
+  "A11": {
+   "label": "Parcel wildfire annual hazard",
+   "value": 0.5,
+   "unit": "%/yr",
+   "note": "ASSUMPTION \u2014 no official parcel-level probability verified (F-11). Context: two major fires in one month, Jan 2025 (S14/S15)."
+  },
+  "A12": {
+   "label": "Tenant-default / non-renewal annual hazard",
+   "value": 3.0,
+   "unit": "%/yr",
+   "note": "ASSUMPTION informed by O11, O12 and FY26 guidance (S04); no official default probability exists."
+  },
+  "A13": {
+   "label": "Tenant-default loss",
+   "value": "40% NOI haircut plus 12 months vacancy",
+   "note": "ASSUMPTION: re-tenanting a restaurant box at a wider cap with downtime."
+  },
+  "A14": {
+   "label": "Systematic shock on diversified path",
+   "value": "Cap +1.5% for one year and 10% income loss",
+   "note": "ASSUMPTION: diversification removes idiosyncratic total loss but not market-wide shocks."
+  },
+  "A15": {
+   "label": "City of Los Angeles transfer stack applies",
+   "value": "4.45% (tier 1), modeled both with and without ULA",
+   "note": "Parcel location unresolved (F-08); county-only case omits ULA (county documentary transfer tax is not modeled and must be confirmed, F-08)."
+  },
+  "A16": {
+   "label": "Capital-gains tax in SELL case",
+   "value": "0% (pre-tax comparison)",
+   "note": "Basis and owner rates unknown (F-05, F-10); after-tax selling is strictly worse than shown, which is why EXCHANGE (deferral) is ranked above SELL."
+  },
+  "A17": {
+   "label": "Holding costs net of NOI",
+   "value": "0 (NOI is already net)",
+   "note": "NNN structure: landlord outgoings limited to structural items; any special assessment is unknown (F-09)."
+  },
+  "A18": {
+   "label": "Diversified reinvestment total-return sensitivity",
+   "value": "4.86% (official anchor) / 6% / 7% / 9%",
+   "note": "Only 4.86% is anchored to an official print (O01). 6-9% are assumption rows showing what portfolio return would be needed to overturn the hold case; not a market forecast."
+  }
+ },
+ "expiry_grid": [
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.2455,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 8.0748,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.5145,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 8.1249,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.0657,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 5.895,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.2332,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 5.8436,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 30.0382,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 3.8674,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.1112,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 3.7216,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 28.6081,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 2.4374,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 29.6145,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 2.225,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 27.2139,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 1.0432,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 28.1554,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 0.7658,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.6841,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 8.5134,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.9003,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 8.5107,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.5949,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 6.4242,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.7138,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 6.3243,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 30.6517,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 4.481,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.6801,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 4.2905,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 29.2811,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 3.1104,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 30.2457,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 2.8561,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 27.9449,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 1.7741,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 28.8472,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 1.4576,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.1044,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 8.9337,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.2701,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 8.8805,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.1021,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 6.9314,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.1745,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 6.785,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.2397,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 5.069,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.2254,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 4.8358,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 29.9261,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 3.7554,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 30.8506,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 3.461,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 28.6454,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 2.4747,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 29.5103,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 2.1207,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.5073,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 9.3366,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.6245,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 9.2349,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.5883,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 7.4175,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.6161,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 7.2265,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.8033,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 5.6325,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.748,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 5.3584,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 30.5443,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 4.3735,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.4303,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 4.0407,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 29.3169,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 3.1461,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 30.1457,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 2.7562,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.8934,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 9.7227,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.9642,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 9.5746,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.0542,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 7.8835,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.0393,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 7.6497,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.3434,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 6.1727,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.2488,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 5.8592,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.1368,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 4.966,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.986,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 4.5964,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 29.9604,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 3.7896,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 30.7548,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 3.3652,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.2635,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 10.0928,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.2897,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 9.9001,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.5007,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 8.33,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.4448,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 8.0553,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.8611,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 6.6904,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.7288,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 6.3393,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.7046,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 5.5339,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.5185,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 5.1289,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 30.5771,
+   "sell_2027_wealth_index": 26.1707,
+   "hold_minus_sell": 4.4064,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.3385,
+   "sell_2027_wealth_index": 27.3896,
+   "hold_minus_sell": 3.9489,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.1683,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 9.607,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.5148,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 9.7164,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.8555,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 7.2941,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.0942,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 7.2958,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.7041,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 5.1428,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.8427,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 5.0443,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 30.1868,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 3.6254,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.2546,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 3.4563,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 28.7074,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 2.1461,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 29.7064,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 1.9081,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 37.0722,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 10.5108,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 38.3819,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 10.5835,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.8224,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 8.261,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.0273,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 8.2289,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.7297,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 6.1684,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.8372,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 6.0388,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.2537,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 4.6924,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.2925,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 4.4941,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 29.8148,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 3.2534,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 30.7865,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 2.9881,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 37.9513,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 11.39,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 39.2253,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 11.427,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.7629,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 9.2015,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.935,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 9.1366,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.7273,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 7.166,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.8046,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 7.0062,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.2916,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 5.7302,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.302,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 5.5036,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 30.8919,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 4.3305,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 31.8371,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 4.0387,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 38.8065,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 12.2452,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 40.0458,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 12.2474,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.6778,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 10.1164,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.8179,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 10.0195,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.6977,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 8.1364,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.7456,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 7.9473,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.3011,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 6.7398,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.284,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 6.4856,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.9396,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 5.3783,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.859,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 5.0607,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 39.6384,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 13.077,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 40.8438,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 13.0455,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 37.5677,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 11.0063,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 38.6767,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 10.8783,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.6416,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 9.0803,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.661,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 8.8626,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.2832,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 7.7218,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.2392,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 7.4408,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.9587,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 6.3974,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.8531,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 6.0548,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 40.4475,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 13.8862,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 41.6201,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 13.8218,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 38.4333,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 11.872,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 39.5121,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 11.7137,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.5598,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 9.9985,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.5514,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 9.753,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.2384,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 8.677,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.1684,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 8.37,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.9501,
+   "sell_2027_wealth_index": 26.5613,
+   "hold_minus_sell": 7.3888,
+   "hold_wins": true
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.8201,
+   "sell_2027_wealth_index": 27.7984,
+   "hold_minus_sell": 7.0217,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 37.496,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 10.6743,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 38.896,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 10.8251,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.0911,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 8.2693,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.3791,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 8.3082,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.8542,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 6.0324,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.038,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 5.9671,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.2764,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 4.4546,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.3868,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 4.3159,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 29.7382,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 2.9165,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 30.7769,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 2.706,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 38.7397,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 11.918,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 40.1149,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 12.044,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.3775,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 9.5557,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.6426,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 9.5717,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 34.1802,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 7.3585,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.3431,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 7.2722,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.6304,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 5.8087,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.7211,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 5.6502,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 31.1195,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 4.2978,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 32.1398,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 4.0689,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 39.9614,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 13.1396,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 41.3122,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 13.2413,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 37.641,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 10.8193,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 38.8838,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 10.8129,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.4827,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 8.661,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.625,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 8.5541,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.9605,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 7.1387,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 35.0318,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 6.9609,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 32.4764,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 5.6546,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 33.4786,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 5.4077,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 41.1614,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 14.3396,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 42.4882,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 14.4173,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 38.8822,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 12.0604,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 40.1029,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 12.032,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.7622,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 9.9404,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.8841,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 9.8132,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.2669,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 8.4451,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.3192,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 8.2483,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 33.8091,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 6.9874,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 34.7935,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 6.7226,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 42.3401,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 15.5183,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 43.6434,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 15.5725,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 40.1013,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 13.2796,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 41.3003,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 13.2294,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 38.0189,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 11.1972,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 39.121,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 11.0501,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.5501,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 9.7284,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.5838,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 9.5129,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 35.1182,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 8.2965,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 36.0852,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 8.0143,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 5.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 43.4979,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 16.6761,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 5.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 44.7781,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 16.7072,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 41.2988,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 14.4771,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 42.4766,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 14.4057,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.8,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 39.2534,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 12.4316,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 6.8,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 40.3359,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 12.265,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.25,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 37.8106,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 10.9889,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.25,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 38.826,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 10.7551,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.75,
+   "ula_case": "with-ULA",
+   "hold_wealth_index": 36.4041,
+   "sell_2027_wealth_index": 26.8217,
+   "hold_minus_sell": 9.5824,
+   "hold_wins": true
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "exit_cap_pct": 7.75,
+   "ula_case": "without-ULA",
+   "hold_wealth_index": 37.3539,
+   "sell_2027_wealth_index": 28.0709,
+   "hold_minus_sell": 9.283,
+   "hold_wins": true
+  }
+ ],
+ "breakeven": [
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 8.172,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 8.041,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 8.531,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2031,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 8.35,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 8.942,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 8.699,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 9.414,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2033,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 9.096,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 9.964,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2034,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 9.55,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 10.61,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 10.075,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 8.612,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 8.47,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 9.182,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2031,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 8.979,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 9.852,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 9.57,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 10.652,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2033,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 10.264,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 11.621,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2034,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 11.091,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 12.821,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 12.094,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 8.916,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 8.766,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 9.641,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2031,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 9.422,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 10.512,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 10.199,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 11.577,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2033,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 11.133,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 12.908,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2034,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 12.279,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "ula_case": "with-ULA",
+   "breakeven_exit_cap_pct": 14.619,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "ula_case": "without-ULA",
+   "breakeven_exit_cap_pct": 13.715,
+   "note": "HOLD terminal wealth equals SELL-2027 diversified wealth at this exit cap"
+  }
+ ],
+ "breakeven_reinvestment": [
+  {
+   "scenario": "bear",
+   "expiry_year": 2030,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 6.262,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2032,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 6.55,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "bear",
+   "expiry_year": 2035,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 6.925,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2030,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 6.584,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2032,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 7.061,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "base",
+   "expiry_year": 2035,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 7.688,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2030,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 6.797,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2032,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 7.401,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  },
+  {
+   "scenario": "bull",
+   "expiry_year": 2035,
+   "ula_case": "with-ULA",
+   "exit_cap_pct": 6.5,
+   "breakeven_reinvest_rate_pct": 8.201,
+   "note": "Portfolio total return on sale proceeds at which SELL-2027 equals HOLD-to-expiry at a 6.50% exit cap"
+  }
+ ],
+ "sensitivity_2032": [
+  {
+   "noi_growth_pct": 0.5,
+   "hold_2032_cap_5.75": 35.1044,
+   "hold_2032_cap_6.25": 33.1021,
+   "hold_2032_cap_6.8": 31.2397,
+   "hold_2032_cap_7.25": 29.9261,
+   "hold_2032_cap_7.75": 28.6454,
+   "sell_2027_with_ula": 26.1707,
+   "breakeven_2032_with_ula": 8.942
+  },
+  {
+   "noi_growth_pct": 1.0,
+   "hold_2032_cap_5.75": 36.0315,
+   "hold_2032_cap_6.25": 33.9687,
+   "hold_2032_cap_6.8": 32.05,
+   "hold_2032_cap_7.25": 30.6967,
+   "hold_2032_cap_7.75": 29.3773,
+   "sell_2027_with_ula": 26.3009,
+   "breakeven_2032_with_ula": 9.235
+  },
+  {
+   "noi_growth_pct": 1.5,
+   "hold_2032_cap_5.75": 36.9804,
+   "hold_2032_cap_6.25": 34.8555,
+   "hold_2032_cap_6.8": 32.8791,
+   "hold_2032_cap_7.25": 31.4851,
+   "hold_2032_cap_7.75": 30.126,
+   "sell_2027_with_ula": 26.4311,
+   "breakeven_2032_with_ula": 9.538
+  },
+  {
+   "noi_growth_pct": 2.0,
+   "hold_2032_cap_5.75": 37.9513,
+   "hold_2032_cap_6.25": 35.7629,
+   "hold_2032_cap_6.8": 33.7273,
+   "hold_2032_cap_7.25": 32.2916,
+   "hold_2032_cap_7.75": 30.8919,
+   "sell_2027_with_ula": 26.5613,
+   "breakeven_2032_with_ula": 9.852
+  },
+  {
+   "noi_growth_pct": 2.5,
+   "hold_2032_cap_5.75": 38.9448,
+   "hold_2032_cap_6.25": 36.6913,
+   "hold_2032_cap_6.8": 34.5951,
+   "hold_2032_cap_7.25": 33.1166,
+   "hold_2032_cap_7.75": 31.6752,
+   "sell_2027_with_ula": 26.6915,
+   "breakeven_2032_with_ula": 10.177
+  },
+  {
+   "noi_growth_pct": 3.0,
+   "hold_2032_cap_5.75": 39.9614,
+   "hold_2032_cap_6.25": 37.641,
+   "hold_2032_cap_6.8": 35.4827,
+   "hold_2032_cap_7.25": 33.9605,
+   "hold_2032_cap_7.75": 32.4764,
+   "sell_2027_with_ula": 26.8217,
+   "breakeven_2032_with_ula": 10.512
+  },
+  {
+   "noi_growth_pct": 3.5,
+   "hold_2032_cap_5.75": 41.0013,
+   "hold_2032_cap_6.25": 38.6126,
+   "hold_2032_cap_6.8": 36.3907,
+   "hold_2032_cap_7.25": 34.8235,
+   "hold_2032_cap_7.75": 33.2956,
+   "sell_2027_with_ula": 26.952,
+   "breakeven_2032_with_ula": 10.86
+  }
+ ],
+ "sensitivity_reinvestment": [
+  {
+   "reinvest_rate_pct": 4.86,
+   "anchored_to_official_print": true,
+   "hold_2032_base_with_ula": 34.7949,
+   "sell_2027_with_ula": 26.5613
+  },
+  {
+   "reinvest_rate_pct": 6.0,
+   "anchored_to_official_print": false,
+   "hold_2032_base_with_ula": 38.2678,
+   "sell_2027_with_ula": 30.5702
+  },
+  {
+   "reinvest_rate_pct": 7.0,
+   "anchored_to_official_print": false,
+   "hold_2032_base_with_ula": 41.5728,
+   "sell_2027_with_ula": 34.5391
+  },
+  {
+   "reinvest_rate_pct": 9.0,
+   "anchored_to_official_print": false,
+   "hold_2032_base_with_ula": 48.9822,
+   "sell_2027_with_ula": 43.9406
+  }
+ ],
+ "monte_carlo": {
+  "seed": 20261110,
+  "trials": 10000,
+  "horizon_year": 2040,
+  "expected_wealth": {
+   "mean_hold_index": 33.9489,
+   "mean_sell_index": 25.6871,
+   "mean_hold_with_default_index": 30.5274,
+   "expected_wealth_cost_of_diversifying_index": 8.2617
+  },
+  "distribution": {
+   "median_hold_index": 34.931,
+   "median_sell_index": 25.7813,
+   "p5_hold_index": 19.2866,
+   "p5_sell_index": 22.1183,
+   "p95_hold_index": 45.7103,
+   "p95_sell_index": 28.9137
+  },
+  "risk_adjusted": {
+   "cvar5_hold_index": 15.9905,
+   "cvar5_sell_index": 21.1134,
+   "P(sell_wealth_gt_hold_wealth)": 0.1715,
+   "P(hold_default_lt_sell_wealth)": 0.3112
+  },
+  "tail_risk": {
+   "mean_single_asset_terminal_loss_index": 2.9775,
+   "mean_diversified_terminal_loss_index": 0.7014,
+   "p99_single_asset_terminal_loss_index": 15.113,
+   "p99_diversified_terminal_loss_index": 5.1897,
+   "P(single_asset_loss_gt_10_index_units)": 0.0889,
+   "P(diversified_loss_gt_10_index_units)": 0.0001,
+   "note": "Single-asset hold carries idiosyncratic permanent impairment (A10); the diversified path only carries modeled market-wide shocks (A14)."
+  }
+ },
+ "hazard_probability": {
+  "annual_quake_probability_from_UCERF3": 0.03008,
+  "probability_of_at_least_one_M6.7+_during_2026-2035_hold": 0.2403,
+  "derivation": "1-(1-0.60)^(1/30) per year, then 1-(1-p)^9 years; sourced only from O08/S13"
+ },
+ "counts": {
+  "grid_rows": 180,
+  "breakeven_rows": 36,
+  "sensitivity_rows": 7,
+  "breakeven_rate_rows": 9,
+  "reinvest_sensitivity_rows": 4
+ }
+}
