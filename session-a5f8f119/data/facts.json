@@ -1,0 +1,2549 @@
+{
+ "meta": {
+  "session": "session-a5f8f119",
+  "as_of": "2026-11-10",
+  "kinds": {
+   "verified": "Read by this session from the linked official page on the as-of date.",
+   "derived": "Arithmetic on verified values; the inputs are linked.",
+   "brief": "Stated in the owner brief; not confirmed in any public record.",
+   "blank": "Could not be confirmed. Left empty and listed on Flagged for Review."
+  }
+ },
+ "rows": [
+  {
+   "id": "P01",
+   "page": "property",
+   "group": "What the brief states",
+   "label": "Tenant brand",
+   "value": "Jack in the Box",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "E12"
+   ],
+   "kind": "brief",
+   "note": "Stated in the owner brief. The brand is a public company; its filings are the linked source. Nothing in a public record was matched to the property."
+  },
+  {
+   "id": "P02",
+   "page": "property",
+   "group": "What the brief states",
+   "label": "Lease form",
+   "value": "NNN (triple net)",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "E12"
+   ],
+   "kind": "brief",
+   "note": "Stated in the brief. The tenant says its restaurant leases generally require it to pay real estate taxes, insurance and other expenses on top of rent."
+  },
+  {
+   "id": "P03",
+   "page": "property",
+   "group": "What the brief states",
+   "label": "Lease expiry",
+   "value": "Between 2030 and 2035",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "E12"
+   ],
+   "kind": "brief",
+   "note": "A six-year window. The exact date is not known to this workbook and changes the answer; see the blank rows below."
+  },
+  {
+   "id": "P04",
+   "page": "property",
+   "group": "What the brief states",
+   "label": "Location",
+   "value": "Central Los Angeles",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "E03"
+   ],
+   "kind": "brief",
+   "note": "A description, not a jurisdiction. Whether the parcel is inside the City of Los Angeles decides which transfer tax applies."
+  },
+  {
+   "id": "P05",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Jack in the Box restaurants on land the company leases from other owners",
+   "value": "1,585 of 2,136",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "derived",
+   "note": "565 where the company owns the building on leased land plus 1,020 where it leases land and building.",
+   "num": 1585
+  },
+  {
+   "id": "P06",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Sites where the company owns the building on leased land (ground leases)",
+   "value": "565",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "55 company-operated and 510 franchise-operated. If the subject is one of these, the owner holds land only and the building position at expiry is set by the lease.",
+   "num": 565
+  },
+  {
+   "id": "P07",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Sites where the company leases both land and building",
+   "value": "1,020",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "87 company-operated and 933 franchise-operated.",
+   "num": 1020
+  },
+  {
+   "id": "P08",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Sites the company owns outright (land and building)",
+   "value": "164",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12",
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "The company says it pursues \"the sale of our owned Jack in the Box properties\" (Form 10-Q, liquidity). Those sales add competing supply of the same product.",
+   "num": 164
+  },
+  {
+   "id": "P09",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Sites owned or leased directly by franchisees",
+   "value": "387",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "If the subject is one of these, the tenant on the lease is a franchisee and not the public company.",
+   "num": 387
+  },
+  {
+   "id": "P10",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Rent structure the company describes",
+   "value": "Fixed rent with cost-of-living index adjustments",
+   "unit": "",
+   "period": "Fiscal 2025 Form 10-K",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "\"Our restaurant leases generally provide for fixed rental payments (with cost-of-living index adjustments) plus real estate taxes, insurance, and other expenses.\""
+  },
+  {
+   "id": "P11",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Leases that also carry percentage rent",
+   "value": "About 13%",
+   "unit": "%",
+   "period": "Fiscal 2025 Form 10-K",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "\"between 1% and 10% of the restaurant's gross sales once certain thresholds are met\".",
+   "num": 13
+  },
+  {
+   "id": "P12",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Company statement on renewals",
+   "value": "\"We have generally been able to renew our restaurant leases as they expire at then-current market rates.\"",
+   "unit": "",
+   "period": "Fiscal 2025 Form 10-K",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "A general statement about the system. It is not a commitment about any one site."
+  },
+  {
+   "id": "P13",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Prototype restaurant size",
+   "value": "About 1,372 square feet",
+   "unit": "sq ft",
+   "period": "Fiscal 2025 Form 10-K",
+   "geo": "New-build prototype",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "Describes new builds. The subject building size is blank below.",
+   "num": 1372
+  },
+  {
+   "id": "P14",
+   "page": "property",
+   "group": "What the tenant publishes about its own leases",
+   "label": "Restaurants in California",
+   "value": "941 of 2,136",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "California",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "96 company-operated and 845 franchise-operated. California is the largest state for the brand.",
+   "num": 941
+  },
+  {
+   "id": "P20",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Street address and parcel number",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Withheld by design and not known to this workbook."
+  },
+  {
+   "id": "P21",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Jurisdiction: inside the City of Los Angeles or another city",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L01"
+   ],
+   "kind": "blank",
+   "note": "Decides the transfer tax. Culver City and Santa Monica, for example, have their own schedules."
+  },
+  {
+   "id": "P22",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Annual base rent",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Every dollar figure in the model scales with this number."
+  },
+  {
+   "id": "P23",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Exact lease expiry date",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "The brief gives 2030 to 2035."
+  },
+  {
+   "id": "P24",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Rent escalation clause (fixed steps, index, cap)",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "With consumer prices up 3.7% in a year, a flat or capped lease is losing real value."
+  },
+  {
+   "id": "P25",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Renewal options: number, length, notice date and option rent",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Options belong to the tenant. An unexercised option notice date is the first hard signal."
+  },
+  {
+   "id": "P26",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Lease type: ground lease or land-and-building lease",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Decides who owns the building at expiry."
+  },
+  {
+   "id": "P27",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Tenant entity on the lease and any guarantor",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L07"
+   ],
+   "kind": "blank",
+   "note": "Public company, a subsidiary, or a franchisee. Ninety-three percent of the system is franchised."
+  },
+  {
+   "id": "P28",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Percentage rent, reported store sales and rent-to-sales ratio",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "The best single predictor of renewal, and not public."
+  },
+  {
+   "id": "P29",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Purchase options, rights of first refusal or first offer",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Can cap the sale price or delay a sale."
+  },
+  {
+   "id": "P30",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Lot size, building size, year built, drive-through",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L01"
+   ],
+   "kind": "blank",
+   "note": "Sets land value and re-letting options."
+  },
+  {
+   "id": "P31",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Zoning, overlays and transit-area status",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L01"
+   ],
+   "kind": "blank",
+   "note": "Sets what could replace the restaurant."
+  },
+  {
+   "id": "P32",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Current assessed value and property tax bill",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "A sale resets the assessed value for the buyer."
+  },
+  {
+   "id": "P33",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Owner tax basis, depreciation taken and holding entity",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Decides the tax on a sale. Never to be published."
+  },
+  {
+   "id": "P34",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Any loan on the property and its terms",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "A prepayment penalty changes the sale arithmetic."
+  },
+  {
+   "id": "P35",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Environmental record for the parcel",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L06"
+   ],
+   "kind": "blank",
+   "note": "Fuel tanks and past uses nearby affect buyers and lenders."
+  },
+  {
+   "id": "P36",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Flood zone",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L03"
+   ],
+   "kind": "blank",
+   "note": "Parcel-level; not obtained."
+  },
+  {
+   "id": "P37",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Fault, liquefaction and landslide zone",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L04"
+   ],
+   "kind": "blank",
+   "note": "Parcel-level; not obtained."
+  },
+  {
+   "id": "P38",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Fire hazard severity zone",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L05"
+   ],
+   "kind": "blank",
+   "note": "Parcel-level; not obtained."
+  },
+  {
+   "id": "P39",
+   "page": "property",
+   "group": "Facts only the owner holds (blank until supplied)",
+   "label": "Insurance carrier, premium and who pays under the lease",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L02"
+   ],
+   "kind": "blank",
+   "note": "Under a triple-net lease the tenant usually pays, which makes it a renewal cost for the tenant."
+  },
+  {
+   "id": "T01",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Jack in the Box restaurants",
+   "value": "2,115",
+   "unit": "",
+   "period": "July 5, 2026",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "149 company-operated and 1,966 franchised.",
+   "num": 2115
+  },
+  {
+   "id": "T02",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Restaurants a year earlier",
+   "value": "2,168",
+   "unit": "",
+   "period": "July 6, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E10"
+   ],
+   "kind": "verified",
+   "note": "142 company-operated and 2,026 franchised.",
+   "num": 2168
+  },
+  {
+   "id": "T03",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Restaurants at fiscal 2025 year-end",
+   "value": "2,136",
+   "unit": "",
+   "period": "September 28, 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 2136
+  },
+  {
+   "id": "T04",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Restaurants at fiscal 2024 year-end",
+   "value": "2,191",
+   "unit": "",
+   "period": "September 29, 2024",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 2191
+  },
+  {
+   "id": "T05",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Closures in fiscal 2025",
+   "value": "86",
+   "unit": "",
+   "period": "Fiscal 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "11 company-operated and 75 franchised. Fiscal 2024: 25.",
+   "num": 86
+  },
+  {
+   "id": "T06",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Closures in the first 40 weeks of fiscal 2026",
+   "value": "40",
+   "unit": "",
+   "period": "40 weeks ended July 5, 2026",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "2 company-operated and 38 franchised; 19 openings.",
+   "num": 40
+  },
+  {
+   "id": "T07",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Guidance: restaurants at fiscal 2026 year-end",
+   "value": "About 2,100",
+   "unit": "",
+   "period": "Fiscal year ending September 27, 2026",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E10"
+   ],
+   "kind": "verified",
+   "note": "About 25 openings and about 50 to 60 closures, \"most of which will be franchise restaurants\".",
+   "num": 2100
+  },
+  {
+   "id": "T08",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Share of restaurants run by franchisees",
+   "value": "93%",
+   "unit": "%",
+   "period": "July 5, 2026",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "The operator in most restaurants is a franchisee, whose finances are not public.",
+   "num": 93
+  },
+  {
+   "id": "T09",
+   "page": "tenant",
+   "group": "Size and direction of the chain",
+   "label": "Closure programme",
+   "value": "\"Restaurant closure program: Through block closure program, improving system health and encouraging franchisees to reinvest\"",
+   "unit": "",
+   "period": "Fiscal 2025 Form 10-K",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "Part of the \"Jack on Track\" plan. No list of sites is published."
+  },
+  {
+   "id": "T10",
+   "page": "tenant",
+   "group": "Sales",
+   "label": "System same-store sales, latest quarter",
+   "value": "-1.1%",
+   "unit": "%",
+   "period": "12 weeks ended July 5, 2026",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E10"
+   ],
+   "kind": "verified",
+   "note": "Against -7.1% in the same quarter a year earlier. \"a decline in transactions, partially offset by an increase in price\".",
+   "num": -1.1
+  },
+  {
+   "id": "T11",
+   "page": "tenant",
+   "group": "Sales",
+   "label": "System same-store sales, year to date",
+   "value": "-4.2%",
+   "unit": "%",
+   "period": "40 weeks ended July 5, 2026",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "Printed in the Form 10-Q table; the earnings release prints the quarter only.",
+   "num": -4.2
+  },
+  {
+   "id": "T12",
+   "page": "tenant",
+   "group": "Sales",
+   "label": "Average sales per franchise restaurant",
+   "value": "$1,874 thousand",
+   "unit": "USD thousand",
+   "period": "Fiscal 2025",
+   "geo": "Jack in the Box franchise restaurants",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "Down from $1,949 thousand in fiscal 2024.",
+   "num": 1874
+  },
+  {
+   "id": "T13",
+   "page": "tenant",
+   "group": "Sales",
+   "label": "Systemwide sales",
+   "value": "$4,208.9 million",
+   "unit": "USD million",
+   "period": "Fiscal 2025",
+   "geo": "Jack in the Box system",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "Fiscal 2024: $4,396.3 million.",
+   "num": 4208.937
+  },
+  {
+   "id": "T14",
+   "page": "tenant",
+   "group": "Sales",
+   "label": "Wage inflation at company restaurants",
+   "value": "About 7.6%",
+   "unit": "%",
+   "period": "Fiscal 2025",
+   "geo": "Company-operated restaurants",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "\"primarily due to the wage increases required in California effective April 1, 2024 under AB 1228\".",
+   "num": 7.6
+  },
+  {
+   "id": "T15",
+   "page": "tenant",
+   "group": "Sales",
+   "label": "Payroll and benefits as a share of company restaurant sales",
+   "value": "33.8%",
+   "unit": "%",
+   "period": "Fiscal 2025",
+   "geo": "Company-operated restaurants",
+   "src": [
+    "E12"
+   ],
+   "kind": "verified",
+   "note": "31.5% in fiscal 2024.",
+   "num": 33.8
+  },
+  {
+   "id": "T20",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Total debt",
+   "value": "$1,492.0 million",
+   "unit": "USD million",
+   "period": "July 5, 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "$1,715.6 million at September 28, 2025.",
+   "num": 1491.984
+  },
+  {
+   "id": "T21",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Cash",
+   "value": "$46.3 million",
+   "unit": "USD million",
+   "period": "July 5, 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "Plus $25.5 million of restricted cash.",
+   "num": 46.318
+  },
+  {
+   "id": "T22",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Total stockholders' deficit",
+   "value": "($901.3 million)",
+   "unit": "USD million",
+   "period": "July 5, 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "Liabilities exceed assets.",
+   "num": -901.286
+  },
+  {
+   "id": "T23",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Operating cash flow, year to date",
+   "value": "$56.6 million",
+   "unit": "USD million",
+   "period": "40 weeks ended July 5, 2026",
+   "geo": "Continuing operations",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "$118.1 million in the same period a year earlier.",
+   "num": 56.553
+  },
+  {
+   "id": "T24",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Cash flow lost to late franchisee payments",
+   "value": "About $11.0 million",
+   "unit": "USD million",
+   "period": "40 weeks ended July 5, 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "\"delayed payments from franchisees, including amounts subject to payment deferral arrangements, a portion of which we have reserved against\".",
+   "num": 11.0
+  },
+  {
+   "id": "T25",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "New notes issued in June 2026",
+   "value": "$500 million at 7.624%",
+   "unit": "%",
+   "period": "June 2026",
+   "geo": "Securitization issuer",
+   "src": [
+    "E08"
+   ],
+   "kind": "verified",
+   "note": "They repaid notes carrying 4.476% and 3.445%.",
+   "num": 7.624
+  },
+  {
+   "id": "T26",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Leverage test, scheduled amortization",
+   "value": "Leverage ratio greater than 5.0x",
+   "unit": "",
+   "period": "July 5, 2026",
+   "geo": "Securitization issuer",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "\"accordingly, is making the scheduled amortization payments on its 2019, 2022 and 2026 Notes\"."
+  },
+  {
+   "id": "T27",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Leverage test, cash sweep",
+   "value": "Senior ABS Leverage Ratio greater than 5.25x",
+   "unit": "",
+   "period": "July 5, 2026",
+   "geo": "Securitization issuer",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "\"cash sweeping prepayments of $23.3 million are included in 'Current maturities of long-term debt'\"."
+  },
+  {
+   "id": "T28",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Next large repayment dates",
+   "value": "August 2029: $426.4 million; May 2031: $500.0 million; February 2032: $503.3 million",
+   "unit": "",
+   "period": "July 5, 2026",
+   "geo": "Securitization issuer",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "Anticipated repayment dates. All three fall inside or just before the 2030 to 2035 lease-expiry window."
+  },
+  {
+   "id": "T29",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Dividend and share repurchases",
+   "value": "Discontinued",
+   "unit": "",
+   "period": "August 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E10"
+   ],
+   "kind": "verified",
+   "note": "\"the Company has discontinued its dividend and share repurchase program.\""
+  },
+  {
+   "id": "T30",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Franchise rental revenue against franchise occupancy expense",
+   "value": "$242.5 million against $166.0 million",
+   "unit": "",
+   "period": "40 weeks ended July 5, 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E11"
+   ],
+   "kind": "verified",
+   "note": "The company collects more rent from franchisees than it pays to landlords. A year earlier: $260.3 million against $169.9 million."
+  },
+  {
+   "id": "T31",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Leadership",
+   "value": "Interim chief executive; activist cooperation agreement extended",
+   "unit": "",
+   "period": "September 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E09"
+   ],
+   "kind": "verified",
+   "note": "Names are not recorded here."
+  },
+  {
+   "id": "T32",
+   "page": "tenant",
+   "group": "Balance sheet and debt",
+   "label": "Fiscal 2026 fourth-quarter results",
+   "value": "",
+   "unit": "",
+   "period": "Fiscal year ended September 27, 2026",
+   "geo": "Jack in the Box Inc.",
+   "src": [
+    "E07"
+   ],
+   "kind": "blank",
+   "note": "Not filed by November 10, 2026. The Form 10-Q for July 5, 2026 is the latest periodic report."
+  },
+  {
+   "id": "A01",
+   "page": "area",
+   "group": "Population",
+   "label": "Population, July 1, 2025",
+   "value": "3,869,089",
+   "unit": "",
+   "period": "July 1, 2025 (Vintage 2025)",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "Down 0.8% from the April 1, 2020 base.",
+   "num": 3869089
+  },
+  {
+   "id": "A02",
+   "page": "area",
+   "group": "Population",
+   "label": "Population, July 1, 2025",
+   "value": "9,694,934",
+   "unit": "",
+   "period": "July 1, 2025 (Vintage 2025)",
+   "geo": "Los Angeles County",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "Down 3.2% from the April 1, 2020 base.",
+   "num": 9694934
+  },
+  {
+   "id": "A03",
+   "page": "area",
+   "group": "Population",
+   "label": "State projection, July 1, 2026",
+   "value": "9,811,358",
+   "unit": "",
+   "period": "2026",
+   "geo": "Los Angeles County",
+   "src": [
+    "E06"
+   ],
+   "kind": "verified",
+   "note": "A different series from the Census estimate; the two are not interchangeable (they differ by 158,501 for July 1, 2025).",
+   "num": 9811358
+  },
+  {
+   "id": "A04",
+   "page": "area",
+   "group": "Population",
+   "label": "State projection, 2030",
+   "value": "9,727,305",
+   "unit": "",
+   "period": "2030",
+   "geo": "Los Angeles County",
+   "src": [
+    "E06"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 9727305
+  },
+  {
+   "id": "A05",
+   "page": "area",
+   "group": "Population",
+   "label": "State projection, 2035",
+   "value": "9,708,647",
+   "unit": "",
+   "period": "2035",
+   "geo": "Los Angeles County",
+   "src": [
+    "E06"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 9708647
+  },
+  {
+   "id": "A06",
+   "page": "area",
+   "group": "Population",
+   "label": "State projection, 2040",
+   "value": "9,637,524",
+   "unit": "",
+   "period": "2040",
+   "geo": "Los Angeles County",
+   "src": [
+    "E06"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 9637524
+  },
+  {
+   "id": "A07",
+   "page": "area",
+   "group": "Population",
+   "label": "State projection, 2050",
+   "value": "9,390,823",
+   "unit": "",
+   "period": "2050",
+   "geo": "Los Angeles County",
+   "src": [
+    "E06"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 9390823
+  },
+  {
+   "id": "A08",
+   "page": "area",
+   "group": "Population",
+   "label": "Regional plan forecast, 2030",
+   "value": "10,214,000",
+   "unit": "",
+   "period": "2030",
+   "geo": "Los Angeles County",
+   "src": [
+    "E45"
+   ],
+   "kind": "verified",
+   "note": "Points the other way. A 2024 plan with a 2019 base year; the state series is two years newer.",
+   "num": 10214000
+  },
+  {
+   "id": "A09",
+   "page": "area",
+   "group": "Population",
+   "label": "Regional plan forecast, 2050",
+   "value": "10,793,000",
+   "unit": "",
+   "period": "2050",
+   "geo": "Los Angeles County",
+   "src": [
+    "E45"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 10793000
+  },
+  {
+   "id": "A10",
+   "page": "area",
+   "group": "Population",
+   "label": "Change in state projection, 2026 to 2035",
+   "value": "-102,711 (-1.0%)",
+   "unit": "",
+   "period": "2026 to 2035",
+   "geo": "Los Angeles County",
+   "src": [
+    "E06"
+   ],
+   "kind": "derived",
+   "note": "9,708,647 minus 9,811,358.",
+   "num": -102711
+  },
+  {
+   "id": "A11",
+   "page": "area",
+   "group": "Households, age and origin",
+   "label": "Households",
+   "value": "1,439,097",
+   "unit": "",
+   "period": "2020-2024",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "2.61 persons per household.",
+   "num": 1439097
+  },
+  {
+   "id": "A12",
+   "page": "area",
+   "group": "Households, age and origin",
+   "label": "Households, state projection 2026",
+   "value": "3,551,868",
+   "unit": "",
+   "period": "January 1, 2026",
+   "geo": "Los Angeles County",
+   "src": [
+    "E41"
+   ],
+   "kind": "verified",
+   "note": "Vintage 2025 release.",
+   "num": 3551868
+  },
+  {
+   "id": "A13",
+   "page": "area",
+   "group": "Households, age and origin",
+   "label": "Households, state projection 2035",
+   "value": "3,711,086",
+   "unit": "",
+   "period": "January 1, 2035",
+   "geo": "Los Angeles County",
+   "src": [
+    "E41"
+   ],
+   "kind": "verified",
+   "note": "Households rise while population falls: smaller households.",
+   "num": 3711086
+  },
+  {
+   "id": "A14",
+   "page": "area",
+   "group": "Households, age and origin",
+   "label": "Persons under 18",
+   "value": "19.2%",
+   "unit": "%",
+   "period": "July 1, 2025",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 19.2
+  },
+  {
+   "id": "A15",
+   "page": "area",
+   "group": "Households, age and origin",
+   "label": "Persons 65 and over",
+   "value": "14.2%",
+   "unit": "%",
+   "period": "July 1, 2025",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "County: 17.1%.",
+   "num": 14.2
+  },
+  {
+   "id": "A16",
+   "page": "area",
+   "group": "Households, age and origin",
+   "label": "Foreign-born persons",
+   "value": "35.7%",
+   "unit": "%",
+   "period": "2020-2024",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 35.7
+  },
+  {
+   "id": "A20",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Median household income",
+   "value": "$81,939",
+   "unit": "USD",
+   "period": "2020-2024 (2024 dollars)",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "County: $90,112.",
+   "num": 81939
+  },
+  {
+   "id": "A21",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Per capita income",
+   "value": "$47,685",
+   "unit": "USD",
+   "period": "2020-2024 (2024 dollars)",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 47685
+  },
+  {
+   "id": "A22",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Persons in poverty",
+   "value": "16.5%",
+   "unit": "%",
+   "period": "QuickFacts current",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "County: 13.3%.",
+   "num": 16.5
+  },
+  {
+   "id": "A23",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Median gross rent",
+   "value": "$1,933",
+   "unit": "USD per month",
+   "period": "2020-2024",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 1933
+  },
+  {
+   "id": "A24",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Median value of owner-occupied homes",
+   "value": "$921,200",
+   "unit": "USD",
+   "period": "2020-2024",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 921200
+  },
+  {
+   "id": "A25",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Owner-occupied housing unit rate",
+   "value": "36.0%",
+   "unit": "%",
+   "period": "2020-2024",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "Nearly two in three households rent.",
+   "num": 36.0
+  },
+  {
+   "id": "A26",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Building permits",
+   "value": "22,250",
+   "unit": "",
+   "period": "2025",
+   "geo": "Los Angeles County",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 22250
+  },
+  {
+   "id": "A27",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Accommodation and food services sales",
+   "value": "$17,366,966 thousand",
+   "unit": "USD thousand",
+   "period": "2022",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E03"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 17366966
+  },
+  {
+   "id": "A28",
+   "page": "area",
+   "group": "Income and housing",
+   "label": "Trade-area figures (the blocks around the site)",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject trade area",
+   "src": [
+    "E03"
+   ],
+   "kind": "blank",
+   "note": "City and county figures are the smallest geography read. The Census data service returned \"Missing Key\" to this session, so no tract or neighbourhood figure is shown."
+  },
+  {
+   "id": "A30",
+   "page": "area",
+   "group": "Schools",
+   "label": "Los Angeles Unified enrollment",
+   "value": "497,105",
+   "unit": "",
+   "period": "School year 2025-26",
+   "geo": "Los Angeles Unified",
+   "src": [
+    "E31"
+   ],
+   "kind": "verified",
+   "note": "English learners: 81,328 (16.4%).",
+   "num": 497105
+  },
+  {
+   "id": "A31",
+   "page": "area",
+   "group": "Schools",
+   "label": "Graduation rate (four- and five-year combined)",
+   "value": "86.5%",
+   "unit": "%",
+   "period": "2025 Dashboard",
+   "geo": "Los Angeles Unified",
+   "src": [
+    "E32"
+   ],
+   "kind": "verified",
+   "note": "Four-year 84.6%, fifth-year 1.8%. 86.7% on the 2024 Dashboard.",
+   "num": 86.5
+  },
+  {
+   "id": "A32",
+   "page": "area",
+   "group": "Schools",
+   "label": "Chronic absenteeism, kindergarten to grade 8",
+   "value": "21.9%",
+   "unit": "%",
+   "period": "2025 Dashboard",
+   "geo": "Los Angeles Unified",
+   "src": [
+    "E32"
+   ],
+   "kind": "verified",
+   "note": "18.2% in 2019; 39.8% in 2022; 23.3% in 2024.",
+   "num": 21.9
+  },
+  {
+   "id": "A33",
+   "page": "area",
+   "group": "Schools",
+   "label": "Projected change in county public school enrollment over ten years",
+   "value": "-240,800 students",
+   "unit": "",
+   "period": "2025-26 to 2035-36",
+   "geo": "Los Angeles County",
+   "src": [
+    "E33"
+   ],
+   "kind": "verified",
+   "note": "\"The biggest decline in enrollment is expected in Los Angeles County\".",
+   "num": -240800
+  },
+  {
+   "id": "A34",
+   "page": "area",
+   "group": "Schools",
+   "label": "State public school enrollment",
+   "value": "5,731,300",
+   "unit": "",
+   "period": "School year 2025-26",
+   "geo": "California",
+   "src": [
+    "E33"
+   ],
+   "kind": "verified",
+   "note": "Ninth consecutive yearly decrease.",
+   "num": 5731300
+  },
+  {
+   "id": "A35",
+   "page": "area",
+   "group": "Schools",
+   "label": "English and mathematics test results",
+   "value": "",
+   "unit": "",
+   "period": "2025 Dashboard",
+   "geo": "Los Angeles Unified",
+   "src": [
+    "E32"
+   ],
+   "kind": "blank",
+   "note": "The academic-performance page returned no figures to this session on the read date. Earlier workbooks print -17.8 and -48.9 points from standard; not re-read, so not repeated here."
+  },
+  {
+   "id": "A36",
+   "page": "area",
+   "group": "Schools",
+   "label": "Schools serving the subject address",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "E31"
+   ],
+   "kind": "blank",
+   "note": "Needs the address, which this workbook does not hold."
+  },
+  {
+   "id": "J01",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Unemployment rate, not seasonally adjusted",
+   "value": "4.5%",
+   "unit": "%",
+   "period": "September 2026",
+   "geo": "Los Angeles County",
+   "src": [
+    "E04"
+   ],
+   "kind": "verified",
+   "note": "5.9% a year earlier. Seasonally adjusted: 4.8%.",
+   "num": 4.5
+  },
+  {
+   "id": "J02",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Nonfarm jobs",
+   "value": "4,593,800",
+   "unit": "",
+   "period": "September 2026 (preliminary)",
+   "geo": "Los Angeles County",
+   "src": [
+    "E04"
+   ],
+   "kind": "verified",
+   "note": "Up 20,300 (0.4%) in a year. Table value; the release narrative misprints it.",
+   "num": 4593800
+  },
+  {
+   "id": "J03",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Labor force",
+   "value": "5,031,000",
+   "unit": "",
+   "period": "September 2026 (preliminary)",
+   "geo": "Los Angeles County",
+   "src": [
+    "E04"
+   ],
+   "kind": "verified",
+   "note": "Down 1.8% in a year. Part of the fall in unemployment is people leaving the labor force.",
+   "num": 5031000
+  },
+  {
+   "id": "J04",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Nonfarm jobs, metro area",
+   "value": "6,282,100",
+   "unit": "",
+   "period": "September 2026",
+   "geo": "Los Angeles metro area (Los Angeles and Orange counties)",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "Up 30,200 (0.5%). Not seasonally adjusted. Includes Orange County.",
+   "num": 6282100
+  },
+  {
+   "id": "J05",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Education and health services jobs",
+   "value": "+49,100 (+3.8%)",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles metro area (Los Angeles and Orange counties)",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "The source of nearly all net job growth.",
+   "num": 3.8
+  },
+  {
+   "id": "J06",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Information jobs",
+   "value": "-11,400 (-5.7%)",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles metro area (Los Angeles and Orange counties)",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "County motion picture and sound recording: -7.3% (EDD).",
+   "num": -5.7
+  },
+  {
+   "id": "J07",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Leisure and hospitality jobs",
+   "value": "+11,500 (+1.5%)",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles metro area (Los Angeles and Orange counties)",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 1.5
+  },
+  {
+   "id": "J08",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Manufacturing jobs",
+   "value": "-5,400 (-1.2%)",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles metro area (Los Angeles and Orange counties)",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": -1.2
+  },
+  {
+   "id": "J09",
+   "page": "economy",
+   "group": "Jobs",
+   "label": "Government jobs",
+   "value": "-8,400 (-1.1%)",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles metro area (Los Angeles and Orange counties)",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": -1.1
+  },
+  {
+   "id": "J10",
+   "page": "economy",
+   "group": "Wages and prices",
+   "label": "Consumer prices, all items",
+   "value": "+3.7%",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles area",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "Food +2.8%; energy +20.3%.",
+   "num": 3.7
+  },
+  {
+   "id": "J11",
+   "page": "economy",
+   "group": "Wages and prices",
+   "label": "Average weekly wage",
+   "value": "$1,704",
+   "unit": "USD",
+   "period": "First quarter 2026",
+   "geo": "Los Angeles County",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 1704
+  },
+  {
+   "id": "J12",
+   "page": "economy",
+   "group": "Wages and prices",
+   "label": "Employment cost index, wages and salaries",
+   "value": "+3.9%",
+   "unit": "%",
+   "period": "Year to September 2026",
+   "geo": "Los Angeles-Long Beach area",
+   "src": [
+    "E01"
+   ],
+   "kind": "verified",
+   "note": "United States: +3.1%.",
+   "num": 3.9
+  },
+  {
+   "id": "J13",
+   "page": "economy",
+   "group": "Wages and prices",
+   "label": "State minimum wage",
+   "value": "$16.90 per hour",
+   "unit": "USD per hour",
+   "period": "From January 1, 2026",
+   "geo": "California",
+   "src": [
+    "E14"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 16.9
+  },
+  {
+   "id": "J14",
+   "page": "economy",
+   "group": "Wages and prices",
+   "label": "Fast-food minimum wage",
+   "value": "$20.00 per hour",
+   "unit": "USD per hour",
+   "period": "Since April 1, 2024",
+   "geo": "California, chains of 60 or more",
+   "src": [
+    "E17"
+   ],
+   "kind": "verified",
+   "note": "Applies to franchisees as well. A council can raise it; no increase is shown on the page.",
+   "num": 20.0
+  },
+  {
+   "id": "J15",
+   "page": "economy",
+   "group": "Wages and prices",
+   "label": "City minimum wage",
+   "value": "$18.42 per hour",
+   "unit": "USD per hour",
+   "period": "From July 1, 2026",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E18"
+   ],
+   "kind": "verified",
+   "note": "Reset each July 1 from the area consumer price index.",
+   "num": 18.42
+  },
+  {
+   "id": "J20",
+   "page": "economy",
+   "group": "Output, trade and visitors",
+   "label": "Personal income",
+   "value": "$818.5 billion",
+   "unit": "USD billion",
+   "period": "2024",
+   "geo": "Los Angeles County",
+   "src": [
+    "E05"
+   ],
+   "kind": "verified",
+   "note": "The largest of any United States county.",
+   "num": 818.5
+  },
+  {
+   "id": "J21",
+   "page": "economy",
+   "group": "Output, trade and visitors",
+   "label": "County gross domestic product",
+   "value": "",
+   "unit": "",
+   "period": "2024",
+   "geo": "Los Angeles County",
+   "src": [
+    "E05"
+   ],
+   "kind": "blank",
+   "note": "Not printed in the release text; the table was not read."
+  },
+  {
+   "id": "J22",
+   "page": "economy",
+   "group": "Output, trade and visitors",
+   "label": "Port container volume",
+   "value": "1,042,652 TEUs",
+   "unit": "",
+   "period": "September 2026",
+   "geo": "Port of Los Angeles",
+   "src": [
+    "E37"
+   ],
+   "kind": "verified",
+   "note": "The busiest month in the port's history. Loaded imports 545,696, up 19%.",
+   "num": 1042652
+  },
+  {
+   "id": "J23",
+   "page": "economy",
+   "group": "Output, trade and visitors",
+   "label": "Visitors",
+   "value": "49.5 million",
+   "unit": "million",
+   "period": "2025",
+   "geo": "Los Angeles",
+   "src": [
+    "E38"
+   ],
+   "kind": "verified",
+   "note": "$42.6 billion of business sales. The release itself mentions \"headwinds impacting tourism nationally\".",
+   "num": 49.5
+  },
+  {
+   "id": "J30",
+   "page": "economy",
+   "group": "Public finances and infrastructure",
+   "label": "City reserve fund",
+   "value": "$515.1 million (6.00% of General Fund revenues)",
+   "unit": "USD million",
+   "period": "Fiscal 2026-27 revised budget",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E40"
+   ],
+   "kind": "verified",
+   "note": "The release still cites \"real fiscal uncertainty, rising costs, and major threats to future City revenues\".",
+   "num": 515.1
+  },
+  {
+   "id": "J31",
+   "page": "economy",
+   "group": "Public finances and infrastructure",
+   "label": "Subway extension, first section",
+   "value": "Opened May 8, 2026",
+   "unit": "",
+   "period": "2026",
+   "geo": "Wilshire corridor",
+   "src": [
+    "E39"
+   ],
+   "kind": "verified",
+   "note": "Stations at Wilshire/La Brea, Wilshire/Fairfax and Wilshire/La Cienega. Two further sections under construction."
+  },
+  {
+   "id": "J32",
+   "page": "economy",
+   "group": "Public finances and infrastructure",
+   "label": "Neighbourhood crime rate",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject trade area",
+   "src": [
+    "E48"
+   ],
+   "kind": "blank",
+   "note": "The legacy city dataset is frozen and its replacement was not read. No rate is shown."
+  },
+  {
+   "id": "J40",
+   "page": "economy",
+   "group": "November 3, 2026 election (unofficial returns)",
+   "label": "Proposition 43: two-thirds vote for voter-proposed local special taxes",
+   "value": "Failing: 43.0% yes, 57.0% no",
+   "unit": "% yes",
+   "period": "As of November 9, 2026, 4:29 p.m.",
+   "geo": "California",
+   "src": [
+    "E34"
+   ],
+   "kind": "verified",
+   "note": "If it fails, local special taxes proposed by voters, the route used for the city transfer-tax surcharge, can still pass by simple majority.",
+   "num": 43.0
+  },
+  {
+   "id": "J41",
+   "page": "economy",
+   "group": "November 3, 2026 election (unofficial returns)",
+   "label": "Proposition 3: high-income tax rates made permanent",
+   "value": "Passing: 60.4% yes, 39.6% no",
+   "unit": "% yes",
+   "period": "As of November 9, 2026, 4:29 p.m.",
+   "geo": "California",
+   "src": [
+    "E34"
+   ],
+   "kind": "verified",
+   "note": "Rates on income above about $371,000 would no longer expire in 2031.",
+   "num": 60.4
+  },
+  {
+   "id": "J42",
+   "page": "economy",
+   "group": "November 3, 2026 election (unofficial returns)",
+   "label": "Proposition 1: housing affordability bonds",
+   "value": "Passing: 60.9% yes",
+   "unit": "% yes",
+   "period": "As of November 9, 2026, 4:29 p.m.",
+   "geo": "California",
+   "src": [
+    "E34"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 60.9
+  },
+  {
+   "id": "J43",
+   "page": "economy",
+   "group": "November 3, 2026 election (unofficial returns)",
+   "label": "Proposition 45: modified environmental review for certain projects",
+   "value": "Failing: 44.0% yes",
+   "unit": "% yes",
+   "period": "As of November 9, 2026, 4:29 p.m.",
+   "geo": "California",
+   "src": [
+    "E34"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 44.0
+  },
+  {
+   "id": "M01",
+   "page": "market",
+   "group": "Interest rates",
+   "label": "10-year Treasury yield",
+   "value": "4.88%",
+   "unit": "%",
+   "period": "November 9, 2026",
+   "geo": "United States",
+   "src": [
+    "E02"
+   ],
+   "kind": "verified",
+   "note": "4.86% on November 6; 4.95% on November 3.",
+   "num": 4.88
+  },
+  {
+   "id": "M02",
+   "page": "market",
+   "group": "Interest rates",
+   "label": "30-year Treasury yield",
+   "value": "5.26%",
+   "unit": "%",
+   "period": "November 9, 2026",
+   "geo": "United States",
+   "src": [
+    "E02"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 5.26
+  },
+  {
+   "id": "M03",
+   "page": "market",
+   "group": "Interest rates",
+   "label": "2-year Treasury yield",
+   "value": "4.56%",
+   "unit": "%",
+   "period": "November 9, 2026",
+   "geo": "United States",
+   "src": [
+    "E02"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 4.56
+  },
+  {
+   "id": "M04",
+   "page": "market",
+   "group": "Interest rates",
+   "label": "1-year Treasury yield",
+   "value": "4.38%",
+   "unit": "%",
+   "period": "November 9, 2026",
+   "geo": "United States",
+   "src": [
+    "E02"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 4.38
+  },
+  {
+   "id": "M05",
+   "page": "market",
+   "group": "Interest rates",
+   "label": "Federal funds target range",
+   "value": "3.75% to 4.00%",
+   "unit": "%",
+   "period": "October 28, 2026",
+   "geo": "United States",
+   "src": [
+    "E15"
+   ],
+   "kind": "verified",
+   "note": "Held by 10 votes to 2. Both dissenters wanted an increase. \"Inflation remains elevated.\"",
+   "num": 4.0
+  },
+  {
+   "id": "M10",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "NNN REIT: cap rate on acquisitions",
+   "value": "7.3%",
+   "unit": "%",
+   "period": "Third quarter 2026",
+   "geo": "United States, retail net lease",
+   "src": [
+    "E28"
+   ],
+   "kind": "verified",
+   "note": "$221.7 million; weighted average lease term 19.6 years.",
+   "num": 7.3
+  },
+  {
+   "id": "M11",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "NNN REIT: cap rate on occupied properties it sold",
+   "value": "7.8%",
+   "unit": "%",
+   "period": "Third quarter 2026",
+   "geo": "United States, retail net lease",
+   "src": [
+    "E28",
+    "E27",
+    "E47"
+   ],
+   "kind": "verified",
+   "note": "21 properties, $37.3 million. Second quarter 2026: 5.6% on 7 properties. Full year 2025: 6.4%. Small samples swing widely.",
+   "num": 7.8
+  },
+  {
+   "id": "M12",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "NNN REIT: cap rate on occupied properties sold, nine months",
+   "value": "7.3%",
+   "unit": "%",
+   "period": "Nine months to September 30, 2026",
+   "geo": "United States, retail net lease",
+   "src": [
+    "E28"
+   ],
+   "kind": "verified",
+   "note": "37 properties, $64.1 million.",
+   "num": 7.3
+  },
+  {
+   "id": "M13",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "Realty Income: initial cash yield on property acquisitions",
+   "value": "6.6%",
+   "unit": "%",
+   "period": "Third quarter 2026",
+   "geo": "United States and Europe",
+   "src": [
+    "E26"
+   ],
+   "kind": "verified",
+   "note": "31.0% retail, 57.3% industrial, 11.7% data centers. Total investments including loans: 6.8%.",
+   "num": 6.6
+  },
+  {
+   "id": "M14",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "Four Corners: initial cash yield on acquisitions",
+   "value": "6.6%",
+   "unit": "%",
+   "period": "Third quarter 2026",
+   "geo": "United States",
+   "src": [
+    "E29"
+   ],
+   "kind": "verified",
+   "note": "About 87% medical retail and 5% restaurants. \"we have started to see new acquisitions being priced at higher cap rates.\"",
+   "num": 6.6
+  },
+  {
+   "id": "M15",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "Four Corners: preference for buying its own shares",
+   "value": "\"we view share repurchases as delivering more value than property purchases\"",
+   "unit": "",
+   "period": "October 28, 2026",
+   "geo": "United States",
+   "src": [
+    "E29"
+   ],
+   "kind": "verified",
+   "note": "A specialist restaurant-property buyer stepping back from buying."
+  },
+  {
+   "id": "M16",
+   "page": "market",
+   "group": "What large buyers paid for net-lease property",
+   "label": "Cap rate for this property",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "E28"
+   ],
+   "kind": "blank",
+   "note": "No official source prices a single restaurant site. Needs a broker opinion or an appraisal."
+  },
+  {
+   "id": "M20",
+   "page": "market",
+   "group": "What happens when net leases expire",
+   "label": "Expiring leases renewed by the same tenant",
+   "value": "818 of 1,074 (76.2%)",
+   "unit": "%",
+   "period": "Nine months to September 30, 2026",
+   "geo": "Realty Income portfolio",
+   "src": [
+    "E26"
+   ],
+   "kind": "derived",
+   "note": "A diversified portfolio, not Jack in the Box. Expirations include leases rejected in bankruptcy.",
+   "num": 76.2
+  },
+  {
+   "id": "M21",
+   "page": "market",
+   "group": "What happens when net leases expire",
+   "label": "Expiring leases re-let to a new tenant",
+   "value": "66 of 1,074 (6.1%)",
+   "unit": "%",
+   "period": "Nine months to September 30, 2026",
+   "geo": "Realty Income portfolio",
+   "src": [
+    "E26"
+   ],
+   "kind": "derived",
+   "note": "",
+   "num": 6.1
+  },
+  {
+   "id": "M22",
+   "page": "market",
+   "group": "What happens when net leases expire",
+   "label": "Properties sold vacant",
+   "value": "181 against 1,074 expirations (16.9%)",
+   "unit": "%",
+   "period": "Nine months to September 30, 2026",
+   "geo": "Realty Income portfolio",
+   "src": [
+    "E26"
+   ],
+   "kind": "derived",
+   "note": "",
+   "num": 16.9
+  },
+  {
+   "id": "M23",
+   "page": "market",
+   "group": "What happens when net leases expire",
+   "label": "Rent on re-leased space against the old rent",
+   "value": "103.1%",
+   "unit": "%",
+   "period": "Nine months to September 30, 2026",
+   "geo": "Realty Income portfolio",
+   "src": [
+    "E26"
+   ],
+   "kind": "verified",
+   "note": "$251.1 million new against $243.5 million previous.",
+   "num": 103.1
+  },
+  {
+   "id": "M30",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "City transfer tax, base",
+   "value": "0.45% ($2.25 per $500)",
+   "unit": "%",
+   "period": "Current",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E13"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 0.45
+  },
+  {
+   "id": "M31",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "County transfer tax",
+   "value": "0.11% ($0.55 per $500)",
+   "unit": "%",
+   "period": "Current",
+   "geo": "Los Angeles County",
+   "src": [
+    "E25"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 0.11
+  },
+  {
+   "id": "M32",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "City surcharge, lower band",
+   "value": "4.0% of the whole price above $5,400,000 and below $10,900,000",
+   "unit": "%",
+   "period": "Closings after June 30, 2026",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E13"
+   ],
+   "kind": "verified",
+   "note": "On the whole price, not only the excess.",
+   "num": 4.0
+  },
+  {
+   "id": "M33",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "City surcharge, upper band",
+   "value": "5.5% of the whole price at $10,900,000 or more",
+   "unit": "%",
+   "period": "Closings after June 30, 2026",
+   "geo": "City of Los Angeles",
+   "src": [
+    "E13"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 5.5
+  },
+  {
+   "id": "M34",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "Federal long-term capital gains rate, top",
+   "value": "20%",
+   "unit": "%",
+   "period": "Taxable year 2025",
+   "geo": "United States",
+   "src": [
+    "E22"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 20
+  },
+  {
+   "id": "M35",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "Federal rate on gain from past depreciation",
+   "value": "Up to 25%",
+   "unit": "%",
+   "period": "Taxable year 2025",
+   "geo": "United States",
+   "src": [
+    "E22"
+   ],
+   "kind": "verified",
+   "note": "\"unrecaptured section 1250 gain\".",
+   "num": 25
+  },
+  {
+   "id": "M36",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "Net investment income tax",
+   "value": "3.8%",
+   "unit": "%",
+   "period": "Current",
+   "geo": "United States",
+   "src": [
+    "E23"
+   ],
+   "kind": "verified",
+   "note": "Above $200,000 single or $250,000 joint; covers rents and gains on real estate.",
+   "num": 3.8
+  },
+  {
+   "id": "M37",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "California top rate on the schedule",
+   "value": "12.3%",
+   "unit": "%",
+   "period": "Taxable year 2025",
+   "geo": "California",
+   "src": [
+    "E49"
+   ],
+   "kind": "verified",
+   "note": "Over $742,953 single or $1,485,906 joint. A further 1% surcharge above $1 million was not read and is not included.",
+   "num": 12.3
+  },
+  {
+   "id": "M38",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "California treatment of capital gains",
+   "value": "Taxed as ordinary income",
+   "unit": "",
+   "period": "Current",
+   "geo": "California",
+   "src": [
+    "E50"
+   ],
+   "kind": "verified",
+   "note": "\"California does not have a lower rate for capital gains.\""
+  },
+  {
+   "id": "M39",
+   "page": "market",
+   "group": "Tax on a sale",
+   "label": "Highest combined rate on a long-term gain, from the four rows above",
+   "value": "36.1%",
+   "unit": "%",
+   "period": "Taxable year 2025",
+   "geo": "Federal plus California",
+   "src": [
+    "E22",
+    "E23",
+    "E49"
+   ],
+   "kind": "derived",
+   "note": "20% + 3.8% + 12.3%. 41.1% on the part taxed at 25%. A ceiling, not the owner's rate.",
+   "num": 36.1
+  },
+  {
+   "id": "M40",
+   "page": "market",
+   "group": "Deferring the tax",
+   "label": "Like-kind exchange: time to identify a replacement",
+   "value": "45 days",
+   "unit": "days",
+   "period": "2025 instructions",
+   "geo": "United States",
+   "src": [
+    "E36"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 45
+  },
+  {
+   "id": "M41",
+   "page": "market",
+   "group": "Deferring the tax",
+   "label": "Like-kind exchange: time to receive the replacement",
+   "value": "180 days, or the tax return due date if earlier",
+   "unit": "days",
+   "period": "2025 instructions",
+   "geo": "United States",
+   "src": [
+    "E36"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 180
+  },
+  {
+   "id": "M42",
+   "page": "market",
+   "group": "Deferring the tax",
+   "label": "What does not qualify as replacement",
+   "value": "Stock, bonds, notes, partnership interests, certificates of trust",
+   "unit": "",
+   "period": "2025 instructions",
+   "geo": "United States",
+   "src": [
+    "E36"
+   ],
+   "kind": "verified",
+   "note": "Ordinary shares of a property company are not real property for this purpose."
+  },
+  {
+   "id": "M43",
+   "page": "market",
+   "group": "Deferring the tax",
+   "label": "Exchange into property outside California",
+   "value": "Annual California filing until the deferred gain is recognised",
+   "unit": "",
+   "period": "2025 instructions",
+   "geo": "California",
+   "src": [
+    "E43"
+   ],
+   "kind": "verified",
+   "note": "Form FTB 3840. California keeps its claim on the gain."
+  },
+  {
+   "id": "M50",
+   "page": "market",
+   "group": "Property tax",
+   "label": "General property tax limit",
+   "value": "1% of full cash value",
+   "unit": "%",
+   "period": "Current",
+   "geo": "California",
+   "src": [
+    "E20"
+   ],
+   "kind": "verified",
+   "note": "Voter-approved debt is added on top.",
+   "num": 1
+  },
+  {
+   "id": "M51",
+   "page": "market",
+   "group": "Property tax",
+   "label": "Yearly limit on assessed-value growth",
+   "value": "2%",
+   "unit": "%",
+   "period": "Current",
+   "geo": "California",
+   "src": [
+    "E20"
+   ],
+   "kind": "verified",
+   "note": "\"not to exceed 2 percent for any given year\".",
+   "num": 2
+  },
+  {
+   "id": "M52",
+   "page": "market",
+   "group": "Property tax",
+   "label": "Reassessment",
+   "value": "On purchase, new construction or change in ownership",
+   "unit": "",
+   "period": "Current",
+   "geo": "California",
+   "src": [
+    "E20"
+   ],
+   "kind": "verified",
+   "note": "A buyer pays tax on the sale price; a long-time owner pays on a much older value."
+  },
+  {
+   "id": "H01",
+   "page": "hazard",
+   "group": "Earthquake",
+   "label": "Chance of a magnitude 6.7 earthquake in the region within 30 years",
+   "value": "60%",
+   "unit": "%",
+   "period": "UCERF3",
+   "geo": "Los Angeles region",
+   "src": [
+    "E16"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 60
+  },
+  {
+   "id": "H02",
+   "page": "hazard",
+   "group": "Earthquake",
+   "label": "Chance of a magnitude 7 earthquake within 30 years",
+   "value": "46%",
+   "unit": "%",
+   "period": "UCERF3",
+   "geo": "Los Angeles region",
+   "src": [
+    "E16"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 46
+  },
+  {
+   "id": "H03",
+   "page": "hazard",
+   "group": "Earthquake",
+   "label": "Chance of a magnitude 7.5 earthquake within 30 years",
+   "value": "31%",
+   "unit": "%",
+   "period": "UCERF3",
+   "geo": "Los Angeles region",
+   "src": [
+    "E16"
+   ],
+   "kind": "verified",
+   "note": "",
+   "num": 31
+  },
+  {
+   "id": "H10",
+   "page": "hazard",
+   "group": "Wildfire",
+   "label": "Structures destroyed, Eaton and Palisades fires",
+   "value": "16,251",
+   "unit": "",
+   "period": "January 2025",
+   "geo": "Los Angeles County",
+   "src": [
+    "E30"
+   ],
+   "kind": "derived",
+   "note": "9,414 plus 6,837.",
+   "num": 16251
+  },
+  {
+   "id": "H11",
+   "page": "hazard",
+   "group": "Wildfire",
+   "label": "Economic output lost",
+   "value": "$5.2 billion to $10.1 billion",
+   "unit": "",
+   "period": "2025",
+   "geo": "Los Angeles County",
+   "src": [
+    "E30"
+   ],
+   "kind": "verified",
+   "note": "About 6,800 businesses and 47,000 workers affected."
+  },
+  {
+   "id": "H12",
+   "page": "hazard",
+   "group": "Wildfire",
+   "label": "Insurer-of-last-resort assessment",
+   "value": "$1 billion",
+   "unit": "USD billion",
+   "period": "February 2025",
+   "geo": "California",
+   "src": [
+    "E44"
+   ],
+   "kind": "verified",
+   "note": "The first in over 30 years. Insurers may recover half from their policyholders.",
+   "num": 1.0
+  },
+  {
+   "id": "H20",
+   "page": "hazard",
+   "group": "Flood",
+   "label": "Statewide winter-storm scenario, total cost",
+   "value": "About $725 billion",
+   "unit": "USD billion",
+   "period": "2011 scenario",
+   "geo": "California",
+   "src": [
+    "E42"
+   ],
+   "kind": "verified",
+   "note": "A hypothetical. \"Serious flooding also occurs in ... Los Angeles County\".",
+   "num": 725
+  },
+  {
+   "id": "H30",
+   "page": "hazard",
+   "group": "Parcel level",
+   "label": "Hazard zones for the subject parcel",
+   "value": "",
+   "unit": "",
+   "period": "",
+   "geo": "Subject property",
+   "src": [
+    "L03",
+    "L04",
+    "L05"
+   ],
+   "kind": "blank",
+   "note": "Flood, fault, liquefaction and fire zone all need the address."
+  }
+ ]
+}

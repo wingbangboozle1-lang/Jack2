@@ -1,0 +1,603 @@
+{
+ "meta": {
+  "session": "session-a5f8f119",
+  "as_of": "2026-11-10",
+  "rule": "Every source with status \"read\" was opened by this session on the read date and its values were transcribed into research/evidence-log.md. \"dead\" and \"could not open\" sources contribute no values. \"tool\" entries are official lookup pages for facts only the owner can retrieve; they were not opened.",
+  "counts": {}
+ },
+ "rows": [
+  {
+   "id": "E01",
+   "publisher": "U.S. Bureau of Labor Statistics",
+   "title": "Los Angeles Area Economic Summary (updated November 4, 2026)",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "All data not seasonally adjusted."
+  },
+  {
+   "id": "E02",
+   "publisher": "U.S. Department of the Treasury",
+   "title": "Daily Treasury Par Yield Curve Rates, November 2026",
+   "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "Latest row on the read date: November 9, 2026."
+  },
+  {
+   "id": "E03",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts: Los Angeles city and Los Angeles County, California",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "Vintage 2025 estimates; ACS 2020-2024 five-year."
+  },
+  {
+   "id": "E04",
+   "publisher": "California Employment Development Department",
+   "title": "Los Angeles County monthly labor force and industry employment release, September 2026 (preliminary)",
+   "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "The narrative prints one figure that contradicts its own table; the table is used. See Flagged."
+  },
+  {
+   "id": "E05",
+   "publisher": "U.S. Bureau of Economic Analysis",
+   "title": "Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08)",
+   "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "The release text does not print the Los Angeles County GDP level."
+  },
+  {
+   "id": "E06",
+   "publisher": "California Department of Finance",
+   "title": "Report P-2A: Total Population Projections, 2020-2070 (Baseline 2024; Vintage 2026 release, March 2026)",
+   "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "",
+   "also": [
+    "https://dof.ca.gov/forecasting/demographics/projections/"
+   ]
+  },
+  {
+   "id": "E07",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "EDGAR filing index, Jack in the Box Inc. (CIK 0000807882)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=&dateb=&owner=include&count=40",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "No fiscal 2026 fourth-quarter release or Form 10-K had been filed by the read date."
+  },
+  {
+   "id": "E08",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Jack in the Box Inc. Form 8-K of June 23, 2026, Exhibit 99.1 (securitized notes refinancing)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000079/ex991-pressreleasexdebtclo.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "",
+   "also": [
+    "https://www.sec.gov/Archives/edgar/data/807882/000080788226000079/jack-20260623.htm"
+   ]
+  },
+  {
+   "id": "E09",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Jack in the Box Inc. Form 8-K of September 21, 2026, Exhibit 99.1 (board change; cooperation agreement extended)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/ex991-pressreleasexbodanno.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "Names of individuals are not recorded by this workbook."
+  },
+  {
+   "id": "E10",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Jack in the Box Inc. Form 8-K of August 12, 2026, Exhibit 99.1 (third quarter fiscal 2026 results)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": ""
+  },
+  {
+   "id": "E11",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Jack in the Box Inc. Form 10-Q for the quarter ended July 5, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "",
+   "also": [
+    "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/R2.htm",
+    "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/R4.htm"
+   ]
+  },
+  {
+   "id": "E12",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Jack in the Box Inc. Form 10-K for the fiscal year ended September 28, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "Items 1, 1A, 2 and 7 were read."
+  },
+  {
+   "id": "E13",
+   "publisher": "City of Los Angeles, Office of Finance",
+   "title": "Real Property Transfer Tax and Measure ULA FAQ",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": "One FAQ answer still words the thresholds as five and ten million dollars; the note and rate table print the adjusted amounts."
+  },
+  {
+   "id": "E14",
+   "publisher": "California Department of Industrial Relations",
+   "title": "Minimum Wage Frequently Asked Questions",
+   "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulator",
+   "note": ""
+  },
+  {
+   "id": "E15",
+   "publisher": "Board of Governors of the Federal Reserve System",
+   "title": "FOMC statement, October 28, 2026",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "central bank",
+   "note": ""
+  },
+  {
+   "id": "E16",
+   "publisher": "U.S. Geological Survey",
+   "title": "FAQ: probability that an earthquake will occur in the Los Angeles area (UCERF3)",
+   "url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "science agency",
+   "note": ""
+  },
+  {
+   "id": "E17",
+   "publisher": "California Department of Industrial Relations",
+   "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228)",
+   "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulator",
+   "note": ""
+  },
+  {
+   "id": "E18",
+   "publisher": "City of Los Angeles, Office of Wage Standards",
+   "title": "Minimum wage announcements (rate effective July 1, 2026)",
+   "url": "https://wagesla.lacity.org/",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulator",
+   "note": ""
+  },
+  {
+   "id": "E19",
+   "publisher": "Los Angeles County Assessor",
+   "title": "Real property page",
+   "url": "https://assessor.lacounty.gov/homeowners/realproperty",
+   "read": "2026-11-10",
+   "status": "could not open",
+   "kind": "tax authority",
+   "note": "The request returned \"Hostname not recognized\" on the read date. Nothing is taken from this page; the constitutional text (E20) is used instead."
+  },
+  {
+   "id": "E20",
+   "publisher": "California Legislative Information",
+   "title": "California Constitution, Article XIII A (Proposition 13), sections 1 and 2",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=XIII+A",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "law",
+   "note": ""
+  },
+  {
+   "id": "E21",
+   "publisher": "California State Board of Equalization",
+   "title": "Proposition 13 page (old address)",
+   "url": "https://www.boe.ca.gov/proptaxes/prop13.htm",
+   "read": "2026-11-10",
+   "status": "dead",
+   "kind": "tax authority",
+   "note": "Returned \"404 - Not Found\" on the read date. Earlier workbooks cite it. Nothing is taken from it."
+  },
+  {
+   "id": "E22",
+   "publisher": "Internal Revenue Service",
+   "title": "Topic no. 409, Capital gains and losses",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": "The page still prints taxable-year-2025 thresholds."
+  },
+  {
+   "id": "E23",
+   "publisher": "Internal Revenue Service",
+   "title": "Topic no. 559, Net investment income tax",
+   "url": "https://www.irs.gov/taxtopics/tc559",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": ""
+  },
+  {
+   "id": "E24",
+   "publisher": "Internal Revenue Service",
+   "title": "Like-kind exchanges - Real estate tax tips",
+   "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": ""
+  },
+  {
+   "id": "E25",
+   "publisher": "Los Angeles County Registrar-Recorder/County Clerk",
+   "title": "Documentary Transfer Tax",
+   "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": ""
+  },
+  {
+   "id": "E26",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Realty Income Corporation Form 8-K, Exhibit 99.1: results for the three and nine months ended September 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "A diversified global net-lease owner. Not specific to restaurants, to California or to this property."
+  },
+  {
+   "id": "E27",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "NNN REIT, Inc. Form 8-K, Exhibit 99.1: second quarter 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/751364/000119312526333958/nnn-ex99_1.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": ""
+  },
+  {
+   "id": "E28",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "NNN REIT, Inc. Form 8-K, Exhibit 99.1: third quarter 2026 results (November 4, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/nnn-ex99_1.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "Newest NNN filing on the read date. Supersedes the fiscal-2025 figures used by earlier workbooks."
+  },
+  {
+   "id": "E29",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Four Corners Property Trust Form 8-K, Exhibit 99.1: third quarter 2026 results (October 28, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1650132/000119312526436301/fcpt-ex99_1.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": ""
+  },
+  {
+   "id": "E30",
+   "publisher": "County of Los Angeles",
+   "title": "Key Facts About the Eaton and Palisades Fires (fact sheet)",
+   "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "local government",
+   "note": ""
+  },
+  {
+   "id": "E31",
+   "publisher": "California Department of Education",
+   "title": "District Profile: Los Angeles Unified (school year 2025-26)",
+   "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "education agency",
+   "note": ""
+  },
+  {
+   "id": "E32",
+   "publisher": "California Department of Education",
+   "title": "California School Dashboard 2025: Los Angeles Unified, academic engagement",
+   "url": "https://www.caschooldashboard.org/reports/19647330000000/2025/academic-engagement",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "education agency",
+   "note": "The 2026 report and the academic-performance page returned no figures to this session."
+  },
+  {
+   "id": "E33",
+   "publisher": "California Department of Finance",
+   "title": "Public K-12 Graded Enrollment and High School Graduate Projections, 2026 Series (August 2026)",
+   "url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": ""
+  },
+  {
+   "id": "E34",
+   "publisher": "California Secretary of State",
+   "title": "November 3, 2026 General Election: state ballot measures, statewide results",
+   "url": "https://electionresults.sos.ca.gov/returns/ballot-measures",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "election authority",
+   "note": "Unofficial, as of November 9, 2026, 4:29 p.m.; certification due by December 11, 2026."
+  },
+  {
+   "id": "E35",
+   "publisher": "California Secretary of State",
+   "title": "Official Voter Information Guide, quick reference: Propositions 3 and 43",
+   "url": "https://voterguide.sos.ca.gov/quick-reference-guide/43.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "election authority",
+   "note": "",
+   "also": [
+    "https://voterguide.sos.ca.gov/quick-reference-guide/3.htm"
+   ]
+  },
+  {
+   "id": "E36",
+   "publisher": "Internal Revenue Service",
+   "title": "Instructions for Form 8824, Like-Kind Exchanges (2025)",
+   "url": "https://www.irs.gov/instructions/i8824",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": ""
+  },
+  {
+   "id": "E37",
+   "publisher": "Port of Los Angeles",
+   "title": "News release of October 9, 2026: September cargo volumes",
+   "url": "https://portoflosangeles.org/references/2026-news-releases/news_100926_sept_cargo",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "local government",
+   "note": ""
+  },
+  {
+   "id": "E38",
+   "publisher": "Los Angeles Tourism & Convention Board",
+   "title": "Release of July 29, 2026: 2025 economic impact of visitors",
+   "url": "https://www.discoverlosangeles.com/visitors-to-los-angeles-generated-426-billion-in-business-sales-and-supported-more-than-530000-jobs",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official tourism body",
+   "note": "A promotion body, not a statistical agency. Used for scale only."
+  },
+  {
+   "id": "E39",
+   "publisher": "Los Angeles County Metropolitan Transportation Authority",
+   "title": "D Line Subway Extension project page",
+   "url": "https://www.metro.net/projects/westside/",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "local government",
+   "note": ""
+  },
+  {
+   "id": "E40",
+   "publisher": "Los Angeles City Council, District 5",
+   "title": "Release of May 22, 2026: revised fiscal 2026-27 budget passed",
+   "url": "https://councildistrict5.lacity.gov/release-los-angeles-city-council-passes-revised-fy-2026-27-budget",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "local government",
+   "note": ""
+  },
+  {
+   "id": "E41",
+   "publisher": "California Department of Finance",
+   "title": "Report P-4: Total Households, California Counties, 2010-2040 (Baseline 2024; Vintage 2025 release, November 2025)",
+   "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P4_HHProjections_B2024.xlsx",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "official statistics",
+   "note": "One release older than the population series in E06."
+  },
+  {
+   "id": "E42",
+   "publisher": "U.S. Geological Survey",
+   "title": "Overview of the ARkStorm scenario (Open-File Report 2010-1312)",
+   "url": "https://www.usgs.gov/publications/overview-arkstorm-scenario",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "science agency",
+   "note": "A hypothetical statewide scenario published in 2011. Not a forecast."
+  },
+  {
+   "id": "E43",
+   "publisher": "California Franchise Tax Board",
+   "title": "2025 Instructions for Form FTB 3840, California Like-Kind Exchanges",
+   "url": "https://www.ftb.ca.gov/forms/2025/2025-3840-instructions.html",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": ""
+  },
+  {
+   "id": "E44",
+   "publisher": "California Department of Insurance",
+   "title": "Bulletin 2025-4: insurer recoupment after the FAIR Plan assessment (February 11, 2025)",
+   "url": "https://www.insurance.ca.gov/0250-insurers/0300-insurers/0200-bulletins/bulletin-notices-commiss-opinion/upload/Bulletin-2025-4-Updated-Guidance-regarding-Insurer-Recoupment-Procedures-in-Response-to-Assessment-by-the-FAIR-Plan.pdf",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulator",
+   "note": ""
+  },
+  {
+   "id": "E45",
+   "publisher": "Southern California Association of Governments",
+   "title": "Connect SoCal 2024 Final PEIR, Appendix I: updated tables",
+   "url": "https://scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regional planning body",
+   "note": "A 2024 plan forecast with a 2019 base year."
+  },
+  {
+   "id": "E53",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "Realty Income Corporation Form 8-K, Exhibit 99.1: results for the three months and year ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": "Read to check an earlier workbook. Superseded by E26."
+  },
+  {
+   "id": "E54",
+   "publisher": "California Department of Education",
+   "title": "Largest and Smallest Public School Districts (2025-26)",
+   "url": "https://www.cde.ca.gov/ds/ad/ceflargesmalldist.asp",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "education agency",
+   "note": ""
+  },
+  {
+   "id": "E47",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "NNN REIT, Inc. Form 10-K for the year ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "regulatory filing",
+   "note": ""
+  },
+  {
+   "id": "E48",
+   "publisher": "City of Los Angeles open data portal",
+   "title": "Crime Data from 2020 to 2024: dataset notice",
+   "url": "https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-2024/2nrs-mtv8/about_data",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "local government",
+   "note": "The dataset is frozen. No crime rate is taken from it."
+  },
+  {
+   "id": "E49",
+   "publisher": "California Franchise Tax Board",
+   "title": "2025 California Tax Rate Schedules",
+   "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": "Top printed rate 12.30%. The separate 1% surcharge above $1 million is not on this schedule and was not read."
+  },
+  {
+   "id": "E50",
+   "publisher": "California Franchise Tax Board",
+   "title": "Capital gains and losses",
+   "url": "https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html",
+   "read": "2026-11-10",
+   "status": "read",
+   "kind": "tax authority",
+   "note": ""
+  },
+  {
+   "id": "L01",
+   "publisher": "City of Los Angeles, Department of City Planning",
+   "title": "ZIMAS: zoning, jurisdiction and parcel profile lookup",
+   "url": "https://zimas.lacity.org/",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session: no address is typed into any third-party page by this workbook."
+  },
+  {
+   "id": "L02",
+   "publisher": "Los Angeles County Assessor",
+   "title": "Assessor portal: parcel, assessed value and ownership-change lookup",
+   "url": "https://portal.assessor.lacounty.gov/",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session."
+  },
+  {
+   "id": "L03",
+   "publisher": "Federal Emergency Management Agency",
+   "title": "Flood Map Service Center",
+   "url": "https://msc.fema.gov/portal/home",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session."
+  },
+  {
+   "id": "L04",
+   "publisher": "California Geological Survey",
+   "title": "Earthquake Zones of Required Investigation (fault, liquefaction, landslide)",
+   "url": "https://www.conservation.ca.gov/cgs/alquist-priolo",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session."
+  },
+  {
+   "id": "L05",
+   "publisher": "California Office of the State Fire Marshal",
+   "title": "Fire Hazard Severity Zones",
+   "url": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session."
+  },
+  {
+   "id": "L06",
+   "publisher": "California State Water Resources Control Board",
+   "title": "GeoTracker: cleanup sites and underground storage tanks",
+   "url": "https://geotracker.waterboards.ca.gov/",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session."
+  },
+  {
+   "id": "L07",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "EDGAR full-text search (to find a tenant entity or guarantor in filings)",
+   "url": "https://www.sec.gov/edgar/search/",
+   "read": "",
+   "status": "tool",
+   "kind": "lookup tool",
+   "note": "Official lookup. Not opened by this session."
+  }
+ ]
+}

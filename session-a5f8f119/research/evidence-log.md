@@ -512,3 +512,54 @@ URL: https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-2024/2nrs-mtv
 - Notice: "the legacy system is no longer active, and no new information will be entered ... the Crime Data from 2020 to Present dataset will no longer be
   updated. It will remain available on the portal for historical reference only." Replacement: LAPD NIBRS Offenses / Victims datasets, "refreshed on a bi-weekly schedule".
 - "Last Updated March 4, 2026". No crime rate is taken from this dataset by this session.
+
+## E49 — California Franchise Tax Board, 2025 California Tax Rate Schedules — read 2026-11-10
+URL: https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf
+- Schedule X (single / married filing separately): 9.30% over $72,724; 10.30% over $371,479; 11.30% over $445,771; 12.30% over $742,953.
+- Schedule Y (married filing jointly): 9.30% over $145,448; 10.30% over $742,958; 11.30% over $891,542; 12.30% over $1,485,906.
+- Schedule Z (head of household): 12.30% over $1,010,417.
+- The schedule's top printed rate is 12.30%. The separate 1% surcharge on taxable income above $1 million is NOT printed on this schedule and was not read by
+  this session, so "13.3%" (used by earlier workbooks) is not asserted here.
+- The $371,479 bracket start matches the "$371,000" threshold in the Proposition 3 summary (E35): Prop 3 concerns the 10.3% / 11.3% / 12.3% brackets.
+
+## E50 — California Franchise Tax Board, Capital gains and losses — read 2026-11-10
+URL: https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html
+- "California does not have a lower rate for capital gains. All capital gains are taxed as ordinary income." Page "Last updated: 01/28/2026".
+
+## E51 — SCAG Appendix I, Tables 3.14-8 / 3.14-9 / 3.14-10 (continuation of E45) — read 2026-11-10
+URL: https://scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf
+- Los Angeles County population: 2019 10,046,000; 2020 10,018,000; 2030 10,214,000; 2045 10,757,000; 2050 10,793,000 (+7.4%).
+- Los Angeles County households: 2019 3,393,000; 2020 3,423,000; 2030 3,784,000; 2045 4,120,000; 2050 4,155,000 (+22.5%).
+- Los Angeles County employment: 2019 5,031,000; 2022 4,942,000; 2030 5,277,000; 2045 5,497,000; 2050 5,461,000 (+8.6%).
+- Source line on the tables: "SCAG 2023a, Table 12". Numbers rounded to the nearest thousand.
+
+## E52 — California Constitution, Article XIII A, Section 2(b) (continuation of E20) — read 2026-11-10
+URL: https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=XIII+A
+- "(b) The full cash value base may reflect from year to year the inflationary rate not to exceed 2 percent for any given year or reduction as shown in the
+  consumer price index or comparable data for the area under taxing jurisdiction, or may be reduced to reflect substantial damage, destruction, or other
+  factors causing a decline in value."
+
+## E53 — SEC, Realty Income Corporation 8-K Exhibit 99.1, results for the three months and year ended December 31, 2025 (February 24, 2026) — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/726728/000072672826000009/o-991q42025.htm
+(8-K list read at https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000726728&type=8-K&dateb=20260301&owner=include&count=10 ; accession 0000726728-26-000009.)
+- Year ended December 31, 2025: "Invested $6.3 billion; our pro-rata share was $6.2 billion at an initial weighted average cash yield of 7.3%";
+  "Achieved a rent recapture rate of 103.9% on properties re-leased".
+- Three months ended December 31, 2025: "Invested $2.4 billion; our pro-rata share was $2.3 billion at an initial weighted average cash yield of 7.1%";
+  rent recapture 104.9%.
+- Portfolio December 31, 2025: 15,511 properties; 1,761 clients; 92 industries; weighted average remaining lease term approximately 8.8 years; occupancy 98.9%;
+  173 properties available for lease or sale.
+- This identifies and confirms root data/metrics.json row M50 (7.3%, "FY2025"), whose cited source is the company's own investor-relations PDF;
+  the SEC-filed exhibit prints the same figure. It is a total-investment yield for a global diversified owner and is superseded by the Q3 2026 figure (E26: 6.8%).
+
+## E54 — California Department of Education, Largest & Smallest Public School Districts (2025-26) — read 2026-11-10
+URL: https://www.cde.ca.gov/ds/ad/ceflargesmalldist.asp
+- Rank 1: Los Angeles Unified 497,105; rank 2: San Diego Unified 112,250. "The statewide total enrollment is 5,731,260." Last reviewed April 16, 2026.
+- Confirms root row M45 exactly (DOF's 5,731,300 in E33 is the same count rounded to the nearest hundred).
+
+## E55 — BLS Los Angeles Area Economic Summary, second reading of the consumer-spending panel (continuation of E01) — read 2026-11-10
+URL: https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf
+- Panel title: "Average annual expenditures, 2025". Rows: West — Housing 33,016; Transportation 14,110; Food 12,447; Healthcare 6,713; All other items 26,447.
+  United States — 27,790; 13,492; 10,633; 6,470; 23,520. Source line: "U.S. BLS, Consumer Expenditure Survey."
+- The panel is for the West census region and for 2025. It does not print a Los Angeles metro-area row and does not print 2023-2024 figures.
+  Root data/metrics.json rows M39–M41 ($33,126 / $11,858 / $14,497, "2023-2024", "Los Angeles metro area") cite this page but are not on it today.
+- Same reading re-confirms every employment, unemployment, CPI, wage and ECI figure listed in E01 (page still "Updated November 04, 2026").
