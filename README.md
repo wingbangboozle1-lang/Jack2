@@ -311,3 +311,23 @@ python3 session-24d6cd5f/scripts/build_site.py   # 11 HTML pages
 python3 session-24d6cd5f/scripts/verify.py       # 8 rule families + PII & link checks
 ```
 
+## Session M dashboard (`session-5f296f9d/`) — 2026-11-10
+
+A deep-research pass (`session-5f296f9d` / `arena/5f296f9d-jack2`) published a 15-page dashboard at
+**https://wingbangboozle1-lang.github.io/Jack2/session-5f296f9d/** without touching any prior session's files.
+
+| | |
+|---|---|
+| Recommendation | **Negotiate first, price second:** renew/extend on CPI-linked terms in 2026–2028 while the labor market is strong, run a parallel disciplined sale process, and execute a §1031 exchange if the best bid clears break-even after the 4.45% City transfer stack **or** the owner accepts the risk-adjusted case (model: diversifying improves worst-5% wealth by **+5.1 index units** at a cost of **8.3 index units** of expected wealth; break-even reinvestment **7.06%**). |
+| Evidence | **127 metric rows** (**113 verified** on 2026-11-10 across **31 official Tier A/B sources**, **12 deliberately blank** private inputs, **1 unofficial** election print): BLS/EDD Sep 2026 labor + metro CPI `+3.7%`, Census V2025 population/income, DOJ-free EDGAR tenant Q3 FY26 (`SSS −1.1%`, `2,115` units), Realty Income Q3-26 benchmark (`6.8%` cash yield, `98.8%` occupancy), ULA `4.45%/5.95%`, Prop 13 `1% + 2%`, FTB top `12.3% + 1%`, USGS `60%/30yr`, CAL FIRE Jan-2025 twin fires, FAIR Plan `$1B` assessment, Port of LA Sep-2026 record `1,042,652` TEUs, UCLA Anderson Sep-30-2026 outlook, SoS Prop 3 `60.4% Yes` (unofficial, cert 2026-12-11). |
+| Model | Deterministic 2030–2035 expiry grids (180 rows), break-even exit caps and reinvestment rates, 7-row sensitivity, **10,000-trial seeded Monte Carlo** (`seed=20261110`) — all on a **per-$1 NOI index basis** so no private rent/basis is ever assumed. |
+| Risks & Flags | **28-item BAU + black-swan risk register**, **19 flagged items** (`F-01`–`F-12` data gaps, `X-01`–`X-07` repository/citation notes) on a Flagged for Review page that does not block merge. |
+
+Rebuild and verify:
+
+```bash
+python3 session-5f296f9d/scripts/model.py        # deterministic + seeded model_output.json
+python3 session-5f296f9d/scripts/build_site.py   # 15 HTML pages
+python3 session-5f296f9d/scripts/verify.py       # V1–V7: schema, links, source rows, PII, anchors
+```
+

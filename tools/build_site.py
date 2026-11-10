@@ -999,6 +999,14 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-5f296f9d/</code>",
+         "Session M (branch <code>arena/5f296f9d-jack2</code>) &mdash; 2026-11-10 deep-research dashboard: "
+         "31 official Tier A/B sources, 127 source-linked metric rows (113 verified, 12 deliberately blank private inputs, "
+         "1 unofficial election print), 28-item BAU + black-swan risk register, deterministic expiry grids and a 10,000-trial "
+         "seeded Monte Carlo (seed 20261110) on a per-$1 NOI index basis, sell-vs-renew decision page with switching triggers, "
+         "and a 19-item Flagged for Review page",
+         "15 pages",
+         "<a href='session-5f296f9d/index.html'>open &#8599;</a>"],
         ["<code>session-313ba936/</code>",
          "Session M-b &mdash; <strong>current build, 2026-11-10</strong>. 21 official sources re-read from scratch on the "
          "access date (Treasury par curve, Census V2025, CA DOF P-2A and K-12 projections, BLS, EDD, CA DIR/FTB, "
