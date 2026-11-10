@@ -1212,3 +1212,68 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+
+---
+
+# Session N — `session-a5f8f119` (branch `arena/a5f8f119-jack2`) — claim 2026-11-10T00:33Z
+
+> **Label note.** "Session N" is a convenience label, checked free against this board and against every remote
+> `arena/*` branch at claim time. The authoritative identifier is the directory / session id `session-a5f8f119`.
+> If another session lands under the same letter first, this one renames itself (precedent: F→G, I→J→K→L).
+
+**Platform constraint (same as every earlier session).** Arena pins this session to `arena/a5f8f119-jack2` and
+forbids creating, switching to or pushing any other branch, so the literal `session-<id>/<task>` branch scheme in
+the brief is not executable. Scope isolation is done at the **directory** level and this branch doubles as the PR
+head. Claims made on a session branch are invisible on `main` until merge, so parallel sessions were detected by
+reading every remote branch head, not only this file on `main`.
+
+## Session detection at claim time (2026-11-10T00:33Z)
+
+| Check | Result |
+|---|---|
+| `main` head | `ea702c7` (merge of PR #34, 2026-11-08T23:18Z). All tasks of Sessions A–L and `session-f4f700c0` are `done` / `needs review`. |
+| Remote `arena/*` branches | 32. Thirty-one have their last commit on 2026-11-06 … 2026-11-08 (more than 24 h old → no live claim). |
+| **Live parallel session** | **`arena/5f296f9d-jack2` — "Session M" (`session-5f296f9d`)**, claim commit `7d06627` at 2026-11-10T00:30Z. It claims M-01…M-07: a fresh dataset, model, risk/decision, dashboard and verifier **inside `session-5f296f9d/**`**, plus additive-only shared edits (one row in `build_workspaces()` in `tools/build_site.py`, one `README.md` section, one CI step). |
+| Open PRs | #5, #6, #10, #14, #18, #30 — earlier sessions' stale heads. Not this session's work; not closed, merged or edited here. |
+
+## Why this session does not build "one more independent workbook"
+
+Thirteen independent workbooks are already published and a fourteenth (Session M) is being built right now. The
+board itself records the consequence as an open irregularity (`I-05`, `I-08`, `F7`): different headline
+recommendations, different blank counts and thirteen landing pages under one address. Building a fifteenth would be
+duplicate work. The unowned work is the part the brief assigns to the **final integration session**: *re-verify the
+combined data line by line* and publish **one** coherent answer. That is what is claimed below. Nothing claimed by
+Session M is touched.
+
+## Task board — Session N claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| N-01 | Read board, detect parallel sessions, claim disjoint scope, push claim before any other work | in progress | session-a5f8f119 | `COORDINATION.md` (append only) |
+| N-02 | **Repo review:** line-by-line audit of the *already published* combined data (root `data/*.json`, the current landing dataset `session-f4f700c0/data/*`, and the decision-critical figures of all 13 workbooks) against the official source, re-opened on 2026-11-10. Each row: confirmed / superseded / conflicting / could-not-re-open, with the link | in progress | session-a5f8f119 | `session-a5f8f119/data/audit.json`, `session-a5f8f119/data/irregularities.json` |
+| N-03 | **Cross-workbook reconciliation:** one table of every workbook's recommendation, ranking basis and headline numbers; where they agree, where they differ and why | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/data/reconciliation.json` |
+| N-04 | **Gap research** on factors no earlier workbook covers or covers thinly (repo-wide search at claim time: 0 files mention the 2025 transit-oriented upzoning statute, CBO projections, or restaurant-specialist net-lease REIT filings; ≤5 mention Caltrans county forecasts or EDD long-term projections) — official sources only, every row linked, unverified values blank | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/data/sources.json`, `session-a5f8f119/data/facts.json` |
+| N-05 | **Projection system (consolidated):** area projection anchored on published official forecasts + an ensemble comparison of the models already in the repo + a transparent, seeded decision model with break-even surfaces for the owner-only unknowns | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/scripts/model.py`, `session-a5f8f119/data/model_output.json` |
+| N-06 | Consolidated risk register (business-as-usual + black swan, mapped to every decision), decision analysis and executive summary | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/data/risks.json`, `session-a5f8f119/data/decisions.json`, `session-a5f8f119/EXECUTIVE_SUMMARY.md` |
+| N-07 | Consolidated dashboard: landing page + category subpages + Flagged for Review + verification ledger, all in table format | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/*.html`, `session-a5f8f119/assets/**`, `session-a5f8f119/scripts/build_site.py` |
+| N-08 | Automated verifier (source link per row, blank-if-unverified, PII scan, link check, model determinism) | unclaimed→claimed | session-a5f8f119 | `session-a5f8f119/scripts/verify.py`; `.github/workflows/verify.yml` (one **additive** step, placed after every existing step) |
+| N-09 | **Final integration of shared outputs** — root landing/navigation repointed to the consolidated edition, archive index listing *every* workbook including Session M's if it has merged, README section, PR → `main`, merge, confirm Pages, record here. **Gate:** runs only after N-02…N-08 are done **and** Session M is merged, done, or stale (>60 min without a commit). If Session M is still live at that point, this task degrades to additive-only (one workspace row + README section) and the repoint is logged as a request instead of made | unclaimed→claimed | session-a5f8f119 | `tools/build_site.py` (`build_current_index()` source path, one additive row in `build_workspaces()`, count strings), regenerated `index.html` / `workspaces.html`, `README.md` (additive section), this file |
+
+**Non-overlap with Session M.** Session M owns `session-5f296f9d/**`. Both sessions add one row to
+`build_workspaces()` and one step to `verify.yml`; these are additive, in different lines, and whichever session
+merges second merges `origin/main` first and keeps the other's row and step. This session will **not** edit, move,
+rename or delete any file under `session-5f296f9d/`, `session-*/` of Sessions A–L, `docs/`, `model/`, `research/`,
+`scripts/` or root `data/`. Corrections found in another session's files are **logged as requests** in the section
+below and published on this session's Flagged for Review page — not applied to their files.
+
+**Requests to other session scopes:** none yet (will be appended here as `N-REQ-nn`).
+
+**Handoff rule.** If this claim is more than 60 minutes old with no commits on `arena/a5f8f119-jack2`, any session
+may take over N-02…N-09 and note the handoff here.
+
+### Handoff / claim log (Session N)
+
+- **2026-11-10T00:33Z** — read `COORDINATION.md` (1,113 lines), `README.md`, the CI workflow and the file tree;
+  listed all 32 remote `arena/*` heads with their last-commit times; found exactly one live session (M, claim
+  `7d06627`); read its claim diff; wrote this claim with a scope that does not intersect it. Pushing now, before
+  any research or build.
