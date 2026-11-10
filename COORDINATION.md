@@ -1111,3 +1111,33 @@ Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-ja
 Deployment confirmation: PR #33 merged to `main` as `a54daaf`; GitHub Pages build for `a54daaf` reported `built`. Published dashboard: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/ ; Flagged for Review: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/flagged.html . Root landing: https://wingbangboozle1-lang.github.io/Jack2/ .
 
 Initial observation requiring review: multiple previous builds contain confident numerical recommendations from undisclosed private inputs and inconsistent verification claims. A passing internal-link or regex test is not proof that a statistic matches its cited official source. This session will distinguish primary-source verification, repository-only findings, user-provided facts, and explicitly illustrative assumptions. Unknown private values stay blank in published tables. No owner/parcel identifiers or raw private research will be committed or published.
+
+---
+
+# Session M — `session-5f296f9d` (branch `arena/5f296f9d-jack2`) — claim 2026-11-10
+
+Platform note: this session is pinned to `arena/5f296f9d-jack2`; that branch doubles as the
+integration branch for the pull request to `main`. Work products are isolated in
+`session-5f296f9d/**`; shared files are touched only by the additive changes listed below.
+
+## Task board — Session M claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| M-01 | Read board, detect parallel sessions, claim disjoint scope | in progress | session-5f296f9d | `COORDINATION.md` (append only) |
+| M-02 | Fresh official-source verification, access date 2026-11-10; every row source-linked, unverified values blank + flagged | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/data/sources.json`, `session-5f296f9d/data/metrics.json` |
+| M-03 | Projection system: deterministic 2026–2040 scenarios + seeded Monte Carlo over the decision strategies, 2030–2035 expiry grid | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/scripts/model.py`, `session-5f296f9d/data/model_output.json` |
+| M-04 | Risk register (business-as-usual + black swan) mapped to every decision; decision analysis; executive summary | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/data/risks.json`, `session-5f296f9d/data/decisions.json`, `session-5f296f9d/EXECUTIVE_SUMMARY.md` |
+| M-05 | Clean dashboard: landing page + category subpages + Flagged for Review, all findings in table format | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/*.html`, `session-5f296f9d/assets/` |
+| M-06 | Automated verifier (source per row, blank-if-unverified, PII scan, link check) wired additively into CI | unclaimed→claimed | session-5f296f9d | `session-5f296f9d/scripts/verify.py`, `.github/workflows/verify.yml` (additive step only) |
+| M-07 | Final integration: one additive workspace row + README section, PR to `main`, merge without waiting, confirm Pages deploy, record results here | unclaimed→claimed | session-5f296f9d | `tools/build_site.py` (one additive row in `build_workspaces()`), `README.md` (additive section), this file |
+
+## Session detection at claim time (2026-11-10)
+
+- Remote branches: `main` and this session's `arena/5f296f9d-jack2` only. No other Arena session has a
+  live branch.
+- Open PRs #5, #6, #10, #14, #18, #30 belong to earlier sessions (B/E/F and stale heads) whose branches
+  are already deleted; they are recorded, and this session will not close or merge them.
+- Merge conflicts: none expected; this session changes only its own directory plus the additive shared
+  edits listed in M-06/M-07. If `main` advances during the session, `origin/main` will be merged in
+  without discarding any other session's work and logged here.
