@@ -356,3 +356,91 @@ URL: https://www.sec.gov/Archives/edgar/data/1650132/000119312526436301/fcpt-ex9
 - "we also recently extended 100% of Olive Garden and LongHorn leases maturing in 2027 without landlord concessions".
 - Portfolio September 30, 2026: 1,456 properties in 48 states; 99.5% occupied (by square feet); weighted average remaining lease term approximately 6.7 years.
 - Rent collection 99.7% of contractual base rent for the quarter. No properties sold in the quarter. Net debt to adjusted EBITDAre 6.0x.
+
+## E30 — Los Angeles County, "Key Facts About the Eaton and Palisades Fires" fact sheet — read 2026-11-10
+URL: https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf
+- Eaton Fire: started January 7, 2025; contained January 31, 2025; 14,021 acres; structures destroyed 9,414; damaged 1,074; confirmed fatalities 19.
+- Palisades Fire: started January 7, 2025; contained January 31, 2025; 23,448 acres; structures destroyed 6,837; damaged 973; confirmed fatalities 12.
+- Estimated economic impacts: "Economic output lost: $5.2 billion to $10.1 billion"; businesses impacted ~6,800; workers impacted ~47,000;
+  labor income lost $2.2 to $4.2 billion; tax revenue losses $900 million to $1.6 billion.
+- Recovery: fire debris removed by the US Army Corps of Engineers +2.6 million tons.
+
+## E31 — California Department of Education, District Profile: Los Angeles Unified — read 2026-11-10
+URL: https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000
+- "Data for School Year 2025-26": Enrollment 497,105; English Language Learners 81,328 (16.4%).
+
+## E32 — California School Dashboard, Los Angeles Unified, 2025 academic engagement — read 2026-11-10
+URL: https://www.caschooldashboard.org/reports/19647330000000/2025/academic-engagement
+- Chronic absenteeism (TK–8), all students: 21.9% ("Declined 1.5%"), orange, 268,519 students. By year: 2019 18.2%; 2022 39.8%; 2023 31%; 2024 23.3%; 2025 21.9%.
+- Graduation rate, all students: 86.5% ("Maintained -0.2%"), yellow, 29,899 students. By year: 2019 82.1%; 2022 86%; 2023 83.6%; 2024 86.7%; 2025 86.5%.
+  Breakdown: four-year 84.6%; fifth-year 1.8%; did not graduate 13.5%.
+- The page's year selector lists 2026, but the 2026 report URL returned no data to this session (the 2025 Dashboard is the latest readable).
+- NOT re-opened today: the academic-performance page (https://www.caschooldashboard.org/reports/19647330000000/2025/academic-performance) returned only the
+  legend (no figures), and DataQuest (https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?agglevel=district&year=2024-25&cds=1964733) failed to load.
+  So the ELA / mathematics "distance from standard" figures and the DataQuest 86.2% four-year cohort rate are carried as "could not re-open today".
+
+## E33 — California DOF, Public K-12 Graded Enrollment projections, 2026 Series (August 2026) — read 2026-11-10
+URL: https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/
+- State: "9th consecutive decrease in total Public K-12 Enrollment in the 2025-26 school year (-75,000 students), enrolling 5,731,300 students";
+  "a further decline of 710,500 ... resulting in total enrollment of 5,020,800 by 2035-36."
+- "The biggest decline in enrollment is expected in Los Angeles County, which will fall by 240,800 students by the end of the 10-year projection."
+- High school graduates: 453,600 in 2024-25, projected 381,300 in 2035-36.
+- New to this repository (no earlier workbook cites the 2026 Series county figure).
+
+## E34 — California Secretary of State, November 3, 2026 General Election, state ballot measures — read 2026-11-10
+URL: https://electionresults.sos.ca.gov/returns/ballot-measures
+- Header: "Unofficial Election Results. Results will be certified by December 11, 2026." "( 23,860 of 23,860 ) precincts partially reporting as of November 9, 2026, 4:29 p.m."
+- Prop 1 (housing affordability bonds): Yes 6,310,851 (60.9%) / No 4,048,638 (39.1%).
+- Prop 2 (rainy day fund): Yes 61.3% / No 38.7%.
+- Prop 3 (permanent high-income tax for schools and health care): Yes 6,304,767 (60.4%) / No 4,134,573 (39.6%).
+- Prop 4: Yes 49.6% / No 50.4%. Prop 5: Yes 51.9% / No 48.1%. Prop 37 (loan program for middle-income buyers of new homes): Yes 62.2% / No 37.8%.
+- Prop 38: Yes 54.3%. Prop 39: No 60.5%. Prop 40 (one-time tax on certain taxpayers): Yes 4,923,582 (46.8%) / No 5,593,751 (53.2%).
+- Prop 41: No 54.6%. Prop 42 (prohibits new state personal property taxes and certain retroactive taxes): Yes 5,415,808 (51.9%) / No 5,014,349 (48.1%).
+- Prop 43 (limits voters' ability to raise revenues for local government services): Yes 4,410,729 (43.0%) / No 5,850,565 (57.0%).
+- Prop 44: No 82.1%. Prop 45 (modifies environmental review for certain projects): Yes 4,497,492 (44.0%) / No 5,713,413 (56.0%).
+- No statewide measure repealing or capping local real-estate transfer taxes appears on the list.
+- All figures are unofficial and still changing; an earlier workbook's "about 60% / about 56%" are earlier snapshots of the same count.
+
+## E35 — California Secretary of State, Official Voter Information Guide, quick reference — read 2026-11-10
+URLs: https://voterguide.sos.ca.gov/quick-reference-guide/3.htm ; https://voterguide.sos.ca.gov/quick-reference-guide/43.htm
+- Prop 3: "Makes permanent existing voter-approved tax rates for individuals earning over $371,000 (adjusted annually for inflation)." A YES vote means the
+  increase "in place since 2012 would become permanent instead of expiring in 2031."
+- Prop 43: "Limits voters' ability to pass voter-proposed local special taxes by increasing percentage of votes needed to approve such ballot measures from a
+  majority (over 50%) to two-thirds, beginning January 1, 2027." A NO vote means "Certain local government taxes could continue to be approved by voters with a majority vote."
+  The supporters' argument names "real estate taxes" among the special taxes covered. (Measure ULA was a voter-proposed special tax approved by majority vote.)
+
+## E36 — IRS, Instructions for Form 8824 (2025) — read 2026-11-10
+URL: https://www.irs.gov/instructions/i8824
+- "The replacement property for the exchange must be identified within 45 days after the property being given up is transferred. The replacement property must be
+  received within 180 days, or by the due date of your tax return (including extensions), whichever is earlier."
+- "Related parties and agents of the taxpayer aren't eligible to be QIs".
+- Not real property for section 1031: "Stock ..., bonds, or notes"; "Interests in a partnership (other than ... a valid election under section 761(a))";
+  "Certificates of trust or beneficial interests".
+- "Section 1031 doesn't apply to exchanges of real property held primarily for sale."
+- The current instructions are the 2025 revision (no 2026 revision posted as of the read date).
+
+## E37 — Port of Los Angeles, news release of October 9, 2026 — read 2026-11-10
+URL: https://portoflosangeles.org/references/2026-news-releases/news_100926_sept_cargo
+- "handled 1,042,652 Twenty-Foot Equivalent Units (TEUs) in September, the busiest month in its 118-year history".
+- "Loaded imports reached 545,696 TEUs in September, up 19% compared with last September. Loaded exports totaled 125,751 TEUs, up 10%". Empties approximately 371,206 TEUs.
+- "During the first nine months of 2026, the Port handled nearly 8.1 million TEUs, more than 3% ahead of the same period last year."
+- October 2026 figures are not yet in this release.
+
+## E38 — Los Angeles Tourism & Convention Board, release of July 29, 2026 — read 2026-11-10
+URL: https://www.discoverlosangeles.com/visitors-to-los-angeles-generated-426-billion-in-business-sales-and-supported-more-than-530000-jobs
+- 2025: "$42.6 billion in total business sales"; "more than 530,000 jobs"; "49.5 million visitors in 2025, including 43.1 million domestic visitors and
+  6.4 million international visitors"; "$3.4 billion in state and local tax revenues"; "$305 million to the City's General Fund last fiscal year".
+- The release refers to "a variety of headwinds impacting tourism nationally". Publisher is a tourism-promotion body (kind: official-industry, not a statistical agency).
+
+## E39 — LA Metro, D Line Subway Extension project page — read 2026-11-10
+URL: https://www.metro.net/projects/westside/
+- "Section 1 ... Opened on May 8, 2026": new stations at Wilshire/La Brea, Wilshire/Fairfax and Wilshire/La Cienega.
+- Sections 2 (Beverly Hills, Century City) and 3 (Westwood) remain in construction; "nearly nine miles along Wilshire Bl to Westwood".
+- Business Interruption Fund: "up to $60,000 per impact year based on provable revenue loss" for small businesses along the alignment.
+
+## E40 — Los Angeles City Council District 5, release of May 22, 2026 — read 2026-11-10
+URL: https://councildistrict5.lacity.gov/release-los-angeles-city-council-passes-revised-fy-2026-27-budget
+- Council "voted 12-1 to pass the revised FY 2026-27 budget".
+- "increases the City's Reserve Fund to $515.1 million, or 6.00% of General Fund revenues, and increases the Budget Stabilization Fund transfer from $9 million to
+  $14.5 million"; combined General Fund reserves "approximately 9%".
+- "we still face real fiscal uncertainty, rising costs, and major threats to future City revenues"; the City "prepares to finance $2 billion for the Convention Center expansion".
