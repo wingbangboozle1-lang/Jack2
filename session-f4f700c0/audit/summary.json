@@ -1,8 +1,8 @@
 {
   "as_of": "2026-11-10",
-  "files": 305,
-  "lines": 63274,
-  "bytes": 5163777,
+  "files": 328,
+  "lines": 72858,
+  "bytes": 5672922,
   "fingerprint_excluded": [
     "COORDINATION.md"
   ],
@@ -19,15 +19,15 @@
   "workspaces": {
     "root/config": {
       "files": 22,
-      "lines": 2605,
-      "bytes": 303244,
+      "lines": 2667,
+      "bytes": 299273,
       "privacy_hits": 0,
       "structural_errors": 0
     },
     "root/historical-shared": {
       "files": 52,
-      "lines": 15657,
-      "bytes": 877385,
+      "lines": 15664,
+      "bytes": 877958,
       "privacy_hits": 1,
       "structural_errors": 0
     },
@@ -77,6 +77,13 @@
       "files": 25,
       "lines": 4921,
       "bytes": 440236,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
+    "session-8bee1905": {
+      "files": 23,
+      "lines": 9515,
+      "bytes": 512543,
       "privacy_hits": 0,
       "structural_errors": 0
     },
