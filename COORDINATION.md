@@ -1154,3 +1154,37 @@ Files written: `session-d9c94ed0/**` (new), additive row in `tools/build_site.py
 | M-03 Executive summary + sell-vs-renew synthesis incl. black swans | done | session-d9c94ed0 | `session-d9c94ed0/*.html` |
 | M-04 Dashboard build + line-by-line validation | done | session-d9c94ed0 | `session-d9c94ed0/scripts/**`, `session-d9c94ed0/tests/**` |
 | M-05 Integration, PR, merge, Pages confirmation | in progress | session-d9c94ed0 | Shared landing/navigation/workflow additive only; `COORDINATION.md` |
+---
+
+# Session K (`session-4f075d7e` / `arena/4f075d7e-jack2`) — 2026-11-10 — CLAIM
+
+Pinned by the Arena environment to branch `arena/4f075d7e-jack2` (no other branch may be created or pushed; this branch doubles as the PR head). Baseline `ea702c7` (merge of PR #34, Session I final integration). Sessions A through J plus I/H are all merged to `main`; no live claim was open on the board when this session started.
+
+**Platform constraint (same as A–J).** Arena forbids a separate `session-<id>/<task>` branch here, so scope isolation is done at the directory level (`session-4f075d7e/**`), exactly as every prior session did, and this file is the shared coordination surface.
+
+**Scope claimed (strictly disjoint from prior sessions):**
+
+| Path | Change |
+|---|---|
+| `session-4f075d7e/**` | new — this session's dashboard, data, model, verifier, tests |
+| `COORDINATION.md` | append only (this claim, then the completion record) |
+| `tools/build_site.py` | one additive row inside `build_workspaces()` so `workspaces.html` lists this dashboard |
+| `.github/workflows/verify.yml` | one additive step (regenerate + verify this dashboard), existing steps unchanged |
+| `README.md` | one additive session section |
+
+Not touched: any root page, `data/**`, `docs/**`, any `session-*/**` belonging to earlier sessions, `tools/model.py`, `tools/check_site.py`. Anything needed from another session's scope is logged here instead of edited.
+
+**Task board (Session K).**
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| K-01 | Read board, audit repo, claim scope; independent irregularity spot-checks | in progress | session-4f075d7e | `COORDINATION.md` (append), `session-4f075d7e/audit/**` |
+| K-02 | Fresh official-source research (all sources re-read 2026-11-10): Census, BLS, BEA, DOF, Treasury, SEC (JACK 8-K/10-Q/10-K), EDD-adjacent, CDE, DIR, CDI, CAL FIRE, USGS, FEMA, Port of LA, IRS, LA City Clerk, LA County Assessor | in progress | session-4f075d7e | `session-4f075d7e/data/sources.json`, `session-4f075d7e/data/metrics.json` |
+| K-03 | Projection system: 2026–2040 deterministic Bear/Base/Bull + seeded scenario grid + cap-rate sensitivity + breakeven | in progress | session-4f075d7e | `session-4f075d7e/model/model.py`, `session-4f075d7e/data/model_output.json` |
+| K-04 | Risk register (business-as-usual + black swans, mapped to each decision) and decision analysis with triggers | in progress | session-4f075d7e | `session-4f075d7e/data/risks.json`, `session-4f075d7e/data/decisions.json` |
+| K-05 | Executive summary + clean dashboard: landing + category subpages, table format, Flagged for Review page; privacy-safe placeholders only | in progress | session-4f075d7e | `session-4f075d7e/*.html`, `session-4f075d7e/assets/**`, `session-4f075d7e/EXECUTIVE_SUMMARY.md` |
+| K-06 | Line-by-line verification (row→source completeness, blank-unverified rule, PII scan, link check) | in progress | session-4f075d7e | `session-4f075d7e/scripts/verify.py` |
+| K-07 | Final integration: re-verify combined tree, PR to `main`, merge without waiting, confirm Pages deploy, record result here | in progress | session-4f075d7e | `COORDINATION.md`, `tools/build_site.py` (one additive row), `README.md`, workflow (one additive step) |
+
+Handoff rule: if this claim is more than 60 minutes old with no commits, any session may take the task over and note it here.
+> Conflict-resolution note (2026-11-10, Session K): on `git pull --rebase`, `main` had advanced to `9668e5f` (PR #35, Session M / `session-d9c94ed0`). The only conflicting path was `COORDINATION.md` (append/append at the end of the file). Resolution: both sections are kept verbatim — Session M's board and completion record above, Session K's claim immediately after it. No content from either session was discarded. Session M's directory (`session-d9c94ed0/**`) is Session M's scope and is not touched by Session K.
