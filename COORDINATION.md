@@ -1111,3 +1111,62 @@ Platform constraint: all work stays on the fixed Arena branch `arena/f4f700c0-ja
 Deployment confirmation: PR #33 merged to `main` as `a54daaf`; GitHub Pages build for `a54daaf` reported `built`. Published dashboard: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/ ; Flagged for Review: https://wingbangboozle1-lang.github.io/Jack2/session-f4f700c0/flagged.html . Root landing: https://wingbangboozle1-lang.github.io/Jack2/ .
 
 Initial observation requiring review: multiple previous builds contain confident numerical recommendations from undisclosed private inputs and inconsistent verification claims. A passing internal-link or regex test is not proof that a statistic matches its cited official source. This session will distinguish primary-source verification, repository-only findings, user-provided facts, and explicitly illustrative assumptions. Unknown private values stay blank in published tables. No owner/parcel identifiers or raw private research will be committed or published.
+
+---
+
+# `session-fe942801` (branch `arena/fe942801-jack2`) — claim 2026-11-10T00:35Z
+
+**Label.** No letter is used. Two sessions that started in the same minute as this one
+(`session-5f296f9d`, `session-d9c94ed0`) both filed as "Session M"; letter labels have collided in every
+batch (F/G, I/J/K/L, now M/M). This session is identified only by its Arena id, `fe942801`, which is unique.
+
+**Platform constraint (same as every earlier session).** Arena pins this session to `arena/fe942801-jack2`
+and forbids creating, switching to or pushing any other branch, so the literal `session-<id>/<task>` branch
+scheme in the brief is not executable. Scope isolation is done at the **directory** level
+(`session-fe942801/**`) and this branch doubles as the integration branch and the PR head.
+
+## Session detection at claim time (2026-11-10T00:31Z, `git ls-remote --heads origin`)
+
+| Branch | Last commit (UTC) | State | Claimed scope |
+|---|---|---|---|
+| `arena/5f296f9d-jack2` | 2026-11-10T00:30:09Z | **live** — claim pushed, 1 commit ahead of `main` | `session-5f296f9d/**`; additive row in `tools/build_site.py`, additive CI step, README section |
+| `arena/d9c94ed0-jack2` | 2026-11-10T00:30:32Z | **live** — claim pushed, 1 commit ahead of `main` | `session-d9c94ed0/**`; shared landing/navigation/README/workflow additive only |
+| 31 other `arena/*` heads | 2026-11-06 … 2026-11-08 | stale (more than 24 hours without a commit) | merged or abandoned; not touched |
+
+Open pull requests #5, #6, #10, #14, #18, #30 belong to earlier sessions. This session will not close,
+merge or edit them.
+
+**Correction to a statement on the live board.** `session-5f296f9d`'s claim says "Remote branches: `main`
+and this session's … only. No other Arena session has a live branch." At 00:31Z the remote held 33 `arena/*`
+heads, two of them live. Recorded so the three sessions do not each assume they are alone.
+
+## Task board — `session-fe942801`
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| FE-01 | Read the board, detect live sessions, claim a disjoint scope | done | session-fe942801 | `COORDINATION.md` (append only) |
+| FE-02 | **Repo review**: line-by-line audit of the published root dataset (`data/*.json`) and of the dataset behind the current landing page (`session-f4f700c0/data/*`) against official sources read on 2026-11-10; cross-workbook comparison of all published recommendations; privacy scan of files and git metadata; CI state | in progress | session-fe942801 | read-only on every other session's files; findings in `session-fe942801/data/audit.json`, `session-fe942801/data/irregularities.json` |
+| FE-03 | Fresh official-source evidence ledger, access date 2026-11-10 — every row source-linked with the evidence read; unverified values blank and flagged | in progress | session-fe942801 | `session-fe942801/data/sources.json`, `session-fe942801/data/facts.json` |
+| FE-04 | Projection system: area projection (population, jobs, income, prices) + lease decision model (deterministic scenarios, seeded Monte Carlo, black-swan shocks, 2030–2035 expiry grid) | unclaimed → claimed | session-fe942801 | `session-fe942801/scripts/model.py`, `session-fe942801/data/model_output.json` |
+| FE-05 | Risk register for every decision (business-as-usual + black swan), decision analysis, executive summary | unclaimed → claimed | session-fe942801 | `session-fe942801/data/risks.json`, `session-fe942801/data/decisions.json`, `session-fe942801/EXECUTIVE_SUMMARY.md` |
+| FE-06 | Dashboard: clean landing page + category subpages + Flagged for Review, everything in tables | unclaimed → claimed | session-fe942801 | `session-fe942801/*.html`, `session-fe942801/assets/**`, `session-fe942801/scripts/build_site.py` |
+| FE-07 | Automated verifier (source per row, blank-if-unverified, privacy scan, link check, model consistency) | unclaimed → claimed | session-fe942801 | `session-fe942801/scripts/verify.py`, `.github/workflows/verify.yml` (**one additive step only**) |
+| FE-08 | Integration: one additive workspace row, one README section, PR to `main`, merge without waiting, confirm the Pages deploy, record the result here | unclaimed → claimed | session-fe942801 | `tools/build_site.py` (**one additive row** in `build_workspaces()`), regenerated `workspaces.html`, `README.md` (appended section), this file |
+
+**Non-overlap rule.** Nothing under `session-5f296f9d/**` or `session-d9c94ed0/**` will be created, read into
+this build or edited. No page, dataset or script owned by an earlier session is modified. The four shared
+files named in FE-07/FE-08 receive additive edits only; the other two live sessions have claimed additive
+edits to the same four files, so textual conflicts at merge time are expected and will be resolved by
+keeping every session's lines and regenerating generated files from their generator, then logged here.
+
+**Requests to other session scopes:** none yet. Any that arise are logged below instead of edited.
+
+**Handoff rule.** If this claim is more than 60 minutes old with no commits on `arena/fe942801-jack2`, any
+session may take these tasks over and note the handoff here.
+
+### Log — `session-fe942801`
+
+- **2026-11-10T00:35Z** — claim written and pushed before any research or build work. Baseline `ea702c7`
+  (merge of PR #34). Observed at claim time and to be confirmed in FE-02: the `verify` workflow on `main`
+  is **red** at `ea702c7` (run `42534513123`, step "Fail if generated files are out of date"); GitHub Pages
+  for the same commit is `built`.
