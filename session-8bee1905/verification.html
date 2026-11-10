@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification &mdash; Central LA Jack in the Box NNN</title>
+<meta name="description" content="What the automated gate enforces, what it cannot certify, and the repository findings that changed this build.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Central LA NNN <span>Evidence Workbook</span></a>
+    <div class="meta">As of 2026-11-10 &middot; anonymised &middot; static</div>
+  </div>
+  <nav class="wrap nav"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="economy.html">Area economy</a><a href="tenant-lease.html">Tenant &amp; lease</a><a href="taxes.html">Transaction costs</a><a href="projection.html">Projection limits</a><a href="risks.html">Risks</a><a href="requirements.html">Requirements</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="verification.html" class="active">Verification</a><a href="privacy.html">Privacy</a></nav>
+</header>
+<main id="main" class="wrap">
+<div class="page-head"><h1>Verification</h1><p class="lede">What the automated gate enforces, what it cannot certify, and the repository findings that changed this build.</p></div>
+
+<div class="callout key">
+  <p><strong>Verification status: PASS.</strong>
+  1018 automated checks passed.</p>
+  <p class="muted">The checks are the gate, not a certificate. They enforce that every published row has a
+  resolving official source and a locator, that every unverified row is blank, that links resolve, and that no
+  personal identifier appears. They cannot certify that a number was transcribed correctly — only a human
+  re-reading the cited page can do that, which is why the locator column exists.</p>
+</div>
+
+<section>
+<h2>What each check enforces</h2>
+<div class="tablewrap"><table><thead><tr><th>Rule</th><th>Why it exists</th></tr></thead><tbody>
+<tr><td>Every published row cites a source id that exists and is https</td><td>A number without a citation is a rumour.</td></tr>
+<tr><td>Every verified row carries a locator naming the row or table in the source</td><td>So a reviewer can re-read the exact cell in seconds.</td></tr>
+<tr><td>Every row marked unverified has no value</td><td>The brief forbids inferring or filling in. A blank is information; a guess is not.</td></tr>
+<tr><td>Every risk with no official anchor is flagged</td><td>Judgement must be visible as judgement.</td></tr>
+<tr><td>Cost inputs are marked official or assumption, and only official ones require a source</td><td>The demonstration price must never look like a valuation.</td></tr>
+<tr><td>Measure ULA is not applied below the published threshold</td><td>An arithmetic error here would flatter the sale case by six figures.</td></tr>
+<tr><td>Internal links resolve to real files</td><td>A published site should not contain dead ends.</td></tr>
+<tr><td>No email, phone, street address or parcel number in this session's output</td><td>Privacy is the highest-priority constraint in the brief.</td></tr>
+<tr><td>Every brief requirement is traced to evidence</td><td>So nothing asked for silently disappears.</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>Coverage by category</h2>
+<div class="tablewrap"><table><thead><tr><th>Category</th><th>Rows</th><th>Verified</th><th>Blank or flagged</th><th>State</th></tr></thead><tbody><tr><td>Capital markets</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Consumer demand</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Hazards</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Income</td><td class="num">6</td><td class="num">6</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Jobs</td><td class="num">13</td><td class="num">13</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Population</td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Prices</td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Taxes</td><td class="num">16</td><td class="num">16</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr><tr><td>Tenant</td><td class="num">5</td><td class="num">5</td><td class="num">0</td><td><span class="tag t-ok">verified</span></td></tr></tbody></table></div>
+</section>
+
+<section>
+<h2>Counts</h2>
+<div class="grid g3">
+  <div class="card"><p class="label">Sources</p><p class="value">19</p><p class="sub">All read live on 2026-11-10.</p></div>
+  <div class="card"><p class="label">Metric rows</p><p class="value">57</p><p class="sub">57 verified, 0 deliberately blank.</p></div>
+  <div class="card"><p class="label">Risk pathways</p><p class="value">22</p><p class="sub">Business-as-usual, structural and black swan.</p></div>
+  <div class="card"><p class="label">Decision branches</p><p class="value">6</p><p class="sub">Each with a principal risk and a trigger.</p></div>
+  <div class="card"><p class="label">Requirements traced</p><p class="value">18</p><p class="sub">Every item in the brief.</p></div>
+  <div class="card"><p class="label">Flagged items</p><p class="value">15</p><p class="sub">Published, non-blocking.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Repository review findings</h2>
+<p>The repository was reviewed line by line. The findings that matter are on the
+<a href="flagged.html">Flagged for review</a> page. Three are worth stating here because they affected the
+build itself:</p>
+<div class="card"><h3>The shared CI check had been failing on main since 2026-11-08</h3>
+<p>The audit script fingerprinted the append-only coordination log, so any session that obeyed the board rule
+invalidated the committed snapshot and the gate could never pass again. Diagnosed by replaying the workflow
+steps locally, then fixed so that the log is still scanned on every line but its fingerprint is not asserted.
+Verified by running the workflow steps twice from a clean tree with an empty git status both times.</p></div>
+
+<div class="card"><h3>A hazard citation used by earlier sessions returns 404</h3>
+<p>The earlier USGS address no longer resolves. The live record was located, read, and is the only hazard
+citation used here. The values are unchanged: 60%, 46%, 31%.</p></div>
+
+<div class="card"><h3>Several published pages contain dollar conclusions built on assumed rent</h3>
+<p>The historical root workbook states an assumption converting a percentage of system average unit volume
+into a rent figure, then reports precise wealth differences from it. Those pages are preserved for audit and
+are clearly labelled as historical. They are not endorsed, and this workbook does not use them.</p></div>
+</section>
+
+
+
+</main>
+<footer class="wrap foot">
+  <p><strong>Internal decision support.</strong> Not an appraisal, a tax opinion, legal advice or an offer.
+  No street address, parcel number, owner name, loan number or account appears anywhere on this site.</p>
+  <p>Every published value links to the official source it was read from on 2026-11-10.
+  Values that could not be confirmed are blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Reconstruction: <code>python3 session-8bee1905/scripts/build_site.py</code>
+  &middot; verification: <a href="verification.html">verification log</a>.</p>
+</footer>
+</body>
+</html>

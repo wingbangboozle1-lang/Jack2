@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transaction costs &mdash; Central LA Jack in the Box NNN</title>
+<meta name="description" content="The full cost stack of a sale, with the official rate and source for every component, and the thresholds that matter more than the rates.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Central LA NNN <span>Evidence Workbook</span></a>
+    <div class="meta">As of 2026-11-10 &middot; anonymised &middot; static</div>
+  </div>
+  <nav class="wrap nav"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="economy.html">Area economy</a><a href="tenant-lease.html">Tenant &amp; lease</a><a href="taxes.html" class="active">Transaction costs</a><a href="projection.html">Projection limits</a><a href="risks.html">Risks</a><a href="requirements.html">Requirements</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="verification.html">Verification</a><a href="privacy.html">Privacy</a></nav>
+</header>
+<main id="main" class="wrap">
+<div class="page-head"><h1>Transaction costs</h1><p class="lede">The full cost stack of a sale, with the official rate and source for every component, and the thresholds that matter more than the rates.</p></div>
+
+<div class="callout key">
+  <p><strong>California is the expensive part.</strong> California has no preferential capital gains rate:
+  the gain is taxed as ordinary income, at a top marginal rate of 12.30%. On top of that sits federal
+  recapture at up to 25%, federal capital gain at up to 20%, the 3.8% net investment income tax where it
+  applies, and — inside the City of Los Angeles above $5.4M — a 4% or 5.5% special transfer tax.
+  <a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html" title="California Franchise Tax Board &mdash; Capital gains and losses (personal income types)" rel="noopener">S07</a> <a href="https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf" title="California Franchise Tax Board &mdash; 2025 California Tax Rate Schedules (Form 540)" rel="noopener">S06</a> <a href="https://www.irs.gov/taxtopics/tc409" title="Internal Revenue Service &mdash; Topic no. 409, Capital gains and losses" rel="noopener">S09</a> <a href="https://www.irs.gov/individuals/net-investment-income-tax" title="Internal Revenue Service &mdash; Net Investment Income Tax" rel="noopener">S10</a> <a href="https://finance.lacity.gov/faq/measure-ula" title="Los Angeles Office of Finance &mdash; Real Property Transfer Tax and Measure ULA FAQ" rel="noopener">S04</a></p>
+</div>
+
+<section>
+<h2>Every component of the sale cost, with its source</h2>
+<p>The price is a <strong>demonstration</strong> figure, not a valuation. The rates are official.</p>
+<div class="tablewrap"><table><thead><tr><th>ID</th><th>Component</th><th>Rate / amount</th><th>Basis</th><th>Source</th><th>Note</th></tr></thead><tbody><tr><td>C1</td><td>Gross sale price (demonstration)</td><td class="num">$4,000,000</td><td>assumption</td><td><span class="blank">&mdash;</span></td><td>Demonstration only. Replace with a real offer.</td></tr><tr><td>C2</td><td>City of Los Angeles real property transfer base tax</td><td class="num">0.45%</td><td>official rate</td><td><a href="https://finance.lacity.gov/faq/measure-ula" title="Los Angeles Office of Finance &mdash; Real Property Transfer Tax and Measure ULA FAQ" rel="noopener">S04</a></td><td>$2.25 per $500, rounded up to the nearest $500.</td></tr><tr><td>C3</td><td>County documentary transfer tax (special-city basis)</td><td class="num">0.22%</td><td>official rate</td><td><a href="https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/general-info" title="Los Angeles County Registrar-Recorder/County Clerk &mdash; Documentary Transfer Tax (general information)" rel="noopener">S05</a></td><td>The page states $0.55 per $500 countywide but the full $1.10 per $1,000 for the five special cities including Los Angeles. The higher of the two published statements is used; the ambiguity is flagged.</td></tr><tr><td>C4</td><td>Measure ULA special transfer tax</td><td class="num">0</td><td>official rule, applied conditionally</td><td><a href="https://finance.lacity.gov/faq/measure-ula" title="Los Angeles Office of Finance &mdash; Real Property Transfer Tax and Measure ULA FAQ" rel="noopener">S04</a></td><td>Zero here only because $4.0M is below the $5.4M lower threshold for closings after 2026-06-30. At $5.4M exactly it still does not apply; above it, 4% applies to the whole consideration up to $10.9M, and 5.5% at or above $10.9M. This single line is why the sale decision is jurisdiction-sensitive.</td></tr><tr><td>C5</td><td>Federal unrecaptured section 1250 recapture</td><td class="num">25.00%</td><td>official ceiling rate</td><td><a href="https://www.irs.gov/taxtopics/tc409" title="Internal Revenue Service &mdash; Topic no. 409, Capital gains and losses" rel="noopener">S09</a></td><td>Applies only to the depreciation actually taken. The amount is an owner fact and is blank here; the ceiling rate is official.</td></tr><tr><td>C6</td><td>Federal long-term capital gain</td><td class="num">20.00%</td><td>official ceiling rate</td><td><a href="https://www.irs.gov/taxtopics/tc409" title="Internal Revenue Service &mdash; Topic no. 409, Capital gains and losses" rel="noopener">S09</a></td><td>Plus 3.8% net investment income tax where the statutory thresholds are exceeded.</td></tr><tr><td>C7</td><td>Net investment income tax</td><td class="num">3.80%</td><td>official rate</td><td><a href="https://www.irs.gov/individuals/net-investment-income-tax" title="Internal Revenue Service &mdash; Net Investment Income Tax" rel="noopener">S10</a></td><td>Applies to the lesser of net investment income or MAGI above threshold; whether it bites is an owner fact.</td></tr><tr><td>C8</td><td>California personal income tax on the gain</td><td class="num">12.30%</td><td>official rule plus official top rate</td><td><a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html" title="California Franchise Tax Board &mdash; Capital gains and losses (personal income types)" rel="noopener">S07</a></td><td>California has no preferential capital gains rate (S07); the top marginal rate is 12.30% (S06). The relevant marginal rate depends on the owner&#x27;s other income and is therefore not asserted here beyond the ceiling.</td></tr><tr><td>C9</td><td>Brokerage and closing costs</td><td class="num"><span class="blank">blank</span></td><td>assumption</td><td><span class="blank">&mdash;</span></td><td>Deliberately blank. No official source publishes a commission or closing-cost schedule; quoting one would be an invented number. Obtain a real listing agreement.</td></tr></tbody></table></div>
+</section>
+
+<section>
+<h2>Why the thresholds matter more than the rates</h2>
+<div class="grid g2">
+  <div class="card"><h3>The Measure ULA cliff</h3>
+  <p>For closings after 2026-06-30, the special tax is 4% of the whole consideration above $5.4M and below
+  $10.9M, and 5.5% at or above $10.9M. It is not a bracket on the excess; once the threshold is crossed the
+  rate applies to the entire consideration. A price negotiated just over a threshold can therefore net less
+  than a price just under it. <a href="https://finance.lacity.gov/faq/measure-ula" title="Los Angeles Office of Finance &mdash; Real Property Transfer Tax and Measure ULA FAQ" rel="noopener">S04</a></p></div>
+
+  <div class="card"><h3>The Proposition 13 floor</h3>
+  <p>A sale resets the base-year value to market value, and the 1% levy with its 2% annual cap runs from that
+  new base. A buyer prices the higher tax floor into the offer. Holding preserves the old base, which is a
+  genuine but illiquid benefit that is lost the moment the deed records. <a href="https://boe.ca.gov/pdf/pub800-10.pdf" title="California State Board of Equalization &mdash; How Property Is Assessed for Property Tax Purposes (Publication 800-10)" rel="noopener">S11</a> <a href="https://assessor.lacounty.gov/real-estate-toolkit/proposition-13" title="Los Angeles County Assessor &mdash; Proposition 13" rel="noopener">S12</a></p></div>
+
+  <div class="card"><h3>Recapture does not defer with the rest</h3>
+  <p>Depreciation already taken is recaptured at up to 25% federally. In an exchange that gain is deferred
+  along with the rest, but it is not eliminated: the deferred recapture follows into the replacement property
+  and is recognised eventually. A 1031 is a postponement, never a forgiveness. <a href="https://www.irs.gov/taxtopics/tc409" title="Internal Revenue Service &mdash; Topic no. 409, Capital gains and losses" rel="noopener">S09</a> <a href="https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031" title="Internal Revenue Service &mdash; Like-Kind Exchanges Under IRC Code Section 1031 (FS-2008-18)" rel="noopener">S08</a></p></div>
+
+  <div class="card"><h3>Two published county rates</h3>
+  <p>The Registrar-Recorder page states the county documentary transfer tax as $0.55 per $500 and, on the same
+  page, states that for the five special cities including Los Angeles the county rate is charged at the full
+  $1.10 per $1,000. Both statements are official. This workbook uses the higher figure in the cost stack and
+  flags the ambiguity rather than quietly choosing the cheaper reading. <a href="https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/general-info" title="Los Angeles County Registrar-Recorder/County Clerk &mdash; Documentary Transfer Tax (general information)" rel="noopener">S05</a></p></div>
+</div>
+</section>
+
+<section>
+<h2>What is deliberately blank</h2>
+<p>Brokerage commission and closing costs have <strong>no</strong> official published rate, so that line is
+blank. Clicking a generic percentage onto it would be an invented number in a table of sourced ones. Obtain a
+real listing agreement before costing a sale.</p>
+</section>
+
+</main>
+<footer class="wrap foot">
+  <p><strong>Internal decision support.</strong> Not an appraisal, a tax opinion, legal advice or an offer.
+  No street address, parcel number, owner name, loan number or account appears anywhere on this site.</p>
+  <p>Every published value links to the official source it was read from on 2026-11-10.
+  Values that could not be confirmed are blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Reconstruction: <code>python3 session-8bee1905/scripts/build_site.py</code>
+  &middot; verification: <a href="verification.html">verification log</a>.</p>
+</footer>
+</body>
+</html>

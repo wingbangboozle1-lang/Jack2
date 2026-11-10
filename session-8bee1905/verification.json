@@ -1,0 +1,5111 @@
+{
+  "session": "session-8bee1905",
+  "as_of": "2026-11-10",
+  "passed": true,
+  "checks": 1018,
+  "counts": {
+    "sources": 19,
+    "metrics": 57,
+    "verified": 57,
+    "unverified_blank": 0,
+    "risks": 22,
+    "decisions": 6,
+    "gates": 7,
+    "requirements": 18,
+    "flags": 15,
+    "pages": 13
+  },
+  "failures": [],
+  "checks_detail": [
+    {
+      "check": "source ledger is not empty",
+      "ok": true,
+      "detail": "19 sources"
+    },
+    {
+      "check": "source S01 has an https url",
+      "ok": true,
+      "detail": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225"
+    },
+    {
+      "check": "source S01 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S01 names a publisher",
+      "ok": true,
+      "detail": "U.S. Census Bureau"
+    },
+    {
+      "check": "source S01 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S02 has an https url",
+      "ok": true,
+      "detail": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf"
+    },
+    {
+      "check": "source S02 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S02 names a publisher",
+      "ok": true,
+      "detail": "U.S. Bureau of Labor Statistics"
+    },
+    {
+      "check": "source S02 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S03 has an https url",
+      "ok": true,
+      "detail": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611"
+    },
+    {
+      "check": "source S03 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S03 names a publisher",
+      "ok": true,
+      "detail": "U.S. Department of the Treasury"
+    },
+    {
+      "check": "source S03 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S04 has an https url",
+      "ok": true,
+      "detail": "https://finance.lacity.gov/faq/measure-ula"
+    },
+    {
+      "check": "source S04 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S04 names a publisher",
+      "ok": true,
+      "detail": "Los Angeles Office of Finance"
+    },
+    {
+      "check": "source S04 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S05 has an https url",
+      "ok": true,
+      "detail": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/general-info"
+    },
+    {
+      "check": "source S05 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S05 names a publisher",
+      "ok": true,
+      "detail": "Los Angeles County Registrar-Recorder/County Clerk"
+    },
+    {
+      "check": "source S05 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S06 has an https url",
+      "ok": true,
+      "detail": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf"
+    },
+    {
+      "check": "source S06 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S06 names a publisher",
+      "ok": true,
+      "detail": "California Franchise Tax Board"
+    },
+    {
+      "check": "source S06 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S07 has an https url",
+      "ok": true,
+      "detail": "https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html"
+    },
+    {
+      "check": "source S07 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S07 names a publisher",
+      "ok": true,
+      "detail": "California Franchise Tax Board"
+    },
+    {
+      "check": "source S07 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S08 has an https url",
+      "ok": true,
+      "detail": "https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031"
+    },
+    {
+      "check": "source S08 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S08 names a publisher",
+      "ok": true,
+      "detail": "Internal Revenue Service"
+    },
+    {
+      "check": "source S08 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S09 has an https url",
+      "ok": true,
+      "detail": "https://www.irs.gov/taxtopics/tc409"
+    },
+    {
+      "check": "source S09 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S09 names a publisher",
+      "ok": true,
+      "detail": "Internal Revenue Service"
+    },
+    {
+      "check": "source S09 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S10 has an https url",
+      "ok": true,
+      "detail": "https://www.irs.gov/individuals/net-investment-income-tax"
+    },
+    {
+      "check": "source S10 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S10 names a publisher",
+      "ok": true,
+      "detail": "Internal Revenue Service"
+    },
+    {
+      "check": "source S10 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S11 has an https url",
+      "ok": true,
+      "detail": "https://boe.ca.gov/pdf/pub800-10.pdf"
+    },
+    {
+      "check": "source S11 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S11 names a publisher",
+      "ok": true,
+      "detail": "California State Board of Equalization"
+    },
+    {
+      "check": "source S11 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S12 has an https url",
+      "ok": true,
+      "detail": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13"
+    },
+    {
+      "check": "source S12 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S12 names a publisher",
+      "ok": true,
+      "detail": "Los Angeles County Assessor"
+    },
+    {
+      "check": "source S12 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S13 has an https url",
+      "ok": true,
+      "detail": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area"
+    },
+    {
+      "check": "source S13 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S13 names a publisher",
+      "ok": true,
+      "detail": "U.S. Geological Survey"
+    },
+    {
+      "check": "source S13 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S14 has an https url",
+      "ok": true,
+      "detail": "https://pubs.usgs.gov/fs/2015/3009/"
+    },
+    {
+      "check": "source S14 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S14 names a publisher",
+      "ok": true,
+      "detail": "U.S. Geological Survey"
+    },
+    {
+      "check": "source S14 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S15 has an https url",
+      "ok": true,
+      "detail": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones"
+    },
+    {
+      "check": "source S15 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S15 names a publisher",
+      "ok": true,
+      "detail": "CAL FIRE - Office of the State Fire Marshal"
+    },
+    {
+      "check": "source S15 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S16 has an https url",
+      "ok": true,
+      "detail": "https://dof.ca.gov/forecasting/demographics/projections/"
+    },
+    {
+      "check": "source S16 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S16 names a publisher",
+      "ok": true,
+      "detail": "California Department of Finance"
+    },
+    {
+      "check": "source S16 has a tier",
+      "ok": true,
+      "detail": "A"
+    },
+    {
+      "check": "source S17 has an https url",
+      "ok": true,
+      "detail": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/jack-20260705.htm"
+    },
+    {
+      "check": "source S17 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S17 names a publisher",
+      "ok": true,
+      "detail": "U.S. Securities and Exchange Commission (EDGAR)"
+    },
+    {
+      "check": "source S17 has a tier",
+      "ok": true,
+      "detail": "B"
+    },
+    {
+      "check": "source S18 has an https url",
+      "ok": true,
+      "detail": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/R2.htm"
+    },
+    {
+      "check": "source S18 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S18 names a publisher",
+      "ok": true,
+      "detail": "U.S. Securities and Exchange Commission (EDGAR)"
+    },
+    {
+      "check": "source S18 has a tier",
+      "ok": true,
+      "detail": "B"
+    },
+    {
+      "check": "source S19 has an https url",
+      "ok": true,
+      "detail": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=10-Q&dateb=&owner=include&count=10"
+    },
+    {
+      "check": "source S19 records a retrieval date",
+      "ok": true,
+      "detail": "2026-11-10"
+    },
+    {
+      "check": "source S19 names a publisher",
+      "ok": true,
+      "detail": "U.S. Securities and Exchange Commission (EDGAR)"
+    },
+    {
+      "check": "source S19 has a tier",
+      "ok": true,
+      "detail": "B"
+    },
+    {
+      "check": "source S01 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S02 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S03 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S04 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S05 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S06 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S07 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S08 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S09 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S10 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S11 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S12 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S13 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S14 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S15 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S16 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S17 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S18 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "source S19 is referenced by data or analysis",
+      "ok": true,
+      "detail": "unused source in ledger"
+    },
+    {
+      "check": "metrics table is not empty",
+      "ok": true,
+      "detail": "57 rows"
+    },
+    {
+      "check": "metric M01 has a category",
+      "ok": true,
+      "detail": "Population"
+    },
+    {
+      "check": "metric M01 has a metric label",
+      "ok": true,
+      "detail": "Population estimate, July 1, 2025 (V2025)"
+    },
+    {
+      "check": "metric M01 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M01 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M01 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M01 verified rows carry a value",
+      "ok": true,
+      "detail": "3869089"
+    },
+    {
+      "check": "metric M01 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M02 has a category",
+      "ok": true,
+      "detail": "Population"
+    },
+    {
+      "check": "metric M02 has a metric label",
+      "ok": true,
+      "detail": "Population estimate, July 1, 2025 (V2025)"
+    },
+    {
+      "check": "metric M02 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M02 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M02 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M02 verified rows carry a value",
+      "ok": true,
+      "detail": "9694934"
+    },
+    {
+      "check": "metric M02 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M03 has a category",
+      "ok": true,
+      "detail": "Population"
+    },
+    {
+      "check": "metric M03 has a metric label",
+      "ok": true,
+      "detail": "Population change, April 1, 2020 base to July 1, 2025"
+    },
+    {
+      "check": "metric M03 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M03 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M03 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M03 verified rows carry a value",
+      "ok": true,
+      "detail": "-0.8"
+    },
+    {
+      "check": "metric M03 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M04 has a category",
+      "ok": true,
+      "detail": "Population"
+    },
+    {
+      "check": "metric M04 has a metric label",
+      "ok": true,
+      "detail": "Population change, April 1, 2020 base to July 1, 2025"
+    },
+    {
+      "check": "metric M04 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M04 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M04 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M04 verified rows carry a value",
+      "ok": true,
+      "detail": "-3.2"
+    },
+    {
+      "check": "metric M04 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M05 has a category",
+      "ok": true,
+      "detail": "Income"
+    },
+    {
+      "check": "metric M05 has a metric label",
+      "ok": true,
+      "detail": "Median household income (2024 dollars)"
+    },
+    {
+      "check": "metric M05 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M05 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M05 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M05 verified rows carry a value",
+      "ok": true,
+      "detail": "81939"
+    },
+    {
+      "check": "metric M05 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M06 has a category",
+      "ok": true,
+      "detail": "Income"
+    },
+    {
+      "check": "metric M06 has a metric label",
+      "ok": true,
+      "detail": "Median household income (2024 dollars)"
+    },
+    {
+      "check": "metric M06 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M06 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M06 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M06 verified rows carry a value",
+      "ok": true,
+      "detail": "90112"
+    },
+    {
+      "check": "metric M06 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M07 has a category",
+      "ok": true,
+      "detail": "Income"
+    },
+    {
+      "check": "metric M07 has a metric label",
+      "ok": true,
+      "detail": "Per capita income in past 12 months (2024 dollars)"
+    },
+    {
+      "check": "metric M07 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M07 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M07 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M07 verified rows carry a value",
+      "ok": true,
+      "detail": "47685"
+    },
+    {
+      "check": "metric M07 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M08 has a category",
+      "ok": true,
+      "detail": "Income"
+    },
+    {
+      "check": "metric M08 has a metric label",
+      "ok": true,
+      "detail": "Per capita income in past 12 months (2024 dollars)"
+    },
+    {
+      "check": "metric M08 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M08 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M08 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M08 verified rows carry a value",
+      "ok": true,
+      "detail": "45792"
+    },
+    {
+      "check": "metric M08 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M09 has a category",
+      "ok": true,
+      "detail": "Income"
+    },
+    {
+      "check": "metric M09 has a metric label",
+      "ok": true,
+      "detail": "Persons in poverty"
+    },
+    {
+      "check": "metric M09 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M09 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M09 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M09 verified rows carry a value",
+      "ok": true,
+      "detail": "16.5"
+    },
+    {
+      "check": "metric M09 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M10 has a category",
+      "ok": true,
+      "detail": "Income"
+    },
+    {
+      "check": "metric M10 has a metric label",
+      "ok": true,
+      "detail": "Persons in poverty"
+    },
+    {
+      "check": "metric M10 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M10 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M10 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M10 verified rows carry a value",
+      "ok": true,
+      "detail": "13.3"
+    },
+    {
+      "check": "metric M10 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M11 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M11 has a metric label",
+      "ok": true,
+      "detail": "Unemployment rate, not seasonally adjusted"
+    },
+    {
+      "check": "metric M11 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M11 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M11 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M11 verified rows carry a value",
+      "ok": true,
+      "detail": "4.5"
+    },
+    {
+      "check": "metric M11 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M12 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M12 has a metric label",
+      "ok": true,
+      "detail": "Unemployment rate, not seasonally adjusted"
+    },
+    {
+      "check": "metric M12 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M12 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M12 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M12 verified rows carry a value",
+      "ok": true,
+      "detail": "4.5"
+    },
+    {
+      "check": "metric M12 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M13 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M13 has a metric label",
+      "ok": true,
+      "detail": "Unemployment rate, not seasonally adjusted"
+    },
+    {
+      "check": "metric M13 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M13 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M13 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M13 verified rows carry a value",
+      "ok": true,
+      "detail": "4.4"
+    },
+    {
+      "check": "metric M13 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M14 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M14 has a metric label",
+      "ok": true,
+      "detail": "Unemployment rate, not seasonally adjusted"
+    },
+    {
+      "check": "metric M14 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M14 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M14 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M14 verified rows carry a value",
+      "ok": true,
+      "detail": "4.0"
+    },
+    {
+      "check": "metric M14 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M15 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M15 has a metric label",
+      "ok": true,
+      "detail": "Total nonfarm employment"
+    },
+    {
+      "check": "metric M15 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M15 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M15 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M15 verified rows carry a value",
+      "ok": true,
+      "detail": "6282100"
+    },
+    {
+      "check": "metric M15 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M16 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M16 has a metric label",
+      "ok": true,
+      "detail": "Total nonfarm employment, 12-month change"
+    },
+    {
+      "check": "metric M16 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M16 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M16 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M16 verified rows carry a value",
+      "ok": true,
+      "detail": "0.5"
+    },
+    {
+      "check": "metric M16 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M17 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M17 has a metric label",
+      "ok": true,
+      "detail": "Education and health services employment, 12-month change"
+    },
+    {
+      "check": "metric M17 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M17 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M17 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M17 verified rows carry a value",
+      "ok": true,
+      "detail": "3.8"
+    },
+    {
+      "check": "metric M17 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M18 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M18 has a metric label",
+      "ok": true,
+      "detail": "Information sector employment, 12-month change"
+    },
+    {
+      "check": "metric M18 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M18 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M18 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M18 verified rows carry a value",
+      "ok": true,
+      "detail": "-5.7"
+    },
+    {
+      "check": "metric M18 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M19 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M19 has a metric label",
+      "ok": true,
+      "detail": "Professional and business services employment, 12-month change"
+    },
+    {
+      "check": "metric M19 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M19 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M19 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M19 verified rows carry a value",
+      "ok": true,
+      "detail": "-0.5"
+    },
+    {
+      "check": "metric M19 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M20 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M20 has a metric label",
+      "ok": true,
+      "detail": "Financial activities employment, 12-month change"
+    },
+    {
+      "check": "metric M20 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M20 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M20 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M20 verified rows carry a value",
+      "ok": true,
+      "detail": "-1.7"
+    },
+    {
+      "check": "metric M20 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M21 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M21 has a metric label",
+      "ok": true,
+      "detail": "Manufacturing employment, 12-month change"
+    },
+    {
+      "check": "metric M21 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M21 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M21 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M21 verified rows carry a value",
+      "ok": true,
+      "detail": "-1.2"
+    },
+    {
+      "check": "metric M21 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M22 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M22 has a metric label",
+      "ok": true,
+      "detail": "Leisure and hospitality employment, 12-month change"
+    },
+    {
+      "check": "metric M22 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M22 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M22 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M22 verified rows carry a value",
+      "ok": true,
+      "detail": "1.5"
+    },
+    {
+      "check": "metric M22 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M23 has a category",
+      "ok": true,
+      "detail": "Jobs"
+    },
+    {
+      "check": "metric M23 has a metric label",
+      "ok": true,
+      "detail": "Average weekly wages, all industries"
+    },
+    {
+      "check": "metric M23 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M23 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M23 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M23 verified rows carry a value",
+      "ok": true,
+      "detail": "1704"
+    },
+    {
+      "check": "metric M23 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M24 has a category",
+      "ok": true,
+      "detail": "Prices"
+    },
+    {
+      "check": "metric M24 has a metric label",
+      "ok": true,
+      "detail": "CPI-U, all items, 12-month change"
+    },
+    {
+      "check": "metric M24 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M24 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M24 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M24 verified rows carry a value",
+      "ok": true,
+      "detail": "3.7"
+    },
+    {
+      "check": "metric M24 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M25 has a category",
+      "ok": true,
+      "detail": "Prices"
+    },
+    {
+      "check": "metric M25 has a metric label",
+      "ok": true,
+      "detail": "CPI-U, food, 12-month change"
+    },
+    {
+      "check": "metric M25 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M25 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M25 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M25 verified rows carry a value",
+      "ok": true,
+      "detail": "2.8"
+    },
+    {
+      "check": "metric M25 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M26 has a category",
+      "ok": true,
+      "detail": "Prices"
+    },
+    {
+      "check": "metric M26 has a metric label",
+      "ok": true,
+      "detail": "Employment Cost Index, 12-month change"
+    },
+    {
+      "check": "metric M26 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M26 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M26 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M26 verified rows carry a value",
+      "ok": true,
+      "detail": "3.9"
+    },
+    {
+      "check": "metric M26 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M27 has a category",
+      "ok": true,
+      "detail": "Prices"
+    },
+    {
+      "check": "metric M27 has a metric label",
+      "ok": true,
+      "detail": "Average hourly wage, all occupations"
+    },
+    {
+      "check": "metric M27 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M27 verified rows cite a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M27 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M27 verified rows carry a value",
+      "ok": true,
+      "detail": "37.15"
+    },
+    {
+      "check": "metric M27 with a value cites a source",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "metric M28 has a category",
+      "ok": true,
+      "detail": "Consumer demand"
+    },
+    {
+      "check": "metric M28 has a metric label",
+      "ok": true,
+      "detail": "Food services and drinking places sales"
+    },
+    {
+      "check": "metric M28 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M28 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M28 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M28 verified rows carry a value",
+      "ok": true,
+      "detail": "17366966"
+    },
+    {
+      "check": "metric M28 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M29 has a category",
+      "ok": true,
+      "detail": "Consumer demand"
+    },
+    {
+      "check": "metric M29 has a metric label",
+      "ok": true,
+      "detail": "Food services and drinking places sales"
+    },
+    {
+      "check": "metric M29 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M29 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M29 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M29 verified rows carry a value",
+      "ok": true,
+      "detail": "44000801"
+    },
+    {
+      "check": "metric M29 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M30 has a category",
+      "ok": true,
+      "detail": "Consumer demand"
+    },
+    {
+      "check": "metric M30 has a metric label",
+      "ok": true,
+      "detail": "Total retail sales per capita"
+    },
+    {
+      "check": "metric M30 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M30 verified rows cite a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M30 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M30 verified rows carry a value",
+      "ok": true,
+      "detail": "21281"
+    },
+    {
+      "check": "metric M30 with a value cites a source",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "metric M31 has a category",
+      "ok": true,
+      "detail": "Capital markets"
+    },
+    {
+      "check": "metric M31 has a metric label",
+      "ok": true,
+      "detail": "10-year Treasury constant-maturity yield"
+    },
+    {
+      "check": "metric M31 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M31 verified rows cite a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "metric M31 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M31 verified rows carry a value",
+      "ok": true,
+      "detail": "4.88"
+    },
+    {
+      "check": "metric M31 with a value cites a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "metric M32 has a category",
+      "ok": true,
+      "detail": "Capital markets"
+    },
+    {
+      "check": "metric M32 has a metric label",
+      "ok": true,
+      "detail": "30-year Treasury constant-maturity yield"
+    },
+    {
+      "check": "metric M32 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M32 verified rows cite a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "metric M32 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M32 verified rows carry a value",
+      "ok": true,
+      "detail": "5.26"
+    },
+    {
+      "check": "metric M32 with a value cites a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "metric M33 has a category",
+      "ok": true,
+      "detail": "Capital markets"
+    },
+    {
+      "check": "metric M33 has a metric label",
+      "ok": true,
+      "detail": "10-year Treasury constant-maturity yield"
+    },
+    {
+      "check": "metric M33 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M33 verified rows cite a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "metric M33 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M33 verified rows carry a value",
+      "ok": true,
+      "detail": "4.86"
+    },
+    {
+      "check": "metric M33 with a value cites a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "metric M34 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M34 has a metric label",
+      "ok": true,
+      "detail": "Measure ULA lower threshold, closings after 2026-06-30"
+    },
+    {
+      "check": "metric M34 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M34 verified rows cite a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M34 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M34 verified rows carry a value",
+      "ok": true,
+      "detail": "5400000"
+    },
+    {
+      "check": "metric M34 with a value cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M35 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M35 has a metric label",
+      "ok": true,
+      "detail": "Measure ULA upper threshold, closings after 2026-06-30"
+    },
+    {
+      "check": "metric M35 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M35 verified rows cite a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M35 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M35 verified rows carry a value",
+      "ok": true,
+      "detail": "10900000"
+    },
+    {
+      "check": "metric M35 with a value cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M36 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M36 has a metric label",
+      "ok": true,
+      "detail": "Measure ULA rate, middle band"
+    },
+    {
+      "check": "metric M36 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M36 verified rows cite a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M36 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M36 verified rows carry a value",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "check": "metric M36 with a value cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M37 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M37 has a metric label",
+      "ok": true,
+      "detail": "Measure ULA rate, top band"
+    },
+    {
+      "check": "metric M37 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M37 verified rows cite a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M37 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M37 verified rows carry a value",
+      "ok": true,
+      "detail": "5.5"
+    },
+    {
+      "check": "metric M37 with a value cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M38 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M38 has a metric label",
+      "ok": true,
+      "detail": "City of Los Angeles real property transfer base rate"
+    },
+    {
+      "check": "metric M38 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M38 verified rows cite a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M38 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M38 verified rows carry a value",
+      "ok": true,
+      "detail": "0.45"
+    },
+    {
+      "check": "metric M38 with a value cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "metric M39 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M39 has a metric label",
+      "ok": true,
+      "detail": "County documentary transfer tax rate (countywide)"
+    },
+    {
+      "check": "metric M39 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M39 verified rows cite a source",
+      "ok": true,
+      "detail": "S05"
+    },
+    {
+      "check": "metric M39 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M39 verified rows carry a value",
+      "ok": true,
+      "detail": "0.11"
+    },
+    {
+      "check": "metric M39 with a value cites a source",
+      "ok": true,
+      "detail": "S05"
+    },
+    {
+      "check": "metric M40 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M40 has a metric label",
+      "ok": true,
+      "detail": "California top marginal personal income tax rate"
+    },
+    {
+      "check": "metric M40 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M40 verified rows cite a source",
+      "ok": true,
+      "detail": "S06"
+    },
+    {
+      "check": "metric M40 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M40 verified rows carry a value",
+      "ok": true,
+      "detail": "12.3"
+    },
+    {
+      "check": "metric M40 with a value cites a source",
+      "ok": true,
+      "detail": "S06"
+    },
+    {
+      "check": "metric M41 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M41 has a metric label",
+      "ok": true,
+      "detail": "California preferential capital gains rate"
+    },
+    {
+      "check": "metric M41 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M41 verified rows cite a source",
+      "ok": true,
+      "detail": "S07"
+    },
+    {
+      "check": "metric M41 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M41 verified rows carry a value",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "check": "metric M41 with a value cites a source",
+      "ok": true,
+      "detail": "S07"
+    },
+    {
+      "check": "metric M42 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M42 has a metric label",
+      "ok": true,
+      "detail": "Federal unrecaptured section 1250 gain maximum rate"
+    },
+    {
+      "check": "metric M42 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M42 verified rows cite a source",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "metric M42 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M42 verified rows carry a value",
+      "ok": true,
+      "detail": "25"
+    },
+    {
+      "check": "metric M42 with a value cites a source",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "metric M43 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M43 has a metric label",
+      "ok": true,
+      "detail": "Federal maximum net capital gain rate"
+    },
+    {
+      "check": "metric M43 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M43 verified rows cite a source",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "metric M43 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M43 verified rows carry a value",
+      "ok": true,
+      "detail": "20"
+    },
+    {
+      "check": "metric M43 with a value cites a source",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "metric M44 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M44 has a metric label",
+      "ok": true,
+      "detail": "Net investment income tax rate"
+    },
+    {
+      "check": "metric M44 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M44 verified rows cite a source",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "metric M44 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M44 verified rows carry a value",
+      "ok": true,
+      "detail": "3.8"
+    },
+    {
+      "check": "metric M44 with a value cites a source",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "metric M45 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M45 has a metric label",
+      "ok": true,
+      "detail": "Net investment income tax threshold, married filing jointly"
+    },
+    {
+      "check": "metric M45 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M45 verified rows cite a source",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "metric M45 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M45 verified rows carry a value",
+      "ok": true,
+      "detail": "250000"
+    },
+    {
+      "check": "metric M45 with a value cites a source",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "metric M46 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M46 has a metric label",
+      "ok": true,
+      "detail": "Section 1031 identification window"
+    },
+    {
+      "check": "metric M46 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M46 verified rows cite a source",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "metric M46 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M46 verified rows carry a value",
+      "ok": true,
+      "detail": "45"
+    },
+    {
+      "check": "metric M46 with a value cites a source",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "metric M47 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M47 has a metric label",
+      "ok": true,
+      "detail": "Section 1031 completion window"
+    },
+    {
+      "check": "metric M47 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M47 verified rows cite a source",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "metric M47 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M47 verified rows carry a value",
+      "ok": true,
+      "detail": "180"
+    },
+    {
+      "check": "metric M47 with a value cites a source",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "metric M48 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M48 has a metric label",
+      "ok": true,
+      "detail": "Proposition 13 general levy limit"
+    },
+    {
+      "check": "metric M48 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M48 verified rows cite a source",
+      "ok": true,
+      "detail": "S11"
+    },
+    {
+      "check": "metric M48 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M48 verified rows carry a value",
+      "ok": true,
+      "detail": "1"
+    },
+    {
+      "check": "metric M48 with a value cites a source",
+      "ok": true,
+      "detail": "S11"
+    },
+    {
+      "check": "metric M49 has a category",
+      "ok": true,
+      "detail": "Taxes"
+    },
+    {
+      "check": "metric M49 has a metric label",
+      "ok": true,
+      "detail": "Proposition 13 annual assessed-value increase cap"
+    },
+    {
+      "check": "metric M49 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M49 verified rows cite a source",
+      "ok": true,
+      "detail": "S11"
+    },
+    {
+      "check": "metric M49 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M49 verified rows carry a value",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "check": "metric M49 with a value cites a source",
+      "ok": true,
+      "detail": "S11"
+    },
+    {
+      "check": "metric M50 has a category",
+      "ok": true,
+      "detail": "Hazards"
+    },
+    {
+      "check": "metric M50 has a metric label",
+      "ok": true,
+      "detail": "30-year probability, M>=6.7 earthquake, Los Angeles region"
+    },
+    {
+      "check": "metric M50 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M50 verified rows cite a source",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "metric M50 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M50 verified rows carry a value",
+      "ok": true,
+      "detail": "60"
+    },
+    {
+      "check": "metric M50 with a value cites a source",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "metric M51 has a category",
+      "ok": true,
+      "detail": "Hazards"
+    },
+    {
+      "check": "metric M51 has a metric label",
+      "ok": true,
+      "detail": "30-year probability, M>=7.0 earthquake, Los Angeles region"
+    },
+    {
+      "check": "metric M51 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M51 verified rows cite a source",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "metric M51 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M51 verified rows carry a value",
+      "ok": true,
+      "detail": "46"
+    },
+    {
+      "check": "metric M51 with a value cites a source",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "metric M52 has a category",
+      "ok": true,
+      "detail": "Hazards"
+    },
+    {
+      "check": "metric M52 has a metric label",
+      "ok": true,
+      "detail": "30-year probability, M>=7.5 earthquake, Los Angeles region"
+    },
+    {
+      "check": "metric M52 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M52 verified rows cite a source",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "metric M52 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M52 verified rows carry a value",
+      "ok": true,
+      "detail": "31"
+    },
+    {
+      "check": "metric M52 with a value cites a source",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "metric M53 has a category",
+      "ok": true,
+      "detail": "Tenant"
+    },
+    {
+      "check": "metric M53 has a metric label",
+      "ok": true,
+      "detail": "Jack in the Box Inc. cash and cash equivalents"
+    },
+    {
+      "check": "metric M53 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M53 verified rows cite a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M53 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M53 verified rows carry a value",
+      "ok": true,
+      "detail": "46318000"
+    },
+    {
+      "check": "metric M53 with a value cites a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M54 has a category",
+      "ok": true,
+      "detail": "Tenant"
+    },
+    {
+      "check": "metric M54 has a metric label",
+      "ok": true,
+      "detail": "Jack in the Box Inc. total assets"
+    },
+    {
+      "check": "metric M54 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M54 verified rows cite a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M54 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M54 verified rows carry a value",
+      "ok": true,
+      "detail": "1901029000"
+    },
+    {
+      "check": "metric M54 with a value cites a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M55 has a category",
+      "ok": true,
+      "detail": "Tenant"
+    },
+    {
+      "check": "metric M55 has a metric label",
+      "ok": true,
+      "detail": "Jack in the Box Inc. long-term debt, net of current maturities"
+    },
+    {
+      "check": "metric M55 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M55 verified rows cite a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M55 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M55 verified rows carry a value",
+      "ok": true,
+      "detail": "1428667000"
+    },
+    {
+      "check": "metric M55 with a value cites a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M56 has a category",
+      "ok": true,
+      "detail": "Tenant"
+    },
+    {
+      "check": "metric M56 has a metric label",
+      "ok": true,
+      "detail": "Jack in the Box Inc. total stockholders' deficit"
+    },
+    {
+      "check": "metric M56 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M56 verified rows cite a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M56 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "metric M56 verified rows carry a value",
+      "ok": true,
+      "detail": "-901286000"
+    },
+    {
+      "check": "metric M56 with a value cites a source",
+      "ok": true,
+      "detail": "S18"
+    },
+    {
+      "check": "metric M57 has a category",
+      "ok": true,
+      "detail": "Tenant"
+    },
+    {
+      "check": "metric M57 has a metric label",
+      "ok": true,
+      "detail": "Most recent quarterly report filed by the tenant's parent"
+    },
+    {
+      "check": "metric M57 status is known",
+      "ok": true,
+      "detail": "verified"
+    },
+    {
+      "check": "metric M57 verified rows cite a source",
+      "ok": true,
+      "detail": "S19"
+    },
+    {
+      "check": "metric M57 verified rows carry a locator",
+      "ok": true,
+      "detail": "no locator: cannot be re-checked"
+    },
+    {
+      "check": "row ids are unique",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "risk register covers business-as-usual",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "risk register covers black swans",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "risk register is substantial",
+      "ok": true,
+      "detail": "22 rows"
+    },
+    {
+      "check": "risk R01 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R01 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R01 names the decisions affected",
+      "ok": true,
+      "detail": "Extend and hold; hold without extension; extend then sell"
+    },
+    {
+      "check": "risk R01 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R01 source exists",
+      "ok": true,
+      "detail": "S17"
+    },
+    {
+      "check": "risk R02 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R02 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R02 names the decisions affected",
+      "ok": true,
+      "detail": "Extend and hold; hold without extension"
+    },
+    {
+      "check": "risk R02 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/5"
+    },
+    {
+      "check": "risk R02 source exists",
+      "ok": true,
+      "detail": "S17"
+    },
+    {
+      "check": "risk R03 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R03 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R03 names the decisions affected",
+      "ok": true,
+      "detail": "All hold and extend branches"
+    },
+    {
+      "check": "risk R03 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R03 source exists",
+      "ok": true,
+      "detail": "S17"
+    },
+    {
+      "check": "risk R04 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R04 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R04 names the decisions affected",
+      "ok": true,
+      "detail": "Sell before expiry; extend then sell"
+    },
+    {
+      "check": "risk R04 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R04 source exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "risk R05 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R05 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R05 names the decisions affected",
+      "ok": true,
+      "detail": "Hold without extension; sell close to expiry"
+    },
+    {
+      "check": "risk R05 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "4/3"
+    },
+    {
+      "check": "risk R05 source exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "risk R06 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R06 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R06 names the decisions affected",
+      "ok": true,
+      "detail": "Every sale branch"
+    },
+    {
+      "check": "risk R06 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R06 source exists",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "risk R07 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R07 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R07 names the decisions affected",
+      "ok": true,
+      "detail": "Every sale branch, through price"
+    },
+    {
+      "check": "risk R07 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "5/3"
+    },
+    {
+      "check": "risk R07 source exists",
+      "ok": true,
+      "detail": "S11"
+    },
+    {
+      "check": "risk R08 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R08 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R08 names the decisions affected",
+      "ok": true,
+      "detail": "Sell outright; sell and hold reserves"
+    },
+    {
+      "check": "risk R08 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "5/5"
+    },
+    {
+      "check": "risk R08 source exists",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "risk R09 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R09 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R09 names the decisions affected",
+      "ok": true,
+      "detail": "Sell and exchange into diversified real property"
+    },
+    {
+      "check": "risk R09 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/4"
+    },
+    {
+      "check": "risk R09 source exists",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "risk R10 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R10 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R10 names the decisions affected",
+      "ok": true,
+      "detail": "Sell and hold reserves; sell and exchange"
+    },
+    {
+      "check": "risk R10 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "4/3"
+    },
+    {
+      "check": "risk R10 source exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "risk R11 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R11 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R11 names the decisions affected",
+      "ok": true,
+      "detail": "All hold branches; a sale after the event"
+    },
+    {
+      "check": "risk R11 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/5"
+    },
+    {
+      "check": "risk R11 source exists",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "risk R12 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R12 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R12 names the decisions affected",
+      "ok": true,
+      "detail": "All hold branches; insurance cost"
+    },
+    {
+      "check": "risk R12 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/4"
+    },
+    {
+      "check": "risk R12 source exists",
+      "ok": true,
+      "detail": "S15"
+    },
+    {
+      "check": "risk R13 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R13 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R13 names the decisions affected",
+      "ok": true,
+      "detail": "All hold branches; lender covenants"
+    },
+    {
+      "check": "risk R13 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R13 source exists",
+      "ok": true,
+      "detail": "S15"
+    },
+    {
+      "check": "risk R14 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R14 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R14 names the decisions affected",
+      "ok": true,
+      "detail": "All hold branches"
+    },
+    {
+      "check": "risk R14 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/3"
+    },
+    {
+      "check": "risk R14 without a source is flagged",
+      "ok": true,
+      "detail": "a risk with no official source must be flagged rather than presented as sourced"
+    },
+    {
+      "check": "risk R15 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R15 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R15 names the decisions affected",
+      "ok": true,
+      "detail": "Extend and hold; renewal rent"
+    },
+    {
+      "check": "risk R15 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/3"
+    },
+    {
+      "check": "risk R15 source exists",
+      "ok": true,
+      "detail": "S01"
+    },
+    {
+      "check": "risk R16 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R16 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R16 names the decisions affected",
+      "ok": true,
+      "detail": "Renewal rent; tenant survival"
+    },
+    {
+      "check": "risk R16 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "4/3"
+    },
+    {
+      "check": "risk R16 source exists",
+      "ok": true,
+      "detail": "S02"
+    },
+    {
+      "check": "risk R17 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R17 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R17 names the decisions affected",
+      "ok": true,
+      "detail": "Sell before expiry; refinance; exchange"
+    },
+    {
+      "check": "risk R17 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R17 source exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "risk R18 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R18 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R18 names the decisions affected",
+      "ok": true,
+      "detail": "Sell branches"
+    },
+    {
+      "check": "risk R18 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/3"
+    },
+    {
+      "check": "risk R18 source exists",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "risk R19 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R19 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R19 names the decisions affected",
+      "ok": true,
+      "detail": "All branches; saleability"
+    },
+    {
+      "check": "risk R19 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "2/5"
+    },
+    {
+      "check": "risk R19 without a source is flagged",
+      "ok": true,
+      "detail": "a risk with no official source must be flagged rather than presented as sourced"
+    },
+    {
+      "check": "risk R20 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R20 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R20 names the decisions affected",
+      "ok": true,
+      "detail": "All hold branches, as a portfolio question"
+    },
+    {
+      "check": "risk R20 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "5/4"
+    },
+    {
+      "check": "risk R20 source exists",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "risk R21 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R21 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R21 names the decisions affected",
+      "ok": true,
+      "detail": "Every branch"
+    },
+    {
+      "check": "risk R21 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "3/4"
+    },
+    {
+      "check": "risk R21 without a source is flagged",
+      "ok": true,
+      "detail": "a risk with no official source must be flagged rather than presented as sourced"
+    },
+    {
+      "check": "risk R22 states a mechanism",
+      "ok": true,
+      "detail": "mechanism too thin"
+    },
+    {
+      "check": "risk R22 states a mitigation",
+      "ok": true,
+      "detail": "mitigation too thin"
+    },
+    {
+      "check": "risk R22 names the decisions affected",
+      "ok": true,
+      "detail": "All conclusions"
+    },
+    {
+      "check": "risk R22 scores likelihood and impact in range",
+      "ok": true,
+      "detail": "5/3"
+    },
+    {
+      "check": "risk R22 without a source is flagged",
+      "ok": true,
+      "detail": "a risk with no official source must be flagged rather than presented as sourced"
+    },
+    {
+      "check": "at least five decision branches are analysed",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "check": "decision D1 states its principal risk",
+      "ok": true,
+      "detail": "Selling into a thin market and paying a peak tax rate to do it."
+    },
+    {
+      "check": "decision D1 states when it is viable",
+      "ok": true,
+      "detail": "You need liquidity or diversification more than you need deferral, or the implied cap rate on a real offer is below the return you can genuinely earn elsewhere after tax."
+    },
+    {
+      "check": "decision D1 cites at least one source",
+      "ok": true,
+      "detail": "['S04', 'S05', 'S06', 'S07', 'S09', 'S10']"
+    },
+    {
+      "check": "decision D1 source S04 exists",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "decision D1 source S05 exists",
+      "ok": true,
+      "detail": "S05"
+    },
+    {
+      "check": "decision D1 source S06 exists",
+      "ok": true,
+      "detail": "S06"
+    },
+    {
+      "check": "decision D1 source S07 exists",
+      "ok": true,
+      "detail": "S07"
+    },
+    {
+      "check": "decision D1 source S09 exists",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "decision D1 source S10 exists",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "decision D2 states its principal risk",
+      "ok": true,
+      "detail": "Paying for term with rent you cannot recover, or discovering the tenant will not sign at any price you can accept."
+    },
+    {
+      "check": "decision D2 states when it is viable",
+      "ok": true,
+      "detail": "The tenant will sign a market-supported extension on acceptable terms, and the added term raises the price by more than the rent concession costs."
+    },
+    {
+      "check": "decision D2 cites at least one source",
+      "ok": true,
+      "detail": "['S17', 'S03', 'S04']"
+    },
+    {
+      "check": "decision D2 source S17 exists",
+      "ok": true,
+      "detail": "S17"
+    },
+    {
+      "check": "decision D2 source S03 exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "decision D2 source S04 exists",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "decision D3 states its principal risk",
+      "ok": true,
+      "detail": "A correlated local event that removes income and collateral simultaneously, with no second asset to absorb it."
+    },
+    {
+      "check": "decision D3 states when it is viable",
+      "ok": true,
+      "detail": "Renewal rent clears the debt service and reserve with real coverage, the owner can absorb a long vacancy and an insurance shock, and the concentration is acceptable to the owner's overall balance sheet."
+    },
+    {
+      "check": "decision D3 cites at least one source",
+      "ok": true,
+      "detail": "['S13', 'S15', 'S11']"
+    },
+    {
+      "check": "decision D3 source S13 exists",
+      "ok": true,
+      "detail": "S13"
+    },
+    {
+      "check": "decision D3 source S15 exists",
+      "ok": true,
+      "detail": "S15"
+    },
+    {
+      "check": "decision D3 source S11 exists",
+      "ok": true,
+      "detail": "S11"
+    },
+    {
+      "check": "decision D4 states its principal risk",
+      "ok": true,
+      "detail": "Missing the window and paying the full tax anyway, having also paid the transaction costs."
+    },
+    {
+      "check": "decision D4 states when it is viable",
+      "ok": true,
+      "detail": "There is real gain to defer, a credible replacement property or several can be identified within 45 days, and financing for the replacement is arranged before the relinquished sale closes."
+    },
+    {
+      "check": "decision D4 cites at least one source",
+      "ok": true,
+      "detail": "['S08', 'S09', 'S06']"
+    },
+    {
+      "check": "decision D4 source S08 exists",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "decision D4 source S09 exists",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "decision D4 source S06 exists",
+      "ok": true,
+      "detail": "S06"
+    },
+    {
+      "check": "decision D5 states its principal risk",
+      "ok": true,
+      "detail": "Drift. Ending up in the final two years of term with no lease, no offer and no exchange plan."
+    },
+    {
+      "check": "decision D5 states when it is viable",
+      "ok": true,
+      "detail": "Near-term income is needed and no good offer exists, and a dated review trigger is set in advance."
+    },
+    {
+      "check": "decision D5 cites at least one source",
+      "ok": true,
+      "detail": "['S03']"
+    },
+    {
+      "check": "decision D5 source S03 exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "decision D6 states its principal risk",
+      "ok": true,
+      "detail": "A maturity wall that coincides with a vacancy or a rate spike."
+    },
+    {
+      "check": "decision D6 states when it is viable",
+      "ok": true,
+      "detail": "Existing debt terms are poor, the lease has enough term to support new financing, and coverage survives a stress case."
+    },
+    {
+      "check": "decision D6 cites at least one source",
+      "ok": true,
+      "detail": "['S03']"
+    },
+    {
+      "check": "decision D6 source S03 exists",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "decision rule has ordered gates",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "gate 1 is sequenced",
+      "ok": true,
+      "detail": "1 after 0"
+    },
+    {
+      "check": "gate 1 cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "gate 2 is sequenced",
+      "ok": true,
+      "detail": "2 after 1"
+    },
+    {
+      "check": "gate 2 cites a source",
+      "ok": true,
+      "detail": "S17"
+    },
+    {
+      "check": "gate 3 is sequenced",
+      "ok": true,
+      "detail": "3 after 2"
+    },
+    {
+      "check": "gate 3 cites a source",
+      "ok": true,
+      "detail": "S17"
+    },
+    {
+      "check": "gate 4 is sequenced",
+      "ok": true,
+      "detail": "4 after 3"
+    },
+    {
+      "check": "gate 4 cites a source",
+      "ok": true,
+      "detail": "S07"
+    },
+    {
+      "check": "gate 5 is sequenced",
+      "ok": true,
+      "detail": "5 after 4"
+    },
+    {
+      "check": "gate 5 cites a source",
+      "ok": true,
+      "detail": "S15"
+    },
+    {
+      "check": "gate 6 is sequenced",
+      "ok": true,
+      "detail": "6 after 5"
+    },
+    {
+      "check": "gate 6 cites a source",
+      "ok": true,
+      "detail": "S08"
+    },
+    {
+      "check": "gate 7 is sequenced",
+      "ok": true,
+      "detail": "7 after 6"
+    },
+    {
+      "check": "gate 7 cites a source",
+      "ok": true,
+      "detail": "S03"
+    },
+    {
+      "check": "cost input C1 assumption is marked",
+      "ok": true,
+      "detail": "assumption"
+    },
+    {
+      "check": "cost input C2 official basis cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "cost input C2 source exists",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "cost input C3 official basis cites a source",
+      "ok": true,
+      "detail": "S05"
+    },
+    {
+      "check": "cost input C3 source exists",
+      "ok": true,
+      "detail": "S05"
+    },
+    {
+      "check": "cost input C4 official basis cites a source",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "cost input C4 source exists",
+      "ok": true,
+      "detail": "S04"
+    },
+    {
+      "check": "cost input C5 official basis cites a source",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "cost input C5 source exists",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "cost input C6 official basis cites a source",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "cost input C6 source exists",
+      "ok": true,
+      "detail": "S09"
+    },
+    {
+      "check": "cost input C7 official basis cites a source",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "cost input C7 source exists",
+      "ok": true,
+      "detail": "S10"
+    },
+    {
+      "check": "cost input C8 official basis cites a source",
+      "ok": true,
+      "detail": "S07"
+    },
+    {
+      "check": "cost input C8 source exists",
+      "ok": true,
+      "detail": "S07"
+    },
+    {
+      "check": "cost input C9 assumption is marked",
+      "ok": true,
+      "detail": "assumption"
+    },
+    {
+      "check": "ULA is not applied below the published threshold",
+      "ok": true,
+      "detail": "price=4000000.0 ula=0"
+    },
+    {
+      "check": "every brief requirement is traced",
+      "ok": true,
+      "detail": "18"
+    },
+    {
+      "check": "requirement Q01 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q01 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q02 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q02 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q03 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q03 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q04 has a status",
+      "ok": true,
+      "detail": "partly met"
+    },
+    {
+      "check": "requirement Q04 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q05 has a status",
+      "ok": true,
+      "detail": "partly met"
+    },
+    {
+      "check": "requirement Q05 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q06 has a status",
+      "ok": true,
+      "detail": "partly met"
+    },
+    {
+      "check": "requirement Q06 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q07 has a status",
+      "ok": true,
+      "detail": "partly met"
+    },
+    {
+      "check": "requirement Q07 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q08 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q08 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q09 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q09 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q10 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q10 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q11 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q11 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q12 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q12 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q13 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q13 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q14 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q14 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q15 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q15 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q16 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q16 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q17 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q17 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "requirement Q18 has a status",
+      "ok": true,
+      "detail": "met"
+    },
+    {
+      "check": "requirement Q18 states its evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "unverified items are published",
+      "ok": true,
+      "detail": "15"
+    },
+    {
+      "check": "flag F01 has a severity",
+      "ok": true,
+      "detail": "High"
+    },
+    {
+      "check": "flag F01 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F01 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F02 has a severity",
+      "ok": true,
+      "detail": "High"
+    },
+    {
+      "check": "flag F02 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F02 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F03 has a severity",
+      "ok": true,
+      "detail": "High"
+    },
+    {
+      "check": "flag F03 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F03 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F04 has a severity",
+      "ok": true,
+      "detail": "High"
+    },
+    {
+      "check": "flag F04 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F04 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F05 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F05 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F05 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F06 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F06 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F06 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F07 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F07 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F07 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F08 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F08 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F08 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F09 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F09 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F09 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F10 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F10 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F10 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F11 has a severity",
+      "ok": true,
+      "detail": "Medium"
+    },
+    {
+      "check": "flag F11 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F11 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F12 has a severity",
+      "ok": true,
+      "detail": "Low"
+    },
+    {
+      "check": "flag F12 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F12 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F13 has a severity",
+      "ok": true,
+      "detail": "Low"
+    },
+    {
+      "check": "flag F13 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F13 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F14 has a severity",
+      "ok": true,
+      "detail": "Low"
+    },
+    {
+      "check": "flag F14 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F14 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "flag F15 has a severity",
+      "ok": true,
+      "detail": "Low"
+    },
+    {
+      "check": "flag F15 states evidence",
+      "ok": true,
+      "detail": "thin evidence"
+    },
+    {
+      "check": "flag F15 states an action",
+      "ok": true,
+      "detail": "thin action"
+    },
+    {
+      "check": "the workbook has pages",
+      "ok": true,
+      "detail": "['decision.html', 'economy.html', 'executive-summary.html', 'flagged.html', 'index.html', 'privacy.html', 'projection.html', 'requirements.html', 'risks.html', 'sources.html', 'taxes.html', 'tenant-lease.html', 'verification.html']"
+    },
+    {
+      "check": "decision.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "decision.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "decision.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "decision.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "decision.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "decision.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "decision.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "decision.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "decision.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "decision.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "decision.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "decision.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "decision.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "decision.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "decision.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "decision.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "decision.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "economy.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "economy.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "economy.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "economy.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "economy.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "economy.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "economy.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "economy.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "economy.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "economy.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "economy.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "economy.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "economy.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "economy.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "economy.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "economy.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "economy.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "executive-summary.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "executive-summary.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "executive-summary.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "executive-summary.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "executive-summary.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "executive-summary.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "executive-summary.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "executive-summary.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "executive-summary.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "executive-summary.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "executive-summary.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "executive-summary.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "executive-summary.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "executive-summary.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "executive-summary.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "executive-summary.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "executive-summary.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "executive-summary.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "executive-summary.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "executive-summary.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "flagged.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "flagged.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "flagged.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "flagged.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "flagged.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "flagged.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "flagged.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "flagged.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "flagged.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "flagged.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "flagged.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "flagged.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "flagged.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "flagged.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "flagged.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "flagged.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "flagged.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "index.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "index.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "index.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "index.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "index.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "index.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "index.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "index.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "index.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "index.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "index.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "index.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "index.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "index.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "index.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "index.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "index.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "index.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "index.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "index.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "index.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "index.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "index.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "index.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "privacy.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "privacy.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "privacy.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "privacy.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "privacy.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "privacy.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "privacy.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "privacy.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "privacy.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "privacy.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "privacy.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "privacy.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "privacy.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "privacy.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "privacy.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "privacy.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "privacy.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "privacy.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "projection.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "projection.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "projection.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "projection.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "projection.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "projection.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "projection.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "projection.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "projection.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "projection.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "projection.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "projection.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "projection.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "projection.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "projection.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "projection.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "projection.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "requirements.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "requirements.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "requirements.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "requirements.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "requirements.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "requirements.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "requirements.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "requirements.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "requirements.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "requirements.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "requirements.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "requirements.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "requirements.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "requirements.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "requirements.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "requirements.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "requirements.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "requirements.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "requirements.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "requirements.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "requirements.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "requirements.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "requirements.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "requirements.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "requirements.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "requirements.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "requirements.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "requirements.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "requirements.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "requirements.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "requirements.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "requirements.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "requirements.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "requirements.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "requirements.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "requirements.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "risks.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "risks.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "risks.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "risks.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "risks.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "risks.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "risks.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "risks.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "risks.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "risks.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "risks.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "risks.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "risks.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "risks.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "risks.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "risks.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "risks.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "sources.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "sources.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "sources.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "sources.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "sources.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "sources.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "sources.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "sources.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "sources.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "sources.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "sources.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "sources.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "sources.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "sources.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "sources.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "sources.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "sources.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "sources.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "taxes.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "taxes.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "taxes.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "taxes.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "taxes.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "taxes.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "taxes.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "taxes.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "taxes.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "taxes.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "taxes.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "taxes.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "taxes.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "taxes.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "taxes.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "taxes.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "taxes.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "tenant-lease.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "tenant-lease.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "tenant-lease.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "tenant-lease.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "tenant-lease.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "tenant-lease.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "tenant-lease.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "tenant-lease.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "tenant-lease.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "tenant-lease.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "tenant-lease.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "tenant-lease.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "tenant-lease.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "tenant-lease.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "tenant-lease.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "tenant-lease.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "tenant-lease.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "tenant-lease.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "verification.html link assets/style.css resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/assets/style.css"
+    },
+    {
+      "check": "verification.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "verification.html link index.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/index.html"
+    },
+    {
+      "check": "verification.html link executive-summary.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/executive-summary.html"
+    },
+    {
+      "check": "verification.html link decision.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/decision.html"
+    },
+    {
+      "check": "verification.html link economy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/economy.html"
+    },
+    {
+      "check": "verification.html link tenant-lease.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/tenant-lease.html"
+    },
+    {
+      "check": "verification.html link taxes.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/taxes.html"
+    },
+    {
+      "check": "verification.html link projection.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/projection.html"
+    },
+    {
+      "check": "verification.html link risks.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/risks.html"
+    },
+    {
+      "check": "verification.html link requirements.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/requirements.html"
+    },
+    {
+      "check": "verification.html link sources.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/sources.html"
+    },
+    {
+      "check": "verification.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "verification.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "verification.html link privacy.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/privacy.html"
+    },
+    {
+      "check": "verification.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "verification.html link flagged.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/flagged.html"
+    },
+    {
+      "check": "verification.html link verification.html resolves",
+      "ok": true,
+      "detail": "/home/user/Jack2/session-8bee1905/verification.html"
+    },
+    {
+      "check": "no personal identifiers in this session's output",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "property is never identified",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "executive-summary.html labels the demonstration price",
+      "ok": true,
+      "detail": "a price appears without the demonstration label"
+    },
+    {
+      "check": "taxes.html labels the demonstration price",
+      "ok": true,
+      "detail": "a price appears without the demonstration label"
+    }
+  ]
+}

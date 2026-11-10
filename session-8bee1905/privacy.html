@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy &mdash; Central LA Jack in the Box NNN</title>
+<meta name="description" content="What is deliberately absent from this site, and how the privacy constraint is enforced in code.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Central LA NNN <span>Evidence Workbook</span></a>
+    <div class="meta">As of 2026-11-10 &middot; anonymised &middot; static</div>
+  </div>
+  <nav class="wrap nav"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="economy.html">Area economy</a><a href="tenant-lease.html">Tenant &amp; lease</a><a href="taxes.html">Transaction costs</a><a href="projection.html">Projection limits</a><a href="risks.html">Risks</a><a href="requirements.html">Requirements</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="verification.html">Verification</a><a href="privacy.html" class="active">Privacy</a></nav>
+</header>
+<main id="main" class="wrap">
+<div class="page-head"><h1>Privacy</h1><p class="lede">What is deliberately absent from this site, and how the privacy constraint is enforced in code.</p></div>
+
+<div class="callout key">
+  <p><strong>No personal information appears anywhere on this site.</strong> That is the highest-priority
+  constraint in the brief and it is enforced by code, not by intention: an automated scan fails the build if an
+  email address, phone number, street address or parcel number appears in this session's output.</p>
+</div>
+
+<section>
+<h2>What is deliberately absent</h2>
+<div class="tablewrap"><table><thead><tr><th>Item</th><th>Status on this site</th><th>Reason</th></tr></thead><tbody>
+<tr><td>Street address</td><td>Never published</td><td>Would identify the parcel and, in practice, the owner.</td></tr>
+<tr><td>Assessor's parcel number</td><td>Never published</td><td>Directly identifies the property and its owner of record.</td></tr>
+<tr><td>Owner name, entity or trust</td><td>Never published</td><td>Personal financial information.</td></tr>
+<tr><td>Purchase basis, depreciation taken</td><td>Referred to only as a blank input</td><td>Private tax information.</td></tr>
+<tr><td>Loan balances, lender, maturity</td><td>Referred to only as a blank input</td><td>Private financial information.</td></tr>
+<tr><td>Insurance policy, premium, carrier</td><td>Referred to only as a blank input</td><td>Private and commercially sensitive.</td></tr>
+<tr><td>Tenant's rent, sales, guaranty</td><td>Referred to only as a blank input</td><td>Commercially confidential between the parties.</td></tr>
+<tr><td>Screenshots of private documents</td><td>None</td><td>Documents would carry names, addresses and account numbers.</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>How the constraint is enforced</h2>
+<ul>
+  <li><strong>Code, not intent.</strong> The build fails on a match for email, phone, street-address or parcel-number patterns.</li>
+  <li><strong>Nothing private is collected.</strong> This workbook was produced without any private document, and it asks for none to be uploaded. The private gaps are listed so they can be closed offline.</li>
+  <li><strong>Anonymised throughout.</strong> The property is described only as a Jack in the Box NNN asset around central Los Angeles with a 2030&ndash;2035 lease expiry.</li>
+  <li><strong>No third-party trackers.</strong> Static pages, no analytics, no external scripts, no cookies.</li>
+  <li><strong>Public agency addresses.</strong> Where a source is an agency whose published contact address appears in its own document, that address is not reproduced here; only the document is linked.</li>
+</ul>
+</section>
+
+<section>
+<h2>If a private figure is needed for a decision</h2>
+<p>Every private input this analysis needs is listed on the <a href="flagged.html">Flagged for review</a> page
+next to what would close it. Those lookups can be done privately, off this site, and this workbook's conclusions
+will not change until they are supplied. Nothing has to be entered anywhere.</p>
+</section>
+
+</main>
+<footer class="wrap foot">
+  <p><strong>Internal decision support.</strong> Not an appraisal, a tax opinion, legal advice or an offer.
+  No street address, parcel number, owner name, loan number or account appears anywhere on this site.</p>
+  <p>Every published value links to the official source it was read from on 2026-11-10.
+  Values that could not be confirmed are blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Reconstruction: <code>python3 session-8bee1905/scripts/build_site.py</code>
+  &middot; verification: <a href="verification.html">verification log</a>.</p>
+</footer>
+</body>
+</html>

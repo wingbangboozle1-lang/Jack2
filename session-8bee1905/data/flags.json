@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "as_of": "2026-11-10",
+    "session": "session-8bee1905",
+    "policy": "Everything this session could not verify from an official source is listed here rather than filled in. Flagged items do not block the build; they block any claim that the property is fully underwritten."
+  },
+  "rows": [
+    {
+      "id": "F01",
+      "severity": "High",
+      "area": "Repository / CI",
+      "finding": "The shared GitHub Actions check had been failing on main since 2026-11-08, so every push was red and the 'generated output is up to date' gate could never pass again.",
+      "evidence": "Workflow run 42534513123 for commit ea702c7 failed in the step 'Fail if generated files are out of date'. Reproduced locally by replaying the workflow steps in order: the only files that change are session-f4f700c0/audit/inventory.json and .../summary.json.",
+      "root_cause": "audit.py stored a sha256, byte count and line count for every tracked file, including COORDINATION.md. The board is append-only by rule, so any session that obeyed the board rule invalidated the committed snapshot.",
+      "action": "FIXED in this session. COORDINATION.md is still read on every line for privacy and structural checks; only its stored fingerprint is withheld. Verified by running the workflow steps twice from a clean tree: git status is empty both times.",
+      "status": "fixed"
+    },
+    {
+      "id": "F02",
+      "severity": "High",
+      "area": "Data availability",
+      "finding": "The property's rent, exact expiry, option structure, guaranty, basis, depreciation, debt and jurisdiction are not public. They are the inputs that decide the question.",
+      "evidence": "No public source identifies the parcel. Confirmed by the absence of any address, APN or owner in the brief, which is intentional and correct for privacy.",
+      "action": "Published as labelled blanks throughout, never estimated. The decision rule in data/decisions.json is ordered so that each gate closes one of these gaps. This is the single largest limitation of every workbook on this repository.",
+      "status": "open, by design"
+    },
+    {
+      "id": "F03",
+      "severity": "High",
+      "area": "Valuation",
+      "finding": "No value, price or cap rate for this asset is published, and none can be.",
+      "evidence": "No official body publishes transaction cap rates for individual net-lease assets. Any cap rate on this repository is an assumption.",
+      "action": "This session publishes a cost stack at a clearly labelled demonstration price and a decision rule instead of a valuation. Prior workbooks that publish dollar rankings are flagged, not endorsed.",
+      "status": "open, by design"
+    },
+    {
+      "id": "F04",
+      "severity": "High",
+      "area": "Parcel hazards",
+      "finding": "The parcel's CAL FIRE Fire Hazard Severity Zone class, FEMA flood zone, seismic hazard zone and retrofit status are unverified.",
+      "evidence": "Each of these is a parcel-specific lookup that requires an address or APN. CAL FIRE's own page states that FHSZ maps evaluate hazard, not risk, and directs users to enter an address.",
+      "action": "Named as a required pre-sale action rather than approximated. Regional context is verified (USGS 60/46/31 given; CAL FIRE classification scheme given); the parcel answer is blank.",
+      "status": "open, needs address"
+    },
+    {
+      "id": "F05",
+      "severity": "Medium",
+      "area": "Tax boundary",
+      "finding": "Two different county documentary transfer tax statements coexist on the Los Angeles County Registrar-Recorder page: $0.55 per $500 countywide, and the full $1.10 per $1,000 for the five special cities including Los Angeles.",
+      "evidence": "Both statements appear on the same official page read on 2026-11-10 (S05).",
+      "action": "This session uses the higher of the two published statements in the cost stack and records the ambiguity here rather than silently choosing the cheaper one. At a $4M price the difference is about $4,400.",
+      "status": "open, ambiguity in an official source"
+    },
+    {
+      "id": "F06",
+      "severity": "Medium",
+      "area": "Measure ULA",
+      "finding": "Whether this building is inside the City of Los Angeles is unknown, and that single fact decides whether a 4% or 5.5% special transfer tax applies.",
+      "evidence": "S04 states the tax applies to documents conveying real property within the City of Los Angeles and sets the thresholds. Jurisdiction is not in the brief.",
+      "action": "Made the first decision gate. The cost stack shows the ULA line at 0% only because the demonstration price is below the threshold and jurisdiction is unconfirmed; it is not a finding that ULA does not apply.",
+      "status": "open, needs jurisdiction"
+    },
+    {
+      "id": "F07",
+      "severity": "Medium",
+      "area": "Population projections",
+      "finding": "The California Department of Finance county projection values could not be read cell by cell.",
+      "evidence": "S16 confirms the projections exist: 2024 baseline, Vintage 2026 released 2026-03-13, Report P-2A published as an .xlsx workbook. This session's tooling cannot parse the workbook, so no projected year is published as verified.",
+      "action": "The page and vintage are verified and published. The individual projected values are left out rather than copied from another workbook. The observed 2020-2025 change (M03, M04) is published instead, because it was read directly.",
+      "status": "open, tooling limitation"
+    },
+    {
+      "id": "F08",
+      "severity": "Medium",
+      "area": "Tenant credit",
+      "finding": "The tenant's identity is unknown, so no credit assessment of the actual obligor is possible.",
+      "evidence": "The public filings describe a heavily franchised system. The parent's own balance sheet is published here (M53-M56) with an explicit warning that it is not the franchisee's.",
+      "action": "Published as a required document, not a score. The franchisor's negative book equity is reported as a capital-structure fact with that caveat attached, not as a default prediction.",
+      "status": "open, needs lease and tenant financials"
+    },
+    {
+      "id": "F09",
+      "severity": "Medium",
+      "area": "Environment",
+      "finding": "No Phase I environmental assessment or GeoTracker search was performed.",
+      "evidence": "Both require an address or parcel number, which is withheld.",
+      "action": "Recorded in the risk register (R19) as a required pre-sale action. Not scored as a finding, because there is no evidence either way.",
+      "status": "open, needs address"
+    },
+    {
+      "id": "F10",
+      "severity": "Medium",
+      "area": "Repository",
+      "finding": "Six pull requests from earlier sessions remain open on stale baselines (#5, #6, #10, #14, #18, #30 as of this session).",
+      "evidence": "gh pr list --state open, run 2026-11-10.",
+      "action": "Recorded, not merged and not closed: they are other sessions' work and merging unknown baselines would collide with the published build. They are unreachable from the live site. The owner should close or rebase them deliberately.",
+      "status": "open"
+    },
+    {
+      "id": "F11",
+      "severity": "Medium",
+      "area": "Repository",
+      "finding": "Thirteen separate workbooks are published from this one repository, with different framings and, in several cases, confident dollar recommendations built on undisclosed assumed rents.",
+      "evidence": "workspaces.html lists them. The historical root build contains a stated assumption that converts 8% of franchise AUV into a $150,000 rent and then reports precise wealth differences from it.",
+      "action": "This session publishes a single consistent landing page and navigation and states plainly which part of the site is evidence-first and which is a historical archive. It does not delete or silently rewrite prior sessions' work; the disagreement is disclosed.",
+      "status": "open, disclosed"
+    },
+    {
+      "id": "F12",
+      "severity": "Low",
+      "area": "Citation hygiene",
+      "finding": "A USGS FAQ address cited by earlier sessions now returns HTTP 404.",
+      "evidence": "https://www.usgs.gov/faqs/what-probability-earthquake-magnitude-67-or-greater-occurring-san-francisco-bay-area-during-next served a USGS 404 page on 2026-11-10. The live record is https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area, which was read and carries the same figures.",
+      "action": "The live URL is published as S13 and is the only hazard citation used in this session's pages. Earlier sessions' pages are left unmodified and the dead link is recorded here.",
+      "status": "open, values re-verified"
+    },
+    {
+      "id": "F13",
+      "severity": "Low",
+      "area": "Wage statistics",
+      "finding": "The BLS Los Angeles summary prints two different average weekly wage figures on adjacent bases: $1,704 for Los Angeles County from QCEW, and $1,721 for the area in the header line.",
+      "evidence": "Both appear in the same release read on 2026-11-10 (S02).",
+      "action": "Both are published separately (M23 and its note) and neither is presented as a trend. They are not reconciled, because the release does not reconcile them.",
+      "status": "open, ambiguity in an official source"
+    },
+    {
+      "id": "F14",
+      "severity": "Low",
+      "area": "Tenant filings",
+      "finding": "The most recent quarterly report read is the 10-Q for the quarter ended July 5, 2026, filed 2026-08-12. A later filing cannot be ruled out.",
+      "evidence": "S19, the EDGAR filing index filtered to 10-Q, showed that report at the top of the list on 2026-11-10.",
+      "action": "Recorded with its retrieval date. The balance-sheet figures are labelled as of 2026-07-05 and are not presented as current-period results.",
+      "status": "open, vintage"
+    },
+    {
+      "id": "F15",
+      "severity": "Low",
+      "area": "Model design",
+      "finding": "No rent or value forecast is published, and that is a deliberate choice, not an omission.",
+      "evidence": "Eight or so annual observations per series cannot support a rent forecast with an honest confidence interval. Publishing one would be false precision.",
+      "action": "A projection framework with stated inputs and limits is published instead, and only official published series are shown as projections. This is a methodological position and it is stated openly so it can be argued with.",
+      "status": "open, disclosed"
+    }
+  ]
+}

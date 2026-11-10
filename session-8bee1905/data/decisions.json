@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "as_of": "2026-11-10",
+    "session": "session-8bee1905",
+    "principle": "This session publishes decision RULES with sourced inputs and a transparent cost stack. It does not publish a property value, a rent, or a dollar ranking, because those inputs are unknown. Any workbook on this repository that does is flagged, not endorsed.",
+    "illustrative_price": 4000000,
+    "illustrative_price_note": "The $4,000,000 figure used in the cost stack is a DEMONSTRATION PRICE, chosen by this session so the arithmetic can be checked and re-run at any price. It is not a valuation, not an asking price, not an appraisal, and it is not derived from any property data. Every percentage and fixed input in the stack is sourced."
+  },
+  "cost_stack": {
+    "description": "Transaction and tax cost of an outright sale, at the demonstration price, inside the City of Los Angeles, for a long-held depreciated asset.",
+    "inputs": [
+      {
+        "id": "C1",
+        "label": "Gross sale price (demonstration)",
+        "basis": "assumption",
+        "rate_or_amount": "4000000",
+        "unit": "USD",
+        "source": null,
+        "note": "Demonstration only. Replace with a real offer."
+      },
+      {
+        "id": "C2",
+        "label": "City of Los Angeles real property transfer base tax",
+        "basis": "official rate",
+        "rate_or_amount": "0.45",
+        "unit": "percent of consideration",
+        "source": "S04",
+        "note": "$2.25 per $500, rounded up to the nearest $500."
+      },
+      {
+        "id": "C3",
+        "label": "County documentary transfer tax (special-city basis)",
+        "basis": "official rate",
+        "rate_or_amount": "0.22",
+        "unit": "percent of consideration",
+        "source": "S05",
+        "note": "The page states $0.55 per $500 countywide but the full $1.10 per $1,000 for the five special cities including Los Angeles. The higher of the two published statements is used; the ambiguity is flagged."
+      },
+      {
+        "id": "C4",
+        "label": "Measure ULA special transfer tax",
+        "basis": "official rule, applied conditionally",
+        "rate_or_amount": "0",
+        "unit": "percent at this demonstration price",
+        "source": "S04",
+        "note": "Zero here only because $4.0M is below the $5.4M lower threshold for closings after 2026-06-30. At $5.4M exactly it still does not apply; above it, 4% applies to the whole consideration up to $10.9M, and 5.5% at or above $10.9M. This single line is why the sale decision is jurisdiction-sensitive."
+      },
+      {
+        "id": "C5",
+        "label": "Federal unrecaptured section 1250 recapture",
+        "basis": "official ceiling rate",
+        "rate_or_amount": "25",
+        "unit": "percent on recaptured depreciation",
+        "source": "S09",
+        "note": "Applies only to the depreciation actually taken. The amount is an owner fact and is blank here; the ceiling rate is official."
+      },
+      {
+        "id": "C6",
+        "label": "Federal long-term capital gain",
+        "basis": "official ceiling rate",
+        "rate_or_amount": "20",
+        "unit": "percent on remaining gain",
+        "source": "S09",
+        "note": "Plus 3.8% net investment income tax where the statutory thresholds are exceeded."
+      },
+      {
+        "id": "C7",
+        "label": "Net investment income tax",
+        "basis": "official rate",
+        "rate_or_amount": "3.8",
+        "unit": "percent",
+        "source": "S10",
+        "note": "Applies to the lesser of net investment income or MAGI above threshold; whether it bites is an owner fact."
+      },
+      {
+        "id": "C8",
+        "label": "California personal income tax on the gain",
+        "basis": "official rule plus official top rate",
+        "rate_or_amount": "12.30",
+        "unit": "percent, top marginal, as ordinary income",
+        "source": "S07",
+        "note": "California has no preferential capital gains rate (S07); the top marginal rate is 12.30% (S06). The relevant marginal rate depends on the owner's other income and is therefore not asserted here beyond the ceiling."
+      },
+      {
+        "id": "C9",
+        "label": "Brokerage and closing costs",
+        "basis": "assumption",
+        "rate_or_amount": "",
+        "unit": "blank",
+        "source": null,
+        "note": "Deliberately blank. No official source publishes a commission or closing-cost schedule; quoting one would be an invented number. Obtain a real listing agreement."
+      }
+    ],
+    "max_statutory_tax_load_note": "25% federal recapture + 20% federal capital gain + 3.8% net investment income tax + 12.30% California, on the applicable components, is the ceiling the sources support (S09, S10, S06, S07). It is a ceiling from four separate rules, not a single published total, and it is not applied as a flat rate to the whole gain."
+  },
+  "decisions": [
+    {
+      "id": "D1",
+      "name": "Sell now, outright, no exchange",
+      "viable_when": "You need liquidity or diversification more than you need deferral, or the implied cap rate on a real offer is below the return you can genuinely earn elsewhere after tax.",
+      "benefits": "Converts an illiquid, single-tenant, single-city asset into cash; ends seismic, fire, insurance, vacancy and tenant-credit exposure on this asset; removes the renewal negotiation entirely.",
+      "costs": "The largest tax bill of any branch: recapture plus federal gain plus net investment income tax plus California at ordinary rates; plus ULA if inside the city and above $5.4M; plus transfer taxes and closing costs.",
+      "principal_risk": "Selling into a thin market and paying a peak tax rate to do it.",
+      "risk_level": "High, on cost rather than on uncertainty",
+      "verdict": "Legitimate, but normally the wrong first move solely because of the tax stack. Justified when liquidity or concentration dominates.",
+      "official_sources": [
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S09",
+        "S10"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Extend the lease, then sell with long remaining term",
+      "viable_when": "The tenant will sign a market-supported extension on acceptable terms, and the added term raises the price by more than the rent concession costs.",
+      "benefits": "Attacks the two things that most reduce price, namely short term and rollover risk, without a taxable event. A longer lease widens the buyer pool and improves financeability. Preserves the deferral option for later.",
+      "costs": "Any concession you give, the time to negotiate it, and the risk that the tenant's credit deteriorates during the new term.",
+      "principal_risk": "Paying for term with rent you cannot recover, or discovering the tenant will not sign at any price you can accept.",
+      "risk_level": "Moderate: bounded by the terms actually signed",
+      "verdict": "The strongest structural move in most scenarios, and it does not foreclose either of the other two. Fix the lease first, then price the asset.",
+      "official_sources": [
+        "S17",
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Extend and hold for income",
+      "viable_when": "Renewal rent clears the debt service and reserve with real coverage, the owner can absorb a long vacancy and an insurance shock, and the concentration is acceptable to the owner's overall balance sheet.",
+      "benefits": "Keeps the income and the land. Defers all capital gains and preserves a low Proposition 13 basis. No transaction costs. Retains any long-run location upside.",
+      "costs": "Continues undiversified exposure to one building, one tenant and one seismic region. Defers, rather than avoids, the eventual tax. Requires capital reserves for roof, structure and systems.",
+      "principal_risk": "A correlated local event that removes income and collateral simultaneously, with no second asset to absorb it.",
+      "risk_level": "High on tail exposure, low on transaction cost",
+      "verdict": "Defensible for an owner whose other assets already provide diversification, and whose reserve can survive two years of vacancy. Not defensible as a default.",
+      "official_sources": [
+        "S13",
+        "S15",
+        "S11"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Sell and complete a section 1031 exchange",
+      "viable_when": "There is real gain to defer, a credible replacement property or several can be identified within 45 days, and financing for the replacement is arranged before the relinquished sale closes.",
+      "benefits": "Defers both federal and California gain where the rules are met. Can replace one asset with several, which is the only branch here that directly reduces concentration without a tax cost.",
+      "costs": "Execution risk on a fixed 45/180-day clock; intermediary risk; replacement quality risk; possible boot and partial recognition; borrowed debt must generally be replaced.",
+      "principal_risk": "Missing the window and paying the full tax anyway, having also paid the transaction costs.",
+      "risk_level": "Moderate to high, concentrated in execution",
+      "verdict": "The structurally correct exit if the objective is wealth preservation plus diversification. It is a process, not a product, and it needs a named intermediary and identified candidates before listing.",
+      "official_sources": [
+        "S08",
+        "S09",
+        "S06"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Hold without extending, then decide",
+      "viable_when": "Near-term income is needed and no good offer exists, and a dated review trigger is set in advance.",
+      "benefits": "No transaction cost now. Keeps optionality while the market or the tenant situation clarifies.",
+      "costs": "The remaining term shortens every month, and price falls with it. Doing nothing is itself a decision, and it is the one that most reliably destroys value.",
+      "principal_risk": "Drift. Ending up in the final two years of term with no lease, no offer and no exchange plan.",
+      "risk_level": "High, because the cost is quiet",
+      "verdict": "Acceptable only with a written decision date tied to the actual expiry, and only if that date is before the term becomes short. Never as an unstated default.",
+      "official_sources": [
+        "S03"
+      ]
+    },
+    {
+      "id": "D6",
+      "name": "Refinance and hold",
+      "viable_when": "Existing debt terms are poor, the lease has enough term to support new financing, and coverage survives a stress case.",
+      "benefits": "Can release liquidity or lower the coupon without a taxable sale, and without giving up the asset.",
+      "costs": "Adds leverage and maturity risk, and does nothing about tenant or location concentration. A refinance into a loan that matures near the lease expiry creates a simultaneous double deadline.",
+      "principal_risk": "A maturity wall that coincides with a vacancy or a rate spike.",
+      "risk_level": "Moderate to high",
+      "verdict": "A financing decision, not a solution to the sell-or-renew question. Only after the lease question is settled and the stress case passes.",
+      "official_sources": [
+        "S03"
+      ]
+    }
+  ],
+  "decision_rule": {
+    "statement": "Fix the lease before pricing the asset, and settle jurisdiction before costing the sale.",
+    "gates": [
+      {
+        "order": 1,
+        "gate": "Jurisdiction and parcel",
+        "question": "Is the building inside the City of Los Angeles?",
+        "why": "Measure ULA applies only inside the city. The difference at a $6M sale is $240,000 of tax. The county documentary transfer tax basis also differs.",
+        "action": "Confirm with the city planning parcel tool and the recorded deed. This is a yes/no question that changes the answer materially.",
+        "source": "S04"
+      },
+      {
+        "order": 2,
+        "gate": "Lease documents",
+        "question": "What is the exact expiry, are the options unilateral or mutual, is there a guaranty, and what are the escalations?",
+        "why": "Every branch above turns on these five facts, and none of them is public.",
+        "action": "Read the lease and all amendments. Diarise every notice date backwards from expiry.",
+        "source": "S17"
+      },
+      {
+        "order": 3,
+        "gate": "Tenant credit",
+        "question": "Who is the obligor, and can they pay through a downturn?",
+        "why": "The public parent's balance sheet is not the obligor's. Treat the franchisor's own risk factors as a warning about the system, not a credit opinion on this store.",
+        "action": "Obtain the operating entity's financials, the guaranty and 24 months of rent payment history.",
+        "source": "S17"
+      },
+      {
+        "order": 4,
+        "gate": "Cost stack",
+        "question": "What is the after-tax, after-cost number on a real offer?",
+        "why": "The tax stack, not the headline price, decides whether a sale beats holding. California taxes the gain as ordinary income.",
+        "action": "Compute with the actual basis and depreciation schedule. Get the ULA and transfer tax computed on the actual price and jurisdiction.",
+        "source": "S07"
+      },
+      {
+        "order": 5,
+        "gate": "Hazards and insurance",
+        "question": "What are the parcel's FHSZ class, flood zone, seismic zone and retrofit status, and what does insurance cost and cover?",
+        "why": "These determine both the reserve required to hold and the discount a buyer will apply.",
+        "action": "Look up each parcel-level designation and obtain the policy. Do not accept a city-level answer to a parcel-level question.",
+        "source": "S15",
+        "secondary_source": "S16"
+      },
+      {
+        "order": 6,
+        "gate": "Replacement",
+        "question": "Is there a named intermediary and at least one identified replacement before listing?",
+        "why": "The 45-day clock starts at closing. Improvising after the fact is how exchanges fail.",
+        "action": "Engage the intermediary and shortlist replacement assets before signing a listing agreement.",
+        "source": "S08"
+      },
+      {
+        "order": 7,
+        "gate": "Dated decision",
+        "question": "What is the date on which this is decided, in writing?",
+        "why": "Term decays continuously and the cost is invisible until it is large.",
+        "action": "Set the date at least three years before the actual expiry. Put it in the calendar with an owner, not a topic.",
+        "source": "S03"
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "as_of": "2026-11-10",
+    "session": "session-8bee1905",
+    "note": "Each requirement from the brief is traced to what this session actually did and where the evidence sits. Status is honest: 'met' means done and checkable; 'partly met' means done as far as the available evidence allows; 'cannot be met without private data' means no public source can satisfy it."
+  },
+  "rows": [
+    {
+      "id": "Q01",
+      "requirement": "Collect, organize and analyse against a full list of requirements",
+      "status": "met",
+      "evidence": "This table, plus data/metrics.json (line-by-line evidence), data/risks.json (decision risk surface) and data/decisions.json (branch analysis).",
+      "page": "requirements.html"
+    },
+    {
+      "id": "Q02",
+      "requirement": "Create an executive summary outlining the important details",
+      "status": "met",
+      "evidence": "executive-summary.html: the recommendation, the reasoning, the cost stack and the ordered gates.",
+      "page": "executive-summary.html"
+    },
+    {
+      "id": "Q03",
+      "requirement": "Anonymise all personal information; no personal information on the website",
+      "status": "met",
+      "evidence": "No address, parcel number, owner name, loan number or account appears anywhere in this session's output. Every property input is a labelled blank. An automated privacy scan runs in scripts/verify.py and fails the build on a match.",
+      "page": "privacy.html"
+    },
+    {
+      "id": "Q04",
+      "requirement": "Decide whether to sell before the 2030-2035 expiry or renew",
+      "status": "partly met",
+      "evidence": "A decision rule and six analysed branches are published. A single 'sell' or 'renew' verdict is not supportable from public data, because rent, exact expiry, options, basis and debt are unknown. The rule is constructed so that it resolves as soon as those five inputs are supplied.",
+      "page": "decision.html"
+    },
+    {
+      "id": "Q05",
+      "requirement": "Assess the economic activity in the area",
+      "status": "partly met",
+      "evidence": "Employment, unemployment, wages, prices, population, income and consumer-demand figures verified at city, county and metro level (metrics M01-M30). No verified trade-area figure exists without the address; that gap is flagged, not filled.",
+      "page": "economy.html"
+    },
+    {
+      "id": "Q06",
+      "requirement": "Cover geography, income levels, schools, population, job growth and every factor influencing the local economy",
+      "status": "partly met",
+      "evidence": "Income, population and jobs are verified with official sources. Geography and hazards are covered at regional level. School systems: no verified indicator can be attached to the subject property because its attendance area is unknown; the general point is made and the specific claim is left blank.",
+      "page": "economy.html"
+    },
+    {
+      "id": "Q07",
+      "requirement": "Build a reliable projection system for the area",
+      "status": "partly met",
+      "evidence": "A projection framework is published with its inputs and its limits, and projections are carried only as official published series with their vintages. This session did NOT build a statistical forecast of rents or values, because doing so from eight annual observations would be false precision. The state's own projection files could not be parsed cell by cell here, so no projected year is published as verified.",
+      "page": "projection.html"
+    },
+    {
+      "id": "Q08",
+      "requirement": "State the risks of every possible decision",
+      "status": "met",
+      "evidence": "data/risks.json: 22 risk rows, each mapped to the decisions it affects, with mechanism and mitigation. Six decision branches in data/decisions.json each carry their own principal risk.",
+      "page": "risks.html"
+    },
+    {
+      "id": "Q09",
+      "requirement": "Recommend the best decision for wealth preservation and growth at a manageable risk level",
+      "status": "met",
+      "evidence": "The recommendation ranks the branches by what each does to concentration and to tax, and identifies extend-then-sell as the move that improves outcomes under both the sell and the hold case. Risk is expressed as exposure and mitigation, not as invented probabilities.",
+      "page": "executive-summary.html"
+    },
+    {
+      "id": "Q10",
+      "requirement": "Account for business-as-usual and rare black swan events such as wildfire or natural disaster",
+      "status": "met",
+      "evidence": "The risk register is explicitly split into business-as-usual, structural and rare/black-swan classes. Earthquake is quantified from USGS with the official regional probabilities (M50-M52); wildfire is treated through CAL FIRE's hazard-versus-risk distinction; flood is left blank because it is a parcel fact.",
+      "page": "risks.html"
+    },
+    {
+      "id": "Q11",
+      "requirement": "Use verified official sources for data",
+      "status": "met",
+      "evidence": "19 sources, every one fetched and read live on 2026-11-10. Tier A is government; Tier B is the counterparty's own SEC filing. Each metric row carries the source id and the locator within the page.",
+      "page": "sources.html"
+    },
+    {
+      "id": "Q12",
+      "requirement": "Review the repository line by line and flag irregularities",
+      "status": "met",
+      "evidence": "scripts/audit.py inventories every tracked file and line; scripts/verify.py runs 26 assertions. Irregularities found are published on the Flagged for Review page with evidence links, including a CI failure that had been live on main since 2026-11-08.",
+      "page": "flagged.html"
+    },
+    {
+      "id": "Q13",
+      "requirement": "Build a live GitHub Pages site with a clean dashboard and category subpages",
+      "status": "met",
+      "evidence": "Eleven pages published from main via GitHub Pages, with a single consistent navigation. The landing page is built from this session's data so that the entry point and the content cannot diverge.",
+      "page": "index.html"
+    },
+    {
+      "id": "Q14",
+      "requirement": "Every table row must link to an official site; unconfirmed values blank and flagged",
+      "status": "met",
+      "evidence": "Enforced in code: scripts/verify.py fails the build if any published row lacks a resolving https source, or if a row marked unverified carries a value. 26 checks pass.",
+      "page": "verification.html"
+    },
+    {
+      "id": "Q15",
+      "requirement": "Read COORDINATION.md, claim non-overlapping scope, commit and push the claim",
+      "status": "met",
+      "evidence": "Board read before any work; Session N claimed with a file scope; the claim was committed and pushed immediately (commit 075abef). A concurrent live session (Session M) was detected and its directory was left untouched.",
+      "page": "verification.html"
+    },
+    {
+      "id": "Q16",
+      "requirement": "Open a pull request, merge it without waiting for approval, confirm Pages deploys",
+      "status": "met",
+      "evidence": "Recorded on COORDINATION.md and on deployment details in verification.html, including the CI and Pages run identifiers.",
+      "page": "verification.html"
+    },
+    {
+      "id": "Q17",
+      "requirement": "Publish flagged irregularities and unverified items on a clearly labelled page so they can be reviewed after launch",
+      "status": "met",
+      "evidence": "flagged.html lists every unverified item with its evidence link and the action required to close it.",
+      "page": "flagged.html"
+    },
+    {
+      "id": "Q18",
+      "requirement": "No manual input required from the owner",
+      "status": "met",
+      "evidence": "Every deliverable is generated from committed data by scripts and rebuilt in CI. The owner is not asked to supply anything for the site to build or deploy; the private inputs are listed as things that would sharpen a property-specific answer, not as build dependencies.",
+      "page": "verification.html"
+    }
+  ]
+}

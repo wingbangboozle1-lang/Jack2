@@ -999,6 +999,13 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-8bee1905/</code>",
+         "Session N (2026-11-10) &mdash; evidence workbook with a decision <em>rule</em> rather than a dollar ranking: "
+         "19 official sources re-read live, 57 source-checked rows each with a locator inside its source, "
+         "22 risk pathways incl. black swans, 6 decision branches, 7 ordered gates, 15 published blanks, "
+         "and a 1,018-assertion verifier. Also repaired the shared CI gate, which had been red on main since 2026-11-08",
+         "13 pages",
+         "<a href='session-8bee1905/index.html'>open &#8599;</a>"],
         ["<code>session-f4f700c0/</code>",
          "Session I &mdash; current evidence-first dashboard: 51 official sources, 132 source-checked rows, "
          "14 blank private inputs, normalized pre-tax scenarios, line-level audit and Flagged for Review",
@@ -1113,7 +1120,7 @@ to method and which are artefacts of an assumption.</p>
 
 def build_current_index():
     """Root landing delegates to the current isolated dashboard, preserving historical navigation."""
-    src = os.path.join(ROOT, "session-f4f700c0", "index.html")
+    src = os.path.join(ROOT, "session-8bee1905", "index.html")
     with open(src, encoding="utf-8") as f:
         text = f.read()
 
@@ -1124,11 +1131,11 @@ def build_current_index():
         if href.startswith("../"):
             href = href[3:]
         else:
-            href = "session-f4f700c0/" + href
+            href = "session-8bee1905/" + href
         return f'href="{href}"'
 
     text = re.sub(r'href="([^"]+)"', fix_href, text)
-    text = text.replace('href="session-f4f700c0/assets/style.css"', 'href="session-f4f700c0/assets/style.css"')
+    text = text.replace('href="assets/style.css"', 'href="session-8bee1905/assets/style.css"')
     historical = "".join(f'<a href="{href}">{label}</a>' for href, label in NAV)
     legacy = f"""
 <details class="legacy-nav wrap" style="max-width:1240px;margin:24px auto;padding:0 22px">
