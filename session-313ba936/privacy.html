@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Central LA NNN decision dashboard</title>
+<meta name="description" content="How personal and parcel-identifying information is excluded by construction.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312161c'/%3E%3Ctext x='16' y='23' font-family='system-ui' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="mark">J</span><span>Central LA NNN decision dashboard
+    <small>Jack in the Box &middot; 2030&ndash;2035 expiry &middot; verified 2026-11-10</small></span></a>
+  <nav class="main" aria-label="Sections"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="area-economy.html">Area economy</a><a href="demographics-schools.html">Population &amp; schools</a><a href="property-lease.html">Property &amp; lease</a><a href="tenant-credit.html">Tenant credit</a><a href="valuation-capital.html">Valuation &amp; capital</a><a href="risks.html">Risk register</a><a href="projection-model.html">Projection model</a><a href="data.html">All data</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+</div></header>
+<main id="main" class="wrap">
+<div class="page-head"><p class="eyebrow">Privacy</p><h1>What is deliberately not collected</h1><p class="lede">Personal and parcel-identifying information is kept out of this repository by construction, not by redaction.</p></div><h2>The rule</h2>
+<p>No personal information about the owner, and no information that would identify the property, appears in this repository
+or on this site. This is enforced in three ways, in increasing order of strength.</p>
+<ol>
+<li><strong>A regex scan</strong> runs in <code>scripts/verify.py</code> over every page and data file, looking for email
+addresses, phone numbers, street addresses and parcel-number patterns. It is the weakest of the three, because a regex can
+only catch formats it knows.</li>
+<li><strong>The dataset has no field for them.</strong> There is no column for an owner name, a street address, an APN, a
+loan number or an account number. There is a row that says the APN is deliberately not collected. You cannot leak a field
+that does not exist.</li>
+<li><strong>The research method avoids them.</strong> Every source in this workbook is a published aggregate: a county, a
+city, a metro, a portfolio, a region. No lookup was performed at an individual parcel, and no address was ever entered
+into this session.</li>
+</ol>
+
+<h2>What is published instead of a property identifier</h2>
+<ul>
+<li>The asset is described as a single-tenant net-lease restaurant in central Los Angeles. That is the level of
+specificity the analysis needs and the level the brief supplies.</li>
+<li>Money is expressed per $100,000 of annual rent. This is what makes it possible to publish a full decision analysis
+without ever publishing the rent.</li>
+<li>Parcel-level facts that the owner needs &mdash; fire zone, flood zone, seismic screening, assessed value &mdash; are
+listed as <em>lookups to perform</em> on <a href="flagged.html">Flagged for review</a>, with the official reference for
+each, rather than filled in.</li>
+</ul>
+
+<h2>What a reader can and cannot learn from this site</h2>
+<div class="tablewrap"><table><thead><tr><th>Can be learned</th><th>Cannot be learned</th></tr></thead><tbody>
+<tr><td>That a Jack in the Box NNN asset in central Los Angeles is being evaluated</td><td>Which restaurant, on which street</td></tr>
+<tr><td>The general economics of that asset class in that county</td><td>The owner's rent, basis, debt or identity</td></tr>
+<tr><td>Every official statistic used to reach the recommendation</td><td>The owner's personal financial position</td></tr>
+<tr><td>The breakevens at which the decision reverses</td><td>The property's appraised value</td></tr>
+</tbody></table></div>
+
+<h2>Source-side note</h2>
+<p>The official pages this workbook reads are themselves public records. Two of the SEC pages carry the filing company's
+public headquarters address, which is a corporate disclosure, not personal information. It is not reproduced in this
+site's own text: the source table links to the filing and does not restate its contents beyond the financial figures
+needed.</p>
+
+<h2>If you are the owner</h2>
+<p>Do not send personal or parcel-identifying information into a chat or an issue. Put the numbers into your own copy of
+the model, or hand the documents to your accountant, appraiser and broker. This workbook was written so that it never
+needs to see them.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support. Not an appraisal, not tax advice, not investment advice.</strong>
+  Every value on this page is read from the official source linked beside it on 2026-11-10. Values that could not be
+  confirmed are blank and listed on <a href="flagged.html">Flagged for review</a>.</p>
+  <p>No name, street address, parcel number, loan number, account number or other personal identifier appears in this
+  repository or on this site. See <a href="privacy.html">Privacy</a>. Built by Arena session
+  <code>session-313ba936</code> from 21 official sources &middot;
+  <a href="verification.html">verification record</a> &middot;
+  reproduction: <code>python3 session-313ba936/scripts/build_site.py</code></p>
+</div></footer>
+</body>
+</html>
