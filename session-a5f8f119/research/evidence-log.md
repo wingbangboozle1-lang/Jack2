@@ -214,3 +214,145 @@ URL: https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-2025
   average number of franchise restaurants 2,023 | 2,037; franchise restaurant AUV 1,874 | 1,949; royalties as % of franchise sales 5.1% | 5.0%.
   "Franchise rental revenues decreased $14.5 million, or 4.2% ... primarily due to a decrease in percentage rent of $16.5 million, driven by lower sales, partially offset by higher lease termination fees of $2.7 million".
 - Securitization covenants restrict the ability of certain subsidiaries to "sell certain assets".
+
+## E13 — City of Los Angeles Office of Finance, Real Property Transfer Tax and Measure ULA FAQ — read 2026-11-10
+URL: https://finance.lacity.gov/faq/measure-ula
+- Note at top: "Effective for transactions closing after June 30, 2026, the new ULA thresholds will be $5,400,000 and $10,900,000. Transactions greater than
+  $5,400,000 but less than $10,900,000 will be assessed a 4% tax, and transactions of $10,900,000 or greater will be assessed a 5.5% tax."
+- Base Tax: "computed based on the consideration or value of the real property interest conveyed at a rate of 0.45%"; "$2.25 per $500 or part thereof".
+- Table: > $100 and ≤ $5,400,000 → 0.45%; > $5,400,000 and < $10,900,000 → 4.45%; ≥ $10,900,000 → 5.95%.
+- ULA applies "on or after April 1, 2023"; thresholds "adjusted annually based on the Bureau of Labor Statistics Chained Consumer Price Index".
+- The tax is "an excise tax on the privilege of selling a real property interest", applied to "all documents that convey real property within the City".
+- Exemptions listed are for qualified affordable-housing organisations (LAMC 21.9.14, 21.9.15); none is listed for a private seller of commercial property.
+- Wording irregularity on the page: one FAQ answer still describes the thresholds as "five million dollars" and "ten million dollars" while the note and the
+  table print the adjusted $5,400,000 / $10,900,000. The note and table govern for closings after June 30, 2026.
+- The rate applies to the whole consideration, not to the excess over the threshold (table: "Applicable Tax Rate" on "Value of Property Conveyed").
+
+## E14 — California DIR, Minimum Wage FAQ — read 2026-11-10
+URL: https://www.dir.ca.gov/dlse/faq_minimumwage.htm
+- "Effective January 1, 2026, the minimum wage is $16.90 per hour for all employers". Table: 2024 $16.00; 2025 $16.50; 2026 $16.90.
+- Annual adjustment by CPI-W; "the highest raise allowed in any one year is 3.5 percent"; cannot be lowered.
+- "There is a higher minimum wage for Fast Food Workers, effective April 1, 2024".
+
+## E15 — Federal Reserve Board, FOMC statement, October 28, 2026 — read 2026-11-10
+URL: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm
+- "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent"; approved "by a 10 – 2 vote".
+- "Economic activity is expanding at a strong pace." "Inflation remains elevated."
+- The two dissenting members "preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting" (names not recorded).
+
+## E16 — USGS FAQ, earthquake probability, Los Angeles area — read 2026-11-10
+URL: https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area
+- "According to information supplied in the Uniform California Earthquake Rupture Forecast 3" (links https://pubs.usgs.gov/fs/2015/3009/):
+  Los Angeles area, within the next 30 years: 60% for magnitude 6.7; 46% for magnitude 7; 31% for magnitude 7.5 "will occur in the Los Angeles region".
+- The page is LIVE on 2026-11-10 (an earlier workbook listed this FAQ as a dead citation; that is not the case today).
+
+## E17 — California DIR, Fast Food Minimum Wage FAQ — read 2026-11-10
+URL: https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm
+- "Starting April 1, 2024, all 'fast food restaurant employees' who are covered by the new law must be paid at least $20.00 per hour."
+- AB 1228 "establishes a Fast Food Council, which is empowered both to make future increases to the minimum wage and to adopt other minimum employment standards".
+- Coverage: limited-service restaurant; "part of a restaurant chain of at least 60 establishments nationwide"; applies "regardless of whether the employer is
+  the business entity that owns the national brand, or a franchisee".
+- A city or county cannot set a higher wage only for fast-food workers, but "can set a higher general minimum wage for all employees".
+- The page shows NO increase above $20.00 as of the read date.
+
+## E18 — City of Los Angeles, Office of Wage Standards — read 2026-11-10
+URL: https://wagesla.lacity.org/ (resolves to https://wagesla.lacity.gov/)
+- "2026 Minimum Wage ... Effective Date July 1, 2026 — Hourly Rate $18.42". Rate is reset each July 1 from CPI-W for the Los Angeles metropolitan area.
+- Citywide Hotel Worker Minimum Wage Ordinance amended May 26, 2026 (Ordinance 188944) — hotel workers only, not fast food.
+
+## E19 — LA County Assessor, real property page — NOT re-opened 2026-11-10
+URL tried: https://assessor.lacounty.gov/homeowners/realproperty → fetch returned "Hostname not recognized" (request resolved to www.assessor.lacounty.gov).
+Status: could-not-re-open today. Proposition 13 limits are instead read from the California Constitution (E20).
+
+## E20 — California Constitution, Article XIII A (Proposition 13) — read 2026-11-10
+URL: https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CONS&division=&title=&part=&chapter=&article=XIII+A
+- Section 1(a): "The maximum amount of any ad valorem tax on real property shall not exceed One percent (1%) of the full cash value of such property."
+- Section 1(b): the limit does not apply to voter-approved bonded indebtedness (so the actual bill rate exceeds 1%).
+- Section 2(a): full cash value is the 1975–76 value "or, thereafter, the appraised value of real property when purchased, newly constructed, or a change in
+  ownership has occurred" — i.e. a sale resets the assessed value for the buyer.
+- (Section 2(b), the 2% annual inflation cap, is further down the same article; not displayed in the part of the page returned to this session.)
+
+## E21 — California BOE, old Proposition 13 page — DEAD 2026-11-10
+URL: https://www.boe.ca.gov/proptaxes/prop13.htm → "404 – Not Found". Confirms a dead citation in earlier workbooks.
+
+## E22 — IRS Topic no. 409, Capital gains and losses — read 2026-11-10
+URL: https://www.irs.gov/taxtopics/tc409
+- "For taxable years beginning in 2025, the tax rate on most net capital gain is no higher than 15% for most individuals."
+- 20% applies above the 15% thresholds (2025: $533,400 single; $600,050 married filing jointly; $566,700 head of household).
+- "The portion of any unrecaptured section 1250 gain from selling section 1250 real property is taxed at a maximum 25% rate."
+- The page still shows taxable-year-2025 thresholds on 2026-11-10 (2026 thresholds not shown).
+
+## E23 — IRS Topic no. 559, Net investment income tax — read 2026-11-10
+URL: https://www.irs.gov/taxtopics/tc559
+- "A 3.8 percent net investment income tax (NIIT) applies to individuals, estates, and trusts that have net investment income above applicable threshold amounts."
+- Thresholds: $250,000 married filing jointly; $125,000 married filing separately; $200,000 single or head of household. Estates and trusts: 2025 threshold $15,650.
+- Net investment income includes rents and "net gains from the disposition of property such as ... real estate".
+
+## E24 — IRS, Like-kind exchanges — Real estate tax tips — read 2026-11-10
+URL: https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips
+- "Section 1031 now applies only to exchanges of real property"; "If, as part of the exchange, you also receive other (not like-kind) property or money,
+  you must recognize a gain to the extent of the other property and money received."
+- "real property in the United States is not like-kind to real property outside the United States." Reported on Form 8824.
+- This page does NOT print the 45-day / 180-day periods (those are in the Form 8824 instructions, E-pending).
+
+## E25 — Los Angeles County Registrar-Recorder/County Clerk, Documentary Transfer Tax — read 2026-11-10
+URL: https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes
+- County rate: "fifty-five cents ($0.55) for each five hundred dollars ($500), or fractional part thereof", computed on consideration "exclusive of the value of
+  any lien or encumbrance remaining thereon at the time of sale". "The County rate for these 5 special Cities is calculated at the full $1.10 per $1000."
+- "Los Angeles (Effective 7/1/26)": "$2.25 for each $500 or fraction thereof; AND EITHER 4 Percent of the total transaction value of sales above $5,400,000 but
+  less than $10,900,000; OR 5.5 Percent of the total transaction value of sales at or above $10,900,000." (Effective 7/1/25: $5,300,000 / $10,600,000.)
+- Other cities with their own rates (a property "around central Los Angeles" may not be inside the City of Los Angeles):
+  Culver City 0.45% up to $1,499,999; 1.5% from $1,500,000 to $2,999,999; 3% from $3,000,000 to $9,999,999; 4% at $10,000,000 and above.
+  Santa Monica (effective 3/1/23) $3.00 per $1,000 up to $4,999,999; $6.00 per $1,000 from $5,000,000 to $7,999,999; $56.00 per $1,000 at $8,000,000 and above.
+  Pomona $2.20 per $1,000; Redondo Beach $2.20 per $1,000.
+- Worked example on the page: $21,100 → county tax $23.65; inside the City of Los Angeles an additional $4.50 per $1,000 → total $96.75.
+
+## E26 — SEC, Realty Income Corporation 8-K Exhibit 99.1, Q3 2026 results (released November 2, 2026) — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm
+- Three months ended September 30, 2026: "Invested $2.6 billion; our Pro-Rata Share was $2.2 billion at an Initial Weighted Average Cash Yield of 6.8%".
+- "Achieved a Rent Recapture Rate of 103.5% on properties re-leased". Net Debt to Annualized Pro Forma Adjusted EBITDAre 5.4x.
+- "15,536 properties ... leased to 1,842 clients doing business in 96 industries"; "weighted average remaining lease term of approximately 8.5 years";
+  occupancy 98.8% with 182 properties available for lease or sale.
+- Changes in occupancy, three months: lease expirations 274; re-leases to same client (213); re-leases to new client (9); vacant dispositions (58).
+- Changes in occupancy, nine months ended September 30, 2026: properties available at December 31, 2025: 173; lease expirations 1,074; re-leases to same client (818);
+  re-leases to new client (66); vacant dispositions (181); available at September 30, 2026: 182. Expirations include "leases rejected in bankruptcy".
+- "we funded investments at a realized leverage-neutral spread of approximately 170 basis points"; "As economic and cost of capital volatility persists".
+
+## E27 — SEC, NNN REIT, Inc. 8-K Exhibit 99.1, Q2 2026 results (August 5, 2026) — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/751364/000119312526333958/nnn-ex99_1.htm
+- "Closed on $291.0 million of investments at an initial cash cap rate of 7.3%, with a weighted average lease term of 17.9 years and $436.4 million of
+  investments at an initial cash cap rate of 7.4% in the six months ended June 30, 2026".
+- "Sold 26 properties for $36.7 million, including $9.0 million of income producing properties at a weighted average cap rate of 5.6%".
+- Dispositions, six months ended June 30, 2026: occupied 16 properties, 115,000 sq ft, net proceeds $26,846 thousand, weighted average cap rate 6.6%;
+  vacant 35 properties, 326,000 sq ft, net proceeds $45,715 thousand. Quarter: occupied 7 properties, 25,000 sq ft, $9,046 thousand, 5.6%; vacant 19 properties, 170,000 sq ft, $27,688 thousand.
+- Portfolio June 30, 2026: 3,774 properties; occupancy 99.1%; weighted average remaining lease term 10.1 years; ABR $959,145 thousand.
+- Cap rate definition: "initial cash annual base rent divided by the total purchase price".
+- Realty Income (same exhibit, continued): "During the nine months ended September 30, 2026, the new Annualized Base Rent on re-leased units was $251.1 million,
+  as compared to the previous annual rent of $243.5 million on the same units, representing a Rent Recapture Rate of 103.1%". Three months: $67.6 million vs $65.3 million (103.5%).
+- Initial Weighted Average Cash Yield, three months | nine months ended September 30, 2026: total real estate acquisitions 6.6% | 6.5%; development 7.2% | 7.4%;
+  credit investments 7.9% | 8.3%; total investments 6.8% | 7.1%; U.S. and other 6.5% | 7.1%; U.S. wholly-owned 6.6% | 7.2%; Europe 7.1% | 7.0%.
+  Investment-grade clients 53% | 44% of annualized cash income at investment. New properties, three months: 31.0% retail, 57.3% industrial, 11.7% data center.
+
+## E28 — SEC, NNN REIT, Inc. 8-K Exhibit 99.1, Q3 2026 results (filed and released November 4, 2026) — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/nnn-ex99_1.htm
+(EDGAR 8-K list read at https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000751364&type=8-K&dateb=&owner=include&count=10 — this is the newest 8-K.)
+- "Closed on $221.7 million of investments at an initial cash cap rate of 7.3%, with a weighted average lease term of 19.6 years and $658.1 million of
+  investments at an initial cash cap rate of 7.3% in the nine months ended September 30, 2026".
+- "Sold 32 properties for $50.7 million, including $37.3 million of income producing properties at a weighted average cap rate of 7.8%".
+- Dispositions, quarter ended September 30, 2026: income producing 21 properties, 150,000 sq ft, net sale proceeds $37,299 thousand, cap rate 7.8%;
+  vacant 11 properties, 63,000 sq ft, $13,409 thousand. Nine months: income producing 37 properties, 265,000 sq ft, $64,145 thousand, 7.3%;
+  vacant 46 properties, 389,000 sq ft, $59,124 thousand.
+- Portfolio September 30, 2026: 3,817 properties; occupancy 99.2% (97.5% a year earlier); weighted average remaining lease term 10.1 years; ABR $973,997 thousand.
+- "Increased 2026 disposition volume guidance to a new range of $160 - $180 million". Dividend "representing a 6.0% annualized dividend yield". CEO quote refers to "today's market volatility".
+- SUPERSEDES the Q2 2026 (E27) and FY2025 figures used by earlier workbooks: latest occupied-disposition cap rate is 7.8% (Q3 2026), not 5.6% (Q2 2026) or 6.4% (FY2025).
+
+## E29 — SEC, Four Corners Property Trust (FCPT) 8-K Exhibit 99.1, Q3 2026 results (October 28, 2026) — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/1650132/000119312526436301/fcpt-ex99_1.htm
+- "During the third quarter, FCPT acquired 120 properties for a combined purchase price of $326.3 million at an initial weighted average cash yield of 6.6%, on rents
+  in place as of September 30, 2026, or a 7.1% GAAP yield and a weighted average remaining lease term of 9.6 years. The properties were approximately 87% medical
+  retail, 5% casual dining and quick service restaurants, 5% auto, and 4% other retail by purchase price."
+- "we have started to see new acquisitions being priced at higher cap rates." "At the current share price, we view share repurchases as delivering more value
+  than property purchases" — inaugural share repurchase program of up to $100 million.
+- "we also recently extended 100% of Olive Garden and LongHorn leases maturing in 2027 without landlord concessions".
+- Portfolio September 30, 2026: 1,456 properties in 48 states; 99.5% occupied (by square feet); weighted average remaining lease term approximately 6.7 years.
+- Rent collection 99.7% of contractual base rent for the quarter. No properties sold in the quarter. Net debt to adjusted EBITDAre 6.0x.
