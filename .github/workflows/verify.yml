@@ -95,3 +95,15 @@ jobs:
             git diff --stat -- session-24d6cd5f/
             exit 1
           fi
+
+      - name: Regenerate and verify session-d9c94ed0 dashboard
+        run: |
+          python3 session-d9c94ed0/scripts/build_site.py
+          python3 session-d9c94ed0/scripts/verify.py
+          python3 -m unittest discover -s session-d9c94ed0/tests -v
+          if [ -n "$(git status --porcelain -- session-d9c94ed0/)" ]; then
+            echo "Session M (session-d9c94ed0) generated output is out of date."
+            git status --porcelain -- session-d9c94ed0/
+            git diff --stat -- session-d9c94ed0/
+            exit 1
+          fi
