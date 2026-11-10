@@ -444,3 +444,71 @@ URL: https://councildistrict5.lacity.gov/release-los-angeles-city-council-passes
 - "increases the City's Reserve Fund to $515.1 million, or 6.00% of General Fund revenues, and increases the Budget Stabilization Fund transfer from $9 million to
   $14.5 million"; combined General Fund reserves "approximately 9%".
 - "we still face real fiscal uncertainty, rising costs, and major threats to future City revenues"; the City "prepares to finance $2 billion for the Convention Center expansion".
+
+## E41 — California DOF, Report P-4: Total Households, California Counties (Vintage 2025; Baseline 2024) — read 2026-11-10
+URL: https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P4_HHProjections_B2024.xlsx
+- About sheet: "Vintage 2025"; citation "(Based on Baseline 2024 Population Projections; Vintage 2025 Release) ... November 2025".
+  Release notes: "2025.11.07: Initial Release"; "2025.11.17: Revision to Los Angeles County numbers for years 2026-2030."
+- FIPS 6037 LOS ANGELES households: 2010 3,240,969; 2020 3,417,523; 2024 3,517,906; 2025 3,546,497; 2026 3,551,868; 2027 3,575,366; 2028 3,597,009;
+  2029 3,616,967; 2030 3,635,392; 2031 3,651,149; 2032 3,666,590; 2033 3,681,723; 2034 3,696,553; 2035 3,711,086; 2036 3,725,329; 2037 3,739,287;
+  2038 3,752,965; 2039 3,766,370; 2040 3,779,507.
+- California: 2025 13,993,318; 2030 14,424,956; 2040 15,042,539.
+- VINTAGE MISMATCH: the household series is the Vintage 2025 release (November 2025), while the population series read in E06 is Vintage 2026 (March 2026).
+  Both say "Baseline 2024", but dividing one by the other mixes two releases.
+
+## E42 — USGS, Overview of the ARkStorm scenario (Open-File Report 2010-1312, published January 14, 2011) — read 2026-11-10
+URL: https://www.usgs.gov/publications/overview-arkstorm-scenario
+- "Property damage exceeds $300 billion, most from flooding." "total direct property loss to nearly $400 billion, of which $20 to $30 billion would be
+  recoverable through public and commercial insurance." "Business interruption costs reach $325 billion in addition to the $400 billion property repair costs,
+  meaning that an ARkStorm could cost on the order of $725 billion".
+- "Serious flooding also occurs in Orange County, Los Angeles County, San Diego, the San Francisco Bay area". Hypothetical statewide scenario in 2011 dollars; not a forecast, not parcel-level.
+
+## E43 — California Franchise Tax Board, 2025 Instructions for Form FTB 3840 — read 2026-11-10
+URL: https://www.ftb.ca.gov/forms/2025/2025-3840-instructions.html
+- "California requires taxpayers who exchange property located in California for like-kind property located outside of California, under IRC Section 1031,
+  to file an annual information return, form FTB 3840".
+- "Form FTB 3840 must be filed for the taxable year of the exchange and for each subsequent taxable year, generally until the California sourced deferred
+  gain or loss is recognized on a California tax return."
+- "The source of a gain or loss from the sale or exchange of property located in California is determined at the time the gain or loss is realized."
+- "In the case of disregarded entities, form FTB 3840 must be filed by the owner of the disregarded entity."
+
+## E44 — California Department of Insurance, Bulletin 2025-4 (February 11, 2025) — read 2026-11-10
+URL: https://www.insurance.ca.gov/0250-insurers/0300-insurers/0200-bulletins/bulletin-notices-commiss-opinion/upload/Bulletin-2025-4-Updated-Guidance-regarding-Insurer-Recoupment-Procedures-in-Response-to-Assessment-by-the-FAIR-Plan.pdf
+- Order 2025-1 approved "the FAIR Plan's request to levy a $1 billion assessment on its member insurers -- the first assessment on its member insurers in over 30 years."
+- FAIR Plan "estimated its total loss from the Palisades and Eaton fires at approximately $4 billion"; 4,794 claims received; $914 million paid at the bulletin date.
+- Insurers "may recoup 50% of the amount the insurer paid for the assessment(s)" from policyholders (up to $1 billion per line per year), and 100% of any portion above $1 billion — subject to prior approval.
+- Confirms the earlier workbooks' "$1.0bn" figure (was listed as unverified by this session until today).
+
+## E45 — SCAG, Connect SoCal 2024 Final PEIR, Appendix I updated tables — read 2026-11-10
+URL: https://scag.ca.gov/sites/default/files/2024-05/appendix_i_updated_tables_508_final.pdf
+- Tables ES-1 & 2-1, Los Angeles County: population 10,046,000 (2019) → 10,793,000 (2050), +7%; households 3,393,000 → 4,155,000, +23%;
+  employment 5,031,000 → 5,461,000, +9%. SCAG region population 18,827,000 → 20,909,000, +11%.
+- This is a 2024 regional PLAN forecast (base year 2019). It points the opposite way from DOF's Vintage 2026 projection (E06), which has the county shrinking.
+
+## E46 — SEC, Jack in the Box Inc. FY2025 Form 10-K, Item 1 Business (continued from E12) — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm
+- "As of September 28, 2025, Jack in the Box operated and franchised 2,136 quick-service restaurants ... Of those total Jack in the Box restaurants at fiscal
+  year-end, 1,986, or 93%, were franchised." "the top 10 major markets of Jack in the Box comprise approximately 70% of the total system".
+- "Jack on Track plan unveiled in 2025 includes three key initiatives: Restaurant closure program: Through block closure program, improving system health and
+  encouraging franchisees to reinvest; Del Taco brand ...; Accelerate Cash Flow: Through discontinuing dividend, reducing spend on company-owned new unit
+  development ... with majority of funds reallocated to debt paydown."
+- Franchise agreement: "initial franchise fee of $50,000 per restaurant for a 20-year term, and royalty and marketing payments generally set at 5.0% of gross sales".
+- Site selection reviews "population density, traffic, competition, restaurant visibility and access, available parking, surrounding businesses".
+- "The Jack in the Box restaurants are approximately 1,372 square feet, the restaurant can support a Y-Lane drive-thru configuration ... The goal of this design
+  is to reduce build out costs, while also increasing real estate flexibility."
+- Del Taco: Stock Purchase Agreement of October 15, 2025 to sell Del Taco "for an aggregate purchase price of $115 million in cash".
+
+## E47 — SEC, NNN REIT, Inc. FY2025 Form 10-K, Item 7 — read 2026-11-10
+URL: https://www.sec.gov/Archives/edgar/data/751364/000119312526045617/nnn-20251231.htm
+- Property Portfolio, December 31, 2025: 3,692 properties; weighted average remaining lease term 10.2 years; ABR $928,081,000.
+- Acquisitions 2025: 239 properties; weighted average cap rate 7.4% (2024: 7.7%); total dollars invested $931,017 thousand.
+- Dispositions 2025: 116 properties; net sales proceeds $190,474 thousand; weighted average cap rate 6.4% (2024: 7.3%) — "for the occupied properties".
+- Lines of trade, % of ABR 2025: Restaurants – limited service 7.9% (2024: 8.4%); Restaurants – full service 6.4% (2024: 7.8%).
+- Lease expirations as % of ABR: 2026 2.1% (117 properties); 2027 6.3% (203); 2028 4.9% (221).
+- California is not among NNN's top-10 states by ABR (Texas 18.4%, Florida 8.7% ...).
+
+## E48 — City of Los Angeles open data, "Crime Data from 2020 to 2024" — read 2026-11-10
+URL: https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-2024/2nrs-mtv8/about_data
+- Notice: "the legacy system is no longer active, and no new information will be entered ... the Crime Data from 2020 to Present dataset will no longer be
+  updated. It will remain available on the portal for historical reference only." Replacement: LAPD NIBRS Offenses / Victims datasets, "refreshed on a bi-weekly schedule".
+- "Last Updated March 4, 2026". No crime rate is taken from this dataset by this session.
