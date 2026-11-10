@@ -34,11 +34,25 @@ class Parser(HTMLParser):
         self.tags += 1
 
 
+# Append-only shared coordination log. Every session is required to add to it, therefore its
+# line count, byte count and hash can never be stable in CI. It is still READ on every line for the
+# privacy and structural checks below; only its stored fingerprint is withheld. See COORDINATION.md,
+# Session N task N-02: fingerprinting this file made the "generated files out of date" gate fail on
+# every push from 2026-11-08 onward, for every session, permanently.
+FINGERPRINT_EXCLUDED = {"COORDINATION.md"}
+
+
 def files():
+    """Every tracked/non-ignored path. Used for scanning (privacy, structure, URL counts)."""
     raw = subprocess.check_output(["git", "ls-files", "--cached", "--others", "--exclude-standard"], cwd=REPO).decode()
     paths = sorted(set(raw.splitlines()))
     # Exclude self-referential generated audit/verification artifacts so the inventory is stable in CI.
     return [p for p in paths if not p.startswith("session-f4f700c0/audit/") and p != "session-f4f700c0/verification.json"]
+
+
+def fingerprintable(rel):
+    """Whether a scanned file's fingerprint may be asserted byte-stable across runs."""
+    return rel not in FINGERPRINT_EXCLUDED
 
 
 def workspace(path):
@@ -90,9 +104,12 @@ def main():
             status = "structural-error"
         if pii_hits:
             status = "privacy-review"
+        fp = fingerprintable(rel)
         rows.append(dict(
-            path=rel, workspace=workspace(rel), bytes=len(raw), lines=len(lines),
-            sha256=hashlib.sha256(raw).hexdigest(), kind=kind,
+            path=rel, workspace=workspace(rel),
+            bytes=len(raw) if fp else None, lines=len(lines),
+            sha256=hashlib.sha256(raw).hexdigest() if fp else None,
+            fingerprint_excluded=not fp, kind=kind,
             url_count=url_count, pii_pattern_hits=pii_hits,
             json_valid=json_valid, python_compiles=python_compiles, html_tags=html_tags,
             status=status,
@@ -102,17 +119,19 @@ def main():
         w = by_ws[r["workspace"]]
         w["files"] += 1
         w["lines"] += r["lines"]
-        w["bytes"] += r["bytes"]
+        w["bytes"] += r["bytes"] or 0
         w["privacy_hits"] += r["pii_pattern_hits"]
         if r["status"] == "structural-error":
             w["structural_errors"] += 1
     current_hits = sum(r["pii_pattern_hits"] for r in rows if r["workspace"] == "session-f4f700c0")
     historical_review = [dict(path=r["path"], hits=r["pii_pattern_hits"]) for r in rows if r["pii_pattern_hits"] and r["workspace"] != "session-f4f700c0"]
     summary = dict(
-        as_of="2026-11-08",
+        as_of="2026-11-10",
         files=len(rows),
         lines=sum(r["lines"] for r in rows),
-        bytes=sum(r["bytes"] for r in rows),
+        bytes=sum(r["bytes"] or 0 for r in rows),
+        fingerprint_excluded=sorted(FINGERPRINT_EXCLUDED),
+        fingerprint_exclusion_reason="Append-only shared board; scanned on every run, but not asserted byte-stable (Session N, task N-02).",
         privacy_pattern_hits=sum(r["pii_pattern_hits"] for r in rows),
         current_session_privacy_hits=current_hits,
         historical_privacy_review=historical_review,

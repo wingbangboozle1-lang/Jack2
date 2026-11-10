@@ -1,8 +1,12 @@
 {
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-10",
   "files": 305,
-  "lines": 63206,
-  "bytes": 5259145,
+  "lines": 63274,
+  "bytes": 5163777,
+  "fingerprint_excluded": [
+    "COORDINATION.md"
+  ],
+  "fingerprint_exclusion_reason": "Append-only shared board; scanned on every run, but not asserted byte-stable (Session N, task N-02).",
   "privacy_pattern_hits": 1,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [
@@ -15,8 +19,8 @@
   "workspaces": {
     "root/config": {
       "files": 22,
-      "lines": 2556,
-      "bytes": 399702,
+      "lines": 2605,
+      "bytes": 303244,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -99,8 +103,8 @@
     },
     "session-f4f700c0": {
       "files": 33,
-      "lines": 5882,
-      "bytes": 527581,
+      "lines": 5901,
+      "bytes": 528671,
       "privacy_hits": 0,
       "structural_errors": 0
     }
