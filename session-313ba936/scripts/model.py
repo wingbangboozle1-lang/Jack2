@@ -96,11 +96,11 @@ ASSUMPTIONS = {
 }
 
 SCENARIOS = [
-    {"id": "bear", "label": "Bear", "escalation_pct": 1.5, "terminal_cap_pct": 7.8, "renew_prob": 0.55,
+    {"id": "bear", "label": "Bear", "escalation_pct": 1.5, "terminal_cap_pct": 7.8, "sell_cap_pct": 7.8, "renew_prob": 0.55,
      "narrative": "Wage and insurance costs keep compressing franchisee margin; cap rates widen as the 10-year holds near 4.9%; the tenant extracts a concession or leaves."},
-    {"id": "base", "label": "Base", "escalation_pct": 2.0, "terminal_cap_pct": 6.8, "renew_prob": 0.75,
+    {"id": "base", "label": "Base", "escalation_pct": 2.0, "terminal_cap_pct": 6.8, "sell_cap_pct": 6.8, "renew_prob": 0.75,
      "narrative": "The verified benchmark holds, rent escalates at 2%, the tenant renews, exit cap unchanged."},
-    {"id": "bull", "label": "Bull", "escalation_pct": 2.5, "terminal_cap_pct": 5.8, "renew_prob": 0.85,
+    {"id": "bull", "label": "Bull", "escalation_pct": 2.5, "terminal_cap_pct": 5.8, "sell_cap_pct": 5.8, "renew_prob": 0.85,
      "narrative": "Rates ease, net-lease demand for drive-through sites strengthens, and the tenant renews early to protect the location."},
 ]
 
@@ -434,10 +434,16 @@ def main():
 
     rows = []
     for sc in SCENARIOS:
-        w = wealth_paths(rent0, sc["escalation_pct"], sc["terminal_cap_pct"], y, sc["renew_prob"], 0.0)
+        # The sale price is itself scenario-dependent: in a bear world the asset sells at a
+        # wider cap today as well as at exit. Holding the sale cap fixed across scenarios
+        # would show the same proceeds three times, which is arithmetically tidy and
+        # analytically misleading.
+        w = wealth_paths(rent0, sc["escalation_pct"], sc["terminal_cap_pct"], y, sc["renew_prob"], 0.0,
+                         sell_cap_pct=sc["sell_cap_pct"])
         rows.append({
             "id": sc["id"], "label": sc["label"], "narrative": sc["narrative"],
             "escalation_pct": sc["escalation_pct"], "terminal_cap_pct": sc["terminal_cap_pct"],
+            "sell_cap_pct": sc["sell_cap_pct"],
             "renew_prob": sc["renew_prob"],
             "gross_price": w["gross_price"], "cost_rate_pct": w["cost_rate"] * 100,
             "net_proceeds": w["net_proceeds"], "replacement_rent": w["replacement_rent"],

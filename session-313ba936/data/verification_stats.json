@@ -19,7 +19,7 @@
     "blank-value rule: 48 rows deliberately blank, 99 verified, 2 computed",
     "links: 15 HTML files scanned, all internal links and nav entries resolve",
     "privacy: 0 hits for email, phone, street address or parcel pattern across all pages and data files",
-    "reproducibility: model.py regenerated model_output.json byte-identically (22,983 bytes)",
+    "reproducibility: model.py regenerated model_output.json byte-identically (23,065 bytes)",
     "model cross-check: numeric breakeven matches closed form to 0.000pp",
     "model: 20 verified inputs, 16 labelled assumptions, 9 triggers",
     "audit: 11 irregularities recorded (4 high)",

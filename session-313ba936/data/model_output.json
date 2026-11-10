@@ -208,16 +208,17 @@
       "narrative": "Wage and insurance costs keep compressing franchisee margin; cap rates widen as the 10-year holds near 4.9%; the tenant extracts a concession or leaves.",
       "escalation_pct": 1.5,
       "terminal_cap_pct": 7.8,
+      "sell_cap_pct": 7.8,
       "renew_prob": 0.55,
-      "gross_price": 1470588.2352941176,
+      "gross_price": 1282051.282051282,
       "cost_rate_pct": 4.06,
-      "net_proceeds": 1410882.3529411764,
-      "replacement_rent": 95940.0,
-      "sell_wealth": 3804636.9041922167,
+      "net_proceeds": 1230000.0,
+      "replacement_rent": 83640.0,
+      "sell_wealth": 3316862.9421162913,
       "hold_terminal_value": 1602861.6239158558,
       "hold_cash_pile": 2362780.3441810976,
       "hold_wealth": 3965641.9680969534,
-      "delta_hold_minus_sell": 161005.06390473666
+      "delta_hold_minus_sell": 648779.0259806621
     },
     {
       "id": "base",
@@ -225,6 +226,7 @@
       "narrative": "The verified benchmark holds, rent escalates at 2%, the tenant renews, exit cap unchanged.",
       "escalation_pct": 2.0,
       "terminal_cap_pct": 6.8,
+      "sell_cap_pct": 6.8,
       "renew_prob": 0.75,
       "gross_price": 1470588.2352941176,
       "cost_rate_pct": 4.06,
@@ -242,16 +244,17 @@
       "narrative": "Rates ease, net-lease demand for drive-through sites strengthens, and the tenant renews early to protect the location.",
       "escalation_pct": 2.5,
       "terminal_cap_pct": 5.8,
+      "sell_cap_pct": 5.8,
       "renew_prob": 0.85,
-      "gross_price": 1470588.2352941176,
+      "gross_price": 1724137.9310344828,
       "cost_rate_pct": 4.06,
-      "net_proceeds": 1410882.3529411764,
-      "replacement_rent": 95940.0,
-      "sell_wealth": 4878398.549313663,
+      "net_proceeds": 1654137.9310344828,
+      "replacement_rent": 112481.37931034484,
+      "sell_wealth": 5719501.747471191,
       "hold_terminal_value": 2497065.804307086,
       "hold_cash_pile": 2587777.3782170564,
       "hold_wealth": 5084843.182524143,
-      "delta_hold_minus_sell": 206444.6332104802
+      "delta_hold_minus_sell": -634658.5649470482
     }
   ],
   "breakevens": {

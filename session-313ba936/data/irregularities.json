@@ -13,7 +13,7 @@
     {
       "id": "F02",
       "severity": "medium",
-      "title": "Two methodology errors were found and fixed inside this session's own model, and are disclosed rather than hidden",
+      "title": "Three methodology errors were found and fixed inside this session's own model, and are disclosed rather than hidden",
       "detail": "(1) The first draft compared a growing asset against a non-growing yield, which mechanically favours holding by the entire growth term. It was rebuilt so that both strategies run through the same cash-flow engine with the same escalation and exit cap. (2) The first Monte Carlo applied a rate shock by lowering the reinvestment yield while raising the cap rate, double-penalising the sell path; a rate shock must raise reinvestment yields as well as cap rates. Both are visible in the git history of session-313ba936/scripts/model.py.",
       "action": "None outstanding. Disclosed because a model that silently corrects itself is less trustworthy than one that shows its corrections."
     },
