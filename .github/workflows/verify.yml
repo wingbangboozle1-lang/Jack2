@@ -131,3 +131,16 @@ jobs:
             git diff --stat -- session-d9c94ed0/
             exit 1
           fi
+
+      - name: Regenerate and verify session-2b3370d1 (Session N) dashboard
+        run: |
+          python3 session-2b3370d1/scripts/model.py --selftest
+          python3 session-2b3370d1/scripts/model.py
+          python3 session-2b3370d1/scripts/build_site.py
+          python3 session-2b3370d1/scripts/verify.py --offline
+          if [ -n "$(git status --porcelain -- session-2b3370d1/)" ]; then
+            echo "Session N (session-2b3370d1) generated output is out of date."
+            git status --porcelain -- session-2b3370d1/
+            git diff --stat -- session-2b3370d1/
+            exit 1
+          fi

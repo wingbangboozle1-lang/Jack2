@@ -999,6 +999,17 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-2b3370d1/</code>",
+         "Session N (branch <code>arena/2b3370d1-jack2</code>) &mdash; 2026-11-11 decision workbook: "
+         "34 official sources opened on the access date (BLS, Census, CA DOF, EDD, City/County finance, "
+         "LA County Assessor, Treasury, FOMC, IRS, USGS/CAL FIRE/CDI, CDE, DIR/FTB, CA SOS/LAO, courts, "
+         "SEC 8-K/10-K, Port of LA, LAEDC), 153 source-linked metric rows (125 verified, 2 computed, "
+         "26 deliberately blank private or parcel-specific facts), 28-item BAU + black-swan risk register, "
+         "22 open questions with discovery steps, index-basis model with breakeven grids and a "
+         "20,000-trial Monte Carlo (seed 20261111), dual-track recommendation with switch triggers, and "
+         "a Flagged for Review page carrying every blank and irregularity",
+         "13 pages",
+         "<a href='session-2b3370d1/index.html'>open &#8599;</a>"],
         ["<code>session-5f296f9d/</code>",
          "Session M (branch <code>arena/5f296f9d-jack2</code>) &mdash; 2026-11-10 deep-research dashboard: "
          "31 official Tier A/B sources, 127 source-linked metric rows (113 verified, 12 deliberately blank private inputs, "

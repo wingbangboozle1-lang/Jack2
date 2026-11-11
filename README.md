@@ -331,3 +331,26 @@ python3 session-5f296f9d/scripts/build_site.py   # 15 HTML pages
 python3 session-5f296f9d/scripts/verify.py       # V1–V7: schema, links, source rows, PII, anchors
 ```
 
+
+## Session N dashboard (`session-2b3370d1/`) — 2026-11-11
+
+An independent decision pass (`session-2b3370d1` / `arena/2b3370d1-jack2`, labeled Session N on the
+workspace board) published a 13-page dashboard at
+**https://wingbangboozle1-lang.github.io/Jack2/session-2b3370d1/** without touching any prior
+session's files.
+
+| | |
+|---|---|
+| Recommendation | **Dual-track (no single-path answer yet):** resolve the 22 open questions (jurisdiction/ULA applicability, lease terms, tenant of record, hazard + insurance diligence) within 90 days while negotiating an early CPI-linked extension and obtaining an appraisal; decide renew vs sell vs §1031 at a 2028 gate with pre-agreed switch triggers. |
+| Evidence | **153 metric rows** (**125 verified**, **2 computed**, **26 deliberately blank** private or parcel-specific facts) across **34 official sources** opened 2026-11-11: BLS/EDD Sep-2026 labor (county 4.8% SA), Census V2025 + CA DOF E-1/K-12, City/County finance ULA (`4.45%/5.95%`, `$5.4M/$10.9M`), Assessor/Prop 13, Treasury Nov-10 curve (`10Y 4.98%`), FOMC (`3.75–4.00%`), IRS §1031 (45/180-day), USGS UCERF3 (`60%/46%/31%`), CAL FIRE Eaton + CDI `$23.87B`, CDE DataQuest (LAUSD ACGR `86.2%`, enrollment `497,105`), DIR/FTB wages and `13.30%` top rate, CA SOS/LAO 2026 measures (unofficial), Court of Appeal `B334071` (ULA upheld), SEC JACK Q3-FY26 (`SSS −1.1%`, `2,115` units), Realty Income `7.3%` benchmark, Port of LA `10.2M` TEU, LAEDC 2026 forecast (flagged stale: `5.9%` vs actual `4.8%`). |
+| Model | Index basis (per `$1` current NOI — owner rent/basis/debt stay blank): deterministic expiry grids, breakeven going-in caps by transfer-tax case, and a **20,000-trial seeded Monte Carlo** (`seed=20261111`); capital-gains tax deliberately not rendered as a number until basis is supplied. |
+| Risks & Flags | **28-item BAU + black-swan risk register**, **22 open questions** with discovery steps, **15 irregularities**, and a Flagged for Review page carrying all **26 blank rows** + unofficial election prints — published, never inferred; PII never collected. |
+
+Rebuild and verify:
+
+```bash
+python3 session-2b3370d1/scripts/model.py --selftest   # arithmetic identities, seed 20261111
+python3 session-2b3370d1/scripts/model.py              # model_output.json
+python3 session-2b3370d1/scripts/build_site.py         # 13 HTML pages (--check to diff)
+python3 session-2b3370d1/scripts/verify.py             # 1,438 checks incl. fetch log + PII scan
+```
