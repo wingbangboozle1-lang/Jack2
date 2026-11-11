@@ -1,0 +1,103 @@
+{
+  "inputs": {
+    "rent": 150000,
+    "escalation": 0.02,
+    "expiry": 2032,
+    "discount": 0.08,
+    "exit_cap_base": 0.065,
+    "brokerage": 0.035,
+    "renewal_prob": 0.75,
+    "downtime_months": 18,
+    "leasing_cost": 300000,
+    "reinvest_yield": 0.0484,
+    "horizon": 2040,
+    "verified": {
+      "treasury": 0.0484,
+      "county_dtt": 0.0011,
+      "city_dtt": 0.0045000000000000005,
+      "ula_t1": 0.04,
+      "ula_t2": 0.055,
+      "ula_threshold_1": 5400000,
+      "ula_threshold_2": 10900000,
+      "brokerage": 0.03,
+      "escrow": 0.005
+    }
+  },
+  "scenarios": [
+    {
+      "exit_cap_pct": 5.5,
+      "gross_price_usd": 2727272.73,
+      "transaction_stack_pct": 4.06,
+      "ula_tier": null,
+      "net_proceeds_usd": 2616545.45,
+      "pv_hold_renew_usd": 2396616.54,
+      "pv_hold_weighted_usd": 2298789.09,
+      "hold_minus_sell_usd": -317756.36,
+      "annual_reinvest_income_at_treasury_usd": 126640.8,
+      "net_proceeds_as_years_of_rent": 17.4
+    },
+    {
+      "exit_cap_pct": 6.0,
+      "gross_price_usd": 2500000.0,
+      "transaction_stack_pct": 4.06,
+      "ula_tier": null,
+      "net_proceeds_usd": 2398500.0,
+      "pv_hold_renew_usd": 2396616.54,
+      "pv_hold_weighted_usd": 2298789.09,
+      "hold_minus_sell_usd": -99710.91,
+      "annual_reinvest_income_at_treasury_usd": 116087.4,
+      "net_proceeds_as_years_of_rent": 16.0
+    },
+    {
+      "exit_cap_pct": 6.5,
+      "gross_price_usd": 2307692.31,
+      "transaction_stack_pct": 4.06,
+      "ula_tier": null,
+      "net_proceeds_usd": 2214000.0,
+      "pv_hold_renew_usd": 2396616.54,
+      "pv_hold_weighted_usd": 2298789.09,
+      "hold_minus_sell_usd": 84789.09,
+      "annual_reinvest_income_at_treasury_usd": 107157.6,
+      "net_proceeds_as_years_of_rent": 14.8
+    },
+    {
+      "exit_cap_pct": 7.000000000000001,
+      "gross_price_usd": 2142857.14,
+      "transaction_stack_pct": 4.06,
+      "ula_tier": null,
+      "net_proceeds_usd": 2055857.14,
+      "pv_hold_renew_usd": 2396616.54,
+      "pv_hold_weighted_usd": 2298789.09,
+      "hold_minus_sell_usd": 242931.95,
+      "annual_reinvest_income_at_treasury_usd": 99503.49,
+      "net_proceeds_as_years_of_rent": 13.7
+    },
+    {
+      "exit_cap_pct": 7.5,
+      "gross_price_usd": 2000000.0,
+      "transaction_stack_pct": 4.06,
+      "ula_tier": null,
+      "net_proceeds_usd": 1918800.0,
+      "pv_hold_renew_usd": 2396616.54,
+      "pv_hold_weighted_usd": 2298789.09,
+      "hold_minus_sell_usd": 379989.09,
+      "annual_reinvest_income_at_treasury_usd": 92869.92,
+      "net_proceeds_as_years_of_rent": 12.8
+    }
+  ],
+  "summary": {
+    "rent_usd_per_year": 150000,
+    "expiry_year": 2032,
+    "horizon_year": 2040,
+    "discount_rate_pct": 8.0,
+    "treasury_yield_pct": 4.84,
+    "required_rent_uplift_for_hold_to_equal_sell_at_base_cap": 0.9238,
+    "breakeven_note": "If the renewal rent is below the market rent by more than the uplift factor above, selling at the base cap dominates holding (all else equal).",
+    "caveats": [
+      "Rent $150k/yr is A1 (8% of verified AUV) - replace with contract rent (P03).",
+      "Expiry 2032 is A3 - actual date is P02.",
+      "Exit caps are A5 bands, not appraisals (M56 unverified).",
+      "Pre-tax; owner basis unknown (P05); CPA tax model required before any binding decision (X-06)."
+    ]
+  }
+}

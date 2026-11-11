@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "purpose": "Decision scoring for the four strategic options. Scores are weighted judgement (1-10) applied to verified facts plus labelled assumptions, not official outputs. Final ranking is a decision-support output only.",
+    "weights": { "wealth_preservation": 0.35, "growth_potential": 0.25, "execution_risk": 0.20, "liquidity": 0.10, "tax_efficiency": 0.10 },
+    "note": "The model compares four options across the 2030-2035 lease window. Sell-now avoids lease-expiry and cap-rate risk but triggers the full transaction tax stack (5.06% base + ULA tiers) and capital-gains mechanics unless 1031 is executed. Renew-hold keeps the NNN cash flow but extends single-tenant, single-county exposure through 2040 county population decline.",
+    "access_date": "2026-11-08",
+    "session": "arena/cdecc6e1-jack2 (Session I)"
+  },
+  "options": [
+    {
+      "id": "D1", "name": "Sell now, reinvest via 1031 into diversified net-lease or sell outright", "description": "Execute sale before the 2030-2035 expiry; if qualifying, defer gain with a Section 1031 exchange (T14). Captures the current verified cap-rate band and removes tenant-expiry risk.",
+      "scores": { "wealth_preservation": 8, "growth_potential": 6, "execution_risk": 6, "liquidity": 9, "tax_efficiency": 5 },
+      "comment": "Highest wealth preservation and liquidity. Growth capped by the 4.84% Treasury alternative (M53) unless a 7%+ net-lease replacement is found (T11 directional). Tax efficiency is the weak score because the full stack (5.06% DTT + ULA tier) applies absent a successful 1031; California state conformity to 1031 not re-confirmed this session (X-06).",
+      "weighted_score": null
+    },
+    {
+      "id": "D2", "name": "Exercise/extend to fix a long WALT, then sell", "description": "Renew/extend the lease now to create a 10+ year weighted-average lease term, then sell at a premium (best timing likely 2027-2028 to stay clear of expiry).",
+      "scores": { "wealth_preservation": 8, "growth_potential": 7, "execution_risk": 5, "liquidity": 6, "tax_efficiency": 6 },
+      "comment": "Best combined score in most scenarios: extends the tenant's stated renewal practice (M75) and captures a WALT premium while still avoiding the 2030-2035 repricing risk. Execution risk is moderate (option audit P01, extension documentation).",
+      "weighted_score": null
+    },
+    {
+      "id": "D3", "name": "Hold to expiry (2030-2035), then reassess / renew or sell", "description": "Collect NNN rent through expiry, then decide renewal vs sale at that point.",
+      "scores": { "wealth_preservation": 5, "growth_potential": 4, "execution_risk": 3, "liquidity": 2, "tax_efficiency": 7 },
+      "comment": "Lowest wealth preservation: unpriced cap-rate risk, tenant credit risk (M70/M72), county population decline through 2040 (M03-M06), and insurance/catastrophe risk (R-12/R-13/R-21/R-22) all sit inside the hold. Deferring the tax decision preserves basis step-up considerations but magnifies exposure.",
+      "weighted_score": null
+    },
+    {
+      "id": "D4", "name": "Hybrid: 5-year extension with a defined sale window in years 3-5", "description": "Extend ~5 years; market the asset in years 3-5 of the extension; if no acceptable bid, keep the NNN cash flow.",
+      "scores": { "wealth_preservation": 7, "growth_potential": 6, "execution_risk": 4, "liquidity": 7, "tax_efficiency": 6 },
+      "comment": "Balanced compromise: retains optionality and keeps upside if markets improve, while capping exposure to expiry risk. Wealth preservation and liquidity trail D2 because the sale window is deferred.",
+      "weighted_score": null
+    }
+  ],
+  "ranking": [
+    { "rank": 1, "option_id": "D2", "label": "Extend to long WALT, then sell (2027-2028 target)" },
+    { "rank": 2, "option_id": "D4", "label": "Hybrid 5-year extension with years 3-5 sale window" },
+    { "rank": 3, "option_id": "D1", "label": "Sell now via 1031 / outright" },
+    { "rank": 4, "option_id": "D3", "label": "Hold to expiry" }
+  ],
+  "breakeven_logic": [
+    "Breakeven reinvestment yield: if sale proceeds net of the full tax stack can earn more than ~4.84% (verified 10-year Treasury, M53) with comparable safety, selling dominates holding on wealth preservation.",
+    "Net-lease reinvestment anchor: 7.3% initial weighted average cash yield on FY2025 net-lease acquisitions (M55, T11 - directional only). Holding the subject asset is competitive only if its effective yield at exit exceeds roughly 6.0%-6.5% after transaction costs.",
+    "Holding wins only if: renewal is at market rent (not below-market fixed step-up), cap rate at re-sale stays <= ~6.5%, county population/jobs stabilize, and insurance remains available at reasonable cost.",
+    "All figures above are pre-tax, non-appraisal scenario analysis. A formal appraisal and CPA tax model (P05, P11) are prerequisites to any binding decision."
+  ]
+}

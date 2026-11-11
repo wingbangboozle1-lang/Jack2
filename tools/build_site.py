@@ -1131,10 +1131,17 @@ def build_workspaces():
          "published 2026-11-07 without altering any prior session's files",
          "12 pages",
          "<a href='session-643e4aab/index.html'>open &#8599;</a>"],
+        ["<code>session-cdecc6e1/</code>",
+         "Session I &mdash; 2026-11-08 full re-verification: BLS Sep 2026 (4.4% metro unemployment, 6,282.1k jobs), "
+         "DGS10 4.84% (Nov 5) and Fed funds upper limit 4.00% (Nov 8), Census city income/poverty confirmed, "
+         "CA DOF P-2A county projections, Measure ULA + Prop 13 transaction stack, SEC Q3 FY2026 10-Q index; "
+         "91 metrics across 22 official sources, 24 risks, 4 scored strategies, deterministic projection model, "
+         "14-page subsite with Flagged for Review page",
+         "14 pages",
+         "<a href='session-cdecc6e1/index.html'>open &#8599;</a>"],
         ["Historical root pages",
          "Session B &mdash; deterministic model, 23 sources, 87 metric rows and decision triggers; preserved with a historical banner. "
-         "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",
-         "15 pages",
+         "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",         "15 pages",
          "<a href='executive-summary.html'>open historical summary &#8599;</a>"],
     ]
     body = f"""
@@ -1152,14 +1159,12 @@ links every evidence row to an official source, separates projections from obser
 <a href="session-4ed347de/index.html">session-4ed347de</a> (Session L) each published independent workbooks. Their precise rankings
 should be treated as historical and assumption-driven unless re-underwritten with actual lease, rent, debt, tax and offer inputs.</p>
 <p class="muted">Earlier workbooks remain accessible because deleting another session's work is never the right resolution to a conflict.
-The root historical pages carry a banner and are not endorsed by the current dashboard.</p>
-</div>
+The root historical pages carry a banner and are not endorsed by the current dashboard.</p></div>
 
 <h2>The workbooks</h2>
 {table(["Folder", "What it is", "Size", "Open"], rows)}
 
-<h2>Why there are multiple workbooks</h2>
-<p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
+<h2>Why there are multiple workbooks</h2><p>The brief asks for parallel sessions to coordinate through <code>COORDINATION.md</code> rather than overwrite
 each other. In practice each session started from a nearly empty repository, built a complete workbook, and
 discovered the others only when pushing. Every time, the resolution was the same: preserve what already exists,
 publish the new analysis beside it, and record the conflict. The result is redundant but intact &mdash; and the

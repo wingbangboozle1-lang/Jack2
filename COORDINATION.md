@@ -634,6 +634,38 @@ Pinned by the Arena environment to branch `arena/18dacdea-jack2`. Scopes are str
 
 ---
 
+# Session I (`arena/cdecc6e1-jack2`) — 2026-11-08
+
+Pinned by the Arena environment to branch `arena/cdecc6e1-jack2`; no other branch may be created or pushed, so scope isolation is at the directory level, exactly as Sessions A–H did. This session owns `session-cdecc6e1/**` and makes exactly one additive root change: one row in `build_workspaces()` in `tools/build_site.py` so `workspaces.html` lists this workbook. Zero files owned by Sessions A–H are overwritten or discarded.
+
+## Task board — Session I claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|------|--------|-------|---------------|
+| I-01 | Claim scope + COORDINATION.md entry; commit and push the claim immediately | in progress | arena/cdecc6e1-jack2 | `COORDINATION.md` (append only) |
+| I-02 | Fresh official-source verification as of 2026-11-08: BLS Los Angeles Area Economic Summary (updated 2026-11-04, Sep 2026 vintage), FRED DGS10, Census QuickFacts ACS, CA DOF P-2A county projections, CA DIR minimum wage + fast food wage, SEC EDGAR JACK FY2025 10-K and Q3 FY2026 10-Q, City of LA Office of Finance Measure ULA FAQ, LA County Registrar-Recorder documentary transfer tax, LA County Assessor Prop 13, IRS Form 8824, CDE LAUSD profile, CAL FIRE FHSZ, USGS earthquake hazards, FEMA flood, CDI FAIR Plan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/sources.json`, `session-cdecc6e1/data/metrics.json` |
+| I-03 | Independent line-by-line review of the combined repo (Sessions A–H) against the sources above; irregularities register; every unverified value left blank and flagged | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/irregularities.json`, `session-cdecc6e1/flagged.html` |
+| I-04 | Decision analysis: sell before the 2030–2035 NNN expiry vs renew/extend, scored on wealth preservation, growth, execution risk, liquidity, tax efficiency; projection system deterministic + scenario thresholds | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/decision.html`, `session-cdecc6e1/projection-model.html`, `session-cdecc6e1/executive-summary.html` |
+| I-05 | Risk register: business-as-usual + black swan (wildfire, earthquake, flood, insurance capacity, brand shock), mapped to each decision | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/risks.html`, `session-cdecc6e1/data/risks.json` |
+| I-06 | 12-page static dashboard (landing + category subpages), every table row source-linked, PII-free by build-time scan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/*.html`, `session-cdecc6e1/assets/`, `session-cdecc6e1/scripts/verify.py` |
+| I-07 | Additive workspaces index entry, root re-verification (model + build + check_site), PR from `arena/cdecc6e1-jack2` to `main`, merge without waiting, confirm GitHub Pages deploy, record PR link + merge result here | unclaimed→claimed | arena/cdecc6e1-jack2 | `tools/build_site.py` (one additive row), `COORDINATION.md` (deployment record) |
+
+Non-overlap rule: no file owned by Sessions A–H is edited except the single additive `build_workspaces()` row (integration-session duty, logged here rather than made silently).
+
+## Sources verified for Session I (read 2026-11-08)
+
+- U.S. BLS *Los Angeles Area Economic Summary*, updated November 04, 2026 (Sep 2026: US 4.0%, CA 5.1%, LA metro 4.4%, LA County 4.5%, LA city 4.5% unemployment; total nonfarm 6,282.1k jobs, +30.2k / +0.5% YoY; CPI-U all items +3.7% LA metro, food +2.8%, energy +20.3%; Q1 2026 weekly wages LA County $1,704; ECI Sep 2026 +3.9% CSA; CEX 2025 West housing $33,016 / transport $14,110 / food $12,447). Supersedes the Aug 2026 vintage in the root build for the unemployment, jobs-growth and CPI rows.
+
+Deployment record: recorded below after the PR is created and merged.
+EOF
+echo "appended" && git status --short
+
+---
+# Session I (`arena/cdecc6e1-jack2`) — 2026-11-08
+
+Pinned by the Arena environment to branch `arena/cdecc6e1-jack2`; no other branch may be created or pushed, so scope isolation is at the directory level, exactly as Sessions A–H did. This session owns `session-cdecc6e1/**` and makes exactly one additive root change: one row in `build_workspaces()` in `tools/build_site.py` so `workspaces.html` lists this workbook. Zero files owned by Sessions A–H are overwritten or discarded.
+---
+
 # Session J (`session-6ad87c21` / `arena/6ad87c21-jack2`) — 2026-11-08 — CLAIM
 
 > **Naming note.** This session originally filed itself as Session I. While it was working, a parallel session
@@ -801,6 +833,22 @@ the single shared coordination surface.
 ## Task board — Session I claims
 
 | # | Task | Status | Owner | Files / scope |
+|---|------|--------|-------|---------------|
+| I-01 | Claim scope + COORDINATION.md entry; commit and push the claim immediately | in progress | arena/cdecc6e1-jack2 | `COORDINATION.md` (append only) |
+| I-02 | Fresh official-source verification as of 2026-11-08: BLS Los Angeles Area Economic Summary (updated 2026-11-04, Sep 2026 vintage), FRED DGS10, Census QuickFacts ACS, CA DOF P-2A county projections, CA DIR minimum wage + fast food wage, SEC EDGAR JACK FY2025 10-K and Q3 FY2026 10-Q, City of LA Office of Finance Measure ULA FAQ, LA County Registrar-Recorder documentary transfer tax, LA County Assessor Prop 13, IRS Form 8824, CDE LAUSD profile, CAL FIRE FHSZ, USGS earthquake hazards, FEMA flood, CDI FAIR Plan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/sources.json`, `session-cdecc6e1/data/metrics.json` |
+| I-03 | Independent line-by-line review of the combined repo (Sessions A–H) against the sources above; irregularities register; every unverified value left blank and flagged | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/data/irregularities.json`, `session-cdecc6e1/flagged.html` |
+| I-04 | Decision analysis: sell before the 2030–2035 NNN expiry vs renew/extend, scored on wealth preservation, growth, execution risk, liquidity, tax efficiency; projection system deterministic + scenario thresholds | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/decision.html`, `session-cdecc6e1/projection-model.html`, `session-cdecc6e1/executive-summary.html` |
+| I-05 | Risk register: business-as-usual + black swan (wildfire, earthquake, flood, insurance capacity, brand shock), mapped to each decision | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/risks.html`, `session-cdecc6e1/data/risks.json` |
+| I-06 | 12-page static dashboard (landing + category subpages), every table row source-linked, PII-free by build-time scan | in progress | arena/cdecc6e1-jack2 | `session-cdecc6e1/*.html`, `session-cdecc6e1/assets/`, `session-cdecc6e1/scripts/verify.py` |
+| I-07 | Additive workspaces index entry, root re-verification (model + build + check_site), PR from `arena/cdecc6e1-jack2` to `main`, merge without waiting, confirm GitHub Pages deploy, record PR link + merge result here | unclaimed→claimed | arena/cdecc6e1-jack2 | `tools/build_site.py` (one additive row), `COORDINATION.md` (deployment record) |
+
+Non-overlap rule: no file owned by Sessions A–H is edited except the single additive `build_workspaces()` row (integration-session duty, logged here rather than made silently).
+
+## Sources verified for Session I (read 2026-11-08)
+
+- U.S. BLS *Los Angeles Area Economic Summary*, updated November 04, 2026 (Sep 2026: US 4.0%, CA 5.1%, LA metro 4.4%, LA County 4.5%, LA city 4.5% unemployment; total nonfarm 6,282.1k jobs, +30.2k / +0.5% YoY; CPI-U all items +3.7% LA metro, food +2.8%, energy +20.3%; Q1 2026 weekly wages LA County $1,704; ECI Sep 2026 +3.9% CSA; CEX 2025 West housing $33,016 / transport $14,110 / food $12,447). Supersedes the Aug 2026 vintage in the root build for the unemployment, jobs-growth and CPI rows.
+
+Deployment record: recorded below after the PR is created and merged.
 |---|---|---|---|---|
 | I-01 | Read board, audit repo, claim scope | in progress | `arena/343c7030` | `COORDINATION.md` (append only) |
 | I-02 | Line-by-line re-verification of the combined repo against official sources; irregularity register | in progress | `arena/343c7030` | `session-343c7030/data/*.json`, `session-343c7030/verification.html`, `session-343c7030/flagged.html` |

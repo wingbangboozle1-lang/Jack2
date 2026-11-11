@@ -1,0 +1,254 @@
+{
+  "accessed": "2026-11-08",
+  "session": "arena/cdecc6e1-jack2 (Session I)",
+  "tiers": {
+    "A": "Primary official government / regulatory record (BLS, Census, CA DOF, CA DIR, LA County, City of LA, CDE, CAL FIRE, USGS, FEMA, IRS, LA County Auditor)",
+    "B": "Primary issuer filing with a securities regulator (SEC EDGAR 10-K / 10-Q for Jack in the Box Inc.)",
+    "C": "Issuer investor-relations disclosure (company-published, not regulator-filed; directional anchor only, never used as a cap rate for the subject parcel)",
+    "X": "Source link checked on 2026-11-08; page relocated or returned 404 - link needs replacement before reliance"
+  },
+  "sources": [
+    {
+      "id": "T01",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics (BLS), Western Information Office",
+      "title": "Los Angeles Area Economic Summary (updated November 04, 2026)",
+      "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+      "covers": "Unemployment (US/CA/LA metro/LA County/LA city), nonfarm payrolls by sector, QCEW average weekly wages, CPI-U, ECI, Consumer Expenditure Survey",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "September 2026 vintage. Supersedes the August 2026 vintage quoted in the root build."
+    },
+    {
+      "id": "T02",
+      "tier": "A",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts: Los Angeles city, California (V2025 population estimates; 2020-2024 ACS 5-year)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,lacountycalifornia/PST045224",
+      "covers": "Population, age, race/Hispanic origin, housing tenure and values, income, poverty, education, labor force, commute, business sales",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Combined city+county table. County-only slug lacountycalifornia resolves to the U.S. aggregate page (see irregularity X-03); county income cells therefore cite T16/T03 or stay blank."
+    },
+    {
+      "id": "T03",
+      "tier": "A",
+      "publisher": "California Department of Finance, Demographic Research Unit",
+      "title": "Report P-2A: Total Population Projections, California Counties, 2020-2070 (Baseline 2024; Vintage 2026 Release, March 2026)",
+      "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx",
+      "covers": "Official state county population projections (Los Angeles County row, FIPS 6037), 2020-2070",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Los Angeles County: 10,012,050 (2020); 9,853,435 (2025); 9,727,305 (2030); 9,708,647 (2035); 9,637,524 (2040)."
+    },
+    {
+      "id": "T04",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations (DIR), Labor Commissioner's Office",
+      "title": "Minimum Wage Frequently Asked Questions",
+      "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+      "covers": "California statewide minimum wage schedule and indexation",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "$16.90/hour effective 2026-01-01 for all employers; CPI-W indexed, capped at 3.5%/yr."
+    },
+    {
+      "id": "T05",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations (DIR), Labor Commissioner's Office",
+      "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228 / Labor Code 1474-1476)",
+      "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+      "covers": "Fast food minimum wage, coverage rules (chains with 60+ U.S. locations), Fast Food Council authority",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "$20.00/hour since 2024-04-01 for covered fast food restaurant employees, including franchisees."
+    },
+    {
+      "id": "T06",
+      "tier": "A",
+      "publisher": "Los Angeles County Office of the Assessor",
+      "title": "Real Property Assessment - An Overview of Property Taxes / Proposition 13",
+      "url": "https://assessor.lacounty.gov/homeowners/realproperty",
+      "covers": "1% levy cap, 2% annual assessed-value cap, reassessment on change of ownership or new construction, supplemental assessments",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Page last updated 10/29/2026 per the site footer."
+    },
+    {
+      "id": "T07",
+      "tier": "A",
+      "publisher": "Los Angeles County Registrar-Recorder/County Clerk",
+      "title": "Documentary Transfer Tax",
+      "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes",
+      "covers": "County DTT rate ($0.55 per $500 = $1.10 per $1,000); City of Los Angeles rate table including Measure ULA tiers effective 7/1/26",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "City of Los Angeles (effective 7/1/26): $2.25 per $500 base; ULA 4% above $5,400,000 below $10,900,000; 5.5% at $10,900,000 and above."
+    },
+    {
+      "id": "T08",
+      "tier": "A",
+      "publisher": "City of Los Angeles Office of Finance",
+      "title": "Real Property Transfer Tax and Measure ULA FAQ",
+      "url": "https://finance.lacity.gov/faq/measure-ula",
+      "covers": "City base transfer tax 0.45% ($2.25 per $500), ULA 4% / 5.5% tiers, annual chained-CPI indexation of thresholds, exemptions",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "New ULA thresholds ($5,400,000 / $10,900,000) apply to transactions closing after June 30, 2026."
+    },
+    {
+      "id": "T09",
+      "tier": "B",
+      "publisher": "Jack in the Box Inc. (NASDAQ: JACK), SEC EDGAR",
+      "title": "Form 10-K for fiscal year ended September 28, 2025 (filed November 13, 2025)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+      "covers": "System size and franchise mix, franchise terms, prototype size, lease structure and renewal practice, geographic concentration, Del Taco sale, securitized debt, stockholders' deficit, risk factors",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Filing identity confirmed live on EDGAR: CIK 0000807882, fiscal year end 0927, accession 0000807882-25-000072."
+    },
+    {
+      "id": "T10",
+      "tier": "B",
+      "publisher": "Jack in the Box Inc. (NASDAQ: JACK), SEC EDGAR",
+      "title": "Form 10-Q for the quarterly period ended July 5, 2026 (filed August 12, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000091/0000807882-26-000091-index.htm",
+      "covers": "Quarterly financial results for Q3 FY2026; most recent tenant filing on EDGAR",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Filing index confirmed live: period of report 2026-07-05, accepted 2026-08-12, main document jack-20260705.htm. Figures from this filing are not quoted in this workbook; pull them at decision time (see P-list)."
+    },
+    {
+      "id": "T11",
+      "tier": "C",
+      "publisher": "Realty Income Corporation (NYSE: O), investor relations",
+      "title": "Q4 2025 Earnings Release & Supplemental Information (investor relations)",
+      "url": "https://www.realtyincome.com/sites/realty-income/files/2026-02/q4-2025-supplemental-report.pdf",
+      "covers": "Initial weighted average cash yield on 2025 real estate acquisitions (net-lease pricing benchmark)",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Company-published, not regulator-filed. Covers U.S. and Europe across property types; used only as a directional reinvestment anchor, never as the subject parcel's cap rate."
+    },
+    {
+      "id": "T12",
+      "tier": "A",
+      "publisher": "Board of Governors of the Federal Reserve System via FRED (St. Louis Fed)",
+      "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "covers": "10-year Treasury constant maturity yield",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "4.90% on 2026-11-04; latest observation 4.84% on 2026-11-05 (this session's rate input)."
+    },
+    {
+      "id": "T13",
+      "tier": "A",
+      "publisher": "Board of Governors of the Federal Reserve System via FRED (St. Louis Fed)",
+      "title": "Federal Funds Target Range - Upper Limit (DFEDTARU)",
+      "url": "https://fred.stlouisfed.org/series/DFEDTARU",
+      "covers": "FOMC target range upper limit",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "4.00% as of 2026-11-08."
+    },
+    {
+      "id": "T14",
+      "tier": "A",
+      "publisher": "Internal Revenue Service",
+      "title": "Instructions for Form 8824, Like-Kind Exchanges (rev. December 2025)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf",
+      "covers": "Section 1031 real-property like-kind exchange rules (real property only post-2017), deferred exchange mechanics, qualified intermediary, 45/180-day rules, carried-over basis",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "2025 instructions confirm exchanges limited to real property held for business or investment."
+    },
+    {
+      "id": "T15",
+      "tier": "A",
+      "publisher": "California Department of Education (CDE)",
+      "title": "District Profile: Los Angeles Unified (school year 2025-26)",
+      "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+      "covers": "LAUSD enrollment, English learner count and share, CDS code, accountability links",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Enrollment 497,105; English learners 81,328 (16.4%)."
+    },
+    {
+      "id": "T16",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Economic Analysis (BEA)",
+      "title": "Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, released February 5, 2026)",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+      "covers": "County personal income levels, 2024; Los Angeles County total personal income $818.5 billion, highest of any U.S. county",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "BEA has discontinued metropolitan-area statistics; county GDP levels now only in the Interactive Data Application (not in the release text)."
+    },
+    {
+      "id": "T17",
+      "tier": "A",
+      "publisher": "CAL FIRE - Office of the State Fire Marshal",
+      "title": "Fire Hazard Severity Zones (FHSZ) - program and maps",
+      "url": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones",
+      "covers": "Statutory FHSZ classification (PRC 4201-4204), Moderate/High/Very High, SRA maps effective April 2024, LRA mapping rollout 2025, parcel viewer",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "The URL previously cited in the root build (…/fire-hazard-severity-zones-maps-2022) returns 404 as of 2026-11-08; this is the current page (irregularity X-01). Parcel-level zone still requires the viewer plus local jurisdiction confirmation."
+    },
+    {
+      "id": "T18",
+      "tier": "A",
+      "publisher": "U.S. Geological Survey, Earthquake Hazards Program",
+      "title": "Earthquake Hazards Program - hazards, maps and data",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards",
+      "covers": "National seismic hazard assessment (2023 NSHM), ShakeMap/scenario data, earthquake catalog",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "The UCERF3-specific page previously cited returns 404; program page confirmed live (irregularity X-04). Parcel-specific shaking/fault-rupture determination requires CGS EQ Zapp - not performed here."
+    },
+    {
+      "id": "T19",
+      "tier": "A",
+      "publisher": "Federal Emergency Management Agency (FEMA)",
+      "title": "Flood Map Service Center / National Flood Hazard Layer",
+      "url": "https://msc.fema.gov/portal/home",
+      "covers": "Effective Flood Insurance Rate Maps and flood zones; search by address",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Parcel-level zone determination not performed here (APN withheld)."
+    },
+    {
+      "id": "T22",
+      "tier": "A",
+      "publisher": "Los Angeles County (CEO / Board of Supervisors)",
+      "title": "Key Facts About the Eaton and Palisades Fires (anniversary fact sheet)",
+      "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf",
+      "covers": "Eaton and Palisades fire acreage, structures destroyed/damaged, fatalities, debris removal, estimated economic output lost ($5.2B-$10.1B), businesses and workers impacted, labor income lost, tax revenue losses",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Re-read 2026-11-08; all hazard figures M81-M87 cite this source."
+    },
+    {
+      "id": "T20",
+      "tier": "A",
+      "publisher": "California Department of Insurance (CDI)",
+      "title": "California FAIR Plan - consumer information",
+      "url": "https://www.insurance.ca.gov/01-consumers/200-wrr/California-FAIR-Plan.cfm",
+      "covers": "Residual-market (FAIR Plan) availability for residents and businesses; CDI oversight; commercial limits up to $20 million per location; agent/broker placement",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Consumer page re-located (linked from the CDI homepage read 2026-11-08); the old URL (…/01-resi/FAIR-Plan.cfm) returns 'Document Not Found' - the root build's S20 cites the dead URL (irregularity X-02). FAIR Plan is residential-oriented; commercial wildfire capacity still requires a broker quote."
+    },
+    {
+      "id": "T21",
+      "tier": "A",
+      "publisher": "Los Angeles County Auditor-Controller",
+      "title": "Property Tax FAQs",
+      "url": "https://auditor.lacounty.gov/faqs/",
+      "covers": "County property tax process: Assessor, Auditor-Controller, Treasurer & Tax Collector roles; direct assessments",
+      "accessed": "2026-11-08",
+      "verified": true,
+      "note": "Supports the Prop 13 / tax-bill composition narrative."
+    }
+  ]
+}
