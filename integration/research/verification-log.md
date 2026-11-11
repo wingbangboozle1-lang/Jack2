@@ -631,3 +631,29 @@ URL: https://www.scag.ca.gov/sites/default/files/2024-05/23-2987-tr-demographics
 
 ## S-FEMA-NRI — FEMA National Risk Index, Los Angeles County report
 URL tried: https://hazards.fema.gov/nri/report/viewer?dataLOD=Counties&dataIDs=C06037 → "HTTP 500" on 2026-11-11. NOT READ. No NRI value is published.
+
+## S-CENSUS (continued) — QuickFacts chunk 3 of 4, section "Geography" (Los Angeles city | Los Angeles County)
+- Population per square mile, 2020: 8,304.2 | 2,466.9;  Population per square mile, 2010: 8,092.3 | 2,419.6
+- Land area in square miles, 2020: 469.49 | 4,059.28;  FIPS Code: 0644000 | 06037
+- Value note: "The vintage year (e.g., V2025) refers to the final year of the series (2020 thru 2025). Different vintage years of estimates
+  are not comparable." "Methodology differences may exist between data sources, and so estimates from different sources are not comparable."
+
+## S-CDE — California Department of Education, District Profile: Los Angeles Unified
+URL: https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000
+- "Data for School Year 2025-26: Enrollment 497,105; English Language Learners 81,328 (16.4%)"; School Type: Unified School District.
+- (The page names the district superintendent. Not transcribed.)
+
+## S-OSFM — CAL FIRE Office of the State Fire Marshal, Fire Hazard Severity Zones
+URL: https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones
+- "Fire Hazard Severity Zones fall into one of the following classifications: Moderate, High, Very High"
+- "Fire Hazard Severity Zone maps evaluate 'hazard,' not 'risk'. ... 'Hazard' is based on the physical conditions that create a likelihood
+  and expected fire behavior over a 30 to 50-year period without considering mitigation measures"
+- "2025 LRA FHSZ Rollout - All Counties ... Maps Released: Phase 1 - February 10, 2025 ... Phase 4 - March 24, 2025"; "Contact your local
+  jurisdiction for information on a specific area that is located in the Local Responsibility Area."
+- The page offers an address lookup ("Find your Fire Hazard Severity Zone"). No address was entered: the property address is private, so
+  the zone of the subject parcel is NOT determined.
+
+## S-FEMA-MSC — FEMA Flood Map Service Center
+URL: https://msc.fema.gov/portal/home
+- "The FEMA Flood Map Service Center (MSC) is the official public source for flood hazard information produced in support of the National
+  Flood Insurance Program (NFIP)." Address search available. No address was entered; the flood zone of the subject parcel is NOT determined.
