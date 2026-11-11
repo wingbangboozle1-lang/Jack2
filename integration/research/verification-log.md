@@ -657,3 +657,39 @@ URL: https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mit
 URL: https://msc.fema.gov/portal/home
 - "The FEMA Flood Map Service Center (MSC) is the official public source for flood hazard information produced in support of the National
   Flood Insurance Program (NFIP)." Address search available. No address was entered; the flood zone of the subject parcel is NOT determined.
+
+## S-LAC-ASSESSOR — Los Angeles County Office of the Assessor, Real Property Assessment
+URL: https://assessor.lacounty.gov/homeowners/realproperty
+- "In 1978, California voters passed Proposition 13 ... the maximum levy cannot exceed 1% of a property's assessed value (plus bonded
+  indebtedness and direct assessment taxes). Increases in assessed value are limited to 2% annually except when property changes of
+  ownership or undergoes new construction."
+- "under Proposition 13, properties are reassessed to current market value only upon a change in ownership or completion of new
+  construction (called the base year value)."
+- "When a publicly recorded transfer occurs, the Assessor receives a copy of the deed and determines whether a reappraisal is required
+  under State law. The date of reappraisal is generally the recording date of the deed that transfers ownership. However, the reappraisal
+  of property acquired by inheritance from an estate or living trust occurs as of the date of death of the property owner"
+- "Supplemental bills go directly to the property owner, and not to an impound account"
+- "Property tax bills show land and improvement values."
+- No parcel was looked up: the assessed value, base year and tax bill of the subject parcel are NOT determined.
+
+## S-CGS — California Geological Survey, EQ Zapp: California Earthquake Hazards Zone Application
+URL: https://www.conservation.ca.gov/cgs/geohazards/eq-zapp
+- "an online map that allows anyone ... to conveniently check whether a property is in an earthquake hazard zone."
+- "Earthquake hazard zones define areas subject to three distinct types of geologic ground failures: fault rupture ...; liquefaction ...;
+  and earthquake-induced landslides."
+- "Although strong ground shaking is responsible for most earthquake-related damage, these zones identify areas where earthquake hazards
+  other than structural shaking ... are more likely."
+- No address was entered; the earthquake hazard zone status of the subject parcel is NOT determined.
+
+## S-ZIMAS — Los Angeles City Planning, Zoning Search (ZIMAS)
+URL: https://planning.lacity.gov/zoning/zoning-search
+- "The Zone Information and Map Access System (ZIMAS) is a web-based mapping tool that provides zoning information for properties located
+  in Los Angeles ... used to look up property information, ranging from a parcel's land use and zoning designations to its planning
+  application and building permit history."
+- "Most properties across Los Angeles are subject to some type of overlay, an additional layer of planning control that limits or further
+  restricts what can be built beyond what the zoning allows."
+- No parcel was looked up; zoning, overlays and permit history of the subject parcel are NOT determined.
+
+## DEAD LINK — Los Angeles Department of Building and Safety, mandatory retrofit programs
+URL tried: https://dbs.lacity.gov/services/core-services/plan-check-permit/plan-check-permit-special-assistance/mandatory-retrofit-programs
+→ "The requested page could not be found." on 2026-11-11. NOT READ. No retrofit rule is published from this page.
