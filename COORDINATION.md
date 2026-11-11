@@ -1262,7 +1262,7 @@ Claimed by Arena session on branch `arena/6d8f5d05-jack2`. All work isolated in 
 | 6d-05 | Clean 12-page dashboard build | done | session-6d8f5d05 | `session-6d8f5d05/*.html`, `session-6d8f5d05/assets/**`, `session-6d8f5d05/scripts/build_site.py` |
 | 6d-06 | Privacy compliance — PII scan, anonymization | done | session-6d8f5d05 | `session-6d8f5d05/privacy.html` |
 | 6d-07 | Root workspace index update (additive) | done | session-6d8f5d05 | `workspaces.html` (additive row), `index.html` (additive section) |
-| 6d-08 | PR, merge, Pages deploy confirmation | in progress | session-6d8f5d05 | `COORDINATION.md` |
+| 6d-08 | PR, merge, Pages deploy confirmation | done | session-6d8f5d05 | `COORDINATION.md` |
 
 ## Sources verified (2026-11-11)
 
@@ -1284,3 +1284,14 @@ Claimed by Arena session on branch `arena/6d8f5d05-jack2`. All work isolated in 
 ## Scope discipline
 
 Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. No other session's files edited.
+
+## Deployment record (Session 6d8f5d05 / PR #42)
+
+| Item | Value |
+|---|---|
+| PR | **#42** — https://github.com/wingbangboozle1-lang/Jack2/pull/42 |
+| Merge commit | `8aa8c4063f72e388db148fb248733621df0fd0de`, merged 2026-11-11T02:18:15Z |
+| Pages build | Status: **built** (commit 8aa8c40) |
+| Live URL | https://wingbangboozle1-lang.github.io/Jack2/session-6d8f5d05/ |
+| Verification | verify.py ALL PASS (24 sources, 62 verified metrics, 11 blank, 20 Q&A items, 0 PII, 0 broken links) |
+| Pages | 12 (index, executive-summary, qa, market-economics, property-lease, tenant, decision, risks, flagged, sources, privacy, verification) |
