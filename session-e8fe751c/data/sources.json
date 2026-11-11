@@ -1,0 +1,170 @@
+{
+ "accessed": "2026-11-11",
+ "sources": [
+  {
+   "id": "S01",
+   "tier": "A",
+   "publisher": "U.S. Department of the Treasury",
+   "title": "Daily Treasury Par Yield Curve Rates — November 2026 table",
+   "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+   "page_date": "Table shows 7 entries, 11/02/2026 through 11/10/2026; page footer dated Tuesday Nov 10, 2026",
+   "read_how": "Page opened 2026-11-11; whole November table read",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S02",
+   "tier": "A",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts — Los Angeles city, California; Los Angeles County, California",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045225",
+   "page_date": "Vintage 2025 population estimates (V2025); 2020–2024 ACS 5-year; 2022 Economic Census",
+   "read_how": "Page opened 2026-11-11; both geography columns read, chunks 1–3 of 4",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S03",
+   "tier": "A",
+   "publisher": "City of Los Angeles, Office of Finance",
+   "title": "Real Property Transfer Tax and Measure ULA FAQ",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "page_date": "Page carries a note on thresholds effective for transactions closing after June 30, 2026",
+   "read_how": "Page opened 2026-11-11; chunk 1 of 2 read (rates, thresholds, effective date, indexation, exemptions)",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S04",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR)",
+   "title": "Jack in the Box Inc. (CIK 0000807882) — filing index, forms 10-K / 10-Q",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=10-&dateb=&owner=include&count=20",
+   "page_date": "Most recent periodic report listed: Form 10-Q filed 2026-08-12",
+   "read_how": "Index page opened 2026-11-11; first 13 rows read",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S05",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by Jack in the Box Inc.",
+   "title": "Form 8-K filed 2026-08-12, Exhibit 99.1: “Jack in the Box Inc. Reports Third Quarter 2026 Earnings”",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "page_date": "Release dated August 12, 2026; quarter ended July 5, 2026 (unaudited)",
+   "read_how": "Exhibit opened 2026-11-11; chunks 1–3 of 6 read (narrative, guidance, statements of earnings, balance sheet, part of cash flows)",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/0000807882-26-000090-index.htm"
+  },
+  {
+   "id": "S06",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by Jack in the Box Inc.",
+   "title": "Form 8-K filed 2026-06-23, Exhibit 99.1: “Jack in the Box Inc. Completes $500 Million Securitized Financing Facility”",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000079/ex991-pressreleasexdebtclo.htm",
+   "page_date": "Release dated June 23, 2026",
+   "read_how": "Exhibit opened 2026-11-11; read in full (1 chunk)",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000079/0000807882-26-000079-index.htm"
+  },
+  {
+   "id": "S07",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by Jack in the Box Inc.",
+   "title": "Annual report on Form 10-K for the fiscal year ended September 28, 2025 (filed 2025-11-19)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+   "page_date": "Fiscal year ended September 28, 2025; accession 0000807882-25-000072",
+   "read_how": "Main document opened 2026-11-11 (53 chunks). Read: cover and contents, Item 1 overview, Item 1A capital-structure risk factors (pp. 18–20), Item 2 Properties (pp. 21–22). NOT read today: the rest of Item 1A, Item 7, the financial statements and notes.",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/0000807882-25-000072-index.htm"
+  },
+  {
+   "id": "S08",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by Jack in the Box Inc.",
+   "title": "Form 8-K filed 2026-09-21, Exhibit 99.1 (board appointment; cooperation agreement extended)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/ex991-pressreleasexbodanno.htm",
+   "page_date": "Release dated September 21, 2026; period of report 2026-09-17",
+   "read_how": "Exhibit opened 2026-11-11; read in full (1 chunk). Individuals named in the filing are not reproduced on this site.",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/0000807882-26-000098-index.htm"
+  },
+  {
+   "id": "S09",
+   "tier": "A",
+   "publisher": "U.S. Bureau of Labor Statistics",
+   "title": "Los Angeles Area Economic Summary (updated November 04, 2026)",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "page_date": "“Updated November 04, 2026”; data through September 2026, not seasonally adjusted",
+   "read_how": "PDF opened 2026-11-11; read in full (1 chunk)",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S10",
+   "tier": "A",
+   "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+   "title": "Minimum Wage Frequently Asked Questions",
+   "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+   "page_date": "Schedule shows the rate effective January 1, 2026",
+   "read_how": "Page opened 2026-11-11; chunk 1 of 2 read",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S11",
+   "tier": "A",
+   "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+   "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228)",
+   "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+   "page_date": "Page footer dated “September 2024”",
+   "read_how": "Page opened 2026-11-11; chunks 1 and 3 of 3 read",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S12",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Like-kind exchanges — Real estate tax tips",
+   "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+   "page_date": "Undated IRS guidance page",
+   "read_how": "Page opened 2026-11-11; read in full (1 chunk)",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S13",
+   "tier": "A",
+   "publisher": "Los Angeles County Office of the Assessor",
+   "title": "Proposition 13",
+   "url": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13",
+   "page_date": "Site footer: last updated 10/29/2026",
+   "read_how": "Page opened 2026-11-11; read in full (1 chunk)",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S14",
+   "tier": "A",
+   "publisher": "California Employment Development Department, Labor Market Information Division",
+   "title": "Los Angeles-Long Beach-Glendale Metropolitan Division (Los Angeles County) — monthly labor force and industry employment release, September 2026",
+   "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf",
+   "page_date": "September 2026 preliminary; August 2026 revised",
+   "read_how": "PDF opened 2026-11-11; chunks 1–2 of 3 read (narrative and industry table through Other Services). The release prints a staff contact block, which is not reproduced on this site.",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S15",
+   "tier": "A",
+   "publisher": "California Department of Finance, Demographic Research Unit",
+   "title": "Report P-2A: Total Population Projections, California Counties, 2020–2070 (Baseline 2024; Vintage 2026 release)",
+   "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx",
+   "page_date": "Release note in the file: “2026.03.13: Updated to reflect latest published July 1 population estimates. No change to 2024 Baseline assumptions”",
+   "read_how": "Workbook opened 2026-11-11; ‘About’ sheet and the California and Los Angeles rows (FIPS 6037) read, all 51 year columns",
+   "accessed": "2026-11-11",
+   "landing": "https://dof.ca.gov/forecasting/demographics/projections/"
+  },
+  {
+   "id": "S16",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Instructions for Form 8824 (2025), Like-Kind Exchanges",
+   "url": "https://www.irs.gov/instructions/i8824",
+   "page_date": "2025 revision of the instructions",
+   "read_how": "Page opened 2026-11-11; chunks 1 and 3 of 8 read (contents; like-kind property; deferred exchanges)",
+   "accessed": "2026-11-11"
+  }
+ ]
+}
