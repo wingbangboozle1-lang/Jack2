@@ -165,6 +165,206 @@
    "page_date": "2025 revision of the instructions",
    "read_how": "Page opened 2026-11-11; chunks 1 and 3 of 8 read (contents; like-kind property; deferred exchanges)",
    "accessed": "2026-11-11"
+  },
+  {
+   "id": "S17",
+   "tier": "A",
+   "publisher": "California Secretary of State",
+   "title": "State Ballot Measures — Statewide Results, November 3, 2026 General Election (UNOFFICIAL)",
+   "url": "https://electionresults.sos.ca.gov/returns/ballot-measures",
+   "page_date": "“Unofficial Election Results … Results will be certified by December 11, 2026 … reporting as of November 10, 2026, 5:31 p.m.”",
+   "read_how": "Page opened 2026-11-11; statewide table read in full (chunk 1 of 2)",
+   "accessed": "2026-11-11",
+   "caveat": "UNOFFICIAL count. Percentages moved between each earlier workbook's reading and this one and will move again until certification."
+  },
+  {
+   "id": "S18",
+   "tier": "A",
+   "publisher": "California Secretary of State",
+   "title": "Official Voter Information Guide — Proposition 3 (November 3, 2026)",
+   "url": "https://voterguide.sos.ca.gov/propositions/3/",
+   "page_date": "Official Voter Information Guide, 2026 General Election",
+   "read_how": "Page opened 2026-11-11; read in full",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S19",
+   "tier": "A",
+   "publisher": "California Secretary of State",
+   "title": "Official Voter Information Guide — Proposition 43 (November 3, 2026)",
+   "url": "https://voterguide.sos.ca.gov/propositions/43/",
+   "page_date": "Official Voter Information Guide, 2026 General Election",
+   "read_how": "Page opened 2026-11-11; read in full. Campaign contact blocks on the page are not reproduced.",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S20",
+   "tier": "A",
+   "publisher": "U.S. Geological Survey",
+   "title": "Fact Sheet 2015–3009 — UCERF3: A New Earthquake Forecast for California’s Complex Fault System",
+   "url": "https://pubs.usgs.gov/fs/2015/3009/pdf/fs2015-3009.pdf",
+   "page_date": "First posted March 9, 2015; 30-year window starts from 2014",
+   "read_how": "PDF opened 2026-11-11; chunks 1–2 of 4 read (text and Table 1)",
+   "accessed": "2026-11-11",
+   "landing": "https://pubs.usgs.gov/fs/2015/3009/"
+  },
+  {
+   "id": "S21",
+   "tier": "A",
+   "publisher": "CAL FIRE (California Department of Forestry and Fire Protection)",
+   "title": "Eaton Fire incident page",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "page_date": "Last Updated 08/06/2026 10:47 AM",
+   "read_how": "Page opened 2026-11-11; chunk 1 of 2 read. Agency telephone numbers and centre addresses on the page are not reproduced.",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S22",
+   "tier": "A",
+   "publisher": "CAL FIRE (California Department of Forestry and Fire Protection)",
+   "title": "Palisades Fire incident page",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "page_date": "Last Updated 04/09/2026 8:20 AM",
+   "read_how": "Page opened 2026-11-11; read in full. Centre addresses on the page are not reproduced.",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S23",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by Realty Income Corporation",
+   "title": "Form 8-K filed 2026-11-02, Exhibit 99.1: operating results for the three and nine months ended September 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "page_date": "Release dated November 2, 2026",
+   "read_how": "Exhibit opened 2026-11-11; chunks 1–2 of 10 read (highlights, portfolio update, changes in occupancy, investment summary)",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/0000726728-26-000056-index.htm",
+   "caveat": "A company's own transaction yields across a diversified, largely investment-grade portfolio. NOT a quote for a single quick-service restaurant in Los Angeles."
+  },
+  {
+   "id": "S24",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by NNN REIT, Inc.",
+   "title": "Form 8-K filed 2026-11-04, Exhibit 99.1: Third Quarter 2026 Results",
+   "url": "https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/nnn-ex99_1.htm",
+   "page_date": "Release dated November 4, 2026",
+   "read_how": "Exhibit opened 2026-11-11; chunks 1–2 of 6 read (highlights, acquisitions, dispositions, balance sheet, guidance). The release prints a named contact, not reproduced.",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/0000751364-26-000002-index.htm",
+   "caveat": "National single-tenant retail portfolio; not specific to restaurants or to Los Angeles."
+  },
+  {
+   "id": "S25",
+   "tier": "B",
+   "publisher": "U.S. Securities and Exchange Commission (EDGAR) — filed by Four Corners Property Trust, Inc.",
+   "title": "Form 8-K filed 2026-10-28, Exhibit 99.1: Third Quarter 2026 Financial and Operating Results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1650132/000119312526436301/fcpt-ex99_1.htm",
+   "page_date": "Release dated October 28, 2026",
+   "read_how": "Exhibit opened 2026-11-11; chunk 1 of 3 read (management comments through credit facilities). Named executive quoted in the release is not reproduced.",
+   "accessed": "2026-11-11",
+   "filing_index": "https://www.sec.gov/Archives/edgar/data/1650132/000119312526436301/0001193125-26-436301-index.htm",
+   "caveat": "A restaurant-heritage net-lease REIT, but this quarter's purchases were 87% medical retail."
+  },
+  {
+   "id": "S26",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Topic no. 409, Capital gains and losses",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "page_date": "States thresholds “For taxable years beginning in 2025”",
+   "read_how": "Page opened 2026-11-11; chunk 1 of 2 read",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S27",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Net Investment Income Tax",
+   "url": "https://www.irs.gov/individuals/net-investment-income-tax",
+   "page_date": "Undated IRS guidance page",
+   "read_how": "Page opened 2026-11-11; read in full",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S28",
+   "tier": "A",
+   "publisher": "California Franchise Tax Board",
+   "title": "Capital gains and losses",
+   "url": "https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html",
+   "page_date": "Last updated: 01/28/2026",
+   "read_how": "Page opened 2026-11-11; read in full",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S29",
+   "tier": "A",
+   "publisher": "California Franchise Tax Board",
+   "title": "2025 California Tax Rate Schedules",
+   "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
+   "page_date": "Tax year 2025",
+   "read_how": "PDF opened 2026-11-11; read in full",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S30",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Publication 551 (12/2025), Basis of Assets",
+   "url": "https://www.irs.gov/publications/p551",
+   "page_date": "Revision 12/2025",
+   "read_how": "Page opened 2026-11-11; chunks 4, 11 and 15 of 17 read (cost basis; inherited property; community property)",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S31",
+   "tier": "A",
+   "publisher": "California State Board of Equalization",
+   "title": "Proposition 19",
+   "url": "https://www.boe.ca.gov/prop19/",
+   "page_date": "Current-law comparison charts",
+   "read_how": "Page opened 2026-11-11; chunk 1 of 6 read. The page prints a department phone and e-mail, not reproduced.",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S32",
+   "tier": "A",
+   "publisher": "California Department of Finance, Demographic Research Unit",
+   "title": "California Public K-12 Graded Enrollment and High School Graduate Projections by County — 2026 Series (August 2026): highlights page",
+   "url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/",
+   "page_date": "August 2026",
+   "read_how": "Page opened 2026-11-11; read in full",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": "S33",
+   "tier": "A",
+   "publisher": "California Department of Finance, Demographic Research Unit",
+   "title": "California Public K-12 Graded Enrollment Projections Table, 2026 Series (workbook)",
+   "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-graded-enrollment/CA_K-12_Enrollment_Series-2026.xlsx",
+   "page_date": "August 2026",
+   "read_how": "Workbook opened 2026-11-11 (83 chunks); ‘About’ sheet and the Los Angeles rows 2009-10 through 2050-51 read (chunks 24–25). The ‘About’ sheet prints an office phone and e-mail, not reproduced.",
+   "accessed": "2026-11-11",
+   "landing": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/"
+  },
+  {
+   "id": "S34",
+   "tier": "B",
+   "publisher": "Federal Reserve Bank of St. Louis (FRED), republishing U.S. Bureau of Economic Analysis data",
+   "title": "Per Capita Personal Income in Los Angeles County, CA (PCPI06037)",
+   "url": "https://fred.stlouisfed.org/series/PCPI06037",
+   "page_date": "Updated Feb 5, 2026; next release Dec 2, 2026",
+   "read_how": "Page opened 2026-11-11; observations table read (chunk 1 of 2)",
+   "accessed": "2026-11-11",
+   "caveat": "A Federal Reserve Bank's republication of the BEA series, used because the BEA's own county fact-sheet page returned another area's numbers when opened today (see Flagged)."
+  },
+  {
+   "id": "S35",
+   "tier": "A",
+   "publisher": "Los Angeles County Registrar-Recorder/County Clerk",
+   "title": "Documentary Transfer Tax",
+   "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/general-info",
+   "page_date": "Rate table shows “Los Angeles (Effective 7/1/26)”",
+   "read_how": "Page opened 2026-11-11; chunk 1 of 6 read (rates and calculation)",
+   "accessed": "2026-11-11"
   }
  ]
 }
