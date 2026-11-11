@@ -266,3 +266,71 @@ URL: https://finance.lacity.gov/faq/measure-ula
 - "The real property transfer tax is an excise tax on the privilege of selling a real property interest ... calculated on the consideration
   or value of the real property interest conveyed."
 - Exemptions listed are for transferees that are qualified affordable housing organisations (LAMC 21.9.14, 21.9.15).
+
+## S-DOF-P2A — California Department of Finance, Demographic Research Unit, Report P-2A
+URL (file): https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx
+URL (index page): https://dof.ca.gov/forecasting/demographics/projections/
+Read on the index page: "Population Projections (Baseline 2024) ... Vintage 2026 (2026.03.13): Updated to reflect latest published July 1
+population estimates. No change to 2024 Baseline assumptions"
+Read in the file: "Report P-2A: Total Population Projections, California Counties, 2020-2070 (Baseline 2024 Population Projections; Vintage 2026
+Release). Sacramento: California. March 2026." Columns: FIPS | Geography | Age | Sex | Race-Ethnicity | 2020 ... 2070 (July 1).
+- Row "6037 | LOS ANGELES | ALL AGES | ALL SEXES | ALL RACES":
+  2020 10,012,050 | 2021 9,914,219 | 2022 9,860,931 | 2023 9,855,630 | 2024 9,898,257 | 2025 9,853,435 | 2026 9,811,358 | 2027 9,778,629 |
+  2028 9,754,806 | 2029 9,733,907 | 2030 9,727,305 | 2031 9,723,118 | 2032 9,721,552 | 2033 9,720,980 | 2034 9,716,390 | 2035 9,708,647 |
+  2036 9,698,123 | 2037 9,684,997 | 2038 9,670,356 | 2039 9,654,459 | 2040 9,637,524 | 2041 9,620,202 | 2042 9,601,589 | 2043 9,580,933 |
+  2044 9,559,513 | 2045 9,536,756 | 2046 9,511,469 | 2047 9,484,569 | 2048 9,454,638 | 2049 9,423,404 | 2050 9,390,823 | 2051 9,355,833 |
+  2052 9,318,805 | 2053 9,280,296 | 2054 9,239,554 | 2055 9,196,469 | 2056 9,151,847 | 2057 9,106,220 | 2058 9,059,568 | 2059 9,010,821 |
+  2060 8,961,332 | 2061 8,910,383 | 2062 8,858,235 | 2063 8,805,645 | 2064 8,751,898 | 2065 8,697,514 | 2066 8,642,106 | 2067 8,585,845 |
+  2068 8,529,029 | 2069 8,471,696 | 2070 8,413,331
+- Row "6000 | CALIFORNIA": 2020 39,541,742 | 2021 39,260,048 | 2022 39,220,037 | 2023 39,279,899 | 2024 39,509,657 | 2025 39,528,899 |
+  2026 39,567,317 | 2027 39,625,898 | 2028 39,700,141 | 2029 39,780,004 | 2030 39,879,496 | 2031 39,987,811 | 2032 40,099,750 |
+  2033 40,213,883 | 2034 40,317,228 | 2035 40,410,843 | 2036 40,499,318 | 2037 40,581,880 | 2038 40,656,029 | 2039 40,724,862 |
+  2040 40,790,825 | ... | 2049 41,120,338 | 2050 41,118,423 | ... | 2070 39,853,687
+- NOTE FOR REVIEW: DOF's July 1, 2025 figure for Los Angeles County (9,853,435) differs from the Census Bureau V2025 estimate for the same
+  date (9,694,934) by 158,501 persons. Two official series, two methods.
+- Also listed on the index page (not opened): P-4 State and County Projected Households 2010-2040; P-2B County Population by Age.
+
+## S-NNN-8K — NNN REIT, Inc. Form 8-K, Exhibit 99.1, November 4, 2026 (Third Quarter 2026 Results)
+URL: https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/nnn-ex99_1.htm
+(The exhibit header carries a corporate contact name and phone. Not transcribed. Not for publication.)
+- "Closed on $221.7 million of investments at an initial cash cap rate of 7.3%, with a weighted average lease term of 19.6 years and $658.1
+  million of investments at an initial cash cap rate of 7.3% in the nine months ended September 30, 2026"
+- "Sold 32 properties for $50.7 million, including $37.3 million of income producing properties at a weighted average cap rate of 7.8%"
+- "Increased portfolio occupancy to 99.2% ... with a portfolio weighted average remaining lease term of 10.1 years"; "Increased ABR by 6.8%
+  over prior-year results to $974.0 million"; "Increased 2026 disposition volume guidance to a new range of $160 - $180 million"
+- Portfolio snapshot, September 30, 2026 | June 30, 2026 | September 30, 2025: properties 3,817 | 3,774 | 3,697; gross leasable area
+  40,764,000 | 40,440,000 | 39,209,000 sq ft; occupancy 99.2% | 99.1% | 97.5%; WALT 10.1 | 10.1 | 10.1 years; ABR $973,997k | $959,145k | $912,218k
+- Property acquisitions, quarter | nine months: dollars invested $221,741k | $658,144k; properties 76 | 206; weighted average cap rate
+  7.3% | 7.3% ("Calculated as the initial cash annual base rent divided by the total purchase price"); weighted average lease term 19.6 | 18.5 years
+- Property dispositions, quarter ended September 30, 2026 — Income Producing | Vacant | Total:
+  properties 21 | 11 | 32; GLA 150,000 | 63,000 | 213,000 sq ft; net sale proceeds $37,299k | $13,409k | $50,708k; weighted average cap rate 7.8% | — | 7.8%
+- Property dispositions, nine months ended September 30, 2026 — Income Producing | Vacant | Total:
+  properties 37 | 46 | 83; GLA 265,000 | 389,000 | 654,000 sq ft; net sale proceeds $64,145k | $59,124k | $123,269k; weighted average cap rate 7.3% | — | 7.3%
+  ("Calculated as the cash annual base rent divided by the total gross proceeds received for the income producing properties.")
+- Property Portfolio as of September 30, 2026, "Top 20 Lines of Trade" (line | # tenants | # properties | % of ABR):
+  1. Automotive service | 48 | 786 | 19.2%;  2. Convenience stores | 31 | 670 | 15.5%;  3. Restaurants – limited service | 63 | 618 | 7.6%;
+  6. Restaurants – full service | 67 | 325 | 6.2%;  Total properties 3,817.
+- Debt summary footnote: "Unsecured debt has a weighted average interest rate of 4.2% and a weighted average maturity of 9.8 years."
+
+## S-DOF-K12 — California Department of Finance, Public K-12 Graded Enrollment and High School Graduate Projections by County, 2026 Series (August 2026)
+URL (page): https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/
+URL (file): https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-graded-enrollment/CA_K-12_Enrollment_Series-2026.xlsx
+- Page: "California experienced the 9th consecutive decrease in total Public K-12 Enrollment in the 2025-26 school year (-75,000 students),
+  enrolling 5,731,300 students. Over the next ten years, if current trends in fertility and migration hold, a further decline of 710,500 in
+  total enrollment is projected, resulting in total enrollment of 5,020,800 by 2035-36."
+- Page: "The biggest decline in enrollment is expected in Los Angeles County, which will fall by 240,800 students by the end of the 10-year
+  projection. Overall, six counties will have increased public K-12 enrollment by 2035-36."
+- Page: "Graduates decreased slightly (-1,144 graduates) in 2024-25 to 453,600 and are projected to decline to 424,800 in 2026-27 ... before
+  falling to 381,300 in 2035-36."
+- Page: extended projection beyond 10 years is "a continuation of the Grade Progression Ratios ... do not reflect any changes in assumptions
+  after the initial 10-year period."
+- File, sheet "2026 Series Table", rows "Los Angeles", column "K-12" (total enrollment):
+  2009-10 1,574,150 | 2010-11 1,589,390 | 2011-12 1,578,215 | 2012-13 1,564,205 | 2013-14 1,552,704 | 2014-15 1,539,260 | 2015-16 1,523,212 |
+  2016-17 1,511,354 | 2017-18 1,492,652 | 2018-19 1,464,002 | 2019-20 1,436,522 | 2020-21 1,390,342 | 2021-22 1,336,558 | 2022-23 1,313,935 |
+  2023-24 1,298,060 | 2024-25 1,275,769 | 2025-26 1,242,816 | 2026-27 1,211,279 | 2027-28 1,184,443 | 2028-29 1,157,464 | 2029-30 1,129,312 |
+  2030-31 1,103,771 | 2031-32 1,081,999 | 2032-33 1,062,841 | 2033-34 1,045,098 | 2034-35 1,023,360 | 2035-36 1,002,045 | 2036-37 983,462 |
+  2037-38 965,860 | 2038-39 952,827 | 2039-40 939,374 | 2040-41 924,942 | 2041-42 911,627 | 2042-43 899,660 | 2043-44 889,186 |
+  2044-45 878,984 | 2045-46 866,952 | 2046-47 855,490
+- Same rows, other columns: 2025-26 — K 74,304; grade 12 105,086; Grads 98,840; K-8 831,718; 9-12 411,098.
+  2035-36 — K 68,259; grade 12 80,999; Grads 76,184; K-8 692,574; 9-12 309,471. 2024-25 Grads 101,728.
+- Arithmetic check: 1,242,816 - 1,002,045 = 240,771 (page rounds to 240,800).
