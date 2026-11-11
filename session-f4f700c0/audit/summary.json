@@ -1,29 +1,33 @@
 {
   "as_of": "2026-11-08",
-  "files": 375,
-  "lines": 75065,
-  "bytes": 6471618,
-  "privacy_pattern_hits": 1,
+  "files": 539,
+  "lines": 106273,
+  "bytes": 9523455,
+  "privacy_pattern_hits": 3,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [
     {
       "path": "research/04-education.md",
       "hits": 1
+    },
+    {
+      "path": "tests/verify.test.mjs",
+      "hits": 2
     }
   ],
   "structural_errors": 0,
   "workspaces": {
     "root/config": {
-      "files": 22,
-      "lines": 2884,
-      "bytes": 416436,
-      "privacy_hits": 0,
+      "files": 67,
+      "lines": 10030,
+      "bytes": 1000485,
+      "privacy_hits": 2,
       "structural_errors": 0
     },
     "root/historical-shared": {
-      "files": 52,
-      "lines": 15755,
-      "bytes": 886289,
+      "files": 59,
+      "lines": 20071,
+      "bytes": 1188807,
       "privacy_hits": 1,
       "structural_errors": 0
     },
@@ -51,7 +55,7 @@
     "session-313ba936": {
       "files": 26,
       "lines": 3973,
-      "bytes": 589631,
+      "bytes": 590416,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -69,6 +73,13 @@
       "privacy_hits": 0,
       "structural_errors": 0
     },
+    "session-50002478": {
+      "files": 37,
+      "lines": 6070,
+      "bytes": 938468,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
     "session-5bb36a1b": {
       "files": 13,
       "lines": 688,
@@ -83,10 +94,24 @@
       "privacy_hits": 0,
       "structural_errors": 0
     },
+    "session-643e4aab": {
+      "files": 23,
+      "lines": 5239,
+      "bytes": 469666,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
     "session-6ad87c21": {
       "files": 25,
       "lines": 4921,
       "bytes": 440236,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
+    "session-8149683c": {
+      "files": 25,
+      "lines": 6742,
+      "bytes": 472468,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -101,6 +126,13 @@
       "files": 12,
       "lines": 1940,
       "bytes": 192083,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
+    "session-cdecc6e1": {
+      "files": 27,
+      "lines": 1695,
+      "bytes": 283883,
       "privacy_hits": 0,
       "structural_errors": 0
     },
