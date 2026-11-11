@@ -1247,6 +1247,80 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 ---
 
+# Session N4 — `session-3090b9ed` (branch `arena/3090b9ed-jack2`) — claim 2026-11-11
+
+**Label note.** Four sessions launched within the same three minutes on 2026-11-11 and all labelled
+themselves "Session N" (`session-8cdb7c1a`, `session-2b3370d1`, `session-fa2afdb1`, `session-62641e7b`).
+To keep this board readable this session publishes as **Session N4** (`session-3090b9ed`). No other
+session's label or record is altered.
+
+Platform note: Arena pins this session to `arena/3090b9ed-jack2`; that branch doubles as the integration
+branch for the pull request to `main`. All work products are isolated in `session-3090b9ed/**`; shared
+files are touched only by the additive changes listed in N4-07.
+
+## Starting state read before claiming (2026-11-11 02:10 UTC)
+
+- `main` at `ab596f9` (PR #39 merged 2026-11-10). GitHub Pages `built`, source `main` / root, legacy build.
+- Fifteen prior workbooks published under `session-*/` and `docs/`; the root site has 16 pages.
+- Baseline re-run on `ab596f9` before any edit: `tools/model.py`, `tools/build_site.py`,
+  `tools/check_site.py` all pass (recorded green by three sessions independently today).
+- **Live parallel sessions detected at claim time** — four branches committed within minutes of this
+  claim, all starting from `ab596f9`: `arena/8cdb7c1a-jack2` (02:10:03Z, claims the root landing rewrite,
+  `data/core/**`, `tools/core_*.py`, root index + 9 new root pages), `arena/2b3370d1-jack2` (02:09:48Z,
+  `session-2b3370d1/**`), `arena/fa2afdb1-jack2` (02:07:52Z, `session-fa2afdb1/**`),
+  `arena/62641e7b-jack2` (02:07:46Z, `session-62641e7b/**`). Their claims are read and respected:
+  this session will not write into their directories, will not rewrite root `index.html`, and will not
+  create `data/core/`, `tools/core_*`, or any root page those sessions named as theirs.
+- **Stale claim recorded (takeover allowed, not exercised):** `session-fe942801` claimed FE-01..FE-08 on
+  2026-11-10T00:35Z; its last commit is `443ce35` at 2026-11-10T01:03Z — over 25 hours idle, with only
+  `session-fe942801/data/{facts,sources}.psv` (ledger batches 1–6) on its unmerged branch. The 60-minute
+  handoff rule would permit takeover; this session does **not** take those files over, because four live
+  sessions are already running today and racing into that scope would collide. The stale claim and its
+  partial ledger are logged here for review; nothing on that branch is modified.
+- Open pull requests at claim time: **#5, #6, #10, #14, #18, #30** (stale, earlier sessions' heads),
+  **#38** (`arena/313ba936` deployment record), **#40** (`arena/5f296f9d` deployment record). None is
+  this session's work: they will not be closed, merged or force-pushed, and their branches are untouched.
+
+## Task board — Session N4 claims (disjoint scope)
+
+| # | Task | Status | Owner | Files / scope (non-overlapping) |
+|---|---|---|---|---|
+| N4-01 | Read board, detect parallel sessions, claim disjoint scope, record claim | claimed | session-3090b9ed | `COORDINATION.md` (append only) |
+| N4-02 | Independent official-source re-verification, access date **2026-11-11**; decision-critical rows only; every row source-linked; unverified values blank + flagged | claimed | session-3090b9ed | `session-3090b9ed/data/sources.json`, `session-3090b9ed/data/metrics.json` |
+| N4-03 | Pre-decision questions / answers / missing-information register with acquisition methods | claimed | session-3090b9ed | `session-3090b9ed/data/questions.json`, `session-3090b9ed/questions.html` |
+| N4-04 | Cross-workbook reconciliation: line-by-line comparison of every published sell-vs-renew recommendation and headline number across the fifteen prior workbooks + irregularity register | claimed | session-3090b9ed | `session-3090b9ed/data/reconciliation.json`, `session-3090b9ed/data/irregularities.json` |
+| N4-05 | Projection system: deterministic scenarios + seeded Monte Carlo over sell / hold / extend, BAU + black swan hazards, 2030–2035 expiry grid | claimed | session-3090b9ed | `session-3090b9ed/scripts/model.py`, `session-3090b9ed/data/model_output.json` |
+| N4-06 | Risk register (every decision × BAU + black swan) and decision analysis | claimed | session-3090b9ed | `session-3090b9ed/data/risks.json`, `session-3090b9ed/data/decisions.json` |
+| N4-07 | Clean dashboard: landing + category subpages in table format, executive summary, Flagged for Review | claimed | session-3090b9ed | `session-3090b9ed/*.html`, `session-3090b9ed/assets/**` |
+| N4-08 | Automated verifier: source-per-row, blank-if-unverified rule, PII scan, link check, model reproduction | claimed | session-3090b9ed | `session-3090b9ed/scripts/verify.py` |
+| N4-09 | Final integration for this session: rebase on `origin/main`, additive workspace row + README section + additive CI step **only if still missing after the four Session N merges**, PR → `main`, merge without waiting, confirm Pages deploy, record result here | claimed | session-3090b9ed | `tools/build_site.py` (one additive row in `build_workspaces()`, only if absent), `README.md` (additive section, only if absent), `.github/workflows/verify.yml` (one additive step), `COORDINATION.md` |
+
+**Scope discipline.** This session writes only `session-3090b9ed/**` plus the additive shared edits named
+in N4-09. No page, dataset, script, model or CI step owned by Sessions A–M or by the four live Session N
+branches is edited, regenerated or deleted. The four live Session N sessions keep their claims; where a
+shared additive edit (workspace row, README line, CI step) is claimed by more than one session, this
+session re-applies its own only after merging `origin/main` and only if the edit is still absent, keeping
+every other session's addition intact.
+
+**Privacy (highest priority).** No owner name, address, APN, parcel, loan, account or tenant-contact
+identifier will be committed or published. Property-specific facts that only the owner can supply stay
+**blank** in every published table and are flagged, never inferred. Any personal information encountered
+during research is for internal use only and never appears on any page of the site.
+
+**Verification rule.** A row is `verified` only when this session has itself read the official publisher's
+page on 2026-11-11 and recorded the URL in `session-3090b9ed/data/sources.json`. Everything else is blank
+and flagged. No value is copied from a prior session's workbook into a "verified" row.
+
+### Handoff / claim log
+
+- **2026-11-11 02:10 UTC, Session N4 (`session-3090b9ed`)**: read `COORDINATION.md` (1,246 lines), the
+  file tree, `tools/build_site.py`, `data/*.json`, `gh pr list`, `git ls-remote`. Detected four live
+  Session N branches committed within the same three minutes and the stale `session-fe942801` claim
+  (25 h idle). Claimed N4-01..N4-09 with a directory-disjoint scope; committing and pushing this claim
+  before any research, per the brief.
+
+---
+
 # Session `6d8f5d05` — 2026-11-11
 
 Claimed by Arena session on branch `arena/6d8f5d05-jack2`. All work isolated in `session-6d8f5d05/**`. No other session's files edited.

@@ -999,6 +999,25 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-3090b9ed/</code>",
+         "Session N4 (branch <code>arena/3090b9ed-jack2</code>) &mdash; 2026-11-11 line-by-line verification "
+         "workbook: 20 official sources read on the access date (BLS LA Summary, Census QuickFacts V2025, FRED, "
+         "LA County Recorder + City Finance ULA, CA DIR/LA OWS, CDE, LA County fire fact sheet, BEA, SEC EDGAR, "
+         "USGS UCERF3, BOE LTA, IRS), 104 metric rows (90 verified, 14 deliberately blank owner inputs), 30-question "
+         "register with document requirements, 26-risk BAU + black-swan register, terminal-wealth projection model "
+         "(deterministic breakevens + 10,000-trial seeded Monte Carlo, seed 20261111), reconciliation of all 15 "
+         "workbooks including two divergent recommendation families, and a 12-page dashboard with an independent "
+         "verifier (7 checks, 0 errors)",
+         "12 pages",
+         "<a href='session-3090b9ed/index.html'>open &#8599;</a>"],
+        ["<code>session-6d8f5d05/</code>",
+         "Session 6d8f5d05 (branch <code>arena/6d8f5d05-jack2</code>) — 2026-11-11 clean consolidated dashboard: "
+         "24 official Tier A/B sources re-verified, 73 metric rows (64 verified, 9 blank private inputs), 20-item "
+         "Q&A framework with status/priority/document-required for each question, 24-risk register, executive "
+         "summary with sequenced 90-day plan and 6 decision triggers, 12-page dashboard with client-side table "
+         "filtering, privacy compliance page",
+         "12 pages",
+         "<a href='session-6d8f5d05/index.html'>open &#8599;</a>"],
         ["<code>session-5f296f9d/</code>",
          "Session M (branch <code>arena/5f296f9d-jack2</code>) &mdash; 2026-11-10 deep-research dashboard: "
          "31 official Tier A/B sources, 127 source-linked metric rows (113 verified, 12 deliberately blank private inputs, "
@@ -1154,6 +1173,14 @@ def build_current_index():
   on this question in this repository, from overlapping and partly assumed inputs. This page tells you which one to
   read first, why, and what none of them can tell you.</p>
 </section>
+
+<div class="callout ok" role="note">
+  <h3 style="margin-top:0">Also new: <a href="session-6d8f5d05/index.html">session-6d8f5d05</a> (2026-11-11)</h3>
+  <p>Clean consolidated dashboard with a <strong>20-item Q&amp;A framework</strong> listing every question, what information is needed, what's currently known, and which document will close the gap. 24 official sources re-verified, 73 metric rows, 12 pages with client-side table filtering.</p>
+  <p><a href="session-6d8f5d05/qa.html"><strong>Open the Q&amp;A page &rarr;</strong></a>
+  &nbsp;&middot;&nbsp; <a href="session-6d8f5d05/executive-summary.html">Executive summary</a>
+  &nbsp;&middot;&nbsp; <a href="session-6d8f5d05/market-economics.html">Market data</a></p>
+</div>
 
 <div class="callout ok" role="note">
   <h3 style="margin-top:0">Start here: <a href="session-313ba936/index.html">session-313ba936</a> (Session M)</h3>
