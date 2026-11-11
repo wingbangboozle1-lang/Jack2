@@ -331,3 +331,16 @@ python3 session-5f296f9d/scripts/build_site.py   # 15 HTML pages
 python3 session-5f296f9d/scripts/verify.py       # V1–V7: schema, links, source rows, PII, anchors
 ```
 
+## Session N4 dashboard (`session-3090b9ed/`) — 2026-11-11
+
+A line-by-line verification pass (`session-3090b9ed` / `arena/3090b9ed-jack2`) published a 12-page dashboard at
+**https://wingbangboozle1-lang.github.io/Jack2/session-3090b9ed/** while keeping every other session's files untouched.
+
+| | |
+|---|---|
+| Recommendation | **Extend then sell — the option you don't ask for is the one you can never use:** bid the rent extension now (≥10 years at in-place rent with CPI-linked steps, matching the tenant's own public escalator) and prepare a parallel §1031 pipeline; never let the clock run into the final 3–4 years unsigned. Time-boxed to 2027-06-30; if no extension is signed by then, sell and complete a §1031 exchange. |
+| Evidence | **104 metric rows** (**90 verified** on 2026-11-11 across **20 official sources** — BLS LA Summary, Census QuickFacts V2025, FRED, LA County Recorder + City of LA Finance (ULA), CA DIR / LA OWS, CDE, LA County fire fact sheet, BEA, SEC EDGAR, USGS UCERF3, BOE LTA 2025/023, IRS — and **14 deliberately blank** owner inputs). Contract rent, lease expiry date, escalations, renewal-option terms, basis, debt and every parcel risk field are blank and flagged; none were inferred. |
+| Model | Terminal-wealth model at a common 2040 horizon (all cash reinvested at the same rate), deterministic expiry grids, breakeven exit cap **7.81%** at n=7 (exact identity across n), reinvestment breakeven **8.64%**, and a **10,000-trial seeded Monte Carlo** (`seed=20261111`) reporting mean, p05, sd and first-hit-year hazard incidence — extend-then-sell wins 56.6% of trials and beats sell-now on p05 (+5.4). |
+| Risks & Flags | **26-risk BAU + black-swan register** (USGS UCERF3, LA County fire data, LA OWS, CDE), **15 irregularities** (including root M48 yield superseded by S03 and two stale-benchmark disclosures), and a **reconciliation of all 15 workbooks** — five recommendations converge, one splits on assumptions. |
+| Rebuild | `python3 session-3090b9ed/scripts/model.py && python3 session-3090b9ed/scripts/build_site.py && python3 session-3090b9ed/scripts/verify.py` (7 checks: schema, sources, links, row coverage, PII, model reproducibility, counts — all PASS). |
+
