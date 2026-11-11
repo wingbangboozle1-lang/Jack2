@@ -1,0 +1,77 @@
+/* Central LA NNN Dashboard — session-6d8f5d05 */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f8f9fa;--fg:#1a1a2e;--muted:#6c757d;--accent:#2563eb;--accent-light:#dbeafe;--warn:#fef3c7;--warn-border:#f59e0b;--ok:#d1fae5;--ok-border:#10b981;--card:#fff;--border:#e5e7eb;--radius:8px}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.skip{position:absolute;top:-40px;left:0;background:var(--accent);color:#fff;padding:8px 16px;z-index:100;transition:top .2s}.skip:focus{top:0}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.bar{display:flex;align-items:center;gap:16px;padding:12px 20px;flex-wrap:wrap}
+
+.site header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;color:var(--fg);white-space:nowrap}
+.brand small{display:block;font-weight:400;font-size:.7rem;color:var(--muted)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block;flex-shrink:0}
+
+nav.main{display:flex;gap:4px;flex-wrap:wrap;font-size:.8rem}
+nav.main a{padding:4px 10px;border-radius:4px;color:var(--muted);transition:all .15s}
+nav.main a:hover{background:var(--accent-light);color:var(--accent);text-decoration:none}
+nav.main a[aria-current]{background:var(--accent);color:#fff}
+
+main{padding:32px 20px 64px}
+
+.page-head{margin-bottom:32px}
+.eyebrow{text-transform:uppercase;font-size:.75rem;font-weight:600;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+h1{font-size:1.8rem;line-height:1.25;margin-bottom:8px}
+h2{font-size:1.3rem;margin:28px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+h3{font-size:1.05rem;margin-bottom:6px}
+.lede{font-size:1.05rem;color:var(--muted);max-width:800px}
+.muted{color:var(--muted);font-size:.85rem;margin-top:6px}
+
+.grid{display:grid;gap:16px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:box-shadow .15s}
+.card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card.link{display:block;text-decoration:none;color:var(--fg)}
+.card.link:hover{text-decoration:none;border-color:var(--accent)}
+.card.kpi{text-align:center}
+.card.kpi .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
+.card.kpi .value{font-size:1.8rem;font-weight:700;color:var(--accent)}
+.card.kpi .sub{font-size:.8rem;color:var(--muted);margin-top:2px}
+
+.callout{border-radius:var(--radius);padding:16px 20px;margin:20px 0;border-left:4px solid}
+.callout.warn{background:var(--warn);border-color:var(--warn-border)}
+.callout.ok{background:var(--ok);border-color:var(--ok-border)}
+
+.decision{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:#fff;border-radius:var(--radius);padding:24px;margin:20px 0}
+.decision h2{color:#fff;border-color:rgba(255,255,255,.3)}
+.decision .rank{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.decision .rank span{background:rgba(255,255,255,.15);padding:6px 12px;border-radius:4px;font-size:.85rem}
+
+.tablewrap{overflow-x:auto;margin:12px 0}
+.tablewrap table{width:100%;border-collapse:collapse;font-size:.85rem}
+.tablewrap th{background:#f1f5f9;text-align:left;padding:10px 12px;font-weight:600;position:sticky;top:0;border-bottom:2px solid var(--border)}
+.tablewrap td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.tablewrap tr:hover{background:#f8fafc}
+.tablewrap td.num,.tablewrap th.num{text-align:right;font-variant-numeric:tabular-nums}
+.blank{color:var(--muted);font-style:italic;font-size:.8rem}
+.src{font-size:.75rem;color:var(--muted)}
+.src a{color:var(--accent)}
+
+footer.site{background:#fff;border-top:1px solid var(--border);padding:20px;margin-top:auto}
+footer.site p{font-size:.8rem;color:var(--muted);margin-bottom:4px}
+
+ol,ul{padding-left:20px;margin:8px 0}
+li{margin-bottom:4px}
+
+@media(max-width:768px){
+  h1{font-size:1.4rem}
+  .bar{flex-direction:column;align-items:flex-start}
+  nav.main{font-size:.75rem}
+  .decision .rank{flex-direction:column}
+}

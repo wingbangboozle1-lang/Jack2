@@ -1247,6 +1247,46 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 ---
 
+# Session `6d8f5d05` — 2026-11-11
+
+Claimed by Arena session on branch `arena/6d8f5d05-jack2`. All work isolated in `session-6d8f5d05/**`. No other session's files edited.
+
+## Task board — Session 6d8f5d05
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 6d-01 | Fresh source verification (2026-11-11) | done | session-6d8f5d05 | `session-6d8f5d05/data/sources.json` |
+| 6d-02 | Q&A framework — 20 questions with status, answers, document requirements | done | session-6d8f5d05 | `session-6d8f5d05/data/qa.json`, `session-6d8f5d05/qa.html` |
+| 6d-03 | Verified metrics ledger (73 rows, 24 sources) | done | session-6d8f5d05 | `session-6d8f5d05/data/metrics.json` |
+| 6d-04 | Executive summary with sequenced plan and decision triggers | done | session-6d8f5d05 | `session-6d8f5d05/executive-summary.html` |
+| 6d-05 | Clean 12-page dashboard build | done | session-6d8f5d05 | `session-6d8f5d05/*.html`, `session-6d8f5d05/assets/**`, `session-6d8f5d05/scripts/build_site.py` |
+| 6d-06 | Privacy compliance — PII scan, anonymization | done | session-6d8f5d05 | `session-6d8f5d05/privacy.html` |
+| 6d-07 | Root workspace index update (additive) | done | session-6d8f5d05 | `workspaces.html` (additive row), `index.html` (additive section) |
+| 6d-08 | PR, merge, Pages deploy confirmation | in progress | session-6d8f5d05 | `COORDINATION.md` |
+
+## Sources verified (2026-11-11)
+
+- BLS LA Summary (updated Nov 4, 2026): confirmed unemployment 5.1% LA metro, employment +0.5%, information -5.7%
+- Census QuickFacts: confirmed LA city 3,869,089; LA County 9,694,934
+- FRED DGS10: confirmed 4.86% (2026-11-06)
+- CA DIR: confirmed $16.90 state minimum, $20.00 fast food minimum
+- SEC EDGAR JACK 10-K: confirmed 2,136 restaurants, 93% franchised, AUV $1,874K
+
+## Key deliverables
+
+1. **Questions & Answers page** — 20 questions across 7 categories, each with status, current answer, priority, and document required
+2. **Market Economics** — 73 verified metrics across 8 categories, every row with source link
+3. **Executive Summary** — sequenced 90-day plan with 6 explicit decision triggers
+4. **Risk Register** — 24 risks mapped to each decision path with mitigations
+5. **Privacy page** — explicit list of what is withheld and why
+6. **Verification page** — line-by-line check results
+
+## Scope discipline
+
+Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. No other session's files edited.
+
+---
+
 # Session N — `session-fe9d2a91` (branch `arena/fe9d2a91-jack2`) — FINAL INTEGRATION — claim 2026-11-11T02:10Z
 
 **Status at claim time (read before claiming).** `main` at `ab596f9` (PR #39). Every task of Sessions A–M is
