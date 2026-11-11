@@ -495,3 +495,53 @@ URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode
   comparable property within the same county"; (f)(1) "substantially damaged or destroyed if it sustains physical damage amounting to more
   than 50 percent of its value immediately before the disaster."
 - Section 1 (the 1% rate limit) was not opened by this session.
+
+## S-BOE-P19 — California State Board of Equalization, Proposition 19
+URL: https://www.boe.ca.gov/prop19/
+- Comparison chart, parent-child exclusion, row "Other Real Property": former law (Proposition 58/193) "Transferor lifetime limit of
+  $1,000,000 of factored base year value"; Proposition 19 (current law) "Eliminates exclusion for other real property other than the
+  principal residence". Important dates: former law "Through February 15, 2021"; current law "Effective February 16, 2021".
+- Page caution: "general and summary information ... not intended to be a legal interpretation or official guidance".
+
+## S-IRS-INHERIT — Internal Revenue Service, FAQ "Gifts & inheritances"
+URL: https://www.irs.gov/faqs/interest-dividends-other-types-of-income/gifts-inheritances/gifts-inheritances
+- "The basis of property inherited from a decedent is generally one of the following: The fair market value (FMV) of the property on the
+  date of the decedent's death ... [or] The FMV of the property on the alternate valuation date, but only if the executor of the estate
+  files an estate tax return (Form 706) and elects to use the alternate valuation".
+
+## S-DIR-MW — California Department of Industrial Relations, Minimum Wage Frequently Asked Questions
+URL: https://www.dir.ca.gov/dlse/faq_minimumwage.htm
+- "Effective January 1, 2026, the minimum wage is $16.90 per hour for all employers, not otherwise covered by a higher minimum wage specific
+  to an industry or a locality." "There is a higher minimum wage for Fast Food Workers, effective April 1, 2024".
+- Table: January 1, 2023 $15.50; January 1, 2024 $16.00; January 1, 2025 $16.50; January 1, 2026 $16.90.
+- "the rate is adjusted annually for inflation based on the national consumer price index for urban wage earners and clerical workers
+  (CPI-W) ... the highest raise allowed in any one year is 3.5 percent."
+
+## S-LA-WAGE — City of Los Angeles, Office of Wage Standards
+URL: https://wagesla.lacity.gov/
+- "2026 Minimum Wage. The new Minimum Wage Rate - effective July 1st of each year - is based on the Consumer Price Index (CPI) for Urban
+  Wage Earners and Clerical Workers (CPI-W) for the Los Angeles metropolitan area, which is published by the Bureau of Labor Statistics."
+- "Effective Date / Hourly Rate: July 1, 2026 — $18.42"
+- "The Fast Food Minimum Wage (AB 1228) is a State law that came into effect on April 1, 2024."
+
+## S-FED — Board of Governors of the Federal Reserve System, Open Market Operations
+URL: https://www.federalreserve.gov/monetarypolicy/openmarket.htm
+- Table "FOMC's target federal funds rate or range, change (basis points) and level":
+  2026: September 17 | Increase 25 | Decrease 0 | Level 3.75-4.00
+  2025: December 11 | 0 | 25 | 3.50-3.75;  October 30 | 0 | 25 | 3.75-4.00;  September 18 | 0 | 25 | 4.00-4.25
+  2024: December 19 | 0 | 25 | 4.25-4.50;  November 8 | 0 | 25 | 4.50-4.75;  September 19 | 0 | 50 | 4.75-5.00
+- The only 2026 entry on the page as read is a 25 basis point INCREASE on September 17, 2026.
+
+## S-CBO — Congressional Budget Office, The Budget and Economic Outlook: 2026 to 2036 (February 2026)
+URL: https://www.cbo.gov/publication/62105
+- "Inflation, as measured by the price index for personal consumption expenditures, slows from 2.8 percent in 2025 to 2.7 percent in 2026.
+  Inflation returns to a rate roughly in line with the Federal Reserve's long-run goal of 2 percent in 2030 and stabilizes thereafter."
+- "Interest rates declined in 2025 as the Federal Reserve cut the federal funds target rate by 0.75 percentage points. That rate is expected
+  to continue to decline this year and to stabilize thereafter. The interest rate on 10-year Treasury notes rises gradually through 2027
+  and remains relatively stable in later years."
+- "The unemployment rate remains steady at 4.6 percent this year and then declines through 2036."
+- "Debt held by the public rises from 101 percent of GDP in 2026 to 120 percent in 2036". Deficit 5.8 percent of GDP in 2026, 6.7 in 2036.
+- "the budget projections are based on CBO's economic forecast, which reflects trade policy as of November 20, 2025, and economic
+  developments and laws in place as of December 3, 2025."
+- The page's economic table ("The Economic Outlook, by Calendar Year") is an image and was not readable. Numeric rows are transcribed
+  below only where a text chunk of the same report was read.

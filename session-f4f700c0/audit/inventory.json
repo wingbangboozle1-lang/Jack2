@@ -1,9 +1,9 @@
 {
   "meta": {
     "as_of": "2026-11-08",
-    "files": 375,
-    "lines": 75074,
-    "bytes": 6472011,
+    "files": 376,
+    "lines": 75621,
+    "bytes": 6522980,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -15,9 +15,9 @@
     "structural_errors": 0,
     "workspaces": {
       "root/config": {
-        "files": 22,
-        "lines": 2893,
-        "bytes": 416829,
+        "files": 23,
+        "lines": 3440,
+        "bytes": 467798,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -674,6 +674,20 @@
       "json_valid": null,
       "python_compiles": null,
       "html_tags": 168,
+      "status": "ok"
+    },
+    {
+      "path": "integration/research/verification-log.md",
+      "workspace": "root/config",
+      "bytes": 50969,
+      "lines": 547,
+      "sha256": "912575e8b6584c45906b6d38d91b8f6bf44e11f99da3a046146c78638df46df7",
+      "kind": ".md",
+      "url_count": 40,
+      "pii_pattern_hits": 0,
+      "json_valid": null,
+      "python_compiles": null,
+      "html_tags": null,
       "status": "ok"
     },
     {
