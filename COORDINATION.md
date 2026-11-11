@@ -1530,3 +1530,67 @@ source registry and normalized model, clearly labelled and cross-linked, while p
 
 **Session E deployment record.** Pending final merge and live HTTP verification. Expected public URL:
 https://wingbangboozle1-lang.github.io/Jack2/session-50002478/
+
+
+---
+
+## Session record preserved from `arena/643e4aab-jack2` (PR #18), kept verbatim
+
+Integration note (Session N, `session-c0a678d4`, 2026-11-11): the block below is the claim and record written by the session behind PR #18 on 2026-11-07 (it self-labelled "Session F"; the merged board's Session F is `arena-5bb36a1b`, so this workbook is preserved as `session-643e4aab/`). PR #18 could not merge at the time and stayed open under open item R-06 until Session N took over its integration under the board's stale-claim rule. Its 12-page workbook arrives verbatim and keeps its own CI workflow (`session-643e4aab-verify`).
+
+---
+
+## Session F (`arena/643e4aab-jack2`) — claim (2026-11-07)
+
+**Session ID:** `session-643e4aab` · **Branch:** `arena/643e4aab-jack2` (platform-pinned; a separate
+`session-<id>/<task>` branch cannot be created from a pinned Arena branch — same platform constraint
+recorded by Sessions A–E).
+
+**Situation on arrival.** `main` = `fcc8df3`. Five prior sessions (A–E) have published four separate
+sites (root build, `session-1944e5a3/`, `docs/`, `session-a3a8ec08/`, `session-b4ec6128/`). Three other
+branches (`arena/5bb36a1b-jack2`, `arena/e618ace7-jack2`, `arena/bb4c2960-jack2`) have pushed
+"Session F" claim commits in the last hour and are still active. To avoid collision, this session
+claims **only namespaced files** and does not edit any existing session's page or data file.
+
+**Claim (file scope — non-overlapping):**
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| F1 | Independent live re-verification of every previously published metric value against its official source, on 2026-11-07 | in progress | session-643e4aab | `session-643e4aab/data/verification.json` |
+| F2 | Freshness audit + refresh of time-sensitive series (BLS LA summary, Treasury, CPI) | in progress | session-643e4aab | `session-643e4aab/data/metrics_refreshed.json` |
+| F3 | Risk register reconciliation (BAU + black swan) with per-decision mapping | in progress | session-643e4aab | `session-643e4aab/data/risks.json` |
+| F4 | Projection system + decision ranking, reproducible and labelled | in progress | session-643e4aab | `session-643e4aab/model/*.py`, `session-643e4aab/data/projections.json` |
+| F5 | Dashboard site (landing + category subpages, table-first) | in progress | session-643e4aab | `session-643e4aab/*.html`, `session-643e4aab/assets/*` |
+| F6 | Automated verifier: per-row source resolution, blank-value rule, PII scan, internal links | in progress | session-643e4aab | `session-643e4aab/scripts/verify.py` |
+| F7 | Integration: PR to `main`, merge, confirm GitHub Pages deploy, record result | in progress | session-643e4aab | this file (append-only), `README.md` (append-only nav block) |
+
+**Explicitly NOT claimed** (owned by prior sessions, left byte-identical): `index.html`,
+`executive-summary.html`, `decision.html`, `flagged.html`, `sources.html`, `market-economics.html`,
+`risks.html`, `valuation.html`, `property-lease.html`, `projection-model.html`, `requirements.html`,
+`verification.html`, `privacy.html`, `deployment.html`, `archive.html`, `data/*.json`, `tools/*`,
+`docs/**`, `session-1944e5a3/**`, `session-a3a8ec08/**`, `session-b4ec6128/**`, `research/**`, `model/**`.
+
+**Coordination rule for `COORDINATION.md` / `README.md`:** edited append-only (new sections at the end,
+no reordering of another session's text) so parallel claims cannot clobber each other. If a merge
+conflict occurs, it is resolved by keeping both sessions' appended blocks.
+
+## Session F — completion record (session-643e4aab)
+
+| Item | State | Notes |
+| --- | --- | --- |
+| F1 Market/economic research | done | 129 rows, 29 sources, `session-643e4aab/data/metrics.json` |
+| F2 Risk enumeration for every decision | done | 28 risks incl. business-as-usual and black swans, `data/risks.json` |
+| F3 Projection engine | done | `model/projection.py`, 10,000 trials seed 20261107, `data/projections.json` |
+| F4 Twelve-page site | done | `session-643e4aab/*.html` + `assets/style.css` |
+| F5 Executive summary | done | `session-643e4aab/executive-summary.html` |
+| F6 Automated verifier | done | `scripts/verify.py` — all checks pass; ledger in `data/verification.json` |
+| F7 Integration: PR, merge, Pages | in progress | PR link and merge result appended below once available |
+
+Scope confirmed non-overlapping: this session wrote only `session-643e4aab/**`, appended to `README.md`
+and this file, and added `.github/workflows/session-643e4aab.yml`. Root pages, `data/`, `tools/`,
+`model/` and all other session folders are byte-identical.
+
+**Handoff / stale-claim note:** the claim `4f2865b` remains the authoritative marker for this session's
+scope. If a future session finds this block older than 60 minutes with no commits on
+`arena/643e4aab-jack2`, it may take over `session-643e4aab/**` using the reproduce commands in
+`session-643e4aab/README.md`; the generated HTML is disposable and the three commands rebuild it.

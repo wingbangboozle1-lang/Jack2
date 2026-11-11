@@ -1,0 +1,43 @@
+{
+ "session": "643e4aab",
+ "branch": "arena/643e4aab-jack2",
+ "run_date": "2026-11-07",
+ "verifier": "session-643e4aab/scripts/verify.py",
+ "result": "pass",
+ "checks": [
+  {"id": "V01", "check": "every metric row has id, category, metric, value, status and note", "scope": "129 rows", "result": "pass"},
+  {"id": "V02", "check": "verified/computed rows all carry a value; unverified rows are blank and explained", "scope": "97 verified, 4 computed, 25 unverified, 3 given", "result": "pass"},
+  {"id": "V03", "check": "every sourced row and every verified risk resolves to a ledger source with an https URL", "scope": "29 sources", "result": "pass"},
+  {"id": "V04", "check": "no page cites a source that is absent from sources.json", "scope": "12 pages", "result": "pass"},
+  {"id": "V05", "check": "no broken internal link or navigation target", "scope": "12 pages", "result": "pass"},
+  {"id": "V06", "check": "no PII pattern (email, phone, SSN, parcel/APN, street address, account number) in any generated page", "scope": "12 pages", "result": "pass"},
+  {"id": "V07", "check": "published projections.json reproduces byte-identically from a fresh engine run", "scope": "model/projection.py, seed 20261107, 10000 trials", "result": "pass"},
+  {"id": "V08", "check": "every metric row and every risk row is rendered on a page; every unverified row appears on the flagged page", "scope": "129 metrics, 28 risks", "result": "pass"}
+ ],
+ "coverage": {
+  "metric_rows": 129,
+  "verified": 97,
+  "computed": 4,
+  "given": 3,
+  "unverified_blank": 25,
+  "risk_rows": 28,
+  "risk_rows_with_primary_evidence": 18,
+  "sources": 29,
+  "pages": 12
+ },
+ "irregularities": [
+  {"id": "V17", "summary": "A superseded BLS release was used in an earlier draft", "resolution": "Replaced with the 2026-11-04 release; prior-year city figure now carried as row E21", "status": "closed"},
+  {"id": "V18", "summary": "Model v1 compared a sale against a flat-yield replacement - a rigged comparison", "resolution": "Discarded; the engine now buys a replacement asset at a cap that grows and is sold at the horizon", "status": "closed"},
+  {"id": "V19", "summary": "Root site leaves city poverty rate and per-capita income blank although Census publishes both", "resolution": "Populated here from S03 and cited; root site left byte-identical as required", "status": "open"},
+  {"id": "V20", "summary": "Evaluator recursed into itself, raising RecursionError", "resolution": "Breakeven solver is now closed-form", "status": "closed"},
+  {"id": "V21", "summary": "Five prior sites in the repo state conflicting figures for the same metrics", "resolution": "This site is the single source of truth; every value carries a source id and status", "status": "open"},
+  {"id": "V22", "summary": "GitHub Pages build API reports 'errored' while the legacy build is served successfully", "resolution": "Verified by fetching the live page; project pages served from the session folder", "status": "open"},
+  {"id": "V23", "summary": "City Clerk ULA ordinance PDF could not be fetched", "resolution": "ULA rates taken from finance.lacity.gov FAQ and lavote.gov instead", "status": "closed"},
+  {"id": "V24", "summary": "Tenant FY2025 Q1 revenue was restated between filings", "resolution": "Both figures disclosed; the restated series is used and the row is flagged", "status": "open"}
+ ],
+ "reproduce": [
+  "python3 session-643e4aab/model/projection.py",
+  "python3 session-643e4aab/scripts/build_site.py",
+  "python3 session-643e4aab/scripts/verify.py"
+ ]
+}

@@ -1125,6 +1125,12 @@ def build_workspaces():
          "15 one-way sensitivities, 34 sources; deliberately publishes no property-specific price target",
          "23 pages",
          "<a href='session-50002478/index.html'>open &#8599;</a>"],
+        ["<code>session-643e4aab/</code>",
+         "Session F (branch <code>arena/643e4aab-jack2</code>, PR #18) &mdash; workbook integrated 2026-11-11: "
+         "12-page source-verified decision workbook with its own projection model, risk register and verifier, "
+         "published 2026-11-07 without altering any prior session's files",
+         "12 pages",
+         "<a href='session-643e4aab/index.html'>open &#8599;</a>"],
         ["Historical root pages",
          "Session B &mdash; deterministic model, 23 sources, 87 metric rows and decision triggers; preserved with a historical banner. "
          "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",
