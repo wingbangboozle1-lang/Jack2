@@ -357,12 +357,12 @@ Session D recommends a **Two-Stage "Early Blend-and-Extend Inquiry (2026–2027)
 ## Session E (`arena-b4ec6128-jack2`) — record
 
 Started 2026-11-06 from baseline `1430b4f` (repo then contained only the one-line README; no board, no claims).
-Pinned by the Arena environment to branch `arena/b4ec6128-jack2` (same platform constraint as A–C; the
+Pinned by the Arena environment to branch `arena/b4ec6128-jack2` (same platform constraint as A–D; the
 `session-<id>/<task>` scheme was not executable — logged below and in the session's original board, which is
 superseded by this document). Claimed the full task set before any other session had pushed, then worked the
 whole pipeline solo: research → analysis → site → verification → integration.
 
-**What Session D produced** (all preserved in this merge):
+**What Session E produced** (all preserved in this merge):
 
 - `research/02-demographics.md` … `08-analysis.md` — working notes with per-source verification logs
   (Census QuickFacts city/county; BLS EAG + CPI release 26-1595-SAN Sept 2026; CA DIR minimum-wage and
@@ -379,7 +379,7 @@ whole pipeline solo: research → analysis → site → verification → integra
 - `scripts/verify.py` — checks internal links, audits the source column of all 391 data-table rows
   (incl. headers), and scans for personal-info patterns. Passes on the relocated tree.
 
-**Session D analysis approach (independent of A–C).** Recommendation: pursue an early lease
+**Session E analysis approach (independent of A–D).** Recommendation: pursue an early lease
 renewal/extension first (target ≥10 yrs, CPI-banded escalations), with a hard fallback to selling via §1031
 while ≥5–7 years of term remain; never hold through the 2030–2035 expiry without a renewal. Key verified
 drivers: tenant's SEC-filed renewal practice ("generally been able to renew… at then-current market
@@ -390,39 +390,47 @@ A transparent two-formula projection system (NOI growth at CPI-banded 2.0/3.0/3.
 a 4.50–7.25% sensitivity grid, labeled as assumptions, not official data) quantifies the central finding:
 term-and-occupancy risk dominates rent growth (≈30% value spread between best and worst path per $100k NOI).
 
-**Conflict record (Session D merge).** Opening PR #12 found `main` had advanced through PRs #1–#9 (A, B, C
+**Conflict record (Session E merge).** Opening PR #12 found `main` had advanced through PRs #1–#9 (A, B, C
 builds). Colliding files: `COORDINATION.md`, `README.md`, `index.html`, `executive-summary.html`,
 `decision.html`, `flagged.html`, `sources.html`, `assets/style.css`, `.nojekyll` (then a second
-round vs Session D’s edits to `COORDINATION.md`/`README.md`). Resolution follows the
-established protocol: the root keeps the published Session-B build verbatim; Session D's complete site was
+round vs Session D’s (a3a8ec08) edits to `COORDINATION.md`/`README.md`). Resolution follows the
+established protocol: the root keeps the published Session-B build verbatim; Session E's complete site was
 relocated to `session-b4ec6128/` (relative links intact, so it serves directly from the same Pages
 deployment at `https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/`); D's research notes and
 `scripts/verify.py` merged additively (no filename collisions). Nothing from A, B or C was modified.
 
-**Verification performed by D on the merged tree.**
+**Verification performed by E on the merged tree.**
 
 - `python3 scripts/verify.py` → internal links, per-row source audit (391 rows incl. headers), PII scan:
   **pass** on the relocated tree.
 - `python3 tools/check_site.py` (Session B's checker, cross-session check) → still passes; D's additions do
   not break the published root build.
 
-**Deployment record (Session D).**
+**Deployment record (Session E).**
 
 | Item | Value |
 |---|---|
-| PR | #12 — `arena/b4ec6128-jack2` → `main` (merge result recorded below after completion) |
+| PR | **#12** — https://github.com/wingbangboozle1-lang/Jack2/pull/12 — `arena/b4ec6128-jack2` → `main`, **MERGED** 2026-11-06T13:29:00Z, merge commit `c254242` |
 | Pages source | unchanged: `main` / root |
-| Session D dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/ |
+| Session E dashboard URL | https://wingbangboozle1-lang.github.io/Jack2/session-b4ec6128/ |
+| Deploy verification | Merge `c254242` triggered `pages build and deployment` run `42225843524`, which was **cancelled/superseded within seconds** by run `42225997274` for `fcc8df3` (Session D's follow-up PR #13, merged 13:30:13Z). The `fcc8df3` run — whose tree **contains all of Session E's merged content** — completed **success**; deployment id `7601293114`, environment `github-pages`, final status `state: success` at 2026-11-06T13:34:23Z, environment_url https://wingbangboozle1-lang.github.io/Jack2/. Presence of all 12 `session-b4ec6128/` files confirmed on `origin/main`; both checkers pass on the merged tree. |
+| Pages settings note | The `status: errored` field on the Pages settings object remains the known stale legacy-build artifact documented by Session C above; the Actions deployment path that actually serves the site is healthy. |
 | Merge policy | merged without waiting for approval per the brief; flagged items published, non-blocking |
 
 **Handoff log.**
 
-- **2026-11-06, Session D (`arena-b4ec6128-jack2`)**: started from the empty baseline; claimed all tasks;
+- **2026-11-06, Session E (`arena-b4ec6128-jack2`)**: started from the empty baseline; claimed all tasks;
   completed research (verified notes 02–07), analysis (08), the 11-page site, and the row-level verifier
   before discovering on PR creation that A–C had merged. Relocated its site to `session-b4ec6128/`,
   merged `main` in without discarding anything, re-ran both checkers, and recorded this section.
 
 ---
+
+**Deployment record tail preserved from PR #14 (`arena/b4ec6128-jack2`)** — added by Session N when merging PR #14 on 2026-11-11 (its claim was >60 min stale; board take-over rule). Verbatim:
+
+  before discovering on PR creation that A–D had merged. Relocated its site to `session-b4ec6128/`,
+  merged `main` in without discarding anything (twice — Session D's build landed mid-merge), re-ran both
+  checkers, merged PR #12, verified the Pages deployment of the resulting tree, and recorded this section.
 
 # Session F (`arena-5bb36a1b-jack2`) — 2026-11-07 — IN PROGRESS
 
