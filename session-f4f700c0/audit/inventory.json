@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 419,
-    "lines": 80889,
-    "bytes": 7008068,
+    "lines": 80914,
+    "bytes": 7010847,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -16,8 +16,8 @@
     "workspaces": {
       "root/config": {
         "files": 22,
-        "lines": 2969,
-        "bytes": 423945,
+        "lines": 2994,
+        "bytes": 426724,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -147,9 +147,9 @@
     {
       "path": ".github/workflows/verify.yml",
       "workspace": "root/config",
-      "bytes": 5049,
-      "lines": 133,
-      "sha256": "bedf3355a0b5c8606a79777ba2e0ce066fe2131f20d575dc7698e8507b205cc1",
+      "bytes": 5601,
+      "lines": 145,
+      "sha256": "f8d0f46006734dd393496cab7f60439a500b8e695d8838882d7033e107be7c21",
       "kind": ".yml",
       "url_count": 0,
       "pii_pattern_hits": 0,
@@ -203,11 +203,11 @@
     {
       "path": "README.md",
       "workspace": "root/config",
-      "bytes": 23810,
-      "lines": 333,
-      "sha256": "d1cf9c3ad87c71e606b61c1c2e7b4a4196cc08d3770c5ce3e421c00a63587e2c",
+      "bytes": 26037,
+      "lines": 346,
+      "sha256": "6a7e33f4ebd5d1397a40de806bb21e04154fc8d5bd15909548062807bafa8e19",
       "kind": ".md",
-      "url_count": 14,
+      "url_count": 15,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
