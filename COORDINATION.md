@@ -1358,3 +1358,14 @@ Claimed by Arena session on branch `arena/6d8f5d05-jack2`. All work isolated in 
 ## Scope discipline
 
 Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. No other session's files edited.
+
+---
+
+## Session N4 deployment record — 2026-11-11
+
+- **PR:** [#44](https://github.com/wingbangboozle1-lang/Jack2/pull/44) — merged to `main` as `3066be0` after CI passed on the PR head.
+- **Live site:** https://wingbangboozle1-lang.github.io/Jack2/session-3090b9ed/ (Pages build `42951543966` success; `gh api .../pages` → `built`).
+- **Main CI:** `verify` run `42951545438` success — this also **repairs the failure left by PR #42**: that session hand-edited generated `index.html` / `workspaces.html` without updating `tools/build_site.py`, so the "Fail if generated files are out of date" gate went red on `main`. Session N4 transcribed both hand-edits into the generator verbatim (regenerated `index.html` is byte-identical to #42's) and regenerated `session-f4f700c0/audit/*`.
+- **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
+- **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
+- **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
