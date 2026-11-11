@@ -1244,3 +1244,40 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+
+---
+
+# Session N — `session-c0a678d4` (branch `arena/c0a678d4-jack2`) — claim 2026-11-11
+
+Platform note: this session is pinned to `arena/c0a678d4-jack2`; that branch doubles as the
+integration branch for the pull request to `main`, exactly as for Sessions A–M. Work products are
+isolated in `session-c0a678d4/**`; shared files are touched only by the additive integration
+changes listed below. No other session's pages, datasets, scripts or models are edited,
+regenerated or deleted.
+
+## Task board — Session N claims
+
+| # | Task | Status | Owner | Files / scope (non-overlapping) |
+|---|---|---|---|---|
+| N-01 | Read board, detect parallel sessions, claim disjoint scope, push claim before any work | done | session-c0a678d4 | `COORDINATION.md` (append only) |
+| N-02 | Take over the two unmerged close-out PRs #38 (`arena/313ba936-jack2`) and #40 (`arena/5f296f9d-jack2`) — both stale >60 min with no commits, so take-over is permitted by the board's rule; verify contents (PII, accuracy, scope), merge without discarding work, note the handoff here | in progress | session-c0a678d4 | those PR branches (merge only), `COORDINATION.md` |
+| N-03 | Resolve the long-standing open item R-06: integrate the five orphaned workbooks (PRs #5 `ffe3bdfd`, #6 `8149683c`, #10 `50002478`, #18 `643e4aab`, #30 `cdecc6e1`) and the Session E record (PR #14 `b4ec6128`) following the Session B preservation precedent — every session's files kept verbatim under its own namespace, root keeps one coherent build, both records kept in this file | in progress | session-c0a678d4 | merge resolution (shared files), `tools/build_site.py` (additive workspace rows), `workspaces.html` (regenerated) |
+| N-04 | Fresh line-by-line re-verification of the canonical root dataset (`data/*.json`: 24 sources, 89 metric rows, 24 risk rows, valuation, decisions, lease) against official sources, access date 2026-11-11; every checked row logged with URL + what was seen; any discrepancy flagged on the Flagged for Review page, never silently fixed | in progress | session-c0a678d4 | `session-c0a678d4/**` |
+| N-05 | Missing-information register on the published site: questions answerable now (answer + source), questions not answerable without owner documents (what to obtain + how), decision-blocking vs non-blocking — direct answer to the brief's "clear list of questions, informations and answers" | in progress | session-c0a678d4 | `tools/build_site.py` (one additive root page `questions.html` + nav), `data/*.json` (additive register only) |
+| N-06 | Final integration: re-run every checker on the combined tree, confirm the site builds with no broken links and no PII, PR to `main`, merge without waiting for approval, confirm GitHub Pages deploys, record PR link + merge result here | in progress | session-c0a678d4 | `README.md` (additive), `.github/workflows/verify.yml` (additive step only if needed), `COORDINATION.md` |
+
+## Session detection at claim time (2026-11-11)
+
+- Remote heads: `main` plus 41 `arena/*` branches, nearly all belonging to already-merged sessions.
+- Open PRs at claim time: **#38** and **#40** (close-out records from Sessions M-b and M, last
+  commits 2026-11-10 00:49 / 01:26 UTC — far older than 60 minutes with no further commits, so this
+  session takes over their integration and notes the handoff), and the six stale PRs **#5, #6, #10,
+  #14, #18, #30** (2026-11-06/08; open item R-06; also >60 min stale). No session is actively
+  claiming 2026-11-11 work.
+- Baseline before claiming: `main` at `ab596f9` (PR #39). `tools/model.py`, `tools/build_site.py`,
+  `tools/check_site.py` all pass on that tree: 16 root pages, 184 HTML files including the archive,
+  24 sources, 89 metric rows (82 verified, 7 blank/flagged), 24 risk rows. GitHub Pages `built`,
+  source `main` / root.
+- Handoff note (board rule: claim >60 min old with no commits may be taken over): the integration
+  steps of PRs #38/#40 and the disposition of PRs #5/#6/#10/#14/#18/#30 are taken over by this
+  session and will be recorded here, not silently dropped.
