@@ -1,0 +1,615 @@
+{
+ "meta": {
+  "model": "Session N4 (session-3090b9ed) sell-vs-renew projection",
+  "generated_by": "scripts/model.py",
+  "seed": 20261111,
+  "trials": 10000,
+  "basis": "per $1 of current annual NOI; no owner-private value used"
+ },
+ "assumptions": {
+  "ASSUMED_NOI": 250000.0,
+  "c0_grid": [
+   0.055,
+   0.06,
+   0.065,
+   0.07,
+   0.075
+  ],
+  "c1_grid": [
+   0.055,
+   0.06,
+   0.065,
+   0.07,
+   0.075
+  ],
+  "g_scenarios": {
+   "low": 0.0,
+   "base": 0.02,
+   "high": 0.035
+  },
+  "accumulation_rate_scenarios": {
+   "low": 0.055,
+   "base": 0.065,
+   "high": 0.075
+  },
+  "extension_uplift_scenarios": {
+   "flat": 0.0,
+   "modest": 0.1,
+   "strong": 0.25
+  },
+  "expiry_years_grid": [
+   4,
+   5,
+   6,
+   7,
+   9
+  ],
+  "extension_term_grid": [
+   5,
+   10
+  ],
+  "transfer_costs": {
+   "county_only": 0.0011,
+   "in_city_tier1": 0.0456,
+   "in_city_tier2": 0.0606
+  },
+  "replacement_yield_grid": [
+   0.055,
+   0.065,
+   0.075
+  ],
+  "mc_c0_mean": 0.065,
+  "mc_c0_sd": 0.0075,
+  "mc_g_mean": 0.02,
+  "mc_g_sd": 0.015,
+  "mc_w_mean": 0.065,
+  "mc_w_sd": 0.01,
+  "mc_exit_shock_p": 0.15,
+  "mc_exit_shock_bp": 0.02,
+  "mc_quake_annual_p": 0.0303,
+  "mc_quake_damage": 0.4,
+  "mc_wildfire_annual_p": 0.005,
+  "mc_wildfire_damage": 0.6,
+  "mc_tenant_default_annual_p": 0.01,
+  "mc_tenant_default_noi_loss": 0.4,
+  "mc_vacancy_years": 2.0,
+  "mc_do_nothing_cliff_penalty": 0.95
+ },
+ "assumption_warning": "EVERY entry in 'assumptions' is illustrative, not verified. Verified anchors exist only in data/metrics.json with status=verified. Property-specific facts stay blank (N90, N91, N104).",
+ "deterministic": {
+  "unit": "terminal wealth at 2040 per $1.00 of current annual NOI",
+  "sell_now_wealth": {
+   "0.055": {
+    "county": 43.8585,
+    "in_city_tier2": 43.6609
+   },
+   "0.060": {
+    "county": 40.2036,
+    "in_city_tier2": 40.0225
+   },
+   "0.065": {
+    "county": 37.111,
+    "in_city_tier2": 36.9439
+   },
+   "0.070": {
+    "county": 34.4603,
+    "in_city_tier2": 34.305
+   },
+   "0.075": {
+    "county": 32.1629,
+    "in_city_tier2": 32.018
+   }
+  },
+  "hold_wealth_grid": [
+   {
+    "years_to_expiry": 4,
+    "by_exit_cap": {
+     "0.055": {
+      "county": 45.5839,
+      "in_city_tier2": 45.4176
+     },
+     "0.060": {
+      "county": 42.5087,
+      "in_city_tier2": 42.3563
+     },
+     "0.065": {
+      "county": 39.9066,
+      "in_city_tier2": 39.7659
+     },
+     "0.070": {
+      "county": 37.6762,
+      "in_city_tier2": 37.5456
+     },
+     "0.075": {
+      "county": 35.7432,
+      "in_city_tier2": 35.6213
+     }
+    }
+   },
+   {
+    "years_to_expiry": 5,
+    "by_exit_cap": {
+     "0.055": {
+      "county": 45.9706,
+      "in_city_tier2": 45.8114
+     },
+     "0.060": {
+      "county": 43.0254,
+      "in_city_tier2": 42.8794
+     },
+     "0.065": {
+      "county": 40.5332,
+      "in_city_tier2": 40.3985
+     },
+     "0.070": {
+      "county": 38.3971,
+      "in_city_tier2": 38.272
+     },
+     "0.075": {
+      "county": 36.5458,
+      "in_city_tier2": 36.429
+     }
+    }
+   },
+   {
+    "years_to_expiry": 6,
+    "by_exit_cap": {
+     "0.055": {
+      "county": 46.341,
+      "in_city_tier2": 46.1885
+     },
+     "0.060": {
+      "county": 43.5202,
+      "in_city_tier2": 43.3804
+     },
+     "0.065": {
+      "county": 41.1334,
+      "in_city_tier2": 41.0043
+     },
+     "0.070": {
+      "county": 39.0875,
+      "in_city_tier2": 38.9677
+     },
+     "0.075": {
+      "county": 37.3144,
+      "in_city_tier2": 37.2026
+     }
+    }
+   },
+   {
+    "years_to_expiry": 7,
+    "by_exit_cap": {
+     "0.055": {
+      "county": 46.6958,
+      "in_city_tier2": 46.5498
+     },
+     "0.060": {
+      "county": 43.9942,
+      "in_city_tier2": 43.8603
+     },
+     "0.065": {
+      "county": 41.7082,
+      "in_city_tier2": 41.5846
+     },
+     "0.070": {
+      "county": 39.7487,
+      "in_city_tier2": 39.634
+     },
+     "0.075": {
+      "county": 38.0506,
+      "in_city_tier2": 37.9435
+     }
+    }
+   },
+   {
+    "years_to_expiry": 9,
+    "by_exit_cap": {
+     "0.055": {
+      "county": 47.361,
+      "in_city_tier2": 46.0362
+     },
+     "0.060": {
+      "county": 44.8828,
+      "in_city_tier2": 44.76
+     },
+     "0.065": {
+      "county": 42.786,
+      "in_city_tier2": 42.6726
+     },
+     "0.070": {
+      "county": 40.9886,
+      "in_city_tier2": 40.8834
+     },
+     "0.075": {
+      "county": 39.4309,
+      "in_city_tier2": 39.3327
+     }
+    }
+   }
+  ],
+  "extend_wealth_grid": [
+   {
+    "extension_years": 5,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.055,
+    "wealth_county": 45.9706,
+    "wealth_in_city_tier2": 45.8114
+   },
+   {
+    "extension_years": 5,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.06,
+    "wealth_county": 43.0254,
+    "wealth_in_city_tier2": 42.8794
+   },
+   {
+    "extension_years": 5,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.065,
+    "wealth_county": 40.5332,
+    "wealth_in_city_tier2": 40.3985
+   },
+   {
+    "extension_years": 5,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.07,
+    "wealth_county": 38.3971,
+    "wealth_in_city_tier2": 38.272
+   },
+   {
+    "extension_years": 5,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.075,
+    "wealth_county": 36.5458,
+    "wealth_in_city_tier2": 36.429
+   },
+   {
+    "extension_years": 5,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.055,
+    "wealth_county": 50.5677,
+    "wealth_in_city_tier2": 48.8357
+   },
+   {
+    "extension_years": 5,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.06,
+    "wealth_county": 47.3279,
+    "wealth_in_city_tier2": 47.1673
+   },
+   {
+    "extension_years": 5,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.065,
+    "wealth_county": 44.5865,
+    "wealth_in_city_tier2": 44.4383
+   },
+   {
+    "extension_years": 5,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.07,
+    "wealth_county": 42.2368,
+    "wealth_in_city_tier2": 42.0992
+   },
+   {
+    "extension_years": 5,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.075,
+    "wealth_county": 40.2003,
+    "wealth_in_city_tier2": 40.0719
+   },
+   {
+    "extension_years": 5,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.055,
+    "wealth_county": 57.4633,
+    "wealth_in_city_tier2": 55.4951
+   },
+   {
+    "extension_years": 5,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.06,
+    "wealth_county": 53.7817,
+    "wealth_in_city_tier2": 51.9776
+   },
+   {
+    "extension_years": 5,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.065,
+    "wealth_county": 50.6665,
+    "wealth_in_city_tier2": 50.4981
+   },
+   {
+    "extension_years": 5,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.07,
+    "wealth_county": 47.9963,
+    "wealth_in_city_tier2": 47.84
+   },
+   {
+    "extension_years": 5,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.075,
+    "wealth_county": 45.6822,
+    "wealth_in_city_tier2": 45.5362
+   },
+   {
+    "extension_years": 10,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.055,
+    "wealth_county": 47.6727,
+    "wealth_in_city_tier2": 46.4039
+   },
+   {
+    "extension_years": 10,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.06,
+    "wealth_county": 45.2992,
+    "wealth_in_city_tier2": 45.1816
+   },
+   {
+    "extension_years": 10,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.065,
+    "wealth_county": 43.2909,
+    "wealth_in_city_tier2": 43.1824
+   },
+   {
+    "extension_years": 10,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.07,
+    "wealth_county": 41.5695,
+    "wealth_in_city_tier2": 41.4687
+   },
+   {
+    "extension_years": 10,
+    "uplift": "flat",
+    "uplift_factor": 1.0,
+    "exit_cap": 0.075,
+    "wealth_county": 40.0777,
+    "wealth_in_city_tier2": 39.9836
+   },
+   {
+    "extension_years": 10,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.055,
+    "wealth_county": 52.4399,
+    "wealth_in_city_tier2": 51.0442
+   },
+   {
+    "extension_years": 10,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.06,
+    "wealth_county": 49.8291,
+    "wealth_in_city_tier2": 48.5498
+   },
+   {
+    "extension_years": 10,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.065,
+    "wealth_county": 47.62,
+    "wealth_in_city_tier2": 47.5006
+   },
+   {
+    "extension_years": 10,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.07,
+    "wealth_county": 45.7265,
+    "wealth_in_city_tier2": 45.6156
+   },
+   {
+    "extension_years": 10,
+    "uplift": "modest",
+    "uplift_factor": 1.1,
+    "exit_cap": 0.075,
+    "wealth_county": 44.0854,
+    "wealth_in_city_tier2": 43.9819
+   },
+   {
+    "extension_years": 10,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.055,
+    "wealth_county": 59.5908,
+    "wealth_in_city_tier2": 58.0048
+   },
+   {
+    "extension_years": 10,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.06,
+    "wealth_county": 56.624,
+    "wealth_in_city_tier2": 55.1702
+   },
+   {
+    "extension_years": 10,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.065,
+    "wealth_county": 54.1137,
+    "wealth_in_city_tier2": 52.7717
+   },
+   {
+    "extension_years": 10,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.07,
+    "wealth_county": 51.9619,
+    "wealth_in_city_tier2": 50.7158
+   },
+   {
+    "extension_years": 10,
+    "uplift": "strong",
+    "uplift_factor": 1.25,
+    "exit_cap": 0.075,
+    "wealth_county": 50.0971,
+    "wealth_in_city_tier2": 49.9795
+   }
+  ],
+  "breakevens": {
+   "basis": "terminal wealth at 2040, cash flows reinvested at w=6.5% (assumption), going-in cap c0=6.5% (assumption), g=2% (assumption)",
+   "exit_cap_hold_equals_sell_now": {
+    "4": 0.07139,
+    "5": 0.0734,
+    "6": 0.07562,
+    "7": 0.07809,
+    "9": 0.08393
+   },
+   "required_reinvest_yield_for_sell_now": {
+    "4": 0.08637,
+    "5": 0.08637,
+    "6": 0.08637,
+    "7": 0.08637,
+    "9": 0.08637
+   },
+   "capital_only_closed_form_c1_equals_c0_times_growth": {
+    "4": 0.07036,
+    "5": 0.07177,
+    "6": 0.0732,
+    "7": 0.07466,
+    "9": 0.07768
+   }
+  },
+  "verified_market_anchors": {
+   "N23": {
+    "metric": "Total nonfarm employment, 12-month change",
+    "value": "+30.2 thousand (+0.5%)",
+    "source": "S01"
+   },
+   "N24": {
+    "metric": "Unemployment rate",
+    "value": "4.4%",
+    "source": "S01"
+   },
+   "N42": {
+    "metric": "Employment Cost Index, 12-month change",
+    "value": "+3.9%",
+    "source": "S01"
+   },
+   "N44": {
+    "metric": "CPI-U, all items, 12-month change",
+    "value": "+3.7%",
+    "source": "S01"
+   },
+   "N57": {
+    "metric": "10-year Treasury constant maturity yield",
+    "value": "4.88%",
+    "source": "S03"
+   },
+   "N58": {
+    "metric": "Federal funds target range, upper limit",
+    "value": "4.00%",
+    "source": "S04"
+   },
+   "N66": {
+    "metric": "Measure ULA surtax - tier 1",
+    "value": "4.0%",
+    "source": "S06"
+   },
+   "N67": {
+    "metric": "Measure ULA surtax - tier 2",
+    "value": "5.5%",
+    "source": "S06"
+   },
+   "N76": {
+    "metric": "Same-store sales, system (12 weeks ended July 5, 2026)",
+    "value": "-1.1%",
+    "source": "S15"
+   },
+   "N78": {
+    "metric": "Restaurant count at end of Q3 FY2026",
+    "value": "2,115 (149 company + 1,966 franchise)",
+    "source": "S15"
+   }
+  },
+  "official_hazard_inputs": {
+   "usgs_ucerf3_la_m67_30yr": "60%",
+   "implied_annual_rate": "3.01%",
+   "source": "S16"
+  }
+ },
+ "monte_carlo": {
+  "seed": 20261111,
+  "trials": 10000,
+  "horizon_years": 14,
+  "unit": "terminal wealth at 2040 per $1.00 of current annual NOI",
+  "strategy_stats": {
+   "SELL_NOW_1031": {
+    "mean": 37.8481,
+    "median": 37.1655,
+    "p05": 27.9794,
+    "p95": 50.0837,
+    "sd": 6.7954
+   },
+   "HOLD_TO_EXPIRY": {
+    "mean": 36.7626,
+    "median": 37.2638,
+    "p05": 21.1372,
+    "p95": 51.0416,
+    "sd": 9.1836
+   },
+   "EXTEND_THEN_SELL": {
+    "mean": 41.4645,
+    "median": 41.6718,
+    "p05": 23.3675,
+    "p95": 59.5655,
+    "sd": 10.9973
+   },
+   "DO_NOTHING": {
+    "mean": 34.9245,
+    "median": 35.4006,
+    "p05": 20.0803,
+    "p95": 48.4895,
+    "sd": 8.7244
+   }
+  },
+  "best_strategy_share": {
+   "SELL_NOW_1031": 0.2985,
+   "HOLD_TO_EXPIRY": 0.1356,
+   "EXTEND_THEN_SELL": 0.5659,
+   "DO_NOTHING": 0.0
+  },
+  "hazard_incidence_over_14y": {
+   "quake": {
+    "count": 3458,
+    "share": 0.3458
+   },
+   "wildfire": {
+    "count": 681,
+    "share": 0.0681
+   },
+   "tenant_default": {
+    "count": 1261,
+    "share": 0.1261
+   },
+   "exit_shock": {
+    "count": 1476,
+    "share": 0.1476
+   }
+  },
+  "tail_note": "P05 includes quake/wildfire/tenant-default draws for hold-like branches; SELL_NOW leaves the parcel at t=0 but keeps cap and reinvestment-rate uncertainty."
+ }
+}

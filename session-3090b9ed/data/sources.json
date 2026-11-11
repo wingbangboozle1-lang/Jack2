@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "Session N4 (session-3090b9ed) official-source ledger",
+    "access_date": "2026-11-11",
+    "rule": "Every source below was read by this session on the access date via a direct page fetch from the official publisher. Values not read from an official publisher on this date are recorded as blank and flagged in metrics.json. Nothing was copied from a prior session's workbook into a verified row.",
+    "privacy": "No owner, parcel or tenant-contact identifier appears in this file."
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "title": "Los Angeles Area Economic Summary, updated November 04, 2026",
+      "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+      "read_on": "2026-11-11",
+      "used_for": "Unemployment (metro/county/city/state/US, Sep 2026), nonfarm employment level and 12-month change, sector detail, average weekly wage, CPI-U 12-month change, ECI 12-month change, occupational wages"
+    },
+    {
+      "id": "S02",
+      "tier": "A",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts: Los Angeles city, California; Los Angeles County, California (Vintage 2025 population estimates; 2020-2024 ACS)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+      "read_on": "2026-11-11",
+      "used_for": "Population estimates and 2020-2025 change, households, persons per household, age shares, foreign-born share, income, poverty, per capita income, home values, rents, education attainment, business counts, accommodation and food services sales"
+    },
+    {
+      "id": "S03",
+      "tier": "A",
+      "publisher": "Board of Governors of the Federal Reserve System, via FRED (Federal Reserve Bank of St. Louis)",
+      "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)",
+      "url": "https://fred.stlouisfed.org/series/DGS10",
+      "read_on": "2026-11-11",
+      "used_for": "10-year Treasury yield: 4.88 percent, observation date 2026-11-09 (page updated Nov 10, 2026)"
+    },
+    {
+      "id": "S04",
+      "tier": "A",
+      "publisher": "Board of Governors of the Federal Reserve System, via FRED",
+      "title": "Federal Funds Target Range - Upper Limit (DFEDTARU)",
+      "url": "https://fred.stlouisfed.org/series/DFEDTARU",
+      "read_on": "2026-11-11",
+      "used_for": "Federal funds target upper limit: 4.00 percent, observation date 2026-11-10"
+    },
+    {
+      "id": "S05",
+      "tier": "A",
+      "publisher": "Los Angeles County Registrar-Recorder/County Clerk",
+      "title": "Documentary Transfer Tax",
+      "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes",
+      "read_on": "2026-11-11",
+      "used_for": "County DTT $0.55 per $500 ($1.10 per $1,000); City of Los Angeles $2.25 per $500 plus Measure ULA tiers effective 7/1/2026 ($5,400,000 / $10,900,000 thresholds)"
+    },
+    {
+      "id": "S06",
+      "tier": "A",
+      "publisher": "City of Los Angeles, Office of Finance",
+      "title": "Real Property Transfer Tax and Measure ULA FAQ",
+      "url": "https://finance.lacity.gov/faq/measure-ula",
+      "read_on": "2026-11-11",
+      "used_for": "City base transfer tax 0.45 percent; ULA 4.0 percent and 5.5 percent tiers; thresholds $5,400,000 and $10,900,000 effective for closings after June 30, 2026; combined 4.45 / 5.95 percent; annual BLS chained CPI indexation"
+    },
+    {
+      "id": "S07",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations, Division of Labor Standards Enforcement",
+      "title": "Minimum Wage Frequently Asked Questions",
+      "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+      "read_on": "2026-11-11",
+      "used_for": "California statewide minimum wage $16.90 per hour effective January 1, 2026"
+    },
+    {
+      "id": "S08",
+      "tier": "A",
+      "publisher": "California Department of Industrial Relations, Division of Labor Standards Enforcement",
+      "title": "Fast Food Minimum Wage Frequently Asked Questions (AB 1228)",
+      "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+      "read_on": "2026-11-11",
+      "used_for": "California fast food minimum wage $20.00 per hour effective April 1, 2024; coverage rules (chain of 60+ establishments)"
+    },
+    {
+      "id": "S09",
+      "tier": "A",
+      "publisher": "City of Los Angeles, Office of Wage Standards",
+      "title": "Wages LA - Minimum Wage and Paid Sick Leave",
+      "url": "https://wagesla.lacity.gov/",
+      "read_on": "2026-11-11",
+      "used_for": "City of Los Angeles minimum wage $18.42 per hour effective July 1, 2026 (CPI-W indexed annually each July 1)"
+    },
+    {
+      "id": "S10",
+      "tier": "A",
+      "publisher": "California Department of Education",
+      "title": "District Profile: Los Angeles Unified (school year 2025-26)",
+      "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+      "read_on": "2026-11-11",
+      "used_for": "LAUSD enrollment 497,105; English learners 81,328 (16.4%)"
+    },
+    {
+      "id": "S11",
+      "tier": "A",
+      "publisher": "California Department of Education",
+      "title": "Largest & Smallest Public School Districts (2025-26)",
+      "url": "https://www.cde.ca.gov/ds/ad/ceflargesmalldist.asp",
+      "read_on": "2026-11-11",
+      "used_for": "LAUSD rank 1 by enrollment; statewide public school enrollment 5,731,260"
+    },
+    {
+      "id": "S12",
+      "tier": "A",
+      "publisher": "County of Los Angeles",
+      "title": "Key Facts About the Eaton and Palisades Fires (anniversary fact sheet)",
+      "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf",
+      "read_on": "2026-11-11",
+      "used_for": "Acreage, structures destroyed, fatalities, economic output lost, businesses and workers impacted, labor income and tax revenue losses for the January 2025 fire pair"
+    },
+    {
+      "id": "S13",
+      "tier": "A",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "title": "News Release BEA 26-08: Gross Domestic Product by County and Personal Income by County, 2024 (released February 5, 2026)",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+      "read_on": "2026-11-11",
+      "used_for": "Los Angeles County total personal income 2024 = $818.5 billion, the highest of any U.S. county"
+    },
+    {
+      "id": "S14",
+      "tier": "A",
+      "publisher": "U.S. Securities and Exchange Commission (EDGAR)",
+      "title": "JACK IN THE BOX INC (CIK 0000807882) - filings, type 10",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=10-&dateb=&owner=include&count=10&action=getcompany",
+      "read_on": "2026-11-11",
+      "used_for": "Filing chronology: 10-Q filed 2026-08-12 (acc. 0000807882-26-000091); 10-K FY2025 filed 2025-11-19; fiscal year end 09/27"
+    },
+    {
+      "id": "S15",
+      "tier": "B",
+      "publisher": "Jack in the Box Inc. (investor relations, company press release filed as 8-K exhibit)",
+      "title": "Jack in the Box Inc. Reports Third Quarter 2026 Earnings (August 12, 2026)",
+      "url": "https://investors.jackinthebox.com/news/news-details/2026/Jack-in-the-Box-Inc--Reports-Third-Quarter-2026-Earnings/default.aspx",
+      "read_on": "2026-11-11",
+      "used_for": "Same-store sales, restaurant counts, revenues, margins, EPS, EBITDA, refinancing and Del Taco disposal for the quarter ended July 5, 2026"
+    },
+    {
+      "id": "S16",
+      "tier": "A",
+      "publisher": "U.S. Geological Survey",
+      "title": "FAQ: What is the probability that an earthquake will occur in the Los Angeles Area? (citing UCERF3)",
+      "url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+      "read_on": "2026-11-11",
+      "used_for": "30-year probabilities for the Los Angeles region: 60% M6.7+, 46% M7.0+, 31% M7.5+ (Uniform California Earthquake Rupture Forecast 3)"
+    },
+    {
+      "id": "S17",
+      "tier": "A",
+      "publisher": "California State Board of Equalization",
+      "title": "Letter To Assessors 2025/023 with Information Sheet: How Property is Assessed for Property Tax Purposes (August 6, 2025)",
+      "url": "https://www.boe.ca.gov/proptaxes/pdf/lta25023.pdf",
+      "read_on": "2026-11-11",
+      "used_for": "Proposition 13: 1% rate plus voter-approved debt; annual assessed-value growth capped at 2%; reassessment to market value only on change of ownership or new construction; Proposition 8 decline-in-value rule"
+    },
+    {
+      "id": "S18",
+      "tier": "A",
+      "publisher": "Internal Revenue Service",
+      "title": "2026 Instructions for Form 8824, Like-Kind Exchanges (and section 1043 conflict-of-interest sales)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8824.pdf",
+      "read_on": "2026-11-11",
+      "used_for": "Section 1031 applies only to real property for 2018 and later years; like-kind exchanges of business/investment real property defer gain; cash or non-like-kind property received triggers gain to that extent"
+    },
+    {
+      "id": "S19",
+      "tier": "A",
+      "publisher": "Los Angeles County Auditor-Controller",
+      "title": "Property Tax Frequently Asked Questions",
+      "url": "https://auditor.lacounty.gov/faqs/",
+      "read_on": "2026-11-11",
+      "used_for": "Roles of Assessor, Auditor-Controller and Treasurer & Tax Collector in property tax administration; direct assessments on the secured bill"
+    },
+    {
+      "id": "S20",
+      "tier": "A",
+      "publisher": "City of Los Angeles Economic Development Department / LAEDC Institute for Applied Economics",
+      "title": "Tab 5: Economic Forecast - Los Angeles: People, Industry and Jobs 2022-2028 (May 2024, Year 25 LAWDB Annual Plan)",
+      "url": "https://ewdd.lacity.gov/images/reports/ap25/APy25_Tab5-EconomicForecast.pdf",
+      "read_on": "2026-11-11",
+      "used_for": "LAEDC real gross county product forecasts for Los Angeles County (2024f 1.4%, 2025f 1.5%); citation of California Department of Finance projections that Los Angeles County falls below 9.5 million residents by 2034 and reaches about 9.3 million by 2040; housing affordability and rent-burden statistics"
+    }
+  ]
+}
