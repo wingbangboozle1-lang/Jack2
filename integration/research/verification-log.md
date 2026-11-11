@@ -545,3 +545,89 @@ URL: https://www.cbo.gov/publication/62105
   developments and laws in place as of December 3, 2025."
 - The page's economic table ("The Economic Outlook, by Calendar Year") is an image and was not readable. Numeric rows are transcribed
   below only where a text chunk of the same report was read.
+- Chapter 2 text (chunks 14-16 of the same page):
+  "The unemployment rate reaches 4.6 percent in 2026 before falling to 4.5 percent in 2027 and to 4.4 percent in 2028. It reverts to its
+  noncyclical rate of 4.2 percent in 2032."
+  "The employment cost index for wages and salaries of workers in private industry ... grows by 3.5 percent in 2026 and by 3.2 percent in
+  2027; it then increases by an average of 3.0 percent annually from 2028 to 2036."
+  "Inflation declines from 2.7 percent in 2026 to 2.1 percent in 2028." (PCE price index, Q4 to Q4)
+  "Inflation in the consumer price index for all urban consumers (CPI-U) follows a similar pattern in CBO's projections, reaching 2.8
+  percent in 2026 ... both CPI-U measures fall to 2.3 percent ... in 2028."
+  "the Federal Reserve further lowers the federal funds rate from an average of 3.9 percent in the fourth quarter of 2025 to an average of
+  3.4 percent in the fourth quarter of 2026"
+  "The interest rate on 10-year Treasury notes rises gradually in CBO's projections—from 4.1 percent in the fourth quarter of 2025 to 4.3
+  percent in the fourth quarter of 2027 ... After 2027, both short- and long-term interest rates remain relatively stable."
+  "From 2028 to 2036, payroll employment grows at an average annual rate of 0.3 percent"
+  "labor force ... averages 0.4 percent per year from 2026 to 2036"
+  "Other sources of uncertainty include rare, hard-to-predict events that would have significant economic consequences, such as wars,
+  pandemics, natural disasters, and financial crises."
+- NOTE FOR REVIEW: this February 2026 projection has the federal funds rate FALLING to 3.4% by Q4 2026 and the 10-year note near 4.1-4.3%.
+  The Federal Reserve page (S-FED) shows a 25 bp INCREASE on 2026-09-17 to 3.75-4.00, and the Treasury page (S-TSY) shows the 10-year at
+  4.98% on 2026-11-10. The official forecast and the official observations have diverged; the search extract of the same report gives a
+  two-thirds range for the 2026 10-year rate of "between 3.5 and 4.8 percent" (extract only; that sentence was not re-read in a page chunk).
+
+## S-JACK-8K-0921 — Jack in the Box Inc., Form 8-K filed 2026-09-21 (period 2026-09-17), filing index and Exhibit 99.1
+URL (index): https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/0000807882-26-000098-index.htm
+URL (exhibit): https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/ex991-pressreleasexbodanno.htm
+- Items: 1.01 Entry into a Material Definitive Agreement; 5.02 Departure of Directors or Certain Officers ...; 7.01; 9.01.
+- Exhibit: a new independent director (a former restaurant-company chief financial officer) appointed; one director to retire and not
+  stand for reelection at the 2027 annual meeting; "The Company and GreenWood have agreed to extend their existing cooperation agreement,
+  including customary standstill, voting and other provisions."
+- The release refers to the "Executive Chairman and Interim Chief Executive Officer" and says the President "is expected to join the Board
+  when he assumes the role of Chief Executive Officer within the next 12 months."
+- "approximately 2,115 restaurants across 25 states, Mexico and Guam."
+- (Individual names, an email address and a phone number appear in the exhibit. Not transcribed. Not for publication.)
+
+## S-SOS-FAILED — California Secretary of State, Initiatives and Referenda Withdrawn or Failed to Qualify
+URL: https://www.sos.ca.gov/elections/ballot-measures/initiative-and-referendum-status/failed-qualify
+- "This page contains a list of proposed initiative and referendum measures that during the last 60 days have been withdrawn by proponents
+  or have failed to gather the required number of signatures during the circulation period."
+- Chunk 0 of 3 read: entries 2002-2009 (25-0025A1, 25-0027A1, 25-0028A1, 25-0030A1, 25-0031, 25-0032A1), all "Failed" in July-August 2026.
+  Initiative 25-0006A1 does not appear in the part read. Because the page covers only the last 60 days, it cannot confirm or refute a
+  withdrawal dated 2026-06-25. The status of 25-0006A1 stays UNVERIFIED; what is verified is only that no such measure is on the official
+  list of measures for the 2026-11-03 ballot (S-SOS-LIST).
+
+## S-CDI — California Department of Insurance, press release, 2025-02-11
+URL: https://www.insurance.ca.gov/0400-news/0100-press-releases/2025/release015-2025.cfm
+- "The FAIR Plan, an insurance safety net that the state requires insurance companies to operate, requested the Commissioner's approval for
+  $1 billion in additional funds from its member companies"; "Commissioner Lara approved the FAIR Plan's request — known as an 'assessment'"
+- "insurance companies responsible for half the assessment ... Subject to the Commissioner's prior approval under Proposition 103, insurance
+  companies may issue a temporary supplemental fee as a percentage of the policy premium"
+- "the most recent FAIR Plan assessments followed the 1993 Kinneloa Fire in Altadena and the Old Topanga Fire ... Previous insurance
+  commissioners approved $260 million, or approximately $563 million in today's dollars, in assessments for those fires and for the fires
+  following the 1994 Northridge Earthquake."
+- WRONG URL in circulation: release018-2025.cfm (2025-02-14) is about a State Farm emergency rate request, not the FAIR Plan assessment.
+
+## S-BEA — U.S. Bureau of Economic Analysis, Gross Domestic Product by County and Personal Income by County, 2024 (BEA 26-08, 2026-02-05)
+URL: https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024
+- "In 2024, the total level of personal income ranged from $818.5 billion in Los Angeles County, CA, to $10.6 million in Loving County, TX."
+- "tables are no longer included within the news release"; the LA County GDP level and growth rate are NOT stated in the release text read.
+- "BEA has discontinued publication of statistics for metropolitan statistical areas ... GDP and personal income estimates will continue to
+  be published by county."
+
+## S-LAC-FIRE — County of Los Angeles, "Key Facts About the Eaton and Palisades Fires" (anniversary fact sheet)
+URL: https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf
+- Eaton: 14,021 acres; structures destroyed 9,414; damaged 1,074; confirmed fatalities 19.
+- Palisades: 23,448 acres; structures destroyed 6,837; damaged 973; confirmed fatalities 12.
+- "Estimated Economic Impacts: Economic output lost: $5.2 billion to $10.1 billion; Businesses impacted: ~6,800; Workers impacted: ~47,000;
+  Labor income lost: $2.2 to $4.2 billion; Tax revenue losses: $900 million to $1.6 billion"
+- NOTE FOR REVIEW: the County sheet and CAL FIRE differ slightly on structures — Eaton destroyed 9,414 (County) vs 9,419 (CAL FIRE),
+  damaged 1,074 vs 1,076; Palisades destroyed 6,837 vs 6,845, damaged 973 vs 975. CAL FIRE's pages were updated later (2026).
+
+## S-SCAG — Southern California Association of Governments, Connect SoCal 2024, Demographics & Growth Forecast Technical Report (adopted 2024-04-04)
+URL: https://www.scag.ca.gov/sites/default/files/2024-05/23-2987-tr-demographics-growth-forecast-final-040424.pdf
+- "The forecast projects Slower Growth, Steady Improvement, reflecting a substantially lower population growth rate than in prior plans"
+- Table 6, "Regional employment by industry sector, 2000-2050" (six-county SCAG region, jobs in thousands):
+  Accommodation and Food Service: 2000 545 | 2022 832 | 2050 938 | past change +52.7% | future change (2022-2050) +12.8% | average wage $32,002
+  Retail Trade: 763 | 842 | 844 | +10.5% | +0.1%
+  Health Care and Social Assistance: 836 | 1,498 | 1,914 | +79.1% | +27.8%
+  Information: 327 | 284 | 381 | -13.1% | +34.0%
+  Total, All Industries: 7,515 | 8,937 | 10,276 | 0.79% (ann.) | 0.50% (ann.) | average wage $67,919
+- "Between February and May 2020, the region lost 1.9 million jobs, and the unemployment rate reached an historic high of 17.3 percent.
+  However, by 2022 regional employment returned to its prepandemic level of 8.9 million"
+- Figure 7: annual employment change 2008 -1.6%, 2009 -6.1%, 2010 -1.0%, 2020 -7.8%, 2021 +3.1%, 2022 +4.5%.
+- Table 8 baseline assumption: "Region remains competitive and innovative; climate change has no net effect on total growth".
+- The county table (Table 12) lies beyond the part of the PDF the reader returned; no county-level SCAG figure was read.
+
+## S-FEMA-NRI — FEMA National Risk Index, Los Angeles County report
+URL tried: https://hazards.fema.gov/nri/report/viewer?dataLOD=Counties&dataIDs=C06037 → "HTTP 500" on 2026-11-11. NOT READ. No NRI value is published.
