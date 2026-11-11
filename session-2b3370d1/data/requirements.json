@@ -1,0 +1,20 @@
+{
+  "session": "session-2b3370d1",
+  "access_date": "2026-11-11",
+  "requirements": [
+    {"id":"P-01","requirement":"Every table row on the site must carry a source link to an official site","status":"enforced","how":"verify.py checks every metrics/risks/questions/decisions/irregularities row has a non-empty source resolving to an allow-listed official domain, or is explicitly blank+flagged with a note explaining why no source exists"},
+    {"id":"P-02","requirement":"Values that cannot be confirmed from an official source must be left blank and flagged; never inferred","status":"enforced","how":"metrics.json blank rows publish value=\"\"; verify.py fails if any blank row lacks a flag reference, and fails if any non-blank row is marked blank"},
+    {"id":"P-03","requirement":"No hallucinations; verify line by line","status":"enforced","how":"Every metric carries a source id; a scripted URL check fetches each unique source URL and records HTTP status in the verification log"},
+    {"id":"P-04","requirement":"Official/trusted sources only (government, regulator, court, SEC filings)","status":"enforced","how":"sources.json tiers; allow-list in verify.py limits publishers to gov/regulator/court/SEC domains (plus LAEDC clearly marked tier C)"},
+    {"id":"P-05","requirement":"Personal information must never appear on the site","status":"enforced","how":"No personal names, contacts or PII fields exist in the data layer; M153 records the deliberate decision not to collect owner identity; verify.py scans output HTML for PII patterns"},
+    {"id":"P-06","requirement":"Flagged or unverified items must be published on a Flagged for Review page, not hidden","status":"enforced","how":"flagged.html renders every blank metric and every irregularity with its flag id"},
+    {"id":"P-07","requirement":"Full risk register covering BAU and black-swan decisions using verified official sources","status":"enforced","how":"risks.json: 28 rows, each typed BAU or BLACK-SWAN with a source id or an explicit qualitative note"},
+    {"id":"P-08","requirement":"Analysis must balance wealth preservation, growth and manageable risk","status":"enforced","how":"decisions.json carries three strategies with explicit objectives and model outputs on a normalized index basis"},
+    {"id":"P-09","requirement":"Reliable projection system built from deep research","status":"enforced","how":"model.py implements deterministic index-basis scenarios plus a seeded Monte Carlo (seed 20261111); model.py --selftest validates arithmetic identities"},
+    {"id":"P-10","requirement":"Questions/information that must be resolved before any decision, with suggestions to discover missing info","status":"enforced","how":"questions.json: 22 open items each with why_it_matters, how_to_discover, owner"},
+    {"id":"P-11","requirement":"Coordinate with parallel sessions: claim first, non-overlapping scope, small frequent commits, rebase before push","status":"enforced","how":"COORDINATION.md claim for session-2b3370d1 (label N); all files under session-2b3370d1/**; shared files changed only additively at final integration"},
+    {"id":"P-12","requirement":"Build a GitHub Pages live site: clean dashboard landing plus category subpages, tables for all findings","status":"enforced","how":"build_site.py generates 13 HTML pages in session-2b3370d1/; root index gains one additive workspace row; CI step added in .github/workflows/verify.yml"},
+    {"id":"P-13","requirement":"Merge own PR without waiting for approval; record PR link and merge in COORDINATION.md; confirm Pages deploys","status":"enforced","how":"Final integration steps in the session log"},
+    {"id":"P-14","requirement":"Never merge a broken site; fix and retry any build/check/deploy failure","status":"enforced","how":"CI gate: regenerate everything and require a clean git status; local tools/check_site.py must pass before merge"}
+  ]
+}

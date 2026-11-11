@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard &mdash; Jack NNN decision workbook (Session N)</title>
+<style>
+:root{--bg:#0f1420;--panel:#161d2e;--panel2:#1b2438;--line:#2a3550;--fg:#e8edf7;
+--muted:#93a0bd;--acc:#5eb0ff;--ok:#3fd07f;--warn:#ffb454;--bad:#ff6b6b;--flag:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px 10px}
+header h1{margin:0 0 4px;font-size:20px}
+header .sub{color:var(--muted);font-size:12.5px}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 22px;background:var(--panel2);
+border-bottom:1px solid var(--line);font-size:13.5px}
+nav a{padding:3px 6px;border-radius:6px}
+nav a.on{background:#24406b;color:#fff;text-decoration:none}
+main{padding:20px 22px 60px;max-width:1280px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:#cdd6ea}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:21px;font-weight:650;margin-top:4px}
+.tile .n{font-size:11.5px;color:var(--muted);margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:8px 0 18px;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--panel2);position:sticky;top:0}
+tr:nth-child(even) td{background:#131a2a}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600}
+.ok{background:#123726;color:var(--ok)}
+.flag{background:#3a2f10;color:var(--flag)}
+.calc{background:#12303f;color:#7fd1ff}
+.unoff{background:#3a2410;color:#ffb454}
+.blank{background:#3a2f10;color:var(--flag);font-weight:600}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+padding:10px 14px;border-radius:8px;margin:10px 0;font-size:13.5px}
+.warnbox{border-left:3px solid var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin-top:0}
+.pill{font-size:11px;padding:2px 8px;border-radius:10px;background:#24406b;color:#cfe4ff}
+footer{color:var(--muted);font-size:12px;padding:18px 22px;border-top:1px solid var(--line)}
+code{background:#0b101b;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.small{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Dashboard</h1>
+  <div class="sub">Jack in the Box NNN property decision workbook &middot; Session N (session-2b3370d1)
+  &middot; every row source-linked &middot; unverifiable values blank &middot; accessed 2026-11-11</div>
+</header>
+<nav><a href='index.html' class='on'>Dashboard</a><a href='economics.html'>Area Economics</a><a href='income.html'>Income & Wages</a><a href='schools.html'>Schools</a><a href='jobs.html'>Jobs & Growth</a><a href='tenant.html'>Tenant</a><a href='capital.html'>Capital & Tax</a><a href='hazards.html'>Hazards</a><a href='risks.html'>Risk Register</a><a href='decisions.html'>Decisions</a><a href='questions.html'>Open Questions</a><a href='flagged.html'>Flagged for Review</a><a href='sources.html'>Sources</a></nav>
+<main>
+
+<h2>Executive summary</h2>
+<div class="note">
+<p><strong>Situation.</strong> A single-tenant Jack in the Box net-lease property in Central Los Angeles is
+approaching its NNN expiry window (2030&ndash;2035). This workbook reviews the area economics, tenant
+health, capital-market conditions, tax and hazard environment from 34 official sources opened on
+2026-11-11, and compares <em>sell before expiry</em> against <em>renew / extend</em>.</p>
+<p><strong>Best course of action today: dual-track (recommended).</strong> Resolve the
+22 open questions &mdash; jurisdiction, lease terms, tenant identity, hazard and insurance diligence
+&mdash; while negotiating an early CPI-linked extension and simultaneously obtaining an appraisal and
+testing sale pricing. The decision gate is 2028, two years before the earliest expiry. The model
+publishes pre-agreed switch triggers instead of a single-point forecast.</p>
+<p><strong>Why not decide today.</strong> 26 parcel-level facts are private or unverifiable from
+official sources (address, APN, rent, expiry date, tenant of record, insurance, hazard zones, basis,
+cap rate). They are published <em>blank and flagged</em> &mdash; never inferred. See
+<a href="flagged.html">Flagged for Review</a>.</p>
+<p><strong>Direction of the evidence.</strong> Labor market is firming (county unemployment 4.8% SA,
++20,300 nonfarm jobs YoY) but population and school enrollment are structurally declining; the tenant's
+system same-store sales are down 1.1% in Q3 FY2026 with 50&ndash;60 closures guided for the year;
+capital is expensive (10-year Treasury 4.98%) and a City-of-LA sale carries a 4.45%/5.95% all-in
+transfer tax under Measure ULA, which was upheld on appeal (B334071, 2025-12-15).</p>
+</div>
+
+<h2>Key verified anchors</h2>
+<table><thead><tr><th>Indicator</th><th>Value</th><th>Ledger</th><th>Source</th></tr></thead>
+<tbody><tr><td>County unemployment (SA, Sep-2026)</td><td class='num'><strong>4.8%</strong></td><td><code>M37</code></td><td><a href='https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf' rel='noopener' target='_blank'>S02 California Employment Development Department &nearr;</a></td></tr><tr><td>10-year Treasury (2026-11-10)</td><td class='num'><strong>4.98%</strong></td><td><code>M66</code></td><td><a href='https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611' rel='noopener' target='_blank'>S09 U.S. Department of the Treasury &nearr;</a></td></tr><tr><td>ULA all-in transfer tax (City tier 1)</td><td class='num'><strong>4.45%</strong></td><td><code>M78</code></td><td><a href='https://finance.lacity.gov/faq/measure-ula' rel='noopener' target='_blank'>S06 City of Los Angeles &nearr;</a></td></tr><tr><td>ULA threshold (from 2026-07-01)</td><td class='num'><strong>$5.4M</strong></td><td><code>M73</code></td><td><a href='https://finance.lacity.gov/faq/measure-ula' rel='noopener' target='_blank'>S06 City of Los Angeles &nearr;</a></td></tr><tr><td>LAUSD 4-year graduation rate</td><td class='num'><strong>86.2%</strong></td><td><code>M28</code></td><td><a href='https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?cds=19647330000000&amp;agglevel=district&amp;year=2024-25' rel='noopener' target='_blank'>S17 California Department of Education &nearr;</a></td></tr><tr><td>County population change 2025</td><td class='num'><strong>-0.6%</strong></td><td><code>M06</code></td><td><a href='https://dof.ca.gov/media/docs/forecasting/demographics/estimates/e-1_2026_press_release.Pdf' rel='noopener' target='_blank'>S04 California Department of Finance &nearr;</a></td></tr><tr><td>Port of LA 2025 throughput</td><td class='num'><strong>10.2M TEU</strong></td><td><code>M62</code></td><td><a href='https://portoflosangeles.org/references/2026-news-releases/news_012226_sotpla26_event' rel='noopener' target='_blank'>S29 Port of Los Angeles (City of Los Angeles) &nearr;</a></td></tr><tr><td>JACK system same-store sales (Q3 FY26)</td><td class='num'><strong>-1.1%</strong></td><td><code>M112</code></td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td>JACK restaurant count</td><td class='num'><strong>2,115</strong></td><td><code>M114</code></td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td>Net-lease benchmark yield (Realty Income Q2-26)</td><td class='num'><strong>7.3%</strong></td><td><code>M71</code></td><td><a href='https://www.sec.gov/Archives/edgar/data/726728/000110465926094098/tm2622133d1_8k.htm' rel='noopener' target='_blank'>S28 Realty Income Corporation / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td>Top CA marginal income tax rate</td><td class='num'><strong>13.30%</strong></td><td><code>M85</code></td><td><a href='https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf' rel='noopener' target='_blank'>S31 California Franchise Tax Board &nearr;</a></td></tr><tr><td>M6.7+ earthquake probability (30 yr)</td><td class='num'><strong>60%</strong></td><td><code>M98</code></td><td><a href='https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area' rel='noopener' target='_blank'>S13 U.S. Geological Survey &nearr;</a></td></tr></tbody></table>
+
+<h2>Workbook at a glance</h2>
+<div class="tiles"><div class='tile'><div class='k'>Official sources</div><div class='v'>34</div><div class='n'>tier A/B/C, all opened 2026-11-11</div></div><div class='tile'><div class='k'>Metric rows</div><div class='v'>153</div><div class='n'>125 verified &middot; 2 computed &middot; 26 blank</div></div><div class='tile'><div class='k'>Risks (BAU / black swan)</div><div class='v'>19 / 9</div><div class='n'>every row source-linked</div></div><div class='tile'><div class='k'>Open questions</div><div class='v'>22</div><div class='n'>each with discovery steps</div></div><div class='tile'><div class='k'>Irregularities</div><div class='v'>15</div><div class='n'>flagged or resolved, all published</div></div><div class='tile'><div class='k'>Hold wins in grid</div><div class='v'>80.2%</div><div class='n'>3,600 deterministic cells</div></div><div class='tile'><div class='k'>Monte Carlo P(hold wins)</div><div class='v'>82.3%</div><div class='n'>seed 20261111, 20,000 trials</div></div><div class='tile'><div class='k'>Flagged items</div><div class='v'>31</div><div class='n'>on the Flagged page</div></div></div>
+
+<h2>Strategies compared (index basis, per $1 current NOI)</h2>
+<div class="cards"><div class='card'><h3>HOLD - renew / extend the NNN lease to the 2030-2035 window and beyond <span class='pill'>analyzed</span></h3><p class='small'>Renewal keeps the asset&#x27;s income stream and defers all transaction costs. It is the strongest option if the tenant&#x27;s covenant holds and an early extension can be negotiated with CPI-linked escalators before the expiry window.</p><p class='small'><strong>Objective:</strong> wealth preservation + stable income growth</p></div><div class='card'><h3>SELL - outright sale before the NNN expiry <span class='pill'>analyzed</span></h3><p class='small'>Selling converts the asset to cash now, transferring tenant and hazard risk. It is the cleanest wealth-preservation move if the parcel is in City limits (ULA cost known) and the bid clears the owner&#x27;s reserve after tax.</p><p class='small'><strong>Objective:</strong> liquidity and wealth reallocation; risk transfer</p></div><div class='card'><h3>EXCHANGE - sell now into an IRC Section 1031 like-kind exchange <span class='pill'>analyzed</span></h3><p class='small'>A 1031 exchange sells the Central LA single-tenant asset and reinvests into like-kind replacement real property, deferring gain. Official constraints: real property held for business or investment only (M86), 45-day identification and 180-day receipt deadlines (M87-M88), qualified intermediary required.</p><p class='small'><strong>Objective:</strong> growth with tax deferral; risk transfer</p></div><div class='card'><h3>RECOMMENDED COURSE OF ACTION - dual-track: negotiate an early extension while preparing sale pricing in parallel <span class='pill'>recommended</span></h3><p class='small'>Do not choose between renew and sell yet: 22 blocking questions (Q01-Q22) and 26 blank parcel facts (F-N1 to F-N3) prevent an honest single-path answer. The best course of action today is (1) resolve jurisdiction, lease terms, hazard and insurance diligence immediately, (2) open extension talks with the tenant on CPI-linked terms, and (3) obtain an appraisal and test the market so a sell/1031 decision can be made on evidence by 2028, two years before the earliest expiry. The model publishes breakeven conditions for each path so the switch points are pre-agreed rather than emotional.</p><p class='small'><strong>Objective:</strong> balance of all three: preservation, growth, manageable risk</p></div></div>
+
+<h2>How to read this site</h2>
+<ul>
+<li>Every table row carries an <strong>official source link</strong>. Rows with no possible official source say so explicitly.</li>
+<li><span class="chip blank">blank &middot; flagged</span> means the value could not be confirmed &mdash;
+it is empty by policy, never guessed.</li>
+<li><span class="chip calc">computed</span> rows show their formula and derive only from verified rows.</li>
+<li>The model is <strong>index-based</strong> (per $1 of current NOI): owner rent, basis and debt stay private blanks.</li>
+</ul>
+
+</main>
+<footer>Session N &mdash; built from official sources only (government, regulator, court, SEC filings).
+Private owner facts stay blank and flagged. Index-basis model: no private dollar amounts are published.</footer>
+</body>
+</html>

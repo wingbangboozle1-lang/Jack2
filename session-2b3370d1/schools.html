@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schools &mdash; Jack NNN decision workbook (Session N)</title>
+<style>
+:root{--bg:#0f1420;--panel:#161d2e;--panel2:#1b2438;--line:#2a3550;--fg:#e8edf7;
+--muted:#93a0bd;--acc:#5eb0ff;--ok:#3fd07f;--warn:#ffb454;--bad:#ff6b6b;--flag:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px 10px}
+header h1{margin:0 0 4px;font-size:20px}
+header .sub{color:var(--muted);font-size:12.5px}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 22px;background:var(--panel2);
+border-bottom:1px solid var(--line);font-size:13.5px}
+nav a{padding:3px 6px;border-radius:6px}
+nav a.on{background:#24406b;color:#fff;text-decoration:none}
+main{padding:20px 22px 60px;max-width:1280px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:#cdd6ea}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:21px;font-weight:650;margin-top:4px}
+.tile .n{font-size:11.5px;color:var(--muted);margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:8px 0 18px;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--panel2);position:sticky;top:0}
+tr:nth-child(even) td{background:#131a2a}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600}
+.ok{background:#123726;color:var(--ok)}
+.flag{background:#3a2f10;color:var(--flag)}
+.calc{background:#12303f;color:#7fd1ff}
+.unoff{background:#3a2410;color:#ffb454}
+.blank{background:#3a2f10;color:var(--flag);font-weight:600}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+padding:10px 14px;border-radius:8px;margin:10px 0;font-size:13.5px}
+.warnbox{border-left:3px solid var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin-top:0}
+.pill{font-size:11px;padding:2px 8px;border-radius:10px;background:#24406b;color:#cfe4ff}
+footer{color:var(--muted);font-size:12px;padding:18px 22px;border-top:1px solid var(--line)}
+code{background:#0b101b;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.small{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Schools</h1>
+  <div class="sub">Jack in the Box NNN property decision workbook &middot; Session N (session-2b3370d1)
+  &middot; every row source-linked &middot; unverifiable values blank &middot; accessed 2026-11-11</div>
+</header>
+<nav><a href='index.html'>Dashboard</a><a href='economics.html'>Area Economics</a><a href='income.html'>Income & Wages</a><a href='schools.html' class='on'>Schools</a><a href='jobs.html'>Jobs & Growth</a><a href='tenant.html'>Tenant</a><a href='capital.html'>Capital & Tax</a><a href='hazards.html'>Hazards</a><a href='risks.html'>Risk Register</a><a href='decisions.html'>Decisions</a><a href='questions.html'>Open Questions</a><a href='flagged.html'>Flagged for Review</a><a href='sources.html'>Sources</a></nav>
+<main>
+<h2>Enrollment and graduation</h2><p class='small'>LAUSD is the largest district in California. Graduation rates differ by source basis (DataQuest four-year vs Dashboard combined) &mdash; both are published with their bases, never averaged.</p><table><thead><tr><th>ID</th><th>Metric</th><th>Value</th><th>Status</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td><code>M25</code></td><td>K-12 enrollment<div class='small'>Los Angeles Unified &middot; 2025-26 Census Day</div></td><td class='num'>497,105 <span class='small'>students</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Largest district in California</td><td><a href='https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000' rel='noopener' target='_blank'>S18 California Department of Education &nearr;</a></td></tr><tr><td><code>M26</code></td><td>K-12 enrollment<div class='small'>Los Angeles County &middot; 2025-26 Census Day</div></td><td class='num'>1,242,816 <span class='small'>students</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://dq.cde.ca.gov/dataquest/dqcensus/enrgrdlevels.aspx?agglevel=District&amp;year=2025-26&amp;cds=19647330000000' rel='noopener' target='_blank'>S19 California Department of Education &nearr;</a></td></tr><tr><td><code>M27</code></td><td>K-12 enrollment<div class='small'>California &middot; 2025-26 Census Day</div></td><td class='num'>5,731,260 <span class='small'>students</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://dq.cde.ca.gov/dataquest/dqcensus/enrgrdlevels.aspx?agglevel=District&amp;year=2025-26&amp;cds=19647330000000' rel='noopener' target='_blank'>S19 California Department of Education &nearr;</a></td></tr><tr><td><code>M28</code></td><td>Four-year adjusted cohort graduation rate<div class='small'>Los Angeles Unified &middot; 2024-25</div></td><td class='num'>86.2 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>DataQuest district report, non-charter default filter (29,358 cohort; 25,304 graduates)</td><td><a href='https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?cds=19647330000000&amp;agglevel=district&amp;year=2024-25' rel='noopener' target='_blank'>S17 California Department of Education &nearr;</a></td></tr><tr><td><code>M29</code></td><td>Four-year adjusted cohort graduation rate<div class='small'>Los Angeles County &middot; 2024-25</div></td><td class='num'>90.6 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?cds=19647330000000&amp;agglevel=district&amp;year=2024-25' rel='noopener' target='_blank'>S17 California Department of Education &nearr;</a></td></tr><tr><td><code>M30</code></td><td>Four-year adjusted cohort graduation rate<div class='small'>California &middot; 2024-25</div></td><td class='num'>91.5 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Statewide total, non-charter default filter</td><td><a href='https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?cds=19647330000000&amp;agglevel=district&amp;year=2024-25' rel='noopener' target='_blank'>S17 California Department of Education &nearr;</a></td></tr><tr><td><code>M31</code></td><td>Graduation rate indicator (four- and five-year combined)<div class='small'>Los Angeles Unified &middot; 2025 Dashboard</div></td><td class='num'>86.5 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Four-year component 84.6% on the Dashboard all-schools basis; differs from M28 by charter inclusion</td><td><a href='https://www.caschooldashboard.org/reports/19647330000000/2025/academic-engagement' rel='noopener' target='_blank'>S33 California Department of Education - California School Dashboard &nearr;</a></td></tr><tr><td><code>M32</code></td><td>English language learners<div class='small'>Los Angeles Unified &middot; 2025-26</div></td><td class='num'>16.4 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>81,328 students</td><td><a href='https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000' rel='noopener' target='_blank'>S18 California Department of Education &nearr;</a></td></tr><tr><td><code>M33</code></td><td>Projected K-12 enrollment change<div class='small'>Los Angeles County &middot; 2025-26 to 2035-36</div></td><td class='num'>-240,800 <span class='small'>students</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Largest county decline in the state (DOF 2026 Series)</td><td><a href='https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/' rel='noopener' target='_blank'>S05 California Department of Finance &nearr;</a></td></tr><tr><td><code>M34</code></td><td>K-12 enrollment change<div class='small'>California &middot; 2024-25 to 2025-26</div></td><td class='num'>-75,000 <span class='small'>students</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Ninth consecutive annual decrease; 5,731,300 total on DOF basis</td><td><a href='https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/' rel='noopener' target='_blank'>S05 California Department of Finance &nearr;</a></td></tr><tr><td><code>M35</code></td><td>High school graduate or higher (age 25+)<div class='small'>Los Angeles city &middot; 2020-2024 (ACS)</div></td><td class='num'>79.6 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>County 80.9%</td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M36</code></td><td>Bachelor&#x27;s degree or higher (age 25+)<div class='small'>Los Angeles County &middot; 2020-2024 (ACS)</div></td><td class='num'>36.0 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>City 38.5%</td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr></tbody></table>
+</main>
+<footer>Session N &mdash; built from official sources only (government, regulator, court, SEC filings).
+Private owner facts stay blank and flagged. Index-basis model: no private dollar amounts are published.</footer>
+</body>
+</html>

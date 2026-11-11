@@ -1,0 +1,354 @@
+{
+ "session": "session-2b3370d1",
+ "seed": 20261111,
+ "trials": 20000,
+ "basis": "per $1 current NOI (index basis); owner rent/basis/debt are private blanks",
+ "assumptions": [
+  {
+   "id": "A1",
+   "label": "base NOI growth g = 2.0%/yr",
+   "anchor": "Below the LA metro CPI-U 3.7% (M96) and the LA-CSA ECI 3.9% (M97) because county population is declining (M06: -0.6%) and school enrollment falls (M33). Held flat in real terms is optimistic; 2.0% is a deliberately conservative nominal anchor."
+  },
+  {
+   "id": "A2",
+   "label": "base required return r = 7.0%/yr",
+   "anchor": "10-year Treasury 4.98% (M66) plus a ~200bp private-real-estate risk premium; swept 6.0-9.0% in the grid."
+  },
+  {
+   "id": "A3",
+   "label": "base going-in cap cap0 = 7.3%",
+   "anchor": "The only official yield datapoint available: Realty Income Q2-2026 initial weighted-average cash yield of ~7.3% (M71). The subject asset's own cap rate is a blank (M145) - the grid sweeps 6.0-9.0%."
+  },
+  {
+   "id": "A4",
+   "label": "base exit cap drift = +10bp per year",
+   "anchor": "Neutral-to-slightly-adverse: population decline and tenant shrinkage argue against cap-rate tightening; grid sweeps -20bp to +40bp per year."
+  },
+  {
+   "id": "A5",
+   "label": "hold horizon T swept 4-9 years",
+   "anchor": "The stated NNN expiry window is 2030-2035; from 2026 that is 4 to 9 years."
+  },
+  {
+   "id": "A6",
+   "label": "transfer tax applied on the sale path only",
+   "anchor": "County DTT 0.11% (M80); City all-in 4.45% tier-1 / 5.95% tier-2 (M78/M79) if the parcel is in City limits - both are modelled as separate cases because jurisdiction is a blank (M132)."
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "Bear (tenant shrinkage continues, cap expansion)",
+   "g": 0.0,
+   "r": 0.085,
+   "cap0": 0.085,
+   "drift_bp": 40,
+   "T": 9,
+   "pv_hold": 10.085,
+   "net_sale_county_only": 11.7518,
+   "net_sale_city_tier1": 11.2412
+  },
+  {
+   "name": "Base (official anchors: 10Y 4.98%, benchmark cap 7.3%)",
+   "g": 0.02,
+   "r": 0.07,
+   "cap0": 0.073,
+   "drift_bp": 10,
+   "T": 6,
+   "pv_hold": 14.5905,
+   "net_sale_county_only": 13.6836,
+   "net_sale_city_tier1": 13.089
+  },
+  {
+   "name": "Bull (CPI-linked renewal, stable credit, cap flat)",
+   "g": 0.037,
+   "r": 0.065,
+   "cap0": 0.07,
+   "drift_bp": -20,
+   "T": 9,
+   "pv_hold": 23.0268,
+   "net_sale_county_only": 14.27,
+   "net_sale_city_tier1": 13.65
+  }
+ ],
+ "breakevens": [
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 4,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.071251
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 4,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.062654
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 4,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.054628
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 6,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.070451
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 6,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.061839
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 6,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.053798
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 9,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.069275
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 9,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.060634
+  },
+  {
+   "case": "county_only",
+   "transfer_rate": 0.0011,
+   "T": 9,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.052567
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 4,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.060721
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 4,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.052848
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 4,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.045624
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 6,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.06288
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 6,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.054819
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 6,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.047375
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 9,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.063683
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 9,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.055493
+  },
+  {
+   "case": "city_tier1",
+   "transfer_rate": 0.0445,
+   "T": 9,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.0479
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 4,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.05721
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 4,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.049613
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 4,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.042696
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 6,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.060318
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 6,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.05246
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 6,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.045235
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 9,
+   "g": 0.01,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.061774
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 9,
+   "g": 0.02,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.053746
+  },
+  {
+   "case": "city_tier2",
+   "transfer_rate": 0.0595,
+   "T": 9,
+   "g": 0.03,
+   "r": 0.07,
+   "drift_bp": 10,
+   "breakeven_cap0": 0.046321
+  }
+ ],
+ "monte_carlo": {
+  "seed": 20261111,
+  "trials": 20000,
+  "n": 20000,
+  "p_hold_wins": 0.8232,
+  "mean_delta": 1.630237,
+  "p5": -1.11038,
+  "p25": 0.393577,
+  "median": 1.474247,
+  "p75": 2.674065,
+  "p95": 4.940734,
+  "min": -5.525825,
+  "max": 17.481411
+ },
+ "grid_summary": {
+  "cells": 3600,
+  "hold_wins": 2887,
+  "hold_win_share": 0.8019,
+  "by_transfer_case": {
+   "county_only": {
+    "cells": 1200,
+    "hold_wins": 875,
+    "hold_win_share": 0.7292
+   },
+   "city_tier1": {
+    "cells": 1200,
+    "hold_wins": 991,
+    "hold_win_share": 0.8258
+   },
+   "city_tier2": {
+    "cells": 1200,
+    "hold_wins": 1021,
+    "hold_win_share": 0.8508
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+  "session": "session-2b3370d1",
+  "access_date": "2026-11-11",
+  "basis": "Index basis: current net operating income is set to 1.0. The owner's actual rent, basis and debt are private blanks (M136, M143, M144), so absolute-dollar outcomes cannot be published. All strategy comparisons use relative index values from model.py (deterministic scenarios and Monte Carlo seed 20261111).",
+  "objectives": ["wealth preservation", "growth", "manageable risk"],
+  "strategies": [
+    {"id":"D-HOLD","name":"HOLD - renew / extend the NNN lease to the 2030-2035 window and beyond","objective":"wealth preservation + stable income growth","status":"analyzed",
+     "summary":"Renewal keeps the asset's income stream and defers all transaction costs. It is the strongest option if the tenant's covenant holds and an early extension can be negotiated with CPI-linked escalators before the expiry window.",
+     "pros":["No transfer tax and no disposition costs","Preserves depreciated-basis tax shelter and Prop 13 low base (1% levy, M81)","Full control over timing: can still sell before expiry once renewal terms are known","CPI-linked escalators (metro CPI +3.7%, M96) can protect real income"],
+     "cons":["Concentrated single-tenant credit: system SSS -1.1% and 50-60 planned closures in FY2026 (M112, M118)","Exposes the owner to earthquake and wildfire tail risks with unverified parcel insurance (M98-M111)","Re-tenanting at expiry is a real cost: the tenant is shrinking (R12)","Population and school-enrollment declines are structural headwinds (M06, M33)"],
+     "key_triggers":["Renewal term sheet with escalator >= CPI floor secured by 2028","Tenant site-level sales and guaranty confirmed (Q05, Q13)","Insurance quote bound for the full renewal term (Q09)","If any trigger fails by 2028: switch to SELL"],
+     "source":"S26"},
+    {"id":"D-SELL","name":"SELL - outright sale before the NNN expiry","objective":"liquidity and wealth reallocation; risk transfer","status":"analyzed",
+     "summary":"Selling converts the asset to cash now, transferring tenant and hazard risk. It is the cleanest wealth-preservation move if the parcel is in City limits (ULA cost known) and the bid clears the owner's reserve after tax.",
+     "pros":["Immediate liquidity; risk shifts to the buyer","Clean exit ahead of a shrinking tenant system and the 2030-2035 expiry","Establishes a price in the current market instead of betting on 2030-2035 conditions","Avoids any re-tenanting capital call"],
+     "cons":["Transaction friction: County DTT 0.11% plus City base 0.45% and, if in City, ULA 4.45%/5.95% all-in (M77-M80) on a sale above $5.4M","Capital-gains tax up to 13.30% CA top marginal plus federal (M85) unless a 1031 exchange is used","Forces a reinvestment decision into a 7.3% net-lease benchmark market (M71)","Buying pool narrows near the ULA threshold (R13)"],
+     "key_triggers":["Appraisal or broker opinion supports a price above the owner's reserve net of ULA and tax (Q06, Q16)","Jurisdiction confirmed so ULA is priced, not guessed (Q01)","If bids miss the reserve: fall back to D-HOLD with an early extension"],
+     "source":"S06"},
+    {"id":"D-EXCHANGE","name":"EXCHANGE - sell now into an IRC Section 1031 like-kind exchange","objective":"growth with tax deferral; risk transfer","status":"analyzed",
+     "summary":"A 1031 exchange sells the Central LA single-tenant asset and reinvests into like-kind replacement real property, deferring gain. Official constraints: real property held for business or investment only (M86), 45-day identification and 180-day receipt deadlines (M87-M88), qualified intermediary required.",
+     "pros":["Defers capital-gains tax (up to 13.30% CA top marginal, M85) while redeploying equity","Allows diversification away from one tenant and one parcel's hazard exposure","Same transfer-tax cost as a cash sale, so the comparison is purely tax-driven","Reinvestment into the 7.3% net-lease benchmark (M71) or other income property is documented as available"],
+     "cons":["Hard deadlines: 45 days to identify, 180 days to close (S12); failure recognizes gain","Exchange quality risk: buying illiquid replacement property to defer tax can destroy value","Still pays ULA/county transfer tax on the relinquished property if in City","Requires basis and loan data the owner must supply (Q07); 1031 applies to the real property only"],
+     "key_triggers":["Qualified intermediary engaged before listing and replacement inventory pre-identified","Owner's tax counsel confirms the basis position (Q15, Q07)","If no acceptable replacement exists within the deadline: convert to D-SELL"],
+     "source":"S12"},
+    {"id":"D-REC","name":"RECOMMENDED COURSE OF ACTION - dual-track: negotiate an early extension while preparing sale pricing in parallel","objective":"balance of all three: preservation, growth, manageable risk","status":"recommended",
+     "summary":"Do not choose between renew and sell yet: 22 blocking questions (Q01-Q22) and 26 blank parcel facts (F-N1 to F-N3) prevent an honest single-path answer. The best course of action today is (1) resolve jurisdiction, lease terms, hazard and insurance diligence immediately, (2) open extension talks with the tenant on CPI-linked terms, and (3) obtain an appraisal and test the market so a sell/1031 decision can be made on evidence by 2028, two years before the earliest expiry. The model publishes breakeven conditions for each path so the switch points are pre-agreed rather than emotional.",
+     "pros":["Keeps every option open while information gaps close (wealth preservation first)","Uses official current data (labor, rates, tenant filings) instead of stale forecasts","Pre-agreed triggers remove bias from the eventual decision","Extending first can raise rent even if the asset is later sold"],
+     "cons":["Requires owner time and negotiation capital now","Appraisal and diligence costs are sunk even if the hold path wins"],
+     "key_triggers":["Q01-Q05 answered within 30 days (identity, lease, tenant)","Q06-Q11 answered within 90 days (value, hazard, insurance)","Decision gate at 2028: renew if all R01-R03 mitigations are in place and appraisal supports value; otherwise sell or exchange"],
+     "source":"S06"}
+  ]
+}

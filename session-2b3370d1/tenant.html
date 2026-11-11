@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tenant &mdash; Jack NNN decision workbook (Session N)</title>
+<style>
+:root{--bg:#0f1420;--panel:#161d2e;--panel2:#1b2438;--line:#2a3550;--fg:#e8edf7;
+--muted:#93a0bd;--acc:#5eb0ff;--ok:#3fd07f;--warn:#ffb454;--bad:#ff6b6b;--flag:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px 10px}
+header h1{margin:0 0 4px;font-size:20px}
+header .sub{color:var(--muted);font-size:12.5px}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 22px;background:var(--panel2);
+border-bottom:1px solid var(--line);font-size:13.5px}
+nav a{padding:3px 6px;border-radius:6px}
+nav a.on{background:#24406b;color:#fff;text-decoration:none}
+main{padding:20px 22px 60px;max-width:1280px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:#cdd6ea}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:21px;font-weight:650;margin-top:4px}
+.tile .n{font-size:11.5px;color:var(--muted);margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:8px 0 18px;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--panel2);position:sticky;top:0}
+tr:nth-child(even) td{background:#131a2a}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600}
+.ok{background:#123726;color:var(--ok)}
+.flag{background:#3a2f10;color:var(--flag)}
+.calc{background:#12303f;color:#7fd1ff}
+.unoff{background:#3a2410;color:#ffb454}
+.blank{background:#3a2f10;color:var(--flag);font-weight:600}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+padding:10px 14px;border-radius:8px;margin:10px 0;font-size:13.5px}
+.warnbox{border-left:3px solid var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin-top:0}
+.pill{font-size:11px;padding:2px 8px;border-radius:10px;background:#24406b;color:#cfe4ff}
+footer{color:var(--muted);font-size:12px;padding:18px 22px;border-top:1px solid var(--line)}
+code{background:#0b101b;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.small{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Tenant</h1>
+  <div class="sub">Jack in the Box NNN property decision workbook &middot; Session N (session-2b3370d1)
+  &middot; every row source-linked &middot; unverifiable values blank &middot; accessed 2026-11-11</div>
+</header>
+<nav><a href='index.html'>Dashboard</a><a href='economics.html'>Area Economics</a><a href='income.html'>Income & Wages</a><a href='schools.html'>Schools</a><a href='jobs.html'>Jobs & Growth</a><a href='tenant.html' class='on'>Tenant</a><a href='capital.html'>Capital & Tax</a><a href='hazards.html'>Hazards</a><a href='risks.html'>Risk Register</a><a href='decisions.html'>Decisions</a><a href='questions.html'>Open Questions</a><a href='flagged.html'>Flagged for Review</a><a href='sources.html'>Sources</a></nav>
+<main>
+<h2>Jack in the Box Inc. &mdash; system health</h2><p class='small'>All rows come from the company's own SEC-filed earnings release (Q3 FY2026, 12 weeks ended 2026-07-05) or the FY2025 10-K. System-level data cannot identify this parcel's tenant (corporate vs franchisee) &mdash; that is Q05.</p><table><thead><tr><th>ID</th><th>Metric</th><th>Value</th><th>Status</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td><code>M112</code></td><td>System same-store sales change<div class='small'>Jack in the Box system &middot; 12 weeks ended 2026-07-05 (Q3 FY2026)</div></td><td class='num'>-1.1 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Franchise -1.2%; company -0.9%; transactions down, price up</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M113</code></td><td>System same-store sales change<div class='small'>Jack in the Box system &middot; 40 weeks ended 2026-07-05</div></td><td class='num'>-4.2 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Year to date</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M114</code></td><td>Restaurant count<div class='small'>Jack in the Box system &middot; end of Q3 FY2026</div></td><td class='num'>2,115 <span class='small'>restaurants</span></td><td><span class='chip ok'>verified</span></td><td class='small'>149 company-operated + 1,966 franchise; 25 states, Mexico and Guam</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M115</code></td><td>Openings<div class='small'>Jack in the Box system &middot; Q3 FY2026</div></td><td class='num'>4 <span class='small'>restaurants</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M116</code></td><td>Closures<div class='small'>Jack in the Box system &middot; Q3 FY2026</div></td><td class='num'>17 <span class='small'>restaurants</span></td><td><span class='chip ok'>verified</span></td><td class='small'>All franchise</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M117</code></td><td>Net restaurant change<div class='small'>Jack in the Box system &middot; Q3 FY2026</div></td><td class='num'>-13 <span class='small'>restaurants</span></td><td><span class='chip ok'>verified</span></td><td class='small'>-0.7% franchise quarter to date</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M118</code></td><td>Planned closures<div class='small'>Jack in the Box system &middot; FY2026 guidance</div></td><td class='num'>50-60 <span class='small'>restaurants</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Mostly franchise; about 25 openings; count guided to approximately 2,100</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M119</code></td><td>Restaurant-level margin<div class='small'>Jack in the Box company-operated &middot; Q3 FY2026</div></td><td class='num'>17.6 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>17.9% a year earlier; non-GAAP as defined in the release</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M120</code></td><td>Franchise-level margin<div class='small'>Jack in the Box franchise segment &middot; Q3 FY2026</div></td><td class='num'>60.3 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>37.4% of franchise sales vs $66.2M / 39.3% a year earlier; higher bad debt</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M121</code></td><td>Total revenues<div class='small'>Jack in the Box Inc. &middot; Q3 FY2026</div></td><td class='num'>257.7 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>-1.8% year over year</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M122</code></td><td>Net earnings from continuing operations<div class='small'>Jack in the Box Inc. &middot; Q3 FY2026</div></td><td class='num'>21.0 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>$22.8M a year earlier</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M123</code></td><td>Adjusted EBITDA<div class='small'>Jack in the Box Inc. &middot; Q3 FY2026</div></td><td class='num'>61.2 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Non-GAAP; $57.1M a year earlier</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M124</code></td><td>Adjusted EBITDA guidance<div class='small'>Jack in the Box Inc. &middot; FY2026 guidance</div></td><td class='num'>225-230 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Fiscal year ending 2026-09-27</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M125</code></td><td>Franchise rental revenues<div class='small'>Jack in the Box Inc. &middot; Q3 FY2026</div></td><td class='num'>73.0 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>$76.5M a year earlier; 40-week figure $242.5M vs $260.3M</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M126</code></td><td>Dividend and share repurchase status<div class='small'>Jack in the Box Inc. &middot; Q3 FY2026</div></td><td class='num'>discontinued <span class='small'>status</span></td><td><span class='chip ok'>verified</span></td><td class='small'>$175.0M remained authorized but the programs are discontinued</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr><tr><td><code>M127</code></td><td>Debt action<div class='small'>Jack in the Box Inc. &middot; 2026-06</div></td><td class='num'>500 <span class='small'>USD million</span></td><td><span class='chip ok'>verified</span></td><td class='small'>2026-1 Class A-2 Notes financed; $110.0M of 2019-1 Class A-2-II notes prepaid; anticipated repayment May 2031</td><td><a href='https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm' rel='noopener' target='_blank'>S26 Jack in the Box Inc. / U.S. SEC EDGAR &nearr;</a></td></tr></tbody></table>
+</main>
+<footer>Session N &mdash; built from official sources only (government, regulator, court, SEC filings).
+Private owner facts stay blank and flagged. Index-basis model: no private dollar amounts are published.</footer>
+</body>
+</html>

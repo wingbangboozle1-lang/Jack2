@@ -1,0 +1,245 @@
+{
+ "access_date": "2026-11-11",
+ "verifier": "session-2b3370d1",
+ "note": "Direct urllib egress is blocked by the sandbox allowlist; all source fetches were performed with the platform fetch_page tool. S18, S19, S31, S34 were re-fetched after the ledger was written; the remaining URLs were fetched and read earlier on the same date.",
+ "results": [
+  {
+   "id": "S01",
+   "url": "https://www.bls.gov/regions/west/summary/BLSSummary_LosAngeles.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S02",
+   "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S03",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S04",
+   "url": "https://dof.ca.gov/media/docs/forecasting/demographics/estimates/e-1_2026_press_release.Pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S05",
+   "url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S06",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S07",
+   "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/general-info",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S08",
+   "url": "https://assessor.lacounty.gov/homeowners/realproperty",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S09",
+   "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S10",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S11",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S12",
+   "url": "https://www.irs.gov/instructions/i8824",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S13",
+   "url": "https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S14",
+   "url": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fire-hazard-severity-zones-maps",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S15",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire/updates/262ba0be-593a-463c-94b1-a15d1e7f2a1e",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S16",
+   "url": "https://www.insurance.ca.gov/01-consumers/180-climate-change/upload/Auto-Residential-and-Commercial-Property-Claims-Information-as-of-March-3rd-Palisades-and-Eaton-Fires.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S17",
+   "url": "https://dq.cde.ca.gov/dataquest/dqcensus/CohRate.aspx?cds=19647330000000&agglevel=district&year=2024-25",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S18",
+   "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page re-check 2026-11-11"
+  },
+  {
+   "id": "S19",
+   "url": "https://dq.cde.ca.gov/dataquest/dqcensus/enrgrdlevels.aspx?agglevel=District&year=2025-26&cds=19647330000000",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page re-check 2026-11-11"
+  },
+  {
+   "id": "S20",
+   "url": "https://www.dir.ca.gov/dlse/minimum_wage.htm",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S21",
+   "url": "https://wagesla.lacity.gov/",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S22",
+   "url": "https://electionresults.sos.ca.gov/returns/ballot-measures",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S23",
+   "url": "https://lao.ca.gov/ballot/2026/prop3-110326.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S24",
+   "url": "https://www.courts.ca.gov/opinions/archive/B334071.PDF",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S25",
+   "url": "https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S26",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S27",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S28",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000110465926094098/tm2622133d1_8k.htm",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S29",
+   "url": "https://portoflosangeles.org/references/2026-news-releases/news_012226_sotpla26_event",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S30",
+   "url": "https://laedc.org/wp-content/uploads/2026/02/2026_EFreport-2-1.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S31",
+   "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page re-check 2026-11-11"
+  },
+  {
+   "id": "S32",
+   "url": "https://www.ftb.ca.gov/forms/2024/2024-5805-f-instructions.html",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S33",
+   "url": "https://www.caschooldashboard.org/reports/19647330000000/2025/academic-engagement",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page research pass 2026-11-11"
+  },
+  {
+   "id": "S34",
+   "url": "https://file.lacounty.gov/SDSInter/bos/supdocs/206544.pdf",
+   "status": "ok",
+   "detail": "content retrieved and read",
+   "method": "fetch_page re-check 2026-11-11"
+  }
+ ]
+}

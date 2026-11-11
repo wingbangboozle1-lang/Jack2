@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hazards &mdash; Jack NNN decision workbook (Session N)</title>
+<style>
+:root{--bg:#0f1420;--panel:#161d2e;--panel2:#1b2438;--line:#2a3550;--fg:#e8edf7;
+--muted:#93a0bd;--acc:#5eb0ff;--ok:#3fd07f;--warn:#ffb454;--bad:#ff6b6b;--flag:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px 10px}
+header h1{margin:0 0 4px;font-size:20px}
+header .sub{color:var(--muted);font-size:12.5px}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 22px;background:var(--panel2);
+border-bottom:1px solid var(--line);font-size:13.5px}
+nav a{padding:3px 6px;border-radius:6px}
+nav a.on{background:#24406b;color:#fff;text-decoration:none}
+main{padding:20px 22px 60px;max-width:1280px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:#cdd6ea}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:21px;font-weight:650;margin-top:4px}
+.tile .n{font-size:11.5px;color:var(--muted);margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:8px 0 18px;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--panel2);position:sticky;top:0}
+tr:nth-child(even) td{background:#131a2a}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600}
+.ok{background:#123726;color:var(--ok)}
+.flag{background:#3a2f10;color:var(--flag)}
+.calc{background:#12303f;color:#7fd1ff}
+.unoff{background:#3a2410;color:#ffb454}
+.blank{background:#3a2f10;color:var(--flag);font-weight:600}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+padding:10px 14px;border-radius:8px;margin:10px 0;font-size:13.5px}
+.warnbox{border-left:3px solid var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin-top:0}
+.pill{font-size:11px;padding:2px 8px;border-radius:10px;background:#24406b;color:#cfe4ff}
+footer{color:var(--muted);font-size:12px;padding:18px 22px;border-top:1px solid var(--line)}
+code{background:#0b101b;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.small{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Hazards</h1>
+  <div class="sub">Jack in the Box NNN property decision workbook &middot; Session N (session-2b3370d1)
+  &middot; every row source-linked &middot; unverifiable values blank &middot; accessed 2026-11-11</div>
+</header>
+<nav><a href='index.html'>Dashboard</a><a href='economics.html'>Area Economics</a><a href='income.html'>Income & Wages</a><a href='schools.html'>Schools</a><a href='jobs.html'>Jobs & Growth</a><a href='tenant.html'>Tenant</a><a href='capital.html'>Capital & Tax</a><a href='hazards.html' class='on'>Hazards</a><a href='risks.html'>Risk Register</a><a href='decisions.html'>Decisions</a><a href='questions.html'>Open Questions</a><a href='flagged.html'>Flagged for Review</a><a href='sources.html'>Sources</a></nav>
+<main>
+<h2>Natural hazards &mdash; verified official figures</h2><p class='small'>Seismic probabilities from USGS UCERF3; wildfire loss counts from CAL FIRE; insured losses from the California Department of Insurance.</p><table><thead><tr><th>ID</th><th>Metric</th><th>Value</th><th>Status</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td><code>M98</code></td><td>Probability of M6.7 or greater earthquake<div class='small'>Los Angeles region &middot; 30-year forecast (UCERF3)</div></td><td class='num'>60 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area' rel='noopener' target='_blank'>S13 U.S. Geological Survey &nearr;</a></td></tr><tr><td><code>M99</code></td><td>Probability of M7.0 or greater earthquake<div class='small'>Los Angeles region &middot; 30-year forecast (UCERF3)</div></td><td class='num'>46 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area' rel='noopener' target='_blank'>S13 U.S. Geological Survey &nearr;</a></td></tr><tr><td><code>M100</code></td><td>Probability of M7.5 or greater earthquake<div class='small'>Los Angeles region &middot; 30-year forecast (UCERF3)</div></td><td class='num'>31 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area' rel='noopener' target='_blank'>S13 U.S. Geological Survey &nearr;</a></td></tr><tr><td><code>M101</code></td><td>Acres burned<div class='small'>Eaton Fire (LA County) &middot; January 2025</div></td><td class='num'>14,021 <span class='small'>acres</span></td><td><span class='chip ok'>verified</span></td><td class='small'>CAL FIRE update 2025-01-27</td><td><a href='https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire/updates/262ba0be-593a-463c-94b1-a15d1e7f2a1e' rel='noopener' target='_blank'>S15 CAL FIRE &nearr;</a></td></tr><tr><td><code>M102</code></td><td>Structures destroyed<div class='small'>Eaton Fire (LA County) &middot; January 2025</div></td><td class='num'>9,418 <span class='small'>structures</span></td><td><span class='chip ok'>verified</span></td><td class='small'>100% of structures in the fire footprint inspected</td><td><a href='https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire/updates/262ba0be-593a-463c-94b1-a15d1e7f2a1e' rel='noopener' target='_blank'>S15 CAL FIRE &nearr;</a></td></tr><tr><td><code>M103</code></td><td>Structures damaged<div class='small'>Eaton Fire (LA County) &middot; January 2025</div></td><td class='num'>1,073 <span class='small'>structures</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire/updates/262ba0be-593a-463c-94b1-a15d1e7f2a1e' rel='noopener' target='_blank'>S15 CAL FIRE &nearr;</a></td></tr><tr><td><code>M104</code></td><td>Civilian fatalities<div class='small'>Eaton Fire (LA County) &middot; January 2025</div></td><td class='num'>17 <span class='small'>persons</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Count as of the 2025-01-27 CAL FIRE update</td><td><a href='https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire/updates/262ba0be-593a-463c-94b1-a15d1e7f2a1e' rel='noopener' target='_blank'>S15 CAL FIRE &nearr;</a></td></tr><tr><td><code>M105</code></td><td>Insured losses paid, residential property<div class='small'>Palisades + Eaton fires &middot; as of March 2026</div></td><td class='num'>21,969,711,402 <span class='small'>USD</span></td><td><span class='chip ok'>verified</span></td><td class='small'>38,835 claims; 37,896 with payment</td><td><a href='https://www.insurance.ca.gov/01-consumers/180-climate-change/upload/Auto-Residential-and-Commercial-Property-Claims-Information-as-of-March-3rd-Palisades-and-Eaton-Fires.pdf' rel='noopener' target='_blank'>S16 California Department of Insurance &nearr;</a></td></tr><tr><td><code>M106</code></td><td>Insured losses paid, commercial property<div class='small'>Palisades + Eaton fires &middot; as of March 2026</div></td><td class='num'>1,709,807,018 <span class='small'>USD</span></td><td><span class='chip ok'>verified</span></td><td class='small'>2,965 claims</td><td><a href='https://www.insurance.ca.gov/01-consumers/180-climate-change/upload/Auto-Residential-and-Commercial-Property-Claims-Information-as-of-March-3rd-Palisades-and-Eaton-Fires.pdf' rel='noopener' target='_blank'>S16 California Department of Insurance &nearr;</a></td></tr><tr><td><code>M107</code></td><td>Insured losses paid, all listed lines<div class='small'>Palisades + Eaton fires &middot; as of March 2026</div></td><td class='num'>23,870,807,987 <span class='small'>USD</span></td><td><span class='chip calc'>computed</span></td><td class='small'>Residential + commercial property + auto as published by CDI</td><td><a href='https://www.insurance.ca.gov/01-consumers/180-climate-change/upload/Auto-Residential-and-Commercial-Property-Claims-Information-as-of-March-3rd-Palisades-and-Eaton-Fires.pdf' rel='noopener' target='_blank'>S16 California Department of Insurance &nearr;</a></td></tr><tr><td><code>M108</code></td><td>Housing units lost to the Eaton and Palisades fires<div class='small'>California &middot; 2025</div></td><td class='num'>11,160 <span class='small'>units</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Of 11,406 total units lost statewide</td><td><a href='https://dof.ca.gov/media/docs/forecasting/demographics/estimates/e-1_2026_press_release.Pdf' rel='noopener' target='_blank'>S04 California Department of Finance &nearr;</a></td></tr><tr><td><code>M109</code></td><td>Fire hazard severity zone class<div class='small'>subject parcel &middot; current</div></td><td class=''>&mdash; <span class='small'>class</span></td><td><span class='chip blank'>blank &middot; flagged</span></td><td class='small'>Parcel lookup requires the address; blank and flagged (F-N3)</td><td><a href='https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fire-hazard-severity-zones-maps' rel='noopener' target='_blank'>S14 California Department of Forestry and Fire Protection (CAL FIRE) &nearr;</a></td></tr><tr><td><code>M110</code></td><td>FEMA flood zone<div class='small'>subject parcel &middot; current</div></td><td class=''>&mdash; <span class='small'>zone</span></td><td><span class='chip blank'>blank &middot; flagged</span></td><td class='small'>Parcel lookup requires the address; no official parcel record published - blank and flagged (F-N3)</td><td><span class='small'>no official source exists for this fact &mdash; see Flagged</span></td></tr><tr><td><code>M111</code></td><td>Seismic retrofit status<div class='small'>subject parcel &middot; current</div></td><td class=''>&mdash; <span class='small'>status</span></td><td><span class='chip blank'>blank &middot; flagged</span></td><td class='small'>Parcel-specific; blank and flagged (F-N3)</td><td><span class='small'>no official source exists for this fact &mdash; see Flagged</span></td></tr></tbody></table>
+</main>
+<footer>Session N &mdash; built from official sources only (government, regulator, court, SEC filings).
+Private owner facts stay blank and flagged. Index-basis model: no private dollar amounts are published.</footer>
+</body>
+</html>

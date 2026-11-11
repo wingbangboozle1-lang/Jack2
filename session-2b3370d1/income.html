@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Income &amp; Wages &mdash; Jack NNN decision workbook (Session N)</title>
+<style>
+:root{--bg:#0f1420;--panel:#161d2e;--panel2:#1b2438;--line:#2a3550;--fg:#e8edf7;
+--muted:#93a0bd;--acc:#5eb0ff;--ok:#3fd07f;--warn:#ffb454;--bad:#ff6b6b;--flag:#ffd166}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px 10px}
+header h1{margin:0 0 4px;font-size:20px}
+header .sub{color:var(--muted);font-size:12.5px}
+nav{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 22px;background:var(--panel2);
+border-bottom:1px solid var(--line);font-size:13.5px}
+nav a{padding:3px 6px;border-radius:6px}
+nav a.on{background:#24406b;color:#fff;text-decoration:none}
+main{padding:20px 22px 60px;max-width:1280px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:#cdd6ea}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:12px 0}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:21px;font-weight:650;margin-top:4px}
+.tile .n{font-size:11.5px;color:var(--muted);margin-top:3px}
+table{border-collapse:collapse;width:100%;margin:8px 0 18px;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--panel2);position:sticky;top:0}
+tr:nth-child(even) td{background:#131a2a}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;font-weight:600}
+.ok{background:#123726;color:var(--ok)}
+.flag{background:#3a2f10;color:var(--flag)}
+.calc{background:#12303f;color:#7fd1ff}
+.unoff{background:#3a2410;color:#ffb454}
+.blank{background:#3a2f10;color:var(--flag);font-weight:600}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+padding:10px 14px;border-radius:8px;margin:10px 0;font-size:13.5px}
+.warnbox{border-left:3px solid var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card h3{margin-top:0}
+.pill{font-size:11px;padding:2px 8px;border-radius:10px;background:#24406b;color:#cfe4ff}
+footer{color:var(--muted);font-size:12px;padding:18px 22px;border-top:1px solid var(--line)}
+code{background:#0b101b;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.small{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Income &amp; Wages</h1>
+  <div class="sub">Jack in the Box NNN property decision workbook &middot; Session N (session-2b3370d1)
+  &middot; every row source-linked &middot; unverifiable values blank &middot; accessed 2026-11-11</div>
+</header>
+<nav><a href='index.html'>Dashboard</a><a href='economics.html'>Area Economics</a><a href='income.html' class='on'>Income & Wages</a><a href='schools.html'>Schools</a><a href='jobs.html'>Jobs & Growth</a><a href='tenant.html'>Tenant</a><a href='capital.html'>Capital & Tax</a><a href='hazards.html'>Hazards</a><a href='risks.html'>Risk Register</a><a href='decisions.html'>Decisions</a><a href='questions.html'>Open Questions</a><a href='flagged.html'>Flagged for Review</a><a href='sources.html'>Sources</a></nav>
+<main>
+<h2>Household and personal income</h2><table><thead><tr><th>ID</th><th>Metric</th><th>Value</th><th>Status</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td><code>M17</code></td><td>Median household income<div class='small'>Los Angeles city &middot; 2020-2024 (2024 dollars)</div></td><td class='num'>81,939 <span class='small'>USD</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M18</code></td><td>Median household income<div class='small'>Los Angeles County &middot; 2020-2024 (2024 dollars)</div></td><td class='num'>90,112 <span class='small'>USD</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M19</code></td><td>Per capita income<div class='small'>Los Angeles city &middot; 2020-2024 (2024 dollars)</div></td><td class='num'>47,685 <span class='small'>USD</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M20</code></td><td>Per capita income<div class='small'>Los Angeles County &middot; 2020-2024 (2024 dollars)</div></td><td class='num'>45,792 <span class='small'>USD</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M21</code></td><td>Persons in poverty<div class='small'>Los Angeles city &middot; 2020-2024</div></td><td class='num'>16.5 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>County 13.3%</td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M22</code></td><td>Persons in poverty<div class='small'>Los Angeles County &middot; 2020-2024</div></td><td class='num'>13.3 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'></td><td><a href='https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,LOSANGELEScountycalifornia/PST045224' rel='noopener' target='_blank'>S03 U.S. Census Bureau &nearr;</a></td></tr><tr><td><code>M23</code></td><td>Total personal income<div class='small'>Los Angeles County &middot; 2024</div></td><td class='num'>818.5 <span class='small'>USD billion</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Highest of any US county; 2025 county release due December 2, 2026</td><td><a href='https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf' rel='noopener' target='_blank'>S25 U.S. Bureau of Economic Analysis &nearr;</a></td></tr><tr><td><code>M24</code></td><td>Personal income growth<div class='small'>United States &middot; 2024</div></td><td class='num'>5.6 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Current dollars</td><td><a href='https://www.bea.gov/sites/default/files/2026-02/lagdppi0226.pdf' rel='noopener' target='_blank'>S25 U.S. Bureau of Economic Analysis &nearr;</a></td></tr></tbody></table><h2>Wages, minimum wages and cost pressure</h2><p class='small'>City of LA minimum wage ($18.42 from 2026-07-01) and the California fast-food wage ($20.00) directly shape QSR tenant margins and renewal rent capacity.</p><table><thead><tr><th>ID</th><th>Metric</th><th>Value</th><th>Status</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td><code>M91</code></td><td>State minimum wage<div class='small'>California &middot; effective 2026-01-01</div></td><td class='num'>16.90 <span class='small'>USD/hour</span></td><td><span class='chip ok'>verified</span></td><td class='small'>All employers</td><td><a href='https://www.dir.ca.gov/dlse/minimum_wage.htm' rel='noopener' target='_blank'>S20 California Labor Commissioner&#x27;s Office (DIR) &nearr;</a></td></tr><tr><td><code>M92</code></td><td>Fast food restaurant minimum wage<div class='small'>California &middot; effective 2024-04-01</div></td><td class='num'>20.00 <span class='small'>USD/hour</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Covered fast food restaurant employees (AB 1228)</td><td><a href='https://www.dir.ca.gov/dlse/minimum_wage.htm' rel='noopener' target='_blank'>S20 California Labor Commissioner&#x27;s Office (DIR) &nearr;</a></td></tr><tr><td><code>M93</code></td><td>Citywide minimum wage<div class='small'>City of Los Angeles &middot; effective 2026-07-01</div></td><td class='num'>18.42 <span class='small'>USD/hour</span></td><td><span class='chip ok'>verified</span></td><td class='small'>All employers; +$0.55 (+3.08%) from $17.87</td><td><a href='https://wagesla.lacity.gov/' rel='noopener' target='_blank'>S21 City of Los Angeles &nearr;</a></td></tr><tr><td><code>M94</code></td><td>Citywide minimum wage<div class='small'>City of Los Angeles &middot; effective 2025-07-01</div></td><td class='num'>17.87 <span class='small'>USD/hour</span></td><td><span class='chip ok'>verified</span></td><td class='small'>Prior rate in the published schedule</td><td><a href='https://wagesla.lacity.gov/' rel='noopener' target='_blank'>S21 City of Los Angeles &nearr;</a></td></tr><tr><td><code>M95</code></td><td>Average hourly wage, all occupations<div class='small'>Los Angeles metro area &middot; May 2025</div></td><td class='num'>37.15 <span class='small'>USD/hour</span></td><td><span class='chip ok'>verified</span></td><td class='small'>US average $33.54</td><td><a href='https://www.bls.gov/regions/west/summary/BLSSummary_LosAngeles.pdf' rel='noopener' target='_blank'>S01 U.S. Bureau of Labor Statistics &nearr;</a></td></tr><tr><td><code>M96</code></td><td>CPI-U 12-month change<div class='small'>Los Angeles metro area &middot; September 2026</div></td><td class='num'>3.7 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>All items; US city average also 3.7%; energy +20.3%</td><td><a href='https://www.bls.gov/regions/west/summary/BLSSummary_LosAngeles.pdf' rel='noopener' target='_blank'>S01 U.S. Bureau of Labor Statistics &nearr;</a></td></tr><tr><td><code>M97</code></td><td>Employment Cost Index 12-month change<div class='small'>Los Angeles-Long Beach CSA &middot; September 2026</div></td><td class='num'>3.9 <span class='small'>%</span></td><td><span class='chip ok'>verified</span></td><td class='small'>US 3.1%; wage-and-salary cost growth relevant to renewal escalators</td><td><a href='https://www.bls.gov/regions/west/summary/BLSSummary_LosAngeles.pdf' rel='noopener' target='_blank'>S01 U.S. Bureau of Labor Statistics &nearr;</a></td></tr></tbody></table>
+</main>
+<footer>Session N &mdash; built from official sources only (government, regulator, court, SEC filings).
+Private owner facts stay blank and flagged. Index-basis model: no private dollar amounts are published.</footer>
+</body>
+</html>
