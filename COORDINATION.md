@@ -1244,3 +1244,34 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+
+---
+
+# Session N — `session-fa2afdb1` (branch `arena/fa2afdb1-jack2`) — claim 2026-11-11
+
+Platform note: Arena pins this session to `arena/fa2afdb1-jack2`; that branch doubles as the
+integration branch for the pull request to `main`. Work products are isolated in
+`session-fa2afdb1/**`; shared files are touched only by the additive changes listed in N-07.
+
+## Task board — Session N claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| N-01 | Read board, detect parallel sessions, claim disjoint scope | claimed | session-fa2afdb1 | `COORDINATION.md` (append only) |
+| N-02 | Line-by-line repo review + irregularity register (privacy-first) | unclaimed→claimed | session-fa2afdb1 | `session-fa2afdb1/data/irregularities.json`, `session-fa2afdb1/flagged.html` |
+| N-03 | Fresh official-source research (access date 2026-11-11); every row source-linked, unverified blank | unclaimed→claimed | session-fa2afdb1 | `session-fa2afdb1/data/sources.json`, `session-fa2afdb1/data/metrics.json` |
+| N-04 | Pre-decision questions & answers register (missing-information discovery plan) | unclaimed→claimed | session-fa2afdb1 | `session-fa2afdb1/data/questions.json` |
+| N-05 | Projection system: deterministic 2026–2040 scenarios + seeded Monte Carlo over decision strategies, 2030–2035 expiry grid, BAU + black swan | unclaimed→claimed | session-fa2afdb1 | `session-fa2afdb1/scripts/model.py`, `session-fa2afdb1/data/model_output.json` |
+| N-06 | Risk register (every decision × BAU + black swan), decision analysis, executive summary | unclaimed→claimed | session-fa2afdb1 | `session-fa2afdb1/data/risks.json`, `session-fa2afdb1/data/decisions.json`, `session-fa2afdb1/EXECUTIVE_SUMMARY.md` |
+| N-07 | Dashboard: landing + category subpages in table format; automated verifier (source/blank/PII/link) | unclaimed→claimed | session-fa2afdb1 | `session-fa2afdb1/*.html`, `session-fa2afdb1/assets/`, `session-fa2afdb1/scripts/build_site.py`, `session-fa2afdb1/scripts/verify.py` |
+| N-08 | Final integration: one additive workspace row + README section + additive CI step; PR → main; merge without waiting; confirm Pages deploy; record result | unclaimed→claimed | session-fa2afdb1 | `tools/build_site.py` (one additive row in `build_workspaces()`), `README.md` (additive section), `.github/workflows/verify.yml` (additive step), this file |
+
+## Session detection at claim time (2026-11-11)
+
+- Branch `arena/fa2afdb1-jack2` is at `ab596f9` (merge of PR #39), in sync with `origin/main`. Working tree clean.
+- Fourteen prior workbooks exist (`session-*/` + `docs/`); none uses the directory `session-fa2afdb1/`.
+- Open PRs at claim time: #5, #6, #10, #14, #18, #30 (stale, earlier sessions' branches) and #38, #40
+  (open deployment-record PRs from `arena/313ba936` and `arena/5f296f9d`). This session will **not**
+  close or merge any of them — they belong to other sessions.
+- Scope is disjoint: this session edits only `session-fa2afdb1/**`, appends here, and makes the three
+  additive shared edits named in N-07/N-08.
