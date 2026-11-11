@@ -1,0 +1,31 @@
+{
+ "meta": {
+  "session": "session-fe9d2a91",
+  "rule": "Nothing here is a fact about the property. Each setting is either a number published by an official source (the fact id is given) or a range the model sweeps. The property's own rent, expiry date and lease terms are blank, so the model works per $100 of current yearly rent."
+ },
+ "settings": [
+  {"id": "A-01", "label": "Rent", "setting": "$100 a year (an index, not a value)", "kind": "normalisation", "anchors": ["T-054"], "why": "The rent is private. Every result is per $100 of current yearly rent and scales directly."},
+  {"id": "A-02", "label": "Lease expiry", "setting": "Each year from 2030 to 2035", "kind": "sweep", "anchors": ["T-054"], "why": "The brief gives a window, not a date. Years of rent left are counted from the end of 2026."},
+  {"id": "A-03", "label": "Rent increases before expiry", "setting": "0% a year in the base case; 2% as a sensitivity", "kind": "sweep", "anchors": ["T-054", "J-030"], "why": "The lease clause is blank. The tenant says its leases are generally fixed with cost-of-living adjustments."},
+  {"id": "A-04", "label": "What the money would earn if the property were sold", "setting": "4.98% (10-year Treasury); 6.6% and 7.3% as sensitivities", "kind": "official", "anchors": ["C-001", "C-017", "C-010"], "why": "The Treasury yield is the return with no property risk. The two higher figures are what large landlords earn on purchases."},
+  {"id": "A-05", "label": "Yield a buyer wants on a freshly renewed lease", "setting": "7.3% in the base case; 6.5% and 7.8% as sensitivities", "kind": "official", "anchors": ["C-010", "C-013", "C-018", "C-012"], "why": "The range of purchase and sale yields in the two landlords' latest quarterly filings. No official figure exists for Los Angeles."},
+  {"id": "A-06", "label": "Chance the lease is renewed or re-let at expiry", "setting": "76.2% in the base case; swept from 0% to 100%", "kind": "official", "anchors": ["C-034", "C-035", "C-030", "C-031"], "why": "Share of Realty Income's expiring leases renewed by the same tenant in the nine months to September 30, 2026. A portfolio average, not a forecast for this tenant."},
+  {"id": "A-07", "label": "New rent on renewal, as a share of the old rent", "setting": "103.1% in the base case; 103.5% as a sensitivity", "kind": "official", "anchors": ["C-039", "C-038"], "why": "Realty Income's rent recapture on re-leased properties."},
+  {"id": "A-08", "label": "Price of the property if left vacant, as a share of its leased price", "setting": "63% in the base case; 86% as a sensitivity", "kind": "official", "anchors": ["C-042", "C-043", "C-040", "C-041"], "why": "Price per square foot of vacant against leased properties sold by NNN REIT. A national average. Land in central Los Angeles may be worth more or less; an appraisal decides."},
+  {"id": "A-09", "label": "Tax rate on the gain, for the tax tables only", "setting": "37.1% (the top federal and California rates added together)", "kind": "official", "anchors": ["X-020", "X-023", "X-025", "X-027"], "why": "An upper bound. The owner's actual rate, basis and depreciation are private."},
+  {"id": "A-10", "label": "Share of the sale price that is taxable gain", "setting": "Swept: 0%, 50%, 100%", "kind": "sweep", "anchors": ["X-020"], "why": "The owner's tax basis is private."},
+  {"id": "A-11", "label": "Selling costs other than transfer tax", "setting": "Not included", "kind": "omitted", "anchors": ["X-002"], "why": "Brokerage, escrow and legal fees have no official source. They make every sale result slightly worse than shown."},
+  {"id": "A-12", "label": "Simulation", "setting": "20,000 trials, seed 20261111", "kind": "method", "anchors": ["C-034", "C-042", "C-010"], "why": "Each trial draws the renewal outcome, the renewal rent, the vacant price and the buyer's yield from the official ranges above. Same seed, same result."},
+  {"id": "A-13", "label": "Stress tests", "setting": "Tenant leaves; yields 2 points higher; rent stops 2 years early", "kind": "stress", "anchors": ["J-036", "H-001", "T-008"], "why": "Shocks chosen to show the size of a bad outcome. They are not forecasts and carry no probability."}
+ ],
+ "model": {
+  "valuation_year": 2026,
+  "expiry_years": [2030, 2031, 2032, 2033, 2034, 2035],
+  "rent_growth": {"base": 0.0, "alt": 0.02},
+  "sale_yields_swept": [5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0],
+  "gain_shares_swept": [0.0, 0.5, 1.0],
+  "renewal_probabilities_swept": [0.0, 0.25, 0.5, "base", 0.9, 1.0],
+  "stress": {"yield_shock_points": 2.0, "rent_stops_years_early": 2},
+  "monte_carlo": {"seed": 20261111, "trials": 20000}
+ }
+}
