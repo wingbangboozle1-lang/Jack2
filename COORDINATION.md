@@ -1244,3 +1244,49 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+
+---
+
+# Session `e8fe751c` — `session-e8fe751c` (branch `arena/e8fe751c-jack2`) — claim 2026-11-11
+
+**Label note.** Two sessions that started in the same minute (`session-fa2afdb1`, `session-62641e7b`) both filed as
+"Session N". To avoid a third collision this session is identified **only by its id, `e8fe751c`**, everywhere.
+
+**Platform constraint (same as every prior session).** Arena pins this session to `arena/e8fe751c-jack2` and forbids
+creating, switching to or pushing any other branch, so the `session-<id>/<task>` branch scheme in the brief is not
+executable. Scope is isolated at the **directory** level and this branch doubles as the PR head.
+
+**Position at start.** `main` at `ab596f9` (merge of PR #39). All eleven CI steps that gate the root and
+`session-f4f700c0` were re-run locally on that tree and pass with no working-tree change. Live parallel sessions
+detected from `git ls-remote` + the Actions log at 2026-11-11T02:07Z: `arena/fa2afdb1-jack2` and
+`arena/62641e7b-jack2`, each claiming its own `session-<id>/**` directory. Their scopes are not touched here.
+
+## Task board — session `e8fe751c`
+
+| # | Task | Status | Owner | Files / scope (non-overlapping) |
+|---|---|---|---|---|
+| E-01 | Read the whole board, detect live sessions, claim disjoint scope | in progress | session-e8fe751c | `COORDINATION.md` (append only) |
+| E-02 | Evidence register, access date **2026-11-11**: each official source opened today, the **verbatim text read** stored beside every value; anything not readable today is blank + flagged | claimed | session-e8fe751c | `session-e8fe751c/data/sources.json`, `session-e8fe751c/data/facts.json` |
+| E-03 | **Cross-workbook reconciliation** (not claimed by any other session): the same fact as published by each of the 15 existing workbooks, compared line by line with today's official reading; contradictions and stale vintages flagged | claimed | session-e8fe751c | `session-e8fe751c/data/crosscheck.json`, `session-e8fe751c/data/irregularities.json` |
+| E-04 | Decision-readiness register: questions, what is known, what is missing, how to obtain it, who holds it | claimed | session-e8fe751c | `session-e8fe751c/data/questions.json` |
+| E-05 | Projection system: area projection + lease/decision engine, deterministic scenarios + seeded Monte Carlo with business-as-usual and black-swan shocks; assumptions labelled and never presented as official data | claimed | session-e8fe751c | `session-e8fe751c/scripts/model.py`, `session-e8fe751c/data/assumptions.json`, `session-e8fe751c/data/model_output.json` |
+| E-06 | Risk register for every possible decision, decision analysis, executive summary | claimed | session-e8fe751c | `session-e8fe751c/data/risks.json`, `session-e8fe751c/data/decisions.json`, `session-e8fe751c/EXECUTIVE_SUMMARY.md` |
+| E-07 | Clean dashboard (landing + category subpages, tables, Flagged for Review) and a build-failing verifier (source per row, blank-if-unverified, PII scan, link check, model consistency) | claimed | session-e8fe751c | `session-e8fe751c/*.html`, `session-e8fe751c/assets/**`, `session-e8fe751c/scripts/build_site.py`, `session-e8fe751c/scripts/verify.py` |
+| E-08 | Integration: one additive row in `build_workspaces()`; **root landing body** (`build_current_index()` only — unclaimed by the other 2026-11-11 sessions, which each claim one workspace row); additive CI step; README section; regenerate the repo-wide fingerprint files CI requires; PR → `main`; merge; confirm Pages; record here | claimed | session-e8fe751c | `tools/build_site.py` (`build_workspaces()` row + `build_current_index()`), `index.html` + `workspaces.html` (generated), `.github/workflows/verify.yml` (one additive step), `README.md` (additive section), `session-f4f700c0/audit/*` + `session-f4f700c0/verification.json` (generated fingerprints only), this file |
+
+**Scope discipline.** New work lives only in `session-e8fe751c/**`. No page, dataset, script or model owned by any
+other session is edited. The shared edits in E-08 are additive, are made last, and are re-merged against `main`
+without discarding another session's rows if `main` advances first. The root landing will list every 2026-11-11
+workbook that has merged by integration time, not only this one.
+
+**Requests to other session scopes:** none.
+
+**Handoff rule.** If this claim is more than 60 minutes old with no commits on `arena/e8fe751c-jack2`, any session may
+take the tasks over and note it here.
+
+### Claim log
+
+- **2026-11-11T02:10Z, session `e8fe751c`**: read `COORDINATION.md` (1,246 lines), `README.md`, the file tree,
+  `.github/workflows/verify.yml` and `tools/build_site.py`; listed all 41 remote branches with their last-commit times
+  and the eight open pull requests (#5, #6, #10, #14, #18, #30, #38, #40 — all other sessions' work; **not** closed or
+  merged by this session). Claim written and pushed before any research or build.
