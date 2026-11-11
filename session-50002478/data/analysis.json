@@ -1,0 +1,140 @@
+{
+  "title": "Jack in the Box NNN | Conditional property decision dashboard",
+  "as_of": "2026-11-06",
+  "scope": "Anonymous Jack in the Box NNN property, user-described as around central Los Angeles; exact address deliberately omitted.",
+  "recommendation": {
+    "status": "Conditional dual-track process; final hold/sell choice is not supportable from the supplied property facts.",
+    "headline": "Protect the downside. Preserve the option to sell.",
+    "summary": "Do not blindly hold to expiry or assume renewal. Start a confidential market-value and buyer-interest check while reviewing the executed lease and negotiating a tenant-supported extension. Favor a sale only when an executable, same-basis net sale value exceeds a conservative hold value plus an explicit, non-duplicated uncertainty/liquidity buffer. Favor an extension only when its incremental value exceeds added landlord obligations, retained risks and the sale alternative.",
+    "rationale": [
+      "The county is large but not uniformly growing: Census estimates a 3.2% population decline from April 2020 to July 2025; the official county long-run outlook has approximately flat population and modest payroll growth.",
+      "The brand remains substantial, but the latest issuer filing reports negative system/franchise comparable sales, closures, tight liquidity and elevated leverage. Brand scale is not a substitute for the actual franchisee's rent coverage.",
+      "NNN shifts many operating expenses, not all credit, vacancy, re-leasing, hazard, insurance, tax, liquidity or residual-value risks. A long lease can stabilize income while also locking in below-market rent or limiting reuse.",
+      "The 2030–2035 expiry range is a user claim, not a verified lease fact. No rent, price, executed option, guaranty, parcel hazard or tenant financial statement was supplied."
+    ],
+    "next_actions": [
+      "Obtain the executed lease, amendments, options, estoppel, guaranties and actual rent roll through a private diligence channel; do not upload personal or confidential documents to this public site.",
+      "Obtain independent current appraisal and executable buyer indications, current parcel-level hazard/insurance review, and franchisee rent coverage. Keep identities out of public artifacts.",
+      "Populate a private, same-basis after-tax comparison; use the public normalized model only to understand sensitivities and set disciplined thresholds."
+    ]
+  },
+  "methodology": {
+    "normalization": "Initial annual contractual base rent R0 = 100 monetary units. This is a scale convention, not a property rent estimate. Results are multiples of actual verified R0 once available.",
+    "timing": "120 end-of-month cash flows over ten years. Annual effective discount and rent escalation are converted by exponentiation, not divided by twelve. Re-letting cost is paid at the expiry month; downtime begins after expiry. These are modeling conventions, not observed lease terms.",
+    "post_expiry": "Renewal resets rent relative to initial R0, with no downtime or releasing cost in this idealized path. Re-letting applies a reset, downtime and releasing cost. Vacant paths retain only an explicit residual-rent-multiple hypothesis. Renewal is not unilateral: tenant consent and executed documentation are required.",
+    "valuation": "Unlevered, pre-owner-income-tax property value. Terminal value = final-year net rent / exit cap, less terminal selling cost; vacant path uses residual hypothesis. Compare with gross sale price less selling costs BEFORE debt payoff and owner income taxes. Then separately test the owner's actual after-debt, after-tax equity proceeds and reinvestment alternatives.",
+    "interpretation": "Scenarios are conditional stress tests, not probability-weighted expected values, confidence intervals, market cap-rate estimates or forecasts of this property's rent. No annual interpolation of official five-year averages is performed. Regional earthquake probabilities are not building-loss or tenant-default probabilities.",
+    "decision_rules": [
+      "LEAN SELL: executable net sale value before debt/owner tax ≥ conservative hold PV + explicit uncertainty/liquidity buffer, after separately checking owner taxes, debt/prepayment, guarantees and reinvestment needs.",
+      "LEAN HOLD / PLAN EXIT: the sale test fails and liquidity reserves cover landlord obligations, vacancy and tail losses; reassess at each evidence update.",
+      "PURSUE EXTENSION: PV(extension) − PV(existing hold) > incremental concessions, landlord carve-outs and retained-risk burden, AND the extended position remains competitive with the sale alternative. Do not count the same risk in both the discount rate and a cash-flow/risk-buffer deduction.",
+      "NO FINAL CHOICE: any critical lease, rent, executable sale value, tenant-credit or tax/debt input remains unknown. The dashboard deliberately returns no property-specific best price."
+    ]
+  },
+  "assumptions": [
+    {
+      "id": "A01",
+      "parameter": "Lease-term proxies",
+      "value": "4 and 9 years",
+      "status": "Hypothesis · not verified",
+      "source_id": "forecast-method",
+      "basis": "Loose year-count proxies for the user-reported 2030–2035 range; exact expiry and options remain blank. Not a legal interpretation."
+    },
+    {
+      "id": "A02",
+      "parameter": "Horizon / rent scale",
+      "value": "10 years / R0 = 100",
+      "status": "Hypothesis · not verified",
+      "source_id": "repo",
+      "basis": "Dimensionless mathematical convention covering both proxies; not an observed rent or holding period."
+    },
+    {
+      "id": "A03",
+      "parameter": "Annual rent escalation: downside / reference / upside",
+      "value": "0% / 1.5% / 2%",
+      "status": "Hypothesis · not verified",
+      "source_id": "cpi-local",
+      "basis": "Stress controls only. Regional CPI is context, not a contractual escalator or a rent-growth forecast."
+    },
+    {
+      "id": "A04",
+      "parameter": "Landlord leakage: downside / reference / upside",
+      "value": "5% / 2% / 0% of rent",
+      "status": "Hypothesis · not verified",
+      "source_id": "jack-q3",
+      "basis": "Unreimbursed/credit-loss allowance test points. Actual NNN carve-outs, roof/structure duties and insurance remain blank."
+    },
+    {
+      "id": "A05",
+      "parameter": "Discount rate: downside / reference / upside",
+      "value": "11% / 9% / 7%",
+      "status": "Hypothesis · not verified",
+      "source_id": "fed",
+      "basis": "Nominal required-return stress controls, not observed NNN cap rates or mortgage quotes. Avoid double-counting risks already deducted in cash flows."
+    },
+    {
+      "id": "A06",
+      "parameter": "Exit cap: downside / reference / upside",
+      "value": "9% / 7.5% / 6.5%",
+      "status": "Hypothesis · not verified",
+      "source_id": "repo",
+      "basis": "Terminal valuation test points only; no local comparable sales or broker evidence was supplied."
+    },
+    {
+      "id": "A07",
+      "parameter": "Rent reset vs initial rent: downside / reference / upside",
+      "value": "−20% / 0% / +10%",
+      "status": "Hypothesis · not verified",
+      "source_id": "repo",
+      "basis": "Conditional market-rent hypotheses, not inferred from regional income or sales."
+    },
+    {
+      "id": "A08",
+      "parameter": "Downtime: downside / reference / upside",
+      "value": "24 / 12 / 6 months",
+      "status": "Hypothesis · not verified",
+      "source_id": "repo",
+      "basis": "Vacancy stress controls; no property-specific absorption evidence exists."
+    },
+    {
+      "id": "A09",
+      "parameter": "Re-letting cost: downside / reference / upside",
+      "value": "24 / 12 / 6 months of initial rent",
+      "status": "Hypothesis · not verified",
+      "source_id": "repo",
+      "basis": "Combined TI/LC/concession stress allowance, not a quote. Renewal path sets this to zero only as an idealized comparison."
+    },
+    {
+      "id": "A10",
+      "parameter": "Selling cost",
+      "value": "2%",
+      "status": "Hypothesis · not verified",
+      "source_id": "repo",
+      "basis": "Illustrative transaction-cost deduction at terminal sale; current executable sale costs remain blank."
+    },
+    {
+      "id": "A11",
+      "parameter": "Vacant residual hypothesis",
+      "value": "3 × initial annual rent, before selling cost",
+      "status": "Hypothesis · not verified",
+      "source_id": "zoning",
+      "basis": "Residual-value stress control, not land appraisal. Reuse may be constrained by zoning, access, environmental conditions and improvements."
+    },
+    {
+      "id": "A12",
+      "parameter": "Early-exit stress",
+      "value": "Income stops after year 2",
+      "status": "Hypothesis · not verified",
+      "source_id": "jack-q3",
+      "basis": "Tail test only; not a default prediction or probability. Corporate filings do not establish this franchisee's credit."
+    }
+  ],
+  "limitations": [
+    "County, metropolitan and school-district geographies differ; none is a verified trade-area or parcel analysis.",
+    "Official-source status does not make commissioned impact studies, issuer filings or university forecasts government statistical observations.",
+    "Source excerpts are curated selections checked against fetched issuing pages, not a live data feed. Publication dates and revisions must be rechecked before a transaction.",
+    "No independent appraisal, broker opinion, legal review, engineering report, environmental assessment, insurance quote or tenant underwriting was performed.",
+    "Automated checks validate internal consistency, citations, privacy guards and calculations; they do not prove the underlying investment thesis.",
+    "The public repository and site contain no property address or owner/tenant personal identifiers. Public repository coordinates are project metadata, not an assertion about ownership."
+  ]
+}

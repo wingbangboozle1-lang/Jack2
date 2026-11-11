@@ -981,6 +981,14 @@ relative links still work &mdash; and cross-linked it here.</p>
 <h2>Session A's pages</h2>
 {table(["Page", "Link"], rows)}
 
+<h2>Other independent dossiers on this same deployment</h2>
+<div class="tablewrap"><table><thead><tr><th>Dossier</th><th>Link</th><th>Method</th></tr></thead><tbody>
+<tr><td>Session C (<code>arena/230fe704</code>)</td><td><a href="docs/index.html">docs/index.html</a></td><td>Monte-Carlo certainty-equivalent after-tax wealth over five strategies</td></tr>
+<tr><td>Session D (<code>session-a3a8ec08</code>)</td><td><a href="session-a3a8ec08/index.html">session-a3a8ec08/index.html</a></td><td>Fall 2026 verified dashboard; 10,000-trial Monte Carlo; browser-local §1031 / ULA / Prop 13 simulator</td></tr>
+<tr><td>Session E (<code>50002478</code>)</td><td><a href="session-50002478/index.html">session-50002478/index.html</a></td><td>Source-linked conditional dashboard; deterministic normalized cash-flow stress tests; no property-specific price target</td></tr>
+</tbody></table></div>
+<p class="lede">These are independent analytical passes preserved side by side. None silently replaces the others; reconciling them is an owner judgement, not a merge operation.</p>
+
 <h2>How the two analyses differ</h2>
 <table class="tablewrap"><table>
 <thead><tr><th></th><th>Session A (<code>arena-1944e5a3</code>)</th><th>Root site (<code>arena-742b6a03</code>)</th></tr></thead>
@@ -1111,6 +1119,12 @@ def build_workspaces():
          "computable sell/hold crossover (7.39% at 7.10% cap) rather than a verdict",
          "16 pages",
          "<a href='session-8149683c/index.html'>open &#8599;</a>"],
+        ["<code>session-50002478/</code>",
+         "Session E (branch <code>arena/50002478-jack2</code>, PR #10) &mdash; fifth dossier integrated 2026-11-11: "
+         "conditional source-linked dashboard, deterministic normalized monthly cash-flow stress tests, 16 scenario/tail paths, "
+         "15 one-way sensitivities, 34 sources; deliberately publishes no property-specific price target",
+         "23 pages",
+         "<a href='session-50002478/index.html'>open &#8599;</a>"],
         ["Historical root pages",
          "Session B &mdash; deterministic model, 23 sources, 87 metric rows and decision triggers; preserved with a historical banner. "
          "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",

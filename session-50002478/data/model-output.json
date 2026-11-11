@@ -1,0 +1,2311 @@
+{
+  "disclaimer": "Dimensionless stress tests, NOT property inputs, appraisals, market estimates, probabilities or confidence intervals. No missing factual field has been populated.",
+  "propertyInputs": {
+    "annualBaseRent": null,
+    "exactLeaseExpiry": null,
+    "marketRent": null,
+    "netSaleValue": null,
+    "debtPayoff": null,
+    "ownerTax": null,
+    "marketCapRate": null,
+    "landlordCosts": null,
+    "tenantRentCoverage": null,
+    "insuranceRecovery": null
+  },
+  "reference": {
+    "horizonYears": 10,
+    "leaseYears": 4,
+    "initialAnnualRent": 100,
+    "discountRate": 0.09,
+    "escalation": 0.015,
+    "landlordLeakage": 0.02,
+    "rentReset": 0,
+    "downtimeMonths": 12,
+    "releasingCostMonths": 12,
+    "exitCapRate": 0.075,
+    "sellingCost": 0.02,
+    "outcome": "relet",
+    "residualRentMultiple": 0
+  },
+  "rows": [
+    {
+      "id": "downside-4-relet",
+      "family": "expiry",
+      "name": "downside",
+      "leaseYears": 4,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 24,
+        "releasingCostMonths": 24,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 72.89930599474397
+        },
+        {
+          "year": 4,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 200,
+          "terminal": 0,
+          "net": -105,
+          "presentValue": -66.07114438328475
+        },
+        {
+          "year": 5,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 6,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 7,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 38.41682468192971
+        },
+        {
+          "year": 8,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 34.609751965702436
+        },
+        {
+          "year": 9,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 31.17995672585806
+        },
+        {
+          "year": 10,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 827.555555555556,
+          "net": 903.555555555556,
+          "presentValue": 319.54227309462453
+        }
+      ],
+      "pv": 601.3144326498638,
+      "presentValuePerUnitRent": 6.0131443264986375,
+      "contractPV": 177.56562618174908,
+      "postExpiryPV": 132.2965844778668,
+      "terminalPV": 291.4522219902479,
+      "releasingCostPV": 131.74619482900002,
+      "terminalShare": 0.4846918785998208,
+      "undiscountedNet": 1311.555555555556
+    },
+    {
+      "id": "downside-4-renew",
+      "family": "expiry",
+      "name": "downside",
+      "leaseYears": 4,
+      "outcome": "renew",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "renew",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 72.89930599474397
+        },
+        {
+          "year": 4,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 65.67505044571527
+        },
+        {
+          "year": 5,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 47.33336969060561
+        },
+        {
+          "year": 6,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 42.642675396941996
+        },
+        {
+          "year": 7,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 38.41682468192971
+        },
+        {
+          "year": 8,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 34.609751965702436
+        },
+        {
+          "year": 9,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 31.17995672585806
+        },
+        {
+          "year": 10,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 827.555555555556,
+          "net": 903.555555555556,
+          "presentValue": 319.54227309462453
+        }
+      ],
+      "pv": 823.0366725664114,
+      "presentValuePerUnitRent": 8.230366725664114,
+      "contractPV": 309.3118210107491,
+      "postExpiryPV": 222.27262956541443,
+      "terminalPV": 291.4522219902479,
+      "releasingCostPV": 0,
+      "terminalShare": 0.3541181477144087,
+      "undiscountedNet": 1663.555555555556
+    },
+    {
+      "id": "downside-9-relet",
+      "family": "expiry",
+      "name": "downside",
+      "leaseYears": 9,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 24,
+        "releasingCostMonths": 24,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 72.89930599474397
+        },
+        {
+          "year": 4,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 65.67505044571527
+        },
+        {
+          "year": 5,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 59.16671211325699
+        },
+        {
+          "year": 6,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 53.30334424617748
+        },
+        {
+          "year": 7,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 48.02103085241214
+        },
+        {
+          "year": 8,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 43.262189957128044
+        },
+        {
+          "year": 9,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 200,
+          "terminal": 0,
+          "net": -105,
+          "presentValue": -39.2100083806091
+        },
+        {
+          "year": 10,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        }
+      ],
+      "pv": 473.8550897991148,
+      "presentValuePerUnitRent": 4.738550897991148,
+      "contractPV": 473.8550897991148,
+      "postExpiryPV": 0,
+      "terminalPV": 0,
+      "releasingCostPV": 78.18495428793166,
+      "terminalShare": 0,
+      "undiscountedNet": 655.0000000000001
+    },
+    {
+      "id": "downside-9-renew",
+      "family": "expiry",
+      "name": "downside",
+      "leaseYears": 9,
+      "outcome": "renew",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "renew",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 72.89930599474397
+        },
+        {
+          "year": 4,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 65.67505044571527
+        },
+        {
+          "year": 5,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 59.16671211325699
+        },
+        {
+          "year": 6,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 53.30334424617748
+        },
+        {
+          "year": 7,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 48.02103085241214
+        },
+        {
+          "year": 8,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 43.262189957128044
+        },
+        {
+          "year": 9,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 38.97494590732257
+        },
+        {
+          "year": 10,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 827.555555555556,
+          "net": 903.555555555556,
+          "presentValue": 319.54227309462453
+        }
+      ],
+      "pv": 871.582317181671,
+      "presentValuePerUnitRent": 8.71582317181671,
+      "contractPV": 552.0400440870465,
+      "postExpiryPV": 28.090051104376624,
+      "terminalPV": 291.4522219902479,
+      "releasingCostPV": 0,
+      "terminalShare": 0.334394372447437,
+      "undiscountedNet": 1758.555555555556
+    },
+    {
+      "id": "reference-4-relet",
+      "family": "expiry",
+      "name": "reference",
+      "leaseYears": 4,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 98.00000000000004,
+          "presentValue": 93.55927256597019
+        },
+        {
+          "year": 2,
+          "rent": 101.49999999999999,
+          "landlordCost": 2.0300000000000002,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.46999999999997,
+          "presentValue": 87.12170793987129
+        },
+        {
+          "year": 3,
+          "rent": 103.02249999999997,
+          "landlordCost": 2.0604500000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 100.96205000000002,
+          "presentValue": 81.12709500822875
+        },
+        {
+          "year": 4,
+          "rent": 104.56783749999994,
+          "landlordCost": 2.0913567499999997,
+          "releasingCost": 100,
+          "terminal": 0,
+          "net": 2.4764807499999932,
+          "presentValue": 4.702434336922721
+        },
+        {
+          "year": 5,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 6,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 98.00000000000004,
+          "presentValue": 60.807107719865726
+        },
+        {
+          "year": 7,
+          "rent": 101.49999999999999,
+          "landlordCost": 2.0300000000000002,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.46999999999997,
+          "presentValue": 56.6231324180401
+        },
+        {
+          "year": 8,
+          "rent": 103.02249999999997,
+          "landlordCost": 2.0604500000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 100.96205000000002,
+          "presentValue": 52.72704532505568
+        },
+        {
+          "year": 9,
+          "rent": 104.56783749999994,
+          "landlordCost": 2.0913567499999997,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102.47648075,
+          "presentValue": 49.099037619203216
+        },
+        {
+          "year": 10,
+          "rent": 106.13635506249999,
+          "landlordCost": 2.1227271012499993,
+          "releasingCost": 0,
+          "terminal": 1359.1114053603333,
+          "net": 1463.1250333215833,
+          "presentValue": 619.8240088704849
+        }
+      ],
+      "pv": 1105.5908418036427,
+      "presentValuePerUnitRent": 11.055908418036427,
+      "contractPV": 266.510509850993,
+      "postExpiryPV": 264.97698655325763,
+      "terminalPV": 574.1033453993921,
+      "releasingCostPV": 70.84252110651963,
+      "terminalShare": 0.5192728844088554,
+      "undiscountedNet": 2164.9420948215834
+    },
+    {
+      "id": "reference-4-renew",
+      "family": "expiry",
+      "name": "reference",
+      "leaseYears": 4,
+      "outcome": "renew",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "renew",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 98.00000000000004,
+          "presentValue": 93.55927256597019
+        },
+        {
+          "year": 2,
+          "rent": 101.49999999999999,
+          "landlordCost": 2.0300000000000002,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.46999999999997,
+          "presentValue": 87.12170793987129
+        },
+        {
+          "year": 3,
+          "rent": 103.02249999999997,
+          "landlordCost": 2.0604500000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 100.96205000000002,
+          "presentValue": 81.12709500822875
+        },
+        {
+          "year": 4,
+          "rent": 104.56783749999994,
+          "landlordCost": 2.0913567499999997,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102.47648075,
+          "presentValue": 75.54495544344235
+        },
+        {
+          "year": 5,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 98.00000000000004,
+          "presentValue": 66.27974741465366
+        },
+        {
+          "year": 6,
+          "rent": 101.49999999999999,
+          "landlordCost": 2.0300000000000002,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.46999999999997,
+          "presentValue": 61.719214335663715
+        },
+        {
+          "year": 7,
+          "rent": 103.02249999999997,
+          "landlordCost": 2.0604500000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 100.96205000000002,
+          "presentValue": 57.4724794043107
+        },
+        {
+          "year": 8,
+          "rent": 104.56783749999994,
+          "landlordCost": 2.0913567499999997,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102.47648075,
+          "presentValue": 53.517951004931504
+        },
+        {
+          "year": 9,
+          "rent": 106.13635506249999,
+          "landlordCost": 2.1227271012499993,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.01362796124998,
+          "presentValue": 49.83552318349127
+        },
+        {
+          "year": 10,
+          "rent": 107.72840038843744,
+          "landlordCost": 2.15456800776875,
+          "releasingCost": 0,
+          "terminal": 1379.4980764407376,
+          "net": 1485.0719088214064,
+          "presentValue": 629.1213690035419
+        }
+      ],
+      "pv": 1255.2993153041054,
+      "presentValuePerUnitRent": 12.552993153041054,
+      "contractPV": 337.35303095751266,
+      "postExpiryPV": 335.23138876621016,
+      "terminalPV": 582.7148955803826,
+      "releasingCostPV": 0,
+      "terminalShare": 0.46420394600407766,
+      "undiscountedNet": 2390.9025982826565
+    },
+    {
+      "id": "reference-9-relet",
+      "family": "expiry",
+      "name": "reference",
+      "leaseYears": 9,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 98.00000000000004,
+          "presentValue": 93.55927256597019
+        },
+        {
+          "year": 2,
+          "rent": 101.49999999999999,
+          "landlordCost": 2.0300000000000002,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.46999999999997,
+          "presentValue": 87.12170793987129
+        },
+        {
+          "year": 3,
+          "rent": 103.02249999999997,
+          "landlordCost": 2.0604500000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 100.96205000000002,
+          "presentValue": 81.12709500822875
+        },
+        {
+          "year": 4,
+          "rent": 104.56783749999994,
+          "landlordCost": 2.0913567499999997,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102.47648075,
+          "presentValue": 75.54495544344235
+        },
+        {
+          "year": 5,
+          "rent": 106.13635506249999,
+          "landlordCost": 2.1227271012499993,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.01362796124998,
+          "presentValue": 70.34690805054494
+        },
+        {
+          "year": 6,
+          "rent": 107.72840038843744,
+          "landlordCost": 2.15456800776875,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 105.57383238066875,
+          "presentValue": 65.50652446908542
+        },
+        {
+          "year": 7,
+          "rent": 109.34432639426403,
+          "landlordCost": 2.1868865278852803,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 107.15743986637871,
+          "presentValue": 60.99919480378135
+        },
+        {
+          "year": 8,
+          "rent": 110.98449129017797,
+          "landlordCost": 2.219689825803559,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 108.76480146437444,
+          "presentValue": 56.80200250076889
+        },
+        {
+          "year": 9,
+          "rent": 112.64925865953059,
+          "landlordCost": 2.2529851731906123,
+          "releasingCost": 100,
+          "terminal": 0,
+          "net": 10.396273486340036,
+          "presentValue": 6.850829881654683
+        },
+        {
+          "year": 10,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        }
+      ],
+      "pv": 597.858490663348,
+      "presentValuePerUnitRent": 5.97858490663348,
+      "contractPV": 597.858490663348,
+      "postExpiryPV": 0,
+      "terminalPV": 0,
+      "releasingCostPV": 46.04277795163009,
+      "terminalShare": 0,
+      "undiscountedNet": 836.814505909012
+    },
+    {
+      "id": "reference-9-renew",
+      "family": "expiry",
+      "name": "reference",
+      "leaseYears": 9,
+      "outcome": "renew",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "renew",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 98.00000000000004,
+          "presentValue": 93.55927256597019
+        },
+        {
+          "year": 2,
+          "rent": 101.49999999999999,
+          "landlordCost": 2.0300000000000002,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.46999999999997,
+          "presentValue": 87.12170793987129
+        },
+        {
+          "year": 3,
+          "rent": 103.02249999999997,
+          "landlordCost": 2.0604500000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 100.96205000000002,
+          "presentValue": 81.12709500822875
+        },
+        {
+          "year": 4,
+          "rent": 104.56783749999994,
+          "landlordCost": 2.0913567499999997,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102.47648075,
+          "presentValue": 75.54495544344235
+        },
+        {
+          "year": 5,
+          "rent": 106.13635506249999,
+          "landlordCost": 2.1227271012499993,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.01362796124998,
+          "presentValue": 70.34690805054494
+        },
+        {
+          "year": 6,
+          "rent": 107.72840038843744,
+          "landlordCost": 2.15456800776875,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 105.57383238066875,
+          "presentValue": 65.50652446908542
+        },
+        {
+          "year": 7,
+          "rent": 109.34432639426403,
+          "landlordCost": 2.1868865278852803,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 107.15743986637871,
+          "presentValue": 60.99919480378135
+        },
+        {
+          "year": 8,
+          "rent": 110.98449129017797,
+          "landlordCost": 2.219689825803559,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 108.76480146437444,
+          "presentValue": 56.80200250076889
+        },
+        {
+          "year": 9,
+          "rent": 112.64925865953059,
+          "landlordCost": 2.2529851731906123,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 110.39627348634004,
+          "presentValue": 52.89360783328477
+        },
+        {
+          "year": 10,
+          "rent": 99.99999999999999,
+          "landlordCost": 2.0000000000000004,
+          "releasingCost": 0,
+          "terminal": 1280.533333333333,
+          "net": 1378.533333333333,
+          "presentValue": 583.9884067108694
+        }
+      ],
+      "pv": 1227.8896753258473,
+      "presentValuePerUnitRent": 12.278896753258472,
+      "contractPV": 643.901268614978,
+      "postExpiryPV": 43.077288120710016,
+      "terminalPV": 540.9111185901594,
+      "releasingCostPV": 0,
+      "terminalShare": 0.440520943745713,
+      "undiscountedNet": 2315.347839242345
+    },
+    {
+      "id": "upside-4-relet",
+      "family": "expiry",
+      "name": "upside",
+      "leaseYears": 4,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.07,
+        "escalation": 0.02,
+        "landlordLeakage": 0,
+        "rentReset": 0.1,
+        "downtimeMonths": 6,
+        "releasingCostMonths": 6,
+        "exitCapRate": 0.065,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.99999999999999,
+          "presentValue": 96.41975970024455
+        },
+        {
+          "year": 2,
+          "rent": 102,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102,
+          "presentValue": 91.91416345256955
+        },
+        {
+          "year": 3,
+          "rent": 104.04,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.04,
+          "presentValue": 87.61910908562706
+        },
+        {
+          "year": 4,
+          "rent": 106.12080000000003,
+          "landlordCost": 0,
+          "releasingCost": 50,
+          "terminal": 0,
+          "net": 56.12080000000003,
+          "presentValue": 45.37999759139907
+        },
+        {
+          "year": 5,
+          "rent": 55.000000000000014,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 55.000000000000014,
+          "presentValue": 39.77274401348177
+        },
+        {
+          "year": 6,
+          "rent": 111.1,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 111.1,
+          "presentValue": 76.36396748090472
+        },
+        {
+          "year": 7,
+          "rent": 113.32200000000005,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 113.32200000000005,
+          "presentValue": 72.79555778553534
+        },
+        {
+          "year": 8,
+          "rent": 115.58843999999999,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 115.58843999999999,
+          "presentValue": 69.39389620677201
+        },
+        {
+          "year": 9,
+          "rent": 117.90020880000003,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 117.90020880000003,
+          "presentValue": 66.15119077654902
+        },
+        {
+          "year": 10,
+          "rent": 120.25821297600001,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 1813.1238264073847,
+          "net": 1933.3820393833848,
+          "presentValue": 984.7602273442425
+        }
+      ],
+      "pv": 1630.5706134373254,
+      "presentValuePerUnitRent": 16.305706134373253,
+      "contractPV": 321.3330298298402,
+      "postExpiryPV": 387.53736990070064,
+      "terminalPV": 921.7002137067846,
+      "releasingCostPV": 38.14476060237625,
+      "terminalShare": 0.5652623726388604,
+      "undiscountedNet": 2808.453488183385
+    },
+    {
+      "id": "upside-4-renew",
+      "family": "expiry",
+      "name": "upside",
+      "leaseYears": 4,
+      "outcome": "renew",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.07,
+        "escalation": 0.02,
+        "landlordLeakage": 0,
+        "rentReset": 0.1,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.065,
+        "sellingCost": 0.02,
+        "outcome": "renew",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.99999999999999,
+          "presentValue": 96.41975970024455
+        },
+        {
+          "year": 2,
+          "rent": 102,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102,
+          "presentValue": 91.91416345256955
+        },
+        {
+          "year": 3,
+          "rent": 104.04,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.04,
+          "presentValue": 87.61910908562706
+        },
+        {
+          "year": 4,
+          "rent": 106.12080000000003,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 106.12080000000003,
+          "presentValue": 83.52475819377533
+        },
+        {
+          "year": 5,
+          "rent": 110.00000000000004,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 110.00000000000004,
+          "presentValue": 80.91399032429842
+        },
+        {
+          "year": 6,
+          "rent": 112.19999999999999,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 112.19999999999999,
+          "presentValue": 77.13296273905083
+        },
+        {
+          "year": 7,
+          "rent": 114.44400000000003,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 114.44400000000003,
+          "presentValue": 73.52861868582416
+        },
+        {
+          "year": 8,
+          "rent": 116.73288000000001,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 116.73288000000001,
+          "presentValue": 70.09270192480433
+        },
+        {
+          "year": 9,
+          "rent": 119.06753760000002,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 119.06753760000002,
+          "presentValue": 66.81734202177608
+        },
+        {
+          "year": 10,
+          "rent": 121.448888352,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 1831.075547460923,
+          "net": 1952.524435812923,
+          "presentValue": 994.5209947167746
+        }
+      ],
+      "pv": 1722.4844008447449,
+      "presentValuePerUnitRent": 17.224844008447448,
+      "contractPV": 359.47779043221647,
+      "postExpiryPV": 432.1806520155778,
+      "terminalPV": 930.8259583969507,
+      "releasingCostPV": 0,
+      "terminalShare": 0.5403973225768853,
+      "undiscountedNet": 2937.1296534129233
+    },
+    {
+      "id": "upside-9-relet",
+      "family": "expiry",
+      "name": "upside",
+      "leaseYears": 9,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.07,
+        "escalation": 0.02,
+        "landlordLeakage": 0,
+        "rentReset": 0.1,
+        "downtimeMonths": 6,
+        "releasingCostMonths": 6,
+        "exitCapRate": 0.065,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.99999999999999,
+          "presentValue": 96.41975970024455
+        },
+        {
+          "year": 2,
+          "rent": 102,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102,
+          "presentValue": 91.91416345256955
+        },
+        {
+          "year": 3,
+          "rent": 104.04,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.04,
+          "presentValue": 87.61910908562706
+        },
+        {
+          "year": 4,
+          "rent": 106.12080000000003,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 106.12080000000003,
+          "presentValue": 83.52475819377533
+        },
+        {
+          "year": 5,
+          "rent": 108.243216,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 108.243216,
+          "presentValue": 79.62173210995404
+        },
+        {
+          "year": 6,
+          "rent": 110.40808032,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 110.40808032,
+          "presentValue": 75.901090422573
+        },
+        {
+          "year": 7,
+          "rent": 112.61624192640001,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 112.61624192640001,
+          "presentValue": 72.35431049628455
+        },
+        {
+          "year": 8,
+          "rent": 114.86856676492805,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 114.86856676492805,
+          "presentValue": 68.97326794972919
+        },
+        {
+          "year": 9,
+          "rent": 117.1659381002266,
+          "landlordCost": 0,
+          "releasingCost": 50,
+          "terminal": 0,
+          "net": 67.16593810022658,
+          "presentValue": 38.55353091632884
+        },
+        {
+          "year": 10,
+          "rent": 55.000000000000014,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 829.2307692307694,
+          "net": 884.2307692307694,
+          "presentValue": 449.89629135654326
+        }
+      ],
+      "pv": 1144.778013683629,
+      "presentValuePerUnitRent": 11.447780136836291,
+      "contractPV": 694.8817223270858,
+      "postExpiryPV": 28.357416801754297,
+      "terminalPV": 421.53887455478895,
+      "releasingCostPV": 27.19668712920739,
+      "terminalShare": 0.3682276122672683,
+      "undiscountedNet": 1809.6936123423238
+    },
+    {
+      "id": "upside-9-renew",
+      "family": "expiry",
+      "name": "upside",
+      "leaseYears": 9,
+      "outcome": "renew",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.07,
+        "escalation": 0.02,
+        "landlordLeakage": 0,
+        "rentReset": 0.1,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.065,
+        "sellingCost": 0.02,
+        "outcome": "renew",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 99.99999999999999,
+          "presentValue": 96.41975970024455
+        },
+        {
+          "year": 2,
+          "rent": 102,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 102,
+          "presentValue": 91.91416345256955
+        },
+        {
+          "year": 3,
+          "rent": 104.04,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 104.04,
+          "presentValue": 87.61910908562706
+        },
+        {
+          "year": 4,
+          "rent": 106.12080000000003,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 106.12080000000003,
+          "presentValue": 83.52475819377533
+        },
+        {
+          "year": 5,
+          "rent": 108.243216,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 108.243216,
+          "presentValue": 79.62173210995404
+        },
+        {
+          "year": 6,
+          "rent": 110.40808032,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 110.40808032,
+          "presentValue": 75.901090422573
+        },
+        {
+          "year": 7,
+          "rent": 112.61624192640001,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 112.61624192640001,
+          "presentValue": 72.35431049628455
+        },
+        {
+          "year": 8,
+          "rent": 114.86856676492805,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 114.86856676492805,
+          "presentValue": 68.97326794972919
+        },
+        {
+          "year": 9,
+          "rent": 117.1659381002266,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 117.1659381002266,
+          "presentValue": 65.75021804553623
+        },
+        {
+          "year": 10,
+          "rent": 110.00000000000004,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 1658.461538461539,
+          "net": 1768.461538461539,
+          "presentValue": 900.7683059376781
+        }
+      ],
+      "pv": 1622.8467153939712,
+      "presentValuePerUnitRent": 16.22846715393971,
+      "contractPV": 722.0784094562931,
+      "postExpiryPV": 57.690556828100036,
+      "terminalPV": 843.077749109578,
+      "releasingCostPV": 0,
+      "terminalShare": 0.5195054721510822,
+      "undiscountedNet": 2743.924381573094
+    },
+    {
+      "id": "vacant-2",
+      "family": "early-exit stress",
+      "name": "No relet / residual only",
+      "leaseYears": 2,
+      "outcome": "vacant",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 2,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "vacant",
+        "residualRentMultiple": 3
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 4,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 5,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 6,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 7,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 8,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 9,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 10,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 294,
+          "net": 294,
+          "presentValue": 103.54223675969327
+        }
+      ],
+      "pv": 274.27970132998314,
+      "presentValuePerUnitRent": 2.7427970132998314,
+      "contractPV": 170.73746457028986,
+      "postExpiryPV": 0,
+      "terminalPV": 103.54223675969327,
+      "releasingCostPV": 0,
+      "terminalShare": 0.37750601396172095,
+      "undiscountedNet": 484
+    },
+    {
+      "id": "vacant-4",
+      "family": "expiry stress",
+      "name": "No relet / residual only",
+      "leaseYears": 4,
+      "outcome": "vacant",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "vacant",
+        "residualRentMultiple": 3
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 72.89930599474397
+        },
+        {
+          "year": 4,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 65.67505044571527
+        },
+        {
+          "year": 5,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 6,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 7,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 8,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 9,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 10,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 294,
+          "net": 294,
+          "presentValue": 103.54223675969327
+        }
+      ],
+      "pv": 412.85405777044235,
+      "presentValuePerUnitRent": 4.128540577704424,
+      "contractPV": 309.3118210107491,
+      "postExpiryPV": 0,
+      "terminalPV": 103.54223675969327,
+      "releasingCostPV": 0,
+      "terminalShare": 0.2507962191745381,
+      "undiscountedNet": 674
+    },
+    {
+      "id": "vacant-9",
+      "family": "expiry stress",
+      "name": "No relet / residual only",
+      "leaseYears": 9,
+      "outcome": "vacant",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 9,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 0,
+        "releasingCostMonths": 0,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "vacant",
+        "residualRentMultiple": 3
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 80.9182296541658
+        },
+        {
+          "year": 3,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 72.89930599474397
+        },
+        {
+          "year": 4,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 65.67505044571527
+        },
+        {
+          "year": 5,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 59.16671211325699
+        },
+        {
+          "year": 6,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 53.30334424617748
+        },
+        {
+          "year": 7,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 48.02103085241214
+        },
+        {
+          "year": 8,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 43.262189957128044
+        },
+        {
+          "year": 9,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 38.97494590732257
+        },
+        {
+          "year": 10,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 294,
+          "net": 294,
+          "presentValue": 103.54223675969327
+        }
+      ],
+      "pv": 655.5822808467398,
+      "presentValuePerUnitRent": 6.555822808467398,
+      "contractPV": 552.0400440870465,
+      "postExpiryPV": 0,
+      "terminalPV": 103.54223675969327,
+      "releasingCostPV": 0,
+      "terminalShare": 0.15793934611222216,
+      "undiscountedNet": 1149
+    },
+    {
+      "id": "early-exit-relet",
+      "family": "early-exit stress",
+      "name": "Downside",
+      "leaseYears": 2,
+      "outcome": "relet",
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 2,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0,
+        "landlordLeakage": 0.05,
+        "rentReset": -0.2,
+        "downtimeMonths": 24,
+        "releasingCostMonths": 24,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      },
+      "annual": [
+        {
+          "year": 1,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 95.00000000000001,
+          "presentValue": 89.81923491612405
+        },
+        {
+          "year": 2,
+          "rent": 99.99999999999999,
+          "landlordCost": 5.000000000000003,
+          "releasingCost": 200,
+          "terminal": 0,
+          "net": -105,
+          "presentValue": -81.40625699464513
+        },
+        {
+          "year": 3,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 4,
+          "rent": 0,
+          "landlordCost": 0,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 0,
+          "presentValue": 0
+        },
+        {
+          "year": 5,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 47.33336969060561
+        },
+        {
+          "year": 6,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 42.642675396941996
+        },
+        {
+          "year": 7,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 38.41682468192971
+        },
+        {
+          "year": 8,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 34.609751965702436
+        },
+        {
+          "year": 9,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 0,
+          "net": 76.00000000000001,
+          "presentValue": 31.17995672585806
+        },
+        {
+          "year": 10,
+          "rent": 80.00000000000004,
+          "landlordCost": 4.000000000000001,
+          "releasingCost": 0,
+          "terminal": 827.555555555556,
+          "net": 903.555555555556,
+          "presentValue": 319.54227309462453
+        }
+      ],
+      "pv": 522.1378294771413,
+      "presentValuePerUnitRent": 5.221378294771413,
+      "contractPV": 8.412977921478927,
+      "postExpiryPV": 222.27262956541443,
+      "terminalPV": 291.4522219902479,
+      "releasingCostPV": 162.32448664881093,
+      "terminalShare": 0.5581902048394052,
+      "undiscountedNet": 1273.555555555556
+    }
+  ],
+  "sensitivities": [
+    {
+      "parameter": "discountRate",
+      "value": 0.07,
+      "pv": 1268.382849749004,
+      "multiple": 12.68382849749004,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.07,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "discountRate",
+      "value": 0.09,
+      "pv": 1105.5908418036427,
+      "multiple": 11.055908418036427,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "discountRate",
+      "value": 0.11,
+      "pv": 970.2148682245634,
+      "multiple": 9.702148682245634,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.11,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "exitCapRate",
+      "value": 0.065,
+      "pv": 1193.914433403549,
+      "multiple": 11.939144334035491,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.065,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "exitCapRate",
+      "value": 0.075,
+      "pv": 1105.5908418036427,
+      "multiple": 11.055908418036427,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "exitCapRate",
+      "value": 0.09,
+      "pv": 1009.906950903744,
+      "multiple": 10.09906950903744,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.09,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "downtimeMonths",
+      "value": 6,
+      "pv": 1144.2671397541187,
+      "multiple": 11.442671397541186,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 6,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "downtimeMonths",
+      "value": 12,
+      "pv": 1105.5908418036427,
+      "multiple": 11.055908418036427,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "downtimeMonths",
+      "value": 24,
+      "pv": 1033.28215934142,
+      "multiple": 10.3328215934142,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 24,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "rentReset",
+      "value": -0.2,
+      "pv": 937.7747754131127,
+      "multiple": 9.377747754131127,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": -0.2,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "rentReset",
+      "value": 0,
+      "pv": 1105.5908418036427,
+      "multiple": 11.055908418036427,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "rentReset",
+      "value": 0.1,
+      "pv": 1189.4988749989075,
+      "multiple": 11.894988749989075,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0.1,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "escalation",
+      "value": 0,
+      "pv": 1058.259060915624,
+      "multiple": 10.582590609156242,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "escalation",
+      "value": 0.015,
+      "pv": 1105.5908418036427,
+      "multiple": 11.055908418036427,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.015,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    },
+    {
+      "parameter": "escalation",
+      "value": 0.02,
+      "pv": 1121.7758946573995,
+      "multiple": 11.217758946573994,
+      "assumptions": {
+        "horizonYears": 10,
+        "leaseYears": 4,
+        "initialAnnualRent": 100,
+        "discountRate": 0.09,
+        "escalation": 0.02,
+        "landlordLeakage": 0.02,
+        "rentReset": 0,
+        "downtimeMonths": 12,
+        "releasingCostMonths": 12,
+        "exitCapRate": 0.075,
+        "sellingCost": 0.02,
+        "outcome": "relet",
+        "residualRentMultiple": 0
+      }
+    }
+  ],
+  "renewalPremiums": [
+    {
+      "leaseYears": 4,
+      "value": 149.7084735004628
+    },
+    {
+      "leaseYears": 9,
+      "value": 630.0311846624993
+    }
+  ]
+}
