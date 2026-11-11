@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision — Jack2 Net-Lease Decision Dossier</title>
+<meta name="description" content="Verified-source decision dossier for a single-tenant Jack in the Box NNN asset in central Los Angeles. Every value sourced or flagged; nothing inferred.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap site-inner">
+  <div class="brand"><a href="../../index.html" style="display:flex;align-items:center;gap:10px;color:inherit"><span class="mark">J</span></a><span>Jack2 · Net-Lease Dossier<sup style="font-size:9px;letter-spacing:.1em;color:var(--ink-faint)">SESSION 8149683c</sup></span></div>
+  <nav class="main"><a href="../index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="decision.html" aria-current="page">Decision</a><a href="projection.html">Projection Model</a><a href="risks.html">Risk Register</a><a href="data-property.html">Property</a><a href="data-tenant.html">Tenant</a><a href="data-macro.html">Economy</a><a href="data-demographics.html">Demographics</a><a href="data-employment.html">Employment</a><a href="data-rates.html">Rates</a><a href="data-hazard.html">Hazard</a><a href="data-tax.html">Tax &amp; Regulation</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="methodology.html">Methodology</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">Decision analysis</div>
+  <h1>Sell now, hold to expiry, renew, or extend early &mdash; and the rule that separates them</h1>
+  <p class="lead">Four options, one valuation basis. The recommendation is expressed as a decision rule with a computable threshold, so it stays correct when your own required return or the market cap rate moves away from the base case.</p>
+  <p class="meta">Model: <code>model/project_model.py</code> · seed 20261106 · all four branches discounted at the same rate</p>
+</section>
+<div class="callout">
+  <div class="t">The decision rule</div>
+  <p><strong>Hold and extend when your required return is below the crossover. Sell when it is above.</strong></p>
+  <p>At a 7.10% cap rate and six years of term, the crossover is <strong>7.39%</strong>.
+  At 7.85% it is <strong>8.15%</strong>. At 9.35% it is
+  <strong>9.67%</strong>.</p>
+  <p class="small">The intuition is old and simple: if the market capitalises this cash flow more
+  expensively than you do, you own the asset. If you capitalise it more expensively than the market,
+  the market owns it &mdash; and you should let it.</p>
+</div>
+
+<h2>1. The four options</h2>
+<div class="dec">
+  <div class="d"><div class="tag">A &middot; LIQUIDATE</div><h4>Sell now</h4>
+    <div class="big">$3,265,780</div>
+    <div class="sub">median PV · P(best) 1.7%</div>
+    <div class="bar"><i style="width:1.7%"></i></div>
+    <p class="small">Banks the buyer's capitalisation of your contract rent plus the reversion.
+    Removes roll risk, tenant concentration and every black swan at once. Costs you the upside if the
+    tenant renews and cap rates stay put. Triggers a Prop 13 reset for the buyer's benefit, not yours.</p></div>
+
+  <div class="d"><div class="tag">B &middot; DO NOTHING</div><h4>Hold to expiry</h4>
+    <div class="big">$2,995,747</div>
+    <div class="sub">median PV · P(best) 0.0%</div>
+    <div class="bar"><i style="width:1.0%"></i></div>
+    <p class="small"><strong>The dominated branch.</strong> You carry the roll and then sell a short-WALT
+    asset into a wider cap. P(best) is effectively zero in every scenario tested. Included for
+    completeness because it is the default if no one decides.</p></div>
+
+  <div class="d win"><div class="tag">C &middot; RENEW</div><h4>Renew and hold 10 years</h4>
+    <div class="big">$3,697,184</div>
+    <div class="sub">median PV · P(best) 98.3%</div>
+    <div class="bar"><i style="width:98.3%"></i></div>
+    <p class="small">Highest median because you keep the asset through the roll instead of selling into
+    it. Conditioned on your required return being below the crossover. Adds concentration risk on a
+    tenant whose same-store sales are falling.</p></div>
+
+  <div class="d"><div class="tag">D &middot; EXTEND</div><h4>Extend early, sell long WALT</h4>
+    <div class="big">$3,338,050</div>
+    <div class="sub">median PV · P(best) 0.0%</div>
+    <div class="bar"><i style="width:1.0%"></i></div>
+    <p class="small">The practical compromise, and the one a broker will propose. Concede ~2% of rent
+    now, buy five years of term, sell at the stabilised cap. Lower median than C but with a firm exit
+    date you control.</p></div>
+</div>
+
+<h2>2. Risk by decision</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Risk</th><th>A. Sell now</th><th>B. Hold to expiry</th><th>C. Renew &amp; hold</th><th>D. Extend early</th></tr></thead><tbody>
+<tr><td><strong>Lease roll / vacancy</strong></td>
+  <td>Eliminated at t=0</td><td>Fully borne by you</td><td>Borne by you at the roll, then again at exit</td><td>Reduced; transferred to the buyer</td></tr>
+<tr><td><strong>Tenant credit deterioration</strong></td>
+  <td>Transferred to the buyer</td><td>Fully borne</td><td>Fully borne, for 10 years</td><td>Partly borne for 5 years</td></tr>
+<tr><td><strong>Cap-rate expansion</strong></td>
+  <td>Eliminated</td><td>Borne on a short-WALT asset (worse)</td><td>Borne on a stabilised asset</td><td>Borne, but on a long-WALT asset</td></tr>
+<tr><td><strong>Reinvestment risk</strong></td>
+  <td><strong>Highest</strong> &mdash; proceeds must be redeployed or taxed</td><td>Moderate</td><td>Nil until exit</td><td>Moderate, with a known date</td></tr>
+<tr><td><strong>Wildfire / earthquake / flood</strong></td>
+  <td>Transferred at closing</td><td>Fully borne</td><td>Fully borne</td><td>Fully borne until sale</td></tr>
+<tr><td><strong>Post-disaster rebuild cost</strong></td>
+  <td>Not yours</td><td>Yours</td><td>Yours</td><td>Yours until sale</td></tr>
+<tr><td><strong>Prop 13 reassessment</strong></td>
+  <td>Triggered at your sale &mdash; raises tenant's cost, weakens renewal</td><td>Triggered at sale</td><td>Deferred indefinitely</td><td>Triggered at your sale</td></tr>
+<tr><td><strong>Tax on gain</strong></td>
+  <td>Due now unless §1031</td><td>Due at the later sale</td><td>Deferred; basis steps up at death</td><td>Due at sale unless §1031</td></tr>
+<tr><td><strong>Liquidity / optionality</strong></td>
+  <td><strong>Best</strong></td><td>Poor (locked until 2030&ndash;35)</td><td>Poor</td><td>Good (known exit window)</td></tr>
+<tr><td><strong>Concentration</strong></td>
+  <td>Resolved</td><td>Persists</td><td><strong>Worst</strong></td><td>Reduced</td></tr>
+</tbody></table></div>
+
+<h2>3. When does selling actually win? The regime map</h2>
+<p>Every cell below is the same asset with the same rent and term, repriced at a different market cap
+rate and a different owner required return. "Winner" is the highest present value.</p>
+<div class="tablewrap"><table><thead><tr>
+<th>Market cap rate</th><th>Your required return</th><th>Your return &minus; cap (bps)</th>
+<th>A. Sell now</th><th>B. Hold to expiry</th><th>C. Renew &amp; hold</th><th>D. Extend</th><th>Winner</th></tr></thead>
+<tbody><tr><td class='num'>7.00%</td><td class='num'>5.80%</td><td class='num'>+120</td><td class='num'>$3,849,427</td><td class='num'>$3,477,785</td><td class='num'>$4,287,136</td><td class='num'>$3,878,306</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.00%</td><td class='num'>6.40%</td><td class='num'>+60</td><td class='num'>$3,849,427</td><td class='num'>$3,380,430</td><td class='num'>$4,103,890</td><td class='num'>$3,782,569</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.00%</td><td class='num'>6.94%</td><td class='num'>+6</td><td class='num'>$3,849,427</td><td class='num'>$3,295,835</td><td class='num'>$3,947,551</td><td class='num'>$3,699,016</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.00%</td><td class='num'>7.60%</td><td class='num'>-60</td><td class='num'>$3,849,427</td><td class='num'>$3,196,166</td><td class='num'>$3,766,826</td><td class='num'>$3,600,129</td><td><strong style='color:var(--info)'>A</strong></td></tr><tr><td class='num'>7.00%</td><td class='num'>8.50%</td><td class='num'>-150</td><td class='num'>$3,849,427</td><td class='num'>$3,066,535</td><td class='num'>$3,537,432</td><td class='num'>$3,470,763</td><td><strong style='color:var(--info)'>A</strong></td></tr><tr><td class='num'>7.85%</td><td class='num'>5.80%</td><td class='num'>+205</td><td class='num'>$3,424,461</td><td class='num'>$3,274,751</td><td class='num'>$4,038,429</td><td class='num'>$3,575,046</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.85%</td><td class='num'>6.40%</td><td class='num'>+145</td><td class='num'>$3,424,461</td><td class='num'>$3,184,169</td><td class='num'>$3,868,857</td><td class='num'>$3,487,763</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.85%</td><td class='num'>6.94%</td><td class='num'>+91</td><td class='num'>$3,424,461</td><td class='num'>$3,105,446</td><td class='num'>$3,724,119</td><td class='num'>$3,411,579</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.85%</td><td class='num'>7.60%</td><td class='num'>+25</td><td class='num'>$3,424,461</td><td class='num'>$3,012,677</td><td class='num'>$3,556,727</td><td class='num'>$3,321,400</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>7.85%</td><td class='num'>8.50%</td><td class='num'>-65</td><td class='num'>$3,424,461</td><td class='num'>$2,891,991</td><td class='num'>$3,344,125</td><td class='num'>$3,203,404</td><td><strong style='color:var(--info)'>A</strong></td></tr><tr><td class='num'>8.75%</td><td class='num'>5.80%</td><td class='num'>+295</td><td class='num'>$3,064,810</td><td class='num'>$3,096,477</td><td class='num'>$3,827,758</td><td class='num'>$3,318,166</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>8.75%</td><td class='num'>6.40%</td><td class='num'>+235</td><td class='num'>$3,064,810</td><td class='num'>$3,011,843</td><td class='num'>$3,669,769</td><td class='num'>$3,238,045</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>8.75%</td><td class='num'>6.94%</td><td class='num'>+181</td><td class='num'>$3,064,810</td><td class='num'>$2,938,275</td><td class='num'>$3,534,860</td><td class='num'>$3,168,103</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>8.75%</td><td class='num'>7.60%</td><td class='num'>+115</td><td class='num'>$3,064,810</td><td class='num'>$2,851,565</td><td class='num'>$3,378,761</td><td class='num'>$3,085,300</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>8.75%</td><td class='num'>8.50%</td><td class='num'>+25</td><td class='num'>$3,064,810</td><td class='num'>$2,738,733</td><td class='num'>$3,180,382</td><td class='num'>$2,976,935</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>10.00%</td><td class='num'>5.80%</td><td class='num'>+420</td><td class='num'>$2,673,140</td><td class='num'>$2,895,165</td><td class='num'>$3,598,069</td><td class='num'>$3,038,096</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>10.00%</td><td class='num'>6.40%</td><td class='num'>+360</td><td class='num'>$2,673,140</td><td class='num'>$2,817,247</td><td class='num'>$3,452,709</td><td class='num'>$2,965,784</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>10.00%</td><td class='num'>6.94%</td><td class='num'>+306</td><td class='num'>$2,673,140</td><td class='num'>$2,749,501</td><td class='num'>$3,328,514</td><td class='num'>$2,902,646</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>10.00%</td><td class='num'>7.60%</td><td class='num'>+240</td><td class='num'>$2,673,140</td><td class='num'>$2,669,633</td><td class='num'>$3,184,729</td><td class='num'>$2,827,885</td><td><strong style='color:var(--accent)'>C</strong></td></tr><tr><td class='num'>10.00%</td><td class='num'>8.50%</td><td class='num'>+150</td><td class='num'>$2,673,140</td><td class='num'>$2,565,670</td><td class='num'>$3,001,857</td><td class='num'>$2,730,020</td><td><strong style='color:var(--accent)'>C</strong></td></tr></tbody></table></div>
+<p class="small">Read it as a single rule: <strong>when your required return is above the cap rate
+(negative spread), selling wins. When it is below, holding wins.</strong> The crossover sits roughly
+30&ndash;40 bps above the cap rate at six years of term, because holding also forecloses the option to
+sell into today's bid.</p>
+
+<h2>4. Breakeven: how wide must the cap go for selling to beat holding to expiry?</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Remaining term</th><th>Breakeven cap spread over the 6.6% anchor</th><th>Breakeven cap rate</th><th>Reading</th></tr></thead><tbody>
+<tr><td class='num'>4 yr</td><td class='num'>4.27%</td><td class='num'><strong>10.87%</strong></td><td class='small'>Only a genuine dislocation makes an immediate sale beat simply holding the contract rent to expiry.</td></tr><tr><td class='num'>6 yr</td><td class='num'>2.88%</td><td class='num'><strong>9.48%</strong></td><td class='small'>A wider but still plausible cap rate is enough &mdash; because with a long remaining term the near-roll discount costs you little.</td></tr><tr><td class='num'>9 yr</td><td class='num'>1.91%</td><td class='num'><strong>8.51%</strong></td><td class='small'>A wider but still plausible cap rate is enough &mdash; because with a long remaining term the near-roll discount costs you little.</td></tr>
+</tbody></table></div>
+<p class="small">Interpretation: with four years left you would need the market to reprice to
+<strong>10.87%</strong> before "sell now" beats "keep the rent and sell
+at expiry". With nine years left it takes only <strong>8.51%</strong>.
+Short remaining term is, counter-intuitively, a reason to hold to expiry rather than dump the asset,
+because there is little term left to lose and you keep the rent.</p>
+
+<h2>5. The scenario surface you actually live in</h2>
+<p>Because the expiry date and the rent were not supplied, the model is run across a grid that brackets
+the owner's stated 2030&ndash;2035 range. <code>Rent / AUV</code> shows what share of the tenant's
+average franchise unit volume your rent consumes &mdash; above ~10% the operator is under real stress
+and renewal becomes less likely.</p>
+<div class="tablewrap"><table><thead><tr>
+<th>Remaining term</th><th>Base rent</th><th>Rent / AUV</th>
+<th>A. Sell now</th><th>B. Hold to expiry</th><th>C. Renew &amp; hold</th><th>D. Extend</th><th>Winner</th></tr></thead>
+<tbody><tr><td class='num'>4 yr</td><td class='num'>$150,000</td><td class='num'>8.0%</td><td class='num'>$2,000,618</td><td class='num'>$1,745,580</td><td class='num'>$2,226,533</td><td class='num'>$2,046,947</td><td><strong>C</strong></td></tr><tr><td class='num'>4 yr</td><td class='num'>$250,000</td><td class='num'>13.3%</td><td class='num'>$3,334,363</td><td class='num'>$2,909,300</td><td class='num'>$3,710,888</td><td class='num'>$3,411,579</td><td><strong>C</strong></td></tr><tr><td class='num'>4 yr</td><td class='num'>$350,000</td><td class='num'>18.7%</td><td class='num'>$4,668,108</td><td class='num'>$4,073,020</td><td class='num'>$5,195,244</td><td class='num'>$4,776,211</td><td><strong>C</strong></td></tr><tr><td class='num'>6 yr</td><td class='num'>$150,000</td><td class='num'>8.0%</td><td class='num'>$2,054,677</td><td class='num'>$1,863,267</td><td class='num'>$2,234,472</td><td class='num'>$2,046,947</td><td><strong>C</strong></td></tr><tr><td class='num'>6 yr</td><td class='num'>$250,000</td><td class='num'>13.3%</td><td class='num'>$3,424,461</td><td class='num'>$3,105,446</td><td class='num'>$3,724,119</td><td class='num'>$3,411,579</td><td><strong>C</strong></td></tr><tr><td class='num'>6 yr</td><td class='num'>$350,000</td><td class='num'>18.7%</td><td class='num'>$4,794,245</td><td class='num'>$4,347,624</td><td class='num'>$5,213,767</td><td class='num'>$4,776,211</td><td><strong>C</strong></td></tr><tr><td class='num'>9 yr</td><td class='num'>$150,000</td><td class='num'>8.0%</td><td class='num'>$2,125,258</td><td class='num'>$2,019,917</td><td class='num'>$2,245,056</td><td class='num'>$2,046,947</td><td><strong>C</strong></td></tr><tr><td class='num'>9 yr</td><td class='num'>$250,000</td><td class='num'>13.3%</td><td class='num'>$3,542,096</td><td class='num'>$3,366,529</td><td class='num'>$3,741,761</td><td class='num'>$3,411,579</td><td><strong>C</strong></td></tr><tr><td class='num'>9 yr</td><td class='num'>$350,000</td><td class='num'>18.7%</td><td class='num'>$4,958,935</td><td class='num'>$4,713,140</td><td class='num'>$5,238,465</td><td class='num'>$4,776,211</td><td><strong>C</strong></td></tr></tbody></table></div>
+<p class="small">The winner is stable across all nine cells. That robustness is the reason the
+recommendation is expressed as a rule rather than as a point forecast.</p>
+
+<h2>6. Stress: what breaks it?</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Cap scenario</th><th>Cap rate</th><th>Your discount rate</th>
+<th>A. Sell now</th><th>C. Renew &amp; hold</th><th>D. Extend</th><th>Winner</th></tr></thead>
+<tbody><tr><td>compression</td><td class='num'>7.10%</td><td class='num'>6.19%</td><td class='num'>$3,794,130</td><td class='num'>$4,135,672</td><td class='num'>$3,776,997</td><td><strong>C</strong></td></tr><tr><td>compression</td><td class='num'>7.10%</td><td class='num'>6.94%</td><td class='num'>$3,794,130</td><td class='num'>$3,918,488</td><td class='num'>$3,661,628</td><td><strong>C</strong></td></tr><tr><td>compression</td><td class='num'>7.10%</td><td class='num'>7.69%</td><td class='num'>$3,794,130</td><td class='num'>$3,715,924</td><td class='num'>$3,550,808</td><td><strong>A</strong></td></tr><tr><td>base</td><td class='num'>7.85%</td><td class='num'>6.19%</td><td class='num'>$3,424,461</td><td class='num'>$3,927,131</td><td class='num'>$3,517,992</td><td><strong>C</strong></td></tr><tr><td>base</td><td class='num'>7.85%</td><td class='num'>6.94%</td><td class='num'>$3,424,461</td><td class='num'>$3,724,119</td><td class='num'>$3,411,579</td><td><strong>C</strong></td></tr><tr><td>base</td><td class='num'>7.85%</td><td class='num'>7.69%</td><td class='num'>$3,424,461</td><td class='num'>$3,534,675</td><td class='num'>$3,309,346</td><td><strong>C</strong></td></tr><tr><td>stress</td><td class='num'>9.35%</td><td class='num'>6.19%</td><td class='num'>$2,863,671</td><td class='num'>$3,610,416</td><td class='num'>$3,124,637</td><td><strong>C</strong></td></tr><tr><td>stress</td><td class='num'>9.35%</td><td class='num'>6.94%</td><td class='num'>$2,863,671</td><td class='num'>$3,428,928</td><td class='num'>$3,031,825</td><td><strong>C</strong></td></tr><tr><td>stress</td><td class='num'>9.35%</td><td class='num'>7.69%</td><td class='num'>$2,863,671</td><td class='num'>$3,259,410</td><td class='num'>$2,942,633</td><td><strong>C</strong></td></tr></tbody></table></div>
+<p class="small">Selling only takes the win in the stress row where the cap compresses hard
+<em>and</em> your discount rate is at the top of the range &mdash; i.e. when you are a high-return
+owner facing a low-cap market. That is precisely the condition the decision rule describes.</p>
+
+<h2>7. The option you should not overlook</h2>
+<div class="callout warn">
+  <div class="t">Sell at expiry is dominated &mdash; and it is the most likely default</div>
+  <p>Branch B is the outcome if no decision is made: you collect contract rent until the lease runs out,
+  then sell whatever is left. You have carried every risk the owner faces and then sell the asset at the
+  moment it is worth least relative to its stabilised value &mdash; into a market that is pricing the
+  roll.</p>
+  <p>If your required return is above the crossover, sell <em>now</em>, not at expiry. If it is below,
+  renew. There is almost no coherent position in between.</p>
+</div>
+
+<h2>8. What would change this answer</h2>
+<ul>
+  <li><strong>You discover the tenant is a thinly capitalised single-unit franchisee with no guaranty.</strong>
+    That widens the cap spread and pushes the crossover down toward "sell".</li>
+  <li><strong>The unit's sales are weak.</strong> If rent is above ~10&ndash;12% of unit sales, the
+    tenant cannot afford a market renewal and the box is not relettable to another QSR at that rent.
+    That is the strongest argument for selling.</li>
+  <li><strong>Your loan has a punitive prepayment penalty.</strong> If retiring the debt costs more than
+    the spread you are capturing, the sale is not executable and the rule is moot.</li>
+  <li><strong>You need liquidity or have a concentration limit.</strong> Then the decision is not an
+    NPV comparison at all. Sell, and say so out loud rather than reverse-engineering a cap rate.</li>
+  <li><strong>A genuine cap-rate dislocation.</strong> The breakeven table above tells you how wide it
+    has to be.</li>
+</ul>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Jack2</strong> — internal decision dossier. Built 2026-11-06 by session
+  <code>arena-8149683c</code>. All figures traced to a named official source or explicitly marked
+  UNVERIFIED. No personal information is published on this site.</p>
+  <p class="small">This is analysis for an internal decision, not an appraisal, not investment advice,
+  and not a tax opinion. Cap rates, discount rates and event probabilities are modelling
+  assumptions and are labelled as such wherever they appear.</p>
+</div></footer>
+</body></html>

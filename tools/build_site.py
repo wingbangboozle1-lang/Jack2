@@ -969,6 +969,15 @@ relative links still work &mdash; and cross-linked it here.</p>
 <p>Full record: <a href="COORDINATION.md" download>COORDINATION.md</a> (conflict section and both session logs).</p>
 </div>
 
+<div class="callout" style="margin-top:18px;border-left-color:#e8b23a">
+  <p><strong>A third, independent dossier exists for this same asset.</strong>
+  Session <code>arena-8149683c</code> built a separate quantified model &mdash; a unified DCF over four
+  decisions, a scenario surface over the two unsupplied inputs, a deterministic Monte Carlo and a
+  black-swan overlay &mdash; and states the answer as a <em>computable threshold</em> rather than a verdict.
+  Its conclusion is compatible with this workbook's: do not sell merely because the lease expires, and
+  do not renew at any price. <a href="session-8149683c/index.html">Open the Session C dossier &rarr;</a></p>
+</div>
+
 <h2>Session A's pages</h2>
 {table(["Page", "Link"], rows)}
 
@@ -1095,6 +1104,13 @@ def build_workspaces():
          "blending the two models' numbers",
          "13 pages",
          "<a href='analysis/index.html'>open &#8599;</a>"],
+        ["<code>session-8149683c/</code>",
+         "Session C (branch <code>arena-8149683c-jack2</code>, PR #6) &mdash; independent dossier integrated 2026-11-11: "
+         "157 data rows (126 verified, 2 derived, 2 flagged, 27 blank by design), 28 tiered sources, unified DCF over four "
+         "decisions, deterministic Monte Carlo and black-swan overlay, 2,372-assertion verifier; states the answer as a "
+         "computable sell/hold crossover (7.39% at 7.10% cap) rather than a verdict",
+         "16 pages",
+         "<a href='session-8149683c/index.html'>open &#8599;</a>"],
         ["Historical root pages",
          "Session B &mdash; deterministic model, 23 sources, 87 metric rows and decision triggers; preserved with a historical banner. "
          "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",

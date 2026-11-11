@@ -1,0 +1,412 @@
+{
+ "schema_version": "1.0",
+ "generated_utc": "2026-11-06",
+ "generated_by": "arena-8149683c",
+ "tier_definitions": {
+  "A": "Primary/official government or regulator source, or the issuer's own SEC filing. Directly retrieved and quoted in this session.",
+  "B": "Official industry/standard-setter or regional government-agency analysis (e.g. LAEDC via SCAG). Retrieved and quoted.",
+  "C": "Secondary or commercial source. Used only for context; never used to set a hard value. Flagged for review.",
+  "D": "Owner-supplied document (lease, rent roll, appraisal). NOT YET RECEIVED. Everything depending on it is flagged UNVERIFIED."
+ },
+ "sources": [
+  {
+   "id": "SEC-JACK-10K-FY2025",
+   "tier": "A",
+   "publisher": "U.S. Securities and Exchange Commission / Jack in the Box Inc.",
+   "title": "Jack in the Box Inc. Form 10-K for fiscal year ended September 28, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+   "index_url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/0000807882-25-000072-index.htm",
+   "filing_date": "2025-11-19",
+   "period": "FY2025 (ended 2025-09-28)",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "tenant credit",
+    "asset class",
+    "restaurant count",
+    "AUV",
+    "royalty structure",
+    "lease renewal language",
+    "rent revenue",
+    "same-store sales",
+    "wage inflation",
+    "California footprint",
+    "securitization debt"
+   ]
+  },
+  {
+   "id": "SEC-O-10K-FY2025",
+   "tier": "A",
+   "publisher": "U.S. Securities and Exchange Commission / Realty Income Corporation",
+   "title": "Realty Income Corporation Form 10-K for fiscal year ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/o-20251231.htm",
+   "index_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/0000726728-26-000011-index.htm",
+   "filing_date": "2026-02-25",
+   "period": "FY2025 (ended 2025-12-31)",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "net lease underwriting standards",
+    "portfolio size",
+    "investment grade share",
+    "cost of debt",
+    "impairments",
+    "lease-expiration retention logic"
+   ]
+  },
+  {
+   "id": "SEC-O-8K-Q3-2026",
+   "tier": "A",
+   "publisher": "U.S. Securities and Exchange Commission / Realty Income Corporation",
+   "title": "Realty Income Corporation Form 8-K, Item 2.02, Exhibit 99.1 (Q3 2026 earnings release)",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "index_url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/0000726728-26-000056-index.htm",
+   "filing_date": "2026-11-02",
+   "period": "Q3 2026 (quarter ended 2026-09-30)",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "net lease cash cap rate anchor",
+    "rent recapture rate",
+    "initial weighted average cash yield"
+   ]
+  },
+  {
+   "id": "FED-H15",
+   "tier": "A",
+   "publisher": "Board of Governors of the Federal Reserve System",
+   "title": "H.15 Selected Interest Rates (Daily)",
+   "url": "https://www.federalreserve.gov/releases/h15/",
+   "release_date": "2026-11-05",
+   "period": "daily, through 2026-11-04",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "risk-free rate",
+    "Treasury curve",
+    "bank prime",
+    "discount rate build-up",
+    "cap-rate direction"
+   ]
+  },
+  {
+   "id": "BLS-LAU-CA-037",
+   "tier": "A",
+   "publisher": "U.S. Bureau of Labor Statistics, Local Area Unemployment Statistics",
+   "title": "Series LAUCN060370000000003 - Los Angeles County, CA unemployment rate (not seasonally adjusted)",
+   "url": "https://data.bls.gov/timeseries/LAUCN060370000000003?output_view=data",
+   "period": "monthly 2016 - 2026-09",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "county unemployment rate",
+    "labor force",
+    "business-cycle cyclicality"
+   ]
+  },
+  {
+   "id": "BLS-EAG-LA-MSA",
+   "tier": "A",
+   "publisher": "U.S. Bureau of Labor Statistics, Current Employment Statistics / CPI / LAUS",
+   "title": "Economy at a Glance: Los Angeles-Long Beach-Santa Ana, CA",
+   "url": "https://www.bls.gov/eag/eag.ca_losangeles_msa.htm",
+   "period": "monthly through 2026-09 (preliminary)",
+   "retrieved": "2026-11-05",
+   "used_for": [
+    "MSA nonfarm payroll by sector",
+    "CPI-U Los Angeles",
+    "12-month changes"
+   ]
+  },
+  {
+   "id": "CENSUS-QF-LACOUNTY",
+   "tier": "A",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts: Los Angeles County, California",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045224",
+   "period": "Population estimates V2025; ACS 2020-2024; Economic Census 2022; CBP 2023",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "population",
+    "income",
+    "poverty",
+    "education attainment",
+    "housing",
+    "business establishments",
+    "density"
+   ]
+  },
+  {
+   "id": "CENSUS-QF-LACITY",
+   "tier": "A",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts: Los Angeles city, California",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia/PST045224",
+   "period": "Population estimates V2025; ACS 2020-2024; Economic Census 2022",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "city population",
+    "city income",
+    "city poverty",
+    "city density"
+   ]
+  },
+  {
+   "id": "SCAG-LAEDC-2025",
+   "tier": "B",
+   "publisher": "Southern California Association of Governments / LAEDC Institute for Applied Economics",
+   "title": "2025 Southern California Economic Update - Los Angeles County Report",
+   "url": "https://scag.ca.gov/sites/default/files/2026-01/26-426-ES-0357-RegionalEconomicAnalysis2025CountyReportsLosAngeles-Final.pdf",
+   "period": "data through Aug-Sep 2025; forecasts 2025f-2026f",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "real GCP growth",
+    "employment growth",
+    "unemployment forecast",
+    "taxable sales",
+    "sector employment",
+    "Zillow rent index",
+    "home prices",
+    "building permits"
+   ]
+  },
+  {
+   "id": "LAEDC-2026-EF",
+   "tier": "B",
+   "publisher": "Los Angeles County Economic Development Corporation",
+   "title": "LAEDC Releases the 2026 Economic Forecast ('From Disruption to Direction')",
+   "url": "https://laedc.org/laedc-releases-the-2026-economic-forecast/",
+   "download_page": "https://laedc.org/download/2026-economic-forecast/",
+   "published": "2026-02-25",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "qualitative 2026 outlook"
+   ],
+   "limitation": "Press release states direction only (moderated employment growth, housing affordability, trade/logistics strength, workforce investment). The numeric tables in the 2026 PDF were NOT retrievable in this session. Flagged: quantitative 2026 LAEDC figures are UNVERIFIED here; 2025-vintage SCAG/LAEDC numbers are used instead."
+  },
+  {
+   "id": "LA-ASSESSOR-PROP13",
+   "tier": "A",
+   "publisher": "Los Angeles County Assessor",
+   "title": "Proposition 13",
+   "url": "https://assessor.lacounty.gov/real-estate-toolkit/proposition-13",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "1% general levy",
+    "2% annual assessment cap",
+    "change-of-ownership reassessment",
+    "Prop 8 decline-in-value"
+   ]
+  },
+  {
+   "id": "LA-ASSESSOR-DIV",
+   "tier": "A",
+   "publisher": "Los Angeles County Assessor",
+   "title": "Decline-in-Value (DIV) applications - 2026-27 filing window",
+   "url": "https://assessor.lacounty.gov/",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "2026-27 DIV window opens 2026-07-02, deadline 2026-11-30"
+   ]
+  },
+  {
+   "id": "IRS-P544",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Publication 544 (2025), Sales and Other Dispositions of Assets",
+   "url": "https://www.irs.gov/publications/p544",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "amount realized",
+    "adjusted basis",
+    "involuntary conversions",
+    "depreciation recapture framework"
+   ]
+  },
+  {
+   "id": "IRS-1031",
+   "tier": "A",
+   "publisher": "Internal Revenue Service",
+   "title": "Like-Kind Exchanges Under IRC Code Section 1031",
+   "url": "https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-code-section-1031",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "45-day identification",
+    "180-day completion",
+    "qualified intermediary requirement"
+   ],
+   "limitation": "IRS flags this page as archival/historical. Current-law confirmation with a tax adviser is required (post-OBBBA 100% bonus depreciation rules were not verified in this session)."
+  },
+  {
+   "id": "CA-DIR-MINWAGE",
+   "tier": "A",
+   "publisher": "California Department of Industrial Relations",
+   "title": "Minimum Wage Frequently Asked Questions",
+   "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "2026 state minimum wage $16.90/hr",
+    "CPI-W indexation cap 3.5%"
+   ]
+  },
+  {
+   "id": "CA-DIR-AB1228",
+   "tier": "A",
+   "publisher": "California Department of Industrial Relations",
+   "title": "Fast Food Council (AB 1228)",
+   "url": "https://www.dir.ca.gov/AB1228/AB1228.html",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "$20.00/hr fast-food minimum effective 2024-04-01",
+    "Fast Food Council authority to raise"
+   ]
+  },
+  {
+   "id": "CA-INS-FAIRPLAN",
+   "tier": "A",
+   "publisher": "California Department of Insurance",
+   "title": "Commissioner Lara approves major FAIR Plan expansion (commercial coverage limits)",
+   "url": "https://www.insurance.ca.gov/0400-news/0102-alerts/2025/upload/032825-Commissioner-Lara-approves-major-FAIR-Plan-expansion-to-help-HOAs-builders-farmers-and-businesses-access-insurance-coverage.pdf",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "$20M per building / $100M per location commercial limits",
+    "FAIR Plan as insurer of last resort",
+    "up to 20% Safer-from-Wildfires discount"
+   ]
+  },
+  {
+   "id": "CALFIRE-FHSZ",
+   "tier": "A",
+   "publisher": "CAL FIRE / State Fire Marshal (via data.ca.gov)",
+   "title": "Fire Hazard Severity Zone Viewer",
+   "url": "https://data.ca.gov/dataset/fire-hazard-severity-zone-viewer",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "FHSZ methodology",
+    "SRA zones effective 2024-04-01"
+   ],
+   "limitation": "Parcel-level FHSZ designation requires an APN/address, which is redacted. Parcel FHSZ is UNVERIFIED."
+  },
+  {
+   "id": "USGS-NSHM",
+   "tier": "A",
+   "publisher": "U.S. Geological Survey, Earthquake Hazards Program",
+   "title": "Hazards / National Seismic Hazard Model (2023 50-state update complete)",
+   "url": "https://www.usgs.gov/programs/earthquake-hazards/hazards",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "seismic hazard framework",
+    "NSHM status"
+   ],
+   "limitation": "Parcel-level design spectral acceleration requires geocoding the redacted address. Parcel PGA/Sa is UNVERIFIED."
+  },
+  {
+   "id": "FEMA-NRI",
+   "tier": "A",
+   "publisher": "Federal Emergency Management Agency",
+   "title": "National Risk Index (v1.20) / Resilience Analysis and Planning Tool",
+   "url": "https://www.fema.gov/emergency-managers/practitioners/resilience-analysis-and-planning-tool",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "18-hazard national risk framework",
+    "census-tract risk index method"
+   ],
+   "limitation": "Tract-level NRI scores require the parcel geocode. UNVERIFIED at parcel level."
+  },
+  {
+   "id": "CA-CDE-FACTS",
+   "tier": "A",
+   "publisher": "California Department of Education",
+   "title": "Fingertip Facts on Education in California, 2025-26",
+   "url": "https://www.cde.ca.gov/ds/ad/ceffingertipfacts.asp",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "statewide enrollment",
+    "school counts",
+    "ethnic distribution"
+   ]
+  },
+  {
+   "id": "CA-CDE-ENROLL",
+   "tier": "A",
+   "publisher": "California Department of Education",
+   "title": "Census Day Enrollment Data (CDEnroll2526)",
+   "url": "https://www.cde.ca.gov/ds/ad/filesenrcensus.asp",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "district-level enrollment source pointer"
+   ]
+  },
+  {
+   "id": "CA-DOF-PROJ",
+   "tier": "A",
+   "publisher": "California Department of Finance, Demographic Research Unit",
+   "title": "Population Projections (Baseline 2024), P-2 County Projections",
+   "url": "https://dof.ca.gov/forecasting/demographics/projections/",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "county population projection source pointer"
+   ],
+   "limitation": "XLSX workbooks were not parsed in this session; only the release metadata (Vintage 2026, 2026-03-13) was confirmed."
+  },
+  {
+   "id": "LA-PLANNING-CENTRAL",
+   "tier": "A",
+   "publisher": "City of Los Angeles Department of City Planning",
+   "title": "Community Plans / City of LA Profile",
+   "url": "https://planning.lacity.gov/plans-policies/community-plan-areas/central",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "zoning and community-plan process",
+    "SB 79 integration",
+    "CHIP"
+   ]
+  },
+  {
+   "id": "NAREIT-FACTSHEET",
+   "tier": "C",
+   "publisher": "Nareit",
+   "title": "REIT Industry Fact Sheet (May 2026)",
+   "url": "https://www.reit.com/sites/default/files/2026-06/MediaFactSheet_May-2026.pdf",
+   "retrieved": "2026-11-06 via search index only",
+   "used_for": [
+    "cross-check only"
+   ],
+   "limitation": "Flagged for review. Implied cap rates quoted in secondary summaries (industrial ~5.2%, office ~7.7%) could not be read from the primary PDF in this session. NOT used as an input to the model."
+  },
+  {
+   "id": "COSTAR-NETLEASE-Q1-2026",
+   "tier": "C",
+   "publisher": "CoStar (as summarised by Matthews)",
+   "title": "Q1 2026 Shopping Center REIT Earnings Report",
+   "url": "https://www.matthews.com/insights/q1-2026-shopping-center-reit-earnings-report",
+   "retrieved": "2026-11-06 via search index only",
+   "used_for": [
+    "context: median net lease cap rate 6.3%, QSR tightest ~5.8%"
+   ],
+   "limitation": "Secondary summary of a paywalled dataset. Flagged for review. NOT used as a model input; the Realty Income SEC cash-yield figure is used instead."
+  },
+  {
+   "id": "OWNER-DOCS",
+   "tier": "D",
+   "publisher": "Property owner (this engagement)",
+   "title": "Lease, rent roll, operating expense history, appraisal, title, Phase I ESA, insurance binder",
+   "url": null,
+   "retrieved": null,
+   "used_for": [
+    "NOTHING - not received"
+   ],
+   "limitation": "Every value that depends on these documents is blank and flagged UNVERIFIED. No placeholder has been inferred or substituted."
+  },
+  {
+   "id": "LAEDC-2026-EF-DL",
+   "tier": "B",
+   "publisher": "Los Angeles County Economic Development Corporation",
+   "title": "2026 Economic Forecast (PDF download page)",
+   "url": "https://laedc.org/download/2026-economic-forecast/",
+   "period": "Forecast published 2026-02-25, updated 2026-03-02",
+   "retrieved": "2026-11-06",
+   "used_for": [
+    "Confirmation that a 2026 forecast exists and its publication dates",
+    "Qualitative description of the 2025 shocks (wildfires, immigration enforcement, tariffs)"
+   ],
+   "limitation": "9.37 MB PDF. Numeric tables could not be extracted in this session, so NO 2026 forecast figure is used anywhere in this dossier. Every quantitative regional forecast in the model comes from the 2025-vintage SCAG/LAEDC county report instead.",
+   "feeds_model": false
+  }
+ ]
+}

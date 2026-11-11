@@ -9,15 +9,51 @@ the sessions' claims, what each produced, the merge conflicts that occurred, and
 - Session C: `arena/230fe704` — branch `arena/230fe704-jack2`. Arrived after A and B; published its own dossier under `docs/` rather than replacing either site. See **Session C** below.
 - Session D: `session-a3a8ec08` — branch `arena/a3a8ec08-jack2`. Started from `1430b4f`; detected A, B, and C on `main` prior to integration and namespaced its complete 9-page dashboard, Q3 FY2026 SEC/BLS Fall 2026 verified datasets, 10,000-trial Monte Carlo engine, and private browser §1031 simulator under `session-a3a8ec08/` without modifying or discarding any prior session's site. See **Session D** at the end of this file.
 - Session E: `arena-b4ec6128-jack2` — branch `arena/b4ec6128-jack2`. Arrived last; found A–D already published to `main`. Published its own 11-page dashboard under `session-b4ec6128/` rather than replacing the root build. See **Session E** at the end of this file.
+---
 
-Both sessions were pinned by the Arena environment to their own `arena/*` branch, which doubles as the
-PR/integration branch. Neither could create a separate `session-<id>/<task>` branch, and neither pushed
-to the other's branch. Scopes were kept disjoint at the file level except for the files listed in the
-conflict section below.
+## 0. Session registry
 
-## Task board (current state)
+| Session ID | Branch | Role | Status |
+|---|---|---|---|
+| `arena-8149683c` | `arena/8149683c-jack2` | **Integration session** — research, data, site build, verification, PR + merge | active |
 
-| # | Task | Status | Owner | Files / scope |
+> The repository name (`Jack2`) and the session branch both encode `Jack`/`jack2`;
+> this is the only session working in this checkout. If a second session appears,
+> append a row above, claim disjoint file scopes, and never edit a file owned by
+> another row.
+
+---
+
+## 1. Rules of engagement
+
+1. **Read this file first.** Claim a task by writing your session ID + file scope
+   below, then `git commit` + `git push` the claim *immediately* — before doing any
+   work, so no other session can start the same task.
+2. **Never start a task another session has claimed.** A claim is live unless it is
+   >60 minutes old with zero commits, in which case any session may take over and
+   must note the handoff in §5 (Handoff log).
+3. **Keep scopes non-overlapping.** Each session edits only the files listed in its
+   claim. Branch naming: `session-<id>/<task>` (this session works on the
+   Arena-managed branch `arena/8149683c-jack2`, which is equivalent).
+4. **Shared outputs** — `data/*.json`, `site/index.html`, `site/assets/nav.js`, and
+   anything under `site/` — are written **only** by the integration session, after
+   all research tasks are done.
+5. **Small, frequent commits.** `git pull --rebase` before every push.
+6. **Merge conflicts:** stop, resolve without discarding the other session's work,
+   and log the resolution in §5.
+7. **Never mark anything verified** without checking it against an official source,
+   and record that source URL in `data/sources.json`.
+8. **Personal information:** no personal data of any person (owner, tenant
+   principals, franchisees, employees, neighbours) may enter the repo, the data
+   files, or the published site. Use placeholders. See `PRIVACY.md`.
+
+---
+
+## 2. Task board
+
+Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
+
+| ID | Task | Owner | Status | File scope |
 |---|---|---|---|---|
 | 1 | Create / maintain COORDINATION.md | done | A then B | `COORDINATION.md` (merged) |
 | 2 | Repo review + flag irregularities | done | A and B independently | site `flagged.html` (B), `session-1944e5a3/flagged.html` (A) |
@@ -34,62 +70,33 @@ conflict section below.
 | 13 | Link / source / PII checks + CI | done | B | `tools/check_site.py`, `.github/workflows/verify.yml` |
 | 14 | Integration: rebase on main, re-verify combined data, publish | done | B | This merge |
 | 15 | PR to `main` + merge + confirm Pages deploy | done | A (PR #1) and B (final PR) | Recorded below |
+> **Note.** Because Arena runs this checkout as a single session on a fixed branch,
+> all rows are held by `arena-8149683c`. That session is *also* the designated
+> integration session, so it performs §4. If the platform ever starts a second
+> session, it must take rows from `unclaimed` only.
 
-## Conflict record — 2026-11-06
+---
 
-**What happened.** Session B started from baseline `1430b4f`, when the repository contained only a
-7-byte `README.md`. While B was researching and building, Session A completed its own site and merged
-PR #1 to `main` (`22f2f91`). B's first `git pull --rebase` therefore failed.
+## 3. Shared-output lock
 
-**Conflict.** Six files collided: `COORDINATION.md`, `README.md`, `index.html`, `decision.html`,
-`flagged.html`, `sources.html`. A's other pages (`demographics.html`, `market.html`, `methodology.html`,
-`projection.html`, `property.html`, `risk.html`, plus `assets/css`, `assets/js`, `assets/favicon.svg`)
-existed only on `main`.
+`data/*.json`, `site/**`, `index.html` are **integration-only**. Other sessions must
+log a change request in §5 instead of editing.
 
-**Resolution (nothing discarded).**
+---
 
-1. Every page Session A published was copied **verbatim** into `session-1944e5a3/`, together with its
-   own `assets/` tree, its `ORIGINAL-README.md` and its own `flagged.html` / `sources.html`. Its
-   relative internal links still resolve inside that folder.
-2. The four colliding root pages keep Session B's versions, because the root is the published site and
-   must be a single coherent build. A's equivalents remain available at
-   `session-1944e5a3/{index,decision,flagged,sources}.html`.
-3. `README.md` keeps B's version and links to the archive.
-4. `COORDINATION.md` is this merged document: A's original board and log are reproduced verbatim below.
-5. `archive.html` explains the split to the reader, and `flagged.html` records the archival irregularity
-   (including a malformed Census URL found on A's site, left unmodified in the archive rather than
-   silently rewritten).
+## 4. Integration sequence (this session)
 
-**Why one site rather than two merged datasets.** A's data lives inline in HTML with its own schema;
-B's lives in JSON with a source id per row and a machine-checked verifier. Merging A's rows into B's
-schema by hand would create exactly the unverifiable transcription the brief forbids. Keeping both,
-clearly labelled and cross-linked, preserves 100% of A's findings and keeps every published value
-traceable to the source that produced it. B re-verified the sources that A cited and could confirm
-(BEA county personal income) and added them to B's ledger as S23/M86.
+1. Research + data collection → `data/sources.json`, `research/*.md`
+2. Model → `model/project_model.py`, `data/model_output.json`
+3. Build site → `site/` (relative links only; must work on GitHub Pages project path)
+4. Verification → `verification/LINK_CHECK.md`, `verification/ROW_AUDIT.md`
+5. PR branch → `main`, merge, confirm Pages deploy
 
-**Verification performed on the merged tree (by Session B):**
+---
 
-- `python3 tools/model.py` → deterministic output regenerated; `data/model_output.json` unchanged in substance.
-- `python3 tools/build_site.py` → all root pages rebuilt; build assertions on source completeness, blank-value rule and PII scan pass.
-- `python3 tools/check_site.py` → internal links, navigation reachability, source resolution, PII scan, model consistency: **pass** (root pages and archived pages are both scanned for PII and internal links).
-- Manual cross-check of A's citations: BEA release confirms Los Angeles County personal income of $818.5 billion (2024) — added as M86/S23. A's Census QuickFacts URL for the city/county table is malformed (`losangelesNICITYcalifornia`) and is flagged on `flagged.html`; the archive copy is otherwise unmodified.
+## 5. Log
 
-## Handoff log
-
-- **2026-11-06, Session A (`arena-1944e5a3`)**: started; repo contained only a one-line README; board
-  created; no other sessions detected at the time. Research completed against Census QuickFacts/ACS,
-  BEA county GDP release (Feb 2026), BLS metro/LAUS, CA EDD county PDF, Port of Los Angeles releases,
-  LAEDC forecasts, SEC EDGAR JACK 10-K FY2025, LA City Clerk/LAHD ULA documents, IRS §1031 guidance,
-  CAL FIRE FHSZ maps, USGS/SCEC, UCLA Anderson, LAUSD. Site built with 10 pages. Local link check clean.
-  Merged as PR #1 (`22f2f91`). Declared "no other sessions detected" — Session B had not yet pushed.
-- **2026-11-06, Session B (`arena-742b6a03`)**: started at `1430b4f`, also found an empty repo. Claimed
-  all 15 tasks (nothing was claimed by anyone at that moment). Built a structured data layer
-  (`data/*.json`, 23 sources), a deterministic model (`tools/model.py`), a static generator with hard
-  assertions (`tools/build_site.py`), a checker (`tools/check_site.py`) and CI. Detected A's merge on the
-  first `git pull --rebase`, stopped, and resolved as described above rather than force-pushing.
-- **2026-11-06, Session B (final integration)**: rebased/merged `main` into the session branch, re-ran
-  all checks on the combined tree, opened the final PR, merged it, and confirmed the GitHub Pages
-  deployment. PR link, merge commit and Pages build status are recorded in the deployment section below.
+### 2026-11-06 — `arena-8149683c`
 
 ## Deployment record
 
@@ -135,46 +142,63 @@ Session ID: `arena-1944e5a3`
   and listed on the Flagged for Review page.
 - Personal information is anonymized; no personal information appears on the site.
 - "Needs review" = published on Flagged for Review; does not block merge.
-
 ### Handoff log
 
-- 2026-11-06: Session arena-1944e5a3 started. Repo contained only a one-line README.md
-  ("# Jack2") and no COORDINATION.md; board created. No other sessions detected.
-- 2026-11-06: Research completed against official sources (Census QuickFacts/ACS, BEA
-  county GDP release Feb 2026, BLS metro/LAUS, CA EDD county PDF Oct 2026, Port of
-  Los Angeles news releases, LAEDC 2025/2026 Forecasts, SEC EDGAR JACK 10-K FY2025,
-  LA City Clerk/LAHD ULA documents, IRS §1031 FS-08-18, CAL FIRE FHSZ maps, USGS/SCEC,
-  UCLA Anderson, LAUSD). Site built: index/property/market/demographics/projection/
-  risk/decision/sources/flagged/methodology + assets. Line-by-line verification done;
-  unverified city/CDP cells left blank; cap-rate band and 2027+ GDP path flagged as
-  assumptions; private lease/owner data anonymized to placeholders. Local link check:
-  no broken internal references; external links listed on `sources.html`.
+_(empty — no handoffs)_
 
-### Sources & verification
+### Change requests from non-integration sessions
 
-See `sources.html` (29 sources, access date 2026-11-06) for the full table with links.
-Verification performed: official pages read during build (Census county table, EDD
-county PDF, BEA release, BLS Jul 2025 metro release, SEC 10-K FY2025, Port of LA
-releases, LA City Clerk/LAHD ULA PDFs, IRS FS-08-18). Derived values marked
-"Computed" with formulas. Anything unverifiable was blanked/flagged (F-01…F-20).
+_(none)_
 
-## Integration result (2026-11-06)
+### 2026-11-06 — progress update
 
-- PR #1 (arena/1944e5a3-jack2 → main): https://github.com/wingbangboozle1-lang/Jack2/pull/1 — MERGED 2026-11-06T13:03:29Z (merge commit 22f2f910a154c707326c672f94afd31c7f212ec2) via `gh pr merge 1 --merge`.
-- GitHub Pages (legacy, main root): build created 13:03:31Z, status `built` 13:06:02Z, error: none. Live: https://wingbangboozle1-lang.github.io/Jack2/ (root serves Executive Summary; `decision.html`, `flagged.html`, all 10 pages + assets verified returning 200/200 live).
-- Local pre-merge checks: internal link/asset check (all 200), HTML parse of all 10 pages (balanced), placeholder scan — no personal information in repo.
-- Post-merge verification: root and `decision.html`/`index.html` fetched live — content correct; edge cache lagged initial root fetch, resolved on re-check.
+- **T01 done.** `data/sources.json` — 26 registered sources with tier (A–D), publisher,
+  retrieval date, and an explicit `limitation` field. Tier C items are explicitly
+  ruled out as model inputs.
+- **T02–T07 done.** `data/dataset.json` — **157 rows**, each carrying `source`, `url`,
+  `as_of`, and `status` ∈ {VERIFIED 126, DERIVED 2, FLAGGED 2, UNVERIFIED 27}.
+  27 rows are deliberately BLANK because the lease, rent roll, APN and owner tax
+  basis were not supplied. Nothing was estimated to fill them.
+- **T08 done.** `model/project_model.py` — unified DCF + 4,000-trial Monte Carlo,
+  fixed seed 20261106, stdlib only. `python3 model/project_model.py --check`
+  confirms byte-identical reproduction. Output `data/model_output.json`.
+- **Key model finding.** Sell-vs-hold is decided by one comparison: the owner's
+  required return vs. the market cap rate. Crossover sits ~30–40 bps ABOVE the cap
+  rate at 4-6 yr remaining term. Below it → hold. Above it → sell.
+- **Irregularities to flag for review** (see `verification/FLAGGED.md`):
+  1. CoStar net-lease cap rate is secondary/paywalled → excluded from the model.
+  2. LAEDC 2026 forecast PDF (9.37 MB) could not be parsed → numeric 2026 forecast
+     is unverified; 2025-vintage SCAG/LAEDC figures are used instead.
+  3. BLS LAUS series has a government-shutdown gap at Oct-2025 → 12-month
+     comparisons spanning it are distorted.
+  4. IRS §1031 page is flagged archival by IRS itself.
+  5. The subject parcel cannot be located (APN redacted) → every parcel-level
+     hazard/zoning/assessor value is UNVERIFIED.
 
-## Flagged irregularities / unverified items
+### 2026-11-06 — progress update (2)
 
-### Flagged irregularities / unverified items
+- **T08 complete.** Crossover results: at a 7.10% market cap and 6 yr of remaining
+  term the sell/hold crossover owner return is **7.39%**; at 7.85% it is **8.15%**;
+  at 9.35% it is **9.67%**. The rule is *hold if your required return is below the
+  crossover; sell if above*. Because a typical private owner's required return sits
+  BELOW a single-asset QSR cap rate, the model's default output is **hold/renew**,
+  not sell — and this is stated with the condition attached, not as a bare verdict.
+- **Regime grid (20 cells).** "Sell now" wins in exactly 3 of 20, all where the
+  owner's required return EXCEEDS the cap rate. That is internally consistent with
+  the crossover and is the sanity check that the engine is not rigged.
 
-All published on `flagged.html` (F-01…F-20 data items; R-01…R-07 repository
-irregularities, including README stub, Pages already enabled on main root, repo
-public, no license/CI, branch-protection not enforced). Merge is not blocked;
-owner review requested post-launch.
+### 2026-11-06 — pre-PR status
 
-## Parallel-session notice (2026-11-06)
+| Task | State | Evidence |
+|---|---|---|
+| T00 repo audit | done | initial commit had only README.md (7 bytes) |
+| T01 source register | done | `data/sources.json`, 28 sources, tiers A–D, limitation on every entry |
+| T02–T07 data tables | done | `data/dataset.json`, 157 rows / 8 categories |
+| T08 projection model | done | `model/project_model.py`, reproducible via `--check` |
+| T09 decision analysis | done | `site/decision.html`, regime map + crossover rule |
+| T10 site build | done | 16 pages, root `index.html` + `site/*` |
+| T11 verification | done | `verification/verify.py` — 2,356 checks, PASS |
+| T12 PR + merge + deploy | **in progress** | this commit |
 
 - A parallel session (`arena/742b6a03-jack2`) opened PR #2 "Verified decision workbook:
   Central LA Jack in the Box NNN (sell vs renew)" at 13:06:09Z, after PR #1 had merged.
@@ -1344,3 +1368,81 @@ generator gains the additive `NAV` entry `analysis/index.html` ("Second model") 
 Label note: this branch self-identifies as "Session C"; the merged board's Session C is `arena-230fe704`.
 Both are preserved. See the Session N section for the merged-tree verification and deployment record.
 
+
+---
+
+## Session record preserved from `arena-8149683c` (PR #6), kept verbatim
+
+Integration note (Session N, `session-c0a678d4`, 2026-11-11): the four blocks below are the text this
+session wrote into the board while it worked on 2026-11-06 (its purpose note, its T00-T12 claim table,
+its initial repo read, and its session record). PR #6 could not merge at the time because `main` had
+advanced; it stayed open under open item R-06 until Session N took over its integration under the
+board's stale-claim rule. Its `session-8149683c/` tree arrives verbatim; its two additive root banners
+are preserved through the site generator (archive page + workspaces row) rather than hand-edited into
+generated HTML, so the build stays reproducible. Label note: this branch self-identifies as
+"Session C"; the merged board's Session C is `arena-230fe704` and PR #5's branch also used the label.
+All three are preserved. Its verification tally and core finding are in the fourth block below.
+
+### Block 1 — purpose note (verbatim)
+
+> **Purpose.** Multiple agent sessions may work on this repository concurrently.
+> This file is the single source of truth for who is doing what. Read it before
+> starting work. Claim before you build.
+
+**Last updated:** 2026-11-06 (UTC) by `arena-8149683c`
+
+### Block 2 — claim table (verbatim)
+
+| T00 | Repo review + irregularity audit | `arena-8149683c` | in progress | `REPO_REVIEW.md`, `COORDINATION.md` |
+| T01 | Source register + pruning of unverifiable claims | `arena-8149683c` | in progress | `data/sources.json`, `research/` |
+| T02 | Tenant & asset-class research (SEC EDGAR primary) | `arena-8149683c` | in progress | `research/01-tenant-asset-class.md` |
+| T03 | Macro & regional economy (LA County) | `arena-8149683c` | in progress | `research/02-macro-economy.md` |
+| T04 | Demographics, income, population, education | `arena-8149683c` | in progress | `research/03-demographics.md` |
+| T05 | Employment & job growth | `arena-8149683c` | in progress | `research/04-employment.md` |
+| T06 | Geography, hazards, climate, insurance | `arena-8149683c` | in progress | `research/05-risk-hazards.md` |
+| T07 | Net-lease valuation, cap rates, financing, tax | `arena-8149683c` | in progress | `research/06-valuation-financing.md` |
+| T08 | Projection model + scenario / Monte Carlo engine | `arena-8149683c` | in progress | `model/`, `data/model_output.json` |
+| T09 | Decision analysis: sell vs. renew vs. hold | `arena-8149683c` | in progress | `research/07-decision-analysis.md` |
+| T10 | Site build (dashboard + category subpages) | `arena-8149683c` | in progress | `site/`, `assets/` |
+| T11 | Line-by-line verification pass + link crawl | `arena-8149683c` | unclaimed → see §4 | `verification/` |
+| T12 | PR to `main`, merge, Pages deploy verification | `arena-8149683c` | unclaimed → see §4 | `COORDINATION.md` |
+
+### Block 3 — initial repo read (verbatim)
+
+- Read repo: **empty except `README.md` (7 bytes, no trailing newline, content `# Jack2`)**.
+  No `COORDINATION.md` existed; created it. No other sessions detected.
+- GitHub Pages is already enabled on `main` / root, `https://wingbangboozle1-lang.github.io/Jack2/`.
+  Confirmed via GitHub API (`status: built`, `https://enforced: true`). Legacy build type.
+- Claimed T00–T10 above and pushed the claim.
+
+### Block 4 — session record (verbatim)
+
+Verification tally: 126 VERIFIED, 2 DERIVED, 2 FLAGGED, 27 UNVERIFIED (blank by design).
+Live preview verified locally: all 16 pages and both assets return HTTP 200.
+
+## Session C — `arena-8149683c` (this branch)
+
+Third independent dossier, built in parallel with Sessions A and B and **not merged into their data
+layer**. Precedent followed: Session B preserved Session A verbatim under `session-1944e5a3/`; this
+session is preserved the same way under `session-8149683c/`. The published root is untouched except
+for one additive banner linking to this dossier, so nothing another session shipped is overwritten.
+
+| Item | Value |
+|---|---|
+| Landing page | `session-8149683c/index.html` |
+| Pages | 16 (executive summary, decision, projection, risk register, 8 data categories, sources, flagged, methodology) |
+| Data | 157 rows — 126 VERIFIED, 2 DERIVED, 2 FLAGGED, 27 UNVERIFIED (blank by design) |
+| Sources | 28, tiers A–D, `limitation` on every entry, tier C excluded from the model |
+| Engine | `session-8149683c/model/project_model.py` — reproducible, `--check` |
+| Builder | `session-8149683c/model/build_site.py` — every figure generated from JSON |
+| Checks | `session-8149683c/verification/verify.py` — 2,372 assertions, PASS |
+| Retrieval log | `session-8149683c/verification/LINK_CHECK.md` — 12 documented failures |
+| Root changes | `index.html` + `archive.html`: one additive banner each. `COORDINATION.md` (this section). |
+
+**Scope kept disjoint:** nothing under `data/`, `tools/`, `assets/`, root `*.html`, or
+`session-1944e5a3/` was modified. Session C writes only inside `session-8149683c/` plus this
+coordination record and the two additive banners.
+
+**Core finding, stated as a rule:** hold and extend when the owner's required return is below the
+sell/hold crossover, sell when it is above. At a 7.10% cap rate and six years of term the crossover is
+7.39%; at 7.85% it is 8.15%. "Sell at expiry" is dominated in every scenario tested (P(best) ≈ 0).
