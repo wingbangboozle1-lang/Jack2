@@ -1244,3 +1244,75 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+
+---
+
+## Session M-b deployment record — PR #37 — 2026-11-10
+
+| Item | Value |
+|---|---|
+| PR | **#37** — https://github.com/wingbangboozle1-lang/Jack2/pull/37 |
+| Merged | 2026-11-10T00:48:10Z, merge commit `b912e65` |
+| CI on the branch | run `42730967164` → **success** |
+| CI on `main` after merge | run `42731074675` → **success** |
+| Pages build & deploy | run `42731072989` → **success** (commit `b912e65`) |
+| Pages API status | `built`, `build_type: legacy`, source `main` / `/`, HTTPS enforced |
+| Live dashboard | https://wingbangboozle1-lang.github.io/Jack2/session-313ba936/ |
+| Live flagged page | https://wingbangboozle1-lang.github.io/Jack2/session-313ba936/flagged.html |
+| Root landing | https://wingbangboozle1-lang.github.io/Jack2/ |
+| Live verification | Fetched `/session-313ba936/index.html` and `/session-313ba936/flagged.html` from the deployed host: both render the new build, with working source links to dof.ca.gov, sec.gov, bls.gov, USGS and finance.lacity.gov. |
+
+### Verification performed on the merged tree before merge
+
+Every CI step was run in order locally, plus all seven session verifiers:
+
+- `tools/model.py`, `session-f4f700c0/{build_research,analyze,build_site,audit,check}.py`,
+  `tools/build_site.py`, `tools/check_site.py`, `tools/export_ledger.py` → **PASS**
+- `session-f4f700c0` unit tests → **PASS**
+- `session-4ed347de`, `session-343c7030`, `session-a3a8ec08`, `session-6ad87c21`, `session-24d6cd5f`
+  verifiers → **PASS**
+- `session-313ba936` (model, build, verify) → **PASS**, 20 checks, including byte-identical model
+  reproduction, the closed-form breakeven cross-check to 0.000pp, and a 0-hit privacy scan
+- Combined root checker: 16 root pages, 169 HTML files including archives, 24 sources, 89 metric rows,
+  24 risk rows, **all checks passed**
+- No stale generated output: `git status --porcelain` empty after the full rebuild
+
+### Merge conflicts and how they were resolved
+
+`main` advanced while this session was working: **another Arena session (`session-d9c94ed0`) had also used the
+label "Session M"** and merged first as PR #35/#36. Six files conflicted. Nothing was discarded.
+
+| File | Resolution |
+|---|---|
+| `COORDINATION.md` | **Both** session records kept verbatim. A label note at the top now records that two sessions used "Session M" on 2026-11-10; `session-d9c94ed0` is **M-a** and `session-313ba936` is **M-b**. |
+| `tools/build_site.py` | **Both** workspace rows kept, disambiguated M-a / M-b. Neither build's description was dropped. |
+| `workspaces.html` | Regenerated from the merged tree by `tools/build_site.py`. |
+| `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` | Regenerated from the merged tree rather than hand-merged, so the audit counts cover **both** new sessions (350 files, 70,035 lines). Hand-merging generated counters would have produced a number that matched neither tree. |
+
+### Stop condition reached, then corrected
+
+The site was already live when a post-deploy re-read showed that the third item of irregularity `F02` — the
+scenario-specific sale cap — had not actually been applied to the JSON by the earlier patch, even though the row's
+**title** had been updated to say "three". The published page therefore said "three errors" and then listed two.
+That is exactly the kind of quiet inconsistency this workbook is supposed to catch, so it was fixed, rebuilt,
+re-verified and re-published rather than left for a reader to find. Recorded here because a deployment record that
+only lists successes is not a record.
+
+### Irregularities published and not blocking
+
+All 11 items are live on the Flagged for Review page with severity, detail and owner action: `F01` competing
+workbooks (high), `F02` this session's own three corrected methodology errors (medium), `F03` cap rate is an
+assumption (high), `F04` 14 owner fields blank (high), `F05` parcel hazard and insurance unobtained (high),
+`F06` forecast horizon (medium), `F07` six stale PRs from earlier sessions deliberately left open (medium),
+`F08` Census city business fields unavailable (low), `F09` two prior-session citation URLs now 404 (medium),
+`F10` scorecard weights are judgement (low), `F11` business-interruption risk qualitative only (low).
+
+Per the brief, none of these blocked the merge, and none was hidden.
+
+### Scope discipline
+
+Files written by this session: `session-313ba936/**` (new, 21 files) and, additively, this section of
+`COORDINATION.md`, one row in `build_workspaces()` and the `build_current_index()` body in `tools/build_site.py`,
+one step in `.github/workflows/verify.yml`, one section of `README.md`, and the regenerated root
+`index.html` / `workspaces.html`. No page, dataset, script or model owned by Sessions A–M-a was edited,
+regenerated or deleted. The six stale pull requests (#5, #6, #10, #14, #18, #30) were **not** closed or merged.
