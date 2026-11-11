@@ -334,3 +334,164 @@ URL (file): https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-g
 - Same rows, other columns: 2025-26 — K 74,304; grade 12 105,086; Grads 98,840; K-8 831,718; 9-12 411,098.
   2035-36 — K 68,259; grade 12 80,999; Grads 76,184; K-8 692,574; 9-12 309,471. 2024-25 Grads 101,728.
 - Arithmetic check: 1,242,816 - 1,002,045 = 240,771 (page rounds to 240,800).
+
+## S-EDD — California EDD, Labor Market Information Division, Los Angeles County monthly release (September 2026 data)
+URL: https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf
+Header read: "LOS ANGELES-LONG BEACH-GLENDALE METROPOLITAN DIVISION (LOS ANGELES COUNTY) — Nonfarm payrolls down 4,100 over the month; up 20,300 over the year"
+(The release header carries a staff contact name, phone and email. Not transcribed. Not for publication.)
+- "The seasonally adjusted unemployment rate in Los Angeles County decreased over the month to 4.8 percent in September 2026 from a revised
+  rate of 5.0 in August 2026 and was below the rate of 5.6 percent a year ago. Civilian employment increased by 1,000 to 4,751,000 ...
+  unemployment decreased 13,000 over the month to 239,000. The civilian labor force decreased by 12,000 over the month to 4,990,000 ...
+  The unadjusted unemployment rate for the county was 4.5 percent in September 2026."
+- "The California seasonally adjusted unemployment rate was 5.1 percent in September 2026 ... 5.5 percent a year ago ... The comparable
+  estimates for the nation were 4.2 percent in September 2026, 4.1 percent in August 2026, and 4.4 percent a year ago."
+- "Between August 2026 and September 2026, total nonfarm employment in Los Angeles County decreased by 4,100 to 4,539,800."
+  Leisure and hospitality (down 6,800) "largest month-over job decline. Most of the reduction was in accommodation and food services
+  (down 5,000), specifically food services and drinking places (down 4,500)." Information (down 3,800), motion pictures and sound recording (down 3,500).
+- "Between September 2025 and September 2026, total nonfarm employment in Los Angeles County increased by 20,300 or 0.4 percent."
+  "employment in educational and health services (up 37,500). Health care and social assistance led the growth and accounted for 83
+  percent of the development with an addition of 37,500 jobs. Private educational services added an additional 6,300 jobs"
+  "Leisure and hospitality added 8,900 jobs over the year. Accommodation and food services (up 8,600) ... restaurants and other eating
+  places (up 7,300)." "information (down 10,200). This industry has reported over the year job declines in 20 of the last 22 months ...
+  motion picture and sound recording industries posting the largest loss (down 7,300)". Government (down 7,800), manufacturing (down
+  4,100), financial activities (down 4,000), professional and business services (down 3,500).
+- NOTE FOR REVIEW (irregularity inside the official text): the release gives "up 37,500" for the educational and health services sector AND
+  "an addition of 37,500 jobs" for health care and social assistance alone, plus 6,300 for private educational services, and says health
+  care is "83 percent" of the sector gain. The three statements cannot all hold. Only the sub-sector figures are used.
+- Table "Data Not Seasonally Adjusted" — Sep 25 | Jul 26 | Aug 26 Revised | Sep 26 Prelim | % change month | % change year:
+  Civilian Labor Force 5,125,300 | 4,931,600 | 4,988,200 | 5,031,000 | 0.9% | -1.8%
+  Civilian Employment 4,825,300 | 4,674,500 | 4,741,500 | 4,806,500 | 1.4% | -0.4%
+  Civilian Unemployment 300,100 | 257,100 | 246,700 | 224,500 | -9.0% | -25.2%
+  Civilian Unemployment Rate 5.9% | 5.2% | 4.9% | 4.5%
+  Total Nonfarm 4,573,500 | 4,565,400 | 4,597,900 | 4,593,800 | -0.1% | 0.4%
+  Total Private 3,979,100 | ... | 4,007,200 | 0.0% | 0.7%
+  Construction 147,000 | 148,400 | 148,400 | 147,800 | -0.4% | 0.5%
+  Manufacturing 301,500 | 297,800 | 299,300 | 297,400 | -0.6% | -1.4%
+  Retail Trade 388,600 | 391,800 | 391,800 | 390,400 | -0.4% | 0.5%
+- NOTE FOR REVIEW: the unadjusted unemployment rate fell 5.9% -> 4.5% while the labor force fell 94,300 (-1.8%) and resident employment fell
+  18,800 (-0.4%). The lower rate reflects fewer people in the labor force, not more residents employed.
+
+## S-USGS — U.S. Geological Survey Fact Sheet 2015-3009, "UCERF3: A New Earthquake Forecast for California's Complex Fault System"
+URL: https://pubs.usgs.gov/fs/2015/3009/pdf/fs2015-3009.pdf
+- Table 1: "Average time between earthquakes in the various regions together with the likelihood of having one or more such earthquakes in
+  the next 30 years (starting from 2014)... These values include aftershocks. It is important to note that actual repeat times will exhibit
+  a high degree of variability"
+- "Los Angeles region" — magnitude >= | average repeat time (years) | 30-year likelihood | readiness:
+  5 | 1.4 | 100% | 1.0;  6 | 10 | 96% | 1.0;  6.7 | 40 | 60% | 1.1;  7 | 61 | 46% | 1.2;  7.5 | 109 | 31% | 1.3;  8 | 532 | 7% | 1.3
+- "Southern California region": 6.7 | 12 | 93%;  7 | 25 | 75%;  7.5 | 87 | 36%;  8 | 522 | 7%
+- "6.7 matches the magnitude of the 1994 Northridge earthquake"; UCERF3 "is not a single model, but rather a collection of 5,760 different
+  viable models. The results presented ... represent an average of these forecasts."
+- Scope caution in the source: "The public-safety implications ... depend on several factors, including site location and type of structure".
+  These are probabilities that an earthquake occurs somewhere in the region, not that a given building is damaged.
+
+## S-CALFIRE-EATON — CAL FIRE incident record, Eaton Fire
+URL: https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire
+- "100% Contained"; "14,021 Acres"; "1 County: Los Angeles"; Date Started 01/07/2025 6:18 PM; Date Contained 01/31/2025 10:48 AM
+  (Active for 24 days); Cause: Electrical; Last Updated 08/06/2026; Agency Having Jurisdiction: Los Angeles County Fire Department;
+  Location: Altadena/Pasadena.
+- Damage Assessment: "1,076 Structures Damaged"; "9,419 Structures Destroyed" (Residential, Commercial and Other); "19 Confirmed Civilian
+  Fatalities"; "9 Confirmed Firefighter Injuries". "Damage inspection teams have completed inspections for 100% of all structures within
+  the fire footprint."
+
+## S-CALFIRE-PALISADES — CAL FIRE incident record, Palisades Fire
+URL: https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire
+- "100% Contained"; "23,448 Acres"; "1 County: Los Angeles"; "Not a CAL FIRE Incident."; Date Started 01/07/2025 10:30 AM; Date Contained
+  01/31/2025 10:48 AM (Active for 24 days); Cause: Arson; Last Updated 04/09/2026; Agency Having Jurisdiction: Los Angeles City Fire
+  Department; Location: Pacific Palisades.
+- Damage Assessment: "975 Structures Damaged"; "6,845 Structures Destroyed" (Residential, Commercial and Other); "12 Confirmed Civilian
+  Fatalities"; "3 Confirmed Civilian Injuries"; "1 Confirmed Firefighter Injuries".
+
+## S-DIR-FF — California Department of Industrial Relations, Fast Food Minimum Wage Frequently Asked Questions
+URL: https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm
+- "AB 1228 ... added sections 1474, 1475, and 1476 to the Labor Code ... increases the minimum wage for 'fast food restaurant employees.'
+  Second, it establishes a Fast Food Council, which is empowered both to make future increases to the minimum wage and to adopt other
+  minimum employment standards for fast food restaurants."
+- "Starting April 1, 2024, all 'fast food restaurant employees' who are covered by the new law must be paid at least $20.00 per hour."
+- Coverage: "limited-service restaurant" in California; "part of a restaurant chain of at least 60 establishments nationwide".
+- "AB 1228 applies to employers of 'fast food restaurant employees' regardless of whether the employer is the business entity that owns the
+  national brand, or a franchisee or licensee of that national brand."
+- "a city or county cannot pass an ordinance setting a higher minimum wage only for fast food restaurant employees ... However, a city or
+  county can set a higher general minimum wage for all employees"
+- No rate above $20.00 is stated on the page as read.
+
+## S-FTB — California Franchise Tax Board, 2025 California Tax Rate Schedules (Form 540)
+URL: https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf
+- Schedule X (Single or Married/RDP Filing Separately): over $72,724 to $371,479: 9.30%; over $371,479 to $445,771: 10.30%;
+  over $445,771 to $742,953: 11.30%; over $742,953: $72,219.84 + 12.30% of the amount over $742,953.
+- Schedule Y (Married/RDP Filing Jointly): over $145,448 to $742,958: 9.30%; over $742,958 to $891,542: 10.30%; over $891,542 to
+  $1,485,906: 11.30%; over $1,485,906: $144,439.65 + 12.30%.
+- Schedule Z (Head of Household): 9.30% from $98,990; 10.30% from $505,208; 11.30% from $606,251; 12.30% over $1,010,417.
+- The schedule as read does not show any additional 1% tax on income over $1 million; that tax is NOT verified by this source.
+- Cross-reference: the Proposition 3 summary refers to "existing voter-approved tax rates for individuals earning over $371,000"; the 10.30%
+  bracket in Schedule X starts at $371,479.
+
+## S-IRS-409 — Internal Revenue Service, Topic no. 409, Capital gains and losses
+URL: https://www.irs.gov/taxtopics/tc409
+- "For taxable years beginning in 2025, the tax rate on most net capital gain is no higher than 15% for most individuals."
+- 0% if taxable income <= $48,350 (single / MFS), $96,700 (MFJ), $64,750 (HoH).
+- 15% if taxable income is more than $48,350 but <= $533,400 (single); more than $96,700 but <= $600,050 (MFJ); <= $566,700 (HoH).
+- "a capital gains rate of 20% applies to the extent that your taxable income exceeds the thresholds set for the 15% capital gain rate."
+- "The portion of any unrecaptured section 1250 gain from selling section 1250 real property is taxed at a maximum 25% rate."
+- Basis of inherited property: refers to Publication 551, Basis of Assets.
+
+## S-IRS-559 — Internal Revenue Service, Topic no. 559, Net investment income tax
+URL: https://www.irs.gov/taxtopics/tc559
+- "A 3.8 percent net investment income tax (NIIT) applies to individuals, estates, and trusts that have net investment income above
+  applicable threshold amounts." Thresholds: $250,000 MFJ; $125,000 MFS; $200,000 single or head of household.
+- Net investment income includes "rents (unless derived in a trade or business in which the NIIT doesn't apply)" and "net gains from the
+  disposition of property such as ... real estate ... other than property held in a trade or business to which NIIT doesn't apply".
+
+## S-IRS-1031 — Internal Revenue Service, Like-kind exchanges - Real estate tax tips
+URL: https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips
+- "Generally, if you make a like-kind exchange, you are not required to recognize a gain or loss under Internal Revenue Code Section 1031.
+  If, as part of the exchange, you also receive other (not like-kind) property or money, you must recognize a gain to the extent of the
+  other property and money received. You can't recognize a loss."
+- "Under the Tax Cuts and Jobs Act, Section 1031 now applies only to exchanges of real property"
+- "Real properties generally are of like-kind, regardless of whether they're improved or unimproved ... However, real property in the United
+  States is not like-kind to real property outside the United States."
+- "Form 8824, Like-Kind Exchanges, is used to report a like-kind exchange."
+- This page does not state the identification / completion deadlines.
+- DEAD LINK: https://www.irs.gov/newsroom/like-kind-exchanges-under-irc-section-1031 returned "Page Not Found. Error 404." on 2026-11-11.
+
+## S-RTC-11911 — California Revenue and Taxation Code section 11911 (Documentary Transfer Tax Act)
+URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=11911
+- (a) a county may impose on each deed "when the consideration or value of the interest or property conveyed (exclusive of the value of any
+  lien or encumbrance remaining thereon at the time of sale) exceeds one hundred dollars ($100) a tax at the rate of fifty-five cents
+  ($0.55) for each five hundred dollars ($500) or fractional part thereof."
+- (b) a city within such a county may impose "a tax at the rate of one-half the amount specified in subdivision (a)".
+- (c) "A credit shall be allowed against the tax imposed by a county ordinance ... for the amount of any tax due to any city by reason of an
+  ordinance adopted pursuant to subdivision (b). No credit shall be allowed against any county tax for a city tax which is not in
+  conformity with this part."
+
+## S-IRS-8824 — Internal Revenue Service, Instructions for Form 8824 (2025), Like-Kind Exchanges
+URL: https://www.irs.gov/instructions/i8824
+- "Deferred Exchanges. ... The replacement property for the exchange must be identified within 45 days after the property being given up is
+  transferred. The replacement property must be received within 180 days, or by the due date of your tax return (including extensions),
+  whichever is earlier."
+- "If you make a deferred exchange using a qualified intermediary (QI), the transfer of the property given up and receipt of like-kind
+  property is treated as a like-kind exchange. If you fail to meet the timing requirements because of the QI, your transaction won't
+  qualify as a deferred exchange and any gain may be taxable in the year you transferred the property."
+- "Related parties and agents of the taxpayer aren't eligible to be QIs"
+- "Section 1031 doesn't apply to exchanges of real property held primarily for sale."
+- "real property in the United States and real property outside the United States aren't like-kind properties."
+
+## S-RTC-17043 — California Revenue and Taxation Code section 17043
+URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=17043
+- "(a) For each taxable year beginning on or after January 1, 2005, in addition to any other taxes imposed by this part, an additional tax
+  shall be imposed at the rate of 1 percent on that portion of a taxpayer's taxable income in excess of one million dollars ($1,000,000)."
+  (Added November 2, 2004, by initiative Proposition 63.)
+
+## S-PROP13 — California Constitution, Article XIII A, Section 2 (Proposition 13)
+URL: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%202.&article=XIII%20A
+- (a) "The 'full cash value' means the county assessor's valuation of real property as shown on the 1975-76 tax bill ... or, thereafter, the
+  appraised value of real property when purchased, newly constructed, or a change in ownership has occurred after the 1975 assessment."
+- (a) "'newly constructed' does not include real property that is reconstructed after a disaster, as declared by the Governor, where the
+  fair market value of the real property, as reconstructed, is comparable to its fair market value prior to the disaster." and does not
+  include "the construction or reconstruction of seismic retrofitting components".
+- (b) "The full cash value base may reflect from year to year the inflationary rate not to exceed 2 percent for any given year or reduction
+  as shown in the consumer price index or comparable data for the area under taxing jurisdiction, or may be reduced to reflect substantial
+  damage, destruction, or other factors causing a decline in value."
+- (e)(1) base year value of property "substantially damaged or destroyed by a disaster, as declared by the Governor, may be transferred to
+  comparable property within the same county"; (f)(1) "substantially damaged or destroyed if it sustains physical damage amounting to more
+  than 50 percent of its value immediately before the disaster."
+- Section 1 (the 1% rate limit) was not opened by this session.
