@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "title": "Questions, Information, and Answers — Decision Prerequisites",
+    "purpose": "Clear list of what must be addressed before any binding decision. Grouped by category. Each item states the question, what information is needed, and the current answer status.",
+    "status_values": ["answerable from official sources", "blocked on owner input", "blocked on parcel-level lookup", "partially answered"]
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "category": "Lease Structure",
+      "question": "When exactly does the lease expire?",
+      "information_needed": "The brief states 2030-2035, which is a 5-year window. The difference between 2030 and 2035 expiration is material to valuation.",
+      "current_answer": "UNKNOWN. The owner has not supplied the executed lease or the exact expiration date.",
+      "status": "blocked on owner input",
+      "priority": "CRITICAL",
+      "document_required": "P01 - Executed lease and all amendments",
+      "impact_if_wrong": "A 5-year difference in expiration changes the present value by roughly 15-25% depending on the cap rate."
+    },
+    {
+      "id": "Q02",
+      "category": "Lease Structure",
+      "question": "What is the current contract rent and rent mechanism?",
+      "information_needed": "Base rent, any CPI escalators, percentage rent, and the option rent formula (fixed vs FMV vs CPI).",
+      "current_answer": "UNKNOWN. No rent figure has been supplied.",
+      "status": "blocked on owner input",
+      "priority": "CRITICAL",
+      "document_required": "P03 - Current rent roll",
+      "impact_if_wrong": "All valuation math keys off NOI. Without it, every dollar figure in this workbook is a benchmark, not a fact."
+    },
+    {
+      "id": "Q03",
+      "category": "Lease Structure",
+      "question": "What are the renewal option terms?",
+      "information_needed": "How many options exist, their duration, notice deadlines, option rent mechanism, and consequences of missing a notice window.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "CRITICAL",
+      "document_required": "P01 - Lease amendments",
+      "impact_if_wrong": "A missed notice window can forfeit the right to renew entirely."
+    },
+    {
+      "id": "Q04",
+      "category": "Financial",
+      "question": "What is the owner's adjusted basis and total depreciation taken?",
+      "information_needed": "Purchase price, capital improvements, accumulated depreciation, and depreciation recapture exposure.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "HIGH",
+      "document_required": "P05 - Tax records, depreciation schedule",
+      "impact_if_wrong": "Cannot size the capital gains tax or evaluate 1031 exchange benefits."
+    },
+    {
+      "id": "Q05",
+      "category": "Financial",
+      "question": "What is the existing debt structure?",
+      "information_needed": "Loan balance, interest rate, maturity date, prepayment penalty, DSCR covenants.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "HIGH",
+      "document_required": "P06 - Loan documents",
+      "impact_if_wrong": "A sale may trigger defeasance; a renewal may require refinancing at today's 4.86% 10-year Treasury."
+    },
+    {
+      "id": "Q06",
+      "category": "Parcel",
+      "question": "What is the exact parcel address and APN?",
+      "information_needed": "Street address and Assessor's Parcel Number for hazard lookups, zoning, and insurance.",
+      "current_answer": "WITHHELD for privacy. Required for parcel-level analysis.",
+      "status": "blocked on owner input",
+      "priority": "HIGH",
+      "document_required": "P07 - APN and legal description",
+      "impact_if_wrong": "Cannot verify FEMA flood zone, CAL FIRE FHSZ, seismic hazard, or zoning."
+    },
+    {
+      "id": "Q07",
+      "category": "Hazard",
+      "question": "Is the parcel in a fire hazard severity zone?",
+      "information_needed": "CAL FIRE FHSZ map classification for the specific parcel.",
+      "current_answer": "UNVERIFIED. County-level maps exist but parcel-level lookup requires APN.",
+      "status": "blocked on parcel-level lookup",
+      "priority": "HIGH",
+      "document_required": "CAL FIRE viewer lookup using P07",
+      "impact_if_wrong": "Very-high FHSZ designation affects insurance availability, cost, and the hold-vs-sell decision."
+    },
+    {
+      "id": "Q08",
+      "category": "Hazard",
+      "question": "Is the parcel in a FEMA flood zone?",
+      "information_needed": "Effective FIRM panel for the APN.",
+      "current_answer": "UNVERIFIED. FEMA map lookup requires APN.",
+      "status": "blocked on parcel-level lookup",
+      "priority": "MEDIUM",
+      "document_required": "FEMA MSC lookup using P07",
+      "impact_if_wrong": "Flood zone affects insurance requirements and cost."
+    },
+    {
+      "id": "Q09",
+      "category": "Hazard",
+      "question": "What is the seismic/liquefaction risk at the parcel?",
+      "information_needed": "CGS EQ Zapp determination and geotechnical screening.",
+      "current_answer": "UNVERIFIED. Requires parcel-level lookup.",
+      "status": "blocked on parcel-level lookup",
+      "priority": "MEDIUM",
+      "document_required": "Geotechnical report (P08)",
+      "impact_if_wrong": "Liquefaction zone affects structural risk and insurance."
+    },
+    {
+      "id": "Q10",
+      "category": "Insurance",
+      "question": "What is the current insurance premium and coverage?",
+      "information_needed": "Property, liability, and rent-loss coverage declarations page with deductibles.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "HIGH",
+      "document_required": "P09 - Insurance declarations",
+      "impact_if_wrong": "Post-2025 fire repricing in California is a live constraint. If insurance exceeds 1.5% of value, it becomes a sell trigger."
+    },
+    {
+      "id": "Q11",
+      "category": "Tenant",
+      "question": "What is the franchisee entity's financial condition?",
+      "information_needed": "3 years of franchisee financial statements and any guaranty.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "HIGH",
+      "document_required": "P10 - Franchisee financials",
+      "impact_if_wrong": "Tenant credit is the single largest driver of cap-rate spread on a single-tenant asset."
+    },
+    {
+      "id": "Q12",
+      "category": "Property",
+      "question": "What is the building and site condition?",
+      "information_needed": "Property condition assessment (PCA) with capital reserve schedule.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "MEDIUM",
+      "document_required": "P08 - Property condition report",
+      "impact_if_wrong": "Affects capital reserve sizing and insurability."
+    },
+    {
+      "id": "Q13",
+      "category": "Market",
+      "question": "What is the local economy's trajectory?",
+      "information_needed": "Population, employment, income, job growth trends for Central LA.",
+      "current_answer": "ANSWERED from official sources. LA County population is declining (-3.2% since 2020, projected -3.7% by 2040). Employment growing slowly (+0.5% YoY). Information sector contracting (-5.7%). Education/health growing (+3.8%). CPI at 3.6%.",
+      "status": "answerable from official sources",
+      "priority": "RESOLVED",
+      "document_required": "See market-economics page",
+      "sources": ["S1", "S2", "S3", "S23"]
+    },
+    {
+      "id": "Q14",
+      "category": "Market",
+      "question": "What are the school system metrics for the area?",
+      "information_needed": "LAUSD enrollment, performance, and trends.",
+      "current_answer": "PARTIALLY ANSWERED. LAUSD is the 2nd largest public school district in the US. Exact current enrollment requires direct CDE lookup.",
+      "status": "partially answered",
+      "priority": "MEDIUM",
+      "document_required": "S14, S15",
+      "sources": ["S14", "S15"]
+    },
+    {
+      "id": "Q15",
+      "category": "Decision",
+      "question": "Should the property be sold or the lease renewed?",
+      "information_needed": "All of the above, plus a broker opinion of value and the owner's risk tolerance.",
+      "current_answer": "CONDITIONAL. The recommendation is a sequenced plan: (1) assemble documents, (2) verify hazards, (3) negotiate extension with market reset, (4) obtain appraisal, (5) sell into 1031 only if cap rate ≤6.00% or replacement yield clears 6.97%. Hold if cap rate >7.00%.",
+      "status": "partially answered",
+      "priority": "RESOLVED (conditional)",
+      "document_required": "See decision page",
+      "sources": ["S9", "S10", "S11", "S16"]
+    },
+    {
+      "id": "Q16",
+      "category": "Tenant",
+      "question": "What is the Jack in the Box brand trajectory?",
+      "information_needed": "System size, same-store sales, franchisee health, corporate strategy.",
+      "current_answer": "ANSWERED from SEC filings. 2,136 restaurants, 93% franchised, AUV declining (-3.8% YoY), net closures of 55 units in FY2025, Del Taco sold for $115M, dividend eliminated, ~$1.7B securitized debt. Brand is contracting but has structural incentives to renew.",
+      "status": "answerable from official sources",
+      "priority": "RESOLVED",
+      "document_required": "See tenant analysis",
+      "sources": ["S9"]
+    },
+    {
+      "id": "Q17",
+      "category": "Tax",
+      "question": "What are the tax consequences of selling?",
+      "information_needed": "Capital gains rate, depreciation recapture, NIIT, California tax, transfer taxes.",
+      "current_answer": "PARTIALLY ANSWERED. Transfer taxes are known: county $1.10/$1,000, city 0.45%, Measure ULA 4%/5.5% above $5.4M/$10.9M. Capital gains rate requires owner's basis (P05). Section 1031 exchange can defer gain.",
+      "status": "partially answered",
+      "priority": "HIGH",
+      "document_required": "P05, S16",
+      "sources": ["S6", "S7", "S8", "S16"]
+    },
+    {
+      "id": "Q18",
+      "category": "Zoning",
+      "question": "What is the zoning and general plan designation?",
+      "information_needed": "Whether the site can be re-tenanted or redeveloped if the tenant does not renew.",
+      "current_answer": "UNKNOWN.",
+      "status": "blocked on owner input",
+      "priority": "MEDIUM",
+      "document_required": "P12 - Zoning and general plan",
+      "impact_if_wrong": "Determines whether the building has value as a generic drive-thru if JACK vacates."
+    },
+    {
+      "id": "Q19",
+      "category": "Decision",
+      "question": "What are the risks for every possible decision?",
+      "information_needed": "Comprehensive risk register mapped to each decision path.",
+      "current_answer": "ANSWERED. 24 risks identified across tenant, market, regulatory, hazard, financial, and black swan categories. Each mapped to likelihood, impact, velocity, and mitigation.",
+      "status": "answerable from official sources",
+      "priority": "RESOLVED",
+      "document_required": "See risk register",
+      "sources": ["S1", "S6", "S9", "S11", "S13", "S16", "S18"]
+    },
+    {
+      "id": "Q20",
+      "category": "Decision",
+      "question": "What is the best decision for wealth preservation and growth?",
+      "information_needed": "The owner's risk tolerance, time horizon, and the answers to all of the above.",
+      "current_answer": "CONDITIONAL. The highest-value action is not to sell or hold passively, but to change the asset: secure a market-rent reset and a longer term. This improves both the sell price and the hold economics. Ranked: D2 (extend-then-sell) > D4 (hybrid) > D1 (sell now 1031) > D3 (passive hold).",
+      "status": "partially answered",
+      "priority": "RESOLVED (conditional)",
+      "document_required": "See decision page",
+      "sources": ["S9", "S10", "S11", "S16"]
+    }
+  ]
+}
