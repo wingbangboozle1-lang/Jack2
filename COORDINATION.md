@@ -1244,3 +1244,43 @@ that routes to every category and to every archived workbook, so nothing is orph
 
 **Out-of-scope requests logged rather than made:** `README.md` is claimed in M-06 for one additive line only
 (making the new dashboard discoverable); no other session's page copy is rewritten.
+
+---
+
+# Session N — `session-62641e7b` (branch `arena/62641e7b-jack2`) — 2026-11-11
+
+**Position at start.** `main` at `ab596f9` (merge of PR #39). Fifteen prior workbooks are published (A–M-a/M-b),
+all marked done / needs review. Root `tools/model.py`, `tools/build_site.py` and `tools/check_site.py` pass on
+that tree: 16 root pages, 24 sources, 89 metric rows (82 verified / 7 blank), 24 risks. Eight pull requests
+(#5, #6, #10, #14, #18, #30, #38, #40) remain open from earlier sessions; **this session will not close or
+merge them** and will not touch their branches.
+
+**Platform constraint (same as A–M).** The Arena environment pins this session to `arena/62641e7b-jack2` and
+forbids creating, switching to or pushing any other branch, so the literal `session-<id>/<task>` branch scheme
+in the brief is not executable. Scope isolation is done at the **directory** level, as in every prior session.
+
+## Task board — Session N claims
+
+| # | Task | Status | Owner | Files / scope (non-overlapping) |
+|---|---|---|---|---|
+| N-01 | Claim, board record, detect live sessions | in progress | session-62641e7b | `COORDINATION.md` (append only) |
+| N-02 | Fresh independent re-verification of decision-critical values, access date **2026-11-11**, read from the official publisher (not copied from prior sessions) | unclaimed→claimed | session-62641e7b | `session-62641e7b/data/sources.json`, `session-62641e7b/data/facts.json` |
+| N-03 | **Open Questions & Information Gaps register** — every question that must be answered before a decision can reasonably be made, split into (a) answerable from data we hold, (b) owner-private inputs, (c) procurable third-party documents, (d) unprocurable/unresolvable; each with the acquisition method, decision impact and who can supply it | unclaimed→claimed | session-62641e7b | `session-62641e7b/data/questions.json` |
+| N-04 | Repo review + irregularity register (line-by-line verification of the combined tree) | unclaimed→claimed | session-62641e7b | `session-62641e7b/data/flagged.json` |
+| N-05 | Executive summary + clean dashboard: landing, category subpages, master table with a source link per row, Flagged for Review | unclaimed→claimed | session-62641e7b | `session-62641e7b/*.html`, `session-62641e7b/assets/**`, `session-62641e7b/scripts/**` |
+| N-06 | Verification: every row source-linked, unverified values blank, zero PII, zero broken links | unclaimed→claimed | session-62641e7b | `session-62641e7b/scripts/verify.py` |
+| N-07 | Final integration: one additive row in `build_workspaces()`, additive CI step, README section, PR → `main`, merge, confirm Pages deploy | unclaimed→claimed | session-62641e7b | `tools/build_site.py` (one additive row only), `.github/workflows/verify.yml` (one additive step), `README.md`, `COORDINATION.md` |
+
+**Scope discipline.** This session writes only `session-62641e7b/**` plus the four shared files named in N-07.
+No page, dataset, script or model owned by Sessions A–M is edited, regenerated or deleted. Prior workbooks
+remain the historical record; this session adds a 16th, additive workbook and does not replace the root.
+
+**Requests to other session scopes:** none.
+
+### Handoff / claim log
+
+- **2026-11-11, Session N (`session-62641e7b`)**: read `COORDINATION.md` (1,246 lines), `README.md`, the file
+  tree, `tools/build_site.py` and the data ledgers; re-ran `tools/model.py`, `tools/build_site.py`,
+  `tools/check_site.py` on `ab596f9` — all pass, no working-tree changes. `git ls-remote` lists this session's
+  branch only among live Arena branches; `gh pr list` shows eight stale PRs from earlier sessions, recorded and
+  not touched. Claimed N-01…N-07; committing and pushing this claim before starting research.
