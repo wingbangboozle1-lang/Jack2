@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology &amp; verification · PARCEL-01</title>
+<meta name="description" content="How every row was verified, what was retrieved, what failed, and the model&#x27;s assumptions.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b2b3a'/%3E%3Ctext x='16' y='22' font-size='15' font-family='system-ui' font-weight='700' fill='%23fff' text-anchor='middle'%3EP1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><span class="mark">P1</span><span class="bt"><strong>PARCEL-01</strong><small>NNN hold / sell analysis</small></span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main"><a href='index.html'>Dashboard</a><a href='property.html'>Property</a><a href='market.html'>Demographics</a><a href='economy.html'>Economy</a><a href='valuation.html'>Valuation &amp; tax</a><a href='projection.html'>Projection</a><a href='risk.html'>Risk</a><a href='decision.html'>Decision</a><a href='sources.html'>Sources</a><a href='flagged.html'>Flagged for review</a><a href='methodology.html' class="on" aria-current="page">Methodology</a><a href='privacy.html'>Privacy</a><a href='../index.html' title='Back to the root workbook'>Main site &#8599;</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<div class='prose'><h1>Methodology &amp; verification</h1>
+<h2>The standard this project holds itself to</h2>
+<p>Every quantitative claim on this site is one of five things, and the type is printed next to it:</p>
+<div class='tw'><table class='md'><thead><tr><th scope='col'>Status</th><th scope='col'>Meaning</th></tr></thead><tbody><tr><td><strong>Verified</strong></td><td>The number was read directly from an official publisher&#x27;s page or filing, and the link is given.</td></tr><tr><td><strong>Derived</strong></td><td>Arithmetic performed on verified numbers. The formula is in the row note.</td></tr><tr><td><strong>Reported</strong></td><td>The number comes from an official body but was read through secondary coverage, because the primary page could not be retrieved. Shown with a warning and listed on the Flagged page.</td></tr><tr><td><strong>Input</strong></td><td>A fact stated by the owner that has no public record. Never counted as verified.</td></tr><tr><td><strong>Unverified</strong></td><td>Could not be confirmed. The value is left blank. Not estimated, not interpolated, not filled from a third-party site.</td></tr></tbody></table></div>
+<p>Two structural controls enforce this:</p>
+<ol><li><strong>The build fails</strong> if any row carries a value but no source, or is marked unverified while carrying a value. <code>build.py</code> refuses to publish an inconsistent dataset.</li><li><strong>The flagged page is generated</strong>, not hand-written. It is the mechanical output of every row whose status is not <code>verified</code> or <code>derived</code>. Nothing can quietly disappear from it.</li></ol>
+<h2>What counts as an official source</h2>
+<p>Only U.S. federal agencies, State of California agencies and courts of record, County of Los Angeles departments, City of Los Angeles departments, and SEC/EDGAR filings. A real-estate portal, a trade publication, a brokerage research note or a school-rating site is <strong>not</strong> an official source, no matter how reliable it usually is. Where a trade publication was the only available window onto an official number, the row is marked <code>reported</code> and the caveat is printed.</p>
+<h2>What was retrieved, and what was not</h2>
+<p>Retrieved and read directly:</p>
+<ul><li>BLS Economy at a Glance for the LA–Long Beach–Anaheim MSA, and the September 2026 CPI news release.</li><li>Census QuickFacts for the City and County of Los Angeles (V2025 population estimates and 2020–2024 ACS).</li><li>U.S. Treasury daily par yield curve for November 2026, and the Federal Reserve&#x27;s open-market-operations rate history.</li><li>Jack in the Box FY2025 Form 10-K, the Q4 FY2025 earnings exhibit, and the Q3 FY2026 earnings exhibit, all from EDGAR.</li><li>IRS Publication 946 and Topic 409; IRC §1031 guidance.</li><li>Revenue and Taxation Code §§51 and 93 via the California Legislative Information site.</li><li>City of Los Angeles Office of Finance Measure ULA FAQ.</li><li>CAL FIRE&#x27;s 2025 incident archive and FEMA&#x27;s DR-4856-CA declaration page.</li><li>USGS National Seismic Hazard Model; Metro&#x27;s D Line project page.</li></ul>
+<p>Attempted and <strong>not</strong> retrieved, hence flagged rather than filled:</p>
+<ul><li>California DIR minimum-wage pages (404s) — no wage rate is asserted.</li><li>California Department of Education district profile (404) — no school metric is asserted.</li><li>LA County Assessor Proposition 13 page (returned generic homepage content) — the statutory rule is cited from the Revenue and Taxation Code instead.</li><li>LAHSA&#x27;s own 2026 count report — the count is marked <code>reported</code> from press coverage.</li><li>California Department of Finance projections — published only as spreadsheets; no projector number asserted.</li></ul>
+<h2>The model</h2>
+<p><code>model/projection.py</code> is a 20,000-path Monte Carlo with seed 20261106, run three times for the three expiry years. It is deterministic: re-running it produces the same file. The full assumption table — with ranges and stated bases — is rendered on the Projection page from <code>data/projection.json</code>, so the assumptions cannot drift away from the results.</p>
+<p>Modelling choices worth challenging:</p>
+<ul><li><strong>NOI normalisation.</strong> Nothing is expressed in dollars, because rent is private. Results are per $1.00 of NOI.</li><li><strong>Reinvestment at 4.84%.</strong> Interim cash flows compound at the 10-year Treasury, applied identically to every strategy.</li><li><strong>Strategy B redeploys into the same diversified position as A.</strong> Without this, B would be penalised for holding cash, which would be an artefact rather than a finding.</li><li><strong>Tax is not in the model.</strong> Adjusted basis was not supplied, so a post-tax comparison would require inventing one. Tax is handled as a documented overlay on the Decision page.</li><li><strong>Black-swan probabilities are judgements.</strong> 1.5%/yr for a damaging earthquake and 3.0%/yr for a regional disruption are stated assumptions, not USGS output. The USGS source supports the <em>hazard class</em>, not the frequency used.</li></ul>
+<h2>Privacy controls</h2>
+<ul><li>The owner is <code>OWNER-01</code>; the property is <code>PARCEL-01</code>. No address, APN, coordinate, rent, basis, or financial statement is stored anywhere in this repository, including in git history.</li><li>No figure was reverse-engineered from an address, a parcel record or a personal document.</li><li>Only public, aggregate, official data was collected. Nothing came from a paid or private source.</li><li>The site is safe to publish: the recommendation can be read without identifying who it is about, or where exactly the asset is.</li></ul>
+<h2>Known irregularities</h2>
+<p>A running list, also published on the Flagged page and in <code>COORDINATION.md</code>:</p>
+<ul><li>The property&#x27;s identity is withheld by design, so no parcel-level figure in this project can be verified.</li><li>The lease expiry is a window, not a date, and it is owner-stated.</li><li>No official publisher issues single-tenant QSR cap rates or rents; the model&#x27;s cap-rate band is an assumption.</li><li>Several 2026 federal series have gaps (for example, October 2025 CPI is missing because of the appropriations lapse). Gaps are shown as gaps and never interpolated.</li><li>The branch-naming convention in the task brief conflicts with this session&#x27;s pinned branch; the work was therefore consolidated onto <code>arena/ffe3bdfd-jack2</code>, documented in <code>COORDINATION.md</code>.</li></ul></div>
+<footer class="foot">
+  <p><strong>Privacy:</strong> this project contains no personal information. The owner is <code>OWNER-01</code> and the asset is <code>PARCEL-01</code>; no address, parcel number, rent, basis or financial statement is stored or published.</p>
+  <p><strong>Not advice:</strong> an analysis for discussion, not an appraisal, a tax opinion or a recommendation of any security. Verify against the lease, the parcel record and a licensed adviser before acting.</p>
+  <p class="small">Data retrieved 2026-11-06 · Build 2026-11-06 · <a href="methodology.html">Methodology &amp; verification</a> · <a href="flagged.html">Flagged for review</a></p>
+</footer>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

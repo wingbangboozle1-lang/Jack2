@@ -88,6 +88,8 @@ python3 -m unittest discover -s session-f4f700c0/tests -v
 7. `flagged.html` — everything that could **not** be verified, and what to obtain
 8. `archive.html` — the parallel session's site, preserved unmodified (a second agent session merged
    its own build to `main` mid-session; nothing was overwritten — see `COORDINATION.md`)
+9. `analysis/index.html` — a **second, independent model** built by a third session: Monte Carlo
+   instead of a deterministic projection, normalised per $1 of NOI instead of a benchmark rent
 
 ## Reproduce
 
@@ -105,12 +107,33 @@ Python 3.11, standard library only. No installs, no network needed to build.
 ```
 data/           source ledger, metrics, valuation inputs, risks, decisions, requirements, irregularities
 session-1944e5a3/  verbatim archive of the parallel session's published site
+analysis/       third session's independent build: own data, own model, own verifier, own pages
 tools/          model.py, build_site.py, check_site.py, export_ledger.py
 research/       model report and the manual-review verification ledger
 assets/         style.css, app.js (progressive enhancement only)
 *.html          the published site (GitHub Pages serves main / root)
 COORDINATION.md shared task board for parallel sessions
 ```
+
+## The second model
+
+`analysis/` is a complete, independent build of the same decision, produced by a third session that
+started from the same one-line repository and never saw this one's output.
+
+|  | This site | `analysis/` |
+|---|---|---|
+| Unit of account | dollars, from a benchmark rent assumption | per $1.00 of NOI — no rent assumed |
+| Model | deterministic 2026–2040, breakevens, sensitivity | 20,000-path Monte Carlo, three expiry cases, seeded |
+| Headline | extend at a reset, price 2027–28, sell if the numbers clear | sell now, §1031 into a diversified net lease |
+| Margin | thin: ~$247k on ~$5.9M of 2040 wealth | wide: 33.26 vs 26.70 per $1 NOI |
+| Tax | modelled with an assumed basis | mechanics verified, no after-tax figure claimed |
+
+The direction agrees — redeploying beats holding — and the magnitude does not. That gap is a real
+finding, not a defect: it turns on the 2036 exit cap and the cost of the rollover year, so
+`analysis/projection.html` publishes the break-even exit cap (~4.7%) as a testable number. Read both
+before deciding; neither overrides the other.
+
+Rebuild it separately: `cd analysis && python3 model/projection.py && python3 build.py && python3 verify.py`.
 
 ## Verification rules used
 

@@ -54,6 +54,7 @@ NAV = [
     ("privacy.html", "Privacy"),
     ("deployment.html", "Deployment"),
     ("archive.html", "Session A archive"),
+    ("analysis/index.html", "Second model"),
     ("workspaces.html", "All workspaces"),
 ]
 
@@ -1088,6 +1089,12 @@ def build_workspaces():
          "Session A &mdash; the original build, archived verbatim with its own stylesheet and scripts",
          "10 pages",
          "<a href='session-1944e5a3/index.html'>open &#8599;</a>"],
+        ["<code>analysis/</code>",
+         "Session C (branch <code>arena/ffe3bdfd-jack2</code>, PR #5) &mdash; an independent second model integrated 2026-11-11: "
+         "its own data, 20,000-path Monte Carlo, 13 pages and its own verifier, published beside the root workbook without "
+         "blending the two models' numbers",
+         "13 pages",
+         "<a href='analysis/index.html'>open &#8599;</a>"],
         ["Historical root pages",
          "Session B &mdash; deterministic model, 23 sources, 87 metric rows and decision triggers; preserved with a historical banner. "
          "Precise rankings depend on placeholder private inputs and are not endorsed by the current dashboard.",

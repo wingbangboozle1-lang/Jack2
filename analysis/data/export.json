@@ -1,0 +1,2126 @@
+{
+  "build_date": "2026-11-06",
+  "privacy": "De-identified. No address, APN, rent, basis or owner identity.",
+  "datasets": {
+    "property": [
+      {
+        "id": "PR-01",
+        "topic": "Asset identity",
+        "metric": "Property reference",
+        "display": "PARCEL-01",
+        "status": "not_applicable",
+        "source_id": null,
+        "note": "Internal placeholder. No address, APN, latitude/longitude or assessor link is stored in this repository."
+      },
+      {
+        "id": "PR-02",
+        "topic": "Asset identity",
+        "metric": "Owner reference",
+        "display": "OWNER-01",
+        "status": "not_applicable",
+        "source_id": null,
+        "note": "Personal identifiers removed at intake."
+      },
+      {
+        "id": "PR-03",
+        "topic": "Asset identity",
+        "metric": "Asset type",
+        "display": "Single-tenant quick-service restaurant, triple-net (NNN) lease",
+        "status": "input",
+        "source_id": "SRC-INPUT",
+        "note": "Owner-stated. No public record corroborates this; the lease itself was not provided."
+      },
+      {
+        "id": "PR-04",
+        "topic": "Asset identity",
+        "metric": "Tenant brand",
+        "display": "Jack in the Box",
+        "status": "input",
+        "source_id": "SRC-INPUT",
+        "note": "Owner-stated. Whether the tenant of record is a franchisee or the corporate entity is NOT known and is a material unknown (see R-02)."
+      },
+      {
+        "id": "PR-05",
+        "topic": "Location",
+        "metric": "Sub-market",
+        "display": "Central Los Angeles (approximate only)",
+        "status": "input",
+        "source_id": "SRC-INPUT",
+        "note": "No further geographic precision is stored. All market data in this project is therefore measured at City of Los Angeles, County of Los Angeles or LA\u2013Long Beach\u2013Anaheim MSA level."
+      },
+      {
+        "id": "PR-06",
+        "topic": "Lease",
+        "metric": "Lease expiry window",
+        "display": "2030 \u2013 2035",
+        "status": "input",
+        "source_id": "SRC-INPUT",
+        "note": "Owner-stated range, not verified against the lease document."
+      },
+      {
+        "id": "PR-07",
+        "topic": "Lease",
+        "metric": "Years of remaining term from 2026-11-06",
+        "display": "3.2 \u2013 9.2 years (modelled 3.15 / 5.65 / 9.15)",
+        "value": null,
+        "status": "derived",
+        "source_id": "SRC-INPUT",
+        "note": "Derived arithmetic from PR-06. Three cases are modelled rather than one point estimate."
+      },
+      {
+        "id": "PR-08",
+        "topic": "Lease",
+        "metric": "Renewal options held by tenant",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Unknown. This is the single most important missing document term: it determines whether the owner or the tenant controls the post-2030 outcome."
+      },
+      {
+        "id": "PR-09",
+        "topic": "Lease",
+        "metric": "Contract rent, escalators, expense pass-throughs",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Not provided; withheld for privacy. The model is therefore normalised to $1.00 of NOI."
+      },
+      {
+        "id": "PR-10",
+        "topic": "Property",
+        "metric": "Building area, land area, parking ratio, drive-thru",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Not provided. Drive-thru presence materially changes re-leasing prospects for a QSR box and is the first item to confirm."
+      },
+      {
+        "id": "PR-11",
+        "topic": "Property",
+        "metric": "Zoning, general plan designation, entitlement upside",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Requires the parcel number to query ZIMAS (City of LA). Not attempted, by design."
+      },
+      {
+        "id": "PR-12",
+        "topic": "Property",
+        "metric": "Assessed value, base-year value, annual property tax",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Requires the APN to query the Los Angeles County Assessor. Not attempted, by design."
+      },
+      {
+        "id": "PR-13",
+        "topic": "Financials",
+        "metric": "Current NOI, purchase price, adjusted basis",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Not provided. Without adjusted basis no after-tax comparison can be computed; the model reports pre-tax wealth and treats tax as a documented overlay (see V-07 to V-10)."
+      },
+      {
+        "id": "PR-14",
+        "topic": "Brand system",
+        "metric": "Jack in the Box system units at 2026-07-05",
+        "value": 2115,
+        "display": "2,115",
+        "unit": "restaurants",
+        "as_of": "2026-07-05",
+        "status": "verified",
+        "source_id": "S-JACK-Q3FY26",
+        "note": "149 company-operated + 1,966 franchised."
+      },
+      {
+        "id": "PR-15",
+        "topic": "Brand system",
+        "metric": "Share of system that is franchised",
+        "value": 0.9296,
+        "display": "93.0%",
+        "unit": "percent",
+        "as_of": "2026-07-05",
+        "status": "derived",
+        "source_id": "S-JACK-Q3FY26",
+        "note": "1,966 franchised \u00f7 2,115 total. Makes it likely, but not certain, that PARCEL-01's tenant is a franchisee rather than the corporate parent."
+      },
+      {
+        "id": "PR-16",
+        "topic": "Brand system",
+        "metric": "Jack in the Box same-store sales, Q3 FY2026",
+        "value": -0.011,
+        "display": "(1.1%)",
+        "unit": "percent",
+        "as_of": "2026-07-05",
+        "status": "verified",
+        "source_id": "S-JACK-Q3FY26",
+        "note": "Franchise same-store sales (1.2%), company (0.9%). An improvement from (7.1%) a year earlier."
+      },
+      {
+        "id": "PR-17",
+        "topic": "Brand system",
+        "metric": "Jack in the Box same-store sales, FY2025",
+        "value": -0.042,
+        "display": "(4.2%)",
+        "unit": "percent",
+        "as_of": "2025-09-28",
+        "status": "verified",
+        "source_id": "S-JACK-Q4FY25",
+        "note": "Q4 FY2025 alone was (7.4%)."
+      },
+      {
+        "id": "PR-18",
+        "topic": "Brand system",
+        "metric": "Restaurants closed in FY2025",
+        "value": 86,
+        "display": "86 closed (31 opened)",
+        "unit": "restaurants",
+        "as_of": "2025-09-28",
+        "status": "verified",
+        "source_id": "S-JACK-Q4FY25",
+        "note": "38 of the 47 Q4 closures were part of the 'JACK on Track' block-closure programme."
+      },
+      {
+        "id": "PR-19",
+        "topic": "Brand system",
+        "metric": "Closures guided for FY2026",
+        "display": "50 \u2013 100 closures, ~20 openings",
+        "unit": "restaurants",
+        "as_of": "2025-11-19",
+        "status": "verified",
+        "source_id": "S-JACK-Q4FY25",
+        "note": "Guidance issued with Q4 FY2025 results: restaurant count of 2,050\u20132,100, 'approximately 50 to 100 closures, most of which will be franchise restaurants'."
+      },
+      {
+        "id": "PR-20",
+        "topic": "Brand system",
+        "metric": "Franchised restaurant average unit volume, FY2025",
+        "value": 1874000,
+        "display": "$1,874,000",
+        "unit": "USD per restaurant per year",
+        "as_of": "2025-09-28",
+        "status": "verified",
+        "source_id": "S-JACK-10K",
+        "note": "Down from $1,949,000 in FY2024. Useful for stress-testing whether the store can carry market rent."
+      },
+      {
+        "id": "PR-21",
+        "topic": "Brand system",
+        "metric": "Del Taco divestiture completed",
+        "display": "Sold to Yadav Enterprises; closed 2025-12-22",
+        "as_of": "2025-12-22",
+        "status": "verified",
+        "source_id": "S-JACK-Q3FY26",
+        "note": "The brand is now a single-concept operator, which concentrates franchisee and landlord exposure on the Jack in the Box banner."
+      },
+      {
+        "id": "PR-22",
+        "topic": "Brand system",
+        "metric": "Corporate leadership",
+        "display": "Mark King, Interim CEO (from 2026); refinancing completed",
+        "as_of": "2026-08-12",
+        "status": "verified",
+        "source_id": "S-JACK-Q3FY26",
+        "note": "Leadership turnover at the franchisor is a second-order but real signal for renewal decisions."
+      },
+      {
+        "id": "PR-23",
+        "topic": "Brand system",
+        "metric": "Franchisor sells owned real estate to franchisees",
+        "display": null,
+        "as_of": "2025-04-23",
+        "status": "unverified",
+        "source_id": null,
+        "note": "Trade press reported a plan to sell land/building at roughly 170 franchised sites as part of the 2025 'JACK on Track' programme. This could not be confirmed in the SEC exhibit retrieved for this project, so it is flagged rather than asserted."
+      }
+    ],
+    "demographics": [
+      {
+        "id": "DM-01",
+        "topic": "Population",
+        "metric": "Los Angeles County population, 1 July 2025",
+        "value": 9694934,
+        "display": "9,694,934",
+        "unit": "persons",
+        "as_of": "2025-07-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": "Vintage 2025 estimate."
+      },
+      {
+        "id": "DM-02",
+        "topic": "Population",
+        "metric": "Los Angeles County population change, April 2020 to July 2025",
+        "value": -0.032,
+        "display": "(3.2%)",
+        "unit": "percent",
+        "as_of": "2025-07-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": "Base 10,017,414 \u2192 9,694,934. The county is shrinking, which is a headwind for unit-level retail demand."
+      },
+      {
+        "id": "DM-03",
+        "topic": "Population",
+        "metric": "City of Los Angeles population, 1 July 2025",
+        "value": 3869089,
+        "display": "3,869,089",
+        "unit": "persons",
+        "as_of": "2025-07-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": ""
+      },
+      {
+        "id": "DM-04",
+        "topic": "Population",
+        "metric": "City of Los Angeles population change, April 2020 to July 2025",
+        "value": -0.008,
+        "display": "(0.8%)",
+        "unit": "percent",
+        "as_of": "2025-07-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "Base 3,899,342 \u2192 3,869,089."
+      },
+      {
+        "id": "DM-05",
+        "topic": "Population",
+        "metric": "City of Los Angeles population density, 2020",
+        "value": 8304.2,
+        "display": "8,304 persons per sq mi",
+        "unit": "persons per square mile",
+        "as_of": "2020-04-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "Density is the demand engine for walk-up and drive-thru QSR."
+      },
+      {
+        "id": "DM-06",
+        "topic": "Age & origin",
+        "metric": "Los Angeles County population aged 65+",
+        "value": 0.171,
+        "display": "17.1%",
+        "unit": "percent",
+        "as_of": "2025-07-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": ""
+      },
+      {
+        "id": "DM-07",
+        "topic": "Age & origin",
+        "metric": "Los Angeles County Hispanic or Latino share",
+        "value": 0.493,
+        "display": "49.3%",
+        "unit": "percent",
+        "as_of": "2025-07-01",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": ""
+      },
+      {
+        "id": "DM-08",
+        "topic": "Age & origin",
+        "metric": "Los Angeles County foreign-born share",
+        "value": 0.334,
+        "display": "33.4%",
+        "unit": "percent",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": "2020\u20132024 ACS 5-year."
+      },
+      {
+        "id": "DM-09",
+        "topic": "Income",
+        "metric": "Los Angeles County median household income (2024 dollars)",
+        "value": 90112,
+        "display": "$90,112",
+        "unit": "USD",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": "2020\u20132024 ACS 5-year. Not adjusted to 2026; CPI rose 3.7% in the 12 months to September 2026."
+      },
+      {
+        "id": "DM-10",
+        "topic": "Income",
+        "metric": "City of Los Angeles median household income (2024 dollars)",
+        "value": 81939,
+        "display": "$81,939",
+        "unit": "USD",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "City median is ~9% below the county median."
+      },
+      {
+        "id": "DM-11",
+        "topic": "Income",
+        "metric": "Los Angeles County per-capita income (2024 dollars)",
+        "value": 45792,
+        "display": "$45,792",
+        "unit": "USD",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": ""
+      },
+      {
+        "id": "DM-12",
+        "topic": "Income",
+        "metric": "City of Los Angeles per-capita income (2024 dollars)",
+        "value": 47685,
+        "display": "$47,685",
+        "unit": "USD",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": ""
+      },
+      {
+        "id": "DM-13",
+        "topic": "Poverty",
+        "metric": "Los Angeles County poverty rate",
+        "value": 0.133,
+        "display": "13.3%",
+        "unit": "percent",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": "2020\u20132024 ACS 5-year."
+      },
+      {
+        "id": "DM-14",
+        "topic": "Poverty",
+        "metric": "City of Los Angeles poverty rate",
+        "value": 0.165,
+        "display": "16.5%",
+        "unit": "percent",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "One in six city residents is below the poverty line; value-oriented QSR formats are more resilient in this mix than premium fast-casual."
+      },
+      {
+        "id": "DM-15",
+        "topic": "Education",
+        "metric": "City of Los Angeles adults 25+ with a bachelor's degree or higher",
+        "value": 0.385,
+        "display": "38.5%",
+        "unit": "percent",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": ""
+      },
+      {
+        "id": "DM-16",
+        "topic": "Education",
+        "metric": "City of Los Angeles adults 25+ with a high-school diploma or higher",
+        "value": 0.796,
+        "display": "79.6%",
+        "unit": "percent",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": ""
+      },
+      {
+        "id": "DM-17",
+        "topic": "Housing",
+        "metric": "City of Los Angeles median value, owner-occupied units",
+        "value": 921200,
+        "display": "$921,200",
+        "unit": "USD",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "Land value underpins the redevelopment floor for the site."
+      },
+      {
+        "id": "DM-18",
+        "topic": "Housing",
+        "metric": "City of Los Angeles median gross rent",
+        "value": 1933,
+        "display": "$1,933",
+        "unit": "USD per month",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": ""
+      },
+      {
+        "id": "DM-19",
+        "topic": "Housing",
+        "metric": "City of Los Angeles owner-occupancy rate",
+        "value": 0.36,
+        "display": "36.0%",
+        "unit": "percent",
+        "as_of": "2024-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "A renter-majority city; household mobility and rent burden are the relevant demand variables."
+      },
+      {
+        "id": "DM-20",
+        "topic": "Consumer demand",
+        "metric": "City of Los Angeles total retail sales, 2022",
+        "value": 81351523000,
+        "display": "$81.35 billion",
+        "unit": "USD",
+        "as_of": "2022-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "Economic Census."
+      },
+      {
+        "id": "DM-21",
+        "topic": "Consumer demand",
+        "metric": "City of Los Angeles retail sales per capita, 2022",
+        "value": 21281,
+        "display": "$21,281",
+        "unit": "USD",
+        "as_of": "2022-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": ""
+      },
+      {
+        "id": "DM-22",
+        "topic": "Consumer demand",
+        "metric": "City of Los Angeles accommodation & food services sales, 2022",
+        "value": 17366966000,
+        "display": "$17.37 billion",
+        "unit": "USD",
+        "as_of": "2022-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-CITY",
+        "note": "The addressable restaurant market the site trades inside."
+      },
+      {
+        "id": "DM-23",
+        "topic": "Consumer demand",
+        "metric": "Los Angeles County retail sales per capita, 2022",
+        "value": 22010,
+        "display": "$22,010",
+        "unit": "USD",
+        "as_of": "2022-12-31",
+        "status": "verified",
+        "source_id": "S-CENSUS-COUNTY",
+        "note": ""
+      },
+      {
+        "id": "DM-24",
+        "topic": "Homelessness",
+        "metric": "People experiencing homelessness, City of Los Angeles, January 2026",
+        "value": 45194,
+        "display": "45,194 (+3.4% year on year)",
+        "unit": "persons",
+        "as_of": "2026-01-31",
+        "status": "reported",
+        "source_id": "S-LAHSA",
+        "note": "2026 Greater Los Angeles Homeless Count, released 2026-07-24. The figure is LAHSA's; this project read it through press coverage because the LAHSA report page was not retrievable in this pass. County-wide total 73,040 (+1.2%). Flagged for direct confirmation."
+      },
+      {
+        "id": "DM-25",
+        "topic": "Schools",
+        "metric": "LAUSD enrollment, graduation rate, CAASPP proficiency",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Not retrieved. The California Department of Education profile endpoint returned 404 during this pass. School quality affects family retention and therefore long-run trade-area income; it is listed as an open item rather than filled with a third-party rating."
+      },
+      {
+        "id": "DM-26",
+        "topic": "Projections",
+        "metric": "California Department of Finance county population projections",
+        "display": null,
+        "status": "unverified",
+        "source_id": "S-DOF",
+        "note": "The projections are published only as Excel workbooks (P-1/P-2/P-3), which this pass did not parse. No projection number is asserted here. Open item: download P-2A and record LA County 2030/2035/2040 totals."
+      }
+    ],
+    "economy": [
+      {
+        "id": "EC-01",
+        "topic": "Labour market",
+        "metric": "Unemployment rate, September 2026",
+        "value": 0.044,
+        "display": "4.4%",
+        "unit": "percent",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "Preliminary. Range across Apr\u2013Sep 2026 was 4.4%\u20135.0%."
+      },
+      {
+        "id": "EC-02",
+        "topic": "Labour market",
+        "metric": "Civilian labour force",
+        "value": 6646.9,
+        "display": "6,646.9 thousand",
+        "unit": "thousands of persons",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "Preliminary."
+      },
+      {
+        "id": "EC-03",
+        "topic": "Labour market",
+        "metric": "Employment",
+        "value": 6352.9,
+        "display": "6,352.9 thousand",
+        "unit": "thousands of persons",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "Preliminary."
+      },
+      {
+        "id": "EC-04",
+        "topic": "Payrolls",
+        "metric": "Total nonfarm employment",
+        "value": 6282.1,
+        "display": "6,282.1 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change +0.5%. Job growth is roughly a third of the national rate \u2014 a slow-growth backdrop."
+      },
+      {
+        "id": "EC-05",
+        "topic": "Payrolls",
+        "metric": "Leisure & hospitality employment",
+        "value": 782.0,
+        "display": "782.0 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change +1.5%. The sector that buys QSR lunches is still adding jobs."
+      },
+      {
+        "id": "EC-06",
+        "topic": "Payrolls",
+        "metric": "Education & health services employment",
+        "value": 1340.7,
+        "display": "1,340.7 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change +3.8% \u2014 the strongest major sector and the most recession-resistant."
+      },
+      {
+        "id": "EC-07",
+        "topic": "Payrolls",
+        "metric": "Information sector employment",
+        "value": 187.0,
+        "display": "187.0 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change (5.7%) \u2014 the weakest sector, reflecting the media/tech contraction."
+      },
+      {
+        "id": "EC-08",
+        "topic": "Payrolls",
+        "metric": "Manufacturing employment",
+        "value": 444.8,
+        "display": "444.8 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change (1.2%)."
+      },
+      {
+        "id": "EC-09",
+        "topic": "Payrolls",
+        "metric": "Construction employment",
+        "value": 251.5,
+        "display": "251.5 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change 0.0%."
+      },
+      {
+        "id": "EC-10",
+        "topic": "Payrolls",
+        "metric": "Trade, transportation & utilities employment",
+        "value": 1047.9,
+        "display": "1,047.9 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change +0.3%."
+      },
+      {
+        "id": "EC-11",
+        "topic": "Payrolls",
+        "metric": "Professional & business services employment",
+        "value": 975.5,
+        "display": "975.5 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change (0.5%)."
+      },
+      {
+        "id": "EC-12",
+        "topic": "Payrolls",
+        "metric": "Financial activities employment",
+        "value": 300.4,
+        "display": "300.4 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change (1.7%)."
+      },
+      {
+        "id": "EC-13",
+        "topic": "Payrolls",
+        "metric": "Government employment",
+        "value": 734.8,
+        "display": "734.8 thousand",
+        "unit": "thousands of jobs",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-EAG",
+        "note": "12-month change (1.1%)."
+      },
+      {
+        "id": "EC-14",
+        "topic": "Inflation",
+        "metric": "CPI-U, Los Angeles, 12 months to September 2026",
+        "value": 0.037,
+        "display": "3.7%",
+        "unit": "percent",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-CPI",
+        "note": "Index level 358.725 (1982-84=100). October 2026 release scheduled for 2026-11-10."
+      },
+      {
+        "id": "EC-15",
+        "topic": "Inflation",
+        "metric": "CPI food away from home, 12 months to September 2026",
+        "value": 0.028,
+        "display": "2.8%",
+        "unit": "percent",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-CPI",
+        "note": "Menu-price inflation is running below headline CPI \u2014 QSR is losing pricing power relative to its own cost base."
+      },
+      {
+        "id": "EC-16",
+        "topic": "Inflation",
+        "metric": "CPI shelter, 12 months to September 2026",
+        "value": 0.037,
+        "display": "3.7%",
+        "unit": "percent",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-CPI",
+        "note": ""
+      },
+      {
+        "id": "EC-17",
+        "topic": "Inflation",
+        "metric": "CPI energy, 12 months to September 2026",
+        "value": 0.203,
+        "display": "20.3%",
+        "unit": "percent",
+        "as_of": "2026-09-30",
+        "status": "verified",
+        "source_id": "S-BLS-CPI",
+        "note": "Gasoline +30.8% over the year. Direct hit to drive-thru traffic and to tenant utility costs."
+      },
+      {
+        "id": "EC-18",
+        "topic": "Policy rates",
+        "metric": "FOMC federal funds target range",
+        "display": "3.75% \u2013 4.00%",
+        "unit": "percent",
+        "as_of": "2026-09-17",
+        "status": "verified",
+        "source_id": "S-FED-OMO",
+        "note": "Raised 25 bp on 17 September 2026 \u2014 the first increase after three cuts in 2025. Policy is turning restrictive again."
+      },
+      {
+        "id": "EC-19",
+        "topic": "Market rates",
+        "metric": "10-year Treasury par yield, 2026-11-05",
+        "value": 0.0484,
+        "display": "4.84%",
+        "unit": "percent",
+        "as_of": "2026-11-05",
+        "status": "verified",
+        "source_id": "S-TREASURY",
+        "note": "Up from 4.19% at the start of 2026 (+65 bp). This is the discount-rate anchor for every cap rate in the model."
+      },
+      {
+        "id": "EC-20",
+        "topic": "Market rates",
+        "metric": "5-year Treasury par yield, 2026-11-05",
+        "value": 0.0459,
+        "display": "4.59%",
+        "unit": "percent",
+        "as_of": "2026-11-05",
+        "status": "verified",
+        "source_id": "S-TREASURY",
+        "note": ""
+      },
+      {
+        "id": "EC-21",
+        "topic": "Market rates",
+        "metric": "2-year Treasury par yield, 2026-11-05",
+        "value": 0.0446,
+        "display": "4.46%",
+        "unit": "percent",
+        "as_of": "2026-11-05",
+        "status": "verified",
+        "source_id": "S-TREASURY",
+        "note": "The curve has re-steepened: 30-year at 5.25%."
+      },
+      {
+        "id": "EC-22",
+        "topic": "Market rates",
+        "metric": "30-year Treasury par yield, 2026-11-05",
+        "value": 0.0525,
+        "display": "5.25%",
+        "unit": "percent",
+        "as_of": "2026-11-05",
+        "status": "verified",
+        "source_id": "S-TREASURY",
+        "note": "Long rates above 5% are the mechanism by which cap rates widen."
+      },
+      {
+        "id": "EC-23",
+        "topic": "Infrastructure",
+        "metric": "Metro D Line Extension, Section 1",
+        "display": "Opened 2026-05-08 (Wilshire/La Brea, Fairfax, La Cienega)",
+        "as_of": "2026-05-08",
+        "status": "verified",
+        "source_id": "S-METRO-DLINE",
+        "note": "Sections 2 and 3 (Beverly Hills, Century City, Westwood/UCLA) remain under construction. Transit investment is a genuine long-run positive for central-LA site value."
+      },
+      {
+        "id": "EC-24",
+        "topic": "Operating cost",
+        "metric": "California fast-food minimum wage",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "The widely reported rate is $20.00/hr for covered fast-food employees (AB 1228, from 1 April 2024), with no Fast Food Council increase since. The DIR pages consulted during this pass returned 404, so the figure is NOT asserted as verified. Open item: confirm on dir.ca.gov before relying on it."
+      },
+      {
+        "id": "EC-25",
+        "topic": "Operating cost",
+        "metric": "Statewide minimum wage, 2026",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Secondary sources report $16.90/hr for 2026 and $17.40/hr certified for 2027. Not confirmed on a DIR page in this pass; not used in any calculation."
+      }
+    ],
+    "valuation": [
+      {
+        "id": "VL-01",
+        "topic": "Property tax",
+        "metric": "General ad valorem levy",
+        "value": 0.01,
+        "display": "1% of assessed value ($4 per $100 at a 25% assessment ratio)",
+        "unit": "percent of assessed value",
+        "as_of": "current law",
+        "status": "verified",
+        "source_id": "S-RTC-93",
+        "note": "Revenue and Taxation Code \u00a793(b) implements Article XIII A. Voter-approved bond levies sit on top."
+      },
+      {
+        "id": "VL-02",
+        "topic": "Property tax",
+        "metric": "Annual cap on assessed-value growth",
+        "value": 0.02,
+        "display": "2% per year",
+        "unit": "percent",
+        "as_of": "current law",
+        "status": "verified",
+        "source_id": "S-RTC-51",
+        "note": "RTC \u00a751(a)(1)(D): the annual inflation factor 'in no event shall ... exceed 2 percent'. The base-year value generally resets on a change of ownership \u2014 the core of Proposition 13."
+      },
+      {
+        "id": "VL-03",
+        "topic": "Property tax",
+        "metric": "Taxable value rule",
+        "display": "Lesser of (base-year value \u00d7 inflation factor) or full cash value",
+        "as_of": "current law",
+        "status": "verified",
+        "source_id": "S-RTC-51",
+        "note": "This is why a long-held asset can carry a tax bill far below 1% of market value, and why a sale resets the buyer's basis and tax."
+      },
+      {
+        "id": "VL-04",
+        "topic": "Property tax",
+        "metric": "Relief for value decline or disaster damage",
+        "display": "Decline-in-value (Prop 8) and disaster relief applications available",
+        "as_of": "2026",
+        "status": "verified",
+        "source_id": "S-ASSESSOR",
+        "note": "Los Angeles County Assessor accepts decline-in-value applications for the 2026-27 tax year from 2026-07-02, deadline 2026-11-30."
+      },
+      {
+        "id": "VL-05",
+        "topic": "Transfer tax",
+        "metric": "City of Los Angeles real property transfer tax (base)",
+        "value": 0.0045,
+        "display": "0.45% of consideration or value",
+        "unit": "percent",
+        "as_of": "2026",
+        "status": "verified",
+        "source_id": "S-LA-ULA",
+        "note": "$2.25 per $500 or part thereof."
+      },
+      {
+        "id": "VL-06",
+        "topic": "Transfer tax",
+        "metric": "Measure ULA additional tax, $5.4M to under $10.9M",
+        "value": 0.04,
+        "display": "4% (total 4.45%)",
+        "unit": "percent",
+        "as_of": "closings after 2026-06-30",
+        "status": "verified",
+        "source_id": "S-LA-ULA",
+        "note": "Thresholds are indexed annually to Chained CPI. These are the amounts in force for closings after 30 June 2026."
+      },
+      {
+        "id": "VL-07",
+        "topic": "Transfer tax",
+        "metric": "Measure ULA additional tax, $10.9M and above",
+        "value": 0.055,
+        "display": "5.5% (total 5.95%)",
+        "unit": "percent",
+        "as_of": "closings after 2026-06-30",
+        "status": "verified",
+        "source_id": "S-LA-ULA",
+        "note": "A $10.9M sale therefore pays $648,550 in city transfer tax alone before any county documentary transfer tax."
+      },
+      {
+        "id": "VL-08",
+        "topic": "Transfer tax",
+        "metric": "Measure ULA effective date",
+        "display": "Conveyances on or after 2023-04-01",
+        "as_of": "2023-04-01",
+        "status": "verified",
+        "source_id": "S-LA-ULA",
+        "note": ""
+      },
+      {
+        "id": "VL-09",
+        "topic": "Federal tax",
+        "metric": "Depreciation recovery period, nonresidential real property",
+        "value": 39,
+        "display": "39 years, straight line, mid-month convention",
+        "unit": "years",
+        "as_of": "2025 tax year",
+        "status": "verified",
+        "source_id": "S-IRS-946",
+        "note": "Land is not depreciable. Bonus depreciation does not apply to the building because it is limited to 20-year-or-shorter property."
+      },
+      {
+        "id": "VL-10",
+        "topic": "Federal tax",
+        "metric": "Unrecaptured section 1250 gain",
+        "value": 0.25,
+        "display": "Taxed at a maximum 25% rate",
+        "unit": "percent",
+        "as_of": "2025 tax year",
+        "status": "verified",
+        "source_id": "S-IRS-409",
+        "note": "This is the depreciation you already deducted coming back on sale \u2014 and it is why an exchanged basis matters."
+      },
+      {
+        "id": "VL-11",
+        "topic": "Federal tax",
+        "metric": "Top long-term capital gains rate",
+        "value": 0.2,
+        "display": "20%",
+        "unit": "percent",
+        "as_of": "2025 tax year",
+        "status": "verified",
+        "source_id": "S-IRS-409",
+        "note": "15% applies to most taxpayers; 20% above the high-income thresholds."
+      },
+      {
+        "id": "VL-12",
+        "topic": "Federal tax",
+        "metric": "Net investment income tax",
+        "display": "May apply to investment income above statutory thresholds",
+        "as_of": "2025 tax year",
+        "status": "verified",
+        "source_id": "S-IRS-409",
+        "note": "Topic 409 refers to Topic 559. The 3.8% rate itself was not read from an IRS page in this pass, so it is not asserted as verified."
+      },
+      {
+        "id": "VL-13",
+        "topic": "Federal tax",
+        "metric": "Section 1031 like-kind exchange",
+        "display": "Gain not recognised when real property is exchanged solely for like-kind real property held for business or investment",
+        "as_of": "current law",
+        "status": "verified",
+        "source_id": "S-IRS-1031",
+        "note": "Since 2018 \u00a71031 applies to real property only. Deferral is not forgiveness: the old basis carries into the replacement property."
+      },
+      {
+        "id": "VL-14",
+        "topic": "Market evidence",
+        "metric": "Diversified net-lease acquisition cash yield, 2025",
+        "value": 0.073,
+        "display": "7.3% initial weighted-average cash yield ($6.3B invested)",
+        "unit": "percent",
+        "as_of": "2025-12-31",
+        "status": "reported",
+        "source_id": "S-O-10K",
+        "note": "Realty Income Corp., FY2025 Form 10-K / earnings release (filed 2026-02-24). Read from the SEC filing summary; the exhibit itself was not line-by-line verified in this pass. This is the benchmark yield for the 'sell and redeploy' strategy."
+      },
+      {
+        "id": "VL-15",
+        "topic": "Market evidence",
+        "metric": "Diversified net-lease same-store rental revenue growth, 2025",
+        "value": 0.013,
+        "display": "1.3%",
+        "unit": "percent",
+        "as_of": "2025-12-31",
+        "status": "reported",
+        "source_id": "S-O-10K",
+        "note": "Same source as VL-14. Growth is materially lower than a 2.5% contract escalator \u2014 that is the trade-off for the higher yield."
+      },
+      {
+        "id": "VL-16",
+        "topic": "Market evidence",
+        "metric": "Single-tenant QSR cap rate for PARCEL-01",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "No government publisher produces single-asset cap rates, and this project used no paid data. The model's 6.0% going-in cap is an explicit assumption anchored to the 4.84% 10-year Treasury plus 110\u2013215 bp, cross-checked against 7.0\u20137.3% diversified net-lease yields. A broker opinion of value is required to replace it."
+      },
+      {
+        "id": "VL-17",
+        "topic": "Market evidence",
+        "metric": "Comparable rents for a central-LA QSR box",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Not available from any official source. Rent is therefore modelled only via escalators and market-reset ratios, never as a dollar figure."
+      },
+      {
+        "id": "VL-18",
+        "topic": "Market evidence",
+        "metric": "Effective all-in property tax rate (1% plus bonds and assessments)",
+        "display": null,
+        "status": "unverified",
+        "source_id": null,
+        "note": "Secondary sources put typical LA County effective rates at roughly 1.1%\u20131.25%. Not verified against a Tax Rate Area book in this pass; the model uses the statutory 1% only and therefore understates the owner's cost slightly."
+      },
+      {
+        "id": "VL-19",
+        "topic": "Derived spread",
+        "metric": "Cap-rate spread: model going-in cap less 10-year Treasury",
+        "value": 0.0116,
+        "display": "116 bp (6.00% \u2212 4.84%)",
+        "unit": "percent",
+        "as_of": "2026-11-05",
+        "status": "derived",
+        "source_id": "S-TREASURY",
+        "note": "A thin risk premium by historical standards. If long rates keep rising, this spread has room to widen \u2014 which means values have room to fall."
+      },
+      {
+        "id": "VL-20",
+        "topic": "Derived spread",
+        "metric": "Yield gap: diversified net-lease cash yield less PARCEL-01 going-in cap",
+        "value": 0.013,
+        "display": "+130 bp (7.30% \u2212 6.00%)",
+        "unit": "percent",
+        "as_of": "2026-11-05",
+        "status": "derived",
+        "source_id": "S-O-10K",
+        "note": "This spread, not the absolute level of rates, is what makes selling and redeploying accretive on day one. It is also the model assumption most worth challenging."
+      }
+    ],
+    "risk": [
+      {
+        "id": "RK-01",
+        "class": "BAU",
+        "risk": "Tenant is a franchisee, not the corporate brand",
+        "evidence": "93.0% of the Jack in the Box system is franchised (1,966 of 2,115 units at 2026-07-05).",
+        "source_id": "S-JACK-Q3FY26",
+        "likelihood": "Almost certain (if PARCEL-01 is a franchised unit, which the owner must confirm)",
+        "impact": "High \u2014 the owner's credit is a single small business, not a national chain with $2.1B+ of revenue.",
+        "mitigation": "Obtain the lease, the guaranty (if any), and the franchisee's most recent financial statements before any renewal negotiation. Confirm whether the franchisor guarantees the lease.",
+        "residual": "Unchanged until documents are produced."
+      },
+      {
+        "id": "RK-02",
+        "class": "BAU",
+        "risk": "Franchisee default or non-renewal",
+        "evidence": "Model hazard of 5%/yr before expiry \u2192 18.8% cumulative probability of default by 2030 and 39.9% by 2035 (20,000-path simulation). Franchisor has closed 86 units in FY2025 and guided to 50\u2013100 more in FY2026; franchise bad-debt expense rose.",
+        "source_id": "S-JACK-Q4FY25",
+        "likelihood": "Possible to Likely, depending on expiry year",
+        "impact": "Medium\u2013High \u2014 12 months of lost rent plus 6% of value in re-letting cost (model assumption).",
+        "mitigation": "Sell while term remains, or negotiate an early extension with a creditworthy operator. If holding, budget a 12-month vacancy reserve.",
+        "residual": "Low\u2013Medium after sale."
+      },
+      {
+        "id": "RK-03",
+        "class": "BAU",
+        "risk": "Brand-level retrenchment removes this trade area",
+        "evidence": "FY2026 guidance: 50\u2013100 closures and only ~20 openings; the 2025 'block closure' programme targeted older units. FY2025 same-store sales (4.2%) and Q4 (7.4%).",
+        "source_id": "S-JACK-Q4FY25",
+        "likelihood": "Possible",
+        "impact": "High \u2014 a closed unit converts a bond-like NNN asset into a vacant QSR box in a market with limited drive-thru sites.",
+        "mitigation": "Ask the franchisor directly whether the unit is on a closure list; the franchisor's own guidance is public, so a buyer will ask the same question.",
+        "residual": "Unchanged."
+      },
+      {
+        "id": "RK-04",
+        "class": "BAU",
+        "risk": "Owner does not control the renewal decision",
+        "evidence": "The lease is NNN with expiry 2030\u20132035 (owner-stated). Renewal options, if any, sit with the tenant \u2014 the standard structure in QSR ground/building leases.",
+        "source_id": "SRC-INPUT",
+        "likelihood": "Almost certain",
+        "impact": "High \u2014 'renew the lease' is not a unilateral option; the realistic choices are sell, hold, or offer an inducement to extend.",
+        "mitigation": "Reframe the decision as sell vs. hold. Any extension requires a negotiated rent, term and TI package.",
+        "residual": "Structural."
+      },
+      {
+        "id": "RK-05",
+        "class": "BAU",
+        "risk": "Cap-rate expansion as long rates rise",
+        "evidence": "10-year Treasury 4.84% on 2026-11-05, up from 4.19% on 2026-01-02; 30-year 5.25%; the FOMC raised the target range 25 bp to 3.75\u20134.00% on 2026-09-17. The modelled going-in cap of 6.00% implies only a 116 bp spread over Treasuries.",
+        "source_id": "S-TREASURY",
+        "likelihood": "Possible",
+        "impact": "High \u2014 each +50 bp on a 6.00% cap destroys ~7.7% of value.",
+        "mitigation": "Sell into the current bid rather than waiting; a shorter lease and a rising-rate backdrop compound the effect.",
+        "residual": "Transferred to the buyer on sale."
+      },
+      {
+        "id": "RK-06",
+        "class": "BAU",
+        "risk": "Rollover and downtime at expiry",
+        "evidence": "Modelled: +125 bp on the exit cap and 6% of value in re-letting cost when the tenant vacates.",
+        "source_id": null,
+        "likelihood": "Likely (if the tenant does not renew)",
+        "impact": "Medium",
+        "mitigation": "Sell with \u22655 years of term; buyers pay for weighted-average lease term.",
+        "residual": "Removed on sale."
+      },
+      {
+        "id": "RK-07",
+        "class": "BAU",
+        "risk": "Property tax reset on sale suppresses the buyer's yield",
+        "evidence": "Under Proposition 13 a change of ownership generally establishes a new base-year value; the 1% levy applies to assessed value, growth capped at 2%/yr.",
+        "source_id": "S-RTC-51",
+        "likelihood": "Almost certain",
+        "impact": "Low\u2013Medium \u2014 the buyer prices the post-sale tax bill, not the seller's.",
+        "mitigation": "Model the buyer's reassessed tax in the offering memorandum; do not quote the seller's bill.",
+        "residual": "Priced in."
+      },
+      {
+        "id": "RK-08",
+        "class": "BAU",
+        "risk": "Concentration: one asset, one tenant, one block",
+        "evidence": "A single $X of capital sits in one lease and one building; the model's hold strategies have a 21.8\u201329.5 (P10) vs 29.4 (P10) spread against the diversified strategy.",
+        "source_id": null,
+        "likelihood": "Certain",
+        "impact": "Medium",
+        "mitigation": "A \u00a71031 exchange into a diversified net-lease position spreads tenant and geography risk at a higher cash yield.",
+        "residual": "Removed by diversification."
+      },
+      {
+        "id": "RK-09",
+        "class": "BAU",
+        "risk": "Local labour-market softness",
+        "evidence": "Total nonfarm payrolls +0.5% year on year, information sector (5.7%), financial activities (1.7%), government (1.1%); unemployment 4.4%.",
+        "source_id": "S-BLS-EAG",
+        "likelihood": "Possible",
+        "impact": "Medium \u2014 lunch traffic and franchisee margins are the first casualties.",
+        "mitigation": "Underwrite to the franchised AUV of $1.874M, not to a peak.",
+        "residual": "Shared with any LA retail asset."
+      },
+      {
+        "id": "RK-10",
+        "class": "BAU",
+        "risk": "Operating-cost inflation without matching menu pricing",
+        "evidence": "CPI food away from home +2.8% vs headline CPI 3.7% and energy +20.3%; a 2\u20133% contractual rent escalator outruns the tenant's pricing power.",
+        "source_id": "S-BLS-CPI",
+        "likelihood": "Likely",
+        "impact": "Medium \u2014 margin compression raises the probability of non-renewal (RK-02).",
+        "mitigation": "Prefer a flat or CPI-capped structure in any extension, or exit before the next reset.",
+        "residual": "Shared."
+      },
+      {
+        "id": "RK-11",
+        "class": "BAU",
+        "risk": "Transfer-tax friction on exit",
+        "evidence": "LA City base transfer tax 0.45%; Measure ULA adds 4% above $5.4M and 5.5% at/above $10.9M for closings after 2026-06-30.",
+        "source_id": "S-LA-ULA",
+        "likelihood": "Certain",
+        "impact": "Low below the ULA threshold; High above it ($436,000 of extra tax on a $10.9M sale).",
+        "mitigation": "Price the tax into the sale strategy; consider a structure or price point below the threshold where commercially sensible.",
+        "residual": "Priced in."
+      },
+      {
+        "id": "RK-12",
+        "class": "BLACK SWAN",
+        "risk": "Damaging earthquake",
+        "evidence": "The Los Angeles basin sits in the highest class of the USGS National Seismic Hazard Model; the region has a dense network of active faults. Commercial earthquake cover is usually a separate policy with a significant deductible.",
+        "source_id": "S-USGS-NSHM",
+        "likelihood": "Modelled at 1.5%/yr (5.7% cumulative by 2030, 14.3% by 2035)",
+        "impact": "Modelled at 15% of value (deductible, code-upgrade, six months of interruption). A severe event would be far worse and is partly uninsurable.",
+        "mitigation": "Obtain a seismic (PM L) study and a current CEA/commercial quote; hold in an entity that limits personal liability; carry business-interruption cover.",
+        "residual": "Cannot be eliminated \u2014 only transferred, priced or diversified away from."
+      },
+      {
+        "id": "RK-13",
+        "class": "BLACK SWAN",
+        "risk": "Wildfire, smoke event or wind-driven ember intrusion",
+        "evidence": "In 2025 CAL FIRE recorded 8,232 wildfires, 507,817 acres burned, 31 fatalities and 16,627 structures destroyed statewide; the Palisades (23,448 acres) and Eaton (14,021 acres) fires both burned in Los Angeles County. FEMA declared DR-4856-CA on 2025-01-08.",
+        "source_id": "S-CALFIRE-2025",
+        "likelihood": "Modelled at 3.0%/yr for a regional disruption",
+        "impact": "Modelled at 3% of a year's income; a direct burn-over would be catastrophic.",
+        "mitigation": "Defensible space, Class-A roof, ember-resistant vents; verify the site is outside a Very High Fire Hazard Severity Zone (requires the address).",
+        "residual": "Low for an urban central-LA parcel, but not zero \u2014 and insurance repricing is already regional."
+      },
+      {
+        "id": "RK-14",
+        "class": "BLACK SWAN",
+        "risk": "Insurance-market shock",
+        "evidence": "The FAIR Plan's residential assessment after the January 2025 fires was $1B and its exposure has grown sharply; press reporting puts policies in force at ~684,000 and exposure in the hundreds of billions. Commercial property is not written by the FAIR Plan, but surplus-lines pricing moves with the same catastrophe load.",
+        "source_id": "S-FEMA-4856",
+        "likelihood": "Possible",
+        "impact": "Medium \u2014 premium and deductible increases reduce NOI at the owner's expense where the lease caps recoveries.",
+        "mitigation": "Confirm the lease's insurance provisions and whether the tenant or owner carries the policy; obtain a binding quote before closing any sale.",
+        "residual": "Shared."
+      },
+      {
+        "id": "RK-15",
+        "class": "BLACK SWAN",
+        "risk": "Civil disturbance or prolonged street closure",
+        "evidence": "Central Los Angeles has experienced repeated protest and closure events; no official statistic quantifies the property-level effect.",
+        "source_id": null,
+        "likelihood": "Possible",
+        "impact": "Low\u2013Medium (days to weeks of lost trade; physical damage usually insured)",
+        "mitigation": "Physical hardening; confirm business-interruption coverage; avoid a lease that requires the owner to abate rent for civil authority action.",
+        "residual": "Low."
+      },
+      {
+        "id": "RK-16",
+        "class": "BLACK SWAN",
+        "risk": "Water supply or grid failure",
+        "evidence": "Southern California depends on imported water and an ageing grid; drought conditions drive both. No parcel-level official risk score was obtained in this pass.",
+        "source_id": null,
+        "likelihood": "Unlikely in any single year",
+        "impact": "Medium",
+        "mitigation": "Confirm the tenant carries utility-interruption cover; assess on-site water storage for fire defence.",
+        "residual": "Low."
+      },
+      {
+        "id": "RK-17",
+        "class": "BLACK SWAN",
+        "risk": "Pandemic or mandated closure",
+        "evidence": "The 2020\u201321 closures demonstrated that a QSR can lose dine-in and late-night trade for a year or more; drive-thru sites retained most of their volume.",
+        "source_id": null,
+        "likelihood": "Rare",
+        "impact": "High",
+        "mitigation": "Drive-thru presence is the single best structural hedge; confirm it exists (PR-10).",
+        "residual": "Low."
+      },
+      {
+        "id": "RK-18",
+        "class": "BLACK SWAN",
+        "risk": "Policy shock specific to California QSR",
+        "evidence": "Sector-specific wage floors and scheduling rules raise the tenant's cost base. The current fast-food wage rate could not be verified from a DIR page in this pass, so no figure is asserted.",
+        "source_id": null,
+        "likelihood": "Possible",
+        "impact": "Medium \u2014 pushes marginal units toward closure, which is exactly the RK-03 mechanism.",
+        "mitigation": "Track the Fast Food Council's annual determinations; treat any increase as a renewal-probability haircut.",
+        "residual": "Shared."
+      }
+    ]
+  },
+  "projection": {
+    "generated_at": "2026-11-06T15:00:00Z",
+    "seed": 20261106,
+    "paths_per_case": 20000,
+    "horizon_years": 10.0,
+    "units": "Terminal wealth per $1.00 of current annual NOI. NPV of all cash flows and the terminal sale, compounded at the 10-yr Treasury (4.84%).",
+    "anchors": [
+      {
+        "key": "risk_free",
+        "value": 0.0484,
+        "source_id": "S-TREASURY",
+        "note": "10-yr Treasury par yield, 2026-11-05"
+      },
+      {
+        "key": "cpi_la",
+        "value": 0.037,
+        "source_id": "S-BLS-CPI",
+        "note": "CPI-U Los Angeles, 12 months to Sept 2026"
+      },
+      {
+        "key": "cpi_food_away",
+        "value": 0.028,
+        "source_id": "S-BLS-CPI",
+        "note": "Food away from home, 12 months to Sept 2026"
+      },
+      {
+        "key": "diversified_yield",
+        "value": 0.073,
+        "source_id": "S-O-10K",
+        "note": "Realty Income 2025 initial weighted-average cash yield"
+      },
+      {
+        "key": "diversified_growth",
+        "value": 0.013,
+        "source_id": "S-O-10K",
+        "note": "Realty Income 2025 same-store rental revenue growth"
+      }
+    ],
+    "assumptions": [
+      {
+        "key": "going_in_cap",
+        "base": 0.06,
+        "range": [
+          0.052,
+          0.07
+        ],
+        "basis": "Net-lease pricing band for a 3-9 year NNN QSR in LA. No government publisher produces single-asset cap rates; anchored to the 4.84% 10-yr Treasury plus a 110-215 bp risk premium, and cross-checked against diversified net-lease acquisition yields of 7.0-7.3% (SEC filings).",
+        "type": "model_assumption"
+      },
+      {
+        "key": "exit_cap_2036",
+        "base": 0.065,
+        "range": [
+          0.05,
+          0.09
+        ],
+        "basis": "Exit cap in 2036 = today's cap plus term/rate drift. Range spans 50 bp of compression to 250 bp of expansion.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "contract_rent_growth",
+        "base": 0.025,
+        "range": [
+          0.005,
+          0.045
+        ],
+        "basis": "Typical NNN escalator of 2-3%/yr. CPI-U Los Angeles is 3.7%, so a 2.5% fixed bump is a real (inflation-eroding) escalator.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "market_rent_growth",
+        "base": 0.03,
+        "range": [
+          0.005,
+          0.055
+        ],
+        "basis": "Retail market rent trend for the sub-market; CPI-anchored.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "nonrecoverable_opex",
+        "base": 0.04,
+        "range": [
+          0.04,
+          0.04
+        ],
+        "basis": "4% of NOI kept back for structural/roof/parking-lot reserves and non-recoverable CAM leakage, even under a true NNN lease.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "sale_cost",
+        "base": 0.025,
+        "range": [
+          0.025,
+          0.025
+        ],
+        "basis": "2.0% brokerage plus ~0.45% LA City transfer tax and closing costs. Measure ULA (4%/5.5%) is excluded because it does not bite below $5.4M. [S-LA-ULA]",
+        "type": "model_assumption"
+      },
+      {
+        "key": "renewal_prob",
+        "base": 0.55,
+        "range": [
+          0.35,
+          0.75
+        ],
+        "basis": "Uniform draw 35-75%. The tenant is most likely a franchisee (93% of the Jack in the Box system is franchised) and the brand is executing 50-100 closures in FY2026, so renewal is not the owner's to grant.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "renewal_term",
+        "base": 10,
+        "range": [
+          10,
+          10
+        ],
+        "basis": "Assumed 10-year extension with 2-3% bumps.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "renewal_cost",
+        "base": 0.02,
+        "range": [
+          0.02,
+          0.02
+        ],
+        "basis": "2% of annual rent for renewal TI/leasing commissions.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "vacancy_penalty",
+        "base": 0.0125,
+        "range": [
+          0.0125,
+          0.0125
+        ],
+        "basis": "+125 bp to exit cap when selling an asset facing a rollover (buyer prices 12 months of downtime and TI).",
+        "type": "model_assumption"
+      },
+      {
+        "key": "relet_cost",
+        "base": 0.06,
+        "range": [
+          0.06,
+          0.06
+        ],
+        "basis": "6% of value for 12 months of lost rent plus TI/LC on a re-let.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "walt_premium",
+        "base": 0.0035,
+        "range": [
+          0.0035,
+          0.0035
+        ],
+        "basis": "-35 bp to exit cap for a freshly renewed 10-yr lease (buyers pay for weighted-average lease term).",
+        "type": "model_assumption"
+      },
+      {
+        "key": "p_quake",
+        "base": 0.015,
+        "range": [
+          0.015,
+          0.015
+        ],
+        "basis": "Annual probability that a damaging earthquake causes >$1M of loss at this location. Southern California sits in the highest USGS hazard class [S-USGS-NSHM]; 1.5%/yr is a modelling judgement, not an official USGS probability for this parcel.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "quake_loss",
+        "base": 0.15,
+        "range": [
+          0.15,
+          0.15
+        ],
+        "basis": "15% of value lost to deductible, uninsured code-upgrade and 6 months of business interruption.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "p_disruption",
+        "base": 0.03,
+        "range": [
+          0.03,
+          0.03
+        ],
+        "basis": "Annual probability of a regional shock (smoke event, wildfire-driven disruption, civil disturbance, extended outage) costing 3% of income. CAL FIRE counted 8,232 wildfires and 16,627 structures destroyed in 2025 alone [S-CALFIRE-2025].",
+        "type": "model_assumption"
+      },
+      {
+        "key": "disruption_loss",
+        "base": 0.03,
+        "range": [
+          0.03,
+          0.03
+        ],
+        "basis": "3% of that year's income.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "p_cap_shock",
+        "base": 0.06,
+        "range": [
+          0.06,
+          0.06
+        ],
+        "basis": "Annual probability of a permanent +100 bp repricing of the exit cap.",
+        "type": "model_assumption"
+      },
+      {
+        "key": "p_tenant_default",
+        "base": 0.05,
+        "range": [
+          0.05,
+          0.05
+        ],
+        "basis": "Annual hazard that the franchisee stops paying before lease expiry. Jack in the Box has closed 86 units in FY2025 and guided to 50-100 more in FY2026, and reported higher franchise bad-debt expense [S-JACK-Q4FY25][S-JACK-Q3FY26].",
+        "type": "model_assumption"
+      },
+      {
+        "key": "p_div_shock",
+        "base": 0.03,
+        "range": [
+          0.03,
+          0.03
+        ],
+        "basis": "Annual probability of a +60 bp repricing for the diversified portfolio (portfolio effect reduces single-asset dispersion).",
+        "type": "model_assumption"
+      }
+    ],
+    "cases": [
+      {
+        "id": "EXP-2030",
+        "expiry_label": "Lease expires 2030 (earliest in the stated window)",
+        "years_to_expiry": 3.15,
+        "results": {
+          "A": {
+            "mean": 33.3899,
+            "median": 33.2161,
+            "p10": 29.332,
+            "p25": 31.1296,
+            "p75": 35.4892,
+            "p90": 37.6638,
+            "prob_below_todays_value": 0.0,
+            "cagr_p50": 0.0713
+          },
+          "B": {
+            "mean": 26.6427,
+            "median": 27.2391,
+            "p10": 22.5688,
+            "p25": 25.35,
+            "p75": 28.4129,
+            "p90": 29.3809,
+            "prob_below_todays_value": 0.0001,
+            "cagr_p50": 0.0503
+          },
+          "C": {
+            "mean": 29.9214,
+            "median": 28.9543,
+            "p10": 22.6197,
+            "p25": 26.2232,
+            "p75": 34.1553,
+            "p90": 37.6903,
+            "prob_below_todays_value": 0.0001,
+            "cagr_p50": 0.0567
+          },
+          "win_rates": {
+            "A_beats_B": 0.9933,
+            "A_beats_C": 0.7231,
+            "C_beats_B": 0.4491
+          },
+          "diagnostics": {
+            "renewal_rate": 0.4496,
+            "default_rate": 0.1879,
+            "quake_rate": 0.0568,
+            "median_going_in_cap": 0.0601,
+            "median_exit_cap": 0.0675
+          }
+        }
+      },
+      {
+        "id": "EXP-2032",
+        "expiry_label": "Lease expires mid-2032 (mid-point of the stated window)",
+        "years_to_expiry": 5.65,
+        "results": {
+          "A": {
+            "mean": 33.4331,
+            "median": 33.2634,
+            "p10": 29.4863,
+            "p25": 31.1977,
+            "p75": 35.4835,
+            "p90": 37.6257,
+            "prob_below_todays_value": 0.0,
+            "cagr_p50": 0.0714
+          },
+          "B": {
+            "mean": 26.2131,
+            "median": 26.7003,
+            "p10": 22.1932,
+            "p25": 24.13,
+            "p75": 28.3231,
+            "p90": 29.5815,
+            "prob_below_todays_value": 0.0005,
+            "cagr_p50": 0.0481
+          },
+          "C": {
+            "mean": 28.897,
+            "median": 28.3148,
+            "p10": 22.2289,
+            "p25": 24.4732,
+            "p75": 32.7661,
+            "p90": 36.5734,
+            "prob_below_todays_value": 0.0005,
+            "cagr_p50": 0.0543
+          },
+          "win_rates": {
+            "A_beats_B": 0.9817,
+            "A_beats_C": 0.7713,
+            "C_beats_B": 0.399
+          },
+          "diagnostics": {
+            "renewal_rate": 0.399,
+            "default_rate": 0.2635,
+            "quake_rate": 0.0879,
+            "median_going_in_cap": 0.0601,
+            "median_exit_cap": 0.0688
+          }
+        }
+      },
+      {
+        "id": "EXP-2035",
+        "expiry_label": "Lease expires 2035 (latest in the stated window)",
+        "years_to_expiry": 9.15,
+        "results": {
+          "A": {
+            "mean": 33.4225,
+            "median": 33.2834,
+            "p10": 29.4355,
+            "p25": 31.1977,
+            "p75": 35.497,
+            "p90": 37.5864,
+            "prob_below_todays_value": 0.0,
+            "cagr_p50": 0.0715
+          },
+          "B": {
+            "mean": 25.9071,
+            "median": 26.0141,
+            "p10": 21.7974,
+            "p25": 23.5759,
+            "p75": 28.1513,
+            "p90": 29.9105,
+            "prob_below_todays_value": 0.0004,
+            "cagr_p50": 0.0454
+          },
+          "C": {
+            "mean": 27.7627,
+            "median": 27.0426,
+            "p10": 21.8022,
+            "p25": 23.6978,
+            "p75": 31.1909,
+            "p90": 35.0248,
+            "prob_below_todays_value": 0.0004,
+            "cagr_p50": 0.0495
+          },
+          "win_rates": {
+            "A_beats_B": 0.9596,
+            "A_beats_C": 0.8215,
+            "C_beats_B": 0.3306
+          },
+          "diagnostics": {
+            "renewal_rate": 0.3307,
+            "default_rate": 0.3992,
+            "quake_rate": 0.1426,
+            "median_going_in_cap": 0.0601,
+            "median_exit_cap": 0.0712
+          }
+        }
+      }
+    ],
+    "breakeven_exit_cap": {
+      "EXP-2030": 0.0468,
+      "EXP-2032": 0.0471,
+      "EXP-2035": 0.0472,
+      "meaning": "The 2036 exit cap at which holding to expiry equals selling now. If you believe the 2036 exit cap will be BELOW this number, holding wins. Above it, selling now wins."
+    },
+    "breakeven_grid": [
+      {
+        "going_in_cap": 0.05,
+        "years_to_expiry": 3.15,
+        "breakeven_exit_cap_2036": 0.0353
+      },
+      {
+        "going_in_cap": 0.05,
+        "years_to_expiry": 5.65,
+        "breakeven_exit_cap_2036": 0.0345
+      },
+      {
+        "going_in_cap": 0.05,
+        "years_to_expiry": 9.15,
+        "breakeven_exit_cap_2036": 0.0324
+      },
+      {
+        "going_in_cap": 0.055,
+        "years_to_expiry": 3.15,
+        "breakeven_exit_cap_2036": 0.0409
+      },
+      {
+        "going_in_cap": 0.055,
+        "years_to_expiry": 5.65,
+        "breakeven_exit_cap_2036": 0.0406
+      },
+      {
+        "going_in_cap": 0.055,
+        "years_to_expiry": 9.15,
+        "breakeven_exit_cap_2036": 0.0394
+      },
+      {
+        "going_in_cap": 0.06,
+        "years_to_expiry": 3.15,
+        "breakeven_exit_cap_2036": 0.0468
+      },
+      {
+        "going_in_cap": 0.06,
+        "years_to_expiry": 5.65,
+        "breakeven_exit_cap_2036": 0.0471
+      },
+      {
+        "going_in_cap": 0.06,
+        "years_to_expiry": 9.15,
+        "breakeven_exit_cap_2036": 0.0472
+      },
+      {
+        "going_in_cap": 0.065,
+        "years_to_expiry": 3.15,
+        "breakeven_exit_cap_2036": 0.0528
+      },
+      {
+        "going_in_cap": 0.065,
+        "years_to_expiry": 5.65,
+        "breakeven_exit_cap_2036": 0.0538
+      },
+      {
+        "going_in_cap": 0.065,
+        "years_to_expiry": 9.15,
+        "breakeven_exit_cap_2036": 0.0559
+      },
+      {
+        "going_in_cap": 0.07,
+        "years_to_expiry": 3.15,
+        "breakeven_exit_cap_2036": 0.0591
+      },
+      {
+        "going_in_cap": 0.07,
+        "years_to_expiry": 5.65,
+        "breakeven_exit_cap_2036": 0.061
+      },
+      {
+        "going_in_cap": 0.07,
+        "years_to_expiry": 9.15,
+        "breakeven_exit_cap_2036": 0.0657
+      }
+    ],
+    "sensitivity_hold_minus_sell": [
+      {
+        "going_in_cap": 0.055,
+        "exit_cap_2036": 0.055,
+        "hold_minus_sell": -6.0423
+      },
+      {
+        "going_in_cap": 0.055,
+        "exit_cap_2036": 0.06,
+        "hold_minus_sell": -6.932
+      },
+      {
+        "going_in_cap": 0.055,
+        "exit_cap_2036": 0.065,
+        "hold_minus_sell": -7.7535
+      },
+      {
+        "going_in_cap": 0.055,
+        "exit_cap_2036": 0.07,
+        "hold_minus_sell": -8.5144
+      },
+      {
+        "going_in_cap": 0.055,
+        "exit_cap_2036": 0.075,
+        "hold_minus_sell": -9.2211
+      },
+      {
+        "going_in_cap": 0.06,
+        "exit_cap_2036": 0.055,
+        "hold_minus_sell": -3.6877
+      },
+      {
+        "going_in_cap": 0.06,
+        "exit_cap_2036": 0.06,
+        "hold_minus_sell": -4.5231
+      },
+      {
+        "going_in_cap": 0.06,
+        "exit_cap_2036": 0.065,
+        "hold_minus_sell": -5.2964
+      },
+      {
+        "going_in_cap": 0.06,
+        "exit_cap_2036": 0.07,
+        "hold_minus_sell": -6.0143
+      },
+      {
+        "going_in_cap": 0.06,
+        "exit_cap_2036": 0.075,
+        "hold_minus_sell": -6.6825
+      },
+      {
+        "going_in_cap": 0.065,
+        "exit_cap_2036": 0.055,
+        "hold_minus_sell": -1.7606
+      },
+      {
+        "going_in_cap": 0.065,
+        "exit_cap_2036": 0.06,
+        "hold_minus_sell": -2.5467
+      },
+      {
+        "going_in_cap": 0.065,
+        "exit_cap_2036": 0.065,
+        "hold_minus_sell": -3.2759
+      },
+      {
+        "going_in_cap": 0.065,
+        "exit_cap_2036": 0.07,
+        "hold_minus_sell": -3.9543
+      },
+      {
+        "going_in_cap": 0.065,
+        "exit_cap_2036": 0.075,
+        "hold_minus_sell": -4.5869
+      }
+    ],
+    "sensitivity_note": "Deterministic, base assumptions, 5.6-year expiry. Positive means holding to expiry produces more terminal wealth than selling now."
+  },
+  "decision": {
+    "id": "decision",
+    "recommended": "SELL \u2014 market the property now and close within 12\u201318 months, using a \u00a71031 exchange into a diversified net-lease position. Do not simply hold to the 2030\u20132035 expiry.",
+    "confidence": "Moderate-to-high on the ranking (sell > renew-then-sell > hold), low on the absolute numbers, because the going-in cap rate, rent and basis are unverified placeholders.",
+    "options": [
+      {
+        "id": "OPT-A",
+        "name": "Sell now (Q4 2026 \u2013 2027)",
+        "description": "List at the current bid for 5+ years of NNN term, close, and complete a \u00a71031 exchange into a diversified net-lease portfolio or DST interests.",
+        "model_median": 33.26,
+        "model_p10": 29.49,
+        "model_p90": 37.63,
+        "model_cagr": 0.0714,
+        "wins_vs_hold": 0.9817,
+        "pros": "Captures today's pricing while term remains. Immediately lifts cash yield from an assumed 6.0% to a benchmarked 7.3%. Removes single-tenant, single-asset, single-block risk. Defers gain under \u00a71031 instead of realising it. Removes the 2030\u20132035 rollover from the owner's life.",
+        "cons": "Gives up the land/redevelopment optionality and the (unverified) Prop 13 low basis. Requires a 1031 replacement within statutory deadlines, which is an execution risk. Brokerage and city transfer tax are paid now.",
+        "best_if": "The owner's objective is wealth preservation with manageable risk, and there is no multi-generational estate plan requiring the step-up in basis."
+      },
+      {
+        "id": "OPT-B",
+        "name": "Sell in 2027\u20132028 with 5+ years of term",
+        "description": "Hold for 12\u201324 more months of income, then market the asset while at least five years of term remain. The model does not separately price the delay; the figures shown are the mid-dated sell-now case, which the delay is assumed to approximate.",
+        "model_median": 33.26,
+        "model_p10": 29.49,
+        "model_p90": 37.63,
+        "model_cagr": 0.0714,
+        "wins_vs_hold": 0.9817,
+        "pros": "Nearly identical model outcome to OPT-A. Adds a year or two of rent, and allows time to obtain a broker opinion of value, an ALTA survey, a Phase I and a seismic study before going to market. A cleaner sale process.",
+        "cons": "Each year consumed is a year of lease term burned \u2014 the asset's main pricing lever. Rate risk is live: the 10-year has already moved 65 bp in 2026.",
+        "best_if": "Documents are incomplete (likely, given what is missing here) or the owner needs a tax-planning year."
+      },
+      {
+        "id": "OPT-C",
+        "name": "Negotiate an early extension, then sell",
+        "description": "Offer the tenant a 10-year extension at market rent with a modest TI contribution, then sell into a long-WALT bid.",
+        "model_median": 28.31,
+        "model_p10": 22.23,
+        "model_p90": 36.57,
+        "model_cagr": 0.0543,
+        "wins_vs_hold": 0.7713,
+        "pros": "If it works, the asset becomes a long-lease, bond-like product that trades at a tighter cap: the model gives it the fattest right tail of any single-asset strategy (P90 36.57). Keeps the land.",
+        "cons": "Requires tenant consent that the owner does not control. Any TI or rent concession is paid by the owner. It doubles down on a franchisor that is closing 50\u2013100 units a year.",
+        "best_if": "The tenant will sign a 10-year extension at or above market with a creditworthy guaranty, and the owner wants to keep the real estate."
+      },
+      {
+        "id": "OPT-D",
+        "name": "Hold to expiry (2030\u20132035), then decide",
+        "description": "Collect rent to expiry and deal with the rollover when it arrives.",
+        "model_median": 26.7,
+        "model_p10": 22.19,
+        "model_p90": 29.58,
+        "model_cagr": 0.0481,
+        "wins_vs_hold": 0.0,
+        "pros": "No transaction cost now; keeps the (unverified) low Prop 13 basis and any estate-planning step-up. Highest cumulative rent if the tenant survives.",
+        "cons": "Worst median and worst downside of the four. Concentrates the entire outcome on a tenant with a 19\u201340% modelled default probability and a franchisor in retrenchment. By 2030 the asset may have only a few years of term \u2014 the least liquid point in a net-lease asset's life.",
+        "best_if": "The owner is elderly, intends to hold until death for a basis step-up, and does not need liquidity or diversification."
+      }
+    ],
+    "gates": [
+      {
+        "gate": "G1 \u2014 Verify the lease",
+        "trigger": "Lease, amendments, guaranty and estoppel obtained",
+        "action_if_pass": "Replace the 2030\u20132035 placeholder with actual dates, options and escalators, then re-run the model.",
+        "action_if_fail": "Do not sign anything; a sale cannot be marketed without an estoppel."
+      },
+      {
+        "gate": "G2 \u2014 Verify the tenant",
+        "trigger": "Confirm franchisee vs. corporate; obtain franchisee financials and the franchisor's closure-list answer",
+        "action_if_pass": "If a creditworthy operator with >5 years of term: OPT-B becomes viable.",
+        "action_if_fail": "If the unit is on a closure list or the franchisee is stressed: accelerate to OPT-A."
+      },
+      {
+        "gate": "G3 \u2014 Broker opinion of value",
+        "trigger": "Two independent BOVs quoting a going-in cap",
+        "action_if_pass": "If the indicated cap is 6.5% or higher, the sell-now advantage narrows but persists; re-run the model with the real cap.",
+        "action_if_fail": "If the indicated cap is below 5.5%, selling is even more clearly correct."
+      },
+      {
+        "gate": "G4 \u2014 Replacement property",
+        "trigger": "Identified 1031 replacement yielding \u22657.0% with investment-grade or multi-tenant credit",
+        "action_if_pass": "Execute OPT-A.",
+        "action_if_fail": "If no replacement can be identified, compare a taxable sale plus a diversified liquid portfolio before proceeding \u2014 do not exchange into a worse asset just to defer tax."
+      },
+      {
+        "gate": "G5 \u2014 Estate objective",
+        "trigger": "Owner's age, health and estate plan",
+        "action_if_pass": "If the intent is a hold-until-death basis step-up, OPT-D can dominate on an after-tax, multi-generational basis and the ranking above does not apply.",
+        "action_if_fail": "Proceed with OPT-A or OPT-B."
+      }
+    ],
+    "tax_strategy": [
+      "Any sale should be structured as a \u00a71031 exchange: the gain is deferred, not forgiven, and the old basis carries into the replacement property.",
+      "Expect unrecaptured \u00a71250 gain (the depreciation already taken) to be taxed at up to 25%, with long-term capital gain at up to 20% plus any net investment income tax, on the portion that is not deferred.",
+      "\u00a71031 applies to real property only. A diversified net-lease position can be assembled through a DST or a small portfolio of net-leased assets; both are real property.",
+      "California does not follow every federal deferral automatically. A California basis-tracking form is required when replacement property is outside California \u2014 confirm with a CPA before signing.",
+      "Do not let the tax tail wag the investment dog: exchanging into a worse asset to defer tax converts a good decision into a bad one."
+    ],
+    "risk_budget": {
+      "statement": "The recommended path is the only one of the four whose modelled 10th-percentile outcome stays above today's value (P10 29.33 vs a starting value of ~16.67 per $1 of NOI). Every hold strategy carries a materially wider range and a 4.5\u20135.7% median compound return versus 7.1%.",
+      "max_single_tenant_exposure": "Sell down to zero single-tenant exposure at this location; replace with a portfolio in which no single tenant is material.",
+      "liquidity": "Keep the 1031 replacement in assets that can be sold or fractionalised; DST interests are illiquid for their term, so size the position to the owner's liquidity needs.",
+      "insurance": "Before closing, obtain a seismic study and a binding property quote. If either is unavailable on commercial terms, that is itself a sell signal."
+    },
+    "what_would_change_the_answer": [
+      "A verified going-in cap materially above 7.0% (i.e. the asset is cheaper than assumed) would make holding competitive.",
+      "A signed 10-year extension with a creditworthy guarantor at market rent would move OPT-C to the top of the ranking.",
+      "A credible redevelopment path \u2014 rezoning or a general-plan designation that supports a much higher-and-better use \u2014 would create land value not captured by the income model.",
+      "A hold-until-death estate objective makes the after-tax, multi-generational comparison decisive, and this model does not capture it.",
+      "A sustained fall in long Treasury yields back toward 3.5% would compress cap rates and reward holding \u2014 but it would also raise the value at which the owner could sell."
+    ],
+    "privacy_note": "This recommendation contains no address, parcel number, owner identity, rent, basis or financial statement. It is written so that it can be published without exposing OWNER-01."
+  },
+  "sources": [
+    {
+      "id": "S-BLS-EAG",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "title": "Economy at a Glance \u2014 Los Angeles-Long Beach-Anaheim, CA (data extracted 2026-11-05)",
+      "url": "https://www.bls.gov/eag/eag.ca_losangeles_msa.htm",
+      "type": "official",
+      "covers": "Unemployment, payroll employment by sector, CPI"
+    },
+    {
+      "id": "S-BLS-CPI",
+      "publisher": "U.S. Bureau of Labor Statistics, Western Information Office",
+      "title": "Consumer Price Index, Los Angeles area \u2014 September 2026 (released 2026-10-14)",
+      "url": "https://www.bls.gov/regions/west/news-release/consumerpriceindex_losangeles.htm",
+      "type": "official",
+      "covers": "CPI-U detail: food away from home, shelter, energy"
+    },
+    {
+      "id": "S-CENSUS-CITY",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts \u2014 Los Angeles city, California (V2025 population; 2020-2024 ACS)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia/PST045225",
+      "type": "official",
+      "covers": "Population, income, poverty, education, housing, retail sales"
+    },
+    {
+      "id": "S-CENSUS-COUNTY",
+      "publisher": "U.S. Census Bureau",
+      "title": "QuickFacts \u2014 Los Angeles County, California (V2025 population; 2020-2024 ACS)",
+      "url": "https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045225",
+      "type": "official",
+      "covers": "Population, income, poverty, establishments, retail sales"
+    },
+    {
+      "id": "S-TREASURY",
+      "publisher": "U.S. Department of the Treasury",
+      "title": "Daily Treasury Par Yield Curve Rates \u2014 November 2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+      "type": "official",
+      "covers": "Constant-maturity Treasury yields used as the discount-rate anchor"
+    },
+    {
+      "id": "S-FED-OMO",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Open Market Operations \u2014 FOMC target rate history",
+      "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "type": "official",
+      "covers": "Federal funds target range and 2026 policy change"
+    },
+    {
+      "id": "S-JACK-Q4FY25",
+      "publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 8-K, Exhibit 99.1",
+      "title": "Jack in the Box Inc. Reports Fourth Quarter and Full-Year 2025 Earnings (2025-11-19)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000070/ex991-q425earningsrelease.htm",
+      "type": "official",
+      "covers": "Same-store sales, unit counts, closures, FY2026 guidance"
+    },
+    {
+      "id": "S-JACK-Q3FY26",
+      "publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 8-K, Exhibit 99.1",
+      "title": "Jack in the Box Inc. Reports Third Quarter 2026 Earnings (2026-08-12)",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+      "type": "official",
+      "covers": "Latest unit count, same-store sales, Del Taco divestiture completion, refinancing"
+    },
+    {
+      "id": "S-JACK-10K",
+      "publisher": "U.S. Securities and Exchange Commission \u2014 Jack in the Box Inc. Form 10-K (FY2025)",
+      "title": "Jack in the Box Inc. Annual Report on Form 10-K for fiscal year ended 2025-09-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+      "type": "official",
+      "covers": "Lease structure, subleasing to franchisees, restaurant AUV, segment data"
+    },
+    {
+      "id": "S-O-10K",
+      "publisher": "U.S. Securities and Exchange Commission \u2014 Realty Income Corp. (CIK 726728)",
+      "title": "Realty Income Corp. FY2025 Form 10-K / earnings 8-K (filed 2026-02-24), accession 0000726728-26-000011",
+      "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000011/0000726728-26-000011-index.htm",
+      "type": "official",
+      "covers": "Net-lease acquisition cash yields and same-store rent growth (diversified benchmark)"
+    },
+    {
+      "id": "S-IRS-946",
+      "publisher": "Internal Revenue Service",
+      "title": "Publication 946 (2025), How To Depreciate Property",
+      "url": "https://www.irs.gov/publications/p946",
+      "type": "official",
+      "covers": "39-year nonresidential recovery period; bonus depreciation rules"
+    },
+    {
+      "id": "S-IRS-1031",
+      "publisher": "Internal Revenue Service",
+      "title": "Like-kind exchanges \u2014 Real estate tax tips",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+      "type": "official",
+      "covers": "IRC \u00a71031 deferral, real-property-only rule"
+    },
+    {
+      "id": "S-IRS-409",
+      "publisher": "Internal Revenue Service",
+      "title": "Topic no. 409, Capital gains and losses",
+      "url": "https://www.irs.gov/taxtopics/tc409",
+      "type": "official",
+      "covers": "Long-term capital gain rates; 25% max on unrecaptured \u00a71250 gain; NIIT reference"
+    },
+    {
+      "id": "S-RTC-93",
+      "publisher": "State of California \u2014 Legislative Information (Revenue and Taxation Code)",
+      "title": "Revenue and Taxation Code \u00a793 \u2014 Property tax rates ($4 per $100 at 25% assessment ratio)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=93",
+      "type": "official",
+      "covers": "The 1% ad valorem levy created by Article XIII A"
+    },
+    {
+      "id": "S-RTC-51",
+      "publisher": "State of California \u2014 Legislative Information (Revenue and Taxation Code)",
+      "title": "Revenue and Taxation Code \u00a751 \u2014 Base year value; 2% annual inflation factor cap",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=51",
+      "type": "official",
+      "covers": "Assessment growth cap; decline-in-value and disaster adjustments"
+    },
+    {
+      "id": "S-LA-ULA",
+      "publisher": "City of Los Angeles, Office of Finance",
+      "title": "Real Property Transfer Tax and Measure ULA FAQ (thresholds updated for closings after 2026-06-30)",
+      "url": "https://finance.lacity.gov/faq/measure-ula",
+      "type": "official",
+      "covers": "City transfer tax 0.45%; ULA 4% / 5.5% thresholds"
+    },
+    {
+      "id": "S-CALFIRE-2025",
+      "publisher": "CAL FIRE (California Department of Forestry and Fire Protection)",
+      "title": "2025 Fire Season Incident Archive",
+      "url": "https://www.fire.ca.gov/incidents/2025/",
+      "type": "official",
+      "covers": "2025 wildfire acreage, fatalities, structures destroyed; Palisades/Eaton/Hughes"
+    },
+    {
+      "id": "S-FEMA-4856",
+      "publisher": "Federal Emergency Management Agency",
+      "title": "DR-4856-CA California Wildfires and Straight-line Winds",
+      "url": "https://www.fema.gov/disaster/4856",
+      "type": "official",
+      "covers": "January 2025 Los Angeles County disaster declaration"
+    },
+    {
+      "id": "S-USGS-NSHM",
+      "publisher": "U.S. Geological Survey, Earthquake Hazards Program",
+      "title": "National Seismic Hazard Model",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/national-seismic-hazard-model",
+      "type": "official",
+      "covers": "Seismic hazard basis for the Los Angeles basin"
+    },
+    {
+      "id": "S-METRO-DLINE",
+      "publisher": "Los Angeles County Metropolitan Transportation Authority (Metro)",
+      "title": "Metro D Line Subway Extension \u2014 Section 1 opened May 8, 2026",
+      "url": "https://www.metro.net/projects/westside/",
+      "type": "official",
+      "covers": "Transit investment along the Wilshire corridor"
+    },
+    {
+      "id": "S-DOF",
+      "publisher": "State of California, Department of Finance",
+      "title": "Population Projections (Baseline 2024, Vintage 2026)",
+      "url": "https://dof.ca.gov/forecasting/demographics/projections/",
+      "type": "official",
+      "covers": "State/county population projections (published as spreadsheet files)"
+    },
+    {
+      "id": "S-ASSESSOR",
+      "publisher": "Los Angeles County Assessor",
+      "title": "Assessor portal \u2014 decline-in-value (Prop 8) and disaster relief programs",
+      "url": "https://assessor.lacounty.gov/",
+      "type": "official",
+      "covers": "Assessment relief mechanics for value decline and disaster damage"
+    },
+    {
+      "id": "S-LAHSA",
+      "publisher": "Los Angeles Homeless Services Authority",
+      "title": "Greater Los Angeles Homeless Count",
+      "url": "https://www.lahsa.org/",
+      "type": "official",
+      "covers": "Point-in-time homelessness estimates (2026 results published 2026-07-24)"
+    },
+    {
+      "id": "S-CDE",
+      "publisher": "California Department of Education",
+      "title": "DataQuest / School Accountability Report Cards",
+      "url": "https://www.cde.ca.gov/ds/",
+      "type": "official",
+      "covers": "School enrollment and performance data (not retrieved in this pass)"
+    },
+    {
+      "id": "S-DIR",
+      "publisher": "California Department of Industrial Relations",
+      "title": "Minimum wage / Fast Food Council",
+      "url": "https://www.dir.ca.gov/dlse/",
+      "type": "official",
+      "covers": "Wage floors relevant to QSR tenant economics (page not retrievable in this pass)"
+    },
+    {
+      "id": "SRC-INPUT",
+      "publisher": "OWNER-01 brief (internal, no public record)",
+      "title": "Owner-stated parameters, stored de-identified",
+      "url": "",
+      "type": "input",
+      "covers": "Asset type, brand, approximate sub-market, lease-expiry window"
+    }
+  ]
+}
