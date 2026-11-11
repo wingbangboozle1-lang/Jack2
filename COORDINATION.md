@@ -1284,3 +1284,49 @@ Claimed by Arena session on branch `arena/6d8f5d05-jack2`. All work isolated in 
 ## Scope discipline
 
 Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. No other session's files edited.
+
+---
+
+# Session N — `session-fe9d2a91` (branch `arena/fe9d2a91-jack2`) — FINAL INTEGRATION — claim 2026-11-11T02:10Z
+
+**Status at claim time (read before claiming).** `main` at `ab596f9` (PR #39). Every task of Sessions A–M is
+marked `done` / `needs review`. The newest commit on any remote branch is 2026-11-10T01:26Z — more than 24 hours
+old — so no live claim exists under the 60-minute rule. Open PRs #5, #6, #10, #14, #18, #30, #38, #40 are stale
+heads of finished sessions.
+
+**Platform constraint (same as every earlier session).** Arena pins this session to `arena/fe9d2a91-jack2`; a
+separate `session-<id>/<task>` branch cannot be created, so this branch doubles as the integration branch and
+the pull-request head. Scope isolation is by path, as listed below.
+
+**Why a final integration and not a fifteenth workbook.** The brief reserves the shared outputs (the table data,
+the site index and the navigation) for one final integration session that re-verifies the combined data and
+publishes a single site. Fourteen workbooks now sit side by side with different numbers and different headline
+answers; the root landing page tells the reader which of fourteen to open. This session consolidates: **one
+re-verified evidence base, one site at the root, every earlier workbook preserved unmodified as an archive.**
+
+## Task board — Session N claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| N-01 | Read board, detect live sessions, claim scope | in progress | session-fe9d2a91 | `COORDINATION.md` (append only) |
+| N-02 | Repository review: inventory of every workbook and unmerged branch, privacy scan incl. commit metadata, CI review, irregularity register | claimed | session-fe9d2a91 | `integration/data/irregularities.json`, `integration/data/archive.json` |
+| N-03 | Line-by-line re-verification against official sources, access date 2026-11-11; one consolidated evidence base; cross-check of earlier workbooks' rows against it | claimed | session-fe9d2a91 | `integration/data/sources.json`, `integration/data/facts.json`, `integration/research/**` |
+| N-04 | Projection system: area projection from official forecasts + lease/decision model (deterministic scenarios, seeded Monte Carlo, black-swan shocks), with tests | claimed | session-fe9d2a91 | `integration/model.py`, `integration/data/assumptions.json`, `integration/tests/**` |
+| N-05 | Open-questions register (what is known, what is missing, how to find it), risk register per decision, decision analysis, executive summary | claimed | session-fe9d2a91 | `integration/data/{questions,risks,decisions,requirements}.json` |
+| N-06 | **Final integration of shared outputs**: single site at the root (landing + category subpages + Flagged for Review); archive index of all earlier workbooks | claimed | session-fe9d2a91 | root `*.html`, `assets/**`, `data/**`, `favicon.svg`, `workspaces.html`, `integration/build_site.py` |
+| N-07 | Relocate the previous root workbook (Session B's build) with `git mv` to `session-742b6a03/`, exactly as Session A's root build was archived to `session-1944e5a3/` on 2026-11-06. Nothing deleted. | claimed | session-fe9d2a91 | previous root `*.html`, `tools/**`, `data/**`, `assets/**` → `session-742b6a03/**` |
+| N-08 | Verifier (source link on every row, blank-if-unverified, privacy scan, link check over the whole tree incl. archives, model reproducibility) and CI | claimed | session-fe9d2a91 | `integration/verify.py`, `.github/workflows/verify.yml` |
+| N-09 | PR to `main`, merge, confirm GitHub Pages deploy, record PR link and result here | claimed | session-fe9d2a91 | `COORDINATION.md`, `README.md` |
+
+**Not touched:** the contents of `session-*/` (other than the relocation target `session-742b6a03/`), `docs/`,
+`model/`, `research/`, `scripts/`. Their pages link upward only to `../index.html`, `../workspaces.html` and to
+each other; all of those targets keep existing, so no archived page needs an edit.
+
+**Handoff rule.** If this claim is more than 60 minutes old with no commits on `arena/fe9d2a91-jack2`, any session
+may take over and note it here.
+
+### Handoff log (Session N)
+
+- **2026-11-11T02:10Z** — read `COORDINATION.md` (1,246 lines), `README.md`, the file tree, `.github/workflows/verify.yml`;
+  listed 39 remote `arena/*` branches and 8 open PRs; ran the existing CI steps locally on `ab596f9` (all pass).
+  Claimed N-01…N-09. Claim committed and pushed before any other work.

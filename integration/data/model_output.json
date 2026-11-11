@@ -1,0 +1,1351 @@
+{
+ "meta": {
+  "session": "session-fe9d2a91",
+  "generated_by": "integration/model.py",
+  "unit": "Per $100 of current yearly rent, before tax, unless a row says otherwise",
+  "inputs_checked_against_quotes": 90
+ },
+ "base_case": {
+  "discount_rate_pct": 4.98,
+  "buyer_yield_at_renewal_pct": 7.3,
+  "renewal_probability_pct": 76.2,
+  "renewal_rent_pct_of_old": 103.1,
+  "vacant_price_pct_of_leased": 62.8,
+  "rent_growth_pct": 0.0
+ },
+ "computed": [
+  {
+   "id": "K-001",
+   "page": "market-economics",
+   "group": "Population",
+   "label": "Gap between the state and federal counts of county residents",
+   "value": "158,501 (1.6%)",
+   "formula": "9,853,435 - 9,694,934",
+   "inputs": [
+    "M-007",
+    "M-002"
+   ],
+   "sources": [
+    "S-CENSUS",
+    "S-DOF-P2A"
+   ],
+   "status": "computed",
+   "note": "Two official series, two methods. Neither is corrected here."
+  },
+  {
+   "id": "K-002",
+   "page": "projection-model",
+   "group": "Residents",
+   "label": "Projected change in county residents, 2025 to 2030",
+   "value": "-1.28%",
+   "formula": "9,727,305 / 9,853,435 - 1",
+   "inputs": [
+    "J-001",
+    "M-007"
+   ],
+   "sources": [
+    "S-DOF-P2A"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-003",
+   "page": "projection-model",
+   "group": "Residents",
+   "label": "Projected change in county residents, 2025 to 2035",
+   "value": "-1.47%",
+   "formula": "9,708,647 / 9,853,435 - 1",
+   "inputs": [
+    "J-002",
+    "M-007"
+   ],
+   "sources": [
+    "S-DOF-P2A"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-004",
+   "page": "projection-model",
+   "group": "Residents",
+   "label": "Projected change in county residents, 2025 to 2040",
+   "value": "-2.19%",
+   "formula": "9,637,524 / 9,853,435 - 1",
+   "inputs": [
+    "J-003",
+    "M-007"
+   ],
+   "sources": [
+    "S-DOF-P2A"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-005",
+   "page": "projection-model",
+   "group": "Residents",
+   "label": "Projected change in county residents, 2025 to 2050",
+   "value": "-4.69%",
+   "formula": "9,390,823 / 9,853,435 - 1",
+   "inputs": [
+    "J-004",
+    "M-007"
+   ],
+   "sources": [
+    "S-DOF-P2A"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-006",
+   "page": "projection-model",
+   "group": "School enrollment",
+   "label": "Projected change in county school enrollment, 2025-26 to 2035-36",
+   "value": "-19.4% (-240,771 students)",
+   "formula": "1,002,045 / 1,242,816 - 1",
+   "inputs": [
+    "J-011",
+    "M-092"
+   ],
+   "sources": [
+    "S-DOF-K12"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-007",
+   "page": "market-economics",
+   "group": "Schools",
+   "label": "Change in county school enrollment over the last ten years",
+   "value": "-18.4%",
+   "formula": "1,242,816 / 1,523,212 - 1",
+   "inputs": [
+    "M-092",
+    "M-093"
+   ],
+   "sources": [
+    "S-DOF-K12"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-008",
+   "page": "projection-model",
+   "group": "Jobs",
+   "label": "Projected growth in regional food-service jobs, per year",
+   "value": "0.43% a year",
+   "formula": "(938 / 832) ^ (1/28) - 1",
+   "inputs": [
+    "J-021"
+   ],
+   "sources": [
+    "S-SCAG"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-010",
+   "page": "tenant",
+   "group": "Restaurants",
+   "label": "Change in the number of restaurants over the year",
+   "value": "-2.4% (-53)",
+   "formula": "2,115 / 2,168 - 1",
+   "inputs": [
+    "T-001",
+    "T-003"
+   ],
+   "sources": [
+    "S-JACK-8K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-011",
+   "page": "tenant",
+   "group": "Restaurants",
+   "label": "Closures in the latest quarter, as a yearly rate",
+   "value": "3.5% a year",
+   "formula": "17 / 2,128 x 52/12 (a 12-week quarter)",
+   "inputs": [
+    "T-004",
+    "T-0041"
+   ],
+   "sources": [
+    "S-JACK-8K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-012",
+   "page": "tenant",
+   "group": "Restaurants",
+   "label": "Closures the company expects in fiscal 2026, as a share of all restaurants",
+   "value": "2.3% to 2.8%",
+   "formula": "50 to 60 / 2,136",
+   "inputs": [
+    "T-007",
+    "T-006"
+   ],
+   "sources": [
+    "S-JACK-10K",
+    "S-JACK-8K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-013",
+   "page": "tenant",
+   "group": "Restaurants",
+   "label": "Closure programme as a share of all restaurants",
+   "value": "6.9% to 9.2%",
+   "formula": "150 to 200 / 2,168 (the earliest count read by this session)",
+   "inputs": [
+    "T-008",
+    "T-003"
+   ],
+   "sources": [
+    "S-JACK-8K",
+    "S-JACK-PLAN"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-014",
+   "page": "tenant",
+   "group": "Restaurants",
+   "label": "Share of restaurants in California",
+   "value": "44.1%",
+   "formula": "941 / 2,136",
+   "inputs": [
+    "T-005",
+    "T-006"
+   ],
+   "sources": [
+    "S-JACK-10K"
+   ],
+   "status": "computed",
+   "note": "California is the company's largest market."
+  },
+  {
+   "id": "K-015",
+   "page": "tenant",
+   "group": "Balance sheet",
+   "label": "Debt less cash, against forecast yearly earnings before interest, tax and depreciation",
+   "value": "6.3 times",
+   "formula": "(1,428,667 + 44,160 - 46,318) / 1,000 / 227.5",
+   "inputs": [
+    "T-030",
+    "T-031",
+    "T-032",
+    "T-019"
+   ],
+   "sources": [
+    "S-JACK-8K"
+   ],
+   "status": "computed",
+   "note": "Uses the midpoint of the company's forecast. Lease obligations are not included."
+  },
+  {
+   "id": "K-016",
+   "page": "tenant",
+   "group": "Sales and earnings",
+   "label": "Change in rent collected from franchisees",
+   "value": "-4.6% in the quarter; -6.8% year to date",
+   "formula": "73,017 / 76,538 - 1; 242,526 / 260,254 - 1",
+   "inputs": [
+    "T-015"
+   ],
+   "sources": [
+    "S-JACK-8K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-017",
+   "page": "tenant",
+   "group": "Sales and earnings",
+   "label": "Margin the company keeps on rent passed through from franchisees",
+   "value": "31.9%",
+   "formula": "(73,017 - 49,694) / 73,017",
+   "inputs": [
+    "T-015",
+    "T-016"
+   ],
+   "sources": [
+    "S-JACK-8K"
+   ],
+   "status": "computed",
+   "note": "On many sites the company is the tenant and sublets to a franchisee."
+  },
+  {
+   "id": "K-018",
+   "page": "tenant",
+   "group": "How it holds its restaurant sites",
+   "label": "Sites on land the company does not own: who the landlord's tenant is",
+   "value": "Company 80.4%; franchisee 19.6%",
+   "formula": "(565 + 1,020) / 1,972; 387 / 1,972",
+   "inputs": [
+    "T-051",
+    "T-052",
+    "T-053"
+   ],
+   "sources": [
+    "S-JACK-10K"
+   ],
+   "status": "computed",
+   "note": "A share of all such sites, not a statement about the subject property."
+  },
+  {
+   "id": "K-019",
+   "page": "tenant",
+   "group": "How it holds its restaurant sites",
+   "label": "Of those sites, ground leases where the company owns the building",
+   "value": "28.7%",
+   "formula": "565 / 1,972",
+   "inputs": [
+    "T-051",
+    "T-052",
+    "T-053"
+   ],
+   "sources": [
+    "S-JACK-10K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-020",
+   "page": "valuation",
+   "group": "What buyers pay for leased properties",
+   "label": "Purchase yield above the 10-year Treasury yield",
+   "value": "2.32 points (NNN REIT); 1.62 points (Realty Income)",
+   "formula": "7.3 - 4.98; 6.6 - 4.98",
+   "inputs": [
+    "C-010",
+    "C-001",
+    "C-017"
+   ],
+   "sources": [
+    "S-NNN-8K",
+    "S-O-8K",
+    "S-TSY"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-021",
+   "page": "valuation",
+   "group": "What happens when leases expire",
+   "label": "Share of expiring leases renewed by the same tenant",
+   "value": "77.7% in the quarter; 76.2% in nine months",
+   "formula": "213 / 274; 818 / 1,074",
+   "inputs": [
+    "C-031",
+    "C-030",
+    "C-035",
+    "C-034"
+   ],
+   "sources": [
+    "S-O-8K"
+   ],
+   "status": "computed",
+   "note": "A portfolio of 15,536 properties across many industries. Not specific to restaurants or to Los Angeles."
+  },
+  {
+   "id": "K-022",
+   "page": "valuation",
+   "group": "What happens when leases expire",
+   "label": "Share of expiring leases taken by a new tenant",
+   "value": "3.3% in the quarter; 6.1% in nine months",
+   "formula": "9 / 274; 66 / 1,074",
+   "inputs": [
+    "C-032",
+    "C-030",
+    "C-036",
+    "C-034"
+   ],
+   "sources": [
+    "S-O-8K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-023",
+   "page": "valuation",
+   "group": "What happens when leases expire",
+   "label": "Vacant sales for every 100 expiring leases",
+   "value": "21.2 in the quarter; 16.9 in nine months",
+   "formula": "58 / 274; 181 / 1,074",
+   "inputs": [
+    "C-033",
+    "C-030",
+    "C-037",
+    "C-034"
+   ],
+   "sources": [
+    "S-O-8K"
+   ],
+   "status": "computed",
+   "note": "Vacant sales include properties that became vacant in earlier periods, so the three shares do not add to 100."
+  },
+  {
+   "id": "K-024",
+   "page": "valuation",
+   "group": "What vacant buildings sell for",
+   "label": "Price per square foot: vacant against leased",
+   "value": "$213 against $249 in the quarter; $152 against $242 in nine months",
+   "formula": "13,409k / 63,000; 37,299k / 150,000; 59,124k / 389,000; 64,145k / 265,000",
+   "inputs": [
+    "C-040",
+    "C-041",
+    "C-042",
+    "C-043"
+   ],
+   "sources": [
+    "S-NNN-8K"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-025",
+   "page": "valuation",
+   "group": "What vacant buildings sell for",
+   "label": "A vacant property's price as a share of a leased one's, per square foot",
+   "value": "85.6% in the quarter; 62.8% in nine months",
+   "formula": "vacant price per square foot / leased price per square foot",
+   "inputs": [
+    "C-040",
+    "C-041",
+    "C-042",
+    "C-043"
+   ],
+   "sources": [
+    "S-NNN-8K"
+   ],
+   "status": "computed",
+   "note": "National averages over different buildings. In central Los Angeles the land may set the price; only an appraisal can say."
+  },
+  {
+   "id": "K-026",
+   "page": "valuation",
+   "group": "Interest rates",
+   "label": "10-year Treasury yield today against the February 2026 federal projection",
+   "value": "0.68 to 0.88 points higher",
+   "formula": "4.98 - 4.3; 4.98 - 4.1",
+   "inputs": [
+    "C-001",
+    "J-032"
+   ],
+   "sources": [
+    "S-CBO",
+    "S-TSY"
+   ],
+   "status": "computed",
+   "note": "Higher long-term rates lower what buyers pay for fixed rent."
+  },
+  {
+   "id": "K-030",
+   "page": "taxes",
+   "group": "Tax on the sale price",
+   "label": "County transfer tax as a percentage",
+   "value": "0.11%",
+   "formula": "0.55 / 500",
+   "inputs": [
+    "X-001"
+   ],
+   "sources": [
+    "S-RTC-11911"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-031",
+   "page": "taxes",
+   "group": "Tax on the sale price",
+   "label": "County and city transfer tax together, by sale price",
+   "value": "0.56% up to $5,400,000; 4.56% above that; 6.06% at $10,900,000 or more",
+   "formula": "0.11% + 0.45%; + 4%; + 5.5%",
+   "inputs": [
+    "X-001",
+    "X-002",
+    "X-004",
+    "X-005",
+    "X-003"
+   ],
+   "sources": [
+    "S-RTC-11911",
+    "S-ULA"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-032",
+   "page": "taxes",
+   "group": "Tax on the sale price",
+   "label": "Price needed above the first threshold to net more than a sale at exactly $5,400,000",
+   "value": "$5,626,320",
+   "formula": "5,400,000 x (1 - 0.56%) / (1 - 4.56%)",
+   "inputs": [
+    "X-003",
+    "X-002",
+    "X-004",
+    "X-001"
+   ],
+   "sources": [
+    "S-RTC-11911",
+    "S-ULA"
+   ],
+   "status": "computed",
+   "note": "A sale between $5,400,000 and $5,626,320 leaves the seller with less than a sale at $5,400,000."
+  },
+  {
+   "id": "K-033",
+   "page": "taxes",
+   "group": "Tax on the sale price",
+   "label": "Extra tax triggered by the first dollar above $5,400,000",
+   "value": "$216,000",
+   "formula": "5,400,000 x 4%",
+   "inputs": [
+    "X-003",
+    "X-004"
+   ],
+   "sources": [
+    "S-ULA"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-034",
+   "page": "taxes",
+   "group": "Tax on the gain",
+   "label": "Top federal and California rates on a long-term gain, added together",
+   "value": "37.1%",
+   "formula": "20 + 3.8 + 12.3 + 1",
+   "inputs": [
+    "X-020",
+    "X-023",
+    "X-025",
+    "X-027"
+   ],
+   "sources": [
+    "S-FTB",
+    "S-IRS-409",
+    "S-IRS-559",
+    "S-RTC-17043"
+   ],
+   "status": "computed",
+   "note": "An upper bound for a high-income California resident. The part of the gain that reflects past depreciation is taxed federally at up to 25% instead of 20%."
+  },
+  {
+   "id": "K-040",
+   "page": "hazards",
+   "group": "Earthquake",
+   "label": "Chance of a magnitude 6.7 or larger earthquake in the region before the lease expires",
+   "value": "11.5% by 2030; 24.0% by 2035",
+   "formula": "1 - (1 - 60%) ^ (years / 30), a constant yearly rate",
+   "inputs": [
+    "H-001"
+   ],
+   "sources": [
+    "S-USGS"
+   ],
+   "status": "computed",
+   "note": "Somewhere in the Los Angeles region. Not the chance of damage to this building."
+  },
+  {
+   "id": "K-041",
+   "page": "hazards",
+   "group": "Earthquake",
+   "label": "Chance of a magnitude 7 or larger earthquake in the region before the lease expires",
+   "value": "7.9% by 2030; 16.9% by 2035",
+   "formula": "1 - (1 - 46%) ^ (years / 30), a constant yearly rate",
+   "inputs": [
+    "H-002"
+   ],
+   "sources": [
+    "S-USGS"
+   ],
+   "status": "computed"
+  },
+  {
+   "id": "K-042",
+   "page": "tenant",
+   "group": "Restaurants",
+   "label": "Chance an average restaurant in the system closes before the lease expires",
+   "value": "9.0% to 13.1% by 2030; 19.2% to 27.2% by 2035",
+   "formula": "1 - (1 - rate) ^ years, at 2.3% and 3.5% a year",
+   "inputs": [
+    "T-007",
+    "T-006",
+    "T-004",
+    "T-0041"
+   ],
+   "sources": [
+    "S-JACK-10K",
+    "S-JACK-8K"
+   ],
+   "status": "computed",
+   "note": "Closures target underperforming restaurants. This restaurant's sales are not known, so its own chance may be far lower or higher. A closed restaurant still owes rent until the lease ends."
+  }
+ ],
+ "area_by_year": [
+  {
+   "year": 2025,
+   "residents": 9853435,
+   "residents_index": 100.0,
+   "students": 1242816,
+   "students_index": 100.0,
+   "us_wage_index": 100.0,
+   "flat_rent_real_2pct": 100.0,
+   "flat_rent_real_3pct": 100.0
+  },
+  {
+   "year": 2026,
+   "residents": 9811358,
+   "residents_index": 99.6,
+   "students": 1211279,
+   "students_index": 97.5,
+   "us_wage_index": 103.5,
+   "flat_rent_real_2pct": 98.0,
+   "flat_rent_real_3pct": 97.1
+  },
+  {
+   "year": 2027,
+   "residents": 9778629,
+   "residents_index": 99.2,
+   "students": 1184443,
+   "students_index": 95.3,
+   "us_wage_index": 106.8,
+   "flat_rent_real_2pct": 96.1,
+   "flat_rent_real_3pct": 94.3
+  },
+  {
+   "year": 2028,
+   "residents": 9754806,
+   "residents_index": 99.0,
+   "students": 1157464,
+   "students_index": 93.1,
+   "us_wage_index": 110.0,
+   "flat_rent_real_2pct": 94.2,
+   "flat_rent_real_3pct": 91.5
+  },
+  {
+   "year": 2029,
+   "residents": 9733907,
+   "residents_index": 98.8,
+   "students": 1129312,
+   "students_index": 90.9,
+   "us_wage_index": 113.3,
+   "flat_rent_real_2pct": 92.4,
+   "flat_rent_real_3pct": 88.8
+  },
+  {
+   "year": 2030,
+   "residents": 9727305,
+   "residents_index": 98.7,
+   "students": 1103771,
+   "students_index": 88.8,
+   "us_wage_index": 116.7,
+   "flat_rent_real_2pct": 90.6,
+   "flat_rent_real_3pct": 86.3
+  },
+  {
+   "year": 2031,
+   "residents": 9723118,
+   "residents_index": 98.7,
+   "students": 1081999,
+   "students_index": 87.1,
+   "us_wage_index": 120.2,
+   "flat_rent_real_2pct": 88.8,
+   "flat_rent_real_3pct": 83.7
+  },
+  {
+   "year": 2032,
+   "residents": 9721552,
+   "residents_index": 98.7,
+   "students": 1062841,
+   "students_index": 85.5,
+   "us_wage_index": 123.8,
+   "flat_rent_real_2pct": 87.1,
+   "flat_rent_real_3pct": 81.3
+  },
+  {
+   "year": 2033,
+   "residents": 9720980,
+   "residents_index": 98.7,
+   "students": 1045098,
+   "students_index": 84.1,
+   "us_wage_index": 127.5,
+   "flat_rent_real_2pct": 85.3,
+   "flat_rent_real_3pct": 78.9
+  },
+  {
+   "year": 2034,
+   "residents": 9716390,
+   "residents_index": 98.6,
+   "students": 1023360,
+   "students_index": 82.3,
+   "us_wage_index": 131.4,
+   "flat_rent_real_2pct": 83.7,
+   "flat_rent_real_3pct": 76.6
+  },
+  {
+   "year": 2035,
+   "residents": 9708647,
+   "residents_index": 98.5,
+   "students": 1002045,
+   "students_index": 80.6,
+   "us_wage_index": 135.3,
+   "flat_rent_real_2pct": 82.0,
+   "flat_rent_real_3pct": 74.4
+  },
+  {
+   "year": 2036,
+   "residents": 9698123,
+   "residents_index": 98.4,
+   "students": 983462,
+   "students_index": 79.1,
+   "us_wage_index": 139.4,
+   "flat_rent_real_2pct": 80.4,
+   "flat_rent_real_3pct": 72.2
+  }
+ ],
+ "events_before_expiry": [
+  {
+   "expiry_year": 2030,
+   "years": 4,
+   "quake_6_7": 11.5,
+   "quake_7_0": 7.9,
+   "quake_7_5": 4.8,
+   "closure_low": 9.0,
+   "closure_high": 13.1
+  },
+  {
+   "expiry_year": 2031,
+   "years": 5,
+   "quake_6_7": 14.2,
+   "quake_7_0": 9.8,
+   "quake_7_5": 6.0,
+   "closure_low": 11.2,
+   "closure_high": 16.2
+  },
+  {
+   "expiry_year": 2032,
+   "years": 6,
+   "quake_6_7": 16.7,
+   "quake_7_0": 11.6,
+   "quake_7_5": 7.2,
+   "closure_low": 13.2,
+   "closure_high": 19.1
+  },
+  {
+   "expiry_year": 2033,
+   "years": 7,
+   "quake_6_7": 19.2,
+   "quake_7_0": 13.4,
+   "quake_7_5": 8.3,
+   "closure_low": 15.3,
+   "closure_high": 21.9
+  },
+  {
+   "expiry_year": 2034,
+   "years": 8,
+   "quake_6_7": 21.7,
+   "quake_7_0": 15.2,
+   "quake_7_5": 9.4,
+   "closure_low": 17.3,
+   "closure_high": 24.6
+  },
+  {
+   "expiry_year": 2035,
+   "years": 9,
+   "quake_6_7": 24.0,
+   "quake_7_0": 16.9,
+   "quake_7_5": 10.5,
+   "closure_low": 19.2,
+   "closure_high": 27.2
+  }
+ ],
+ "hold_by_expiry_year": [
+  {
+   "expiry_year": 2030,
+   "years_of_rent_left": 4,
+   "pv_rent": 354.76,
+   "pv_expected_resale": 1054.44,
+   "hold_value": 1409.2,
+   "equivalent_sale_yield_pct": 7.1,
+   "hold_value_if_renewed": 1517.57,
+   "hold_value_if_vacant": 1062.94,
+   "yield_if_renewed_pct": 6.59,
+   "yield_if_vacant_pct": 9.41,
+   "gap_renewed_minus_vacant": 454.64,
+   "value_of_certain_renewal": 108.37,
+   "breakeven_renewal_probability_pct": {
+    "5.0": 206.1,
+    "5.5": 166.1,
+    "6.0": 132.8,
+    "6.5": 104.6,
+    "7.0": 80.4,
+    "7.5": 59.5,
+    "8.0": 41.1
+   }
+  },
+  {
+   "expiry_year": 2031,
+   "years_of_rent_left": 5,
+   "pv_rent": 433.19,
+   "pv_expected_resale": 1004.42,
+   "hold_value": 1437.61,
+   "equivalent_sale_yield_pct": 6.96,
+   "hold_value_if_renewed": 1540.84,
+   "hold_value_if_vacant": 1107.77,
+   "yield_if_renewed_pct": 6.49,
+   "yield_if_vacant_pct": 9.03,
+   "gap_renewed_minus_vacant": 433.07,
+   "value_of_certain_renewal": 103.23,
+   "breakeven_renewal_probability_pct": {
+    "5.0": 206.0,
+    "5.5": 164.0,
+    "6.0": 129.1,
+    "6.5": 99.5,
+    "7.0": 74.1,
+    "7.5": 52.1,
+    "8.0": 32.8
+   }
+  },
+  {
+   "expiry_year": 2032,
+   "years_of_rent_left": 6,
+   "pv_rent": 507.89,
+   "pv_expected_resale": 956.78,
+   "hold_value": 1464.67,
+   "equivalent_sale_yield_pct": 6.83,
+   "hold_value_if_renewed": 1563.0,
+   "hold_value_if_vacant": 1150.48,
+   "yield_if_renewed_pct": 6.4,
+   "yield_if_vacant_pct": 8.69,
+   "gap_renewed_minus_vacant": 412.53,
+   "value_of_certain_renewal": 98.33,
+   "breakeven_renewal_probability_pct": {
+    "5.0": 205.9,
+    "5.5": 161.9,
+    "6.0": 125.1,
+    "6.5": 94.1,
+    "7.0": 67.4,
+    "7.5": 44.3,
+    "8.0": 24.1
+   }
+  },
+  {
+   "expiry_year": 2033,
+   "years_of_rent_left": 7,
+   "pv_rent": 579.06,
+   "pv_expected_resale": 911.39,
+   "hold_value": 1490.45,
+   "equivalent_sale_yield_pct": 6.71,
+   "hold_value_if_renewed": 1584.11,
+   "hold_value_if_vacant": 1191.16,
+   "yield_if_renewed_pct": 6.31,
+   "yield_if_vacant_pct": 8.4,
+   "gap_renewed_minus_vacant": 392.96,
+   "value_of_certain_renewal": 93.67,
+   "breakeven_renewal_probability_pct": {
+    "5.0": 205.8,
+    "5.5": 159.6,
+    "6.0": 121.0,
+    "6.5": 88.4,
+    "7.0": 60.4,
+    "7.5": 36.2,
+    "8.0": 15.0
+   }
+  },
+  {
+   "expiry_year": 2034,
+   "years_of_rent_left": 8,
+   "pv_rent": 646.84,
+   "pv_expected_resale": 868.16,
+   "hold_value": 1515.0,
+   "equivalent_sale_yield_pct": 6.6,
+   "hold_value_if_renewed": 1604.22,
+   "hold_value_if_vacant": 1229.91,
+   "yield_if_renewed_pct": 6.23,
+   "yield_if_vacant_pct": 8.13,
+   "gap_renewed_minus_vacant": 374.32,
+   "value_of_certain_renewal": 89.22,
+   "breakeven_renewal_probability_pct": {
+    "5.0": 205.7,
+    "5.5": 157.2,
+    "6.0": 116.7,
+    "6.5": 82.4,
+    "7.0": 53.1,
+    "7.5": 27.6,
+    "8.0": 5.4
+   }
+  },
+  {
+   "expiry_year": 2035,
+   "years_of_rent_left": 9,
+   "pv_rent": 711.42,
+   "pv_expected_resale": 826.97,
+   "hold_value": 1538.39,
+   "equivalent_sale_yield_pct": 6.5,
+   "hold_value_if_renewed": 1623.38,
+   "hold_value_if_vacant": 1266.82,
+   "yield_if_renewed_pct": 6.16,
+   "yield_if_vacant_pct": 7.89,
+   "gap_renewed_minus_vacant": 356.56,
+   "value_of_certain_renewal": 84.99,
+   "breakeven_renewal_probability_pct": {
+    "5.0": 205.6,
+    "5.5": 154.6,
+    "6.0": 112.1,
+    "6.5": 76.2,
+    "7.0": 45.4,
+    "7.5": 18.7,
+    "8.0": -4.7
+   }
+  }
+ ],
+ "sensitivity_expiry_2032": {
+  "expiry_year": 2032,
+  "base_hold_value": 1464.67,
+  "rows": [
+   {
+    "case": "Tenant certainly renews",
+    "hold_value": 1563.0,
+    "change_pct": 6.7,
+    "equivalent_sale_yield_pct": 6.4,
+    "anchors": [
+     "C-035"
+    ]
+   },
+   {
+    "case": "Renewal chance 90%",
+    "hold_value": 1521.75,
+    "change_pct": 3.9,
+    "equivalent_sale_yield_pct": 6.57,
+    "anchors": [
+     "C-035"
+    ]
+   },
+   {
+    "case": "Renewal chance 50%",
+    "hold_value": 1356.74,
+    "change_pct": -7.4,
+    "equivalent_sale_yield_pct": 7.37,
+    "anchors": [
+     "C-035"
+    ]
+   },
+   {
+    "case": "Tenant certainly leaves",
+    "hold_value": 1150.48,
+    "change_pct": -21.5,
+    "equivalent_sale_yield_pct": 8.69,
+    "anchors": [
+     "C-035"
+    ]
+   },
+   {
+    "case": "Vacant building sells for 86% of leased price, not 63%",
+    "hold_value": 1520.31,
+    "change_pct": 3.8,
+    "equivalent_sale_yield_pct": 6.58,
+    "anchors": [
+     "C-040",
+     "C-041"
+    ]
+   },
+   {
+    "case": "Buyer wants 6.5% on the renewed lease, not 7.3%",
+    "hold_value": 1582.43,
+    "change_pct": 8.0,
+    "equivalent_sale_yield_pct": 6.32,
+    "anchors": [
+     "C-018"
+    ]
+   },
+   {
+    "case": "Buyer wants 7.8% on the renewed lease, not 7.3%",
+    "hold_value": 1403.34,
+    "change_pct": -4.2,
+    "equivalent_sale_yield_pct": 7.13,
+    "anchors": [
+     "C-012"
+    ]
+   },
+   {
+    "case": "Sale money would earn 6.6%, not 4.98%",
+    "hold_value": 1355.38,
+    "change_pct": -7.5,
+    "equivalent_sale_yield_pct": 7.38,
+    "anchors": [
+     "C-017"
+    ]
+   },
+   {
+    "case": "Sale money would earn 7.3%, not 4.98%",
+    "hold_value": 1311.44,
+    "change_pct": -10.5,
+    "equivalent_sale_yield_pct": 7.63,
+    "anchors": [
+     "C-010"
+    ]
+   },
+   {
+    "case": "Rent rises 2% a year until expiry",
+    "hold_value": 1588.84,
+    "change_pct": 8.5,
+    "equivalent_sale_yield_pct": 6.29,
+    "anchors": [
+     "T-054"
+    ]
+   },
+   {
+    "case": "Renewal rent 103.5% of old rent, not 103.1%",
+    "hold_value": 1467.79,
+    "change_pct": 0.2,
+    "equivalent_sale_yield_pct": 6.81,
+    "anchors": [
+     "C-038"
+    ]
+   }
+  ]
+ },
+ "stress_expiry_2032": {
+  "expiry_year": 2032,
+  "base_hold_value": 1464.67,
+  "rows": [
+   {
+    "case": "Tenant leaves at expiry",
+    "hold_value": 1150.48,
+    "change_pct": -21.5,
+    "years_of_rent_lost": 3.1,
+    "anchors": [
+     "T-008",
+     "C-042"
+    ]
+   },
+   {
+    "case": "Buyers' yields and interest rates 2 points higher",
+    "hold_value": 1147.57,
+    "change_pct": -21.7,
+    "years_of_rent_lost": 3.2,
+    "anchors": [
+     "C-001",
+     "C-005"
+    ]
+   },
+   {
+    "case": "Tenant leaves and yields are 2 points higher",
+    "hold_value": 927.34,
+    "change_pct": -36.7,
+    "years_of_rent_lost": 5.4,
+    "anchors": [
+     "T-008",
+     "C-001"
+    ]
+   },
+   {
+    "case": "Rent stops 2 years before expiry, then the building is sold vacant",
+    "hold_value": 997.34,
+    "change_pct": -31.9,
+    "years_of_rent_lost": 4.7,
+    "anchors": [
+     "T-033",
+     "C-042"
+    ]
+   },
+   {
+    "case": "Rent stops 2 years early, sold vacant, yields 2 points higher",
+    "hold_value": 789.27,
+    "change_pct": -46.1,
+    "years_of_rent_lost": 6.8,
+    "anchors": [
+     "T-033",
+     "C-001",
+     "C-042"
+    ]
+   }
+  ]
+ },
+ "extension_expiry_2032": {
+  "expiry_year": 2032,
+  "rows": [
+   {
+    "renewal_probability_pct": 0.0,
+    "is_base": false,
+    "hold_value": 1150.48,
+    "walk_away_rent_pct_of_current": 62.8,
+    "value_of_certainty": 412.53,
+    "value_of_certainty_years_of_rent": 4.13
+   },
+   {
+    "renewal_probability_pct": 25.0,
+    "is_base": false,
+    "hold_value": 1253.61,
+    "walk_away_rent_pct_of_current": 72.9,
+    "value_of_certainty": 309.39,
+    "value_of_certainty_years_of_rent": 3.09
+   },
+   {
+    "renewal_probability_pct": 50.0,
+    "is_base": false,
+    "hold_value": 1356.74,
+    "walk_away_rent_pct_of_current": 82.9,
+    "value_of_certainty": 206.26,
+    "value_of_certainty_years_of_rent": 2.06
+   },
+   {
+    "renewal_probability_pct": 76.2,
+    "is_base": true,
+    "hold_value": 1464.67,
+    "walk_away_rent_pct_of_current": 93.5,
+    "value_of_certainty": 98.33,
+    "value_of_certainty_years_of_rent": 0.98
+   },
+   {
+    "renewal_probability_pct": 90.0,
+    "is_base": false,
+    "hold_value": 1521.75,
+    "walk_away_rent_pct_of_current": 99.1,
+    "value_of_certainty": 41.25,
+    "value_of_certainty_years_of_rent": 0.41
+   },
+   {
+    "renewal_probability_pct": 100.0,
+    "is_base": false,
+    "hold_value": 1563.0,
+    "walk_away_rent_pct_of_current": 103.1,
+    "value_of_certainty": 0.0,
+    "value_of_certainty_years_of_rent": 0.0
+   }
+  ]
+ },
+ "after_sale_income": {
+  "note": "Yearly income per $100 of current rent after selling at the yield shown. Brokerage and closing costs are not included.",
+  "transfer_tax_pct": {
+   "up_to_5_4m": 0.56,
+   "above_5_4m": 4.56
+  },
+  "tax_rate_on_gain_pct": 37.1,
+  "rows": [
+   {
+    "sale_yield_pct": 5.0,
+    "price_per_100_rent": 2000.0,
+    "exchange_into_7_3_pct": 145.2,
+    "exchange_into_6_6_pct": 131.3,
+    "exchange_into_7_3_pct_upper_band": 139.3,
+    "taxable_then_treasury_gain_0": 99.0,
+    "taxable_then_treasury_gain_50": 80.6,
+    "taxable_then_treasury_gain_100": 62.1
+   },
+   {
+    "sale_yield_pct": 5.5,
+    "price_per_100_rent": 1818.18,
+    "exchange_into_7_3_pct": 132.0,
+    "exchange_into_6_6_pct": 119.3,
+    "exchange_into_7_3_pct_upper_band": 126.7,
+    "taxable_then_treasury_gain_0": 90.0,
+    "taxable_then_treasury_gain_50": 73.2,
+    "taxable_then_treasury_gain_100": 56.4
+   },
+   {
+    "sale_yield_pct": 6.0,
+    "price_per_100_rent": 1666.67,
+    "exchange_into_7_3_pct": 121.0,
+    "exchange_into_6_6_pct": 109.4,
+    "exchange_into_7_3_pct_upper_band": 116.1,
+    "taxable_then_treasury_gain_0": 82.5,
+    "taxable_then_treasury_gain_50": 67.1,
+    "taxable_then_treasury_gain_100": 51.7
+   },
+   {
+    "sale_yield_pct": 6.5,
+    "price_per_100_rent": 1538.46,
+    "exchange_into_7_3_pct": 111.7,
+    "exchange_into_6_6_pct": 101.0,
+    "exchange_into_7_3_pct_upper_band": 107.2,
+    "taxable_then_treasury_gain_0": 76.2,
+    "taxable_then_treasury_gain_50": 62.0,
+    "taxable_then_treasury_gain_100": 47.8
+   },
+   {
+    "sale_yield_pct": 7.0,
+    "price_per_100_rent": 1428.57,
+    "exchange_into_7_3_pct": 103.7,
+    "exchange_into_6_6_pct": 93.8,
+    "exchange_into_7_3_pct_upper_band": 99.5,
+    "taxable_then_treasury_gain_0": 70.7,
+    "taxable_then_treasury_gain_50": 57.5,
+    "taxable_then_treasury_gain_100": 44.4
+   },
+   {
+    "sale_yield_pct": 7.5,
+    "price_per_100_rent": 1333.33,
+    "exchange_into_7_3_pct": 96.8,
+    "exchange_into_6_6_pct": 87.5,
+    "exchange_into_7_3_pct_upper_band": 92.9,
+    "taxable_then_treasury_gain_0": 66.0,
+    "taxable_then_treasury_gain_50": 53.7,
+    "taxable_then_treasury_gain_100": 41.4
+   },
+   {
+    "sale_yield_pct": 8.0,
+    "price_per_100_rent": 1250.0,
+    "exchange_into_7_3_pct": 90.7,
+    "exchange_into_6_6_pct": 82.0,
+    "exchange_into_7_3_pct_upper_band": 87.1,
+    "taxable_then_treasury_gain_0": 61.9,
+    "taxable_then_treasury_gain_50": 50.4,
+    "taxable_then_treasury_gain_100": 38.8
+   }
+  ]
+ },
+ "simulation": {
+  "seed": 20261111,
+  "ranges": {
+   "renewed_by_same_tenant_pct": [
+    76.2,
+    77.7
+   ],
+   "new_tenant_pct": [
+    3.3,
+    6.1
+   ],
+   "renewal_rent_pct_of_old": [
+    103.1,
+    103.5
+   ],
+   "vacant_price_pct_of_leased": [
+    62.8,
+    85.6
+   ],
+   "buyer_yield_pct": [
+    6.5,
+    7.8
+   ]
+  },
+  "rows": [
+   {
+    "expiry_year": 2030,
+    "trials": 20000,
+    "share_relet_pct": 81.7,
+    "mean": 1485.83,
+    "p05": 1149.06,
+    "p25": 1460.07,
+    "p50": 1519.75,
+    "p75": 1587.25,
+    "p95": 1647.66,
+    "chance_hold_beats_sale_pct": {
+     "5.0": 0.0,
+     "5.5": 0.0,
+     "6.0": 0.0,
+     "6.5": 42.8,
+     "7.0": 81.8,
+     "7.5": 83.6,
+     "8.0": 88.2
+    }
+   },
+   {
+    "expiry_year": 2031,
+    "trials": 20000,
+    "share_relet_pct": 81.5,
+    "mean": 1509.35,
+    "p05": 1186.8,
+    "p25": 1485.67,
+    "p50": 1542.88,
+    "p75": 1606.87,
+    "p95": 1664.4,
+    "chance_hold_beats_sale_pct": {
+     "5.0": 0.0,
+     "5.5": 0.0,
+     "6.0": 4.2,
+     "6.5": 51.8,
+     "7.0": 81.7,
+     "7.5": 84.6,
+     "8.0": 90.3
+    }
+   },
+   {
+    "expiry_year": 2032,
+    "trials": 20000,
+    "share_relet_pct": 81.8,
+    "mean": 1534.75,
+    "p05": 1228.17,
+    "p25": 1510.97,
+    "p50": 1565.46,
+    "p75": 1627.31,
+    "p95": 1681.23,
+    "chance_hold_beats_sale_pct": {
+     "5.0": 0.0,
+     "5.5": 0.0,
+     "6.0": 10.2,
+     "6.5": 62.1,
+     "7.0": 82.6,
+     "7.5": 87.3,
+     "8.0": 93.3
+    }
+   },
+   {
+    "expiry_year": 2033,
+    "trials": 20000,
+    "share_relet_pct": 81.6,
+    "mean": 1556.04,
+    "p05": 1263.03,
+    "p25": 1534.23,
+    "p50": 1586.62,
+    "p75": 1644.1,
+    "p95": 1695.75,
+    "chance_hold_beats_sale_pct": {
+     "5.0": 0.0,
+     "5.5": 0.0,
+     "6.0": 16.2,
+     "6.5": 72.7,
+     "7.0": 83.2,
+     "7.5": 89.5,
+     "8.0": 95.9
+    }
+   },
+   {
+    "expiry_year": 2034,
+    "trials": 20000,
+    "share_relet_pct": 81.5,
+    "mean": 1577.84,
+    "p05": 1299.46,
+    "p25": 1556.38,
+    "p50": 1606.44,
+    "p75": 1661.26,
+    "p95": 1710.94,
+    "chance_hold_beats_sale_pct": {
+     "5.0": 0.0,
+     "5.5": 0.0,
+     "6.0": 22.8,
+     "6.5": 81.5,
+     "7.0": 84.8,
+     "7.5": 92.2,
+     "8.0": 98.4
+    }
+   },
+   {
+    "expiry_year": 2035,
+    "trials": 20000,
+    "share_relet_pct": 82.2,
+    "mean": 1600.17,
+    "p05": 1337.6,
+    "p25": 1579.55,
+    "p50": 1626.09,
+    "p75": 1678.19,
+    "p95": 1725.33,
+    "chance_hold_beats_sale_pct": {
+     "5.0": 0.0,
+     "5.5": 0.0,
+     "6.0": 30.4,
+     "6.5": 82.3,
+     "7.0": 87.3,
+     "7.5": 95.4,
+     "8.0": 99.8
+    }
+   }
+  ]
+ }
+}
