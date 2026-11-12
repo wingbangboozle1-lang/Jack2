@@ -1424,3 +1424,13 @@ Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch c
 
 ## Session O merge-conflict log (2026-11-12)
 While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site) merged to `main` (`bf595f2`). Merging `origin/main` into `arena/6596c3f2-jack2` conflicted in 4 files. Resolution, discarding nothing: `COORDINATION.md` — both sessions' appended text kept (single hunk de-marked); `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` — took main's side, then regenerated on the merged tree (they are build outputs). `tools/build_site.py` auto-merged: PR #47's root Suggestions navigation AND Session O's additive workspace row both present (verified by grep). Root `suggestions.html` from #47 is preserved as-is; Session O's distinct review-and-choose register remains at `session-6596c3f2/suggestions.html`.
+
+## Session O deployment record (2026-11-12)
+| Item | Value |
+|---|---|
+| PR | **#46** — https://github.com/wingbangboozle1-lang/Jack2/pull/46 (merged 2026-11-12T16:40:51Z, merge commit `58c39fe`) |
+| CI | PR checks pass (runs `43261056704`, `43261213673`); first run failed only on the repo-wide generated-files gate because adding files changes `session-f4f700c0` audit inventory — regenerated and committed (`26f352c`, `efeb6af`), no content altered |
+| Conflict | PR #47 merged to `main` mid-session; resolved per conflict log above, nothing discarded |
+| Pages | API `built`; `pages build and deployment` run `43261301878` success; `verify` on main `43261303068` success |
+| Live | https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/ (dashboard + suggestions fetched live and confirmed); Flagged: https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/flagged.html |
+| Post-merge fix | Dashboard ranking rows reordered to match CE values (E > D); follow-up PR from this branch |
