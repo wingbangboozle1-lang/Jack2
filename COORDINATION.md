@@ -1369,3 +1369,43 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session `620551ec` — 2026-11-12
+
+Claimed by Arena session on branch `arena/620551ec-jack2`. All new work isolated in
+`session-620551ec/**` plus the strictly additive shared edits named in 62-09 (each applied only if still
+absent after rebasing on `origin/main`). No other session's files are edited, regenerated or deleted.
+
+## Task board — Session 620551ec
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 62-01 | Read board, detect live/stale sessions, claim disjoint scope, push claim | done | session-620551ec | `COORDINATION.md` (append only) |
+| 62-02 | Fresh official-source verification, access date **2026-11-12**; every row source-linked; unverified values blank + flagged | claimed | session-620551ec | `session-620551ec/data/sources.json`, `session-620551ec/data/metrics.json` |
+| 62-03 | Pre-decision Q&A / missing-information register with acquisition methods | claimed | session-620551ec | `session-620551ec/data/questions.json`, `session-620551ec/questions.html` |
+| 62-04 | Suggestions register dedicated to improving decision making, with a review/selection workflow (proposed → under review → accepted/rejected), no changes implemented without owner selection | claimed | session-620551ec | `session-620551ec/data/suggestions.json`, `session-620551ec/suggestions.html` |
+| 62-05 | Deterministic projection model, BAU + black-swan hazards, expiry grid 2030–2035 | claimed | session-620551ec | `session-620551ec/scripts/model.py`, `session-620551ec/data/model_output.json` |
+| 62-06 | Risk register (every decision path × BAU + black swan) and decision analysis | claimed | session-620551ec | `session-620551ec/data/risks.json`, `session-620551ec/data/decisions.json` |
+| 62-07 | Clean dashboard: landing + category subpages, tables, executive summary, suggestions section, Flagged for Review | claimed | session-620551ec | `session-620551ec/**` |
+| 62-08 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check, model reproduction | claimed | session-620551ec | `session-620551ec/scripts/verify.py` |
+| 62-09 | Additive integration: rebase on `origin/main`, additive workspace row + CI step only if absent, PR → main, merge, confirm Pages deploy, record here | claimed | session-620551ec | `tools/build_site.py` (one additive row, only if absent), `README.md` (one additive line, only if absent), `.github/workflows/verify.yml` (one additive step), `session-620551ec/**`, `COORDINATION.md` |
+
+**Scope discipline.** This session writes only `session-620551ec/**` plus the additive shared edits named
+in 62-09. No prior session's page, dataset, script, model or CI step is edited. Stale PRs
+#5/#6/#10/#14/#18/#30/#38/#40 and open PR #41/#43 are left alone.
+
+**Privacy.** No owner name, address, APN/parcel, loan, account or tenant-contact identifier appears in
+this session's files or on its pages. Property facts only the owner can supply stay **blank** and flagged.
+
+**Verification rule.** A row is `verified` only when this session read the official publisher's page on
+2026-11-12 and recorded the URL in `session-620551ec/data/sources.json`. Everything else is blank and
+flagged. No value is copied from a prior session's workbook into a "verified" row.
+
+### Handoff / claim log
+
+- **2026-11-12, Session 620551ec**: read `COORDINATION.md` (1,371 lines), the file tree, `README.md`,
+  `gh pr list` (open: #41 DRAFT consolidation, #43 Session N, plus stale #5/#6/#10/#14/#18/#30/#38/#40;
+  latest merged: #45) and `git status` (clean on `arena/620551ec-jack2` from `99c6519`). No live session
+  claimed `session-620551ec/**`. Claiming 62-01..62-09 and pushing this claim before any research.
