@@ -1,8 +1,8 @@
 {
   "as_of": "2026-11-08",
-  "files": 446,
-  "lines": 82909,
-  "bytes": 7320559,
+  "files": 505,
+  "lines": 89845,
+  "bytes": 8104213,
   "privacy_pattern_hits": 1,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [
@@ -14,16 +14,16 @@
   "structural_errors": 0,
   "workspaces": {
     "root/config": {
-      "files": 22,
-      "lines": 3070,
-      "bytes": 434853,
+      "files": 23,
+      "lines": 3315,
+      "bytes": 490843,
       "privacy_hits": 0,
       "structural_errors": 0
     },
     "root/historical-shared": {
       "files": 52,
-      "lines": 15793,
-      "bytes": 889850,
+      "lines": 15882,
+      "bytes": 903124,
       "privacy_hits": 1,
       "structural_errors": 0
     },
@@ -56,9 +56,9 @@
       "structural_errors": 0
     },
     "session-313ba936": {
-      "files": 26,
-      "lines": 3973,
-      "bytes": 589631,
+      "files": 27,
+      "lines": 4121,
+      "bytes": 612206,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -97,6 +97,13 @@
       "privacy_hits": 0,
       "structural_errors": 0
     },
+    "session-6596c3f2": {
+      "files": 25,
+      "lines": 731,
+      "bytes": 215216,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
     "session-6ad87c21": {
       "files": 25,
       "lines": 4921,
@@ -108,6 +115,20 @@
       "files": 19,
       "lines": 2996,
       "bytes": 197995,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
+    "session-7663f9db": {
+      "files": 31,
+      "lines": 5701,
+      "bytes": 466654,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
+    "session-95d0beb9": {
+      "files": 1,
+      "lines": 22,
+      "bytes": 9945,
       "privacy_hits": 0,
       "structural_errors": 0
     },
