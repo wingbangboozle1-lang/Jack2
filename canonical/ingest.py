@@ -88,3 +88,44 @@ def fact(fid, category, group, label, geo, period, value, src, quote="", status=
     doc["rows"] = [r for r in doc["rows"] if r["id"] != fid] + [row]
     _save(path, doc)
     return row
+
+
+def _all_rows():
+    rows = {}
+    if os.path.isdir(FACTS):
+        for name in sorted(os.listdir(FACTS)):
+            if name.endswith(".json"):
+                for r in _load(os.path.join(FACTS, name), {"rows": []})["rows"]:
+                    rows[r["id"]] = r
+    return rows
+
+
+def evaluate(expr, operands):
+    """Arithmetic only: operands are bound to x0, x1, ... No names, calls or attributes."""
+    assert re.fullmatch(r"[0-9x+\-*/(). ]+", expr), expr
+    env = {f"x{i}": float(str(v).replace(",", "")) for i, v in enumerate(operands)}
+    return eval(expr, {"__builtins__": {}}, env)  # noqa: S307 - expression is whitelisted above
+
+
+def computed(fid, category, group, label, geo, period, expr, operands, inputs, fmt, src,
+             formula, note=""):
+    """A value this workbook calculated from verified rows. Every operand must literally
+    appear in the quote of one of the input rows; the verifier recomputes the result."""
+    rows = _all_rows()
+    pool = set()
+    for rid in inputs:
+        assert rid in rows and rows[rid]["status"] == "verified", f"{fid}: input {rid} is not a verified row"
+        pool |= nums(rows[rid]["quote"])
+    for v in operands:
+        assert nums(str(v)) <= pool, f"{fid}: operand {v} is not in the quotes of {inputs}"
+    value = fmt.format(evaluate(expr, operands))
+    path = os.path.join(FACTS, category + ".json")
+    doc = _load(path, {"category": category, "rows": []})
+    row = {"id": fid, "category": category, "group": group, "label": label, "geo": geo,
+           "period": period, "value": value, "source": src, "status": "computed", "quote": "",
+           "checked": ACCESSED, "note": note, "reason": "", "obtain": "",
+           "calc": {"expr": expr, "operands": [str(v) for v in operands], "inputs": inputs,
+                    "fmt": fmt, "formula": formula}}
+    doc["rows"] = [r for r in doc["rows"] if r["id"] != fid] + [row]
+    _save(path, doc)
+    return row

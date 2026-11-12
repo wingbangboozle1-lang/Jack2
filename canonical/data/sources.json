@@ -90,6 +90,83 @@
    "accessed": "2026-11-12",
    "read": "read",
    "note": "Read on the access date (the 40 most recent filings)."
+  },
+  {
+   "id": "S-BEA",
+   "publisher": "U.S. Bureau of Economic Analysis",
+   "title": "News release BEA 26-08: Gross Domestic Product by County and Personal Income by County, 2024",
+   "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
+   "kind": "official statistics",
+   "published": "2026-02-05",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (release text). County tables are no longer included in the release; they sit in BEA's interactive application, which this session could not open, so county GDP is left blank."
+  },
+  {
+   "id": "S-DOF-P2A",
+   "publisher": "California Department of Finance, Demographic Research Unit",
+   "title": "Report P-2A: Total Population Projections, California Counties, 2020-2070 (Baseline 2024; Vintage 2026 release, March 2026)",
+   "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx",
+   "kind": "official projection",
+   "published": "2026-03-13",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Spreadsheet read on the access date: the California row and the Los Angeles row (FIPS 6037), all 51 years. Index page: https://dof.ca.gov/forecasting/demographics/projections/"
+  },
+  {
+   "id": "S-DOF-K12",
+   "publisher": "California Department of Finance, Demographic Research Unit",
+   "title": "California Public K-12 Graded Enrollment and High School Graduate Projections by County, 2026 Series (August 2026)",
+   "url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/",
+   "kind": "official projection",
+   "published": "August 2026",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Highlights page and the linked spreadsheet (Los Angeles rows 2009-10 to 2046-47) read on the access date. Spreadsheet: https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-graded-enrollment/CA_K-12_Enrollment_Series-2026.xlsx"
+  },
+  {
+   "id": "S-CDE",
+   "publisher": "California Department of Education",
+   "title": "District Profile: Los Angeles Unified",
+   "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
+   "kind": "official statistics",
+   "published": "school year 2025-26",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date. Only the enrollment block is used; contact details on the page are not reproduced."
+  },
+  {
+   "id": "S-FED",
+   "publisher": "Board of Governors of the Federal Reserve System",
+   "title": "Open Market Operations: FOMC's target federal funds rate or range, change and level",
+   "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+   "kind": "official statistics",
+   "published": "latest change 2026-09-17",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (tables for 2026 back to 2022)."
+  },
+  {
+   "id": "S-NNN-8K",
+   "publisher": "NNN REIT, Inc. (filed with the U.S. Securities and Exchange Commission)",
+   "title": "Form 8-K, Exhibit 99.1: third quarter 2026 results, November 4, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/nnn-ex99_1.htm",
+   "kind": "company filing",
+   "published": "2026-11-04",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: highlights, acquisitions and dispositions tables, debt summary and lines-of-trade table (segments 1 and 5 of 6). A national portfolio; none of it is specific to Los Angeles or to the tenant."
+  },
+  {
+   "id": "S-O-8K",
+   "publisher": "Realty Income Corporation (filed with the U.S. Securities and Exchange Commission)",
+   "title": "Form 8-K, Exhibit 99.1: operating results for the three and nine months ended September 30, 2026 (November 2, 2026)",
+   "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
+   "kind": "company filing",
+   "published": "2026-11-02",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: highlights, portfolio update, changes-in-occupancy table and investment summary (segments 1 and 2 of 10). A global portfolio; none of it is specific to Los Angeles or to the tenant."
   }
  ]
 }
