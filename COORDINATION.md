@@ -1391,3 +1391,36 @@ Platform note: pinned to `arena/6596c3f2-jack2`; that branch doubles as the PR/i
 - Irregularities flagged F-01..F-08 on `session-6596c3f2/flagged.html`, including DOF vintage conflict (B06 blank), BLS Oct YoY lapse gap (F-02), Eaton count timing variance (F-04), JACK debt-definition conflict (B08 blank), LAUSD official-release gap (B05 blank), no official cap rate (B07 blank).
 - Checks: `session-6596c3f2/scripts/verify.py` PASS (0 errors); root `tools/check_site.py` all checks passed (221 pages scanned); root rebuild changed only `workspaces.html` (one additive Session O row via `tools/build_site.py`); one additive CI step in `.github/workflows/verify.yml`. No prior session file edited.
 - Privacy: placeholders only; PII regex scan clean; private values blank by design.
+
+# Session `40933769` — 2026-11-12
+
+Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch cannot be renamed or switched). Before claiming, read the board, inspected the root builder and index, checked open PRs, and confirmed the existing root / Session N4 / Session 6d8f05 builders pass their local checks. No other session claims a dedicated suggestions page. Scope is deliberately additive and does not edit another session's data or workbook.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| 409-01 Dedicated decision-suggestions page, with explicit review/selection gates, source links, and a privacy-safe action sequence | claimed | session-40933769 | `tools/build_site.py` (additive builder + landing link), generated `index.html`, new `suggestions.html`, `COORDINATION.md` |
+| 409-02 Verify build, links, source citations, blank-value discipline, and PII | claimed | session-40933769 | Same scope |
+
+**Privacy:** no private property/owner/tenant identifiers, contact details, or financial facts will be requested or published. Parcel-specific facts remain unknown; actions point to private document review or official parcel tools.
+
+**Coordination note:** this is an additive root-site feature, not a rewrite of shared data, existing recommendations, or other workbooks. The suggestion table will distinguish evidence-backed considerations from proposed actions and will not present model thresholds as parcel-specific facts.
+
+**Initial verification:** `python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py` passed on the base tree; Session N4's model/build/verifier and Session 6d8f05's build/verifier also passed unchanged. These checks prove reproducibility and structural rules, not that every external source URL remains live or that assumptions are appropriate to the private parcel.
+
+### Session 40933769 close-out
+
+| Task | Status | Owner |
+|---|---|---|
+| 409-01 Dedicated suggestions page + prominent landing link | done | session-40933769 |
+| 409-02 Build, link, citation, blank-value and privacy verification | done | session-40933769 |
+
+**Delivered:** `suggestions.html` adds eight proposed actions, five explicitly unselected disposition paths (sell, extend-then-sell, renew/hold, temporary hold, alternate use), decision gates and a clear recommendation to preserve options through parallel, nonbinding sale preparation / extension inquiry while verifying property-specific inputs. Every proposal and path links to one or more official sources in the root source ledger. The source records are dated 2026-11-08; this change introduces no new statistics. The page links readers to the newer Session N4 workbook (2026-11-11) and its review flags. The root landing links directly to the page and the historical root navigation now contains 17 pages.
+
+**Decision limitation:** No defensible asset-specific sell/renew winner can be calculated from the public brief because actual lease terms and notice dates, rent/NOI, parcel, tenant/guarantor, value/offer, tax basis, debt, insurance and owner constraints are not available here. The new page does not fill or request these private values and expressly marks all paths “Not selected.”
+
+**Verification performed:** root model regenerated; root static build and `tools/check_site.py` passed (17 root pages, 209 HTML pages including workbooks/archive, all local links resolve, 24 source records, 89 root metrics with 82 verified and 7 blank/flagged, 24 risk rows). Full existing workflow command sequence was run: Session F4 audit/check and unit tests; root checks; Session L, I, D, M-b, N4, J, K, M-a and 6d8f05 build/verifiers; both test suites passed. The new builder asserts source links on all 8 proposal rows and all 5 decision rows. The repository-wide F4 audit reports 0 current-session PII hits; its one historical regex match is a public school/district location in `research/04-education.md`, not personal/owner/tenant information and not rendered in the website. No private identifiers were added.
+
+**Sources used by suggestion rows:** root ledger `data/sources.json` entries S1 (BLS), S2 (Census), S3 (CA DOF), S6 (LA County Assessor), S7 (LA County transfer tax), S8 (City of LA Measure ULA), S9 (SEC issuer filing), S13 (LA County fire fact sheet), S14 (CDE), S17 (CAL FIRE), S18 (USGS), S19 (FEMA), S20 (CA Department of Insurance), S21 (City of LA economic report), S23 (BEA) and S16 (IRS). Each rendered source link resolves to the HTTPS official publisher URL stored in that ledger. The model/verification checks do not independently confirm the truth of every historical narrative or refresh a source page; access dates remain visible in the ledger.
+
+## Session O merge-conflict log (2026-11-12)
+While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site) merged to `main` (`bf595f2`). Merging `origin/main` into `arena/6596c3f2-jack2` conflicted in 4 files. Resolution, discarding nothing: `COORDINATION.md` — both sessions' appended text kept (single hunk de-marked); `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` — took main's side, then regenerated on the merged tree (they are build outputs). `tools/build_site.py` auto-merged: PR #47's root Suggestions navigation AND Session O's additive workspace row both present (verified by grep). Root `suggestions.html` from #47 is preserved as-is; Session O's distinct review-and-choose register remains at `session-6596c3f2/suggestions.html`.
