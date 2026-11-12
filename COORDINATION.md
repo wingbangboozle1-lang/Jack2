@@ -1453,3 +1453,30 @@ Official sources manually reviewed 2026-11-12: [City ULA FAQ](https://finance.la
 The Session M model source and output were inspected directly; executing its sale-cost function confirms it applies the ULA 4% rate at exactly $5.4m, while the City FAQ states strictly above that amount. Scaling example reproduced internally shows ULA changes costs as assumed gross price crosses the threshold. The numerical replacement-yield calculation uses renewal probability 1.0 for the sale side and 0.75 for the hold side, unlike the equal-risk closed form. These are flagged, not silently repaired in another session's workbook. Other warnings cover earthquake event versus parcel losses and limits of regex and link checks. No claim of complete repository line-by-line factual verification or privacy guarantee is made. `tools/check_site.py` passed 223 pages; F4 audit and check passed, with one historical public-institution address pattern retained and no current-session pattern hits.
 
 **Integration follow-up:** PR #51 merged while this branch was under CI, adding a Session M suggestions card directly to generated `index.html` without its root generator change. The PR merge-check then failed the generated-files gate. We preserved the new card by adding it to `tools/build_site.py`, rather than discarding the other session's work; regenerated the root and F4 audit. PR #49's active root-integration session was notified to preserve this audit and its warnings. This is a generator reconciliation, not a change to Session M's files.
+
+---
+# Session `cfe293bd` — 2026-11-12 — independent decision-readiness audit
+
+This session is pinned to `arena/cfe293bd-jack2`; all work remains on that branch. Before starting,
+I read the shared board and inspected the current tree, generated site, and existing workspaces. The
+repository already contains extensive parallel dashboards and historical research, so this session
+will not duplicate their metric ledgers or modify their files. Scope is isolated under
+`session-cfe293bd/**`, plus an additive integration pointer only after the workbook passes its own
+checks. No personal, parcel, street-address, tenant-contact, or financial-account information will
+be committed or published.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| CFE-01 | Repo and coordination review; claim isolated scope | done | `COORDINATION.md` (append only) |
+| CFE-02 | Review existing published material and identify decision-critical contradictions / confidence limits | in progress | `session-cfe293bd/audit/**` |
+| CFE-03 | Build a concise decision-readiness dashboard: executive brief, questions & answers, suggestion review, risks, source register | claimed | `session-cfe293bd/**` |
+| CFE-04 | Independently verify every published quantitative assertion against official primary sources; leave unknowns blank | claimed | `session-cfe293bd/data/**` |
+| CFE-05 | Privacy, source-link, internal-link, and reproducibility checks | claimed | `session-cfe293bd/scripts/**` |
+| CFE-06 | Add the isolated dashboard to the generated workspace index; full build/link check; PR and deployment only if the branch is accepted by GitHub | claimed | `tools/build_site.py` (additive workspace row only), regenerated `workspaces.html`, `COORDINATION.md` |
+
+The main finding to test is that address/parcel, lease terms, rent/NOI, basis, financing, tax facts,
+insurance, zoning, and access rights are all necessary for a defensible property-specific answer. Area
+statistics cannot substitute for those inputs. Recommendation will therefore be conditional and the
+projected property-specific numbers will remain blank; no unsupported forecast or appraisal will be
+published. Existing workbooks are preserved and any contradictions will be framed as audit flags, not
+silently reconciled.
