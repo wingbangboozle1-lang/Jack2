@@ -3,7 +3,7 @@
     "as_of": "2026-11-08",
     "files": 584,
     "lines": 108874,
-    "bytes": 10196332,
+    "bytes": 10196920,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -17,7 +17,7 @@
       "root/config": {
         "files": 59,
         "lines": 19978,
-        "bytes": 2080599,
+        "bytes": 2081187,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -1183,9 +1183,9 @@
     {
       "path": "flagged.html",
       "workspace": "root/config",
-      "bytes": 65379,
+      "bytes": 65708,
       "lines": 33,
-      "sha256": "71532ed477b0583efba74ae5657f60e6383be2eec29989f6825098382eb2d374",
+      "sha256": "0eb6b9305fee0aa580e75649f3341ff56d9ab91563214ffe58971756a2196e9c",
       "kind": ".html",
       "url_count": 75,
       "pii_pattern_hits": 0,
@@ -8225,9 +8225,9 @@
     {
       "path": "suggestions.html",
       "workspace": "root/config",
-      "bytes": 16051,
+      "bytes": 16310,
       "lines": 33,
-      "sha256": "aa040cf618f51f4351c02e8bca72b4282e891735969c1ac4212acc98ed01031a",
+      "sha256": "8ab9593f94b98a4f69be4227c4e9039ba96603b82a55b15e70e636c67dfd11fd",
       "kind": ".html",
       "url_count": 0,
       "pii_pattern_hits": 0,
