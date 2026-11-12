@@ -1,9 +1,9 @@
 {
   "meta": {
     "as_of": "2026-11-08",
-    "files": 445,
-    "lines": 81853,
-    "bytes": 7274240,
+    "files": 446,
+    "lines": 81909,
+    "bytes": 7289446,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -16,15 +16,15 @@
     "workspaces": {
       "root/config": {
         "files": 23,
-        "lines": 3130,
-        "bytes": 463834,
+        "lines": 3160,
+        "bytes": 468310,
         "privacy_hits": 0,
         "structural_errors": 0
       },
       "root/historical-shared": {
         "files": 52,
-        "lines": 15854,
-        "bytes": 899702,
+        "lines": 15858,
+        "bytes": 900487,
         "privacy_hits": 1,
         "structural_errors": 0
       },
@@ -112,6 +112,13 @@
         "privacy_hits": 0,
         "structural_errors": 0
       },
+      "session-95d0beb9": {
+        "files": 1,
+        "lines": 22,
+        "bytes": 9945,
+        "privacy_hits": 0,
+        "structural_errors": 0
+      },
       "session-a3a8ec08": {
         "files": 23,
         "lines": 4679,
@@ -196,11 +203,11 @@
     {
       "path": "COORDINATION.md",
       "workspace": "root/config",
-      "bytes": 129069,
-      "lines": 1426,
-      "sha256": "c0a5a0953e4228b9980a54e03f579705c6d223f2c06fe6383470882cc463ff74",
+      "bytes": 132760,
+      "lines": 1452,
+      "sha256": "bde62c5b8fac8592342d1b88aaa518947d4ce4eb692a9847ec4f82eb8f1f1fc6",
       "kind": ".md",
-      "url_count": 38,
+      "url_count": 45,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
@@ -672,29 +679,29 @@
     {
       "path": "flagged.html",
       "workspace": "root/config",
-      "bytes": 21015,
-      "lines": 66,
-      "sha256": "6807846426b09485af1cdeead5f46bf615fa7d5225524ae2001af9ad00906f42",
+      "bytes": 21400,
+      "lines": 68,
+      "sha256": "a3310ff4a8e22220648dbb8aa310e5b655ebf1fa661553e6b29efde09bd00387",
       "kind": ".html",
       "url_count": 7,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
-      "html_tags": 401,
+      "html_tags": 405,
       "status": "ok"
     },
     {
       "path": "index.html",
       "workspace": "root/config",
-      "bytes": 11945,
-      "lines": 128,
-      "sha256": "39c5b0e639f4b5e7a4a31238679cef447854c126dc43404fab26770ed9c2636c",
+      "bytes": 12345,
+      "lines": 130,
+      "sha256": "8fb191635cdb73dfa64172075e4eba69b98bd1fba6a4d2723b19246037e7e389",
       "kind": ".html",
       "url_count": 0,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
-      "html_tags": 185,
+      "html_tags": 189,
       "status": "ok"
     },
     {
@@ -4702,6 +4709,20 @@
       "status": "ok"
     },
     {
+      "path": "session-95d0beb9/index.html",
+      "workspace": "session-95d0beb9",
+      "bytes": 9945,
+      "lines": 22,
+      "sha256": "4e03bbced43b59ba7d0e2226199ae0d02c9c26ff12f0b6f85f600c26948001c6",
+      "kind": ".html",
+      "url_count": 15,
+      "pii_pattern_hits": 0,
+      "json_valid": null,
+      "python_compiles": null,
+      "html_tags": 121,
+      "status": "ok"
+    },
+    {
       "path": "session-a3a8ec08/.nojekyll",
       "workspace": "session-a3a8ec08",
       "bytes": 0,
@@ -6286,9 +6307,9 @@
     {
       "path": "tools/build_site.py",
       "workspace": "root/historical-shared",
-      "bytes": 99490,
-      "lines": 1366,
-      "sha256": "bdab4464cf62533c4b1d8bb78a53da2ea6ac3852412611eede1ba26ffb7f062b",
+      "bytes": 100275,
+      "lines": 1370,
+      "sha256": "a013ae003ca3e05efa0c516fec0bf1a5d072aa4f57bfcd3f9e3bf1cd94d4cd94",
       "kind": ".py",
       "url_count": 1,
       "pii_pattern_hits": 0,
