@@ -1,0 +1,18 @@
+{
+  "pages": 11,
+  "sources": 10,
+  "metrics": 16,
+  "verified_metrics": 9,
+  "blank_metrics": 7,
+  "questions": 20,
+  "suggestions": 6,
+  "risks": 14,
+  "checks": {
+    "all data rows resolve to official HTTPS .gov sources": true,
+    "verified values populated / unverified values blank": true,
+    "all local links and fragments resolve": true,
+    "no common personal/parcel identifier patterns": true,
+    "11 HTML pages generated": true
+  },
+  "errors": []
+}

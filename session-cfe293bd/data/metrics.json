@@ -1,0 +1,167 @@
+{
+  "rows": [
+    {
+      "id": "M01",
+      "topic": "Population",
+      "geography": "Los Angeles city",
+      "period": "July 1, 2025 estimate (Vintage 2025)",
+      "value": "3,869,089",
+      "status": "verified",
+      "meaning": "Citywide context only; not a site trade-area count.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M02",
+      "topic": "Population",
+      "geography": "Los Angeles County",
+      "period": "July 1, 2025 estimate (Vintage 2025)",
+      "value": "9,694,934",
+      "status": "verified",
+      "meaning": "Countywide context only; not a site trade-area count.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M03",
+      "topic": "Population change",
+      "geography": "Los Angeles County",
+      "period": "April 1, 2020 base to July 1, 2025",
+      "value": "-3.2%",
+      "status": "verified",
+      "meaning": "Census estimate change for county geography; not a local customer forecast.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M04",
+      "topic": "Income",
+      "geography": "Los Angeles city",
+      "period": "ACS 2020-2024, 2024 dollars",
+      "value": "$81,939 median household income",
+      "status": "verified",
+      "meaning": "Citywide proxy only; not a tract or trade-area income estimate.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M05",
+      "topic": "Income",
+      "geography": "Los Angeles County",
+      "period": "ACS 2020-2024, 2024 dollars",
+      "value": "$90,112 median household income",
+      "status": "verified",
+      "meaning": "Countywide proxy only; not a tract or trade-area income estimate.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M06",
+      "topic": "Poverty",
+      "geography": "Los Angeles city",
+      "period": "Period not confirmed from the official QuickFacts display",
+      "value": "",
+      "status": "unverified",
+      "meaning": "A citywide poverty figure appears, but its exact period was not established from the source page reviewed. Value withheld until the period and vintage are verified.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M07",
+      "topic": "Education",
+      "geography": "Los Angeles city",
+      "period": "ACS 2020-2024; age 25+",
+      "value": "79.6% high school graduate or higher",
+      "status": "verified",
+      "meaning": "Citywide educational attainment. Not school quality or assigned-school performance.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M08",
+      "topic": "Jobs",
+      "geography": "Los Angeles-Long Beach-Anaheim metro",
+      "period": "September 2025 to September 2026; preliminary, not seasonally adjusted",
+      "value": "+0.5% total nonfarm payroll employment; statistical significance: No",
+      "status": "verified",
+      "meaning": "BLS says metro change was not statistically significant at 90% confidence; jobs are by place of work.",
+      "source": "BLS1"
+    },
+    {
+      "id": "M09",
+      "topic": "Unemployment",
+      "geography": "Los Angeles-Long Beach-Anaheim metro",
+      "period": "September 2026; preliminary, not seasonally adjusted",
+      "value": "4.4%",
+      "status": "verified",
+      "meaning": "Metro-wide rate, place of residence; subject to revision, not a neighborhood or property forecast.",
+      "source": "BLS2"
+    },
+    {
+      "id": "M10",
+      "topic": "Trade-area population / daytime population",
+      "geography": "Subject trade area",
+      "period": "Current; address not supplied",
+      "value": "",
+      "status": "unverified",
+      "meaning": "No defensible catchment radius, tract, daytime population, traffic, or customer profile can be established without a validated site location.",
+      "source": "CEN1"
+    },
+    {
+      "id": "M11",
+      "topic": "Schools serving the property",
+      "geography": "Property attendance boundary",
+      "period": "Current; address not supplied",
+      "value": "",
+      "status": "unverified",
+      "meaning": "Do not assign a district or rank schools from citywide data. Confirm address-specific boundaries and then consult current CDE dashboard.",
+      "source": "CDE1"
+    },
+    {
+      "id": "M12",
+      "topic": "Zoning / future land use",
+      "geography": "Parcel",
+      "period": "Current; parcel not identified",
+      "value": "",
+      "status": "unverified",
+      "meaning": "No parcel-specific zoning, overlay, entitlement, or plan inference is made.",
+      "source": "LACITY1"
+    },
+    {
+      "id": "M13",
+      "topic": "Flood / wildfire hazard",
+      "geography": "Parcel",
+      "period": "Current; location not supplied",
+      "value": "",
+      "status": "unverified",
+      "meaning": "Regional hazard statements are not a parcel determination; map a verified parcel and obtain insurance terms.",
+      "source": "FEMA1",
+      "also_sources": [
+        "FIRE1"
+      ]
+    },
+    {
+      "id": "M14",
+      "topic": "Earthquake loss / retrofit exposure",
+      "geography": "Parcel and structure",
+      "period": "Current; location/building records not supplied",
+      "value": "",
+      "status": "unverified",
+      "meaning": "Regional earthquake hazard does not quantify building damage, retrofit duties, downtime, or insurability.",
+      "source": "USGS1"
+    },
+    {
+      "id": "M15",
+      "topic": "Property value / capitalization rate",
+      "geography": "Subject asset and comparable sales",
+      "period": "Current; rent roll and sale evidence not supplied",
+      "value": "",
+      "status": "unverified",
+      "meaning": "No appraisal, offer, market cap rate, NOI, or valuation is asserted.",
+      "source": "ASSR1"
+    },
+    {
+      "id": "M16",
+      "topic": "Population change",
+      "geography": "Los Angeles city",
+      "period": "April 1, 2020 base to July 1, 2025",
+      "value": "-0.8%",
+      "status": "verified",
+      "meaning": "Census estimate change for city geography; not a local customer forecast.",
+      "source": "CEN1"
+    }
+  ]
+}
