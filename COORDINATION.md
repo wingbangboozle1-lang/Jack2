@@ -2,7 +2,7 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-12 17:25 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`, PR #49).
+> Last updated **2026-11-12 18:10 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49 merged, part 2 follows).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
@@ -43,16 +43,56 @@ integration**. Nothing on either stale branch is modified.
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| FI-01 | Read board + full tree, detect live sessions, record takeover and claim; put the claim on `main` | done | session-1c30f8e8 | `COORDINATION.md` (this top block) |
-| FI-02 | Repo review line by line; irregularity register | in progress | session-1c30f8e8 | `canonical/data/irregularities.json` |
-| FI-03 | Official-source re-verification, access date 2026-11-12: every row re-read at the publisher today and tied to the quoted text; unverifiable values blank + flagged; nothing copied forward as "verified" | done (50 sources, 435 rows) | session-1c30f8e8 | `canonical/data/sources.json`, `canonical/data/facts/*.json`, `canonical/ingest.py` |
-| FI-04 | Projection system: six strategies × six expiry years, business-as-usual and black-swan shocks, breakevens, stress cases, unit tests | done (15 tests) | session-1c30f8e8 | `canonical/model.py`, `canonical/tests/**`, `canonical/data/assumptions.json`, `canonical/data/model_output.json` |
-| FI-05 | Executive summary, decision analysis, risk register for every decision, questions/information/answers register, suggestions-for-review register, requirements register | claimed | session-1c30f8e8 | `canonical/data/{decisions,risks,questions,suggestions,requirements}.json` |
-| FI-06 | ONE consolidated site at the repository root: clean landing dashboard + category subpages, every finding in table form | claimed | session-1c30f8e8 | root `*.html`, `assets/**`, `favicon.svg`, `canonical/build_site.py` |
-| FI-07 | Historical root workbook published under `session-742b6a03/` (generator output directory only; nothing deleted) | claimed | session-1c30f8e8 | `tools/build_site.py` (output path + link prefix), `tools/check_site.py`, `session-742b6a03/**` |
-| FI-08 | Branch ledger: every remote branch and open PR listed with status and link; archive registry | claimed | session-1c30f8e8 | `canonical/data/archive.json` |
-| FI-09 | Line-by-line verifier (source per row, quote tie, blank-if-unverified, links across the whole published tree, privacy scan, model reproducibility) + one CI step | claimed | session-1c30f8e8 | `canonical/verify.py`, `.github/workflows/verify.yml` |
-| FI-10 | Final integration: merge `origin/main`, re-verify combined data, PR → `main`, merge, confirm Pages deploy, record PR + result here | claimed | session-1c30f8e8 | `README.md`, `COORDINATION.md` |
+| FI-01 | Read board + full tree, detect live sessions, record takeover and claim; put the claim on `main` | done (PR #49) | session-1c30f8e8 | `COORDINATION.md` (this top block) |
+| FI-02 | Repo review line by line; irregularity register | done | session-1c30f8e8 | `canonical/review_repo.py`, `canonical/data/{repo_review,irregularities,archive}.json` |
+| FI-03 | Official-source re-verification, access date 2026-11-12 | done | session-1c30f8e8 | `canonical/data/sources.json`, `canonical/data/facts/*.json`, `canonical/ingest.py` |
+| FI-04 | Projection system with unit tests | done | session-1c30f8e8 | `canonical/model.py`, `canonical/tests/**`, `canonical/data/{assumptions,model_output}.json` |
+| FI-05 | Executive summary, decision analysis, risks for every decision, questions register, suggestions-for-review register, requirements map | done | session-1c30f8e8 | `canonical/data/{decisions,risks,questions,suggestions,requirements}.json` |
+| FI-06 | ONE consolidated site at the repository root | done | session-1c30f8e8 | root `*.html`, `assets/site.css`, `assets/site.js`, `favicon.svg`, `canonical/build_site.py` |
+| FI-07 | Historical root workbook published under `session-742b6a03/` | done | session-1c30f8e8 | `tools/build_site.py` (output path + link prefix + banner), `tools/check_site.py` (page root), `session-742b6a03/**` |
+| FI-08 | Branch ledger and archive registry | done | session-1c30f8e8 | `canonical/snapshot_repo.py`, `canonical/data/archive.json`, `workspaces.html` |
+| FI-09 | Line-by-line verifier + one CI step | done | session-1c30f8e8 | `canonical/verify.py`, `canonical/privacy.py`, `.github/workflows/verify.yml` |
+| FI-10 | Final integration: merge `origin/main`, re-verify, PR → `main`, merge, confirm Pages deploy, record PR + result here | in progress | session-1c30f8e8 | `README.md`, `COORDINATION.md`, `canonical/data/deployment.json` |
+
+**Close-out record (required by the protocol: sources, verification performed, irregularities).**
+
+- **Sources.** 50 official sources, every one opened on 2026-11-12 with the web tools (the build sandbox cannot reach
+  government hosts): Census Bureau, BLS, California EDD, BEA, California Department of Finance (P-2A and K-12 series,
+  read from the spreadsheets), California Department of Education, SCAG, CBO, U.S. Treasury, Federal Reserve,
+  California DIR, City of Los Angeles (Office of Wage Standards, Office of Finance, City Planning, Building and Safety),
+  SEC EDGAR (tenant 8-K, 10-K, plan and September 2026 releases; NNN REIT and Realty Income third-quarter 2026 releases),
+  California Legislature (Revenue and Taxation Code 11911 and 17043; Constitution article XIII A), Board of Equalization,
+  Los Angeles County (Assessor, Registrar-Recorder, fire fact sheet), Franchise Tax Board, IRS (five pages),
+  Secretary of State (results and voter guide), USGS, California Geological Survey, CAL FIRE and the State Fire Marshal,
+  Department of Insurance, FEMA, State Water Board. The list, with exactly what was read at each, is `sources.html`.
+- **Verification performed.** 440 ledger rows: 359 verified (value tied to quoted source text; every number in the value
+  must appear in the quote), 37 computed (formula shown, recalculated at every build), 37 unverified and blank, 7 withheld
+  and blank. `canonical/verify.py` runs 11 checks on every build: ledger rules row by row; computed rows recalculated;
+  sources official and read; every row of every evidence table on the published pages has an official link (902 rows);
+  numbers in sentences are in the cited evidence; model anchors equal ledger rows and output reproduces; no broken
+  internal link in the whole published tree (7,008 links, 286 pages, archive included); no personal information;
+  pages load nothing from other sites; every page in the menu and every workbook in the archive; generated pages
+  identical to generator output. 15 model unit tests. All 23 workflow steps pass locally (`canonical/ci_local.py`).
+- **What was not verified.** Property- and owner-specific facts (38 rows, all blank). Whether official pages still say
+  today what they said on the access date. Earlier workbooks' contents: they were inventoried and cross-checked on ten
+  key figures, not re-verified sentence by sentence.
+- **Irregularities (all published on `flagged.html`, status "needs review", blocking nothing).** In official sources:
+  an EDD release whose narrative contradicts its own table twice; CAL FIRE and County counts of fire losses that differ;
+  State and Census estimates of county residents that differ by 158,501; a federal forecast overtaken by the outcome;
+  a constitutional text that still prints an exclusion repealed in 2021; FEMA's risk index returning an error; unofficial
+  ballot counts; projections of different vintage; county output no longer in the BEA release; a CBO table published as
+  an image; three long pages read only in part; no official price for this kind of property. In the repository: earlier
+  workbooks with differing answers and older values; generated pages hand-edited twice (PR #42, PR #51); colliding
+  session labels; open pull requests and unmerged branches left to their owners; many merges within one hour. Privacy:
+  one personal e-mail address in the author field of 49 commits (not on the site; removal needs a history rewrite and
+  the owner's decision); a public repository; names of company officers and officials in six earlier workbooks.
+- **Handoffs.** Took over the final-integration claim of `session-fe9d2a91` (draft PR #41, idle since
+  2026-11-11 02:50 UTC) and the root-landing claim of `session-8cdb7c1a` (idle since 2026-11-11 02:10 UTC) under the
+  60-minute rule. Neither branch was modified; both remain listed on the archive page.
+- **Scope kept.** No file inside another session's `session-<id>/` folder was edited. Two shared historical files were
+  changed, minimally and with comments: `tools/build_site.py` (where its pages are written) and `tools/check_site.py`
+  (where its page list is read). `tools/**`, `data/**`, `research/**`, `model/**`, `scripts/**`, `docs/**` are otherwise
+  untouched.
 
 **Privacy (highest priority, unchanged).** No owner name, street address, parcel number, loan, account or contact
 detail is collected, committed or published. Placeholders `[OWNER-01]` and `[PROPERTY-01]` stand in for the owner

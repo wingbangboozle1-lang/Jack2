@@ -14,8 +14,9 @@ The site at the root of this repository is the **consolidated, re-verified site*
    tenant is and the owner's tax position are private, and are **blank** on the site.
 2. The best-supported first move is to **ask the tenant for an early extension**. A refusal points to selling before
    expiry; an agreement leaves a real choice between keeping a secured income and selling a more valuable lease.
-3. The choice is about the bad case, not the average: the strategies' typical outcomes are within about a tenth of one
-   another, while their one-in-twenty bad outcomes differ by more than a third.
+3. The choice is about the bad case, not the average: apart from a plain cash sale, the strategies' typical outcomes
+   in the scenario model are close to one another, while their one-in-twenty bad outcomes differ widely. The numbers,
+   and the assumptions behind them, are on the Decision analysis and Projections pages.
 
 Not an appraisal, not tax advice, not investment advice.
 
