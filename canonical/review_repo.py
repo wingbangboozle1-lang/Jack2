@@ -15,19 +15,18 @@ import html
 import json
 import os
 import re
+import sys
 from urllib.parse import urlparse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import privacy  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 OUT = os.path.join(HERE, "data", "repo_review.json")
 
 URL = re.compile(r"https?://[^\s\"'<>)\\]+")
-PII = [
-    ("e-mail address", re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")),
-    ("telephone number", re.compile(r"(?<![\d.])\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}(?!\d)")),
-    ("street address", re.compile(r"\b\d{1,6}\s+(?:[NSEW]\.?\s+)?(?:[A-Z][a-z]+\s){1,3}(?:Street|St|Avenue|Ave|Boulevard|Blvd|Road|Rd|Drive|Dr|Way|Lane|Ln)\b")),
-    ("parcel number", re.compile(r"\b(?:APN|AIN)[:\s#]*\d{4}[- ]?\d{3}[- ]?\d{3}\b")),
-]
+PII_KINDS = [k for k, _ in privacy.PATTERNS] + ["name of an individual"]
 OFFICIAL = (".gov", ".ca.gov", "sec.gov", "lacity.org", "lacity.gov", "lacounty.gov", "scag.ca.gov", "lavote.gov",
             "federalreserve.gov", "census.gov", "bls.gov", "bea.gov", "treasury.gov", "irs.gov", "cbo.gov", "usgs.gov")
 SKIP_DIRS = {".git", "canonical", "node_modules", "__pycache__", ".github"}
@@ -90,7 +89,7 @@ def main():
             if rel.startswith("assets/") or rel.startswith("session-f4f700c0/audit/"):
                 continue
             ws = workspace_of(rel)
-            w = inv.setdefault(ws, {"files": 0, "lines": 0, "pages": 0, "urls": set(), "pii": {k: 0 for k, _ in PII}})
+            w = inv.setdefault(ws, {"files": 0, "lines": 0, "pages": 0, "urls": set(), "pii": {k: 0 for k in PII_KINDS}})
             try:
                 with open(path, encoding="utf-8", errors="replace") as fh:
                     text = fh.read()
@@ -102,8 +101,9 @@ def main():
                 w["pages"] += 1
             for u in URL.findall(text):
                 w["urls"].add(u.rstrip(".,;"))
-            for label, rx in PII:
-                w["pii"][label] += len(rx.findall(text))
+            if ext in (".html", ".json", ".md", ".txt", ".csv"):
+                for kind, _masked in privacy.scan(text, is_html=(ext == ".html")):
+                    w["pii"][kind] += 1
             if ext == ".html" and ws.startswith(("session-", "docs")):
                 plain = strip_tags(text)
                 for label, _, pattern in FIGURES:
@@ -126,11 +126,16 @@ def main():
         figures.append({"figure": label, "row": rid, "verified_today": rows[rid]["value"], "source": rows[rid]["source"],
                         "values_in_earlier_workbooks": [{"value": v, "workbooks": len(ws)} for v, ws in
                                                         sorted(seen.items(), key=lambda kv: (-len(kv[1]), kv[0]))[:8]]})
-    out = {"note": "Mechanical scan of the files on disk. Counts of privacy patterns are counts only; the matched text is "
-                   "never copied. Institutional contact details on official pages quoted by earlier workbooks account "
-                   "for most hits.",
+    out = {"note": "Mechanical scan of the files on disk. Privacy hits are counts only; the matched text is never copied. "
+                   "They are names of company officers and public officials quoted from official documents, and "
+                   "institutional street addresses; no owner or parcel identifier was found.",
            "totals": {"workspaces": len(workspaces), "files": sum(w["files"] for w in workspaces),
-                      "lines": sum(w["lines"] for w in workspaces), "pages": sum(w["pages"] for w in workspaces)},
+                      "lines": sum(w["lines"] for w in workspaces), "pages": sum(w["pages"] for w in workspaces),
+                      "name_hits": sum(w["privacy_pattern_hits"]["name of an individual"] for w in workspaces),
+                      "name_workbooks": sum(1 for w in workspaces if w["privacy_pattern_hits"]["name of an individual"]),
+                      "address_hits": sum(w["privacy_pattern_hits"]["street address"] for w in workspaces),
+                      "other_hits": sum(v for w in workspaces for k, v in w["privacy_pattern_hits"].items()
+                                        if k not in ("name of an individual", "street address"))},
            "workspaces": workspaces, "figures": figures}
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(out, fh, indent=1, ensure_ascii=False)

@@ -1,10 +1,14 @@
 {
- "note": "Mechanical scan of the files on disk. Counts of privacy patterns are counts only; the matched text is never copied. Institutional contact details on official pages quoted by earlier workbooks account for most hits.",
+ "note": "Mechanical scan of the files on disk. Privacy hits are counts only; the matched text is never copied. They are names of company officers and public officials quoted from official documents, and institutional street addresses; no owner or parcel identifier was found.",
  "totals": {
-  "workspaces": 28,
-  "files": 503,
-  "lines": 89934,
-  "pages": 247
+  "workspaces": 29,
+  "files": 523,
+  "lines": 91332,
+  "pages": 264,
+  "name_hits": 23,
+  "name_workbooks": 6,
+  "address_hits": 3,
+  "other_hits": 0
  },
  "workspaces": [
   {
@@ -19,7 +23,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -34,7 +40,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -49,7 +57,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -64,7 +74,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -79,7 +91,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 1,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 1
    }
   },
   {
@@ -94,7 +108,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -108,8 +124,10 @@
    "privacy_pattern_hits": {
     "e-mail address": 0,
     "telephone number": 0,
-    "street address": 0,
-    "parcel number": 0
+    "street address": 1,
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -124,7 +142,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -139,7 +159,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 6
    }
   },
   {
@@ -154,7 +176,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 2
    }
   },
   {
@@ -169,7 +193,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -184,7 +210,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -199,7 +227,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -214,7 +244,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -229,7 +261,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -244,7 +278,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 6
    }
   },
   {
@@ -259,7 +295,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -274,7 +312,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -289,7 +329,26 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
+   }
+  },
+  {
+   "workspace": "session-742b6a03",
+   "files": 20,
+   "lines": 1374,
+   "pages": 17,
+   "links": 26,
+   "official_links": 21,
+   "official_links_reread_today": 14,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -304,7 +363,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 7
    }
   },
   {
@@ -319,7 +380,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -333,8 +396,10 @@
    "privacy_pattern_hits": {
     "e-mail address": 0,
     "telephone number": 0,
-    "street address": 0,
-    "parcel number": 0
+    "street address": 1,
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -349,7 +414,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 1
    }
   },
   {
@@ -364,7 +431,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -379,7 +448,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -394,7 +465,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
@@ -409,13 +482,15 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   },
   {
    "workspace": "tools",
    "files": 4,
-   "lines": 1936,
+   "lines": 1960,
    "pages": 0,
    "links": 1,
    "official_links": 0,
@@ -424,7 +499,9 @@
     "e-mail address": 0,
     "telephone number": 0,
     "street address": 0,
-    "parcel number": 0
+    "parcel number": 0,
+    "social security number": 0,
+    "name of an individual": 0
    }
   }
  ],
@@ -436,12 +513,12 @@
    "source": "S-TSY",
    "values_in_earlier_workbooks": [
     {
-     "value": "4.86",
+     "value": "4.84",
      "workbooks": 5
     },
     {
-     "value": "4.84",
-     "workbooks": 4
+     "value": "4.86",
+     "workbooks": 5
     },
     {
      "value": "4.88",
@@ -449,7 +526,7 @@
     },
     {
      "value": "4.90",
-     "workbooks": 2
+     "workbooks": 3
     },
     {
      "value": "5.31",
@@ -481,19 +558,19 @@
     },
     {
      "value": "9,637,524",
-     "workbooks": 10
+     "workbooks": 11
     },
     {
      "value": "9,708,647",
-     "workbooks": 9
+     "workbooks": 10
     },
     {
      "value": "9,727,305",
-     "workbooks": 9
+     "workbooks": 10
     },
     {
      "value": "9,853,435",
-     "workbooks": 9
+     "workbooks": 10
     },
     {
      "value": "9,837,286",
@@ -517,19 +594,19 @@
    "values_in_earlier_workbooks": [
     {
      "value": "3,869,089",
-     "workbooks": 20
+     "workbooks": 21
+    },
+    {
+     "value": "3,899,342",
+     "workbooks": 7
     },
     {
      "value": "3,726,923",
      "workbooks": 6
     },
     {
-     "value": "3,899,342",
-     "workbooks": 6
-    },
-    {
      "value": "3,898,747",
-     "workbooks": 5
+     "workbooks": 6
     },
     {
      "value": "3,806,201",
@@ -557,11 +634,11 @@
    "values_in_earlier_workbooks": [
     {
      "value": "5.4",
-     "workbooks": 17
+     "workbooks": 18
     },
     {
      "value": "5,400,000",
-     "workbooks": 13
+     "workbooks": 14
     },
     {
      "value": "5,000,000",
@@ -585,7 +662,7 @@
    "values_in_earlier_workbooks": [
     {
      "value": "1.1",
-     "workbooks": 10
+     "workbooks": 11
     },
     {
      "value": "4.2",
@@ -625,7 +702,7 @@
    "values_in_earlier_workbooks": [
     {
      "value": "60",
-     "workbooks": 16
+     "workbooks": 17
     },
     {
      "value": "50",
@@ -665,7 +742,7 @@
    "values_in_earlier_workbooks": [
     {
      "value": "20.00",
-     "workbooks": 18
+     "workbooks": 19
     },
     {
      "value": "18.42",
@@ -685,7 +762,7 @@
    "values_in_earlier_workbooks": [
     {
      "value": "497,105",
-     "workbooks": 10
+     "workbooks": 11
     },
     {
      "value": "419,618",
@@ -705,7 +782,7 @@
     },
     {
      "value": "2,136",
-     "workbooks": 5
+     "workbooks": 6
     },
     {
      "value": "2,100",
@@ -717,7 +794,7 @@
     },
     {
      "value": "2,191",
-     "workbooks": 1
+     "workbooks": 2
     }
    ]
   },

@@ -1388,10 +1388,29 @@ BUILDERS = {
     "workspaces.html": build_workspaces,
 }
 
+# ---------------------------------------------------------------------------------------------
+# Final integration (session-1c30f8e8, 2026-11-12): this historical workbook is now published
+# under session-742b6a03/ instead of the repository root. The root is the consolidated site
+# built by canonical/build_site.py. Nothing in the builders above changed; only where the
+# pages are written and, therefore, the prefix of links that point at other folders.
+OUT_DIR = os.path.join(ROOT, "session-742b6a03")
+os.makedirs(OUT_DIR, exist_ok=True)
+_ROOT_RELATIVE = re.compile(
+    r"""(href|src)=(["'])(session-[0-9a-f]{8}/|docs/|research/|model/|scripts/|data/|tools/|COORDINATION\.md|README\.md)""")
+_ARCHIVE_BANNER = ('<div class="callout warn" role="note"><p><strong>You are in the archive.</strong> This is the earlier '
+                   'root site, kept as its sessions wrote it. The consolidated, re-verified site is '
+                   '<a href="../index.html">here</a>.</p></div>\n')
+
+
+def relocate(page_html):
+    page_html = _ROOT_RELATIVE.sub(lambda m: f"{m.group(1)}={m.group(2)}../{m.group(3)}", page_html)
+    return page_html.replace('<main id="main" class="wrap">\n', '<main id="main" class="wrap">\n' + _ARCHIVE_BANNER, 1)
+
+
 for fname, fn in BUILDERS.items():
-    out = fn()
+    out = relocate(fn())
     pii_scan(out, fname)
-    with open(os.path.join(ROOT, fname), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUT_DIR, fname), "w", encoding="utf-8") as f:
         f.write(out)
     print(f"wrote {fname:24s} {len(out):>7,d} bytes")
 

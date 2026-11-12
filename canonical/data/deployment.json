@@ -1,0 +1,13 @@
+{
+ "records": [
+  {
+   "when": "2026-11-12 17:14",
+   "what": "Part 1: integration claim placed on the main branch; verified ledger and projection model added. No page changed.",
+   "pr": "Pull request 49",
+   "pr_url": "https://github.com/wingbangboozle1-lang/Jack2/pull/49",
+   "merge": "Merged as 944e89d (merge commit)",
+   "checks": "verify workflow passed on the pull request and on the main branch",
+   "pages": "Pages build reported 'built' for 944e89d at 17:15 UTC"
+  }
+ ]
+}

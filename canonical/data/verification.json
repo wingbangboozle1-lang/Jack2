@@ -1,0 +1,84 @@
+{
+ "checked": "2026-11-12",
+ "checks": [
+  {
+   "name": "Every row has an official source; every published value is in its quoted text; every unconfirmed value is blank",
+   "proves": "No row carries a value without a source and a quote, every number in a value appears in the text recorded from the page, and blank rows really are blank and say why.",
+   "does_not_prove": "That the quote was transcribed correctly from the page. Each quote can be checked against its link by hand.",
+   "result": "440 rows checked one by one: 359 verified, 37 computed, 37 unverified and blank, 7 withheld and blank",
+   "ok": true
+  },
+  {
+   "name": "Every computed value is recalculated from verified rows",
+   "proves": "Each derived figure equals its stated formula applied to numbers that appear in the quoted text of verified rows.",
+   "does_not_prove": "That the formula is the right one for the purpose; the formula is shown beside each value.",
+   "result": "37 computed values recalculated from their inputs; no differences",
+   "ok": true
+  },
+  {
+   "name": "Every source is an official publisher, and nothing is published from a page that could not be read",
+   "proves": "Every source address is a secure government address (filings are read on the securities regulator's site), and a source that failed to load supports only blank rows.",
+   "does_not_prove": "That the page is still online or unchanged today.",
+   "result": "50 sources on 34 government hosts, all read on 2026-11-12 except 1 that could not be read and carries no value",
+   "ok": true
+  },
+  {
+   "name": "Every row of every evidence table on the published pages carries a link to an official site",
+   "proves": "The rule is met on the pages as published, not only in the data files.",
+   "does_not_prove": "Tables that describe the site itself (suggestions, requirements, archive, deployment) link to the part of the site or repository they describe instead.",
+   "result": "902 rows in 75 evidence and model tables on 22 pages; every row links to an official source",
+   "ok": true
+  },
+  {
+   "name": "Numbers written in sentences come from the evidence cited beside them",
+   "proves": "A figure in a risk, question, irregularity or summary sentence appears in the rows it cites, in the model output, or is a year or a small count.",
+   "does_not_prove": "That the sentence draws the right conclusion from the figure.",
+   "result": "101 risk, question, irregularity and summary texts checked; every number in them is in the evidence they cite",
+   "ok": true
+  },
+  {
+   "name": "The model's anchors equal the verified rows, and its output is reproducible",
+   "proves": "Settings marked as anchors are identical to the published ledger values, and re-running the model gives the published results to the last digit.",
+   "does_not_prove": "That the assumptions are right. They are labelled, ranged and tested on the Projections page.",
+   "result": "36 settings: 8 anchors equal their ledger rows, 28 labelled assumptions; output reproduced exactly (20,000 trials per expiry year, seed 20261112)",
+   "ok": true
+  },
+  {
+   "name": "No broken internal links anywhere in the published tree",
+   "proves": "Every link from one page of this repository to another, on the consolidated site and in every archived workbook, points at a file that exists.",
+   "does_not_prove": "That external pages are still online; the build environment cannot reach them.",
+   "result": "7,008 internal links on 286 pages across the whole repository resolve, including the archive",
+   "ok": true
+  },
+  {
+   "name": "Nothing personal is published",
+   "proves": "No identifier pattern and no individual's name appears on the consolidated site or in its data, and every property and owner row is blank.",
+   "does_not_prove": "That the archived workbooks meet the same standard; their hits are counted on this page and flagged.",
+   "result": "43 pages and data files of the consolidated site scanned: no e-mail address, telephone number, street address, parcel number or named individual. Archived workbooks: 23 names of officials and 3 institutional addresses, listed for review",
+   "ok": true
+  },
+  {
+   "name": "Pages load nothing from other sites",
+   "proves": "Opening a page contacts no third party; the only outside addresses are links the reader chooses to follow.",
+   "does_not_prove": "Anything about the hosting service itself.",
+   "result": "64 scripts and style sheets referenced, all served from this repository; no outside script, font, image or tracker",
+   "ok": true
+  },
+  {
+   "name": "Every page is in the menu and every archived workbook is listed",
+   "proves": "No page of the consolidated site is orphaned, and no earlier workbook has been dropped from view.",
+   "does_not_prove": "That the archived workbooks are correct; they are preserved, not endorsed.",
+   "result": "21 menu entries, each with a page; 23 archived workbooks, each listed on the archive page",
+   "ok": true
+  },
+  {
+   "name": "The published pages are exactly what the generator produces",
+   "proves": "Nobody has edited a generated page by hand; the pages match the data.",
+   "does_not_prove": "Nothing beyond that.",
+   "result": "25 generated files rebuilt and compared byte for byte; identical",
+   "ok": true
+  }
+ ],
+ "passed": 11,
+ "total": 11
+}

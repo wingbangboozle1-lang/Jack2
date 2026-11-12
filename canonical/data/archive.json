@@ -1,0 +1,288 @@
+{
+ "measured": "2026-11-12 17:24 UTC",
+ "main_commit": "944e89d",
+ "open_pull_requests": [
+  {
+   "number": 5,
+   "title": "PARCEL-01: Jack in the Box NNN hold/sell analysis — verified dataset, projection model, live dashboard",
+   "branch": "arena/ffe3bdfd-jack2",
+   "draft": false,
+   "opened": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/5"
+  },
+  {
+   "number": 6,
+   "title": "Net-lease decision dossier: sell before expiry vs renew (Jack in the Box, central LA)",
+   "branch": "arena/8149683c-jack2",
+   "draft": false,
+   "opened": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/6"
+  },
+  {
+   "number": 10,
+   "title": "Add source-linked NNN property decision dashboard and Pages deployment",
+   "branch": "arena/50002478-jack2",
+   "draft": false,
+   "opened": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/10"
+  },
+  {
+   "number": 14,
+   "title": "docs(coordination): Session E deployment record — PR #12 merged, Pages deploy verified",
+   "branch": "arena/b4ec6128-jack2",
+   "draft": false,
+   "opened": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/14"
+  },
+  {
+   "number": 18,
+   "title": "Session F: source-verified sell-vs-renew workbook for a Central LA Jack in the Box (NNN)",
+   "branch": "arena/643e4aab-jack2",
+   "draft": false,
+   "opened": "2026-11-07",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/18"
+  },
+  {
+   "number": 30,
+   "title": "Session I: complete verified decision workbook for Central LA Jack in the Box NNN asset",
+   "branch": "arena/cdecc6e1-jack2",
+   "draft": false,
+   "opened": "2026-11-08",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/30"
+  },
+  {
+   "number": 38,
+   "title": "Session M-b: deployment record for PR #37, and the F02 disclosure fix that was missing from the published page",
+   "branch": "arena/313ba936-jack2",
+   "draft": false,
+   "opened": "2026-11-10",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/38"
+  },
+  {
+   "number": 40,
+   "title": "Session M: deployment record for PR #39 (session-5f296f9d close-out)",
+   "branch": "arena/5f296f9d-jack2",
+   "draft": false,
+   "opened": "2026-11-10",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/40"
+  },
+  {
+   "number": 41,
+   "title": "Session N (session-fe9d2a91): FINAL INTEGRATION — one re-verified site at the root, all earlier workbooks archived [CLAIM — work in progress",
+   "branch": "arena/fe9d2a91-jack2",
+   "draft": true,
+   "opened": "2026-11-11",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/41"
+  },
+  {
+   "number": 43,
+   "title": "Session N: Jack NNN decision workbook — 34 official sources, index-basis model, 13-page dashboard",
+   "branch": "arena/2b3370d1-jack2",
+   "draft": false,
+   "opened": "2026-11-11",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/43"
+  },
+  {
+   "number": 50,
+   "title": "Session 5f15df5c: privacy-first property decision review workspace",
+   "branch": "arena/5f15df5c-jack2",
+   "draft": false,
+   "opened": "2026-11-12",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/pull/50"
+  }
+ ],
+ "branches_with_unmerged_work": [
+  {
+   "branch": "arena/0c849d9d-jack2",
+   "commits_not_on_main": 3,
+   "files_not_on_main": 10,
+   "folders": [
+    "session-0c849d9d"
+   ],
+   "last_commit": "2026-11-07",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/0c849d9d-jack2"
+  },
+  {
+   "branch": "arena/2afb2553-jack2",
+   "commits_not_on_main": 2,
+   "files_not_on_main": 1,
+   "folders": [
+    "session-2afb2553"
+   ],
+   "last_commit": "2026-11-12",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/2afb2553-jack2"
+  },
+  {
+   "branch": "arena/2b3370d1-jack2",
+   "commits_not_on_main": 3,
+   "files_not_on_main": 25,
+   "folders": [
+    "session-2b3370d1"
+   ],
+   "last_commit": "2026-11-11",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/2b3370d1-jack2"
+  },
+  {
+   "branch": "arena/50002478-jack2",
+   "commits_not_on_main": 6,
+   "files_not_on_main": 49,
+   "folders": [
+    ".github",
+    "data",
+    "research",
+    "scripts",
+    "session-50002478",
+    "tests"
+   ],
+   "last_commit": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/50002478-jack2"
+  },
+  {
+   "branch": "arena/54e86ab3-jack2",
+   "commits_not_on_main": 25,
+   "files_not_on_main": 112,
+   "folders": [
+    ".github",
+    "analysis",
+    "data",
+    "research",
+    "scripts",
+    "session-50002478"
+   ],
+   "last_commit": "2026-11-08",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/54e86ab3-jack2"
+  },
+  {
+   "branch": "arena/5f15df5c-jack2",
+   "commits_not_on_main": 3,
+   "files_not_on_main": 17,
+   "folders": [
+    "session-5f15df5c"
+   ],
+   "last_commit": "2026-11-12",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/5f15df5c-jack2"
+  },
+  {
+   "branch": "arena/643e4aab-jack2",
+   "commits_not_on_main": 7,
+   "files_not_on_main": 24,
+   "folders": [
+    ".github",
+    "session-643e4aab"
+   ],
+   "last_commit": "2026-11-07",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/643e4aab-jack2"
+  },
+  {
+   "branch": "arena/8149683c-jack2",
+   "commits_not_on_main": 9,
+   "files_not_on_main": 25,
+   "folders": [
+    "session-8149683c"
+   ],
+   "last_commit": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/8149683c-jack2"
+  },
+  {
+   "branch": "arena/8bee1905-jack2",
+   "commits_not_on_main": 7,
+   "files_not_on_main": 23,
+   "folders": [
+    "session-8bee1905"
+   ],
+   "last_commit": "2026-11-10",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/8bee1905-jack2"
+  },
+  {
+   "branch": "arena/a5c9d382-jack2",
+   "commits_not_on_main": 2,
+   "files_not_on_main": 1,
+   "folders": [
+    "audit"
+   ],
+   "last_commit": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/a5c9d382-jack2"
+  },
+  {
+   "branch": "arena/a5f8f119-jack2",
+   "commits_not_on_main": 7,
+   "files_not_on_main": 5,
+   "folders": [
+    "session-a5f8f119"
+   ],
+   "last_commit": "2026-11-10",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/a5f8f119-jack2"
+  },
+  {
+   "branch": "arena/c0a678d4-jack2",
+   "commits_not_on_main": 44,
+   "files_not_on_main": 164,
+   "folders": [
+    ".github",
+    "analysis",
+    "data",
+    "research",
+    "scripts",
+    "session-50002478"
+   ],
+   "last_commit": "2026-11-11",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/c0a678d4-jack2"
+  },
+  {
+   "branch": "arena/cdecc6e1-jack2",
+   "commits_not_on_main": 4,
+   "files_not_on_main": 27,
+   "folders": [
+    "session-cdecc6e1"
+   ],
+   "last_commit": "2026-11-08",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/cdecc6e1-jack2"
+  },
+  {
+   "branch": "arena/e8fe751c-jack2",
+   "commits_not_on_main": 6,
+   "files_not_on_main": 2,
+   "folders": [
+    "session-e8fe751c"
+   ],
+   "last_commit": "2026-11-11",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/e8fe751c-jack2"
+  },
+  {
+   "branch": "arena/fe942801-jack2",
+   "commits_not_on_main": 8,
+   "files_not_on_main": 2,
+   "folders": [
+    "session-fe942801"
+   ],
+   "last_commit": "2026-11-10",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/fe942801-jack2"
+  },
+  {
+   "branch": "arena/fe9d2a91-jack2",
+   "commits_not_on_main": 11,
+   "files_not_on_main": 7,
+   "folders": [
+    "integration"
+   ],
+   "last_commit": "2026-11-11",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/fe9d2a91-jack2"
+  },
+  {
+   "branch": "arena/ffe3bdfd-jack2",
+   "commits_not_on_main": 5,
+   "files_not_on_main": 39,
+   "folders": [
+    "analysis"
+   ],
+   "last_commit": "2026-11-06",
+   "url": "https://github.com/wingbangboozle1-lang/Jack2/tree/arena/ffe3bdfd-jack2"
+  }
+ ],
+ "branches_with_only_log_or_claim_commits": 20,
+ "history": {
+  "commits_on_main": 188,
+  "commits_with_personal_provider_email": 49,
+  "distinct_personal_provider_addresses": 1
+ }
+}

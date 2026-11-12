@@ -87,7 +87,7 @@
    "id": "IR-07",
    "area": "Official source",
    "title": "A federal hazard index could not be read",
-   "detail": "The National Risk Index county report returned an error (HTTP 500) on the access date. No value from it is published, and figures for it in earlier workbooks were not copied.",
+   "detail": "The National Risk Index county report returned a server error on the access date. No value from it is published, and figures for it in earlier workbooks were not copied.",
    "rows": [
     "HZ-063"
    ],
@@ -165,7 +165,7 @@
    "id": "IR-13",
    "area": "Official source",
    "title": "Three long pages were read only in part",
-   "detail": "The fast-food wage page (one of three segments), the tenant's annual report (the sections named in the source list) and the federal outlook (one of 70 segments) were not read end to end. A later increase in the fast-food wage, if any, would be on a part not read.",
+   "detail": "The fast-food wage page (the first of three segments), the tenant's annual report (the sections named in the source list) and the federal outlook (the first segment only) were not read end to end. A later increase in the fast-food wage, if any, would be on a part not read.",
    "rows": [
     "EC-093",
     "TN-007",
@@ -204,7 +204,7 @@
   {
    "id": "IR-20",
    "area": "Repository",
-   "title": "Twenty-two workbooks answer the same question differently",
+   "title": "Earlier workbooks answer the same question differently",
    "detail": "Earlier sessions each published a complete workbook with its own data date, assumptions and headline answer. They are preserved in the archive and are not endorsed by this site. Where they print a different number for the same quantity, the Verification page lists it beside today's value.",
    "rows": [],
    "links": [
@@ -224,7 +224,7 @@
    "id": "IR-21",
    "area": "Repository",
    "title": "Earlier pages show older values",
-   "detail": "For example, earlier workbooks show the 10-year Treasury yield at 4.84% to 4.90%; the latest posted value on the access date is 4.98%. Those pages carry their own access dates.",
+   "detail": "For example, earlier workbooks show several lower values for the 10-year Treasury yield, read on earlier days; the latest posted value on the access date is 4.98%. Those pages carry their own access dates, and the values found are listed on the Verification page.",
    "rows": [
     "CM-001"
    ],
@@ -274,13 +274,13 @@
   {
    "id": "IR-24",
    "area": "Coordination",
-   "title": "Eleven pull requests are open and unmerged",
-   "detail": "They belong to earlier sessions and were left as they are: closing or merging another session's work is that session's decision.",
+   "title": "Pull requests from earlier sessions are still open",
+   "detail": "{snap:open_prs} pull requests were open when the repository was last measured. They belong to earlier sessions and were left as they are: closing or merging another session's work is that session's decision. They are listed on the Archive page.",
    "rows": [],
    "links": [
     [
      "Open pull requests",
-     "https://github.com/wingbangboozle1-lang/Jack2/pulls"
+     "workspaces.html#pulls"
     ]
    ],
    "action": "Repository owner to close or merge.",
@@ -289,8 +289,8 @@
   {
    "id": "IR-25",
    "area": "Coordination",
-   "title": "Fourteen branches hold work that never reached the main branch",
-   "detail": "They are listed with links on the Archive page. Their content was not verified by this session and is not published on this site.",
+   "title": "Branches hold work that never reached the main branch",
+   "detail": "{snap:unmerged_branches} branches carry files that are not on the main branch. They are listed with links on the Archive page. Their content was not verified by this session and is not published on this site.",
    "rows": [],
    "links": [
     [
@@ -320,7 +320,7 @@
    "id": "IR-30",
    "area": "Privacy",
    "title": "A personal e-mail address sits in the repository's history",
-   "detail": "Forty-nine commits on the main branch carry one personal e-mail address in their author field. It is not on the site and is not reproduced here. Removing it requires rewriting history.",
+   "detail": "{snap:email_commits} commits on the main branch carry one personal e-mail address in their author field. It is not on the site and is not reproduced here. Removing it requires rewriting history.",
    "rows": [],
    "links": [
     [
@@ -349,16 +349,16 @@
   {
    "id": "IR-32",
    "area": "Privacy",
-   "title": "One institutional street address appears in an earlier research note",
-   "detail": "A school district's public headquarters address is in a research file from an earlier session. It is not personal information and was left in place.",
+   "title": "Earlier workbooks print names of individuals and a few institutional addresses",
+   "detail": "A scan found {rev:name_hits} places in {rev:name_workbooks} earlier folders where an individual is named, and {rev:address_hits} street-address patterns. The names are company officers and public officials quoted from official documents, and the addresses are institutional; none identifies the owner or the property. This site replaces such names with roles. The earlier pages were left as their sessions wrote them.",
    "rows": [],
    "links": [
     [
-     "Research notes",
-     "https://github.com/wingbangboozle1-lang/Jack2/tree/main/research"
+     "Counts by folder",
+     "verification.html#repo"
     ]
    ],
-   "action": "None needed.",
+   "action": "Reviewer to decide whether the earlier pages should be edited by their owners.",
    "status": "needs review"
   }
  ]
