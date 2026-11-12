@@ -1058,6 +1058,17 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-620551ec/</code>",
+         "Session 620551ec (branch <code>arena/620551ec-jack2</code>) — 2026-11-12 evidence-first decision workbook with a dedicated "
+         "Suggestions review queue: 17 official sources re-read on the access date (BLS LAUS, CA EDD, Census QuickFacts V2025, FRED, "
+         "BEA 26-08, SEC EDGAR JACK 10-K index + Q3 FY2026 8-K, CA DIR, City of LA Measure ULA FAQ, IRS §1031, USGS UCERF3, CAL FIRE "
+         "FHSZ, FHFA HPI 2026Q2, Port of LA, CA BOE Prop 13), 65 metric rows (51 verified, 1 computed, 13 blank and flagged), anonymized "
+         "asset profile with owner-only facts blank by design, 30-row BAU + black-swan risk register, 24-question missing-information "
+         "register with acquisition methods, deterministic index-based projection model with black-swan overlay, 4-strategy decision "
+         "analysis with 6 written triggers (recommendation: extend-and-reprice first, then decide), 14 suggestions each defaulting to "
+         "'proposed' in a client-side review workflow, and a 14-page dashboard with an independent 7-check verifier (all pass)",
+         "14 pages",
+         "<a href='session-620551ec/index.html'>open &#8599;</a>"],
         ["<code>session-7663f9db/</code>",
          "Session P (branch <code>arena/7663f9db-jack2</code>) &mdash; 2026-11-12 live official-source audit &amp; "
          "15-page advisory dashboard: 28 primary HTTPS sources verified live 2026-11-12 (Nov 10 U.S. Treasury 4.98% 10Y, "
