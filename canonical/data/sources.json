@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "accessed": "2026-11-12"
+ },
+ "sources": [
+  {
+   "id": "S-CENSUS",
+   "publisher": "U.S. Census Bureau",
+   "title": "QuickFacts: Los Angeles city, California; Los Angeles County, California (Vintage 2025 estimates; ACS 2020-2024; 2022 Economic Census)",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "kind": "official statistics",
+   "published": "V2025",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date (4 page segments). The page serves Vintage 2025 values although the address still ends in PST045224."
+  },
+  {
+   "id": "S-BLS",
+   "publisher": "U.S. Bureau of Labor Statistics",
+   "title": "Los Angeles Area Economic Summary (updated November 04, 2026)",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "kind": "official statistics",
+   "published": "2026-11-04",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date. The summary states that all data are not seasonally adjusted and may be revised."
+  },
+  {
+   "id": "S-EDD",
+   "publisher": "California Employment Development Department, Labor Market Information Division",
+   "title": "Los Angeles-Long Beach-Glendale Metropolitan Division (Los Angeles County) monthly labor force and industry employment release, September 2026",
+   "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf",
+   "kind": "official statistics",
+   "published": "September 2026 preliminary",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: narrative and the not-seasonally-adjusted table through 'Other Services'. Two figures in the narrative disagree with the release's own table; see the Flagged for Review page."
+  },
+  {
+   "id": "S-TSY",
+   "publisher": "U.S. Department of the Treasury",
+   "title": "Daily Treasury Par Yield Curve Rates, November 2026",
+   "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+   "kind": "official statistics",
+   "published": "2026-11-10 (latest row on the access date)",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date. Seven rows were posted for November 2026, the latest dated 11/10/2026; November 11 was a federal holiday and no later row was posted yet."
+  },
+  {
+   "id": "S-ULA",
+   "publisher": "City of Los Angeles, Office of Finance",
+   "title": "Real Property Transfer Tax and Measure ULA FAQ",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "kind": "official rule",
+   "published": "thresholds effective for closings after June 30, 2026",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (first of two page segments: rates, thresholds, base tax, adjustment rule, exemptions)."
+  },
+  {
+   "id": "S-JACK-8K",
+   "publisher": "Jack in the Box Inc. (filed with the U.S. Securities and Exchange Commission)",
+   "title": "Form 8-K, Exhibit 99.1: third quarter fiscal 2026 earnings release, filed August 12, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
+   "kind": "company filing",
+   "published": "2026-08-12",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: narrative, guidance, statement of earnings, balance sheet and the start of the cash-flow statement (first three of six page segments). Unaudited."
+  },
+  {
+   "id": "S-JACK-10K",
+   "publisher": "Jack in the Box Inc. (filed with the U.S. Securities and Exchange Commission)",
+   "title": "Form 10-K for the fiscal year ended September 28, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
+   "kind": "company filing",
+   "published": "fiscal year ended 2025-09-28",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: Item 1 (business), the natural-disaster and capital-structure risk factors, Item 2 (properties), Item 5 (performance graph) and the start of Item 7 (same-store sales)."
+  },
+  {
+   "id": "S-EDGAR",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "title": "EDGAR filing index: Jack in the Box Inc. (CIK 0000807882)",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=&dateb=&owner=include&count=40",
+   "kind": "official register",
+   "published": "latest filing listed 2026-10-13",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (the 40 most recent filings)."
+  }
+ ]
+}
