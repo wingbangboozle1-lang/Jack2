@@ -1426,6 +1426,16 @@ Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch c
 ## Session O merge-conflict log (2026-11-12)
 While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site) merged to `main` (`bf595f2`). Merging `origin/main` into `arena/6596c3f2-jack2` conflicted in 4 files. Resolution, discarding nothing: `COORDINATION.md` — both sessions' appended text kept (single hunk de-marked); `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` — took main's side, then regenerated on the merged tree (they are build outputs). `tools/build_site.py` auto-merged: PR #47's root Suggestions navigation AND Session O's additive workspace row both present (verified by grep). Root `suggestions.html` from #47 is preserved as-is; Session O's distinct review-and-choose register remains at `session-6596c3f2/suggestions.html`.
 
+## Session O deployment record (2026-11-12)
+| Item | Value |
+|---|---|
+| PR | **#46** — https://github.com/wingbangboozle1-lang/Jack2/pull/46 (merged 2026-11-12T16:40:51Z, merge commit `58c39fe`) |
+| CI | PR checks pass (runs `43261056704`, `43261213673`); first run failed only on the repo-wide generated-files gate because adding files changes `session-f4f700c0` audit inventory — regenerated and committed (`26f352c`, `efeb6af`), no content altered |
+| Conflict | PR #47 merged to `main` mid-session; resolved per conflict log above, nothing discarded |
+| Pages | API `built`; `pages build and deployment` run `43261301878` success; `verify` on main `43261303068` success |
+| Live | https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/ (dashboard + suggestions fetched live and confirmed); Flagged: https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/flagged.html |
+| Post-merge fix | Dashboard ranking rows reordered to match CE values (E > D); follow-up PR from this branch |
+- Follow-up (PR #52): main advanced again via PR #51, which hand-edited generated root `index.html` (Suggestions card for `session-313ba936`) without updating `tools/build_site.py` — the same failure Session N4 repaired for PR #42. Session O transcribed that card into the generator verbatim (regenerated `index.html` is now clean) and regenerated the `session-f4f700c0` audit outputs on the merged tree. Nothing from #51 was removed.
 ---
 
 ## Session 95d0beb9 — independent decision-critical audit (2026-11-12)
@@ -1453,6 +1463,7 @@ Official sources manually reviewed 2026-11-12: [City ULA FAQ](https://finance.la
 The Session M model source and output were inspected directly; executing its sale-cost function confirms it applies the ULA 4% rate at exactly $5.4m, while the City FAQ states strictly above that amount. Scaling example reproduced internally shows ULA changes costs as assumed gross price crosses the threshold. The numerical replacement-yield calculation uses renewal probability 1.0 for the sale side and 0.75 for the hold side, unlike the equal-risk closed form. These are flagged, not silently repaired in another session's workbook. Other warnings cover earthquake event versus parcel losses and limits of regex and link checks. No claim of complete repository line-by-line factual verification or privacy guarantee is made. `tools/check_site.py` passed 223 pages; F4 audit and check passed, with one historical public-institution address pattern retained and no current-session pattern hits.
 
 **Integration follow-up:** PR #51 merged while this branch was under CI, adding a Session M suggestions card directly to generated `index.html` without its root generator change. The PR merge-check then failed the generated-files gate. We preserved the new card by adding it to `tools/build_site.py`, rather than discarding the other session's work; regenerated the root and F4 audit. PR #49's active root-integration session was notified to preserve this audit and its warnings. This is a generator reconciliation, not a change to Session M's files.
+- PR #52 cycle: merged `origin/main` through PR #53/#54 (parallel sessions adding their own Suggestions pages). Conflicts only in this board (both sides kept) and regenerated `session-f4f700c0` audit outputs (took main, regenerated). No session content discarded.
 
 ### Session 95d0beb9 deployment record
 
