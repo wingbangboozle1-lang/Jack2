@@ -1372,6 +1372,26 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 
 ---
 
+# Session O — `session-6596c3f2` (branch `arena/6596c3f2-jack2`) — claim 2026-11-12
+
+Platform note: pinned to `arena/6596c3f2-jack2`; that branch doubles as the PR/integration branch. All new work is isolated in `session-6596c3f2/**`; shared files are touched only by the additive changes in O-07. Prior sessions' files will not be edited, overwritten, or discarded. Open PRs #43/#41/#40/#38/#30/#18/#14/#10/#6/#5 belong to earlier sessions and will not be closed or merged by this session. No owner/parcel identifiers exist in the brief (only "Jack in the Box, NNN, expiry 2030–2035, around central Los Angeles"); placeholders `[OWNER-01]` / `[PROPERTY-01]` are used and all private values stay blank.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| O-01 | Claim + repo/privacy audit | done | session-6596c3f2 | `COORDINATION.md` (append only) |
+| O-02 | Fresh official-source verification, access date 2026-11-12; every row source-linked, unverified blank + flagged | done | session-6596c3f2 | `session-6596c3f2/data/sources.json`, `session-6596c3f2/data/metrics.json` |
+| O-03 | Questions / information / answers register + dedicated Suggestions-for-Review register (nothing auto-implemented) | done | session-6596c3f2 | `session-6596c3f2/data/questions.json`, `session-6596c3f2/data/suggestions.json` |
+| O-04 | Projection system: normalized deterministic scenarios + seeded Monte Carlo, 2030–2035 expiry grid; risk register mapped to every decision | done | session-6596c3f2 | `session-6596c3f2/scripts/model.py`, `session-6596c3f2/data/model_output.json`, `session-6596c3f2/data/risks.json`, `session-6596c3f2/data/decisions.json` |
+| O-05 | Executive summary + clean dashboard (landing + category subpages, table format) | done | session-6596c3f2 | `session-6596c3f2/*.html`, `session-6596c3f2/assets/`, `session-6596c3f2/EXECUTIVE_SUMMARY.md` |
+| O-06 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check | done | session-6596c3f2 | `session-6596c3f2/scripts/build_site.py`, `session-6596c3f2/scripts/verify.py` |
+| O-07 | Final integration: one additive workspace row, PR to `main`, merge without waiting, confirm Pages deploy, record result here | done | session-6596c3f2 | `tools/build_site.py` (one additive row in `build_workspaces()` only), `.github/workflows/verify.yml` (one additive step only), this file |
+
+## Session O verification record (2026-11-12)
+- Sources read today: Census QuickFacts V2025, BLS metro TED + LA CPI Oct 2026 (26-1670-SAN), CA EDD Sep 2026, BEA BEA 26-08, FRED DGS10 (4.88%, 2026-11-09), SEC EDGAR JACK 10-K FY2025 + 10-Q Q3 FY2026 (accession 0000807882-26-000091), CA DIR, USGS UCERF3 FAQ, LA County Eaton/Palisades fact sheet, LA City Finance ULA FAQ, IRS 1031, CA BOE Pub 29, CA DOF portal, LAEDC via LA City. 51 metric rows: 39 verified, 2 flagged-with-caution, 10 blank.
+- Irregularities flagged F-01..F-08 on `session-6596c3f2/flagged.html`, including DOF vintage conflict (B06 blank), BLS Oct YoY lapse gap (F-02), Eaton count timing variance (F-04), JACK debt-definition conflict (B08 blank), LAUSD official-release gap (B05 blank), no official cap rate (B07 blank).
+- Checks: `session-6596c3f2/scripts/verify.py` PASS (0 errors); root `tools/check_site.py` all checks passed (221 pages scanned); root rebuild changed only `workspaces.html` (one additive Session O row via `tools/build_site.py`); one additive CI step in `.github/workflows/verify.yml`. No prior session file edited.
+- Privacy: placeholders only; PII regex scan clean; private values blank by design.
+
 # Session `40933769` — 2026-11-12
 
 Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch cannot be renamed or switched). Before claiming, read the board, inspected the root builder and index, checked open PRs, and confirmed the existing root / Session N4 / Session 6d8f05 builders pass their local checks. No other session claims a dedicated suggestions page. Scope is deliberately additive and does not edit another session's data or workbook.
@@ -1401,3 +1421,6 @@ Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch c
 **Verification performed:** root model regenerated; root static build and `tools/check_site.py` passed (17 root pages, 209 HTML pages including workbooks/archive, all local links resolve, 24 source records, 89 root metrics with 82 verified and 7 blank/flagged, 24 risk rows). Full existing workflow command sequence was run: Session F4 audit/check and unit tests; root checks; Session L, I, D, M-b, N4, J, K, M-a and 6d8f05 build/verifiers; both test suites passed. The new builder asserts source links on all 8 proposal rows and all 5 decision rows. The repository-wide F4 audit reports 0 current-session PII hits; its one historical regex match is a public school/district location in `research/04-education.md`, not personal/owner/tenant information and not rendered in the website. No private identifiers were added.
 
 **Sources used by suggestion rows:** root ledger `data/sources.json` entries S1 (BLS), S2 (Census), S3 (CA DOF), S6 (LA County Assessor), S7 (LA County transfer tax), S8 (City of LA Measure ULA), S9 (SEC issuer filing), S13 (LA County fire fact sheet), S14 (CDE), S17 (CAL FIRE), S18 (USGS), S19 (FEMA), S20 (CA Department of Insurance), S21 (City of LA economic report), S23 (BEA) and S16 (IRS). Each rendered source link resolves to the HTTPS official publisher URL stored in that ledger. The model/verification checks do not independently confirm the truth of every historical narrative or refresh a source page; access dates remain visible in the ledger.
+
+## Session O merge-conflict log (2026-11-12)
+While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site) merged to `main` (`bf595f2`). Merging `origin/main` into `arena/6596c3f2-jack2` conflicted in 4 files. Resolution, discarding nothing: `COORDINATION.md` — both sessions' appended text kept (single hunk de-marked); `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` — took main's side, then regenerated on the merged tree (they are build outputs). `tools/build_site.py` auto-merged: PR #47's root Suggestions navigation AND Session O's additive workspace row both present (verified by grep). Root `suggestions.html` from #47 is preserved as-is; Session O's distinct review-and-choose register remains at `session-6596c3f2/suggestions.html`.

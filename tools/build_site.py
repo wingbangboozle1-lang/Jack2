@@ -1056,6 +1056,17 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-6596c3f2/</code>",
+         "Session O (branch <code>arena/6596c3f2-jack2</code>) &mdash; 2026-11-12 fresh re-verification: "
+         "16 official sources read on the access date (Census QuickFacts V2025, BLS metro/CPI Oct 2026, CA EDD, "
+         "BEA county 2024, FRED DGS10 4.88%, SEC EDGAR JACK 10-K FY2025 + 10-Q Q3 FY2026, CA DIR, USGS UCERF3, "
+         "LA County fire fact sheet, LA City Finance ULA, IRS, CA BOE), 51 metric rows (39 verified, 2 flagged, "
+         "10 deliberately blank), 20-question register, dedicated 12-item Suggestions-for-Review page (nothing "
+         "auto-implemented), 20-risk register mapped to 5 strategies, normalized per-$100k-NOI projection "
+         "(deterministic + 10,000-trial Monte Carlo, seed 20261112; extend-then-sell ranks first, passive "
+         "hold-to-expiry last), 13-page dashboard with automated verifier",
+         "13 pages",
+         "<a href='session-6596c3f2/index.html'>open &#8599;</a>"],
         ["<code>session-3090b9ed/</code>",
          "Session N4 (branch <code>arena/3090b9ed-jack2</code>) &mdash; 2026-11-11 line-by-line verification "
          "workbook: 20 official sources read on the access date (BLS LA Summary, Census QuickFacts V2025, FRED, "
