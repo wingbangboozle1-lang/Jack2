@@ -1369,3 +1369,19 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session O — `session-6596c3f2` (branch `arena/6596c3f2-jack2`) — claim 2026-11-12
+
+Platform note: pinned to `arena/6596c3f2-jack2`; that branch doubles as the PR/integration branch. All new work is isolated in `session-6596c3f2/**`; shared files are touched only by the additive changes in O-07. Prior sessions' files will not be edited, overwritten, or discarded. Open PRs #43/#41/#40/#38/#30/#18/#14/#10/#6/#5 belong to earlier sessions and will not be closed or merged by this session. No owner/parcel identifiers exist in the brief (only "Jack in the Box, NNN, expiry 2030–2035, around central Los Angeles"); placeholders `[OWNER-01]` / `[PROPERTY-01]` are used and all private values stay blank.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| O-01 | Claim + repo/privacy audit | in progress | session-6596c3f2 | `COORDINATION.md` (append only) |
+| O-02 | Fresh official-source verification, access date 2026-11-12; every row source-linked, unverified blank + flagged | claimed | session-6596c3f2 | `session-6596c3f2/data/sources.json`, `session-6596c3f2/data/metrics.json` |
+| O-03 | Questions / information / answers register + dedicated Suggestions-for-Review register (nothing auto-implemented) | claimed | session-6596c3f2 | `session-6596c3f2/data/questions.json`, `session-6596c3f2/data/suggestions.json` |
+| O-04 | Projection system: normalized deterministic scenarios + seeded Monte Carlo, 2030–2035 expiry grid; risk register mapped to every decision | claimed | session-6596c3f2 | `session-6596c3f2/scripts/model.py`, `session-6596c3f2/data/model_output.json`, `session-6596c3f2/data/risks.json`, `session-6596c3f2/data/decisions.json` |
+| O-05 | Executive summary + clean dashboard (landing + category subpages, table format) | claimed | session-6596c3f2 | `session-6596c3f2/*.html`, `session-6596c3f2/assets/`, `session-6596c3f2/EXECUTIVE_SUMMARY.md` |
+| O-06 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check | claimed | session-6596c3f2 | `session-6596c3f2/scripts/build_site.py`, `session-6596c3f2/scripts/verify.py` |
+| O-07 | Final integration: one additive workspace row, PR to `main`, merge without waiting, confirm Pages deploy, record result here | claimed | session-6596c3f2 | `tools/build_site.py` (one additive row in `build_workspaces()` only), `.github/workflows/verify.yml` (one additive step only), this file |
