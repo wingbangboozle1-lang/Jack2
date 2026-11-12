@@ -601,6 +601,55 @@
    "note": "",
    "reason": "The official address returned an error on the access date; earlier workbooks' figures for this index are not copied forward.",
    "obtain": "Re-open the National Risk Index county report for FIPS 06037 and record the overall rating and the earthquake, wildfire and riverine-flood ratings with the data version."
+  },
+  {
+   "id": "HZ-012",
+   "category": "hazards",
+   "group": "Earthquake",
+   "label": "Ground-failure zones the state maps for each property",
+   "geo": "California",
+   "period": "Map updated November 21, 2024",
+   "value": "Fault rupture, liquefaction and earthquake-induced landslides",
+   "source": "S-CGS",
+   "status": "verified",
+   "quote": "Earthquake hazard zones define areas subject to three distinct types of geologic ground failures: fault rupture, where the surface of the earth breaks along a fault; liquefaction, in which the soil temporarily turns to quicksand and cannot support structures; and earthquake-induced landslides.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "HZ-013",
+   "category": "hazards",
+   "group": "Earthquake",
+   "label": "City retrofit ordinance",
+   "geo": "City of Los Angeles",
+   "period": "Standing rule",
+   "value": "Ordinance 183893 requires the retrofit of pre-1978 wood-frame soft-story buildings and non-ductile concrete buildings",
+   "source": "S-LADBS",
+   "status": "verified",
+   "quote": "The City of Los Angeles recently passed Ordinance 183893, which requires the retrofit of pre-1978 wood-frame soft-story buildings and non-ductile concrete buildings.",
+   "checked": "2026-11-12",
+   "note": "A single-storey restaurant is not obviously either type; whether the subject building is on a retrofit list is unknown (row PL-033).",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "HZ-070",
+   "category": "hazards",
+   "group": "Flood",
+   "label": "Official source of flood zone maps",
+   "geo": "United States",
+   "period": "Standing rule",
+   "value": "FEMA Flood Map Service Center, the official public source for flood hazard information",
+   "source": "S-FEMA-MSC",
+   "status": "verified",
+   "quote": "The FEMA Flood Map Service Center (MSC) is the official public source for flood hazard information produced in support of the National Flood Insurance Program (NFIP).",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "paraphrase": true
   }
  ]
 }

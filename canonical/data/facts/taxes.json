@@ -178,22 +178,6 @@
    "obtain": ""
   },
   {
-   "id": "TX-012",
-   "category": "taxes",
-   "group": "Tax on the sale price",
-   "label": "County transfer tax",
-   "geo": "Los Angeles County",
-   "period": "Standing law",
-   "value": "$0.55 for each $500 or fractional part",
-   "source": "S-RTC-11911",
-   "status": "verified",
-   "quote": "when the consideration or value of the interest or property conveyed (exclusive of the value of any lien or encumbrance remaining thereon at the time of sale) exceeds one hundred dollars ($100) a tax at the rate of fifty-five cents ($0.55) for each five hundred dollars ($500) or fractional part thereof.",
-   "checked": "2026-11-12",
-   "note": "The statute authorises counties to impose this rate. That Los Angeles County has done so, and collects the city tax at recording, should be confirmed on the Registrar-Recorder's fee page before closing; see the Flagged for Review page.",
-   "reason": "",
-   "obtain": ""
-  },
-  {
    "id": "TX-013",
    "category": "taxes",
    "group": "Tax on the sale price",
@@ -989,6 +973,115 @@
    "note": "",
    "reason": "The City's page read on the access date shows the tax in force with new thresholds from July 1, 2026 and says nothing about pending challenges; this session did not locate an official source that settles the tax's future.",
    "obtain": "Ask the transaction attorney for the current status of litigation and legislation on Measure ULA; check the City Clerk's council file index and the Secretary of State's initiative tracker before pricing any sale above $5,400,000."
+  },
+  {
+   "id": "TX-018",
+   "category": "taxes",
+   "group": "Tax on the sale price",
+   "label": "County transfer tax as collected by the Recorder",
+   "geo": "Los Angeles County",
+   "period": "Standing rule",
+   "value": "$0.55 for each $500; the full $1.10 per $1,000 applies in the City of Los Angeles",
+   "source": "S-RRCC",
+   "status": "verified",
+   "quote": "Documentary Transfer Tax is computed when the consideration or value of the interest or property conveyed (exclusive of the value of any lien or encumbrance remaining thereon at the time of sale) exceeds one hundred dollars ($100), at the rate of fifty-five cents ($0.55) for each five hundred dollars ($500), or fractional part thereof. [...] Special rates apply to the following 5 cities: Culver City, Los Angeles, Pomona, Redondo Beach and Santa Monica as shown below. The County rate for these 5 special Cities is calculated at the full $1.10 per $1000.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TX-019",
+   "category": "taxes",
+   "group": "Tax on the sale price",
+   "label": "Whether the Measure ULA rate applies to the whole price or only the part above the threshold",
+   "geo": "City of Los Angeles",
+   "period": "Effective July 1, 2026",
+   "value": "The total transaction value",
+   "source": "S-RRCC",
+   "status": "verified",
+   "quote": "Los Angeles (Effective 7/1/26) | 44 | $2.25 for each $500 or fraction thereof; AND EITHER 4 Percent of the total transaction value of sales above $5,400,000 but less than $10,900,000; OR 5.5 Percent of the total transaction value of sales at or above $10,900,000.",
+   "checked": "2026-11-12",
+   "note": "Confirms the reading used in rows TX-016 and TX-017: crossing the threshold taxes the entire price.",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TX-031",
+   "category": "taxes",
+   "group": "Tax on the sale price",
+   "label": "Thresholds a year earlier",
+   "geo": "City of Los Angeles",
+   "period": "Effective July 1, 2025",
+   "value": "$5,300,000 and $10,600,000",
+   "source": "S-RRCC",
+   "status": "verified",
+   "quote": "Los Angeles (Effective 7/1/25) | 44 | $2.25 for each $500 or fraction thereof; AND EITHER 4 Percent of the total transaction value of sales above $5,300,000 but less than $10,600,000; OR 5.5 Percent of the total transaction value of sales at or above $10,600,000.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TX-032",
+   "category": "taxes",
+   "group": "Tax on the sale price",
+   "label": "Rise in the lower threshold over the year",
+   "geo": "City of Los Angeles",
+   "period": "July 1, 2025 to July 1, 2026",
+   "value": "1.9%",
+   "source": "S-RRCC",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "100*(x0-x1)/x1",
+    "operands": [
+     "5,400,000",
+     "5,300,000"
+    ],
+    "inputs": [
+     "TX-019",
+     "TX-031"
+    ],
+    "fmt": "{:.1f}%",
+    "formula": "($5,400,000 minus $5,300,000) divided by $5,300,000"
+   }
+  },
+  {
+   "id": "TX-033",
+   "category": "taxes",
+   "group": "Tax on the sale price",
+   "label": "Who collects the city tax",
+   "geo": "Los Angeles County",
+   "period": "Standing rule",
+   "value": "The Recorder's Office, at the time the document is recorded",
+   "source": "S-RRCC",
+   "status": "verified",
+   "quote": "The Recorder’s Office collects the tax on behalf of the Cities at the time the document is recorded.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TX-012",
+   "category": "taxes",
+   "group": "Tax on the sale price",
+   "label": "County transfer tax (statute)",
+   "geo": "Los Angeles County",
+   "period": "Standing law",
+   "value": "$0.55 for each $500 or fractional part",
+   "source": "S-RTC-11911",
+   "status": "verified",
+   "quote": "when the consideration or value of the interest or property conveyed (exclusive of the value of any lien or encumbrance remaining thereon at the time of sale) exceeds one hundred dollars ($100) a tax at the rate of fifty-five cents ($0.55) for each five hundred dollars ($500) or fractional part thereof.",
+   "checked": "2026-11-12",
+   "note": "The statute authorises the rate; row TX-018 confirms that Los Angeles County applies it.",
+   "reason": "",
+   "obtain": ""
   }
  ]
 }

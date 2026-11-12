@@ -464,6 +464,94 @@
    "accessed": "2026-11-12",
    "read": "unreachable",
    "note": "The address returned an error (HTTP 500) on the access date. Nothing from it is published."
+  },
+  {
+   "id": "S-SCAG",
+   "publisher": "Southern California Association of Governments",
+   "title": "Connect SoCal 2024: Demographics and Growth Forecast Technical Report (adopted April 4, 2024)",
+   "url": "https://www.scag.ca.gov/sites/default/files/2024-05/23-2987-tr-demographics-growth-forecast-final-040424.pdf",
+   "kind": "official projection",
+   "published": "2024-04-04",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: section 2.6 with Table 2 and the start of section 3 (third of ten page segments)."
+  },
+  {
+   "id": "S-RRCC",
+   "publisher": "Los Angeles County Registrar-Recorder/County Clerk",
+   "title": "Documentary Transfer Tax",
+   "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/",
+   "kind": "official rule",
+   "published": "City of Los Angeles rates effective 2026-07-01",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (first of six page segments: general rule, special city rates, calculation example)."
+  },
+  {
+   "id": "S-CGS",
+   "publisher": "California Geological Survey",
+   "title": "EQ Zapp: California Earthquake Hazards Zone Application",
+   "url": "https://www.conservation.ca.gov/cgs/geohazards/eq-zapp",
+   "kind": "official map",
+   "published": "updated 2024-11-21",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Description page read on the access date. The address-level map was not queried because the address is withheld."
+  },
+  {
+   "id": "S-FEMA-MSC",
+   "publisher": "Federal Emergency Management Agency",
+   "title": "Flood Map Service Center",
+   "url": "https://msc.fema.gov/portal/home",
+   "kind": "official map",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Home page read on the access date. The address-level search was not used because the address is withheld."
+  },
+  {
+   "id": "S-ZIMAS",
+   "publisher": "Los Angeles City Planning",
+   "title": "Zoning Search (ZIMAS)",
+   "url": "https://planning.lacity.gov/zoning/zoning-search",
+   "kind": "official map",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Description page read on the access date. The parcel was not looked up because the address is withheld."
+  },
+  {
+   "id": "S-ASSESSOR-PORTAL",
+   "publisher": "Los Angeles County Office of the Assessor",
+   "title": "Assessor Portal: search by parcel number or address",
+   "url": "https://portal.assessor.lacounty.gov/",
+   "kind": "official register",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Search page reached on the access date. No search was run: looking up the parcel would identify the property and its owner."
+  },
+  {
+   "id": "S-LADBS",
+   "publisher": "City of Los Angeles, Department of Building and Safety",
+   "title": "Mandatory Retrofit Programs",
+   "url": "https://dbs.lacity.gov/services/specialized-services/mandatory-retrofit-programs",
+   "kind": "official rule",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date."
+  },
+  {
+   "id": "S-GEOTRACKER",
+   "publisher": "California State Water Resources Control Board",
+   "title": "GeoTracker",
+   "url": "https://geotracker.waterboards.ca.gov/",
+   "kind": "official register",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Home page read on the access date. The site search was not used because the address is withheld."
   }
  ]
 }

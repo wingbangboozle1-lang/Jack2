@@ -976,6 +976,63 @@
    "note": "",
    "reason": "School-level data depend on the parcel's location, which is withheld by design.",
    "obtain": "With the address in hand (privately), use the Department of Education school directory and the California School Dashboard linked from the district profile to list the schools within about one mile, their enrollment trend and dashboard status."
+  },
+  {
+   "id": "PP-069",
+   "category": "people-place",
+   "group": "Schools",
+   "label": "Change in public school enrollment over the past ten years",
+   "geo": "Los Angeles County",
+   "period": "2015-16 to 2025-26",
+   "value": "-18.4%",
+   "source": "S-DOF-K12",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "100*(x0-x1)/x1",
+    "operands": [
+     "1,242,816",
+     "1,523,212"
+    ],
+    "inputs": [
+     "PP-060"
+    ],
+    "fmt": "{:.1f}%",
+    "formula": "(1,242,816 minus 1,523,212) divided by 1,523,212"
+   }
+  },
+  {
+   "id": "PP-011",
+   "category": "people-place",
+   "group": "Population",
+   "label": "Difference between the state's and the Census Bureau's estimate of county residents",
+   "geo": "Los Angeles County",
+   "period": "July 1, 2025",
+   "value": "158,501",
+   "source": "S-DOF-P2A",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "Two official estimates of the same quantity. Both show a decline since 2020; they differ on the level. Listed on the Flagged for Review page.",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "x0-x1",
+    "operands": [
+     "9,853,435",
+     "9,694,934"
+    ],
+    "inputs": [
+     "PJ-001",
+     "PP-001b"
+    ],
+    "fmt": "{:,.0f}",
+    "formula": "State estimate (9,853,435) minus Census Bureau estimate (9,694,934)"
+   }
   }
  ]
 }
