@@ -48,6 +48,7 @@ NAV = [
     ("projection-model.html", "Projection model"),
     ("risks.html", "Risk register"),
     ("requirements.html", "Requirements"),
+    ("suggestions.html", "Suggestions"),
     ("verification.html", "Verification"),
     ("flagged.html", "Flagged for review"),
     ("sources.html", "Sources"),
@@ -695,6 +696,62 @@ def build_requirements():
                 "Line-by-line requirement extraction and delivery status.")
 
 
+# ----------------------------------------------------------------------------- suggestions
+# Suggestions are explicitly proposals, not approved property instructions or numeric facts.
+def build_suggestions():
+    proposals = [
+        ["1 · Immediate", "Build a private, parcel-specific evidence file", "Obtain the executed lease and every amendment, exact expiration and notice dates, option and assignment language, rent and NNN reconciliation, guaranties, defaults, property condition, insurance declarations, title, basis/depreciation and debt payoff. Keep these documents out of this public repository.", f"{src_link('S9')} Public issuer filings give only tenant/parent context; they do not substitute for this property's lease or franchisee credit file."],
+        ["2 · Immediate", "Check disaster exposure and insurability at the parcel", "Use the exact parcel privately in official hazard tools; obtain written quotes, exclusions, deductibles and renewal availability. Include wildfire, earthquake, flood, liquefaction and business interruption; county-level risk is not a parcel determination.", f"{src_link('S17')} {src_link('S18')} {src_link('S19')} {src_link('S20')}"],
+        ["3 · Before comparing paths", "Get independent sale and hold economics", "Request a current appraisal or qualified valuation opinion and separate market bids. Compare actual net sale proceeds with hold/renew cash flows using actual rent, lease costs, operating expenses, debt, transaction costs and an owner-specific after-tax analysis. Do not substitute generic cap-rate benchmarks for an offer.", f"{src_link('S7')} {src_link('S8')} {src_link('S16')}"],
+        ["4 · In parallel", "Ask for a written extension proposal without committing", "Test a term extension with market-supported rent, escalations, expense responsibilities, guaranty/credit support, options, assignment rights and delivery condition. Compare the tenant proposal against the sell case; do not infer that an extension is beneficial merely because it increases lease term.", f"{src_link('S9')} Tenant public filings are context only; they do not establish this tenant's ability or willingness to pay."],
+        ["5 · Location evidence", "Use official regional indicators at the right geographic scale", "Review population, income, jobs, output and schools as context, but label city/county/metro measures by their actual geography and year. Obtain parcel-level traffic, zoning, nearby uses, trade-area demand and competition evidence separately; regional growth cannot establish site-specific demand.", f"{src_link('S1')} {src_link('S2')} {src_link('S3')} {src_link('S14')} {src_link('S21')} {src_link('S23')}"],
+        ["6 · Tail risk", "Stress-test correlated downside, not only a normal forecast", "Model tenant nonpayment/vacancy, a local disaster, sharply higher insurance or unavailable coverage, borrowing-cost changes and a weak sale market together. Verify risk mitigation and insurance terms before assigning probabilities; public hazard maps do not predict a particular loss.", f"{src_link('S13')} {src_link('S17')} {src_link('S18')} {src_link('S19')} {src_link('S20')}"],
+        ["7 · Tax / execution", "Have qualified advisers review tax and transaction constraints", "Compare taxable sale with a potentially qualifying like-kind exchange only after the owner's basis, depreciation, debt, timing, replacement-property criteria and liquidity needs are privately reviewed. A tax deferral is not tax elimination and a model cannot determine eligibility.", f"{src_link('S16')} {src_link('S7')} {src_link('S8')}"],
+        ["8 · Decision gate", "Choose only after the evidence is assembled", "Select sell, extend-then-sell, renew/hold, or a separately underwritten alternate use only when the lease, parcel, insurance, tenant, valuation, tax and reinvestment inputs are in hand. Record the reason, risk limit, fallback and review date; leave the recommendation unselected until then.", f"{src_link('S9')} {src_link('S16')} {src_link('S17')} {src_link('S18')}"],
+    ]
+    rows = [[e(priority), e(title), e(detail), source + '<br><span class="badge warn">Proposed · not approved</span>']
+            for priority, title, detail, source in proposals]
+    choices = [
+        ["Sell before expiry", "Can be favored if a credible offer meets the owner's after-tax return and risk objectives, and reinvestment / liquidity plans are ready.", f"{src_link('S7')} {src_link('S8')} {src_link('S16')}", "Not selected"],
+        ["Extend, then sell", "Can be favored if a tenant-backed extension materially improves marketability/value without granting uneconomic options or leaving unacceptable tenant/parcel risk.", f"{src_link('S9')} {src_link('S16')}", "Not selected"],
+        ["Renew and hold", "Can be favored if verified renewal economics, tenant credit, property condition and insurance support an acceptable risk-adjusted return and the owner accepts concentration.", f"{src_link('S6')} {src_link('S9')} {src_link('S17')} {src_link('S20')}", "Not selected"],
+        ["Hold without a new commitment", "A temporary option-preserving posture only while dates and deadlines are controlled; inaction can lose notice, marketing and tax-planning options.", f"{src_link('S9')} {src_link('S16')}", "Not selected"],
+        ["Re-tenant / alternate use", "Keep as an unranked possibility until parcel zoning, site condition, demand, costs, permits and timing are independently established.", f"{src_link('S2')} {src_link('S21')} {src_link('S23')}", "Not selected"],
+    ]
+    choice_rows = [[e(a), e(b), c, f'<span class="badge neutral">{e(d)}</span>'] for a, b, c, d in choices]
+    # Fail closed if any proposal or decision path loses its official-source citation.
+    assert len(proposals) == 8 and all('href="https://' in row[3] for row in proposals)
+    assert len(choices) == 5 and all('href="https://' in row[2] for row in choices)
+    body = f"""
+{head_block("Suggestions · review before action", "Preserve options now; decide the property only after parcel facts are known",
+            "The safest evidence-based next move is a reversible dual track: prepare a sale case and request a nonbinding extension proposal while closing the private lease, parcel, insurance and tax gaps. This is a process recommendation, not an appraisal or a final sell/renew instruction.")}
+
+<div class="callout warn" role="note"><p><strong>Privacy first.</strong> Do not upload an owner's name, address, APN, account, contact details, lease, tax return, net worth or tenant contact to this public site. Review confidential documents privately with qualified advisers. Parcel-level hazard and value claims are intentionally withheld.</p>
+<p>The cited sources are official sources already recorded in the source ledger; most root-ledger access dates are {e(ACCESS)}. For newer research, compare the <a href="session-3090b9ed/index.html">2026-11-11 independent verification workbook</a> and review its <a href="session-3090b9ed/flagged.html">Flagged for Review</a> page. A citation supports only the scope and date shown by that source; it does not verify a private parcel fact.</p></div>
+
+<h2>Proposed action list</h2>
+<p>Every row is a proposal for human review. “Proposed · not approved” is the current review status; nothing is authorized, filed, negotiated or implemented by this page. The reviewer should accept, defer or reject each item privately.</p>
+{table(["Priority", "Suggestion", "What to do / evidence gate", "Official source context · review status"], rows)}
+
+<h2>Decision paths to compare</h2>
+{table(["Path", "When it may be reasonable", "Official source context", "Reviewer choice"], choice_rows)}
+
+<div class="decision"><h2>Current decision stance</h2>
+<p><strong>Do not choose “sell” or “renew” from the public regional data alone.</strong> Keep both options alive, calendar all lease deadlines, and obtain the missing property-specific evidence. Then compare net after-tax proceeds and risk-adjusted hold value from verified inputs. If there is no time to complete diligence before a contractual deadline, get independent legal advice on preserving rights; do not let a model or this page substitute for the lease.</p>
+<p>There is no single universally “best” choice without the actual lease, offer, basis, debt, cash needs, risk tolerance and reinvestment plan. The pathway above prioritizes reversibility and wealth preservation while avoiding a fabricated price or personal tax conclusion.</p></div>
+
+<h2>Important distinctions</h2>
+<ul>
+  <li>Regional income, population, job growth and school data are contextual signals, not an appraisal, rent forecast or parcel-level demand study. The source link on each row identifies geography, measure and vintage.</li>
+  <li>Official hazard maps are screening tools. Obtain property-specific engineering and insurance underwriting; a county event does not prove the subject parcel is exposed.</li>
+  <li>Tax consequences, including any like-kind exchange, depend on private facts and statutory requirements. Obtain advice from qualified professionals before signing a sale or exchange contract. {src_link("S16")}</li>
+  <li>All table rows link to official sources. A source link is not proof that an unverified owner-specific fact is known.</li>
+</ul>
+"""
+    return page("suggestions.html", "Suggestions", body,
+                "Evidence-first, privacy-protecting action proposals and decision paths for independent review before any property change.")
+
+
 # ----------------------------------------------------------------------------- verification
 def build_verification():
     per_cat = []
@@ -1224,6 +1281,9 @@ def build_current_index():
     <p class="muted"><a href="session-313ba936/projection-model.html">Projection model &rarr;</a></p></div>
 </div>
 
+<h2>Suggestions: review before implementing changes</h2>
+<div class="callout info" role="note"><p>Use the dedicated <a href="suggestions.html"><strong>Suggestions page</strong></a> to review proposed evidence-gathering actions, compare sell / extend / renew / alternate-use paths, and keep the decision unselected until property-specific facts are verified. Each suggestion includes official-source context and is labelled “Proposed · not approved.” No private data is collected.</p></div>
+
 <h2>Current build: every category</h2>
 <div class="grid g3">
   <a class="card link" href="session-313ba936/executive-summary.html"><h3>Executive summary</h3><p>The answer, the three breakevens, the 90-day plan.</p></a>
@@ -1255,7 +1315,7 @@ calls its numbers assumption-driven. It is kept because deleting a published ana
 """
     legacy = f"""
 <details class="legacy-nav wrap" style="max-width:1240px;margin:24px auto;padding:0 22px">
-<summary>Historical root workbook navigation (16 pages, preserved)</summary>
+<summary>Historical root workbook navigation (17 pages, preserved)</summary>
 <nav class="main" aria-label="Historical root workbook">{historical}</nav>
 </details>
 """
@@ -1275,6 +1335,7 @@ BUILDERS = {
     "risks.html": build_risks,
     "decision.html": build_decision,
     "requirements.html": build_requirements,
+    "suggestions.html": build_suggestions,
     "verification.html": build_verification,
     "flagged.html": build_flagged,
     "sources.html": build_sources,
