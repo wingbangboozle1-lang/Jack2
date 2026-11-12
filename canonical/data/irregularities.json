@@ -320,7 +320,7 @@
    "id": "IR-30",
    "area": "Privacy",
    "title": "A personal e-mail address sits in the repository's history",
-   "detail": "{snap:email_commits} commits on the main branch carry one personal e-mail address in their author field. It is not on the site and is not reproduced here. Removing it requires rewriting history.",
+   "detail": "{snap:email_commits} commits on the main branch carry one personal e-mail address in their author field. It is not on the site and is not reproduced here. The count rises with each pull request merged through GitHub while the account's e-mail privacy setting is off: it rose during this session's own merges. Removing the address from existing history requires rewriting history.",
    "rows": [],
    "links": [
     [
@@ -328,7 +328,7 @@
      "https://github.com/wingbangboozle1-lang/Jack2/commits/main"
     ]
    ],
-   "action": "Owner's decision; see suggestion SG-18.",
+   "action": "Owner to turn on GitHub's setting that keeps the e-mail address private, which stops new commits and merges carrying it; then decide on a history rewrite (suggestion SG-18).",
    "status": "needs review"
   },
   {
