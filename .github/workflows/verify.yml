@@ -132,6 +132,20 @@ jobs:
             exit 1
           fi
 
+      - name: Build and verify the consolidated root site (final integration, session-1c30f8e8)
+        run: |
+          python3 canonical/model.py
+          python3 canonical/review_repo.py
+          python3 canonical/verify.py
+          python3 -m unittest discover -s canonical/tests
+          if [ -n "$(git status --porcelain -- canonical/ assets/ favicon.svg ':(glob)*.html')" ]; then
+            echo "The consolidated root site is out of date."
+            echo "Run:  python3 canonical/model.py && python3 canonical/review_repo.py && python3 canonical/verify.py"
+            echo "then commit the result. Do not edit root *.html by hand; they are generated from canonical/data/."
+            git status --porcelain -- canonical/ assets/ favicon.svg ':(glob)*.html'
+            exit 1
+          fi
+
       - name: Fail if generated files are out of date
         run: |
           if [ -n "$(git status --porcelain)" ]; then

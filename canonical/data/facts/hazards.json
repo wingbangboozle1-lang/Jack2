@@ -650,6 +650,38 @@
    "reason": "",
    "obtain": "",
    "paraphrase": true
+  },
+  {
+   "id": "HZ-045",
+   "category": "hazards",
+   "group": "Wildfire: the January 2025 fires",
+   "label": "Eaton Fire: structures destroyed, County's count",
+   "geo": "Altadena and Pasadena",
+   "period": "County fact sheet published January 2026",
+   "value": "9,414",
+   "source": "S-LAC-FIRE",
+   "status": "verified",
+   "quote": "Eaton Fire | Acreage burned: 14,021 acres | Structures destroyed (residential, commercial and other): 9,414 | Structures damaged: 1,074 | Confirmed fatalities: 19 | Palisades Fire | Acreage burned: 23,448 acres | Structures destroyed (residential, commercial and other): 6,837 | Structures damaged: 973 | Confirmed fatalities: 12",
+   "checked": "2026-11-12",
+   "note": "CAL FIRE's incident record, updated August 6, 2026, shows 9,419 (row HZ-021). The later-updated figure is used elsewhere on this site.",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "HZ-046",
+   "category": "hazards",
+   "group": "Wildfire: the January 2025 fires",
+   "label": "Palisades Fire: structures destroyed, County's count",
+   "geo": "Pacific Palisades",
+   "period": "County fact sheet published January 2026",
+   "value": "6,837",
+   "source": "S-LAC-FIRE",
+   "status": "verified",
+   "quote": "Eaton Fire | Acreage burned: 14,021 acres | Structures destroyed (residential, commercial and other): 9,414 | Structures damaged: 1,074 | Confirmed fatalities: 19 | Palisades Fire | Acreage burned: 23,448 acres | Structures destroyed (residential, commercial and other): 6,837 | Structures damaged: 973 | Confirmed fatalities: 12",
+   "checked": "2026-11-12",
+   "note": "CAL FIRE's incident record, updated April 9, 2026, shows 6,845 (row HZ-026).",
+   "reason": "",
+   "obtain": ""
   }
  ]
 }

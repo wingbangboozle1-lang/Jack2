@@ -1,0 +1,31 @@
+{
+ "what": "Salted, truncated SHA-256 of the names of individuals seen on official pages during research. The build hashes every pair of adjacent capitalised words it is about to publish and stops if one matches. The names themselves are not stored anywhere in this repository.",
+ "salt": "jack2-canonical-2026-11-12",
+ "hashes": [
+  "03398ec26d43eb2019fedd7c",
+  "0ae0719a80d58b72d1e30337",
+  "1a621c0720afd1877667104a",
+  "1e4d6cfd46a6fd6b83e89a03",
+  "2e0873281e48350e3090f512",
+  "31dfb4fd88dcbac76ba50d22",
+  "487fd7d1946657515715d230",
+  "5aecdfc22c91b52bf8299472",
+  "6dbe21a0a1ff6e3bb5030b28",
+  "7f2d118f62dbc251e1284daa",
+  "841512ac0eb1b5affd3ad7fa",
+  "852c97b05bb1f8bcb387c313",
+  "8fbb61a5ce18431c00e06e56",
+  "972f6e25516045fc07abe19c",
+  "adbac56c5e49c53b0992ad40",
+  "b252673335cb11d494772e28",
+  "b537aaa68b2420a62c4b4181",
+  "bb25d0289e979e8bb5e26cc4",
+  "c7d9ceee8a70c270f8a0c461",
+  "d0d23182e8882c3696c09207",
+  "e259cd601ec27a7fd67a5f4e",
+  "ea98813b45c9329200790d04",
+  "f03210e8bc8384d76066c6fe",
+  "f7f8caa40036115a7dbc346c",
+  "fd357f15ed00a8604d72686a"
+ ]
+}

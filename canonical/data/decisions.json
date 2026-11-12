@@ -1,0 +1,310 @@
+{
+ "question": "A single-tenant Jack in the Box restaurant in central Los Angeles is leased on net terms, and the lease expires at some point between 2030 and 2035. Should the owner sell before the lease expires, or renew it?",
+ "answer_short": "Ask the tenant for an early extension first, then decide. A refusal points to selling before expiry; an agreement leaves a real choice between keeping a secured income and selling a more valuable lease.",
+ "answer_points": [
+  {
+   "point": "The public evidence cannot settle 'sell or renew' on its own.",
+   "detail": "The facts that decide it sit in the lease and in the owner's files: rent, exact expiry, options, who the tenant is, what the lease says after a disaster, the owner's tax basis and needs. All of them are blank on this site and listed with how to obtain them.",
+   "rows": [
+    "PL-012",
+    "PL-013",
+    "PL-014",
+    "PL-010",
+    "PL-023",
+    "PL-040"
+   ]
+  },
+  {
+   "point": "The area is slowly losing residents and quickly losing schoolchildren, while jobs still grow a little.",
+   "detail": "Change in county residents since 2020 on the Census Bureau's count: [[PP-002b]]. The State projects [[PJ-071]] from 2025 to 2035, and [[PJ-075]] in public school pupils by 2035-36. Metro payroll jobs over the year: [[EC-031]]. County restaurant jobs over the year: [[EC-064]].",
+   "rows": [
+    "PP-002b",
+    "PJ-071",
+    "PJ-075",
+    "EC-031",
+    "EC-064"
+   ]
+  },
+  {
+   "point": "The tenant is shrinking and leveraged, but profitable and recently refinanced.",
+   "detail": "Restaurants in the system: [[TN-001]], against [[TN-004]] a year earlier. Same-store sales: [[TN-020]] in the latest quarter and [[TN-023]] in fiscal 2025. Net earnings from continuing operations: [[TN-034]] in the quarter. Stockholders' deficit: [[TN-043]] ($ thousand).",
+   "rows": [
+    "TN-001",
+    "TN-004",
+    "TN-020",
+    "TN-023",
+    "TN-034",
+    "TN-043",
+    "TN-080"
+   ]
+  },
+  {
+   "point": "Buyers pay for lease length, and this lease is short.",
+   "detail": "Large net-lease buyers report purchase yields of [[CM-020]] and [[CM-042]] on leases averaging [[CM-022]] years. No official source prices a lease with four to nine years left on one Los Angeles restaurant; that value is blank.",
+   "rows": [
+    "CM-020",
+    "CM-042",
+    "CM-022",
+    "CM-060"
+   ]
+  },
+  {
+   "point": "Most leases are renewed, but an empty building is worth far less.",
+   "detail": "In one national portfolio [[CM-054]] of expiring leases were renewed by the same tenant, and vacant buildings sold for [[CM-034]] of the leased price per square foot.",
+   "rows": [
+    "CM-054",
+    "CM-034",
+    "CM-055"
+   ]
+  },
+  {
+   "point": "Selling is taxed twice; holding is exposed to one region's disasters.",
+   "detail": "City and county transfer tax is [[TX-015]] of the price, or [[TX-016]] once the price passes $5,400,000, and the top statutory income-tax rates on a gain are [[TX-049]] federal and [[TX-060]] California. Against that, the official forecast puts the chance of a magnitude 6.7 or larger earthquake in the region at [[HZ-001]] over 30 years from 2014, and the January 2025 fires destroyed [[HZ-031]] structures.",
+   "rows": [
+    "TX-015",
+    "TX-016",
+    "TX-049",
+    "TX-060",
+    "HZ-001",
+    "HZ-031"
+   ]
+  }
+ ],
+ "why_test_first": [
+  "Asking costs little and commits the owner to nothing.",
+  "A signed extension raises what a buyer would pay and protects a holder against a change of mind at the tenant.",
+  "A refusal is information: it is the strongest available signal that the tenant may leave, received while there is still lease term to sell."
+ ],
+ "options": [
+  {
+   "key": "sell_cash",
+   "label": "Sell now for cash",
+   "family": "Sell",
+   "what": "Sell with the lease term that remains, pay the tax, hold the proceeds in Treasuries.",
+   "fits": "An owner who needs liquidity or certainty above all, or whose tax basis is high enough that little tax is due.",
+   "drawback": "The lowest typical outcome of the six, before tax, and tax makes it lower."
+  },
+  {
+   "key": "sell_exchange",
+   "label": "Sell now and exchange",
+   "family": "Sell",
+   "what": "Sell with the term that remains and move the proceeds, tax-deferred, into a longer lease outside the region.",
+   "fits": "An owner who wants out of single-tenant, single-region risk and has a low tax basis.",
+   "drawback": "Sells at the short-lease discount; depends on finding and closing a sound replacement within 45 and 180 days."
+  },
+  {
+   "key": "extend_then_sell",
+   "label": "Extend, then sell and exchange",
+   "family": "Sell",
+   "what": "Ask the tenant for an early extension. If it signs, sell the longer lease and exchange; if it refuses, sell as is and exchange.",
+   "fits": "The same owner as above, willing to spend a few months testing the tenant first.",
+   "drawback": "Takes longer; a higher price may cross the $5,400,000 transfer-tax threshold."
+  },
+  {
+   "key": "test_then_decide",
+   "label": "Extend and keep, or sell if refused",
+   "family": "Sequence",
+   "what": "Ask for an early extension. If the tenant signs, keep the property; if it refuses, sell before expiry and exchange.",
+   "fits": "An owner content to hold a secured income from this property but unwilling to wait for expiry to learn the tenant's intentions.",
+   "drawback": "Keeps the regional disaster and single-tenant exposure when the tenant signs."
+  },
+  {
+   "key": "extend_and_hold",
+   "label": "Extend and keep either way",
+   "family": "Renew",
+   "what": "Ask for an early extension and keep the property whatever the answer.",
+   "fits": "An owner committed to the property, for example for estate reasons.",
+   "drawback": "After a refusal the owner holds a property whose tenant has signalled it may leave."
+  },
+  {
+   "key": "do_nothing",
+   "label": "Do nothing until expiry",
+   "family": "Renew",
+   "what": "Collect rent and wait to see whether the tenant renews.",
+   "fits": "Only an owner who has confirmed strong unit sales and favourable option terms.",
+   "drawback": "Highest typical outcome but the worst bad case; a missed notice date or a late refusal leaves little time to act."
+  }
+ ],
+ "rule": [
+  {
+   "if": "The tenant refuses or stalls on an extension",
+   "then": "Sell before expiry while term remains; exchange if the tax basis is low. Do not wait for expiry.",
+   "because": "After a refusal the model shows selling ahead of keeping on both the typical and the bad outcome."
+  },
+  {
+   "if": "The tenant signs, and the owner can live with one tenant in one region",
+   "then": "Keep the property. Revisit a sale later from a position of strength.",
+   "because": "Keeping gives a slightly higher typical outcome than selling an extended lease."
+  },
+  {
+   "if": "The tenant signs, but the owner wants preservation first",
+   "then": "Sell the extended lease and exchange into a longer lease elsewhere.",
+   "because": "The bad-case outcome improves markedly for a small cost in the typical outcome."
+  },
+  {
+   "if": "The lease leaves roof, structure or disaster risk with the owner, or the parcel is in a mapped hazard zone without earthquake cover",
+   "then": "Weight the choice toward a sale.",
+   "because": "The model's worst outcomes for holding come from uninsured damage and a lease that ends after it."
+  },
+  {
+   "if": "The tax adviser finds a large taxable gain",
+   "then": "Prefer an exchange to a cash sale, or holding within an estate plan.",
+   "because": "A cash sale ranks last even before tax."
+  },
+  {
+   "if": "Broker opinions put the price just above $5,400,000",
+   "then": "Take legal advice on pricing and structure before marketing.",
+   "because": "The city tax then applies to the whole price."
+  }
+ ],
+ "plan": [
+  {
+   "when": "Weeks 1 to 2",
+   "action": "Assemble the private file: lease and every amendment, rent ledger, property tax bill, insurance certificates, loan papers, title report.",
+   "closes": [
+    "Q01",
+    "Q02",
+    "Q03",
+    "Q04",
+    "Q05",
+    "Q08",
+    "Q17",
+    "Q20"
+   ],
+   "who": "Owner"
+  },
+  {
+   "when": "Weeks 1 to 2",
+   "action": "Look the parcel up privately in the official tools: Assessor, zoning, fire, flood and earthquake-zone maps, cleanup database.",
+   "closes": [
+    "Q14",
+    "Q25",
+    "Q27",
+    "Q32"
+   ],
+   "who": "Owner"
+  },
+  {
+   "when": "Weeks 2 to 4",
+   "action": "Have an attorney abstract the lease on one page: options and notice dates, casualty and condemnation, purchase rights, who pays for what. Calendar every date.",
+   "closes": [
+    "Q03",
+    "Q05",
+    "Q06",
+    "Q07"
+   ],
+   "who": "Real-estate attorney"
+  },
+  {
+   "when": "Weeks 2 to 6",
+   "action": "Obtain two broker opinions of value, each as is and as extended, with comparables; obtain a land value.",
+   "closes": [
+    "Q13",
+    "Q14",
+    "Q15",
+    "Q33"
+   ],
+   "who": "Net-lease brokers; appraiser"
+  },
+  {
+   "when": "Weeks 3 to 6",
+   "action": "Have a tax adviser compute after-tax proceeds of a cash sale and of an exchange, and review the estate plan.",
+   "closes": [
+    "Q16",
+    "Q19",
+    "Q21"
+   ],
+   "who": "Tax adviser; estate attorney"
+  },
+  {
+   "when": "Weeks 3 to 6",
+   "action": "Obtain insurance certificates and an earthquake quote; have the building looked at if it predates 1978.",
+   "closes": [
+    "Q28",
+    "Q29"
+   ],
+   "who": "Insurance broker; engineer"
+  },
+  {
+   "when": "Weeks 4 to 8",
+   "action": "Ask the tenant in writing for an extension proposal, this restaurant's sales, and its remodel or closure status.",
+   "closes": [
+    "Q09",
+    "Q10",
+    "Q11"
+   ],
+   "who": "Owner with broker or attorney"
+  },
+  {
+   "when": "Weeks 8 to 12",
+   "action": "Re-run the model privately with the real figures and apply the decision rule above. If selling, line up the exchange before listing.",
+   "closes": [
+    "Q18"
+   ],
+   "who": "Owner and advisers"
+  }
+ ],
+ "triggers": [
+  {
+   "watch": "The tenant's restaurant count against its own forecast",
+   "row": "TN-006",
+   "act": "Fewer restaurants or more closures than forecast raise the chance this one is on a list: bring the extension request forward."
+  },
+  {
+   "watch": "The tenant's same-store sales against its forecast",
+   "row": "TN-026",
+   "act": "A decline worse than forecast weakens renewal odds and rent cover."
+  },
+  {
+   "watch": "The tenant's next repayment date on older notes",
+   "row": "TN-046",
+   "act": "A missed or expensive refinancing is a reason to sell while the tenant is current."
+  },
+  {
+   "watch": "A permanent chief executive and any change of plan",
+   "row": "TN-090",
+   "act": "Re-read the next Form 8-K for closure and real-estate policy."
+  },
+  {
+   "watch": "The tenant's annual report for the fiscal year that ended in September 2026",
+   "row": "TN-072",
+   "act": "Not yet filed on the access date. Update the Tenant page when it is."
+  },
+  {
+   "watch": "The 10-year Treasury yield",
+   "row": "CM-001",
+   "act": "A sustained rise lowers what buyers pay; do not plan on a fall."
+  },
+  {
+   "watch": "The Federal Reserve's target range",
+   "row": "CM-010",
+   "act": "The last move was up, against the official forecast."
+  },
+  {
+   "watch": "The Measure ULA thresholds, reset each July 1",
+   "row": "TX-003",
+   "act": "Re-check before pricing any sale."
+  },
+  {
+   "watch": "Certification of the November 2026 ballot results",
+   "row": "TX-075",
+   "act": "Confirm the outcome on state income-tax rates and local tax thresholds."
+  },
+  {
+   "watch": "The State's yearly population and enrollment projections",
+   "row": "PJ-001",
+   "act": "A faster decline than projected weakens the case for a long hold."
+  },
+  {
+   "watch": "Every notice date in the lease",
+   "row": "PL-014",
+   "act": "Unknown until the lease is read. A missed date can decide the matter by default."
+  }
+ ],
+ "limits": [
+  "Not an appraisal, not tax advice and not investment advice. It is decision support built from public sources and labelled assumptions.",
+  "Every money figure is per $100 of the property's current yearly rent, because the rent is unknown.",
+  "The model's settings for yields, renewal, vacancy and disaster loss are assumptions unless marked as anchored to a ledger row; change them and the ranking can change. The sensitivity table shows which matter most.",
+  "National figures from two large property companies stand in for a local market that no official source measures."
+ ]
+}

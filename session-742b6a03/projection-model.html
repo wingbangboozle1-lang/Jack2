@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projection model - Central LA Jack in the Box NNN workbook</title>
+<meta name="description" content="Reproducible 2026-2040 projection model with published inputs, scenario results, breakevens and sensitivity.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html"><span class="dot"></span><span>Central LA NNN Decision Workbook<small>Jack in the Box &middot; 2030&ndash;2035 lease expiry &middot; data as of 2026-11-08</small></span></a>
+  <nav class="main" aria-label="Sections"><a href="index.html">Current overview</a><a href="executive-summary.html">Executive summary</a><a href="decision.html">Decision</a><a href="market-economics.html">Market economics</a><a href="property-lease.html">Property &amp; lease</a><a href="valuation.html">Valuation inputs</a><a href="projection-model.html" aria-current="page">Projection model</a><a href="risks.html">Risk register</a><a href="requirements.html">Requirements</a><a href="suggestions.html">Suggestions</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="privacy.html">Privacy</a><a href="deployment.html">Deployment</a><a href="archive.html">Session A archive</a><a href="workspaces.html">All workspaces</a></nav>
+</div></header>
+<main id="main" class="wrap">
+<div class="callout warn" role="note"><p><strong>You are in the archive.</strong> This is the earlier root site, kept as its sessions wrote it. The consolidated, re-verified site is <a href="../index.html">here</a>.</p></div>
+<div class="callout warn" role="note"><p><strong>Historical root workbook page.</strong> This page is preserved for audit and may contain assumption-driven historical numbers. The current evidence-first dashboard is <a href="../session-f4f700c0/index.html">session-f4f700c0</a>; start there for the anonymized, source-linked decision framework.</p></div>
+
+<div class="page-head"><p class="eyebrow">Projection model</p><h1>A reproducible 2026&ndash;2040 model, published inputs, and the breakevens rather than a guess at value</h1><p class="lede">Deterministic Python. No randomness. Every published number can be regenerated with one command, and every input is either sourced or labelled as an assumption.</p></div>
+
+<div class="callout info">
+<p><strong>Reproduce it:</strong> <code>python3 tools/model.py</code> writes <code>data/model_output.json</code> and <code>research/model-report.md</code>.
+The code is in <code>tools/model.py</code> and is short enough to read in full.</p>
+</div>
+
+<h2>Method</h2>
+<ol>
+  <li><strong>Three paths are modeled.</strong> (A) sell now and redeploy the net proceeds; (B) hold through the lease and sell at expiry; (C) renew at a reset rent and hold to 2040. A fourth state, tenant vacates (downtime, $300k of leasing costs, re-let at market), is blended into (C) by a renewal probability.</li>
+  <li><strong>Path A</strong> nets out the real cost stack: 3.00% brokerage, 0.50% closing, 0.11% county transfer tax, 0.45% city transfer tax, and the tiered Measure ULA surtax where the price crosses the official thresholds. <span class="src"><a href="https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes" target="_blank" rel="noopener noreferrer" title="Los Angeles County Registrar-Recorder/County Clerk - Documentary Transfer Tax">S7 &#8599;</a></span> <span class="src"><a href="https://finance.lacity.gov/faq/measure-ula" target="_blank" rel="noopener noreferrer" title="City of Los Angeles Office of Finance - Real Property Transfer Tax and Measure ULA FAQ">S8 &#8599;</a></span></li>
+  <li><strong>Proceeds are redeployed at two different rates</strong> so the answer cannot hide inside one assumption: the verified 10-year Treasury (4.90%) and the verified net-lease acquisition benchmark (7.3%). <span class="src"><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener noreferrer" title="Board of Governors of the Federal Reserve System via FRED (St. Louis Fed) - Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)">S11 &#8599;</a></span> <span class="src"><a href="https://www.realtyincome.com/sites/realty-income/files/2026-02/q4-2025-supplemental-report.pdf" target="_blank" rel="noopener noreferrer" title="Realty Income Corporation (NYSE: O) - Q4 2025 Earnings Release &amp; Supplemental Information (investor relations)">S10 &#8599;</a></span></li>
+  <li><strong>Everything is compounded to 2040</strong> in nominal dollars, and discounted at 8% for the NPV view. Pre-tax throughout; the tax layer needs the owner's basis.</li>
+  <li><strong>Breakevens are solved numerically</strong> rather than asserted &mdash; that is what turns a forecast into a decision rule.</li>
+</ol>
+
+<h2>Scenario definitions</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Scenario</th><th>Definition</th></tr></thead><tbody><tr><td>Bear</td><td>Rates stay high, exit cap 7.50%, 1.5% escalators, tenant negotiates rent down 10% at renewal.</td></tr><tr><td>Base</td><td>Exit cap 6.50%, 2.0% escalators, renewal at then-current market rent, 75% renewal probability.</td></tr><tr><td>Bull</td><td>Rate relief compresses the exit cap to 5.50%, 2.5% escalators, market rent 15% above contract at renewal.</td></tr></tbody></table></div>
+
+<h2>Results (wealth at 2040, pre-tax nominal)</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Scenario</th><th class="num">Exit cap</th><th class="num">Escalation</th><th class="num">Renewal prob.</th><th class="num">Net proceeds if sold now</th><th class="num">Sell &rarr; Treasury</th><th class="num">Sell &rarr; net lease</th><th class="num">Hold + renew</th><th class="num">Hold minus sell (net lease)</th></tr></thead><tbody><tr><td>Bear</td><td class="num">7.50%</td><td class="num">1.50%</td><td class="num">55%</td><td class="num">$1,918,800</td><td class="num">$3,748,751</td><td class="num">$5,145,479</td><td class="num">$4,455,512</td><td class="num"><strong>-$689,967</strong></td></tr><tr><td>Base</td><td class="num">6.50%</td><td class="num">2.00%</td><td class="num">75%</td><td class="num">$2,214,000</td><td class="num">$4,325,481</td><td class="num">$5,937,091</td><td class="num">$5,690,267</td><td class="num"><strong>-$246,824</strong></td></tr><tr><td>Bull</td><td class="num">5.50%</td><td class="num">2.50%</td><td class="num">85%</td><td class="num">$2,616,545</td><td class="num">$5,111,933</td><td class="num">$7,016,562</td><td class="num">$7,450,809</td><td class="num"><strong>$434,246</strong></td></tr></tbody></table></div>
+
+<h2>Breakevens - the decision rules</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Test</th><th class="num">Result</th></tr></thead><tbody><tr><td>Reinvestment yield needed for &lsquo;sell now&rsquo; to match holding - bear</td><td class="num">6.20%</td></tr><tr><td>Reinvestment yield needed - base</td><td class="num">6.97%</td></tr><tr><td>Reinvestment yield needed - bull</td><td class="num">7.76%</td></tr><tr><td>Exit cap at which holding ties selling (vs Treasury redeployment)</td><td class="num">11.79%</td></tr><tr><td>Exit cap at which holding ties selling (vs net-lease redeployment)</td><td class="num">6.01%</td></tr><tr><td>Rent uplift at renewal needed to beat selling into the net-lease benchmark</td><td class="num">+7.10%</td></tr><tr><td>Rent change at renewal at which holding still beats Treasury redeployment</td><td class="num">-39.24% (a cut of that size)</td></tr></tbody></table></div>
+
+<h2>Sensitivity grid: exit cap &times; rent escalation (hold + renew, prob-weighted)</h2>
+<div class="tablewrap"><table class=""><thead><tr><th>Exit cap</th><th class="num">1.5% escalation</th><th class="num">2.0% escalation</th><th class="num">2.5% escalation</th></tr></thead><tbody><tr><td>5.50%</td><td class="num">$5,968,479</td><td class="num">$6,243,296</td><td class="num">$6,532,915</td></tr><tr><td>6.00%</td><td class="num">$5,685,701</td><td class="num">$5,943,739</td><td class="num">$6,215,574</td></tr><tr><td>6.50%</td><td class="num">$5,446,427</td><td class="num">$5,690,267</td><td class="num">$5,947,054</td></tr><tr><td>7.00%</td><td class="num">$5,241,336</td><td class="num">$5,473,005</td><td class="num">$5,716,894</td></tr><tr><td>7.50%</td><td class="num">$5,063,590</td><td class="num">$5,284,712</td><td class="num">$5,517,422</td></tr></tbody></table></div>
+
+<h2>Which assumptions actually move the answer</h2>
+<p>One-at-a-time from the base case. The ranking is the useful part: cap rate and renewal probability dominate; the rent reset matters more than the escalator.</p>
+<div class="tablewrap"><table class=""><thead><tr><th>Change from base case</th><th class="num">Hold wealth at 2040</th><th class="num">Delta vs base</th><th class="num">Delta vs sell + net-lease</th></tr></thead><tbody><tr><td>Exit cap 5.50% instead of 6.50%</td><td class="num">$6,243,296</td><td class="num">$553,029</td><td class="num">$306,205</td></tr><tr><td>Rent reset 15% higher at renewal</td><td class="num">$6,211,955</td><td class="num">$521,688</td><td class="num">$274,864</td></tr><tr><td>Renewal probability 55% instead of 75%</td><td class="num">$5,281,075</td><td class="num">-$409,192</td><td class="num">-$656,016</td></tr><tr><td>Exit cap 7.50% instead of 6.50%</td><td class="num">$5,284,712</td><td class="num">-$405,555</td><td class="num">-$652,379</td></tr><tr><td>Rent reset 10% lower at renewal</td><td class="num">$5,342,475</td><td class="num">-$347,792</td><td class="num">-$594,617</td></tr><tr><td>Escalation 2.5% instead of 2.0%</td><td class="num">$5,947,054</td><td class="num">$256,787</td><td class="num">$9,963</td></tr><tr><td>Escalation 1.5% instead of 2.0%</td><td class="num">$5,446,427</td><td class="num">-$243,840</td><td class="num">-$490,664</td></tr><tr><td>Renewal probability 85% instead of 75%</td><td class="num">$5,894,863</td><td class="num">$204,596</td><td class="num">-$42,229</td></tr></tbody></table></div>
+
+<h2>Limits</h2>
+<ul>
+  <li>Rent, expiry, basis and debt are placeholders. This is a framework, not an appraisal.</li>
+  <li>No income tax, depreciation recapture, NIIT or California tax is computed - that needs the owner's basis (P05).</li>
+  <li>No wildfire or earthquake loss is simulated. Those sit in the <a href="risks.html">risk register</a> as tail events with insurance as the mitigation.</li>
+  <li>No non-official data is used. The cap rate is an assumption because no government body publishes asset-level cap rates (M51).</li>
+</ul>
+
+</main>
+<footer class="site"><div class="wrap">
+  <p><strong>Internal decision support &mdash; not an appraisal, not tax advice, not investment advice.</strong>
+  Every data value on this site links to the official source it was read from on 2026-11-08.
+  Values that could not be confirmed from an official source are blank and listed on the
+  <a href="flagged.html">Flagged for review</a> page. No personal or parcel-identifying information is published.</p>
+  <p>Built from <a href="sources.html">24 sources</a> &middot; <a href="verification.html">verification log</a> &middot;
+  <a href="deployment.html">deployment</a> &middot; reproduction: <code>python3 tools/build_site.py</code></p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

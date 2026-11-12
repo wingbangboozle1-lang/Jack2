@@ -36,9 +36,14 @@ METRICS = load(os.path.join(D, "metrics.json"))
 RISKS = load(os.path.join(D, "risks.json"))
 MODEL = load(os.path.join(D, "model_output.json"))
 
-pages = sorted(f for f in os.listdir(ROOT) if f.endswith(".html"))
+# Final integration (session-1c30f8e8, 2026-11-12): the historical workbook this checker belongs to
+# is published under session-742b6a03/. Its page list and navigation are checked there; the link,
+# insecure-address and personal-information scans below still cover every page in the repository,
+# including the consolidated root site.
+SITE = os.path.join(ROOT, "session-742b6a03")
+pages = sorted(f for f in os.listdir(SITE) if f.endswith(".html"))
 if not pages:
-    fail("no HTML pages found at the repository root")
+    fail("no HTML pages found in session-742b6a03/")
 
 # every HTML file anywhere in the tree (the archived parallel-session site is included)
 ALL_HTML = []
@@ -72,7 +77,7 @@ for p in ALL_HTML:
             fail(f"{p}: broken internal link -> {target}")
 
 # ---------------------------------------------------------------- 2 nav reachability
-with open(os.path.join(ROOT, "index.html"), encoding="utf-8") as f:
+with open(os.path.join(SITE, "index.html"), encoding="utf-8") as f:
     index = f.read()
 nav_targets = set(re.findall(r'<nav class="main"[^>]*>.*?</nav>', index, re.S))
 nav_html = " ".join(nav_targets)
@@ -129,7 +134,7 @@ for s in MODEL.get("scenarios", []):
 
 # ---------------------------------------------------------------- report
 notes = [
-    f"pages: {len(pages)} at root, {len(ALL_HTML)} including the archive",
+    f"pages: {len(pages)} in session-742b6a03/, {len(ALL_HTML)} in the whole repository",
     f"sources: {len(SRC)}",
     f"metric rows: {len(METRICS['rows'])} "
     f"({sum(1 for r in METRICS['rows'] if r['status']=='verified')} verified, "

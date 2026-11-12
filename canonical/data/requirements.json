@@ -1,0 +1,123 @@
+{
+ "requirements": [
+  {
+   "id": "RQ-01",
+   "requirement": "Collect, organise and analyse against the full list of requirements",
+   "where": "index.html, requirements.html",
+   "status": "Done",
+   "note": "This page maps each requirement to where it is met."
+  },
+  {
+   "id": "RQ-02",
+   "requirement": "Executive summary outlining the important details",
+   "where": "executive-summary.html",
+   "status": "Done",
+   "note": "One page: the answer, six findings with sources, the decision rule and the plan."
+  },
+  {
+   "id": "RQ-03",
+   "requirement": "Suggestions on improving the site, in a dedicated section, nothing implemented before review",
+   "where": "suggestions.html",
+   "status": "Done",
+   "note": "18 proposals, each marked 'for review - not implemented'."
+  },
+  {
+   "id": "RQ-04",
+   "requirement": "List of questions, information and answers needed before a decision, with ways to find what is missing",
+   "where": "questions.html",
+   "status": "Done",
+   "note": "33 questions: what is known, what is missing, how to find out, who can answer."
+  },
+  {
+   "id": "RQ-05",
+   "requirement": "Deep research on the area: geography, income, schools, population, jobs and other economic factors",
+   "where": "demographics.html, market-economics.html",
+   "status": "Done for city, county and metro area; blank at neighbourhood level",
+   "note": "Neighbourhood figures need the address, which is withheld."
+  },
+  {
+   "id": "RQ-06",
+   "requirement": "Projection system for the area and the property",
+   "where": "projection-model.html",
+   "status": "Done",
+   "note": "Official projections to 2035 and beyond, plus a scenario model with 36 labelled settings, breakevens and stress cases."
+  },
+  {
+   "id": "RQ-07",
+   "requirement": "Risks for every possible decision, business-as-usual and black swan",
+   "where": "risks.html, decision.html",
+   "status": "Done",
+   "note": "37 risks, each rated against each of six strategies."
+  },
+  {
+   "id": "RQ-08",
+   "requirement": "Best decision for the property and for the owner: preservation and growth at manageable risk",
+   "where": "decision.html, executive-summary.html",
+   "status": "Done as a decision rule; the final choice needs the owner's private facts",
+   "note": "The rule says what to do under each answer the tenant and the advisers can give."
+  },
+  {
+   "id": "RQ-09",
+   "requirement": "Verified official sources; a source link on every table row",
+   "where": "sources.html and every data table",
+   "status": "Done",
+   "note": "50 sources read on 2026-11-12; every row links to its source."
+  },
+  {
+   "id": "RQ-10",
+   "requirement": "Blank and flagged when a value cannot be confirmed; nothing inferred",
+   "where": "flagged.html",
+   "status": "Done",
+   "note": "Blank rows are listed with the reason and how to obtain the value."
+  },
+  {
+   "id": "RQ-11",
+   "requirement": "Review the repository line by line; links for manual review; flag irregularities",
+   "where": "verification.html, flagged.html",
+   "status": "Done as a structural inventory and a cross-check of key figures",
+   "note": "Every file and line is inventoried; key figures in earlier workbooks are compared with today's verified values. Not every historical sentence was re-checked."
+  },
+  {
+   "id": "RQ-12",
+   "requirement": "Privacy first: no personal information, placeholders only",
+   "where": "privacy.html",
+   "status": "Done",
+   "note": "Enforced by the build: the site fails to build if a personal identifier pattern appears."
+  },
+  {
+   "id": "RQ-13",
+   "requirement": "A live site with a clean landing page and category subpages, simple and dashboard-like, findings in tables",
+   "where": "index.html and the menu",
+   "status": "Done",
+   "note": "One consolidated site at the root; earlier workbooks are in the archive."
+  },
+  {
+   "id": "RQ-14",
+   "requirement": "Parallel sessions coordinate through COORDINATION.md",
+   "where": "COORDINATION.md, workspaces.html",
+   "status": "Done",
+   "note": "A stale integration claim was taken over under the 60-minute rule; other sessions' folders are untouched."
+  },
+  {
+   "id": "RQ-15",
+   "requirement": "Final integration: merge, re-verify combined data line by line, no broken links, publish",
+   "where": "verification.html, deployment.html",
+   "status": "Done",
+   "note": "The verifier checks every row, every internal link in the published tree, privacy and model reproducibility."
+  },
+  {
+   "id": "RQ-16",
+   "requirement": "Pull request to main with summary, sources and flagged items; merge; confirm deploy; record result",
+   "where": "deployment.html, COORDINATION.md",
+   "status": "Done",
+   "note": "See the deployment page."
+  },
+  {
+   "id": "RQ-17",
+   "requirement": "Flagged and unverified items on a clearly labelled Flagged for Review page with source links",
+   "where": "flagged.html",
+   "status": "Done",
+   "note": "Blank rows and irregularities, each with a link."
+  }
+ ]
+}
