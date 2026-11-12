@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Conditional Decision Engine, Action Triggers & Cross-Workbook Reconciliation",
+    "access_date": "2026-11-12",
+    "anchors": {
+      "treasury_10y": "4.98%",
+      "reit_cash_yield": "6.80%",
+      "spread_bps": 182,
+      "jack_units": 2115,
+      "la_cpi": "3.7%",
+      "la_unemp_county_sa": "4.8%"
+    }
+  },
+  "verdict_summary": {
+    "headline": "Do NOT execute an unexamined hold or panic sell today. With Realty Income's Q3 2026 cash yield compressing to 6.8% while the 10-Year Treasury climbed to 4.98%, the immediate-sell NNN arbitrage has narrowed — making a fast 30-day Confidential Audit + Conditional Blend-and-Extend vs. Targeted §1031 Decision Rule strictly optimal.",
+    "primary_recommendation": "Run the 5-item Confidential Pre-Flight Checklist (Lease Expiry/Options, City vs. County ULA Jurisdiction, Tax Basis/Debt, Store Sales/Guarantor, Dual BOV). Then apply the quantitative trigger matrix below."
+  },
+  "decision_rules": [
+    {
+      "id": "DR-01",
+      "trigger_condition": "Remaining WALT <= 5.5 years OR Store sales < $1.5M OR Franchisee refuses renewal / corporate guaranty OR Property outside ULA (0.11%-0.56% DTT) AND BOV Cap <= 6.25%",
+      "recommended_path": "P1: Sell via Targeted IRC §1031 Exchange",
+      "rationale": "At <= 6.25% going-in exit cap and low transfer tax, exchanging at 6.8% (Realty Income Q3-26 benchmark) generates positive wealth & income accretion while escaping JACK credit shrinkage and the <5-yr WALT valuation cliff.",
+      "priority": "Immediate Exit"
+    },
+    {
+      "id": "DR-02",
+      "trigger_condition": "Remaining WALT 6-9 years AND Store sales >= $1.85M AND City of LA Measure ULA applies (4.56%-6.06% DTT) AND Tenant accepts 10-15 yr Blend-and-Extend at >= 2.25% bumps or market reset",
+      "recommended_path": "P2: Blend-and-Extend First (Then Re-price Hold vs. Sell)",
+      "rationale": "Adding 8-10 years of WALT typically compresses cap rates by 75-125 bps—often lifting asset value +12% to +22% before any transfer tax is triggered, more than offsetting the 4.45%-5.95% ULA drag if you later exit.",
+      "priority": "Value-Maximizing Hold/Exit"
+    },
+    {
+      "id": "DR-03",
+      "trigger_condition": "Sub-25% embedded tax gain OR Near-term estate step-up OR Land Value / TOD Rezoning (Metro D Line / SB-79 corridor) > 1.25x leased QSR value",
+      "recommended_path": "P3 / P5: Hold Through Term or Execute TOD / Ground-Lease Pivot",
+      "rationale": "If underlying Central LA corner land near newly opened Metro D Line stations exceeds dark-box QSR value, letting the tenant pay NNN rent through 2030-2035 acts as a paid land-bank option ahead of LA28 and redevelopment.",
+      "priority": "Strategic Hold / Pivot"
+    },
+    {
+      "id": "DR-04",
+      "trigger_condition": "No 6.5%+ quality 1031 replacement identified within 45-day window OR Owner prioritizes total real-estate exit & high tax basis exists (<= 30% embedded gain)",
+      "recommended_path": "P4: Taxable Sale + Treasury / Diversified Index Portfolio",
+      "rationale": "With 10Y Treasuries at 4.98% (state-tax exempt!) and 30Y at 5.35%, a low-gain owner avoids single-parcel seismic/retail risk entirely without forcing a rushed 45-day 1031 purchase.",
+      "priority": "De-Risk & Liquify"
+    },
+    {
+      "id": "DR-05",
+      "trigger_condition": "Insurance quote > 1.5% of value OR Parcel inside CAL FIRE Very High FHSZ / CGS Alquist-Priolo Fault / FEMA Flood Zone A without full tenant NNN coverage",
+      "recommended_path": "P1 / P4: Accelerated Sale / Risk Transfer",
+      "rationale": "CDI's $1B FAIR Plan assessment & post-2025 underwriting squeeze threaten unrecoverable landlord cost leakage and severe downside on tenant vacancy.",
+      "priority": "Hazard Override"
+    }
+  ],
+  "cross_workbook_reconciliation": [
+    {
+      "session": "Root Main / Session M-b (data/valuation.json)",
+      "date": "2026-11-06 / 08",
+      "treasury_10y": "4.86%-4.90%",
+      "reit_yield": "7.30% (O FY25)",
+      "horizon_years": "6-7 yrs",
+      "breakeven_exit_cap": "6.52% - 6.97% (1031)",
+      "verdict_tone": "Leans Sell + 1031 (driven by 7.3% yield)",
+      "key_gap": "Uses older 7.3% Realty Income yield, misses Nov 10 4.98% 10Y & broken S17 FHSZ URL."
+    },
+    {
+      "session": "Session 6d8f5d05 (Un-tracked in CI)",
+      "date": "2026-11-11",
+      "treasury_10y": "4.86%",
+      "reit_yield": "7.30% (stale)",
+      "horizon_years": "5-9 yrs",
+      "breakeven_exit_cap": "Normalized only",
+      "verdict_tone": "Cautious Sell / Hold pending data",
+      "key_gap": "Contains wrong Sep 2026 BLS unemployment rates (5.1/4.3/5.6/5.9%), mislabels Sep payrolls as Q1, retains S17 404."
+    },
+    {
+      "session": "Session N4 (session-3090b9ed)",
+      "date": "2026-11-11",
+      "treasury_10y": "4.84%-4.88%",
+      "reit_yield": "6.80% (Q3-26)",
+      "horizon_years": "6 yrs",
+      "breakeven_exit_cap": "7.81% pre-tax / 8.64% taxed",
+      "verdict_tone": "Conditional; highlights 6.8% yield tightening",
+      "key_gap": "Prioritized before Nov 10 4.98% 10Y jump, missing path-selector suggestions & live Nov 11 Prop 3/43 canvas."
+    },
+    {
+      "session": "Session P (session-7663f9db — THIS WORKSPACE)",
+      "date": "2026-11-12",
+      "treasury_10y": "4.98% (Nov 10)",
+      "reit_yield": "6.80% (Q3-26 Nov 2)",
+      "horizon_years": "4-9 yrs (2030-2035)",
+      "breakeven_exit_cap": "Y1 Cash BE: 6.59% (Sub-$5.4M) / 6.32% (ULA T1) | 6-Yr NPV BE: 8.06% (Sub-$5.4M) / 7.27% (ULA T1)",
+      "verdict_tone": "Audit-first Dual Trigger: Blend-and-Extend vs. 1031",
+      "key_gap": "100% live 2026-11-12 sources; resolves DOF 2040, 2026 School Dashboard, IRS/FTB taxes, & full repo audit."
+    }
+  ],
+  "roadmap": [
+    {"step": 1, "window": "Days 1-7", "owner": "Owner / Counsel", "action": "Assemble Executed Lease, Amendments, Critical Expiry Date (2030-2035), Guarantor Entity, and Last 12-Month Rent/Tax/Insurance Bills.", "cost_estimate": "$0 (internal files)"},
+    {"step": 2, "window": "Days 5-14", "owner": "Owner / CPA", "action": "Run Private Parcel Lookup (LA County Assessor/ZIMAS for City vs. County ULA test; CAL FIRE FHSZ; FEMA Flood; CGS EQ Zapp) & calculate adjusted tax basis + §1250 recapture.", "cost_estimate": "$0-$1,500 CPA consult"},
+    {"step": 3, "window": "Days 10-21", "owner": "Net Lease Brokers / Appraiser", "action": "Commission 2 confidential BOVs + 1 MAI Appraisal pricing As-Is WALT vs. 15-Year Blend-and-Extend vs. Vacant Land / TOD Value.", "cost_estimate": "$0 BOVs; $3.5k-$6k MAI"},
+    {"step": 4, "window": "Days 20-35", "owner": "Net Lease Advisor", "action": "Confidentially test Jack in the Box / Franchisee appetite for 10-15 yr Blend-and-Extend with corporate guaranty & store sales disclosure, while pre-vetting QI and 6.8%+ 1031 candidates.", "cost_estimate": "Contingent / advisory"},
+    {"step": 5, "window": "Days 35-45", "owner": "Owner + CPA + Counsel", "action": "Apply Session P Decision Rules DR-01 through DR-05 using verified figures—then formally authorize Extension, §1031 Listing, Ground-Lease/TOD Hold, or Taxable Exit.", "cost_estimate": "Execution phase"}
+  ]
+}

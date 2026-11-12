@@ -344,3 +344,17 @@ A line-by-line verification pass (`session-3090b9ed` / `arena/3090b9ed-jack2`) p
 | Risks & Flags | **26-risk BAU + black-swan register** (USGS UCERF3, LA County fire data, LA OWS, CDE), **15 irregularities** (including root M48 yield superseded by S03 and two stale-benchmark disclosures), and a **reconciliation of all 15 workbooks** — five recommendations converge, one splits on assumptions. |
 | Rebuild | `python3 session-3090b9ed/scripts/model.py && python3 session-3090b9ed/scripts/build_site.py && python3 session-3090b9ed/scripts/verify.py` (7 checks: schema, sources, links, row coverage, PII, model reproducibility, counts — all PASS). |
 
+## Session P dashboard (`session-7663f9db/`) — 2026-11-12
+
+An independent 2026-11-12 audit and decision-modeling pass (`session-7663f9db` / `arena/7663f9db-jack2`) published a
+15-page offline-capable advisory dashboard at **https://wingbangboozle1-lang.github.io/Jack2/session-7663f9db/** while
+keeping every earlier session's workspace unmodified.
+
+| | |
+|---|---|
+| Verdict | **30-day Confidential Pre-Flight Audit -> Dual Track (`P2` Blend-and-Extend vs. `P1` Targeted §1031):** Realty Income Q3 2026 acquisition yield fell to **6.80%** (Nov 2 8-K) while 10Y Treasury rose to **4.98%** (Nov 10), tightening Year-1 cash-accretive §1031 exit breakevens to **6.59%** (Sub-$5.4M) / **6.32%** (Measure ULA T1) and 6-year NPV breakevens to **8.06% / 7.27%**. High-sales ULA parcels favor confidential 10–15 yr Blend-and-Extend (`17.88x` normalized NPV) first; short-WALT (`<=5.5 yrs`), weak-AUV, or low-DTT parcels favor §1031 exchange (`98.7%` BAU / `99.8%` Black Swan win rate vs Hold). |
+| Evidence | **56 metric rows** (**46 verified** across **28 live HTTP-200 official sources**, **10 strictly blank** private/parcel fields): resolves CA DOF `P2A_County_Total.xlsx` (`9.81M` 2026 -> `9.64M` 2040, `-1.77%`), **2026 CA School Dashboard** LAUSD `87.6%` grad rate, Metro D Line Sec. 1 May 8, 2026 opening, Port of LA Sep record `1,042,652 TEUs`, BLS/EDD Sep 2026 (`4.8%` County SA / `4.4%` Metro NSA / `+3.7%` CPI), Nov 11 SOS **Prop 3 (`60.7% Yes`) / Prop 43 (`57.4% No`)**, live CAL FIRE OSFM FHSZ portal, and JACK Q3 FY26 (`2,115` units, `-1.1%` SSS, `$1.47B` debt, Sep 21 Board/GreenWood 8-K). |
+| Audit & Tools | Logs **15 repo/citation findings** on `flagged.html` (broken legacy CAL FIRE `-2022` 404 URL, `session-6d8f5d05` Sep 2026 BLS misprints & CI omission, stale `7.3%` root model anchor, `research/04-education.md:11` HQ address regex hit, and ULA `>=` vs `>` inequality). Includes browser-local private contract calculator, interactive 5-Path Strategy Selector (`suggestions.html`), and 26-item Q&A Discovery Guide. |
+| Rebuild | `python3 session-7663f9db/scripts/model.py && python3 session-7663f9db/scripts/build_site.py && python3 session-7663f9db/scripts/verify.py` (`V1`–`V7`: schema, HTTPS-only, strict blank/source linkage, zero-PII scan, link/anchor resolution, deterministic 15,000-trial MC reproducibility — all PASS). |
+
+
