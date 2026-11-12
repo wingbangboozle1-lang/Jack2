@@ -5,6 +5,20 @@ Central Los Angeles, with a lease expiration window of 2030–2035.
 
 **Live site:** https://wingbangboozle1-lang.github.io/Jack2/
 
+## Latest parallel build (Session 620551ec, 2026-11-12)
+
+A fresh evidence-first workbook is published at
+**https://wingbangboozle1-lang.github.io/Jack2/session-620551ec/** — 17 official sources re-read on 2026-11-12
+(BLS LAUS, CA EDD, Census QuickFacts V2025, FRED, BEA 26-08, SEC EDGAR JACK filings, CA DIR, City of LA Measure ULA,
+IRS, USGS, CAL FIRE, FHFA HPI 2026Q2, Port of LA, CA BOE), 65 metric rows (51 verified, 1 computed, 13 blank and
+flagged), an anonymized asset profile with owner-only facts blank by design, a 30-row BAU + black-swan risk register,
+a 24-question missing-information register, a deterministic index-based projection model with a black-swan overlay, a
+4-strategy sell-vs-renew decision analysis with written triggers (recommendation: **negotiate the extension first, then
+decide**), and a dedicated **Suggestions** review queue where every suggestion defaults to `proposed` until the owner
+selects one — nothing is implemented without acceptance. Reproduce: `python3 session-620551ec/scripts/model.py &&
+python3 session-620551ec/scripts/build_site.py && python3 session-620551ec/scripts/verify.py`.
+
+
 ## Current build (Session M, 2026-11-10)
 
 The current dashboard is published at

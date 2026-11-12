@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Verification — Jack in the Box NNN | Central LA Decision Workbook</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="crumbs">Central LA Jack in the Box (NNN) · Decision Workbook · Session 620551ec</div>
+  <h1>Verification</h1>
+  <div class="sub">Sell the NNN asset before the 2030–2035 lease expiry, or renew? Evidence-linked answers; privacy-first; anything unverified is blank and flagged.</div>
+</header>
+<nav class="mainnav"><a href="index.html" class="">Dashboard</a><a href="executive-summary.html" class="">Executive summary</a><a href="decision.html" class="">Decision</a><a href="market-economics.html" class="">Market data</a><a href="property-lease.html" class="">Property &amp; lease</a><a href="projection-model.html" class="">Projection model</a><a href="risks.html" class="">Risk register</a><a href="questions.html" class="">Questions &amp; answers</a><a href="suggestions.html" class="">Suggestions</a><a href="requirements.html" class="">Requirements</a><a href="sources.html" class="">Sources</a><a href="verification.html" class="active">Verification</a><a href="flagged.html" class="">Flagged for review</a><a href="privacy.html" class="">Privacy</a></nav>
+<main>
+
+<div class="panel">
+  <h2>Line-by-line verification performed</h2>
+  <p>Automated checks: <code>python3 session-620551ec/scripts/verify.py</code>. Manual checks: each source URL below was opened by this session on 2026-11-12 and its quoted text is what appears in the ledger notes. Where the official page did not contain a number this workbook needs, the value is blank — never inferred.</p>
+  <div class="tablewrap"><table><thead><tr><th>#</th><th>Check</th><th>Result</th></tr></thead><tbody><tr><td>1</td><td>Every verified row in data/*.json resolves to a source id with an https URL on an official publisher</td><td>pass (enforced at build + by scripts/verify.py)</td></tr><tr><td>2</td><td>Unverified metric rows carry an empty value (never a guess)</td><td>pass (enforced at build + by scripts/verify.py)</td></tr><tr><td>3</td><td>PII scan of session-620551ec/** (SSN, phone, email, APN, card patterns, owner-name markers)</td><td>pass (scripts/verify.py; also enforced per page at build)</td></tr><tr><td>4</td><td>Internal links in all 14 pages resolve to files in the folder</td><td>pass (scripts/verify.py)</td></tr><tr><td>5</td><td>Model reproduction: scripts/model.py re-run matches committed data/model_output.json</td><td>pass (scripts/verify.py)</td></tr><tr><td>6</td><td>Official pages re-read 2026-11-12: BLS, CA EDD, Census, BEA, FRED, SEC EDGAR (10-K index + Q3 FY26 8-K), CA DIR, City of LA (ULA), IRS, USGS, CAL FIRE, FHFA, Port of LA, CA BOE</td><td>pass — see sources.html</td></tr><tr><td>7</td><td>Numbers read but not printable in the source release are left blank (LA County 2024 real GDP; FHFA since-1991 metro HPI; Jack in the Box 10-K narrative figures)</td><td>flagged — see flagged.html</td></tr><tr><td>8</td><td>Build assertions: no unverified metric has a value; no page emits PII patterns</td><td>pass (build_site.py hard-fails otherwise)</td></tr></tbody></table></div>
+</div>
+<div class="panel">
+  <h2>Verification limits (honest)</h2>
+  <ul class="tight">
+    <li>Figures move. BLS/EDD/FRED values are as-of their release/observation date and are marked as such; re-read before relying on them.</li>
+    <li>Jack in the Box 10-K FY2025 narrative (restaurant count at FY-end, AUV) was NOT re-extracted line-by-line this session; those figures are blank (M44) with a link for the reviewer.</li>
+    <li>No official series exists for cap rates — none is published here as “verified.”</li>
+    <li>This page is evidence of process, not a guarantee of outcomes; consult licensed professionals.</li>
+  </ul>
+</div>
+
+</main>
+<footer class="foot">
+  Session 620551ec · data read 2026-11-12 · Every verified figure links to its official source; blanks are flagged, never invented.
+  <br>Personal information (owner, address, parcel, loan, accounts) is intentionally absent from this site and this repository. See <a href="privacy.html">Privacy</a> and <a href="flagged.html">Flagged for review</a>.
+  <br><a href="https://github.com/wingbangboozle1-lang/Jack2">Source repository</a> · MIT-licensed code · Not financial, legal or tax advice.
+</footer>
+</body>
+</html>
