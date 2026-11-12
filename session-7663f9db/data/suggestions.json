@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Session P Strategic Suggestions & Repository Upgrade Proposals (Review Before Implementing)",
+    "access_date": "2026-11-12",
+    "governance_note": "In accordance with review-first safety, Part A proposes concrete repository/dashboard improvements without touching peer workspaces prematurely, while Part B lays out 5 selectable property strategies tuned to live 2026-11-12 data."
+  },
+  "repo_upgrades_for_review": [
+    {
+      "id": "UPG-01",
+      "title": "Replace 404 CAL FIRE FHSZ Citation Across Root & Sibling Workspaces",
+      "target_files": "data/sources.json (S17), origin/main:suggestions.html, session-6d8f5d05, session-18dacdea, session-d9c94ed0",
+      "problem": "Citation returns HTTP 404 Page Not Found on live check (2026-11-12).",
+      "proposed_fix": "Update URL to https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones (already adopted in Session P S28).",
+      "effort": "Low (5 min)",
+      "impact": "High — eliminates broken official compliance links.",
+      "status": "proposed_for_review"
+    },
+    {
+      "id": "UPG-02",
+      "title": "Update Root Model & Valuation Anchors from Q4-25 (7.3%) to Q3-26 (6.8% Yield & 4.98% 10Y)",
+      "target_files": "tools/model.py (hardcoded 0.073), data/valuation.json, data/sources.json",
+      "problem": "Root tools/model.py still hardcodes Realty Income 7.3% yield and Nov 4-6 4.86%-4.90% Treasury, overstating immediate-sell reinvestment spreads by ~50 bps.",
+      "proposed_fix": "Parameterize REIT cash yield (default 6.80% Q3-26) and Treasury yield (4.98% Nov 10) in tools/model.py and refresh root valuation tables.",
+      "effort": "Medium (30 min)",
+      "impact": "Critical — prevents stale cap-rate arbitrage conclusions on root main.",
+      "status": "proposed_for_review"
+    },
+    {
+      "id": "UPG-03",
+      "title": "Remediate Factual BLS & Period Errors in session-6d8f5d05 and Enroll It in CI",
+      "target_files": "session-6d8f5d05/data/{metrics,qa}.json, .github/workflows/verify.yml",
+      "problem": "session-6d8f5d05 is linked at the top of root index.html yet prints wrong Sep 2026 BLS unemployment rates (5.1/4.3/5.6/5.9% vs 4.4/4.0/5.1/4.5%), mislabels Sep 2026 CES payrolls as Q1 2026, and is absent from verify.yml.",
+      "proposed_fix": "Issue patch PR correcting M16-M26 & adding session-6d8f5d05 + session-7663f9db verify checks into .github/workflows/verify.yml.",
+      "effort": "Medium (25 min)",
+      "impact": "High — protects front-page factual credibility.",
+      "status": "proposed_for_review"
+    },
+    {
+      "id": "UPG-04",
+      "title": "Fix Whole-Repo Hashing Contention in session-f4f700c0/scripts/audit.py & Clean Root PII Hit",
+      "target_files": "session-f4f700c0/scripts/audit.py, research/04-education.md:11, open PR queue (#5-#46)",
+      "problem": "Because audit.py hashes every tracked file across all sessions, merging any PR invalidates subsequent PRs unless re-run post-rebase; additionally research/04-education.md:11 triggers street-address PII regex on the LAUSD headquarters street address on Beaudry.",
+      "proposed_fix": "Scope audit.py or add CI step documenting post-rebase rebuild; label or replace that LAUSD HQ street address with 'LAUSD District HQ (Downtown LA)'; triage stale open PRs.",
+      "effort": "Medium (30 min)",
+      "impact": "High — eliminates multi-PR CI merge conflicts.",
+      "status": "proposed_for_review"
+    }
+  ],
+  "property_paths": [
+    {
+      "id": "P1",
+      "short_name": "Immediate Sale + IRC §1031",
+      "title": "Path 1: Sell Immediately via Targeted IRC §1031 Exchange",
+      "best_when": "Remaining WALT <= 5.5 yrs, Franchisee credit weak, Non-ULA jurisdiction (or going-in cap <= 6.25%), and pre-vetted >= 6.8% replacement assets exist.",
+      "expected_financial_profile": "Preserves 100% of tax-deferred equity; cuts JACK single-tenant/LA earthquake/AB 1228 exposure; immediate Year-1 cash accretion requires exit cap <= 6.59% (Sub-$5.4M) or <= 6.32% (ULA T1), while 6-year NPV (including WALT-cliff & re-tenanting risk) stays accretive up to 8.06% / 7.27%.",
+      "key_costs_and_risks": "0.56% to 6.06% DTT/ULA + ~3% brokerage/closing; 45-day ID / 180-day close clock; loss of Prop 13 protection.",
+      "next_action": "Obtain 2 BOVs + verify City vs. County jurisdiction + pre-screen 6-8 QI/NNN replacement assets BEFORE listing.",
+      "tags": ["defensive", "tax-deferred", "diversification", "exit"]
+    },
+    {
+      "id": "P2",
+      "short_name": "Blend-and-Extend (10-15 Yr)",
+      "title": "Path 2: Confidential Blend-and-Extend Then Re-Evaluate Hold vs. Exit",
+      "best_when": "Store sales >= $1.85M AUV, 6-9 yrs left, Measure ULA (4.56%-6.06%) applies, and tenant/corporate willing to sign 10-15 yr term with >= 2.25% escalators.",
+      "expected_financial_profile": "Extending WALT from 6 yrs to 15 yrs typically compresses cap rates by 75-125 bps—creating +12% to +22% equity appreciation that overcomes ULA drag if subsequently sold.",
+      "key_costs_and_risks": "May require temporary rent reset or TI allowance; deepens concentration in JACK unless followed by a sale once extended.",
+      "next_action": "Request store P&L & approach operator quietly with 15-yr extension term sheet requiring corporate/strong guaranty.",
+      "tags": ["value-add", "ula-hedge", "walt-fix"]
+    },
+    {
+      "id": "P3",
+      "short_name": "Hold to Expiry & Re-Tenant",
+      "title": "Path 3: Hold Passive Through 2030-2035 & Re-Tenant / Ground Lease",
+      "best_when": "Strong franchisee/corporate guaranty, low Prop 13 basis, near-term estate step-up horizon, OR high exit friction (ULA 6.06% + steep prepayment penalty).",
+      "expected_financial_profile": "Collects contractual NNN cash flow with zero upfront closing drag; retains Prop 13 shield; creates post-2030 re-leasing or ground-lease reset to coffee/dental/QSR.",
+      "key_costs_and_risks": "Must carry 12-month NOI liquidity buffer (~9-18 mos vacancy + $150-$300/sf TI or demolition); exposed to 3.7% inflation vs fixed escalators and JACK downsizing.",
+      "next_action": "Verify existing debt maturity vs. lease expiry, test drive-thru CUP transferability, and confirm full NNN insurance/roof pass-through.",
+      "tags": ["income", "prop13", "estate-step-up", "hold"]
+    },
+    {
+      "id": "P4",
+      "short_name": "Taxable Sale + Treasuries/Equities",
+      "title": "Path 4: Outright Taxable Sale Into U.S. Treasuries (4.98%-5.35%) & Diversified Equities",
+      "best_when": "Owner holds high tax basis (embedded gain <= 25%-30%), seeks zero real-estate management/45-day pressure, or needs cash liquidity.",
+      "expected_financial_profile": "At 10Y Treasury 4.98% (CA state-tax exempt!) and 30Y 5.35%, low-gain sellers lock in zero credit/quake/retail headaches with full liquidity, though high-gain sellers lose ~28%-35% upfront.",
+      "key_costs_and_risks": "Triggers Federal LTCG (20%) + §1250 (25%) + NIIT (3.8%) + CA 13.30% (made permanent by Nov 2026 Prop 3) + DTT/ULA.",
+      "next_action": "Have CPA calculate exact net-after-tax proceeds before eliminating taxable sale.",
+      "tags": ["liquid", "zero-management", "treasury-hedge", "low-gain"]
+    },
+    {
+      "id": "P5",
+      "short_name": "Metro TOD / Land-Value Pivot",
+      "title": "Path 5: Metro D Line TOD / Mixed-Use Land-Value Redevelopment Hold or JV",
+      "best_when": "Parcel lies inside Central LA transit corridor (near newly opened May 2026 Metro D Line stations / TOC / SB-79) where unencumbered land value >= 1.25x leased QSR value.",
+      "expected_financial_profile": "Uses JACK's remaining 2030-2035 NNN rent as paid carrying coverage while entitling multifamily/mixed-use density or selling to an urban developer ahead of LA28.",
+      "key_costs_and_risks": "Entitlement duration (18-36 mos), construction/interest rate risk (4.98% 10Y), and affordable-housing mandates; lease renewal options could block redevelopment unless capped.",
+      "next_action": "Run ZIMAS zoning, TOC tier, and Metro D Line distance audit plus dark/land MAI valuation today.",
+      "tags": ["land-value", "tod", "la28", "optionality"]
+    }
+  ]
+}
