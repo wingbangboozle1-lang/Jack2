@@ -1,0 +1,206 @@
+{
+  "session": "session-620551ec",
+  "generated": "2026-11-12",
+  "method": "deterministic; index-based; no invented property inputs",
+  "inputs": {
+    "illustrative_rent_index": 100.0,
+    "escalation_scenarios": [
+      0.0,
+      0.02,
+      0.04
+    ],
+    "cap_rate_grid": [
+      0.055,
+      0.06,
+      0.065,
+      0.07,
+      0.075
+    ],
+    "expiry_years": [
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035
+    ],
+    "hold_years": 5,
+    "illustrative_discount": 0.07
+  },
+  "value_scenarios": [
+    {
+      "rent_growth": 0.0,
+      "cap_rate": 0.055,
+      "value_index_2026": 1818.18,
+      "value_index_at_2030": 1818.18,
+      "value_index_at_2035": 1818.18
+    },
+    {
+      "rent_growth": 0.0,
+      "cap_rate": 0.06,
+      "value_index_2026": 1666.67,
+      "value_index_at_2030": 1666.67,
+      "value_index_at_2035": 1666.67
+    },
+    {
+      "rent_growth": 0.0,
+      "cap_rate": 0.065,
+      "value_index_2026": 1538.46,
+      "value_index_at_2030": 1538.46,
+      "value_index_at_2035": 1538.46
+    },
+    {
+      "rent_growth": 0.0,
+      "cap_rate": 0.07,
+      "value_index_2026": 1428.57,
+      "value_index_at_2030": 1428.57,
+      "value_index_at_2035": 1428.57
+    },
+    {
+      "rent_growth": 0.0,
+      "cap_rate": 0.075,
+      "value_index_2026": 1333.33,
+      "value_index_at_2030": 1333.33,
+      "value_index_at_2035": 1333.33
+    },
+    {
+      "rent_growth": 0.02,
+      "cap_rate": 0.055,
+      "value_index_2026": 1818.18,
+      "value_index_at_2030": 1968.06,
+      "value_index_at_2035": 2172.9
+    },
+    {
+      "rent_growth": 0.02,
+      "cap_rate": 0.06,
+      "value_index_2026": 1666.67,
+      "value_index_at_2030": 1804.05,
+      "value_index_at_2035": 1991.82
+    },
+    {
+      "rent_growth": 0.02,
+      "cap_rate": 0.065,
+      "value_index_2026": 1538.46,
+      "value_index_at_2030": 1665.28,
+      "value_index_at_2035": 1838.6
+    },
+    {
+      "rent_growth": 0.02,
+      "cap_rate": 0.07,
+      "value_index_2026": 1428.57,
+      "value_index_at_2030": 1546.33,
+      "value_index_at_2035": 1707.28
+    },
+    {
+      "rent_growth": 0.02,
+      "cap_rate": 0.075,
+      "value_index_2026": 1333.33,
+      "value_index_at_2030": 1443.24,
+      "value_index_at_2035": 1593.46
+    },
+    {
+      "rent_growth": 0.04,
+      "cap_rate": 0.055,
+      "value_index_2026": 1818.18,
+      "value_index_at_2030": 2127.02,
+      "value_index_at_2035": 2587.84
+    },
+    {
+      "rent_growth": 0.04,
+      "cap_rate": 0.06,
+      "value_index_2026": 1666.67,
+      "value_index_at_2030": 1949.76,
+      "value_index_at_2035": 2372.19
+    },
+    {
+      "rent_growth": 0.04,
+      "cap_rate": 0.065,
+      "value_index_2026": 1538.46,
+      "value_index_at_2030": 1799.78,
+      "value_index_at_2035": 2189.71
+    },
+    {
+      "rent_growth": 0.04,
+      "cap_rate": 0.07,
+      "value_index_2026": 1428.57,
+      "value_index_at_2030": 1671.23,
+      "value_index_at_2035": 2033.3
+    },
+    {
+      "rent_growth": 0.04,
+      "cap_rate": 0.075,
+      "value_index_2026": 1333.33,
+      "value_index_at_2030": 1559.81,
+      "value_index_at_2035": 1897.75
+    }
+  ],
+  "hold_vs_sell_breakevens": [
+    {
+      "expiry": 2030,
+      "years_of_rent_collected_index": 400.0,
+      "note": "Flat-rent illustration (0% escalation). Escalations improve the hold case linearly."
+    },
+    {
+      "expiry": 2031,
+      "years_of_rent_collected_index": 500.0,
+      "note": "Flat-rent illustration (0% escalation). Escalations improve the hold case linearly."
+    },
+    {
+      "expiry": 2032,
+      "years_of_rent_collected_index": 600.0,
+      "note": "Flat-rent illustration (0% escalation). Escalations improve the hold case linearly."
+    },
+    {
+      "expiry": 2033,
+      "years_of_rent_collected_index": 700.0,
+      "note": "Flat-rent illustration (0% escalation). Escalations improve the hold case linearly."
+    },
+    {
+      "expiry": 2034,
+      "years_of_rent_collected_index": 800.0,
+      "note": "Flat-rent illustration (0% escalation). Escalations improve the hold case linearly."
+    },
+    {
+      "expiry": 2035,
+      "years_of_rent_collected_index": 900.0,
+      "note": "Flat-rent illustration (0% escalation). Escalations improve the hold case linearly."
+    }
+  ],
+  "black_swan_overlay": {
+    "events": [
+      {
+        "name": "Major earthquake (LA region M6.7+)",
+        "annual_prob_analyst": 0.02,
+        "value_impact_if_occurs": -0.2,
+        "note": "30-yr 60% per USGS UCERF3 (S12) \u2192 ~3.0%/yr average; 2.0%/yr used as a conservative analyst frequency given loss given event here."
+      },
+      {
+        "name": "Wildfire / urban-conflagration loss",
+        "annual_prob_analyst": 0.005,
+        "value_impact_if_occurs": -0.5,
+        "note": "CAL FIRE FHSZ framework (S13); parcel-specific class blank (M55). Analyst assumption."
+      },
+      {
+        "name": "Tenant failure / dark space event",
+        "annual_prob_analyst": 0.01,
+        "value_impact_if_occurs": -0.25,
+        "note": "System shrinking -53 units y/y, franchise-level margin 37.4% (S05). Analyst assumption."
+      },
+      {
+        "name": "Measure ULA indexation step (if in-city)",
+        "annual_prob_analyst": 0.1,
+        "value_impact_if_occurs": -0.02,
+        "note": "Thresholds reset each July 1 by Chained CPI (S10). Analyst assumption."
+      },
+      {
+        "name": "Trade/tariff shock to LA logistics economy",
+        "annual_prob_analyst": 0.05,
+        "value_impact_if_occurs": -0.05,
+        "note": "Port imports -11% Nov 2025 (S15). Analyst assumption."
+      }
+    ],
+    "expected_annual_value_drag_fraction": 0.0135,
+    "note": "Sum of analyst annual_prob x value_impact. Compares the carry of holding vs selling; an owner who cannot bear a ~1.4%/yr expected drag should not hold."
+  },
+  "headline": "Extend-and-reprice first, then decide with the actual numbers (see decision.html triggers T1-T6). The grid shows value is far more sensitive to cap rate than to rent growth over 2030-2035."
+}

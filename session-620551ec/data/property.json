@@ -1,0 +1,22 @@
+{
+  "session": "session-620551ec",
+  "accessed": "2026-11-12",
+  "privacy": "No owner name, property address, APN/parcel, loan, account, or tenant-contact identifier appears anywhere in this file. Values only the owner can supply are blank by design.",
+  "fields": [
+    {"id": "P01", "field": "Asset type", "value": "Single-tenant quick-service restaurant (Jack in the Box brand)", "status": "verified", "source": "S05", "note": "Tenant identity verified via SEC filings; the specific store number/location is not published here."},
+    {"id": "P02", "field": "Lease structure", "value": "NNN (triple-net), as stated in the brief", "status": "unverified", "source": "", "note": "NNN structure is owner-supplied; this session cannot inspect the lease. Blank-verify via the executed lease (internal only)."},
+    {"id": "P03", "field": "Lease expiration", "value": "Between 2030 and 2035 (window only, per brief)", "status": "unverified", "source": "", "note": "Exact date, plus any renewal options and notice deadlines, is blank — obtain from the lease."},
+    {"id": "P04", "field": "Location", "value": "Central Los Angeles (approx.)", "status": "unverified", "source": "", "note": "City of LA vs unincorporated LA County vs an adjacent city is unknown — this single fact changes Measure ULA exposure (0% vs 4%/5.5%) and city transfer tax. Obtain from the deed/title report."},
+    {"id": "P05", "field": "Current annual base rent", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."},
+    {"id": "P06", "field": "Rent escalations / bumps", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."},
+    {"id": "P07", "field": "Remaining lease term and options", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."},
+    {"id": "P08", "field": "Tenant entity (franchisee vs company-owned)", "value": "", "status": "unverified", "source": "", "note": "Jack in the Box system is ~93% franchised (M35) but the specific site's operator is unknown; blank."},
+    {"id": "P09", "field": "Purchase price / adjusted basis", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."},
+    {"id": "P10", "field": "Assessed value / property taxes paid", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design. Prop 13 framework verified (M51)."},
+    {"id": "P11", "field": "Building size / lot / age / condition", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."},
+    {"id": "P12", "field": "APN / parcel number", "value": "", "status": "unverified", "source": "", "note": "NEVER published. Blank permanently on the site."},
+    {"id": "P13", "field": "Owner name / contact", "value": "", "status": "unverified", "source": "", "note": "NEVER published. Blank permanently on the site."},
+    {"id": "P14", "field": "Outstanding loan / encumbrances", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."},
+    {"id": "P15", "field": "NNN reimbursements history (RE taxes, insurance, CAM)", "value": "", "status": "unverified", "source": "", "note": "Owner-private; blank by design."}
+  ]
+}

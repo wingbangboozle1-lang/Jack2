@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valuation, Breakevens &amp; 15,000-Trial Monte Carlo — Session P Advisory (Central LA Jack in the Box)</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Session P Advisory Dossier <span>Central LA NNN QSR (2030–2035 Expiry)</span></div>
+      <div class="meta-pills">
+        <span class="meta-pill">Verified: 2026-11-12</span>
+        <span class="meta-pill">10Y Treasury: 4.98%</span>
+        <span class="meta-pill">Realty Income Q3-26: 6.80%</span>
+        <span class="meta-pill">Strict Zero-PII / Per-$1.00 NOI</span>
+      </div>
+    </div>
+  </header>
+  <div class="nav-wrap">
+    <nav class="nav" aria-label="Primary"><a href="index.html">Overview</a><a href="demographics.html">Demographics</a><a href="economy.html">Economy</a><a href="schools.html">Schools</a><a href="market.html">Market &amp; Tenant</a><a href="taxes.html">Taxes &amp; ULA</a><a href="hazards.html">Hazards</a><a href="projections.html" class="active">Projections &amp; MC</a><a href="risks.html">Risks</a><a href="questions.html">Q&amp;A Guide</a><a href="decisions.html">Decisions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged / Audit</a><a href="requirements.html">Requirements</a><a href="sources.html">Sources</a></nav>
+  </div>
+  <main class="container">
+    <section class="hero">
+      <h1>Valuation, Breakevens &amp; 15,000-Trial Monte Carlo</h1>
+      <p>Normalized per $1.00 initial NOI using 4.98% 10Y Treasury, 6.80% Realty Income cash yield, 3.7% CPI, and UCERF3 hazard probabilities.</p>
+    </section>
+    
+    <div class="card" id="owner-calc">
+      <h2>Confidential Client-Side Scenario Calculator (Zero Server Upload)</h2>
+      <p>Enter your private contract rent, exact expiration horizon, and tax basis locally inside your browser. Calculations update instantaneously in-memory and never leave your machine.</p>
+      <div class="callout warn"><strong>Non-Linear Scaling Caveat:</strong> Per-$1.00 NOI ratios below scale linearly <em>within</em> a single transfer-tax tier, but crossing strictly above <strong>$5,400,000</strong> (4.45% City + 0.11% County) or at/above <strong>$10,900,000</strong> (5.95% + 0.11%) inside City of LA limits causes an immediate step-jump in closing drag. Use the calculator below with real contract NOI to test exact thresholds.</div>
+      <div class="calc-grid">
+        <div class="calc-field"><label for="calc-noi">Annual Contract NNN NOI ($)</label><input id="calc-noi" type="number" value="250000" step="10000"></div>
+        <div class="calc-field"><label for="calc-cap">Going-In Exit Cap Rate (%)</label><input id="calc-cap" type="number" value="6.25" step="0.10"></div>
+        <div class="calc-field"><label for="calc-yrs">Years Until Expiry (2030–2035)</label><input id="calc-yrs" type="number" value="6" min="3" max="10"></div>
+        <div class="calc-field"><label for="calc-ula">Jurisdiction / ULA Tier</label>
+          <select id="calc-ula">
+            <option value="auto">Auto-detect City of LA ULA by price</option>
+            <option value="sub54">City &le; $5.4M (0.56% DTT)</option>
+            <option value="ula1">City ULA Tier 1 (4.56% DTT)</option>
+            <option value="ula2">City ULA Tier 2 (6.06% DTT)</option>
+            <option value="county">Unincorporated LA County (0.11% DTT)</option>
+          </select>
+        </div>
+        <div class="calc-field"><label for="calc-gain">Embedded Gain (% of Gross Price)</label><input id="calc-gain" type="number" value="50" min="0" max="100" step="5"></div>
+        <div class="calc-field"><label for="calc-debt">Existing Loan Balance ($)</label><input id="calc-debt" type="number" value="0" step="50000"></div>
+        <div class="calc-field"><label for="calc-esc">Lease Rent Escalator (%/yr)</label><input id="calc-esc" type="number" value="2.0" step="0.25"></div>
+        <div class="calc-field"><label for="calc-rep">1031 Replacement Yield (%)</label><input id="calc-rep" type="number" value="6.80" step="0.10"></div>
+      </div>
+      <div class="kpis" style="margin-top:0.9rem;">
+        <div class="kpi"><div class="kpi-label">Implied Gross Sale Value</div><div class="kpi-value" id="out-gross">—</div><div class="kpi-sub">Transfer Tax: <span id="out-dtt">—</span> | Equity: <span id="out-equity">—</span></div></div>
+        <div class="kpi"><div class="kpi-label">Hold As-Is NPV</div><div class="kpi-value" id="out-hold-npv">—</div><div class="kpi-sub">Year-1 Cash: <span id="out-y1-hold">—</span></div></div>
+        <div class="kpi"><div class="kpi-label">Sell + §1031 NPV</div><div class="kpi-value" id="out-1031-npv">—</div><div class="kpi-sub">Year-1 Cash: <span id="out-y1-1031">—</span></div></div>
+        <div class="kpi"><div class="kpi-label">Blend &amp; Extend (10-Yr) NPV</div><div class="kpi-value" id="out-be-npv">—</div><div class="kpi-sub">Avoids immediate DTT &amp; WALT cliff</div></div>
+        <div class="kpi"><div class="kpi-label">Taxable Exit NPV</div><div class="kpi-value" id="out-tax-npv">—</div><div class="kpi-sub">Est. Income Tax Hit: <span id="out-tax-hit">—</span></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Breakeven Going-In Cap Rates (6.80% Q3-26 Replacement Yield)</h2>
+      <p>Sell + §1031 is Year-1 cash-flow accretive whenever your going-in exit cap sits <em>below</em> Year-1 Cash Breakeven, and NPV-accretive (including WALT-cliff cap expansion &amp; re-leasing risk) below NPV Breakeven.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Transfer Tax Regime</th><th>DTT Rate</th><th>Year-1 Cash BE Cap</th><th>4-Yr NPV BE</th><th>6-Yr NPV BE</th><th>8-Yr NPV BE</th></tr></thead>
+          <tbody><tr><td><strong>City &lt;= $5.4M (0.56% DTT)</strong></td><td class="num">0.56%</td><td class="num">6.59%</td><td class="num">8.82%</td><td class="num"><strong>8.06%</strong></td><td class="num">7.66%</td></tr><tr><td><strong>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</strong></td><td class="num">4.56%</td><td class="num">6.32%</td><td class="num">7.75%</td><td class="num"><strong>7.27%</strong></td><td class="num">7.01%</td></tr><tr><td><strong>City &gt;= $10.9M ULA (6.06% DTT)</strong></td><td class="num">6.06%</td><td class="num">6.21%</td><td class="num">7.36%</td><td class="num"><strong>6.98%</strong></td><td class="num">6.77%</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>15,000-Trial Dual-Regime Monte Carlo (BAU vs. Black Swan · Seed 20261112)</h2>
+      
+    <div class="chart-box">
+      <div style="margin-bottom:6px;"><span style="display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:0.82rem;"><span style="width:12px;height:10px;background:#9a6700;display:inline-block;"></span>Hold</span> <span style="display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:0.82rem;"><span style="width:12px;height:10px;background:#143252;display:inline-block;"></span>1031</span> <span style="display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:0.82rem;"><span style="width:12px;height:10px;background:#14633e;display:inline-block;"></span>Blend+Ext</span> <span style="display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:0.82rem;"><span style="width:12px;height:10px;background:#9f2222;display:inline-block;"></span>Taxable</span> <span style="font-size:0.8rem;color:var(--slate)">(Bars = Median NPV; Whiskers = P10–P90 Band across 15,000 trials, seed=20261112)</span></div>
+      <svg viewBox="0 0 760 225" width="100%" style="max-width:760px;height:auto;" role="img" aria-label="Monte Carlo BAU vs Black Swan Median NPV">
+        <line x1="50" y1="136.2" x2="740" y2="136.2" stroke="#e2dfd3" stroke-dasharray="3 3"/><text x="42" y="140.2" text-anchor="end" font-size="11" fill="#526173">5x</text><line x1="50" y1="97.5" x2="740" y2="97.5" stroke="#e2dfd3" stroke-dasharray="3 3"/><text x="42" y="101.5" text-anchor="end" font-size="11" fill="#526173">10x</text><line x1="50" y1="58.8" x2="740" y2="58.8" stroke="#e2dfd3" stroke-dasharray="3 3"/><text x="42" y="62.8" text-anchor="end" font-size="11" fill="#526173">15x</text><line x1="50" y1="20.0" x2="740" y2="20.0" stroke="#e2dfd3" stroke-dasharray="3 3"/><text x="42" y="24.0" text-anchor="end" font-size="11" fill="#526173">20x</text><text x="128" y="193" text-anchor="middle" font-size="10.8" font-weight="700" fill="#122134">BAU · Sub-$5.4M (0.56% DTT)</text><rect x="68" y="57.0" width="22" height="118.0" rx="2" fill="#9a6700" opacity="0.86"/><line x1="79" y1="45.6" x2="79" y2="74.1" stroke="#122134" stroke-width="1.4"/><text x="79" y="53.0" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9a6700">15.2</text><rect x="98" y="45.3" width="22" height="129.7" rx="2" fill="#143252" opacity="0.86"/><line x1="109" y1="33.0" x2="109" y2="57.3" stroke="#122134" stroke-width="1.4"/><text x="109" y="41.3" text-anchor="middle" font-size="9.2" font-weight="600" fill="#143252">16.7</text><rect x="128" y="44.6" width="22" height="130.4" rx="2" fill="#14633e" opacity="0.86"/><line x1="139" y1="30.2" x2="139" y2="61.8" stroke="#122134" stroke-width="1.4"/><text x="139" y="40.6" text-anchor="middle" font-size="9.2" font-weight="600" fill="#14633e">16.8</text><rect x="158" y="83.7" width="22" height="91.3" rx="2" fill="#9f2222" opacity="0.86"/><line x1="169" y1="70.2" x2="169" y2="95.4" stroke="#122134" stroke-width="1.4"/><text x="169" y="79.7" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9f2222">11.8</text><text x="298" y="193" text-anchor="middle" font-size="10.8" font-weight="700" fill="#122134">Black Swan · Sub-$5.4M</text><rect x="238" y="77.4" width="22" height="97.6" rx="2" fill="#9a6700" opacity="0.86"/><line x1="249" y1="59.0" x2="249" y2="99.6" stroke="#122134" stroke-width="1.4"/><text x="249" y="73.4" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9a6700">12.6</text><rect x="268" y="51.1" width="22" height="123.9" rx="2" fill="#143252" opacity="0.86"/><line x1="279" y1="36.4" x2="279" y2="64.2" stroke="#122134" stroke-width="1.4"/><text x="279" y="47.1" text-anchor="middle" font-size="9.2" font-weight="600" fill="#143252">16.0</text><rect x="298" y="65.7" width="22" height="109.3" rx="2" fill="#14633e" opacity="0.86"/><line x1="309" y1="44.8" x2="309" y2="94.3" stroke="#122134" stroke-width="1.4"/><text x="309" y="61.7" text-anchor="middle" font-size="9.2" font-weight="600" fill="#14633e">14.1</text><rect x="328" y="87.4" width="22" height="87.6" rx="2" fill="#9f2222" opacity="0.86"/><line x1="339" y1="67.6" x2="339" y2="103.9" stroke="#122134" stroke-width="1.4"/><text x="339" y="83.4" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9f2222">11.3</text><text x="468" y="193" text-anchor="middle" font-size="10.8" font-weight="700" fill="#122134">BAU · Measure ULA T1 (4.56%)</text><rect x="408" y="56.8" width="22" height="118.2" rx="2" fill="#9a6700" opacity="0.86"/><line x1="419" y1="45.5" x2="419" y2="74.7" stroke="#122134" stroke-width="1.4"/><text x="419" y="52.8" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9a6700">15.2</text><rect x="438" y="50.5" width="22" height="124.5" rx="2" fill="#143252" opacity="0.86"/><line x1="449" y1="38.5" x2="449" y2="62.1" stroke="#122134" stroke-width="1.4"/><text x="449" y="46.5" text-anchor="middle" font-size="9.2" font-weight="600" fill="#143252">16.1</text><rect x="468" y="44.4" width="22" height="130.6" rx="2" fill="#14633e" opacity="0.86"/><line x1="479" y1="29.9" x2="479" y2="62.0" stroke="#122134" stroke-width="1.4"/><text x="479" y="40.4" text-anchor="middle" font-size="9.2" font-weight="600" fill="#14633e">16.9</text><rect x="498" y="88.3" width="22" height="86.7" rx="2" fill="#9f2222" opacity="0.86"/><line x1="509" y1="75.5" x2="509" y2="99.4" stroke="#122134" stroke-width="1.4"/><text x="509" y="84.3" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9f2222">11.2</text><text x="638" y="193" text-anchor="middle" font-size="10.8" font-weight="700" fill="#122134">Black Swan · Measure ULA T1</text><rect x="578" y="77.1" width="22" height="97.9" rx="2" fill="#9a6700" opacity="0.86"/><line x1="589" y1="59.0" x2="589" y2="99.5" stroke="#122134" stroke-width="1.4"/><text x="589" y="73.1" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9a6700">12.6</text><rect x="608" y="56.1" width="22" height="118.9" rx="2" fill="#143252" opacity="0.86"/><line x1="619" y1="42.1" x2="619" y2="68.8" stroke="#122134" stroke-width="1.4"/><text x="619" y="52.1" text-anchor="middle" font-size="9.2" font-weight="600" fill="#143252">15.3</text><rect x="638" y="65.6" width="22" height="109.4" rx="2" fill="#14633e" opacity="0.86"/><line x1="649" y1="44.6" x2="649" y2="93.9" stroke="#122134" stroke-width="1.4"/><text x="649" y="61.6" text-anchor="middle" font-size="9.2" font-weight="600" fill="#14633e">14.1</text><rect x="668" y="91.9" width="22" height="83.1" rx="2" fill="#9f2222" opacity="0.86"/><line x1="679" y1="72.8" x2="679" y2="107.4" stroke="#122134" stroke-width="1.4"/><text x="679" y="87.9" text-anchor="middle" font-size="9.2" font-weight="600" fill="#9f2222">10.7</text>
+      </svg>
+    </div>
+    
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Regime &amp; Jurisdiction</th><th>Hold Median (P10–P90)</th><th>Sell+1031 Median (P10–P90)</th><th>Blend+Ext Median (P10–P90)</th><th>Taxable Median (P10–P90)</th><th>P(1031 &gt; Hold)</th><th>P(B&amp;E &gt; Hold)</th></tr></thead>
+          <tbody><tr><td><strong>BAU · Sub-$5.4M (0.56% DTT)</strong></td><td class="num">15.23x (13.0–16.7)</td><td class="num">16.74x (15.2–18.3)</td><td class="num">16.83x (14.6–18.7)</td><td class="num">11.78x (10.3–13.5)</td><td class="num"><strong>98.7%</strong></td><td class="num">71.8%</td></tr><tr><td><strong>Black Swan · Sub-$5.4M</strong></td><td class="num">12.60x (9.7–15.0)</td><td class="num">15.99x (14.3–17.9)</td><td class="num">14.10x (10.4–16.8)</td><td class="num">11.30x (9.2–13.9)</td><td class="num"><strong>99.8%</strong></td><td class="num">44.7%</td></tr><tr><td><strong>BAU · Measure ULA T1 (4.56%)</strong></td><td class="num">15.25x (12.9–16.7)</td><td class="num">16.06x (14.6–17.6)</td><td class="num">16.86x (14.6–18.7)</td><td class="num">11.19x (9.8–12.8)</td><td class="num"><strong>83.8%</strong></td><td class="num">72.1%</td></tr><tr><td><strong>Black Swan · Measure ULA T1</strong></td><td class="num">12.64x (9.7–15.0)</td><td class="num">15.34x (13.7–17.1)</td><td class="num">14.11x (10.5–16.8)</td><td class="num">10.72x (8.7–13.2)</td><td class="num"><strong>97.4%</strong></td><td class="num">45.3%</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Sensitivity Tornado (Spread: Sell+1031 minus Hold, n=6)</h2>
+      
+    <div class="chart-box">
+      <svg viewBox="0 0 760 212" width="100%" style="max-width:760px;height:auto;" role="img" aria-label="1031 minus Hold NPV Sensitivity Tornado">
+        <line x1="400" y1="18" x2="400" y2="192" stroke="#9aa5b1" stroke-width="1.3"/><text x="8" y="37" font-size="11.2" fill="#122134">Going-In Exit Cap (5.50% vs 7.00%)</text><rect x="471.8" y="24" width="157.8" height="18" rx="3" fill="#143252" opacity="0.82"/><text x="466.8" y="37" text-anchor="end" font-size="10.5" fill="#9f2222">+0.85x</text><text x="634.7" y="37" text-anchor="start" font-size="10.5" fill="#14633e">+2.71x</text><text x="8" y="71" font-size="11.2" fill="#122134">Transfer Tax / ULA (6.06% vs 0.11%)</text><rect x="457.8" y="58" width="88.8" height="18" rx="3" fill="#143252" opacity="0.82"/><text x="452.8" y="71" text-anchor="end" font-size="10.5" fill="#9f2222">+0.68x</text><text x="551.6" y="71" text-anchor="start" font-size="10.5" fill="#14633e">+1.73x</text><text x="8" y="105" font-size="11.2" fill="#122134">Expiry Horizon (9 yrs vs 4 yrs)</text><rect x="532.9" y="92" width="12.4" height="18" rx="3" fill="#143252" opacity="0.82"/><text x="527.9" y="105" text-anchor="end" font-size="10.5" fill="#9f2222">+1.57x</text><text x="550.3" y="105" text-anchor="start" font-size="10.5" fill="#14633e">+1.71x</text><text x="8" y="139" font-size="11.2" fill="#122134">Re-leasing TI / Downtime (1.2x vs 0.1x)</text><rect x="519.9" y="126" width="62.8" height="18" rx="3" fill="#143252" opacity="0.82"/><text x="514.9" y="139" text-anchor="end" font-size="10.5" fill="#9f2222">+1.41x</text><text x="587.7" y="139" text-anchor="start" font-size="10.5" fill="#14633e">+2.16x</text><text x="8" y="173" font-size="11.2" fill="#122134">Lease Rent Escalator (3.0% vs 0.0%)</text><rect x="475.6" y="160" width="184.4" height="18" rx="3" fill="#143252" opacity="0.82"/><text x="470.6" y="173" text-anchor="end" font-size="10.5" fill="#9f2222">+0.89x</text><text x="665.0" y="173" text-anchor="start" font-size="10.5" fill="#14633e">+3.07x</text>
+      </svg>
+      <div class="chart-caption">Spread = NPV(Sell + §1031) minus NPV(Hold As-Is) in multiples of $1.00 NOI around Base Case (+1.65x). Positive values favor §1031 exit.</div>
+    </div>
+    
+    </div>
+
+    <div class="card">
+      <h2>6-Year Deterministic Matrix Across Cap Rates &amp; ULA Tiers</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>DTT Regime</th><th>Exit Cap</th><th>Price/NOI</th><th>Hold NPV</th><th>1031 NPV</th><th>Blend+Ext NPV</th><th>Taxable NPV</th><th>1031 − Hold</th></tr></thead>
+          <tbody><tr><td>City &lt;= $5.4M (0.56% DTT)</td><td class="num">5.50%</td><td class="num">18.18x</td><td class="num">16.59x</td><td class="num">19.30x</td><td class="num">19.37x</td><td class="num">13.38x</td><td class="num"><strong>+2.71x</strong></td></tr><tr><td>City &lt;= $5.4M (0.56% DTT)</td><td class="num">6.00%</td><td class="num">16.67x</td><td class="num">15.72x</td><td class="num">17.69x</td><td class="num">18.46x</td><td class="num">12.27x</td><td class="num"><strong>+1.97x</strong></td></tr><tr><td>City &lt;= $5.4M (0.56% DTT)</td><td class="num">6.25%</td><td class="num">16.00x</td><td class="num">15.33x</td><td class="num">16.98x</td><td class="num">17.88x</td><td class="num">11.78x</td><td class="num"><strong>+1.65x</strong></td></tr><tr><td>City &lt;= $5.4M (0.56% DTT)</td><td class="num">6.50%</td><td class="num">15.38x</td><td class="num">14.97x</td><td class="num">16.33x</td><td class="num">17.34x</td><td class="num">11.32x</td><td class="num"><strong>+1.36x</strong></td></tr><tr><td>City &lt;= $5.4M (0.56% DTT)</td><td class="num">7.00%</td><td class="num">14.29x</td><td class="num">14.31x</td><td class="num">15.16x</td><td class="num">16.39x</td><td class="num">10.51x</td><td class="num"><strong>+0.85x</strong></td></tr><tr><td>City &lt;= $5.4M (0.56% DTT)</td><td class="num">7.50%</td><td class="num">13.33x</td><td class="num">13.74x</td><td class="num">14.15x</td><td class="num">15.57x</td><td class="num">9.81x</td><td class="num"><strong>+0.41x</strong></td></tr><tr><td>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</td><td class="num">5.50%</td><td class="num">18.18x</td><td class="num">16.59x</td><td class="num">18.50x</td><td class="num">19.37x</td><td class="num">12.69x</td><td class="num"><strong>+1.91x</strong></td></tr><tr><td>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</td><td class="num">6.00%</td><td class="num">16.67x</td><td class="num">15.72x</td><td class="num">16.95x</td><td class="num">18.46x</td><td class="num">11.64x</td><td class="num"><strong>+1.24x</strong></td></tr><tr><td>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</td><td class="num">6.25%</td><td class="num">16.00x</td><td class="num">15.33x</td><td class="num">16.28x</td><td class="num">17.88x</td><td class="num">11.17x</td><td class="num"><strong>+0.95x</strong></td></tr><tr><td>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</td><td class="num">6.50%</td><td class="num">15.38x</td><td class="num">14.97x</td><td class="num">15.65x</td><td class="num">17.34x</td><td class="num">10.74x</td><td class="num"><strong>+0.68x</strong></td></tr><tr><td>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</td><td class="num">7.00%</td><td class="num">14.29x</td><td class="num">14.31x</td><td class="num">14.53x</td><td class="num">16.39x</td><td class="num">9.97x</td><td class="num"><strong>+0.22x</strong></td></tr><tr><td>City &gt; $5.4M-$10.9M ULA (4.56% DTT)</td><td class="num">7.50%</td><td class="num">13.33x</td><td class="num">13.74x</td><td class="num">13.56x</td><td class="num">15.57x</td><td class="num">9.31x</td><td class="num"><strong>-0.17x</strong></td></tr><tr><td>City &gt;= $10.9M ULA (6.06% DTT)</td><td class="num">5.50%</td><td class="num">18.18x</td><td class="num">16.59x</td><td class="num">18.20x</td><td class="num">19.37x</td><td class="num">12.44x</td><td class="num"><strong>+1.61x</strong></td></tr><tr><td>City &gt;= $10.9M ULA (6.06% DTT)</td><td class="num">6.00%</td><td class="num">16.67x</td><td class="num">15.72x</td><td class="num">16.68x</td><td class="num">18.46x</td><td class="num">11.40x</td><td class="num"><strong>+0.96x</strong></td></tr><tr><td>City &gt;= $10.9M ULA (6.06% DTT)</td><td class="num">6.25%</td><td class="num">16.00x</td><td class="num">15.33x</td><td class="num">16.01x</td><td class="num">17.88x</td><td class="num">10.94x</td><td class="num"><strong>+0.68x</strong></td></tr><tr><td>City &gt;= $10.9M ULA (6.06% DTT)</td><td class="num">6.50%</td><td class="num">15.38x</td><td class="num">14.97x</td><td class="num">15.40x</td><td class="num">17.34x</td><td class="num">10.52x</td><td class="num"><strong>+0.43x</strong></td></tr><tr><td>City &gt;= $10.9M ULA (6.06% DTT)</td><td class="num">7.00%</td><td class="num">14.29x</td><td class="num">14.31x</td><td class="num">14.30x</td><td class="num">16.39x</td><td class="num">9.77x</td><td class="num"><strong>-0.02x</strong></td></tr><tr><td>City &gt;= $10.9M ULA (6.06% DTT)</td><td class="num">7.50%</td><td class="num">13.33x</td><td class="num">13.74x</td><td class="num">13.34x</td><td class="num">15.57x</td><td class="num">9.12x</td><td class="num"><strong>-0.39x</strong></td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Workspace:</strong> <code>session-7663f9db</code> · Independent Hold-vs-Sell Advisory Audit · 28 Official Primary Sources Checked Live 2026-11-12.</div>
+      <div><strong>Privacy &amp; Data Integrity:</strong> Subject street address, APN, and owner identity strictly withheld; missing private terms left blank, never fabricated. <a href="sources.html">Audit Trail &rarr;</a></div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

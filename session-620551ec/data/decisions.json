@@ -1,0 +1,61 @@
+{
+  "session": "session-620551ec",
+  "accessed": "2026-11-12",
+  "framing": "Decision is NOT 'sell vs renew' as a coin flip. It is: (1) secure maximum information and leverage first (exact lease terms, jurisdiction/ULA determination, broker opinion of value, CPA after-tax model), (2) negotiate the renewal/extension FIRST because it is cheap and reprices the asset either way, (3) decide only when triggers fire or the negotiation lands. Numbers below are structural — the workbook refuses to invent a sale price (inputs are blank by design).",
+  "strategies": [
+    {
+      "id": "A",
+      "name": "Sell now (2026-2027 marketing, close before expiry)",
+      "description": "List and sell the NNN-leased asset 3-8 years before expiry while tenanted.",
+      "pros": ["Crystallizes value at today's verified price discovery (needs opinion of value)", "Removes concentration and tenant-credit tail risk (RK07/RK23)", "Converts illiquid asset to redeployable capital (1031 option defers tax, S11)", "Avoids 2030-2035 expiry renegotiation under pressure"],
+      "cons": ["Measure ULA cliff if inside City of LA and > $5.4M (4% of FULL price) — ~$216K+ on a $5.4M sale (S10)", "Cap a high-quality, escalated NNN income stream at today's rates (DGS10 4.88%)", "Permanent loss of LA's upside (constrained-supply infill pads)", "Commission + closing costs; prop-13 reset priced by buyers"],
+      "best_when": "Opinion of value > owner's after-tax hurdle AND (renewal negotiation fails OR tenant credit deteriorates OR owner has hard liquidity need OR concentration > owner's cap)",
+      "risk_level": "medium",
+      "fit_for_wealth_preservation": "good when triggers fire; premature otherwise"
+    },
+    {
+      "id": "B",
+      "name": "Hold and sell before expiry (manage to an exit in the final 1-2 years of term)",
+      "description": "Keep the asset, collect NNN rent, market it in the last 12-24 months with a short remaining term renegotiated (or as a vacant pad).",
+      "pros": ["Collects more NNN rent before exit", "Sale possibly into a different rate regime", "Same 1031 options at exit"],
+      "cons": ["Sells into thin remaining term — buyers demand renegotiation or vacancy discount (RK10)", "Two cycles of rate/credit/insurance risk absorbed by owner (RK16/RK19-RK25)", "If dark at sale, price gap can be 10-25% vs tenanted sale (illustrative, not verified)"],
+      "best_when": "Owner needs income for a defined horizon AND tenant renews but only short-term",
+      "risk_level": "high",
+      "fit_for_wealth_preservation": "poor — worst risk/reward of the four"
+    },
+    {
+      "id": "C",
+      "name": "Renew / extend now (2026-2027) and hold the income stream",
+      "description": "Negotiate a 10-20 year renewal with escalations BEFORE expiry; hold for income and terminal value.",
+      "pros": ["Preserves and likely IMPROVES sale pricing by extending the income stream before any future sale", "Avoids ULA immediate cliff (deferral, not avoidance, of exit tax)", "Locks escalated rent vs 2026 dollar (3-4%/yr typical structure — negotiate, unverified input)", "No transaction costs; prop-13 base intact"],
+      "cons": ["Concentration and tenant-credit tail risk retained (RK07/RK08/RK23)", "Locks below-market rent if not benchmarked (RK06/G13)", "Black-swan exposure for the full new term (RK19/RK20/RK25)", "Defers, not eliminates, exit tax"],
+      "best_when": "Rent is at/above market OR renewal includes ≥ CPI-linked escalations AND owner concentration below cap AND no liquidity need",
+      "risk_level": "medium",
+      "fit_for_wealth_preservation": "strong with the repriced-renewal-first sequencing (G08)"
+    },
+    {
+      "id": "D",
+      "name": "Extend-and-reprice first, then decide with full information (recommended sequence)",
+      "description": "2026: obtain exact lease terms, jurisdiction/ULA determination, broker opinion of value, CPA after-tax model, rent benchmark, hazard/insurance review → negotiate extension with repricing → re-run sell-vs-hold on actual numbers → execute A or C by written triggers.",
+      "pros": ["Cheapest highest-information path; every option preserved", "Negotiation outcome reprices the asset whether owner sells or holds", "Triggers convert a one-shot judgment into a monitored plan (G07)", "Aligns with Q01-Q24 register: decisions on evidence, not hope"],
+      "cons": ["Requires 2-4 months of work and advisor fees (broker + CPA + counsel)", "Slower than a fire-sale decision (by design)"],
+      "best_when": "Always — it is the decision protocol, not a bet",
+      "risk_level": "low (process risk only)",
+      "fit_for_wealth_preservation": "strongest — decision quality is the edge"
+    }
+  ],
+  "triggers": [
+    {"id": "T1", "trigger": "Opinion of value < owner's after-tax hurdle rate of return", "action": "Sell path A becomes primary; renew only if negotiation raises rent materially"},
+    {"id": "T2", "trigger": "Cap rate moves > 75bps adverse (or DGS10 > 5.5% sustained 60 days)", "action": "Re-price; if sale no longer clears hurdle, shift weight to C"},
+    {"id": "T3", "trigger": "Tenant closes stores / margins fall 2 consecutive quarters (watch 8-Ks and 10-K)", "action": "Accelerate exit (A) or require additional security on renewal"},
+    {"id": "T4", "trigger": "Renewal negotiation fails or stalls past a written deadline", "action": "List for sale (A) with 6-12 month runway before any dark date"},
+    {"id": "T5", "trigger": "Owner concentration > 35% of net worth in this asset OR hard liquidity need", "action": "Sell (A) or 1031 exchange into diversified replacement (G04/G09)"},
+    {"id": "T6", "trigger": "Insurance quote for renewal term exceeds 1.5× current cost or coverage is denied", "action": "Re-run economics; may force A (uninsurable asset is unsaleable to lenders)"}
+  ],
+  "recommendation": {
+    "headline": "Negotiate the extension first, then price it — do not sell blind, do not renew blind.",
+    "detail": "With DGS10 at 4.88% (2026-11-09), LA County unemployment 4.8% and improving, county population shrinking, and the tenant in a managed shrink (~93% franchised, SSS -1.1%, -53 restaurants y/y), central tendency favors a repriced renewal IF rent can be benchmarked up or held flat with strong escalations. Selling now is rational only if the opinion of value clears the owner's after-tax hurdle, the ULA exposure (if in-city) is acceptable, and a trigger fires. Holding to a dark expiry is the worst risk-adjusted path. The decision is made on the negotiation outcome + T1-T6, expected in 2026-2027, not on a static 2026 guess.",
+    "confidence": "moderate — bounded by the blank/flagged inputs (exact lease, jurisdiction/ULA, cap rate, rent). The recommendation is a SEQUENCE, not a coin-flip price.",
+    "what_would_change_it": "A renewal offer with below-market flat rent → switch weight to A. A cap-rate compression wave (DGS10 < 4%) → A becomes clearly superior. A confirmed tenant bankruptcy risk → A immediately. Jurisdiction confirmed OUTSIDE City of LA (no ULA) → A improves materially."
+  }
+}

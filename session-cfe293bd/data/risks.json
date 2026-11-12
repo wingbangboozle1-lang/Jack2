@@ -1,0 +1,134 @@
+[
+  {
+    "id": "R01",
+    "decision": "Renew / extend",
+    "class": "Business as usual",
+    "risk": "Tenant requests below-market rent, concessions, or repairs; extension economics underperform current value.",
+    "mitigation": "Get written term sheet early; inspect lease obligations and compare extension net present value to independent sale alternatives.",
+    "trigger": "Extension offer below the after-tax hold-vs-sale hurdle.",
+    "source": "IRS1"
+  },
+  {
+    "id": "R02",
+    "decision": "Renew / extend",
+    "class": "Business as usual",
+    "risk": "Tenant's restaurant performance or credit weakens; rent interruption or default occurs.",
+    "mitigation": "Verify actual guarantor and credit; assess lease remedies, security, reletting downtime and alternative tenant demand.",
+    "trigger": "Credit deterioration, missed rent, closure signals, or refusal to provide estoppel.",
+    "source": "IRS1"
+  },
+  {
+    "id": "R03",
+    "decision": "Renew / extend",
+    "class": "Business as usual",
+    "risk": "Repairs, environmental issues, or landlord carve-outs cost more than expected under the NNN lease.",
+    "mitigation": "Review actual lease allocation, inspections, maintenance records, environmental reports and reserves.",
+    "trigger": "Unbudgeted capital needs or material landlord obligations found.",
+    "source": "ASSR1"
+  },
+  {
+    "id": "R04",
+    "decision": "Renew / extend",
+    "class": "Rare / severe",
+    "risk": "Earthquake damages the structure, access, utilities or surrounding business demand; business interruption or retrofit costs follow.",
+    "mitigation": "Parcel/building-specific engineering and insurance review, seismic retrofit evaluation, continuity plan, adequate limits and deductible reserve.",
+    "trigger": "Engineer or insurer identifies unacceptable residual exposure.",
+    "source": "USGS1"
+  },
+  {
+    "id": "R05",
+    "decision": "Renew / extend",
+    "class": "Rare / severe",
+    "risk": "Wildfire/smoke, flood, extreme heat or another disaster causes physical damage, closure, insurance loss or broader regional disruption.",
+    "mitigation": "Map verified parcel hazards; obtain written commercial coverage terms and exclusions; stress downtime, deductibles and uninsurable loss.",
+    "trigger": "Coverage unavailable/uneconomic or residual loss exceeds tolerable reserve.",
+    "source": "FEMA1",
+    "also_sources": [
+      "FIRE1"
+    ]
+  },
+  {
+    "id": "R06",
+    "decision": "Renew / extend",
+    "class": "Rare / severe",
+    "risk": "Tenant bankruptcy or site closure coincides with poor leasing market; vacant land produces little/no rent and incurs carrying costs.",
+    "mitigation": "Model vacancy duration and tenant-improvement/leasing costs; retain liquidity and test alternative use/rezoning constraints.",
+    "trigger": "Verified competing use cannot support land value or likely downtime exceeds reserve.",
+    "source": "LACITY1"
+  },
+  {
+    "id": "R07",
+    "decision": "Sell before expiry",
+    "class": "Business as usual",
+    "risk": "Sale occurs at a discount because remaining lease term, rent, tenant credit, or marketing window is unattractive.",
+    "mitigation": "Get confidential broker opinions and appraisal under multiple lease-duration assumptions; time marketing using actual notice calendar.",
+    "trigger": "Net bids fail owner's documented after-tax hurdle.",
+    "source": "ASSR1"
+  },
+  {
+    "id": "R08",
+    "decision": "Sell before expiry",
+    "class": "Business as usual",
+    "risk": "Selling costs, taxes, debt payoff, or deferred maintenance reduce proceeds below headline price.",
+    "mitigation": "CPA/attorney net-proceeds schedule and title/payoff review before accepting an offer.",
+    "trigger": "Net-proceeds estimate materially below buyer price impression.",
+    "source": "IRS1"
+  },
+  {
+    "id": "R09",
+    "decision": "Sell before expiry",
+    "class": "Business as usual",
+    "risk": "Sale proceeds are reinvested at lower returns, higher fees, duration risk, or concentration risk than assumed.",
+    "mitigation": "Compare credible replacement opportunities net of fees/taxes, liquidity and downside; use conservative ranges and reserve cash.",
+    "trigger": "No implementable replacement plan meets required risk-adjusted net hurdle.",
+    "source": "IRS1"
+  },
+  {
+    "id": "R10",
+    "decision": "Sell before expiry",
+    "class": "Rare / severe",
+    "risk": "Disaster or market shock during marketing causes damage, tenant disruption, unavailable insurance, financing repricing, or buyer withdrawal.",
+    "mitigation": "Confirm coverage and sale contract risk allocation; update disclosure and pricing; do not represent hazard as absent based on regional averages.",
+    "trigger": "Material incident or insurance/financing term change before close.",
+    "source": "FEMA1"
+  },
+  {
+    "id": "R11",
+    "decision": "Sell before expiry",
+    "class": "Rare / severe",
+    "risk": "Large regional earthquake, wildfire or infrastructure failure degrades local liquidity and sale comps; buyer financing and insurance become constrained.",
+    "mitigation": "Do not anchor price on historic cap rates alone; use marketability stress, insurance quotes, downtime, and a hold fallback.",
+    "trigger": "Material deterioration in bid depth, insurer appetite, or access/utilities.",
+    "source": "USGS1"
+  },
+  {
+    "id": "R12",
+    "decision": "Hold / wait",
+    "class": "Business as usual",
+    "risk": "Delay misses lease notice/option dates, reduces saleability as expiry approaches, or concentrates wealth in one tenant and site.",
+    "mitigation": "Maintain counsel-verified milestone calendar and quarterly decision review; preserve sale and extension alternatives.",
+    "trigger": "First contractual notice deadline or market/credit deterioration.",
+    "source": "LACITY1"
+  },
+  {
+    "id": "R13",
+    "decision": "Hold / wait",
+    "class": "Rare / severe",
+    "risk": "Black-swan event causes permanent impairment while owner remains exposed to tenant, structure, geography and local market.",
+    "mitigation": "Estimate tail loss with parcel/engineering evidence; maintain insurance and liquidity; diversify outside the property where consistent with goals.",
+    "trigger": "Uninsured tail loss exceeds a privately set tolerance or diversification threshold.",
+    "source": "USGS1"
+  },
+  {
+    "id": "R14",
+    "decision": "All paths",
+    "class": "Business as usual / cyclical",
+    "risk": "Regional economic contraction, consumer spending weakness, employment softness, higher financing costs or lower transaction liquidity reduces tenant resilience, sale pricing, or replacement returns.",
+    "mitigation": "Stress lower rent/tenant performance, longer marketing and vacancy periods, wider exit-yield range, financing changes and lower reinvestment returns; refresh official labor and macro data before decision dates.",
+    "trigger": "Material deterioration in tenant disclosures, BLS trends, buyer depth, lender terms or replacement yield.",
+    "source": "BLS1",
+    "also_sources": [
+      "BLS2"
+    ]
+  }
+]

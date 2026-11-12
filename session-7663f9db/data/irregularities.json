@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Session P (session-7663f9db) Line-by-Line Repository & Data Irregularities Ledger",
+    "reviewed_on": "2026-11-12",
+    "policy": "Zero peer files edited silently. Every repo defect, stale metric, broken external URL, and private data gap is logged transparently for manual review and never blocks publication."
+  },
+  "items": [
+    {
+      "id": "IR-P01",
+      "severity": "high",
+      "category": "Broken External Citation (HTTP 404)",
+      "target": "data/sources.json (S17), origin/main:suggestions.html, session-6d8f5d05, session-18dacdea, session-d9c94ed0",
+      "finding": "The cited CAL FIRE FHSZ URL (https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fire-hazard-severity-zones-maps-2022) returned HTTP 404 Page Not Found when fetched live on 2026-11-12.",
+      "resolution": "Replaced in Session P with the live primary portal (https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones), which carries both the 2025 LRA rollout and the 2026 SRA update.",
+      "source": "S28"
+    },
+    {
+      "id": "IR-P02",
+      "severity": "high",
+      "category": "Factual & Period Mislabelling in Peer Dashboard",
+      "target": "session-6d8f5d05/data/metrics.json (M16-M26, M63-M64) & qa.json (Q14)",
+      "finding": "session-6d8f5d05 (featured near the top of root index.html yet omitted from .github/workflows/verify.yml) misprints Sep 2026 BLS unemployment rates as LA Metro 5.1% / US 4.3% / CA 5.6% / LA County 5.9% (actual BLS Nov 4 release: LA Metro 4.4%, US 4.0%, CA 5.1%, LA County 4.5%; 5.9% was Sep 2025!), labels Sep 2026 payroll figures as 'Q1 2026', and leaves LAUSD enrollment blank despite citing CDE.",
+      "resolution": "Session P left session-6d8f5d05 untouched per coordination rules, corrected all BLS/CDE metrics directly from live Nov 4 BLS & CDE pages (P16-P20, P29-P30), and flagged session-6d8f5d05 for CI inclusion & correction.",
+      "source": "S01"
+    },
+    {
+      "id": "IR-P03",
+      "severity": "high",
+      "category": "Stale Reinvestment & Tenant Benchmarks in Root Valuation",
+      "target": "data/valuation.json, data/sources.json (S9-S11), origin/main:suggestions.html",
+      "finding": "Root valuation relies on Q4 2025 Realty Income cash yield (7.3%), FY2025 JACK store count (2,136), Aug 2026 CPI (3.6%), and Nov 4-6 Treasury yield (4.86%-4.90%). Live 2026-11-12 primary filings show Realty Income Q3 2026 cash yield compressed 50 bps to 6.8% (Nov 2, 2026 8-K), JACK unit count shrunk to 2,115 (targeting ~2,100) with a Sep 21 Board/GreenWood/CEO succession 8-K, LA Sep 2026 CPI rose to 3.7%, and the 10-Year Treasury jumped to 4.98% (Nov 10).",
+      "resolution": "Updated Session P model inputs to the exact 2026-11-12 readings; highlights that 6.8% net-lease yield narrows the immediate-sell advantage unless going-in cap <= 6.25% or parcel faces ULA/credit triggers.",
+      "source": "S18"
+    },
+    {
+      "id": "IR-P04",
+      "severity": "medium",
+      "category": "Previously Blank Metrics Now Verified Live",
+      "target": "data/irregularities.json (F05-F07), session-3090b9ed (IR-07, IR-08, IR-15)",
+      "finding": "Earlier workbooks left CA DOF P-2A 2040 projection, LAUSD cohort graduation rate, federal LTCG/NIIT/Sec. 1250 rates, and CA FTB top marginal rates blank. Also Nov 3, 2026 Prop 3 & Prop 43 moved to 60.7% Yes / 57.4% No as of Nov 11 6:51 p.m.",
+      "resolution": "All resolved directly from P2A_County_Total.xlsx, the newly posted 2026 CA School Dashboard (87.6% grad rate), IRS Topics 409 & 559, FTB Form 540, and CA SOS Nov 11 canvas.",
+      "source": "S11"
+    },
+    {
+      "id": "IR-P05",
+      "severity": "medium",
+      "category": "Public Street Address Triggering Repo PII Scan",
+      "target": "research/04-education.md (line 11)",
+      "finding": "Repo-wide PII regex scanning matches one historical public institutional street address (LAUSD district HQ on Beaudry in research/04-education.md line 11); zero personal owner/tenant/parcel PII exists anywhere in the repository or git history (apart from standard git author commit metadata noted by prior audits).",
+      "resolution": "Flagged without altering Session E's file; Session P enforces strict zero street-address output across every file in session-7663f9db/.",
+      "source": "S09"
+    },
+    {
+      "id": "IR-P06",
+      "severity": "medium",
+      "category": "Divergent Root Landing Pointers, CI Gaps & Open PRs",
+      "target": "index.html, .github/workflows/verify.yml, session-f4f700c0/scripts/audit.py, GitHub PR queue",
+      "finding": "Root index.html promotes session-6d8f5d05 + session-313ba936 + suggestions.html, historical root subpage banners point to session-f4f700c0, workspaces.html lists session-3090b9ed at the top, and README lists chronological sessions. Meanwhile session-6d8f5d05 is missing from verify.yml, audit.py hashes every repo file causing parallel PRs to fail CI unless regenerated post-rebase, and 10+ historical PRs (#5-#43, #46) remain open.",
+      "resolution": "Flagged for maintainer cleanup; Session P keeps its workspace disjoint and regenerates session-f4f700c0/audit/* after rebasing onto main.",
+      "source": "S01"
+    },
+    {
+      "id": "IR-P07",
+      "severity": "medium",
+      "category": "Divergent Model Breakevens Across Workbooks",
+      "target": "root decision.html (6.97%), session-313ba936 (6.52%), session-5f296f9d (~6.8%), session-3090b9ed (7.81%/8.64%)",
+      "finding": "Different expiry years (n=6 vs n=7), tax treatments (pre-tax vs §1031 vs taxable), and benchmark anchors (7.3% vs 6.8% vs 4.86%) yield materially different breakeven percentages.",
+      "resolution": "Published cross-workbook reconciliation table & normalized closed-form breakevens indexed to real contract inputs in Session P's projection model.",
+      "source": "S18"
+    },
+    {
+      "id": "IR-P08",
+      "severity": "high",
+      "category": "Owner-Private Lease Terms Missing (Blank by Design)",
+      "target": "Subject Property Lease & Rent Roll (P50-P51)",
+      "finding": "Contract rent, exact expiration date within 2030-2035, escalation formula, option rent basis (fixed vs FMV vs CPI), notice deadlines, and landlord roof/structure obligations are absent from the brief.",
+      "resolution": "Left strictly blank; normalized all calculations per $1.00 of NOI and built interactive browser-local input overrides.",
+      "source": ""
+    },
+    {
+      "id": "IR-P09",
+      "severity": "high",
+      "category": "City-of-LA Boundary & 4.45%-5.95% Measure ULA Uncertainty",
+      "target": "Subject Property Boundary (P49, S21)",
+      "finding": "'Central Los Angeles' does not verify whether the APN sits inside City of Los Angeles limits (0.45% base + 4.0% at >$5.4M or 5.5% at >=$10.9M) vs. unincorporated LA County / adjacent municipality (0.11% county DTT only). Note also Prop 43 rejection preserves majority-vote local transfer tax risk.",
+      "resolution": "Modeled both County-only/Sub-$5.4M (0.11%-0.56% DTT) and ULA Tier 1/2 (4.56%-6.06% DTT) regimes explicitly.",
+      "source": "S21"
+    },
+    {
+      "id": "IR-P10",
+      "severity": "high",
+      "category": "Owner Tax Basis, Debt & Prepayment Unknown",
+      "target": "Subject Property Tax/Debt Profile (P52)",
+      "finding": "Original cost basis, accumulated depreciation (Sec. 1250 25% + CA 13.3%), and loan balance/defeasance terms are private; these determine whether a taxable sale loses ~28%-35% of proceeds vs. §1031 deferral.",
+      "resolution": "Modeled explicit 1031-deferred vs. taxable paths parameterized by gain-to-price ratio (0%, 50%, 75%) rather than assuming one owner basis.",
+      "source": "S24"
+    },
+    {
+      "id": "IR-P11",
+      "severity": "high",
+      "category": "Subject Franchisee Credit vs. Corporate Franchisor Credit",
+      "target": "Franchisee Guarantor & Store Unit Economics (P53, S15)",
+      "finding": "93.0% of Jack in the Box units are franchised; parent SEC filings (10-Q/8-K) do not guarantee an individual franchisee lease unless a corporate sublease or parent guaranty exists. Franchisees face $20.00/hr AB 1228 wages and negative Q3 SSS (-1.2%).",
+      "resolution": "Flagged tenant entity audit as Immediate Priority #1; modeled franchisee default stress explicitly.",
+      "source": "S15"
+    },
+    {
+      "id": "IR-P12",
+      "severity": "high",
+      "category": "Parcel Hazard Zones & Post-2025 Insurance Quote Unverified",
+      "target": "Parcel FHSZ / Flood / Seismic / Insurance (P54-P55, S26-S28)",
+      "finding": "County-level Jan 2025 wildfire losses and $1B CDI FAIR Plan assessment prove systemic insurance tightening, while USGS puts M>=6.7 quake risk at 60% in 30 yrs—but exact parcel FHSZ, FEMA zone, CGS liquefaction, and commercial premium require the withheld APN.",
+      "resolution": "Provided step-by-step free lookup tools in Questions & Discovery Guide; flagged insurance >1.5% of value as an automatic sell trigger.",
+      "source": "S26"
+    },
+    {
+      "id": "IR-P13",
+      "severity": "medium",
+      "category": "Zoning, Drive-Thru Entitlement & TOD Upside Unknown",
+      "target": "Highest-and-Best-Use / Metro D Line Optionality (P56, S07)",
+      "finding": "Because Metro D Line Section 1 opened May 8, 2026 along Wilshire and LA28 approaches, Central LA corner parcels near transit may have residential/mixed-use land value exceeding dark QSR building value—or conversely face strict drive-thru CUP/re-tenanting limits.",
+      "resolution": "Added Path P5 (TOD / Redevelopment Pivot) to Suggestions & Questions so owner verifies ZIMAS zoning & distance to Metro stations.",
+      "source": "S07"
+    },
+    {
+      "id": "IR-P14",
+      "severity": "low",
+      "category": "Historic Legacy Archive URL Defects & Short Data Shelf-Life",
+      "target": "session-1944e5a3, session-4ed347de, session-6ad87c21, BEA Dec 2, 2026 schedule, SOS Dec 11, 2026 certification",
+      "finding": "session-1944e5a3 contains 'losangelesNICITYcalifornia'; session-4ed347de/6ad87c21 retain 'lacountycalifornia'; BEA 2024 county release notes 2025 data arrives Dec 2, 2026; CA SOS ballot results remain unofficial until Dec 11, 2026 certification.",
+      "resolution": "Documented dates and scheduled verification refreshes in decision triggers.",
+      "source": "S25"
+    },
+    {
+      "id": "IR-P15",
+      "severity": "medium",
+      "category": "ULA Threshold Inequality Bug & Scaling Caveat in Sibling Workbook",
+      "target": "session-313ba936 (disposition_cost_rate), flagged by session-95d0beb9",
+      "finding": "As surfaced by session-95d0beb9 on 2026-11-12, Session M applies the 4% Measure ULA surcharge at exactly $5,400,000 via '>=', whereas the City Office of Finance states the lower tier applies strictly above $5,400,000 ('>$5.4M') and the 5.5% tier at '>=$10.9M'. Additionally, linear scaling per $1.00 NOI breaks whenever multiplying by real contract NOI crosses a ULA cliff.",
+      "resolution": "Session P left Session M untouched and enforces strict '>' ($5.4M) and '>=' ($10.9M) boundaries in app.js with automatic dollar-cliff detection plus explicit Sub-$5.4M vs. ULA Tier 1/2 scenarios.",
+      "source": "S21"
+    }
+  ]
+}

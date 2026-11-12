@@ -159,6 +159,7 @@ traceable to the source that produced it. B re-verified the sources that A cited
 |---|---|
 | Session A PRs | #1 merged as `22f2f91`; #3 merged as `1e8f8f9` (recorded the deploy verification). Their site content is preserved in `session-1944e5a3/`. |
 | Session B final PR | **#2** — https://github.com/wingbangboozle1-lang/Jack2/pull/2 — merged 2026-11-06T13:07:14Z, merge commit `5166eb8` |
+| Session `arena/941cbc20-jack2` PR | **#51** — https://github.com/wingbangboozle1-lang/Jack2/pull/51 — merged 2026-11-12, merge commit `e967bb9`. Added dedicated Suggestions & review page (session-313ba936/suggestions.html) to the recommended dashboard; root index.html suggestions card. CI verify pass; Pages API `built` for `e967bb9`. |
 | Session A follow-up PRs | #3 (`1e8f8f9`) and #4 (`18f08ff`) — their board/deploy records, folded into this file |
 | Session B merge-conflict history | PR #2 was blocked once when main advanced (PR #3); resolved by merging `origin/main` again and folding session A's new integration record into this file, then re-running all checks |
 | Pages source | `main` / root, legacy build, `.nojekyll` present |
@@ -1431,3 +1432,293 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session `620551ec` — 2026-11-12
+
+Claimed by Arena session on branch `arena/620551ec-jack2`. All new work isolated in
+`session-620551ec/**` plus the strictly additive shared edits named in 62-09 (each applied only if still
+absent after rebasing on `origin/main`). No other session's files are edited, regenerated or deleted.
+
+## Task board — Session 620551ec
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 62-01 | Read board, detect live/stale sessions, claim disjoint scope, push claim | done | session-620551ec | `COORDINATION.md` (append only) |
+| 62-02 | Fresh official-source verification, access date **2026-11-12**; every row source-linked; unverified values blank + flagged | claimed | session-620551ec | `session-620551ec/data/sources.json`, `session-620551ec/data/metrics.json` |
+| 62-03 | Pre-decision Q&A / missing-information register with acquisition methods | claimed | session-620551ec | `session-620551ec/data/questions.json`, `session-620551ec/questions.html` |
+| 62-04 | Suggestions register dedicated to improving decision making, with a review/selection workflow (proposed → under review → accepted/rejected), no changes implemented without owner selection | claimed | session-620551ec | `session-620551ec/data/suggestions.json`, `session-620551ec/suggestions.html` |
+| 62-05 | Deterministic projection model, BAU + black-swan hazards, expiry grid 2030–2035 | claimed | session-620551ec | `session-620551ec/scripts/model.py`, `session-620551ec/data/model_output.json` |
+| 62-06 | Risk register (every decision path × BAU + black swan) and decision analysis | claimed | session-620551ec | `session-620551ec/data/risks.json`, `session-620551ec/data/decisions.json` |
+| 62-07 | Clean dashboard: landing + category subpages, tables, executive summary, suggestions section, Flagged for Review | claimed | session-620551ec | `session-620551ec/**` |
+| 62-08 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check, model reproduction | claimed | session-620551ec | `session-620551ec/scripts/verify.py` |
+| 62-09 | Additive integration: rebase on `origin/main`, additive workspace row + CI step only if absent, PR → main, merge, confirm Pages deploy, record here | claimed | session-620551ec | `tools/build_site.py` (one additive row, only if absent), `README.md` (one additive line, only if absent), `.github/workflows/verify.yml` (one additive step), `session-620551ec/**`, `COORDINATION.md` |
+
+**Scope discipline.** This session writes only `session-620551ec/**` plus the additive shared edits named
+in 62-09. No prior session's page, dataset, script, model or CI step is edited. Stale PRs
+#5/#6/#10/#14/#18/#30/#38/#40 and open PR #41/#43 are left alone.
+
+**Privacy.** No owner name, address, APN/parcel, loan, account or tenant-contact identifier appears in
+this session's files or on its pages. Property facts only the owner can supply stay **blank** and flagged.
+
+**Verification rule.** A row is `verified` only when this session read the official publisher's page on
+2026-11-12 and recorded the URL in `session-620551ec/data/sources.json`. Everything else is blank and
+flagged. No value is copied from a prior session's workbook into a "verified" row.
+
+### Handoff / claim log
+
+- **2026-11-12, Session 620551ec**: read `COORDINATION.md` (1,371 lines), the file tree, `README.md`,
+  `gh pr list` (open: #41 DRAFT consolidation, #43 Session N, plus stale #5/#6/#10/#14/#18/#30/#38/#40;
+  latest merged: #45) and `git status` (clean on `arena/620551ec-jack2` from `99c6519`). No live session
+  claimed `session-620551ec/**`. Claiming 62-01..62-09 and pushing this claim before any research.
+---
+
+# Session O — `session-6596c3f2` (branch `arena/6596c3f2-jack2`) — claim 2026-11-12
+
+Platform note: pinned to `arena/6596c3f2-jack2`; that branch doubles as the PR/integration branch. All new work is isolated in `session-6596c3f2/**`; shared files are touched only by the additive changes in O-07. Prior sessions' files will not be edited, overwritten, or discarded. Open PRs #43/#41/#40/#38/#30/#18/#14/#10/#6/#5 belong to earlier sessions and will not be closed or merged by this session. No owner/parcel identifiers exist in the brief (only "Jack in the Box, NNN, expiry 2030–2035, around central Los Angeles"); placeholders `[OWNER-01]` / `[PROPERTY-01]` are used and all private values stay blank.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| O-01 | Claim + repo/privacy audit | done | session-6596c3f2 | `COORDINATION.md` (append only) |
+| O-02 | Fresh official-source verification, access date 2026-11-12; every row source-linked, unverified blank + flagged | done | session-6596c3f2 | `session-6596c3f2/data/sources.json`, `session-6596c3f2/data/metrics.json` |
+| O-03 | Questions / information / answers register + dedicated Suggestions-for-Review register (nothing auto-implemented) | done | session-6596c3f2 | `session-6596c3f2/data/questions.json`, `session-6596c3f2/data/suggestions.json` |
+| O-04 | Projection system: normalized deterministic scenarios + seeded Monte Carlo, 2030–2035 expiry grid; risk register mapped to every decision | done | session-6596c3f2 | `session-6596c3f2/scripts/model.py`, `session-6596c3f2/data/model_output.json`, `session-6596c3f2/data/risks.json`, `session-6596c3f2/data/decisions.json` |
+| O-05 | Executive summary + clean dashboard (landing + category subpages, table format) | done | session-6596c3f2 | `session-6596c3f2/*.html`, `session-6596c3f2/assets/`, `session-6596c3f2/EXECUTIVE_SUMMARY.md` |
+| O-06 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check | done | session-6596c3f2 | `session-6596c3f2/scripts/build_site.py`, `session-6596c3f2/scripts/verify.py` |
+| O-07 | Final integration: one additive workspace row, PR to `main`, merge without waiting, confirm Pages deploy, record result here | done | session-6596c3f2 | `tools/build_site.py` (one additive row in `build_workspaces()` only), `.github/workflows/verify.yml` (one additive step only), this file |
+
+## Session O verification record (2026-11-12)
+- Sources read today: Census QuickFacts V2025, BLS metro TED + LA CPI Oct 2026 (26-1670-SAN), CA EDD Sep 2026, BEA BEA 26-08, FRED DGS10 (4.88%, 2026-11-09), SEC EDGAR JACK 10-K FY2025 + 10-Q Q3 FY2026 (accession 0000807882-26-000091), CA DIR, USGS UCERF3 FAQ, LA County Eaton/Palisades fact sheet, LA City Finance ULA FAQ, IRS 1031, CA BOE Pub 29, CA DOF portal, LAEDC via LA City. 51 metric rows: 39 verified, 2 flagged-with-caution, 10 blank.
+- Irregularities flagged F-01..F-08 on `session-6596c3f2/flagged.html`, including DOF vintage conflict (B06 blank), BLS Oct YoY lapse gap (F-02), Eaton count timing variance (F-04), JACK debt-definition conflict (B08 blank), LAUSD official-release gap (B05 blank), no official cap rate (B07 blank).
+- Checks: `session-6596c3f2/scripts/verify.py` PASS (0 errors); root `tools/check_site.py` all checks passed (221 pages scanned); root rebuild changed only `workspaces.html` (one additive Session O row via `tools/build_site.py`); one additive CI step in `.github/workflows/verify.yml`. No prior session file edited.
+- Privacy: placeholders only; PII regex scan clean; private values blank by design.
+
+# Session `40933769` — 2026-11-12
+
+Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch cannot be renamed or switched). Before claiming, read the board, inspected the root builder and index, checked open PRs, and confirmed the existing root / Session N4 / Session 6d8f05 builders pass their local checks. No other session claims a dedicated suggestions page. Scope is deliberately additive and does not edit another session's data or workbook.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| 409-01 Dedicated decision-suggestions page, with explicit review/selection gates, source links, and a privacy-safe action sequence | claimed | session-40933769 | `tools/build_site.py` (additive builder + landing link), generated `index.html`, new `suggestions.html`, `COORDINATION.md` |
+| 409-02 Verify build, links, source citations, blank-value discipline, and PII | claimed | session-40933769 | Same scope |
+
+**Privacy:** no private property/owner/tenant identifiers, contact details, or financial facts will be requested or published. Parcel-specific facts remain unknown; actions point to private document review or official parcel tools.
+
+**Coordination note:** this is an additive root-site feature, not a rewrite of shared data, existing recommendations, or other workbooks. The suggestion table will distinguish evidence-backed considerations from proposed actions and will not present model thresholds as parcel-specific facts.
+
+**Initial verification:** `python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py` passed on the base tree; Session N4's model/build/verifier and Session 6d8f05's build/verifier also passed unchanged. These checks prove reproducibility and structural rules, not that every external source URL remains live or that assumptions are appropriate to the private parcel.
+
+### Session 40933769 close-out
+
+| Task | Status | Owner |
+|---|---|---|
+| 409-01 Dedicated suggestions page + prominent landing link | done | session-40933769 |
+| 409-02 Build, link, citation, blank-value and privacy verification | done | session-40933769 |
+
+**Delivered:** `suggestions.html` adds eight proposed actions, five explicitly unselected disposition paths (sell, extend-then-sell, renew/hold, temporary hold, alternate use), decision gates and a clear recommendation to preserve options through parallel, nonbinding sale preparation / extension inquiry while verifying property-specific inputs. Every proposal and path links to one or more official sources in the root source ledger. The source records are dated 2026-11-08; this change introduces no new statistics. The page links readers to the newer Session N4 workbook (2026-11-11) and its review flags. The root landing links directly to the page and the historical root navigation now contains 17 pages.
+
+**Decision limitation:** No defensible asset-specific sell/renew winner can be calculated from the public brief because actual lease terms and notice dates, rent/NOI, parcel, tenant/guarantor, value/offer, tax basis, debt, insurance and owner constraints are not available here. The new page does not fill or request these private values and expressly marks all paths “Not selected.”
+
+**Verification performed:** root model regenerated; root static build and `tools/check_site.py` passed (17 root pages, 209 HTML pages including workbooks/archive, all local links resolve, 24 source records, 89 root metrics with 82 verified and 7 blank/flagged, 24 risk rows). Full existing workflow command sequence was run: Session F4 audit/check and unit tests; root checks; Session L, I, D, M-b, N4, J, K, M-a and 6d8f05 build/verifiers; both test suites passed. The new builder asserts source links on all 8 proposal rows and all 5 decision rows. The repository-wide F4 audit reports 0 current-session PII hits; its one historical regex match is a public school/district location in `research/04-education.md`, not personal/owner/tenant information and not rendered in the website. No private identifiers were added.
+
+**Sources used by suggestion rows:** root ledger `data/sources.json` entries S1 (BLS), S2 (Census), S3 (CA DOF), S6 (LA County Assessor), S7 (LA County transfer tax), S8 (City of LA Measure ULA), S9 (SEC issuer filing), S13 (LA County fire fact sheet), S14 (CDE), S17 (CAL FIRE), S18 (USGS), S19 (FEMA), S20 (CA Department of Insurance), S21 (City of LA economic report), S23 (BEA) and S16 (IRS). Each rendered source link resolves to the HTTPS official publisher URL stored in that ledger. The model/verification checks do not independently confirm the truth of every historical narrative or refresh a source page; access dates remain visible in the ledger.
+
+## Session O merge-conflict log (2026-11-12)
+While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site) merged to `main` (`bf595f2`). Merging `origin/main` into `arena/6596c3f2-jack2` conflicted in 4 files. Resolution, discarding nothing: `COORDINATION.md` — both sessions' appended text kept (single hunk de-marked); `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` — took main's side, then regenerated on the merged tree (they are build outputs). `tools/build_site.py` auto-merged: PR #47's root Suggestions navigation AND Session O's additive workspace row both present (verified by grep). Root `suggestions.html` from #47 is preserved as-is; Session O's distinct review-and-choose register remains at `session-6596c3f2/suggestions.html`.
+
+## Session O deployment record (2026-11-12)
+| Item | Value |
+|---|---|
+| PR | **#46** — https://github.com/wingbangboozle1-lang/Jack2/pull/46 (merged 2026-11-12T16:40:51Z, merge commit `58c39fe`) |
+| CI | PR checks pass (runs `43261056704`, `43261213673`); first run failed only on the repo-wide generated-files gate because adding files changes `session-f4f700c0` audit inventory — regenerated and committed (`26f352c`, `efeb6af`), no content altered |
+| Conflict | PR #47 merged to `main` mid-session; resolved per conflict log above, nothing discarded |
+| Pages | API `built`; `pages build and deployment` run `43261301878` success; `verify` on main `43261303068` success |
+| Live | https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/ (dashboard + suggestions fetched live and confirmed); Flagged: https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/flagged.html |
+| Post-merge fix | Dashboard ranking rows reordered to match CE values (E > D); follow-up PR from this branch |
+- Follow-up (PR #52): main advanced again via PR #51, which hand-edited generated root `index.html` (Suggestions card for `session-313ba936`) without updating `tools/build_site.py` — the same failure Session N4 repaired for PR #42. Session O transcribed that card into the generator verbatim (regenerated `index.html` is now clean) and regenerated the `session-f4f700c0` audit outputs on the merged tree. Nothing from #51 was removed.
+---
+
+## Session 95d0beb9 — independent decision-critical audit (2026-11-12)
+
+Arena fixes the branch as `arena/95d0beb9-jack2`; it serves as this session's integration branch. PR #46 (`arena/6596c3f2-jack2`) is a live independent workbook and #48 records another session's Suggestions deployment; neither is claimed or modified here. Older unfinished claims are not taken over.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| Independent review of decision-critical public root claims, source verification and practical limits of automated checks; publish review findings and actionable corrections without claiming property-specific facts | in progress | session-95d0beb9 | `session-95d0beb9/**` |
+| Add discoverability and automation of this review only if compatible with concurrent work, then verify integration, PR and Pages | in progress | session-95d0beb9 | `COORDINATION.md` append; additive generator/workflow edits only after integration and checking active claims |
+
+No private property details will be collected or published. Rows without confirmed facts remain blank and flagged. Source verification and limitations will be recorded at completion.
+
+**Conflict log:** On 2026-11-12 this session rebased onto main after Session O PR #46 merged; both appended board records were preserved without removing either session's work.
+
+### Session 95d0beb9 review completion
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Decision-critical source and model audit | needs review | session-95d0beb9 | `session-95d0beb9/index.html` |
+| Add discoverability and integrate | in progress | session-95d0beb9 | additive warnings in `tools/build_site.py`, generated `index.html` and `flagged.html`; generated F4 audit files; this board |
+
+Official sources manually reviewed 2026-11-12: [City ULA FAQ](https://finance.lacity.gov/faq/measure-ula), [USGS regional earthquake FAQ](https://www.usgs.gov/faqs/what-probability-earthquake-will-occur-los-angeles-area-san-francisco-bay-area), [Census QuickFacts](https://www.census.gov/quickfacts/fact/table/losangelescountycalifornia/PST045225), [CA DOF February 2026 population estimates](https://dof.ca.gov/media/docs/forecasting/Demographics/estimates/July2025_Population_Estimates_Feb26_release.pdf), [IRS Form 8824 instructions](https://www.irs.gov/pub/irs-pdf/i8824.pdf), [CAL FIRE hazard zones](https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones), and [SEC-filed Realty Income Q2 2026 report](https://www.sec.gov/Archives/edgar/data/726728/000072672826000044/o-991q22026.htm). Company filing linked as background, not evidence for a particular tenant/guarantor. The prior 2040 population projection was not independently confirmed; no new verified value published.
+
+The Session M model source and output were inspected directly; executing its sale-cost function confirms it applies the ULA 4% rate at exactly $5.4m, while the City FAQ states strictly above that amount. Scaling example reproduced internally shows ULA changes costs as assumed gross price crosses the threshold. The numerical replacement-yield calculation uses renewal probability 1.0 for the sale side and 0.75 for the hold side, unlike the equal-risk closed form. These are flagged, not silently repaired in another session's workbook. Other warnings cover earthquake event versus parcel losses and limits of regex and link checks. No claim of complete repository line-by-line factual verification or privacy guarantee is made. `tools/check_site.py` passed 223 pages; F4 audit and check passed, with one historical public-institution address pattern retained and no current-session pattern hits.
+
+**Integration follow-up:** PR #51 merged while this branch was under CI, adding a Session M suggestions card directly to generated `index.html` without its root generator change. The PR merge-check then failed the generated-files gate. We preserved the new card by adding it to `tools/build_site.py`, rather than discarding the other session's work; regenerated the root and F4 audit. PR #49's active root-integration session was notified to preserve this audit and its warnings. This is a generator reconciliation, not a change to Session M's files.
+- PR #52 cycle: merged `origin/main` through PR #53/#54 (parallel sessions adding their own Suggestions pages). Conflicts only in this board (both sides kept) and regenerated `session-f4f700c0` audit outputs (took main, regenerated). No session content discarded.
+
+---
+# Session `cfe293bd` — 2026-11-12 — independent decision-readiness audit
+
+This session is pinned to `arena/cfe293bd-jack2`; all work remains on that branch. Before starting,
+I read the shared board and inspected the current tree, generated site, and existing workspaces. The
+repository already contains extensive parallel dashboards and historical research, so this session
+will not duplicate their metric ledgers or modify their files. Scope is isolated under
+`session-cfe293bd/**`, plus an additive integration pointer only after the workbook passes its own
+checks. No personal, parcel, street-address, tenant-contact, or financial-account information will
+be committed or published.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| CFE-01 | Repo and coordination review; claim isolated scope | done | `COORDINATION.md` (append only) |
+| CFE-02 | Review existing published material and identify decision-critical contradictions / confidence limits | in progress | `session-cfe293bd/audit/**` |
+| CFE-03 | Build a concise decision-readiness dashboard: executive brief, questions & answers, suggestion review, risks, source register | claimed | `session-cfe293bd/**` |
+| CFE-04 | Independently verify every published quantitative assertion against official primary sources; leave unknowns blank | claimed | `session-cfe293bd/data/**` |
+| CFE-05 | Privacy, source-link, internal-link, and reproducibility checks | claimed | `session-cfe293bd/scripts/**` |
+| CFE-06 | Add the isolated dashboard to the generated workspace index; full build/link check; PR and deployment only if the branch is accepted by GitHub | claimed | `tools/build_site.py` (additive workspace row only), regenerated `workspaces.html`, `COORDINATION.md` |
+
+The main finding to test is that address/parcel, lease terms, rent/NOI, basis, financing, tax facts,
+insurance, zoning, and access rights are all necessary for a defensible property-specific answer. Area
+statistics cannot substitute for those inputs. Recommendation will therefore be conditional and the
+projected property-specific numbers will remain blank; no unsupported forecast or appraisal will be
+published. Existing workbooks are preserved and any contradictions will be framed as audit flags, not
+silently reconciled.
+
+## Session cfe293bd — close-out / verification record (2026-11-12)
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| CFE-01 | done | cfe293bd | `COORDINATION.md` |
+| CFE-02 | done (scope/claim audit; historical claim set not fully re-performed) | cfe293bd | `session-cfe293bd/audit/**` |
+| CFE-03 | done | cfe293bd | `session-cfe293bd/*.html`, `assets/style.css` |
+| CFE-04 | done for the 9 published public metrics; 7 unknown/ambiguous rows remain blank | cfe293bd | `session-cfe293bd/data/**` |
+| CFE-05 | done | cfe293bd | `session-cfe293bd/scripts/**`, `verification.json` |
+| CFE-06 | in progress — awaiting PR / Pages confirmation | cfe293bd | `tools/build_site.py`, `workspaces.html`, this file |
+
+### Official sources checked directly on 2026-11-12
+
+- U.S. Census QuickFacts current page for Los Angeles city and County: July 1, 2025 population estimates (3,869,089 and 9,694,934); 2020 base-to-2025 population changes (-0.8% city; -3.2% county); 2020–2024 median household income in 2024 dollars ($81,939 city; $90,112 county); city 2020–2024 high-school attainment 79.6%. The row-level source link is CEN1 in this session's ledger. These are city/county measures, not the parcel trade area.
+- Census QuickFacts poverty source methodology says city data use ACS five-year estimates and county data use one-year SAIPE; the current QuickFacts table did not provide an unambiguous observation period on the display reviewed. Therefore the visible city poverty number was removed and M06 remains blank/flagged, rather than assigning a period by inference.
+- BLS September 2026 large-metro employment table: LA–Long Beach–Anaheim nonfarm employment 6,282.1 thousand vs 6,251.9 thousand year-over-year, +0.5%; BLS marks change not statistically significant at 90% confidence and labels September preliminary. BLS large-metro unemployment table: September 2026 4.4%, preliminary, not seasonally adjusted, subject to revision.
+- Los Angeles City Planning's zoning/General Plan/ZIMAS overview; California Department of Education California School Dashboard; Los Angeles County Assessor Proposition 13 guidance; FEMA Flood Maps; California OSFM/CAL FIRE Fire Hazard Severity Zones; USGS LA-area earthquake probabilities; and IRS real-estate Section 1031 guidance were opened and checked as official process/context sources. No property-specific hazard, zoning, school, title, tax, insurance, valuation, or legal determination was made.
+
+### Deliverables and checks
+
+- Added an isolated 11-page static dashboard under `session-cfe293bd/`: executive summary, city/county/metro evidence, 20 prerequisite questions and acquisition steps, scenario/projection framework, 14 risks, a 6-item suggestion review queue, flagged items, sources, privacy, and verification. Suggestion choices stay in local browser storage; no user data is sent or requested.
+- Data ledger: 16 rows, 9 verified public observations and 7 deliberately blank unknown/ambiguous rows. Every metric/question/suggestion/risk row links to one or more official HTTPS `.gov` sources. No invented cap rate, sale value, rent, NOI, tax result, parcel hazard or property forecast.
+- Recommendation: preserve optionality; verify contractual milestones and actual economics, get extension terms and independent sale pricing in parallel, then compare after-tax risk-adjusted net outcomes against private liquidity/concentration limits. Neither sell nor renew is yet supported as a property-specific winner.
+- `python3 session-cfe293bd/scripts/build_site.py` → 11 pages generated; 9/16 metric rows verified; 7 remain blank.
+- `python3 session-cfe293bd/scripts/verify.py` → PASS: official-source references, blank-if-unverified, local file/fragment links, 11 pages, and common PII-pattern scan; 0 errors. Pattern scans are a safeguard, not a guarantee.
+- `python3 tools/build_site.py && python3 tools/check_site.py` → PASS after rebase (17 root pages, 235 including archives; 24 root sources; 89 root metrics; 24 root risks; all checks passed). The first local link run caught a malformed relative link in the new flagged page; corrected it to a working relative link, then reran the entire check successfully.
+- Root `workspaces.html` generator now links the isolated workbook; root index remains generated by its existing integration code. Historical builds remain untouched.
+
+### Scope / irregularities
+
+No owner, parcel, contact, account, or tax information was collected or published. Current public stats are regional context, not a local outlook. A property-specific recommendation remains blocked by the missing lease, parcel, NOI, basis/tax, debt, insurance, condition, local demand and buyer/reinvestment evidence. Repository history contains overlapping prior workbooks with inconsistent methods/recommendations; this session did not claim to freshly reverify every old workbook. Their numbers remain flagged as requiring source-and-input review. The recorded root build/link issue was fixed before publication.
+
+**Scope addendum (2026-11-12):** CFE-06 also includes one additive GitHub Actions verification step in `.github/workflows/verify.yml`, placed before the global generated-output gate. This is needed so the new independent workbook is rebuilt and its source/blank/link/privacy checks run on pull requests. No existing job or another session's step will be removed or reordered beyond insertion of this additive step.
+
+### Session cfe293bd rebase conflict record (2026-11-12)
+
+Before the final push, `git pull --rebase origin main` found that `main` had advanced from the original base to `897f490` through other sessions' merges. Rebase conflicts occurred in the append-only board and in the concurrently updated root workflow, workspace generator, and generated workspace index. Resolution preserved the Session O workspace entry and CI check, the other sessions' appended claims and conflict notes, and this session's dashboard entry and CI step. `workspaces.html` was regenerated from the combined root generator; no other session's work was discarded. After rebase, the cfe builder/verifier, root model, root builder and full-tree link/source/privacy checker were rerun successfully. Branch remains `arena/cfe293bd-jack2`.
+
+### Pushed-branch ancestry reconciliation (2026-11-12)
+
+The first push after rebasing was correctly rejected as non-fast-forward because the remote feature ref still pointed to the two earlier, already-pushed claim commits (`19bdab7`, `3ec1e12`) on the pre-rebase base. Fetched that same current-session branch and merged it; the only merge conflict was `COORDINATION.md`. Inspection confirmed the remote-only delta contained only this session's initial claim and scope addendum, both already present in the rebased board. Retained the rebased board (including subsequent close-out and conflict records) and created merge commit `fb74541`, preserving the remote commits as ancestry. No force push was used; other sessions' files and history were not rewritten.
+
+---
+### Session 95d0beb9 deployment record
+
+- [PR #53](https://github.com/wingbangboozle1-lang/Jack2/pull/53) merged 2026-11-12 as `897f490515e644fd16d9d39181506f58ff970dd2`. PR CI run 43261803276 passed before merge. Pages run 43261891628 succeeded, and the [live review](https://wingbangboozle1-lang.github.io/Jack2/session-95d0beb9/) was fetched and checked.
+- Main verification run 43261892414 failed at the generated-files gate: PR #54 merged between PR CI and PR #53, adding a board line and invalidating the F4 generated inventory. No session work was discarded. This follow-up regenerates audit outputs on merged main and logs the deployment; CI must pass before merging the follow-up.
+- Task status: targeted review and publication **needs review** (findings posted); integration and deployment confirmation **done**. The audit does not certify every line, all external URLs, or complete absence of personal information.
+
+**Follow-up after main advanced during integration:** Main subsequently advanced to `37a524a` with Session 95's deployment record. A second normal merge (not a history rewrite) conflicted only in this append-only board section; both the cfe293bd close-out and Session 95 deployment record were retained. The cfe dashboard verifier, root model/build, and full-tree checker were rerun after the merge and passed (17 root pages / 235 including archives).
+
+---
+### Session 40933769 integration record
+
+- **Pull request:** [#47](https://github.com/wingbangboozle1-lang/Jack2/pull/47) — merged to `main` at `bf595f28b666f39029b9d28900d3269a60e0a65a` on 2026-11-12T16:38:14Z (squash).
+- **PR verification:** `verify` run [43260738205](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43260738205) passed.
+- **Main verification:** `verify` run [43260838680](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43260838680) passed all workflow steps, including every workbook builder/verifier and the generated-file freshness gate.
+- **GitHub Pages:** deployment run [43260837066](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43260837066) succeeded; Pages API build `1363698189` reports `built` for the merged commit. Public site: https://wingbangboozle1-lang.github.io/Jack2/ (Suggestions page: https://wingbangboozle1-lang.github.io/Jack2/suggestions.html).
+- **Irregularities:** no new factual data or personal information was added. The historical public school/district address-pattern audit note described above remains a non-personal institutional location; no current-session PII hits. Older workbooks and any historical assumptions remain separately labelled and were not rewritten.
+- **Concurrent integration conflict:** after PR #47 merged, PR #46 (Session O) merged before the deployment-record PR, and both appended to `COORDINATION.md`. The rebase conflict was resolved by retaining Session O's conflict record and this session's deployment record, without dropping either. Later rebases also conflicted because PR #53 (Session `95d0beb9`) appended its decision-critical audit and PR #55 appended its deployment record to this board; both Session 95 and Session 409 records were retained, as was Session 95's later deployment record. The F4 audit summaries were regenerated to reflect the final coordination-log lines; the changed files are build outputs.
+- **Generated landing irregularity found during PR #48 CI:** PR #51 added a Session M-b “Suggestions & review” card directly to generated `index.html`, but did not add it to `tools/build_site.py`; CI therefore removed that live card on rebuild and failed the global generated-file gate. The integration restored the same card in the generator, preserving Session M-b's page and making the output reproducible. Audit artifacts are refreshed after the final board text.
+
+### CI failure and correction (PR #57, 2026-11-12)
+
+The first PR check run [43262726485](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43262726485) passed all existing workbook checks and failed at the new cfe step. The failure was an unconditional stray `exit 1` / `fi` pair left after the CFE step during conflict resolution; the verifier itself passed locally and the workflow now removes that stray pair while preserving the full Session O and cfe step guards. The log download endpoint returned EOF, so the failed step was isolated through the GitHub job step list and the checked workflow source. CI must rerun successfully before merge.
+
+---
+---
+
+# Session P (`session-7663f9db` / `arena/7663f9db-jack2`) — claim 2026-11-12
+
+Platform note: Arena pins this session to branch `arena/7663f9db-jack2`; no alternate branch (`session-<id>/<task>`) is created or switched to, and `arena/7663f9db-jack2` serves as the PR/integration branch. All new files are isolated under `session-7663f9db/**`; shared files are touched only via non-destructive additive integration in `P-08` after rebasing onto `origin/main`.
+
+## Starting state & parallel-session detection (2026-11-12 16:34 UTC)
+
+- `main` at `99c6519` (PR #45 merged 2026-11-11); Pages status `built` (`main` / `/`, legacy build).
+- Detected active 2026-11-12 peer branches with initial claims pushed within the last few minutes: `arena/40933769-jack2` (claims root `suggestions.html`), `arena/cfe293bd-jack2` (`session-cfe293bd/**`), `arena/2afb2553-jack2` (`session-2afb2553/**`), `arena/620551ec-jack2` (`session-620551ec/**`), `arena/6596c3f2-jack2` (`session-6596c3f2/**`), `arena/5f15df5c-jack2` (`session-5f15df5c/**`).
+- Historical open PRs (`#5, #6, #10, #14, #18, #30, #38, #40, #41, #43`) belong to earlier sessions and will not be closed, merged, or modified.
+- This session respects every peer claim: zero edits to root `suggestions.html` (claimed by `session-40933769`) or to any `session-*/` directory other than `session-7663f9db/**` (and updating `session-f4f700c0/audit/*` only via its own generator script if required at final integration so CI stays green).
+
+## Task board — Session P claims (disjoint scope)
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| P-01 | Read `COORDINATION.md`, detect parallel sessions, claim disjoint scope, push claim | `done` | `session-7663f9db` | `COORDINATION.md` (append only) |
+| P-02 | Repository line-by-line audit (root + prior sessions + CI/workflows + PII + broken/stale links) & Requirements Traceability Matrix | `done` | `session-7663f9db` | `session-7663f9db/data/requirements.json`, `session-7663f9db/data/irregularities.json` |
+| P-03 | Live official-source verification pass (access date **2026-11-12**): BLS, Census, CA DOF, BEA, CDE, CA DIR / LA OWS, SEC EDGAR (`JACK`, `O`), FRED/Treasury, LA County Assessor/Recorder, City of LA Finance (Measure ULA), IRS/FTB/Prop 3 & 43, CAL FIRE/LA County fire, USGS UCERF3, FEMA/CDI FAIR Plan, Port of LA; unverified rows blank + flagged | `done` | `session-7663f9db` | `session-7663f9db/data/sources.json`, `session-7663f9db/data/metrics.json` |
+| P-04 | Pre-decision Questions, Information & Answers Register + Missing-Information Discovery Plan; Dedicated Suggestions Review & Path Selection Register (review before implementing) | `done` | `session-7663f9db` | `session-7663f9db/data/questions.json`, `session-7663f9db/data/suggestions.json` |
+| P-05 | Projection system (2026–2040 deterministic + 2030–2035 expiry sweep + seeded 15,000-trial Monte Carlo with BAU & black-swan shocks on normalized per-$1.00 NOI basis) | `done` | `session-7663f9db` | `session-7663f9db/scripts/model.py`, `session-7663f9db/data/model_output.json` |
+| P-06 | Comprehensive Risk Register (every decision × BAU + black swan) & Wealth-Preservation vs. Growth Decision Synthesis | `done` | `session-7663f9db` | `session-7663f9db/data/risks.json`, `session-7663f9db/data/decisions.json`, `session-7663f9db/EXECUTIVE_SUMMARY.md` |
+| P-07 | Clean 15-page category-organized dashboard (`session-7663f9db/*.html`) + interactive client-side suggestions/contract explorer + automated verifier (`verify.py`) | `done` | `session-7663f9db` | `session-7663f9db/*.html`, `session-7663f9db/assets/**`, `session-7663f9db/scripts/build_site.py`, `session-7663f9db/scripts/verify.py` |
+| P-08 | Final integration: pull/rebase on `origin/main` (`37a524a`), additive workspace row in `tools/build_site.py` + `README.md` section + `.github/workflows/verify.yml` step (preserving all peer sessions), re-verify combined tree, PR to `main`, merge, confirm Pages deploy | `in progress` | `session-7663f9db` | `tools/build_site.py`, `README.md`, `.github/workflows/verify.yml`, `workspaces.html`, `session-f4f700c0/audit/*`, `COORDINATION.md` |
+
+### Session P verification & close-out record (2026-11-12)
+- **Live sources & fresh discoveries:** 28 primary HTTPS sources read live 2026-11-12 (`S01`–`S28`), updating U.S. 10Y Treasury to **4.98%** (Nov 10), Realty Income Q3 2026 cash yield to **6.80%** (Nov 2 8-K), JACK Q3 FY26 (`2,115` units, `-1.1%` SSS, `$1.47B` debt, Sep 21 Board/GreenWood 8-K), CA DOF `P2A_County_Total.xlsx` (`9.81M` 2026 -> `9.64M` 2040), **2026 CA School Dashboard** LAUSD `87.6%` grad rate, Metro D Line Sec. 1 May 8, 2026 opening, Port Sep record `1,042,652 TEUs`, and Nov 11 SOS Prop 3 `60.7% Yes` / Prop 43 `57.4% No`.
+- **Irregularities surfaced (`session-7663f9db/flagged.html`):** 15 findings (`IR-P01`..`IR-P15`), including HTTP 404 on legacy CAL FIRE `-2022` link, `session-6d8f5d05` Sep 2026 BLS misprints & CI omission, stale `7.3%` root model anchor, `research/04-education.md:11` HQ address regex match, and Session M ULA `>= $5.4M` boundary. Zero peer files altered silently.
+- **Verification:** `session-7663f9db/scripts/verify.py` (`V1`–`V7`, 0 PII hits, 0 broken links/anchors, deterministic 15k MC `seed=20261112`), `tools/check_site.py`, and full CI workflow passed after rebasing onto `37a524a` and regenerating `session-f4f700c0/audit/*`.
+
+**Privacy commitment (top priority):** No personal names, street address, APN/parcel number, loan/account number, phone, email, or tenant-contact identifier is collected, committed, or published anywhere. Placeholder IDs (`[OWNER-01]`, `[PROPERTY-01]`, `[TENANT-FRANCHISEE-01]`) are used strictly, and unknown property facts remain blank and flagged.
+
+**Verification commitment:** Every quantitative claim carries a source ID linking to an official source verified on `2026-11-12` (or explicitly labeled computed/assumption). Unconfirmed values stay blank and appear on `session-7663f9db/flagged.html`.
+---
+
+**Verification commitment:** Every quantitative claim carries a source ID linking to an official source verified on `2026-11-12` (or explicitly labeled computed/assumption). Unconfirmed values stay blank and appear on `session-7663f9db/flagged.html`.
+
+### Session P / PR #56 concurrent integration (2026-11-12)
+
+While PR #57 was being verified, `main` advanced to `6e1e9f0` with Session P (#56). Normal merge conflicts occurred in the workflow, append-only coordination log and generated workspace index; the root builder also auto-merged. Kept both Session P and cfe293bd workflow steps, all Session P claims/deployment material, and both workspace rows; regenerated root workspaces. During this merge review, identified and removed the stray unconditional `exit 1` / `fi` pair that caused PR #57's first workflow failure. No files under `session-7663f9db/` were edited. Re-ran cfe build/verify, root model/build/check and whitespace checks: pass; root checker now reports 17 root pages and 250 total including archives.
+
+### PR #57 second CI rerun diagnosis (2026-11-12)
+
+The rerun after the CFE-guard correction failed at the Session P workflow step, not at its data checks. An isolated replay of the full workflow sequence in a clean archived checkout regenerated Session P and passed its V1–V7 verifier with no Session P file changes; review of the merged workflow then exposed a second unconditional `exit 1` / `fi` pair after the Session P guard, introduced by the same conflict-resolution pattern. Removed only the stray pair; both the cfe and Session P guarded steps now close exactly once. The existing Session P scripts/data were not edited. A fresh PR check is required.
+
+**Final-integration scope addendum (2026-11-12):** The clean-checkout replay of the full CI sequence shows that the repository's existing F4 inventory/audit step refreshes three tracked generated files after additions to the workspaces and coordination log; without committing those generated outputs, the workflow's global freshness gate would fail even when CFE and Session P checks pass. As the remaining integration session, CFE-06 now includes only those generated outputs, produced by the existing owner-authored generator: `session-f4f700c0/audit/inventory.json`, `session-f4f700c0/audit/summary.json`, and `session-f4f700c0/verification.json`. No F4 source code, data, research, or dashboard pages will be edited; regenerate and verify the outputs, then record their counts and checks here.
+
+**Generated audit outputs refreshed:** Ran `session-f4f700c0/scripts/audit.py` and `scripts/check.py` after all workspace integrations; updated only the three claimed generated artifacts. The inventory covers 499 tracked files / 88,838 lines / 7,983,335 bytes, with 0 current-session privacy-pattern hits, 0 structural errors, and one historical public school/district address pattern in `research/04-education.md` retained for review. F4's 30 checks pass (51 sources, 132 metric rows, 122 verified and 10 unknown, 20 risks, 21 flags, 324 rendered table rows). The exact existing CI model/build/verifier sequence was replayed in an isolated checkout; CFE and Session P builds/verifiers pass and the P workbook has no generated diffs. With the refreshed inventory committed, the global freshness gate is expected to be clean; GitHub CI remains the final confirmation.
+
+The first CI rerun after refreshing the audit JSONs still failed only at the global generated-output gate: the workflow's audit runs before the later historical manual-review export, and the audit snapshot also became stale because this coordination log had continued to grow. Replayed every workflow step in exact order from a clean archived checkout; all scoped verifier steps pass, and only the three F4 audit outputs differ afterward (the inventory's recorded `COORDINATION.md` size/lines/hash and resulting totals). Now refreshing those outputs after the final coordination entry; do not append another entry unless regenerating them again.
+---
+
+## Session 620551ec deployment record — 2026-11-12
+
+- **PR:** [#58](https://github.com/wingbangboozle1-lang/Jack2/pull/58) — merged to `main` as `552fa0bc79e9968aa248cf708c128cd6548af42e` on 2026-11-12T17:02:47Z. PR head CI (`verify`, run `43265117238`) **passed** before merge; one earlier `verify` failure on this branch (pre-session-commit) was superseded by the green run on the rebased head.
+- **Main CI:** `verify` run `43265228740` → **success**.
+- **GitHub Pages:** deployment run `43265228187`; Pages API reports **`built`** for the merged commit. Live: https://wingbangboozle1-lang.github.io/Jack2/session-620551ec/ (dashboard fetched live and confirmed serving; verified counts 51/65 rows, 30 risks, 24 questions, 14 suggestions).
+- **Conflicts handled:** `origin/main` moved twice during integration (first `6e1e9f0` PR #56/#52 chain, then `11f63b0` PR #57 — session `cfe293bd`). Conflicted files resolved without discarding anything: `COORDINATION.md` (both appends kept, de-marked), `tools/build_site.py` (workspace rows kept: Session O, Session P, cfe293bd, plus this session's; Session 40933769's root suggestions builder intact), `.github/workflows/verify.yml` (CI steps for 6596c3f2, 7663f9db, cfe293bd and this session all kept), `workspaces.html` (regenerated from merged generator), `session-f4f700c0/audit/*` + `verification.json` (took main's copy, regenerated on the merged tree). `README.md` auto-merged. Two rebase-on-own-branch missteps were aborted and logged; final pushes are fast-forwards.
+- **Local full CI-order re-run on the final merged tree: PASS** (all session builders/verifiers, both unittest suites, `tools/check_site.py`, porcelain clean).
+- **Scope:** all session work under `session-620551ec/**`; shared edits limited to the additive workspace row, the one CI step, the additive README section, the `session-f4f700c0/audit/*` regenerations required by the freshness gate, and this record. No other session's files edited.
+- **Flagged for review (non-blocking):** see `session-620551ec/flagged.html` — 13 deliberately blank rows (no official cap-rate source; BEA does not print LA County 2024 real GDP level; 10-K narrative figures not re-extracted; school-system quality unverified; parcel FHSZ; ULA jurisdiction; insurance availability; owner-private facts) and 12 irregularities/watch items (incl. stale open PRs #5/#6/#10/#14/#18/#30/#38/#40 and #41/#43 left untouched; two `git pull --rebase origin/arena/620551ec-jack2` missteps aborted and logged here).

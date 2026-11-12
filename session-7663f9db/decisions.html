@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conditional Decision Engine &amp; Reconciliation — Session P Advisory (Central LA Jack in the Box)</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Session P Advisory Dossier <span>Central LA NNN QSR (2030–2035 Expiry)</span></div>
+      <div class="meta-pills">
+        <span class="meta-pill">Verified: 2026-11-12</span>
+        <span class="meta-pill">10Y Treasury: 4.98%</span>
+        <span class="meta-pill">Realty Income Q3-26: 6.80%</span>
+        <span class="meta-pill">Strict Zero-PII / Per-$1.00 NOI</span>
+      </div>
+    </div>
+  </header>
+  <div class="nav-wrap">
+    <nav class="nav" aria-label="Primary"><a href="index.html">Overview</a><a href="demographics.html">Demographics</a><a href="economy.html">Economy</a><a href="schools.html">Schools</a><a href="market.html">Market &amp; Tenant</a><a href="taxes.html">Taxes &amp; ULA</a><a href="hazards.html">Hazards</a><a href="projections.html">Projections &amp; MC</a><a href="risks.html">Risks</a><a href="questions.html">Q&amp;A Guide</a><a href="decisions.html" class="active">Decisions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged / Audit</a><a href="requirements.html">Requirements</a><a href="sources.html">Sources</a></nav>
+  </div>
+  <main class="container">
+    <section class="hero">
+      <h1>Conditional Decision Engine &amp; Reconciliation</h1>
+      <p>Objective threshold rules linking verified cap rates, ULA jurisdiction, store sales, and tax basis to execution steps.</p>
+    </section>
+    
+    <div class="card">
+      <h2>Conditional Decision Rules (Apply Immediately After 30-Day Audit)</h2>
+      <div class="table-wrap"><table><thead><tr><th>Rule</th><th>Priority</th><th>If Verified Parcel &amp; Lease Conditions Match...</th><th>Recommended Path</th><th>Analytical Rationale</th></tr></thead><tbody><tr><td class="num"><strong>DR-01</strong></td><td><span class="badge badge-blank">Immediate Exit</span></td><td>Remaining WALT &lt;= 5.5 years OR Store sales &lt; $1.5M OR Franchisee refuses renewal / corporate guaranty OR Property outside ULA (0.11%-0.56% DTT) AND BOV Cap &lt;= 6.25%</td><td><strong>P1: Sell via Targeted IRC §1031 Exchange</strong></td><td>At &lt;= 6.25% going-in exit cap and low transfer tax, exchanging at 6.8% (Realty Income Q3-26 benchmark) generates positive wealth &amp; income accretion while escaping JACK credit shrinkage and the &lt;5-yr WALT valuation cliff.</td></tr><tr><td class="num"><strong>DR-02</strong></td><td><span class="badge badge-blank">Value-Maximizing Hold/Exit</span></td><td>Remaining WALT 6-9 years AND Store sales &gt;= $1.85M AND City of LA Measure ULA applies (4.56%-6.06% DTT) AND Tenant accepts 10-15 yr Blend-and-Extend at &gt;= 2.25% bumps or market reset</td><td><strong>P2: Blend-and-Extend First (Then Re-price Hold vs. Sell)</strong></td><td>Adding 8-10 years of WALT typically compresses cap rates by 75-125 bps—often lifting asset value +12% to +22% before any transfer tax is triggered, more than offsetting the 4.45%-5.95% ULA drag if you later exit.</td></tr><tr><td class="num"><strong>DR-03</strong></td><td><span class="badge badge-blank">Strategic Hold / Pivot</span></td><td>Sub-25% embedded tax gain OR Near-term estate step-up OR Land Value / TOD Rezoning (Metro D Line / SB-79 corridor) &gt; 1.25x leased QSR value</td><td><strong>P3 / P5: Hold Through Term or Execute TOD / Ground-Lease Pivot</strong></td><td>If underlying Central LA corner land near newly opened Metro D Line stations exceeds dark-box QSR value, letting the tenant pay NNN rent through 2030-2035 acts as a paid land-bank option ahead of LA28 and redevelopment.</td></tr><tr><td class="num"><strong>DR-04</strong></td><td><span class="badge badge-blank">De-Risk &amp; Liquify</span></td><td>No 6.5%+ quality 1031 replacement identified within 45-day window OR Owner prioritizes total real-estate exit &amp; high tax basis exists (&lt;= 30% embedded gain)</td><td><strong>P4: Taxable Sale + Treasury / Diversified Index Portfolio</strong></td><td>With 10Y Treasuries at 4.98% (state-tax exempt!) and 30Y at 5.35%, a low-gain owner avoids single-parcel seismic/retail risk entirely without forcing a rushed 45-day 1031 purchase.</td></tr><tr><td class="num"><strong>DR-05</strong></td><td><span class="badge badge-blank">Hazard Override</span></td><td>Insurance quote &gt; 1.5% of value OR Parcel inside CAL FIRE Very High FHSZ / CGS Alquist-Priolo Fault / FEMA Flood Zone A without full tenant NNN coverage</td><td><strong>P1 / P4: Accelerated Sale / Risk Transfer</strong></td><td>CDI&#x27;s $1B FAIR Plan assessment &amp; post-2025 underwriting squeeze threaten unrecoverable landlord cost leakage and severe downside on tenant vacancy.</td></tr></tbody></table></div>
+    </div>
+    <div class="card">
+      <h2>Cross-Workbook Reconciliation Across Repository</h2>
+      <div class="table-wrap"><table><thead><tr><th>Workbook / Session</th><th>Date</th><th>10Y UST</th><th>Reit Yield</th><th>Breakeven Exit Cap</th><th>Verdict Tone</th><th>Key Differences / Audit Note</th></tr></thead><tbody><tr><td><strong>Root Main / Session M-b (data/valuation.json)</strong></td><td>2026-11-06 / 08</td><td class="num">4.86%-4.90%</td><td class="num">7.30% (O FY25)</td><td>6.52% - 6.97% (1031)</td><td>Leans Sell + 1031 (driven by 7.3% yield)</td><td>Uses older 7.3% Realty Income yield, misses Nov 10 4.98% 10Y &amp; broken S17 FHSZ URL.</td></tr><tr><td><strong>Session 6d8f5d05 (Un-tracked in CI)</strong></td><td>2026-11-11</td><td class="num">4.86%</td><td class="num">7.30% (stale)</td><td>Normalized only</td><td>Cautious Sell / Hold pending data</td><td>Contains wrong Sep 2026 BLS unemployment rates (5.1/4.3/5.6/5.9%), mislabels Sep payrolls as Q1, retains S17 404.</td></tr><tr><td><strong>Session N4 (session-3090b9ed)</strong></td><td>2026-11-11</td><td class="num">4.84%-4.88%</td><td class="num">6.80% (Q3-26)</td><td>7.81% pre-tax / 8.64% taxed</td><td>Conditional; highlights 6.8% yield tightening</td><td>Prioritized before Nov 10 4.98% 10Y jump, missing path-selector suggestions &amp; live Nov 11 Prop 3/43 canvas.</td></tr><tr><td><strong>Session P (session-7663f9db — THIS WORKSPACE)</strong></td><td>2026-11-12</td><td class="num">4.98% (Nov 10)</td><td class="num">6.80% (Q3-26 Nov 2)</td><td>Y1 Cash BE: 6.59% (Sub-$5.4M) / 6.32% (ULA T1) | 6-Yr NPV BE: 8.06% (Sub-$5.4M) / 7.27% (ULA T1)</td><td>Audit-first Dual Trigger: Blend-and-Extend vs. 1031</td><td>100% live 2026-11-12 sources; resolves DOF 2040, 2026 School Dashboard, IRS/FTB taxes, &amp; full repo audit.</td></tr></tbody></table></div>
+    </div>
+    <div class="card">
+      <h2>45-Day Pre-Execution Action Roadmap</h2>
+      <div class="table-wrap"><table><thead><tr><th>Step</th><th>Timeline</th><th>Owner</th><th>Deliverable</th><th>Est. Cost</th></tr></thead><tbody><tr><td class="num"><strong>Step 1</strong></td><td>Days 1-7</td><td>Owner / Counsel</td><td>Assemble Executed Lease, Amendments, Critical Expiry Date (2030-2035), Guarantor Entity, and Last 12-Month Rent/Tax/Insurance Bills.</td><td>$0 (internal files)</td></tr><tr><td class="num"><strong>Step 2</strong></td><td>Days 5-14</td><td>Owner / CPA</td><td>Run Private Parcel Lookup (LA County Assessor/ZIMAS for City vs. County ULA test; CAL FIRE FHSZ; FEMA Flood; CGS EQ Zapp) &amp; calculate adjusted tax basis + §1250 recapture.</td><td>$0-$1,500 CPA consult</td></tr><tr><td class="num"><strong>Step 3</strong></td><td>Days 10-21</td><td>Net Lease Brokers / Appraiser</td><td>Commission 2 confidential BOVs + 1 MAI Appraisal pricing As-Is WALT vs. 15-Year Blend-and-Extend vs. Vacant Land / TOD Value.</td><td>$0 BOVs; $3.5k-$6k MAI</td></tr><tr><td class="num"><strong>Step 4</strong></td><td>Days 20-35</td><td>Net Lease Advisor</td><td>Confidentially test Jack in the Box / Franchisee appetite for 10-15 yr Blend-and-Extend with corporate guaranty &amp; store sales disclosure, while pre-vetting QI and 6.8%+ 1031 candidates.</td><td>Contingent / advisory</td></tr><tr><td class="num"><strong>Step 5</strong></td><td>Days 35-45</td><td>Owner + CPA + Counsel</td><td>Apply Session P Decision Rules DR-01 through DR-05 using verified figures—then formally authorize Extension, §1031 Listing, Ground-Lease/TOD Hold, or Taxable Exit.</td><td>Execution phase</td></tr></tbody></table></div>
+    </div>
+    
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Workspace:</strong> <code>session-7663f9db</code> · Independent Hold-vs-Sell Advisory Audit · 28 Official Primary Sources Checked Live 2026-11-12.</div>
+      <div><strong>Privacy &amp; Data Integrity:</strong> Subject street address, APN, and owner identity strictly withheld; missing private terms left blank, never fabricated. <a href="sources.html">Audit Trail &rarr;</a></div>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
