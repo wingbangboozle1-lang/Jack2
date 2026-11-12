@@ -97,6 +97,7 @@ traceable to the source that produced it. B re-verified the sources that A cited
 |---|---|
 | Session A PRs | #1 merged as `22f2f91`; #3 merged as `1e8f8f9` (recorded the deploy verification). Their site content is preserved in `session-1944e5a3/`. |
 | Session B final PR | **#2** — https://github.com/wingbangboozle1-lang/Jack2/pull/2 — merged 2026-11-06T13:07:14Z, merge commit `5166eb8` |
+| Session `arena/941cbc20-jack2` PR | **#51** — https://github.com/wingbangboozle1-lang/Jack2/pull/51 — merged 2026-11-12, merge commit `e967bb9`. Added dedicated Suggestions & review page (session-313ba936/suggestions.html) to the recommended dashboard; root index.html suggestions card. CI verify pass; Pages API `built` for `e967bb9`. |
 | Session A follow-up PRs | #3 (`1e8f8f9`) and #4 (`18f08ff`) — their board/deploy records, folded into this file |
 | Session B merge-conflict history | PR #2 was blocked once when main advanced (PR #3); resolved by merging `origin/main` again and folding session A's new integration record into this file, then re-running all checks |
 | Pages source | `main` / root, legacy build, `.nojekyll` present |
