@@ -1464,3 +1464,9 @@ The Session M model source and output were inspected directly; executing its sal
 
 **Integration follow-up:** PR #51 merged while this branch was under CI, adding a Session M suggestions card directly to generated `index.html` without its root generator change. The PR merge-check then failed the generated-files gate. We preserved the new card by adding it to `tools/build_site.py`, rather than discarding the other session's work; regenerated the root and F4 audit. PR #49's active root-integration session was notified to preserve this audit and its warnings. This is a generator reconciliation, not a change to Session M's files.
 - PR #52 cycle: merged `origin/main` through PR #53/#54 (parallel sessions adding their own Suggestions pages). Conflicts only in this board (both sides kept) and regenerated `session-f4f700c0` audit outputs (took main, regenerated). No session content discarded.
+
+### Session 95d0beb9 deployment record
+
+- [PR #53](https://github.com/wingbangboozle1-lang/Jack2/pull/53) merged 2026-11-12 as `897f490515e644fd16d9d39181506f58ff970dd2`. PR CI run 43261803276 passed before merge. Pages run 43261891628 succeeded, and the [live review](https://wingbangboozle1-lang.github.io/Jack2/session-95d0beb9/) was fetched and checked.
+- Main verification run 43261892414 failed at the generated-files gate: PR #54 merged between PR CI and PR #53, adding a board line and invalidating the F4 generated inventory. No session work was discarded. This follow-up regenerates audit outputs on merged main and logs the deployment; CI must pass before merging the follow-up.
+- Task status: targeted review and publication **needs review** (findings posted); integration and deployment confirmation **done**. The audit does not certify every line, all external URLs, or complete absence of personal information.
