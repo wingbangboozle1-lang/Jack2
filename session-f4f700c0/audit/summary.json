@@ -1,8 +1,8 @@
 {
   "as_of": "2026-11-08",
-  "files": 541,
-  "lines": 102093,
-  "bytes": 8710905,
+  "files": 584,
+  "lines": 108815,
+  "bytes": 10189076,
   "privacy_pattern_hits": 1,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [
@@ -14,16 +14,16 @@
   "structural_errors": 0,
   "workspaces": {
     "root/config": {
-      "files": 38,
-      "lines": 14686,
-      "bytes": 924050,
+      "files": 59,
+      "lines": 19919,
+      "bytes": 2073343,
       "privacy_hits": 0,
       "structural_errors": 0
     },
     "root/historical-shared": {
-      "files": 52,
-      "lines": 15886,
-      "bytes": 903674,
+      "files": 54,
+      "lines": 16021,
+      "bytes": 913805,
       "privacy_hits": 1,
       "structural_errors": 0
     },
@@ -115,6 +115,13 @@
       "files": 19,
       "lines": 2996,
       "bytes": 197995,
+      "privacy_hits": 0,
+      "structural_errors": 0
+    },
+    "session-742b6a03": {
+      "files": 20,
+      "lines": 1354,
+      "bytes": 318747,
       "privacy_hits": 0,
       "structural_errors": 0
     },
