@@ -1033,6 +1033,64 @@
     "fmt": "{:,.0f}",
     "formula": "State estimate (9,853,435) minus Census Bureau estimate (9,694,934)"
    }
+  },
+  {
+   "id": "PP-012",
+   "category": "people-place",
+   "group": "Population",
+   "label": "Change in county residents between the 2010 and 2020 censuses",
+   "geo": "Los Angeles County",
+   "period": "April 1, 2010 to April 1, 2020",
+   "value": "2.0%",
+   "source": "S-CENSUS",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "100*(x0-x1)/x1",
+    "operands": [
+     "10,014,009",
+     "9,818,605"
+    ],
+    "inputs": [
+     "PP-003b",
+     "PP-004b"
+    ],
+    "fmt": "{:.1f}%",
+    "formula": "(10,014,009 minus 9,818,605) divided by 9,818,605"
+   }
+  },
+  {
+   "id": "PP-013",
+   "category": "people-place",
+   "group": "Population",
+   "label": "Change in city residents between the 2010 and 2020 censuses",
+   "geo": "City of Los Angeles",
+   "period": "April 1, 2010 to April 1, 2020",
+   "value": "2.8%",
+   "source": "S-CENSUS",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "100*(x0-x1)/x1",
+    "operands": [
+     "3,898,747",
+     "3,792,621"
+    ],
+    "inputs": [
+     "PP-003a",
+     "PP-004a"
+    ],
+    "fmt": "{:.1f}%",
+    "formula": "(3,898,747 minus 3,792,621) divided by 3,792,621"
+   }
   }
  ]
 }

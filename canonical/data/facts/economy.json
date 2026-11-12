@@ -1115,6 +1115,64 @@
     "fmt": "{:.1f}%",
     "formula": "($16.90 minus $16.50) divided by $16.50"
    }
+  },
+  {
+   "id": "EC-004",
+   "category": "economy",
+   "group": "Consumer spending (2022 Economic Census)",
+   "label": "Accommodation and food service sales per resident",
+   "geo": "City of Los Angeles",
+   "period": "2022 sales over 2020 Census residents",
+   "value": "$4,454",
+   "source": "S-CENSUS",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "Sales are for 2022 and residents for 2020, so this is an approximate figure. It includes hotels and visitors' spending.",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "1000*x0/x1",
+    "operands": [
+     "17,366,966",
+     "3,898,747"
+    ],
+    "inputs": [
+     "EC-001a",
+     "PP-003a"
+    ],
+    "fmt": "${:,.0f}",
+    "formula": "$17,366,966 thousand divided by 3,898,747 residents"
+   }
+  },
+  {
+   "id": "EC-005",
+   "category": "economy",
+   "group": "Consumer spending (2022 Economic Census)",
+   "label": "Accommodation and food service sales per resident",
+   "geo": "Los Angeles County",
+   "period": "2022 sales over 2020 Census residents",
+   "value": "$4,394",
+   "source": "S-CENSUS",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "Sales are for 2022 and residents for 2020, so this is an approximate figure.",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "1000*x0/x1",
+    "operands": [
+     "44,000,801",
+     "10,014,009"
+    ],
+    "inputs": [
+     "EC-001b",
+     "PP-003b"
+    ],
+    "fmt": "${:,.0f}",
+    "formula": "$44,000,801 thousand divided by 10,014,009 residents"
+   }
   }
  ]
 }
