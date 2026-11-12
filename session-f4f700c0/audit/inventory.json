@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 446,
-    "lines": 82011,
-    "bytes": 7297821,
+    "lines": 82015,
+    "bytes": 7298934,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -16,15 +16,15 @@
     "workspaces": {
       "root/config": {
         "files": 23,
-        "lines": 3140,
-        "bytes": 464840,
+        "lines": 3143,
+        "bytes": 465787,
         "privacy_hits": 0,
         "structural_errors": 0
       },
       "root/historical-shared": {
         "files": 52,
-        "lines": 15854,
-        "bytes": 899702,
+        "lines": 15855,
+        "bytes": 899868,
         "privacy_hits": 1,
         "structural_errors": 0
       },
@@ -196,11 +196,11 @@
     {
       "path": "COORDINATION.md",
       "workspace": "root/config",
-      "bytes": 130075,
-      "lines": 1436,
-      "sha256": "a9e89d9f61b358731e26511d65775c1ffba05f3d1c213c752d0ad154dbed73b4",
+      "bytes": 130856,
+      "lines": 1438,
+      "sha256": "46c10e4660e5da9b3f5529060f0452dc37aeaf27e6e46e5a5c795302c4b55926",
       "kind": ".md",
-      "url_count": 41,
+      "url_count": 42,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
@@ -686,15 +686,15 @@
     {
       "path": "index.html",
       "workspace": "root/config",
-      "bytes": 11945,
-      "lines": 128,
-      "sha256": "39c5b0e639f4b5e7a4a31238679cef447854c126dc43404fab26770ed9c2636c",
+      "bytes": 12111,
+      "lines": 129,
+      "sha256": "1c2363e29bdbb83e94c0d5d21ec665a654302ff50b91f26be0951e72a37f019d",
       "kind": ".html",
       "url_count": 0,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
-      "html_tags": 185,
+      "html_tags": 188,
       "status": "ok"
     },
     {
@@ -6300,9 +6300,9 @@
     {
       "path": "tools/build_site.py",
       "workspace": "root/historical-shared",
-      "bytes": 99490,
-      "lines": 1366,
-      "sha256": "bdab4464cf62533c4b1d8bb78a53da2ea6ac3852412611eede1ba26ffb7f062b",
+      "bytes": 99656,
+      "lines": 1367,
+      "sha256": "89a5abf63b37aee642b509bd14be359024c45260a0342ada1991aef1a9805512",
       "kind": ".py",
       "url_count": 1,
       "pii_pattern_hits": 0,
