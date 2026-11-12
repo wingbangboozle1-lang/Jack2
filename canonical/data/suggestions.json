@@ -95,7 +95,7 @@
    "id": "SG-10",
    "area": "Presentation",
    "title": "Move the earlier workbooks under one archive path",
-   "what": "Relocate the 22 earlier workbooks from the top level of the site into an archive folder and leave redirects behind.",
+   "what": "Relocate the earlier workbooks from the top level of the site into an archive folder and leave redirects behind.",
    "benefit": "A tidier address structure; less chance a reader lands in an old workbook by mistake.",
    "cost": "Medium, and it touches other sessions' folders and links, which is why it has not been done.",
    "needs": "Agreement from whoever owns those workbooks; redirect testing.",
@@ -176,7 +176,7 @@
    "area": "Privacy",
    "title": "Remove a personal e-mail address from the repository's history",
    "what": "Commits in the repository's history carry a personal e-mail address in their author field (the count is on the Flagged for Review page), and each merge made through GitHub adds one. Step one, reversible: turn on the account setting that keeps the e-mail address private, so new commits and merges use a no-reply address. Step two, irreversible: rewrite history to remove it from existing commits.",
-   "benefit": "Closes the one privacy item this review found. The address does not appear on the site.",
+   "benefit": "Closes the privacy item in the repository's history. The address does not appear on the site.",
    "cost": "Step one is a setting. Step two is high-cost and irreversible: every commit identifier changes and every open branch and pull request must be rebuilt.",
    "needs": "Repository owner's explicit decision.",
    "status": "For review - not implemented"
