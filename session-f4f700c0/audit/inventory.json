@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 447,
-    "lines": 82072,
-    "bytes": 7314691,
+    "lines": 82073,
+    "bytes": 7314955,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -16,8 +16,8 @@
     "workspaces": {
       "root/config": {
         "files": 23,
-        "lines": 3174,
-        "bytes": 470814,
+        "lines": 3175,
+        "bytes": 471078,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -203,9 +203,9 @@
     {
       "path": "COORDINATION.md",
       "workspace": "root/config",
-      "bytes": 135098,
-      "lines": 1465,
-      "sha256": "f1a04502ba7bd4227ddf419e2fdae3f5051cceb1e8616ffdc5c3f38064efdd5a",
+      "bytes": 135362,
+      "lines": 1466,
+      "sha256": "77ec4a3a15e8551e7f5aa5e38a48d3abeabf6761c81a4c56d4ec0f99415d75d6",
       "kind": ".md",
       "url_count": 49,
       "pii_pattern_hits": 0,
