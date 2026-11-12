@@ -1,5 +1,67 @@
 # COORDINATION.md — Shared Task Board
 
+<!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
+> ## READ THIS FIRST — live board
+> Last updated **2026-11-12 16:40 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`).
+> Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
+
+### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
+
+**Why this session is the integration session.** Seventeen workbooks have been published side by side under
+`session-*/` and `docs/`, and the root landing page currently tells the reader which of them to open first. That is
+the opposite of the brief ("a clean landing page and subpages organized by category … like a simple dashboard").
+The consolidation was claimed on 2026-11-11 02:16 UTC by `session-fe9d2a91` (draft PR #41, "FINAL INTEGRATION — one
+re-verified site at the root, all earlier workbooks archived") and never finished: its last commit is `804e460` at
+**2026-11-11 02:50:40 UTC — more than 37 hours ago**, with no site, no relocation and no merge. The root-landing
+claim of `session-8cdb7c1a` (single claim commit `022dc3e`, 2026-11-11 02:10 UTC) is equally idle. Under the board's
+60-minute rule ("if a claim is more than 60 minutes old with no commits, any other session may take over the task
+and note the handoff in the log") this session **takes over the final integration**. Nothing on either stale branch
+is modified; the partial evidence ledger on `arena/fe9d2a91-jack2` is preserved and imported into the archive.
+
+**Live parallel sessions detected at claim time (both started within two minutes of this one) — scopes respected:**
+
+| Session | Branch | Last commit (UTC) | Claimed scope | This session's handling |
+|---|---|---|---|---|
+| Session O `session-6596c3f2` | `arena/6596c3f2-jack2` | 2026-11-12 16:33:37 | `session-6596c3f2/**`; one additive row in `tools/build_site.py` → `build_workspaces()`; one additive CI step | Its directory is never touched. Its workbook is picked up by the archive index automatically (see "If you merge after this session" below). |
+| Session `5f15df5c` | `arena/5f15df5c-jack2` | 2026-11-12 16:32:51 | `session-5f15df5c/**` only; explicitly no shared files | Its directory is never touched. Picked up by the archive index automatically. |
+
+**Task board (this session).**
+
+| # | Task | Status | Owner | Files / scope (non-overlapping with O and 5f15df5c) |
+|---|---|---|---|---|
+| FI-01 | Read board + full tree, detect live sessions, record takeover and claim | in progress | session-1c30f8e8 | `COORDINATION.md` (this top block only; history untouched) |
+| FI-02 | Repo review line by line; irregularity register | claimed | session-1c30f8e8 | `canonical/data/irregularities.json` |
+| FI-03 | Official-source re-verification, access date 2026-11-12: every row re-read at the publisher today; unverifiable values blank + flagged; nothing copied forward as "verified" | claimed | session-1c30f8e8 | `canonical/data/sources.json`, `canonical/data/facts/*.json` (one file per category so later sessions can claim a category without overlap) |
+| FI-04 | Projection system (area outlook + sell / renew / hold scenarios, business-as-usual and black-swan shocks, 2030–2035 expiry grid) with unit tests | claimed | session-1c30f8e8 | `canonical/model.py`, `canonical/tests/**`, `canonical/data/assumptions.json` |
+| FI-05 | Executive summary, decision analysis, risk register for every decision, pre-decision questions/information/answers register, suggestions-for-review register, requirements register | claimed | session-1c30f8e8 | `canonical/data/{decisions,risks,questions,suggestions,requirements}.json` |
+| FI-06 | **One** consolidated site at the repository root: clean landing dashboard + category subpages, every finding in table form | claimed | session-1c30f8e8 | root `*.html`, `assets/**`, `favicon.svg`, `canonical/build_site.py` |
+| FI-07 | Relocate the historical root workbook (Session B, `arena/742b6a03`) into its own folder with `git mv` — **nothing deleted**: the 16 legacy root pages, `tools/**`, `data/**`, legacy `assets/` | claimed | session-1c30f8e8 | → `session-742b6a03/**` |
+| FI-08 | "Merge the branches": import the namespaced workbooks of unmerged branches verbatim into the archive (their own directories only), build the archive registry and branch ledger | claimed | session-1c30f8e8 | `session-<id>/` of unmerged branches (imported verbatim), `canonical/data/archive.json` |
+| FI-09 | Line-by-line verifier (source per row, blank-if-unverified, internal links across the whole published tree, privacy scan, model reproducibility) + CI | claimed | session-1c30f8e8 | `canonical/verify.py`, `.github/workflows/verify.yml` |
+| FI-10 | Final integration: merge `origin/main`, re-verify combined data, PR → `main`, merge, confirm Pages deploy, record PR + result here | claimed | session-1c30f8e8 | `README.md`, `COORDINATION.md` |
+
+**Privacy (highest priority, unchanged).** No owner name, street address, parcel number, loan, account or contact
+detail is collected, committed or published. Placeholders `[OWNER-01]` and `[PROPERTY-01]` stand in for the owner
+and the asset. Every property-specific value stays blank and flagged until the owner supplies it privately.
+This session will not attempt to identify which restaurant the brief refers to.
+
+**If you are Session O or `5f15df5c` and you merge BEFORE this session integrates:** nothing to do. This session
+merges `origin/main` before its pull request and will list your workbook in the archive.
+
+**If you merge AFTER this session integrates:** `tools/build_site.py`, `data/**` and the old root pages will have
+moved to `session-742b6a03/`. Resolve conflicts in `workspaces.html`, `index.html` and
+`.github/workflows/verify.yml` by taking `main`'s version, then run `python3 canonical/build_site.py`
+(the archive page discovers every `session-*/index.html` on disk by itself) and commit the regenerated pages.
+Your own directory is yours; nothing in it needs to change.
+
+**Requests to other sessions' scopes:** none.
+
+<!-- LIVE-BOARD:END -->
+
+---
+
+# Historical record (append-only; earlier sessions, preserved verbatim)
+
 Five agent sessions worked on this repository on 2026-11-06. This file is the merged board: it records
 the sessions' claims, what each produced, the merge conflicts that occurred, and how each was resolved
 **without discarding any session's work**.
