@@ -1369,3 +1369,31 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session `cfe293bd` — 2026-11-12 — independent decision-readiness audit
+
+This session is pinned to `arena/cfe293bd-jack2`; all work remains on that branch. Before starting,
+I read the shared board and inspected the current tree, generated site, and existing workspaces. The
+repository already contains extensive parallel dashboards and historical research, so this session
+will not duplicate their metric ledgers or modify their files. Scope is isolated under
+`session-cfe293bd/**`, plus an additive integration pointer only after the workbook passes its own
+checks. No personal, parcel, street-address, tenant-contact, or financial-account information will
+be committed or published.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| CFE-01 | Repo and coordination review; claim isolated scope | done | `COORDINATION.md` (append only) |
+| CFE-02 | Review existing published material and identify decision-critical contradictions / confidence limits | in progress | `session-cfe293bd/audit/**` |
+| CFE-03 | Build a concise decision-readiness dashboard: executive brief, questions & answers, suggestion review, risks, source register | claimed | `session-cfe293bd/**` |
+| CFE-04 | Independently verify every published quantitative assertion against official primary sources; leave unknowns blank | claimed | `session-cfe293bd/data/**` |
+| CFE-05 | Privacy, source-link, internal-link, and reproducibility checks | claimed | `session-cfe293bd/scripts/**` |
+| CFE-06 | Add the isolated dashboard to the generated workspace index; full build/link check; PR and deployment only if the branch is accepted by GitHub | claimed | `tools/build_site.py` (additive workspace row only), regenerated `workspaces.html`, `COORDINATION.md` |
+
+The main finding to test is that address/parcel, lease terms, rent/NOI, basis, financing, tax facts,
+insurance, zoning, and access rights are all necessary for a defensible property-specific answer. Area
+statistics cannot substitute for those inputs. Recommendation will therefore be conditional and the
+projected property-specific numbers will remain blank; no unsupported forecast or appraisal will be
+published. Existing workbooks are preserved and any contradictions will be framed as audit flags, not
+silently reconciled.
