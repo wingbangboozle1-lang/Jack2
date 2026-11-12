@@ -915,6 +915,176 @@
    "note": "",
    "reason": "",
    "obtain": ""
+  },
+  {
+   "id": "TN-080",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Restaurants the company said it would close",
+   "geo": "Jack in the Box Inc.",
+   "period": "Announced April 23, 2025",
+   "value": "Approximately 150-200 underperforming restaurants",
+   "source": "S-JACK-PLAN",
+   "status": "verified",
+   "quote": "Jack in the Box will implement a block closure program, which is projected to result in the closure of approximately 150-200 underperforming restaurants – a majority of which have been in the system for over three decades.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TN-081",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Which restaurants are targeted",
+   "geo": "Jack in the Box Inc.",
+   "period": "Announced April 23, 2025",
+   "value": "Underperforming; a majority in the system for over three decades",
+   "source": "S-JACK-PLAN",
+   "status": "verified",
+   "quote": "Jack in the Box will implement a block closure program, which is projected to result in the closure of approximately 150-200 underperforming restaurants – a majority of which have been in the system for over three decades.",
+   "checked": "2026-11-12",
+   "note": "Age of the subject restaurant is unknown (row PL-006). An older restaurant with weak sales fits the description the company gave.",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TN-082",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Timing of the closures",
+   "geo": "Jack in the Box Inc.",
+   "period": "Announced April 23, 2025",
+   "value": "Approximately 80-120 by 12/31/2025; the rest at franchise agreement termination dates",
+   "source": "S-JACK-PLAN",
+   "status": "verified",
+   "quote": "The program will consist of approximately 80-120 restaurant closures between now and 12/31/2025, with the remaining underperforming restaurants closing thereafter based upon respective franchise agreement termination dates.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TN-083",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Ordinary closure rate expected on top of the programme",
+   "geo": "Jack in the Box Inc.",
+   "period": "From fiscal 2026",
+   "value": "Approximately 1% of system units a year",
+   "source": "S-JACK-PLAN",
+   "status": "verified",
+   "quote": "This program does not include the expected 1.5% to 2.0% of system unit closures for FY 2025, and an ongoing annual closure rate thereafter of approximately 1% of system units beginning in FY 2026.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TN-084",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Property sales in the same plan",
+   "geo": "Jack in the Box Inc.",
+   "period": "Announced April 23, 2025",
+   "value": "Selling a select number of owned real estate holdings, proceeds to debt paydown",
+   "source": "S-JACK-PLAN",
+   "status": "verified",
+   "quote": "Jack in the Box will accelerate cash flow by selling a select number of owned real estate holdings, and direct proceeds towards debt paydown/leverage reduction.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "TN-085",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Net change in restaurants over the latest year",
+   "geo": "Jack in the Box Inc.",
+   "period": "July 6, 2025 to July 5, 2026",
+   "value": "-53 restaurants",
+   "source": "S-JACK-8K",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "x0-x1",
+    "operands": [
+     "2,115",
+     "2,168"
+    ],
+    "inputs": [
+     "TN-001"
+    ],
+    "fmt": "{:.0f} restaurants",
+    "formula": "Restaurants at July 5, 2026 (2,115) minus restaurants at July 6, 2025 (2,168)"
+   }
+  },
+  {
+   "id": "TN-086",
+   "category": "tenant",
+   "group": "Closure programme",
+   "label": "Net change in restaurants over the latest year, percent",
+   "geo": "Jack in the Box Inc.",
+   "period": "July 6, 2025 to July 5, 2026",
+   "value": "-2.4%",
+   "source": "S-JACK-8K",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "100*(x0-x1)/x1",
+    "operands": [
+     "2,115",
+     "2,168"
+    ],
+    "inputs": [
+     "TN-001"
+    ],
+    "fmt": "{:.1f}%",
+    "formula": "(2,115 minus 2,168) divided by 2,168"
+   }
+  },
+  {
+   "id": "TN-090",
+   "category": "tenant",
+   "group": "Management",
+   "label": "Chief executive",
+   "geo": "Jack in the Box Inc.",
+   "period": "September 21, 2026",
+   "value": "Interim; a successor is expected to assume the role within the next 12 months",
+   "source": "S-JACK-8K-0921",
+   "status": "verified",
+   "quote": "As previously announced, [the President] is expected to join the Board when he assumes the role of Chief Executive Officer within the next 12 months. [...] Executive Chairman and Interim Chief Executive Officer.",
+   "checked": "2026-11-12",
+   "note": "Names in the source are replaced with roles.",
+   "reason": "",
+   "obtain": "",
+   "paraphrase": true
+  },
+  {
+   "id": "TN-091",
+   "category": "tenant",
+   "group": "Management",
+   "label": "Shareholder agreement",
+   "geo": "Jack in the Box Inc.",
+   "period": "September 21, 2026",
+   "value": "Cooperation agreement with an investor extended, including customary standstill and voting provisions",
+   "source": "S-JACK-8K-0921",
+   "status": "verified",
+   "quote": "The Company and [the investor] have agreed to extend their existing cooperation agreement, including customary standstill, voting and other provisions. The amended cooperation agreement will be filed on Form 8-K with the SEC.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": "",
+   "paraphrase": true
   }
  ]
 }

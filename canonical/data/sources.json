@@ -167,6 +167,193 @@
    "accessed": "2026-11-12",
    "read": "read",
    "note": "Read on the access date: highlights, portfolio update, changes-in-occupancy table and investment summary (segments 1 and 2 of 10). A global portfolio; none of it is specific to Los Angeles or to the tenant."
+  },
+  {
+   "id": "S-CBO",
+   "publisher": "Congressional Budget Office",
+   "title": "The Budget and Economic Outlook: 2026 to 2036 (February 2026)",
+   "url": "https://www.cbo.gov/publication/62105",
+   "kind": "official projection",
+   "published": "February 2026",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "'Projections at a Glance' read on the access date (first of 70 page segments). The year-by-year economic table on that page is an image and was not machine-readable, so only figures stated in the text are published."
+  },
+  {
+   "id": "S-DIR-MW",
+   "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+   "title": "Minimum Wage Frequently Asked Questions",
+   "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
+   "kind": "official rule",
+   "published": "rate effective 2026-01-01",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (questions 1 to 9)."
+  },
+  {
+   "id": "S-DIR-FF",
+   "publisher": "California Department of Industrial Relations, Labor Commissioner's Office",
+   "title": "Fast Food Minimum Wage Frequently Asked Questions",
+   "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
+   "kind": "official rule",
+   "published": "rate effective 2024-04-01",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (first of three page segments: rate, coverage, franchise question)."
+  },
+  {
+   "id": "S-LA-WAGE",
+   "publisher": "City of Los Angeles, Office of Wage Standards",
+   "title": "Wage increase notices: 2026 minimum wage",
+   "url": "https://wagesla.lacity.gov/",
+   "kind": "official rule",
+   "published": "rate effective 2026-07-01",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (announcements section)."
+  },
+  {
+   "id": "S-JACK-PLAN",
+   "publisher": "Jack in the Box Inc. (filed with the U.S. Securities and Exchange Commission)",
+   "title": "Form 8-K, Exhibit 99.1: 'JACK on Track' plan, April 23, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000022/ex991-pressreleasexprexrel.htm",
+   "kind": "company filing",
+   "published": "2025-04-23",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-JACK-8K-0921",
+   "publisher": "Jack in the Box Inc. (filed with the U.S. Securities and Exchange Commission)",
+   "title": "Form 8-K, Exhibit 99.1: press release of September 21, 2026 (board change and cooperation agreement)",
+   "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/ex991-pressreleasexbodanno.htm",
+   "kind": "company filing",
+   "published": "2026-09-21",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date. Individuals named in the release are not reproduced."
+  },
+  {
+   "id": "S-RTC-11911",
+   "publisher": "California Legislature",
+   "title": "Revenue and Taxation Code section 11911 (Documentary Transfer Tax Act)",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=11911",
+   "kind": "statute",
+   "published": "added by Stats. 1967, Ch. 1332",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-PROP13",
+   "publisher": "California Legislature",
+   "title": "California Constitution, Article XIII A (Proposition 13), section 2",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%202.&article=XIII%20A",
+   "kind": "constitution",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Subdivisions (a) to (h)(2) read on the access date (first two of three page segments). Subdivision (h)(1) still prints the pre-2021 parent-child exclusion; section 2.1 (Proposition 19) overrides it for transfers from February 16, 2021. See the Flagged for Review page."
+  },
+  {
+   "id": "S-LAC-ASSESSOR",
+   "publisher": "Los Angeles County Office of the Assessor",
+   "title": "Real Property Assessment: an overview of property taxes",
+   "url": "https://assessor.lacounty.gov/homeowners/realproperty",
+   "kind": "official rule",
+   "published": "page last updated 2026-10-29",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-BOE-P19",
+   "publisher": "California State Board of Equalization",
+   "title": "Proposition 19: comparison of former and current law",
+   "url": "https://www.boe.ca.gov/prop19/",
+   "kind": "official rule",
+   "published": "effective 2021-02-16",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Comparison charts read on the access date (first of six page segments)."
+  },
+  {
+   "id": "S-IRS-409",
+   "publisher": "Internal Revenue Service",
+   "title": "Topic no. 409, Capital gains and losses",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "kind": "official rule",
+   "published": "tax years beginning in 2025",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (first of two page segments: rates, thresholds, exceptions)."
+  },
+  {
+   "id": "S-IRS-559",
+   "publisher": "Internal Revenue Service",
+   "title": "Topic no. 559, Net investment income tax",
+   "url": "https://www.irs.gov/taxtopics/tc559",
+   "kind": "official rule",
+   "published": "2025 thresholds",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-IRS-1031",
+   "publisher": "Internal Revenue Service",
+   "title": "Like-kind exchanges: real estate tax tips",
+   "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+   "kind": "official rule",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-FTB",
+   "publisher": "California Franchise Tax Board",
+   "title": "2025 California Tax Rate Schedules",
+   "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
+   "kind": "official rule",
+   "published": "tax year 2025",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date. The 2026 schedules were not yet posted at this address."
+  },
+  {
+   "id": "S-IRS-8824",
+   "publisher": "Internal Revenue Service",
+   "title": "Instructions for Form 8824 (2025), Like-Kind Exchanges",
+   "url": "https://www.irs.gov/instructions/i8824",
+   "kind": "official rule",
+   "published": "2025 instructions",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date: contents and the 'Like-kind property', 'Definition of real property' and 'Deferred exchanges' sections (segments 1 and 3 of 8)."
+  },
+  {
+   "id": "S-IRS-INHERIT",
+   "publisher": "Internal Revenue Service",
+   "title": "Frequently asked questions: is money received from the sale of inherited property considered taxable income?",
+   "url": "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/gifts-inheritances/gifts-inheritances",
+   "kind": "official rule",
+   "published": "as displayed on the access date",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-RTC-17043",
+   "publisher": "California Legislature",
+   "title": "Revenue and Taxation Code section 17043",
+   "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=17043",
+   "kind": "statute",
+   "published": "operative 2005-01-01",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
   }
  ]
 }
