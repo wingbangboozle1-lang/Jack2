@@ -1058,6 +1058,18 @@ session's page would hide the defect rather than disclose it.</p>
 
 def build_workspaces():
     rows = [
+        ["<code>session-7663f9db/</code>",
+         "Session P (branch <code>arena/7663f9db-jack2</code>) &mdash; 2026-11-12 live official-source audit &amp; "
+         "15-page advisory dashboard: 28 primary HTTPS sources verified live 2026-11-12 (Nov 10 U.S. Treasury 4.98% 10Y, "
+         "Realty Income Q3 2026 Form 8-K 6.80% cash yield, JACK Q3 FY26 10-Q &amp; Sep 21 Board/GreenWood 8-K, "
+         "BLS/EDD Sep 2026, CA DOF P2A_County_Total.xlsx exact 2040 series 9.64M, 2026 CA School Dashboard 87.6% LAUSD grad rate, "
+         "Metro D Line May 2026 opening, Port Sep record 1.04M TEUs, Nov 11 CA SOS Prop 3 60.7% / Prop 43 57.4% No, "
+         "live CAL FIRE FHSZ replacing legacy 404), 56-row metric ledger (46 verified, 10 strictly blank private fields), "
+         "26-item Q&amp;A discovery guide, 12-dimension risk register, review-first Suggestions + interactive 5-Path selector, "
+         "client-side confidential contract calculator, normalized per-$1.00 NOI model + 15,000-trial BAU/Black-Swan Monte Carlo "
+         "(seed 20261112), and 15 cross-repo flagged audit items (including 6d8f5d05 Sep-26 BLS misprints &amp; legacy 404 FHSZ links)",
+         "15 pages",
+         "<a href='session-7663f9db/index.html'>open &#8599;</a>"],
         ["<code>session-6596c3f2/</code>",
          "Session O (branch <code>arena/6596c3f2-jack2</code>) &mdash; 2026-11-12 fresh re-verification: "
          "16 official sources read on the access date (Census QuickFacts V2025, BLS metro/CPI Oct 2026, CA EDD, "
