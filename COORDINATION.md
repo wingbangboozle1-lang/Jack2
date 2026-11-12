@@ -1369,3 +1369,35 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session `40933769` — 2026-11-12
+
+Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch cannot be renamed or switched). Before claiming, read the board, inspected the root builder and index, checked open PRs, and confirmed the existing root / Session N4 / Session 6d8f05 builders pass their local checks. No other session claims a dedicated suggestions page. Scope is deliberately additive and does not edit another session's data or workbook.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| 409-01 Dedicated decision-suggestions page, with explicit review/selection gates, source links, and a privacy-safe action sequence | claimed | session-40933769 | `tools/build_site.py` (additive builder + landing link), generated `index.html`, new `suggestions.html`, `COORDINATION.md` |
+| 409-02 Verify build, links, source citations, blank-value discipline, and PII | claimed | session-40933769 | Same scope |
+
+**Privacy:** no private property/owner/tenant identifiers, contact details, or financial facts will be requested or published. Parcel-specific facts remain unknown; actions point to private document review or official parcel tools.
+
+**Coordination note:** this is an additive root-site feature, not a rewrite of shared data, existing recommendations, or other workbooks. The suggestion table will distinguish evidence-backed considerations from proposed actions and will not present model thresholds as parcel-specific facts.
+
+**Initial verification:** `python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py` passed on the base tree; Session N4's model/build/verifier and Session 6d8f05's build/verifier also passed unchanged. These checks prove reproducibility and structural rules, not that every external source URL remains live or that assumptions are appropriate to the private parcel.
+
+### Session 40933769 close-out
+
+| Task | Status | Owner |
+|---|---|---|
+| 409-01 Dedicated suggestions page + prominent landing link | done | session-40933769 |
+| 409-02 Build, link, citation, blank-value and privacy verification | done | session-40933769 |
+
+**Delivered:** `suggestions.html` adds eight proposed actions, five explicitly unselected disposition paths (sell, extend-then-sell, renew/hold, temporary hold, alternate use), decision gates and a clear recommendation to preserve options through parallel, nonbinding sale preparation / extension inquiry while verifying property-specific inputs. Every proposal and path links to one or more official sources in the root source ledger. The source records are dated 2026-11-08; this change introduces no new statistics. The page links readers to the newer Session N4 workbook (2026-11-11) and its review flags. The root landing links directly to the page and the historical root navigation now contains 17 pages.
+
+**Decision limitation:** No defensible asset-specific sell/renew winner can be calculated from the public brief because actual lease terms and notice dates, rent/NOI, parcel, tenant/guarantor, value/offer, tax basis, debt, insurance and owner constraints are not available here. The new page does not fill or request these private values and expressly marks all paths “Not selected.”
+
+**Verification performed:** root model regenerated; root static build and `tools/check_site.py` passed (17 root pages, 209 HTML pages including workbooks/archive, all local links resolve, 24 source records, 89 root metrics with 82 verified and 7 blank/flagged, 24 risk rows). Full existing workflow command sequence was run: Session F4 audit/check and unit tests; root checks; Session L, I, D, M-b, N4, J, K, M-a and 6d8f05 build/verifiers; both test suites passed. The new builder asserts source links on all 8 proposal rows and all 5 decision rows. The repository-wide F4 audit reports 0 current-session PII hits; its one historical regex match is a public school/district location in `research/04-education.md`, not personal/owner/tenant information and not rendered in the website. No private identifiers were added.
+
+**Sources used by suggestion rows:** root ledger `data/sources.json` entries S1 (BLS), S2 (Census), S3 (CA DOF), S6 (LA County Assessor), S7 (LA County transfer tax), S8 (City of LA Measure ULA), S9 (SEC issuer filing), S13 (LA County fire fact sheet), S14 (CDE), S17 (CAL FIRE), S18 (USGS), S19 (FEMA), S20 (CA Department of Insurance), S21 (City of LA economic report), S23 (BEA) and S16 (IRS). Each rendered source link resolves to the HTTPS official publisher URL stored in that ledger. The model/verification checks do not independently confirm the truth of every historical narrative or refresh a source page; access dates remain visible in the ledger.
