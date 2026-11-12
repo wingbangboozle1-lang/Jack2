@@ -45,8 +45,8 @@ idx = f"""<h2>Dashboard - the answer on one screen</h2>
 <table><thead><tr><th>Rank</th><th>Strategy</th><th>Mean</th><th>Floor P05</th><th>Certainty equiv. (CRRA-2)</th></tr></thead><tbody>
 <tr><td>1</td><td>B - Extend 10-15 yr, then sell</td><td>{mc['B']['mean']}x</td><td>{mc['B']['p05']}x</td><td>{mc['B']['ce_crra2']}x</td></tr>
 <tr><td>2</td><td>A - Sell now via 1031</td><td>{mc['A']['mean']}x</td><td>{mc['A']['p05']}x</td><td>{mc['A']['ce_crra2']}x</td></tr>
-<tr><td>3</td><td>D - Renew at expiry &amp; hold</td><td>{mc['D']['mean']}x</td><td>{mc['D']['p05']}x</td><td>{mc['D']['ce_crra2']}x</td></tr>
-<tr><td>4</td><td>E - Sell now, pay tax (illustration only)</td><td>{mc['E']['mean']}x</td><td>{mc['E']['p05']}x</td><td>{mc['E']['ce_crra2']}x</td></tr>
+<tr><td>3</td><td>E - Sell now, pay tax (illustration only)</td><td>{mc['E']['mean']}x</td><td>{mc['E']['p05']}x</td><td>{mc['E']['ce_crra2']}x</td></tr>
+<tr><td>4</td><td>D - Renew at expiry &amp; hold</td><td>{mc['D']['mean']}x</td><td>{mc['D']['p05']}x</td><td>{mc['D']['ce_crra2']}x</td></tr>
 <tr><td>5</td><td>C - Hold to expiry, dark sale</td><td>{mc['C']['mean']}x</td><td>{mc['C']['p05']}x</td><td>{mc['C']['ce_crra2']}x</td></tr></tbody></table>
 <p class="small">PV multiple of annual NOI at 6% discount; assumptions on the Projection page. B beats A by ~0.5x on CE - inside the assumption range, so P1 documents (Q-01/Q-05/Q-10) decide, not the model.</p></div>
 <div class="grid">
@@ -130,7 +130,7 @@ verp = """<h2>Verification - what was checked, and what it does not prove</h2>
 <tr><td>Blank-if-unverified</td><td>Automated assertion in verify.py: unverified rows must have empty value; verified rows must have a resolving source id</td><td>10 blank rows (B01-B10)</td><td>Does not fill gaps - Q-register is the remedy</td></tr>
 <tr><td>PII / privacy scan</td><td>Regex + placeholder scan over all published files (verify.py)</td><td>No name/address/APN/rent/basis published</td><td>Regex cannot catch every identifier - owner must review before sharing wider</td></tr>
 <tr><td>Internal links</td><td>Every href in generated pages resolves to a file in this workspace (verify.py)</td><td>0 broken internal links</td><td>External official links can move; report via Flagged</td></tr>
-<tr><td>Model reproducibility</td><td>python3 scripts/model.py regenerates model_output.json deterministically (fixed seed)</td><td>Ranking B &gt; A &gt; D &gt; E &gt; C on CE</td><td>Model is a framework on assumptions, not market evidence</td></tr></tbody></table>
+<tr><td>Model reproducibility</td><td>python3 scripts/model.py regenerates model_output.json deterministically (fixed seed)</td><td>Ranking B &gt; A &gt; E &gt; D &gt; C on CE</td><td>Model is a framework on assumptions, not market evidence</td></tr></tbody></table>
 <p>Run: <code>python3 session-6596c3f2/scripts/verify.py</code></p>"""
 priv = """<h2>Privacy - top priority, highest urgency</h2>
 <div class="callout bad"><strong>Rule: no personal or parcel information is researched for publication, stored in this repo, or shown on this site - ever.</strong> Git history is permanent; anything committed is effectively public.</div>
