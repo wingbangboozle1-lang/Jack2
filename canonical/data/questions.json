@@ -1,0 +1,603 @@
+{
+ "questions": [
+  {
+   "id": "Q01",
+   "priority": "Critical",
+   "category": "The lease",
+   "question": "On what exact date does the lease expire?",
+   "why": "The model is run for every year from 2030 to 2035 because the date is not known; the sale price as is differs by about a tenth between the earliest and latest year.",
+   "have": "Only the window in the brief: 2030 to 2035.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-013"
+   ],
+   "how": "Read the term clause, every amendment and any commencement-date memorandum. Check the Recorder's index for a recorded memorandum of lease.",
+   "who": "Owner; real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q02",
+   "priority": "Critical",
+   "category": "The lease",
+   "question": "What is the rent today, and does it rise during the term?",
+   "why": "Every money figure on this site is per $100 of yearly rent until the rent is known. Whether rent rises is among the settings that move the answer most.",
+   "have": "The tenant says its leases are generally fixed rent with cost-of-living adjustments.",
+   "have_rows": [
+    "TN-064"
+   ],
+   "missing_rows": [
+    "PL-012",
+    "PL-015"
+   ],
+   "how": "Lease rent schedule and the last twelve months of rent receipts.",
+   "who": "Owner",
+   "status": "Open"
+  },
+  {
+   "id": "Q03",
+   "priority": "Critical",
+   "category": "The lease",
+   "question": "Does the tenant hold renewal options: how many, at what rent, with what notice window?",
+   "why": "Options decide who controls the renewal and when the answer will be known. A missed notice window can settle the matter by default.",
+   "have": "The tenant says it has generally been able to renew its leases at then-current market rates.",
+   "have_rows": [
+    "TN-066"
+   ],
+   "missing_rows": [
+    "PL-014"
+   ],
+   "how": "Lease option clause; put each notice date in a calendar.",
+   "who": "Owner; real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q04",
+   "priority": "Critical",
+   "category": "The lease",
+   "question": "Who is the tenant: the company, a subsidiary or a franchisee, and is there a guaranty?",
+   "why": "The rent is only as good as the party that owes it. 93% of the system is franchised.",
+   "have": "How the system holds its sites: 164 company-owned, 565 company building on leased land, 1,020 leased by the company, 387 held directly by franchisees.",
+   "have_rows": [
+    "TN-008",
+    "TN-060",
+    "TN-061",
+    "TN-062",
+    "TN-063"
+   ],
+   "missing_rows": [
+    "PL-010",
+    "PL-018"
+   ],
+   "how": "Tenant name on the lease and any assignment; guaranty document; tenant estoppel certificate.",
+   "who": "Owner; real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q05",
+   "priority": "Critical",
+   "category": "The lease",
+   "question": "Is the lease fully net: who pays taxes, insurance, roof, structure and parking lot?",
+   "why": "If roof and structure are the owner's, the income is not as net as assumed and a buyer will pay less.",
+   "have": "The tenant describes its leases as fixed rent plus real estate taxes, insurance and other expenses.",
+   "have_rows": [
+    "TN-064"
+   ],
+   "missing_rows": [
+    "PL-017",
+    "PL-004"
+   ],
+   "how": "Lease repair, maintenance, tax and insurance clauses; latest tax bill.",
+   "who": "Owner; real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q06",
+   "priority": "Critical",
+   "category": "The lease",
+   "question": "What happens under the lease after a fire, earthquake or condemnation?",
+   "why": "This clause decides who bears a disaster: whether the tenant must rebuild, whether rent stops, and whether either side can walk away.",
+   "have": "The law lets a property be rebuilt after a declared disaster without a new assessed value, and lets the assessed value move to a replacement property in the county.",
+   "have_rows": [
+    "TX-027",
+    "TX-028",
+    "TX-029"
+   ],
+   "missing_rows": [
+    "PL-023",
+    "PL-024"
+   ],
+   "how": "Lease casualty, condemnation and insurance clauses, reviewed by a real-estate attorney.",
+   "who": "Real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q07",
+   "priority": "High",
+   "category": "The lease",
+   "question": "Can the tenant assign, sublet or stop operating, and does it have a right of first refusal or an option to buy?",
+   "why": "A right of first refusal changes how a sale must be run; a right to go dark changes what an extension is worth.",
+   "have": "Nothing.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-019",
+    "PL-020"
+   ],
+   "how": "Lease assignment, operating and purchase-right clauses; title report for recorded rights.",
+   "who": "Real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q08",
+   "priority": "High",
+   "category": "The lease",
+   "question": "Is it a lease of the building or of the land only?",
+   "why": "In a ground lease the building may revert to the owner at expiry, which changes the value of the site without the tenant.",
+   "have": "The company owns 565 buildings on land it leases, so ground leases are common in its system.",
+   "have_rows": [
+    "TN-061"
+   ],
+   "missing_rows": [
+    "PL-011"
+   ],
+   "how": "Premises clause and the clause on improvements at expiry.",
+   "who": "Owner; real-estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q09",
+   "priority": "Critical",
+   "category": "The tenant",
+   "question": "Will the tenant sign an early extension if asked now?",
+   "why": "In the model the answer splits the decision. After a refusal, selling beats keeping on both the typical and the bad outcome; after an agreement, keeping and selling are close on the typical outcome and differ on the bad one.",
+   "have": "The tenant is closing older, weaker restaurants and has an interim chief executive.",
+   "have_rows": [
+    "TN-080",
+    "TN-081",
+    "TN-090"
+   ],
+   "missing_rows": [],
+   "how": "Ask the tenant's real-estate department in writing for a proposal: term, rent, increases, options. Asking commits the owner to nothing.",
+   "who": "Owner, with a net-lease broker or attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q10",
+   "priority": "Critical",
+   "category": "The tenant",
+   "question": "How is this restaurant trading: yearly sales and rent as a share of sales?",
+   "why": "A restaurant that trades well is renewed even when the system shrinks; one that trades badly is a closure candidate.",
+   "have": "System-wide same-store sales: -1.1% in the latest quarter, -4.2% in fiscal 2025.",
+   "have_rows": [
+    "TN-020",
+    "TN-023"
+   ],
+   "missing_rows": [
+    "PL-021"
+   ],
+   "how": "Ask the tenant for unit sales; check whether the lease entitles the owner to sales reports.",
+   "who": "Owner",
+   "status": "Open"
+  },
+  {
+   "id": "Q11",
+   "priority": "High",
+   "category": "The tenant",
+   "question": "Is this restaurant on a closure list or due a remodel, and when does its franchise agreement end?",
+   "why": "The company said the remaining closures follow franchise agreement termination dates, and that most targeted restaurants have been in the system for over three decades.",
+   "have": "Programme size and timing: approximately 150-200 restaurants; approximately 80-120 by 12/31/2025.",
+   "have_rows": [
+    "TN-080",
+    "TN-081",
+    "TN-082"
+   ],
+   "missing_rows": [
+    "PL-025",
+    "PL-026",
+    "PL-006"
+   ],
+   "how": "Ask the tenant directly; check city building records for recent remodel permits.",
+   "who": "Owner",
+   "status": "Open"
+  },
+  {
+   "id": "Q12",
+   "priority": "High",
+   "category": "The tenant",
+   "question": "How strong is the tenant's credit today?",
+   "why": "A leveraged tenant can renew and still fail later.",
+   "have": "Answered from filings: stockholders' deficit, debt, earnings, cash flow and refinancing are on the Tenant page. The annual report for the fiscal year ended in late September 2026 was not yet filed on the access date.",
+   "have_rows": [
+    "TN-040",
+    "TN-043",
+    "TN-034",
+    "TN-048",
+    "TN-045",
+    "TN-072"
+   ],
+   "missing_rows": [],
+   "how": "Re-read when the next Form 10-K is filed.",
+   "who": "Analyst",
+   "status": "Partly answered"
+  },
+  {
+   "id": "Q13",
+   "priority": "Critical",
+   "category": "Value and market",
+   "question": "What would the property sell for today as it stands, and with an extension signed?",
+   "why": "The gap between the two is the value of asking for an extension before selling; in the model it is 2% to 13% depending on the expiry year.",
+   "have": "Only national averages for long leases: purchase yields of 6.5% to 7.3%.",
+   "have_rows": [
+    "CM-020",
+    "CM-021",
+    "CM-040",
+    "CM-042"
+   ],
+   "missing_rows": [
+    "PL-007",
+    "CM-060"
+   ],
+   "how": "Two broker opinions of value from net-lease brokers with closed Los Angeles restaurant sales, each stating its comparables; or a certified appraisal.",
+   "who": "Net-lease broker; appraiser",
+   "status": "Open"
+  },
+  {
+   "id": "Q14",
+   "priority": "High",
+   "category": "Value and market",
+   "question": "What is the land worth if the tenant leaves?",
+   "why": "Land value is the floor under every hold strategy. In a national portfolio empty buildings sold for 63% of the leased price per square foot; scarce Los Angeles land may hold up better or the building may be a liability.",
+   "have": "A national ratio only.",
+   "have_rows": [
+    "CM-034"
+   ],
+   "missing_rows": [
+    "PL-009",
+    "PL-005",
+    "PL-006"
+   ],
+   "how": "Ask the appraiser for a land-residual value; look up zoning and lot size privately.",
+   "who": "Appraiser",
+   "status": "Open"
+  },
+  {
+   "id": "Q15",
+   "priority": "High",
+   "category": "Value and market",
+   "question": "Is the likely price near $5,400,000?",
+   "why": "Above that price the city tax is 4% of the whole price, an extra $216,000 at the threshold.",
+   "have": "The rule and the threshold are verified.",
+   "have_rows": [
+    "TX-003",
+    "TX-019",
+    "TX-017"
+   ],
+   "missing_rows": [
+    "PL-007"
+   ],
+   "how": "Compare the broker opinions with the threshold before deciding how to market.",
+   "who": "Broker; transaction attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q16",
+   "priority": "Critical",
+   "category": "The owner",
+   "question": "What is the owner's tax basis, and how much depreciation has been taken?",
+   "why": "It sets the tax on a cash sale, which can take a large share of the price, and so decides between a cash sale and an exchange.",
+   "have": "The statutory rates: 20% plus 3.8% federal, 25% on past depreciation, up to 13.30% in California.",
+   "have_rows": [
+    "TX-040",
+    "TX-043",
+    "TX-042",
+    "TX-060"
+   ],
+   "missing_rows": [
+    "PL-040",
+    "PL-044"
+   ],
+   "how": "Tax returns and depreciation schedule, reviewed with a tax adviser. Keep the figures out of this repository.",
+   "who": "Tax adviser",
+   "status": "Open"
+  },
+  {
+   "id": "Q17",
+   "priority": "High",
+   "category": "The owner",
+   "question": "Is there a loan on the property, and what would it cost to repay early?",
+   "why": "A prepayment charge or a due-on-sale clause changes the proceeds and the timing.",
+   "have": "Nothing.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-041"
+   ],
+   "how": "Loan statement and note.",
+   "who": "Owner",
+   "status": "Open"
+  },
+  {
+   "id": "Q18",
+   "priority": "Critical",
+   "category": "The owner",
+   "question": "What does the owner need from this asset: income, a time horizon, and how much loss is tolerable?",
+   "why": "'Manageable risk' is the owner's to define. The model's ranking changes with the weight put on a bad outcome.",
+   "have": "Nothing; the base case weighs the typical and the bad outcome equally.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-042"
+   ],
+   "how": "A private conversation with the owner's financial adviser; record only the resulting constraints.",
+   "who": "Owner; financial adviser",
+   "status": "Open"
+  },
+  {
+   "id": "Q19",
+   "priority": "High",
+   "category": "The owner",
+   "question": "What is the estate plan?",
+   "why": "Property held until death generally takes a new basis at market value, while a sale in life is taxed; heirs' property tax is reset either way.",
+   "have": "The rules are verified.",
+   "have_rows": [
+    "TX-046",
+    "TX-024",
+    "TX-025"
+   ],
+   "missing_rows": [
+    "PL-043"
+   ],
+   "how": "Owner's estate attorney.",
+   "who": "Estate attorney",
+   "status": "Open"
+  },
+  {
+   "id": "Q20",
+   "priority": "Medium",
+   "category": "The owner",
+   "question": "How is title held, and who must agree to a sale or an extension?",
+   "why": "A trust or co-owners can add consents and time.",
+   "have": "Nothing.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-002"
+   ],
+   "how": "Vesting deed or preliminary title report.",
+   "who": "Owner; title company",
+   "status": "Open"
+  },
+  {
+   "id": "Q21",
+   "priority": "High",
+   "category": "The owner",
+   "question": "If the property is sold, would the owner exchange into another property, and of what kind?",
+   "why": "An exchange must name a replacement within 45 days and close within 180 days; the replacement's tenant and location decide whether risk actually falls.",
+   "have": "The exchange rules are verified.",
+   "have_rows": [
+    "TX-050",
+    "TX-054",
+    "TX-055",
+    "TX-058"
+   ],
+   "missing_rows": [],
+   "how": "Agree criteria (tenant strength, lease length, region) and shortlist candidates before listing.",
+   "who": "Owner; exchange intermediary; broker",
+   "status": "Open"
+  },
+  {
+   "id": "Q22",
+   "priority": "Medium",
+   "category": "The area",
+   "question": "Is the customer base around the property growing or shrinking?",
+   "why": "Fewer residents and households mean fewer visits over a ten-year renewal.",
+   "have": "Answered for city and county: residents are down since 2020 and the State projects a further small decline to 2035.",
+   "have_rows": [
+    "PP-001a",
+    "PP-002a",
+    "PP-002b",
+    "PJ-070",
+    "PJ-071"
+   ],
+   "missing_rows": [
+    "PL-050"
+   ],
+   "how": "With the address in hand privately, pull census-tract figures for one and three miles.",
+   "who": "Analyst (private build)",
+   "status": "Partly answered"
+  },
+  {
+   "id": "Q23",
+   "priority": "Medium",
+   "category": "The area",
+   "question": "Are local jobs and incomes supporting restaurant spending?",
+   "why": "Fast food depends on nearby workers and households with modest incomes.",
+   "have": "Answered for metro and county: unemployment 4.5%, payroll jobs up 0.5% over the year, restaurant jobs up 2.1%, median household income $81,939 in the city.",
+   "have_rows": [
+    "EC-022",
+    "EC-031",
+    "EC-064",
+    "PP-030a"
+   ],
+   "missing_rows": [
+    "EC-082"
+   ],
+   "how": "County output figure from BEA's interactive tables.",
+   "who": "Analyst",
+   "status": "Partly answered"
+  },
+  {
+   "id": "Q24",
+   "priority": "Medium",
+   "category": "The area",
+   "question": "What is happening to schools and families nearby?",
+   "why": "School enrollment is the clearest official signal of families leaving.",
+   "have": "Answered for county and district: public enrollment fell 18.4% in ten years and is projected to fall a further 19.4% by 2035-36; Los Angeles Unified enrolls 497,105.",
+   "have_rows": [
+    "PP-069",
+    "PJ-075",
+    "PP-066"
+   ],
+   "missing_rows": [
+    "PP-068"
+   ],
+   "how": "With the address, list nearby schools and their enrollment trend from the State school directory.",
+   "who": "Analyst (private build)",
+   "status": "Partly answered"
+  },
+  {
+   "id": "Q25",
+   "priority": "Medium",
+   "category": "The area",
+   "question": "Is anything planned near the site: transit, public works, rezoning?",
+   "why": "Such changes can raise land value or restrict drive-through use.",
+   "have": "Nothing parcel-specific.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-051",
+    "PL-005"
+   ],
+   "how": "City Planning zoning search and public counter.",
+   "who": "Owner; land-use consultant",
+   "status": "Open"
+  },
+  {
+   "id": "Q26",
+   "priority": "Medium",
+   "category": "The area",
+   "question": "How do wage rules bear on this tenant?",
+   "why": "Labor is the cost the tenant controls least.",
+   "have": "Answered: $20.00 an hour for covered fast-food employers, above the city minimum of $18.42; a state council can raise it.",
+   "have_rows": [
+    "EC-093",
+    "EC-097",
+    "EC-096",
+    "EC-098"
+   ],
+   "missing_rows": [],
+   "how": "Watch for council decisions.",
+   "who": "Analyst",
+   "status": "Answered"
+  },
+  {
+   "id": "Q27",
+   "priority": "Critical",
+   "category": "Hazards and insurance",
+   "question": "Is the parcel in a mapped fire, flood, fault, liquefaction or landslide zone?",
+   "why": "Regional odds say little about one site. The zones are free to look up but need the address.",
+   "have": "Regional record: 60% chance of a magnitude 6.7 or larger earthquake in 30 years from 2014; 16,264 structures destroyed in the January 2025 fires.",
+   "have_rows": [
+    "HZ-001",
+    "HZ-031"
+   ],
+   "missing_rows": [
+    "PL-030",
+    "PL-031",
+    "PL-032"
+   ],
+   "how": "Enter the address privately in the three official map tools linked in the rows.",
+   "who": "Owner",
+   "status": "Open"
+  },
+  {
+   "id": "Q28",
+   "priority": "High",
+   "category": "Hazards and insurance",
+   "question": "What is the building made of, when was it built, and is it under a retrofit order?",
+   "why": "Structure decides damage. The city requires retrofits of two older building types.",
+   "have": "The ordinance is verified.",
+   "have_rows": [
+    "HZ-013"
+   ],
+   "missing_rows": [
+    "PL-033",
+    "PL-006"
+   ],
+   "how": "City building records; an engineer's walk-through if the building predates 1978.",
+   "who": "Structural engineer",
+   "status": "Open"
+  },
+  {
+   "id": "Q29",
+   "priority": "Critical",
+   "category": "Hazards and insurance",
+   "question": "What insurance is in force, does it cover earthquake, and who pays?",
+   "why": "Earthquake damage is commonly excluded from standard property cover; the lease and the policy together decide the owner's loss.",
+   "have": "The insurance market is under strain: a $1 billion assessment was approved after the 2025 fires.",
+   "have_rows": [
+    "HZ-060",
+    "HZ-061"
+   ],
+   "missing_rows": [
+    "PL-034",
+    "PL-024"
+   ],
+   "how": "Current policies and certificates from tenant and owner; a quote for earthquake cover.",
+   "who": "Insurance broker",
+   "status": "Open"
+  },
+  {
+   "id": "Q30",
+   "priority": "Medium",
+   "category": "Hazards and insurance",
+   "question": "What is the federal risk index rating for the county?",
+   "why": "A second official view of hazard.",
+   "have": "Nothing: the official address returned an error on the access date.",
+   "have_rows": [],
+   "missing_rows": [
+    "HZ-063"
+   ],
+   "how": "Re-open the National Risk Index county report.",
+   "who": "Analyst",
+   "status": "Open"
+  },
+  {
+   "id": "Q31",
+   "priority": "High",
+   "category": "Tax and law",
+   "question": "Will the city transfer tax or the state tax rates change before a sale?",
+   "why": "A 4% tax on the whole price is larger than a typical brokerage fee.",
+   "have": "Verified: thresholds rose on July 1, 2026; a measure to make higher state rates permanent leads 60.7% to 39.3% in the unofficial count; results become official by December 11, 2026.",
+   "have_rows": [
+    "TX-003",
+    "TX-031",
+    "TX-071",
+    "TX-075"
+   ],
+   "missing_rows": [
+    "TX-076"
+   ],
+   "how": "Re-check the Secretary of State's certified results and ask the transaction attorney about pending challenges to the city tax.",
+   "who": "Transaction attorney",
+   "status": "Partly answered"
+  },
+  {
+   "id": "Q32",
+   "priority": "High",
+   "category": "Tax and law",
+   "question": "Is there an environmental problem on or near the site?",
+   "why": "Cleanup liability can outlast a sale.",
+   "have": "Nothing: the address is withheld.",
+   "have_rows": [],
+   "missing_rows": [
+    "PL-008"
+   ],
+   "how": "Search the State's cleanup database privately; order a Phase I assessment.",
+   "who": "Environmental consultant",
+   "status": "Open"
+  },
+  {
+   "id": "Q33",
+   "priority": "Medium",
+   "category": "Value and market",
+   "question": "How much extra yield does a buyer demand for a short lease?",
+   "why": "It is a model setting that no official source measures.",
+   "have": "Only that filed purchase yields are for leases of about 19.6 years.",
+   "have_rows": [
+    "CM-022"
+   ],
+   "missing_rows": [
+    "CM-060"
+   ],
+   "how": "Ask each broker to price the lease as is and as extended, in writing.",
+   "who": "Net-lease broker",
+   "status": "Open"
+  }
+ ]
+}

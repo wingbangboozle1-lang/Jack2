@@ -1,0 +1,185 @@
+{
+ "note": "Proposals for improving this site. None has been implemented. Each is for a reviewer to accept, reject or change.",
+ "suggestions": [
+  {
+   "id": "SG-01",
+   "area": "Decision tools",
+   "title": "A private calculator that runs in the reader's browser",
+   "what": "Let the owner type the real rent, expiry year, options and tax basis into a form on the Projections page and see the six strategies re-ranked. Nothing would leave the browser and nothing would be saved.",
+   "benefit": "Turns the per-$100 results into the owner's own dollars without putting private figures in a public repository.",
+   "cost": "Medium. The model's rules would be rewritten in JavaScript and tested against the Python model on every build.",
+   "needs": "A decision that client-side entry of private figures is acceptable; a reviewer for the duplicated logic.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-02",
+   "area": "Decision tools",
+   "title": "A private build with the real figures",
+   "what": "Keep a second, unpublished copy of the dataset in which the blank property and owner rows are filled, and build the same site from it for the owner only.",
+   "benefit": "Every table would show actual dollars, dates and the after-tax comparison.",
+   "cost": "Low to medium. Needs a private repository or an offline build; the public site would stay as it is.",
+   "needs": "Owner's consent; a place to keep the private copy.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-03",
+   "area": "Evidence",
+   "title": "Scheduled re-verification of every source",
+   "what": "Re-read every source on a schedule and open an issue when the quoted text no longer appears on the page.",
+   "benefit": "Stops the site going stale silently; the Treasury yield, tenant filings and wage rules all change.",
+   "cost": "Medium. The build environment used here cannot reach government sites, so this needs a runner that can.",
+   "needs": "A runner with internet access; agreement on the schedule.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-04",
+   "area": "Evidence",
+   "title": "Neighbourhood-level data around the parcel",
+   "what": "Add census-tract residents, households and income within one and three miles, nearby school enrollment and the parcel's hazard zones.",
+   "benefit": "Replaces city and county averages with the area that actually feeds the restaurant.",
+   "cost": "Low once the address is available, but it can only be published in a private build because it would identify the property.",
+   "needs": "Suggestion SG-02.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-05",
+   "area": "Evidence",
+   "title": "Snapshots of each source page",
+   "what": "Store a dated copy or a hash of each page read, so a later reviewer can prove what it said on the access date.",
+   "benefit": "Makes the verification auditable after pages change.",
+   "cost": "Medium. Some publishers restrict copying; storage grows.",
+   "needs": "A decision on which pages may be stored.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-06",
+   "area": "Evidence",
+   "title": "A second, independent check of every verified row",
+   "what": "Have a second reviewer open each source link and confirm the value, recording a pseudonymous initial and date per row.",
+   "benefit": "Four-eyes control on every published value.",
+   "cost": "Medium: a few hours of reviewer time.",
+   "needs": "A reviewer.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-07",
+   "area": "Presentation",
+   "title": "Small charts beside the main tables",
+   "what": "Add simple line charts for residents, school enrollment, the tenant's restaurant count and the range of model outcomes.",
+   "benefit": "Trends are easier to see than to read.",
+   "cost": "Low. The brief asks for tables, so charts would be an addition, not a replacement.",
+   "needs": "Agreement that charts are wanted.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-08",
+   "area": "Presentation",
+   "title": "A printable two-page brief",
+   "what": "A print layout of the executive summary and the decision rule.",
+   "benefit": "Something to hand to an attorney, broker or adviser.",
+   "cost": "Low.",
+   "needs": "None.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-09",
+   "area": "Presentation",
+   "title": "Exportable checklists",
+   "what": "Download the questions register as a spreadsheet, filtered by who must answer.",
+   "benefit": "Each adviser gets only their own list.",
+   "cost": "Low.",
+   "needs": "None.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-10",
+   "area": "Presentation",
+   "title": "Move the earlier workbooks under one archive path",
+   "what": "Relocate the 22 earlier workbooks from the top level of the site into an archive folder and leave redirects behind.",
+   "benefit": "A tidier address structure; less chance a reader lands in an old workbook by mistake.",
+   "cost": "Medium, and it touches other sessions' folders and links, which is why it has not been done.",
+   "needs": "Agreement from whoever owns those workbooks; redirect testing.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-11",
+   "area": "Model",
+   "title": "Tie tenant failure to regional shocks",
+   "what": "Let a regional disaster raise the chance of tenant failure for a period, instead of treating them as independent.",
+   "benefit": "A more realistic bad case for holding.",
+   "cost": "Low to medium; needs a setting no official source measures.",
+   "needs": "Reviewer judgement on the setting.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-12",
+   "area": "Model",
+   "title": "An after-tax module",
+   "what": "Compute tax on a sale from basis, depreciation and bracket, including the state and city taxes already verified here.",
+   "benefit": "Replaces the single 'tax drag' setting with the owner's real position.",
+   "cost": "Medium; only meaningful with private inputs.",
+   "needs": "Suggestions SG-01 or SG-02; a tax adviser's review.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-13",
+   "area": "Model",
+   "title": "Price the short-lease discount from real quotes",
+   "what": "Replace the assumed extra yield for a short lease with the figures brokers give for this property.",
+   "benefit": "Removes one of the most influential assumptions.",
+   "cost": "Low once broker opinions exist.",
+   "needs": "Question Q13 answered.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-14",
+   "area": "Governance",
+   "title": "A decision log",
+   "what": "A page recording each decision taken, the date, the evidence relied on and who agreed.",
+   "benefit": "A clear record for the owner and any successor.",
+   "cost": "Low.",
+   "needs": "Owner's agreement on what may be recorded publicly.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-15",
+   "area": "Governance",
+   "title": "Key-date reminders",
+   "what": "A table of dates with reminders: lease notice windows, ballot certification, the tenant's next annual report, the July 1 transfer-tax reset.",
+   "benefit": "Guards against a decision by default.",
+   "cost": "Low; lease dates would live only in a private build.",
+   "needs": "Question Q03 answered.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-16",
+   "area": "Governance",
+   "title": "Protect the main branch",
+   "what": "Require the verification check to pass before a merge, name an owner for the root pages, and allow one integration session at a time.",
+   "benefit": "Parallel sessions twice broke the build by hand-editing generated pages, and many merged in the same hour.",
+   "cost": "Low; a repository setting.",
+   "needs": "Repository owner's decision.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-17",
+   "area": "Privacy",
+   "title": "Decide whether the site should be public",
+   "what": "The repository and the site can be read by anyone. Options: keep as is, ask search engines not to index it, or make the repository private.",
+   "benefit": "The analysis reveals that an owner is weighing a sale, even though nobody is named.",
+   "cost": "Low to change; making the repository private may end free public hosting.",
+   "needs": "Owner's decision.",
+   "status": "For review - not implemented"
+  },
+  {
+   "id": "SG-18",
+   "area": "Privacy",
+   "title": "Remove a personal e-mail address from the repository's history",
+   "what": "Early commits in the repository's history carry a personal e-mail address in their author field (the count is on the Flagged for Review page). Rewriting history would remove it.",
+   "benefit": "Closes the one privacy item this review found. The address does not appear on the site.",
+   "cost": "High and irreversible: every commit identifier changes and every open branch and pull request must be rebuilt.",
+   "needs": "Repository owner's explicit decision.",
+   "status": "For review - not implemented"
+  }
+ ]
+}

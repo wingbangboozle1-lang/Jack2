@@ -1,0 +1,870 @@
+{
+ "keys": [
+  "sell_cash",
+  "sell_exchange",
+  "extend_then_sell",
+  "test_then_decide",
+  "extend_and_hold",
+  "do_nothing"
+ ],
+ "levels": {
+  "0": "none",
+  "1": "low",
+  "2": "medium",
+  "3": "high"
+ },
+ "risks": [
+  {
+   "id": "R01",
+   "kind": "Business as usual",
+   "title": "The tenant does not renew at expiry",
+   "what": "The lease ends between 2030 and 2035 and the tenant leaves. In a large national portfolio about three leases in four were renewed by the same tenant; this tenant's system is shrinking under a closure programme aimed at older, weaker restaurants.",
+   "evidence": [
+    "CM-054",
+    "CM-055",
+    "TN-080",
+    "TN-081",
+    "TN-082",
+    "TN-085",
+    "PL-014"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Ask for an early extension now; read the option clause; if the tenant refuses, sell while term remains.",
+   "watch": "The tenant's quarterly restaurant counts and closure guidance (SEC filings)."
+  },
+  {
+   "id": "R02",
+   "kind": "Business as usual",
+   "title": "Each year of lease term used up lowers what a buyer will pay",
+   "what": "Buyers of net-leased property pay most for long leases; filed purchase yields are for leases of about 19.6 years. A lease with four to nine years left is a different product, and it shortens every year.",
+   "evidence": [
+    "CM-022",
+    "CM-020",
+    "CM-060",
+    "PL-013"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Extend before selling; if holding, decide the exit date deliberately rather than by default.",
+   "watch": "Broker opinions of value for the lease as is and as extended."
+  },
+  {
+   "id": "R03",
+   "kind": "Business as usual",
+   "title": "The tenant's finances weaken",
+   "what": "The company reports a stockholders' deficit of $(901,286) thousand, long-term debt of $1,428,667 thousand, cash from operations of 56,553 against 118,147 a year earlier ($ thousand), and an anticipated repayment date of February 2027 on older notes. It also reports positive earnings and completed a $500 million refinancing.",
+   "evidence": [
+    "TN-040",
+    "TN-043",
+    "TN-048",
+    "TN-046",
+    "TN-045",
+    "TN-034",
+    "TN-052"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Confirm who the tenant entity is and whether a guaranty exists; keep the sale option open while the tenant is current.",
+   "watch": "Each Form 10-Q and 10-K: debt, cash from operations, refinancing dates."
+  },
+  {
+   "id": "R04",
+   "kind": "Business as usual",
+   "title": "Sales at the tenant's restaurants keep falling",
+   "what": "System same-store sales fell 1.1% in the latest quarter after falling 7.1% a year earlier and 4.2% in fiscal 2025; the company guides to a further low-single-digit decline. Sales at this restaurant are unknown.",
+   "evidence": [
+    "TN-020",
+    "TN-022",
+    "TN-023",
+    "TN-026",
+    "TN-025",
+    "PL-021"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Obtain this restaurant's sales and compare rent to sales; a healthy unit renews even when the system shrinks.",
+   "watch": "Quarterly same-store sales (SEC filings); unit sales reports if the lease provides them."
+  },
+  {
+   "id": "R05",
+   "kind": "Business as usual",
+   "title": "The tenant is a franchisee, not the company",
+   "what": "93% of the system is franchised and 387 sites are leased or owned directly by franchisees. If the lease is with an operator and has no corporate guaranty, the rent depends on that operator's finances, which are not public.",
+   "evidence": [
+    "TN-008",
+    "TN-063",
+    "TN-062",
+    "PL-010",
+    "PL-018"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Read the tenant name and guaranty; request the operator's financial statements if the lease allows.",
+   "watch": "Lease, guaranty, estoppel certificate."
+  },
+  {
+   "id": "R06",
+   "kind": "Business as usual",
+   "title": "Labor-cost rules squeeze restaurant margins",
+   "what": "Covered fast-food employers in California must pay at least $20.00 an hour, a council can raise it, and the city minimum rises each July with prices. Restaurant-level margin at company-run restaurants was 17.6%.",
+   "evidence": [
+    "EC-093",
+    "EC-096",
+    "EC-097",
+    "EC-092",
+    "TN-031"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "None available to a landlord; favours a rent that is modest relative to sales.",
+   "watch": "State Department of Industrial Relations and City Office of Wage Standards notices."
+  },
+  {
+   "id": "R07",
+   "kind": "Business as usual",
+   "title": "Interest rates stay high or rise, so buyers pay less",
+   "what": "The 10-year Treasury yield is 4.98% and the Federal Reserve raised its range in September 2026, against an official forecast that expected cuts. Higher yields on safe assets push up the yield buyers demand from property.",
+   "evidence": [
+    "CM-001",
+    "CM-006",
+    "CM-010",
+    "CM-011",
+    "PJ-062",
+    "PJ-065",
+    "CM-028"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 2,
+    "extend_then_sell": 2,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Do not rely on yields falling; an extension protects price more reliably than waiting for rates.",
+   "watch": "Treasury daily yield curve; Federal Reserve target range."
+  },
+  {
+   "id": "R08",
+   "kind": "Business as usual",
+   "title": "Fewer residents, and far fewer schoolchildren, in the county",
+   "what": "The State projects 1.3% fewer county residents by 2030 and 1.5% fewer by 2035, and 19.4% fewer public school pupils by 2035-36. The Census Bureau already records a 3.2% fall since 2020.",
+   "evidence": [
+    "PJ-070",
+    "PJ-071",
+    "PJ-075",
+    "PP-002b",
+    "PP-069",
+    "PJ-045"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Check neighbourhood-level figures once the address is available privately; county averages hide local differences.",
+   "watch": "State Department of Finance projection updates; Census Bureau annual estimates."
+  },
+  {
+   "id": "R09",
+   "kind": "Business as usual",
+   "title": "Weak job growth and a shrinking film and information sector",
+   "what": "Metro payroll jobs grew 0.5% over the year; information-sector jobs fell 5.7% and have declined in 20 of the last 22 months in the county. Restaurant jobs grew 2.1%.",
+   "evidence": [
+    "EC-031",
+    "EC-034",
+    "EC-069",
+    "EC-070",
+    "EC-064",
+    "EC-038"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "None for a single property; a reason to prefer a tenant-backed extension over a bet on local growth.",
+   "watch": "BLS area summary and EDD county release, monthly."
+  },
+  {
+   "id": "R10",
+   "kind": "Business as usual",
+   "title": "Prices, especially energy, rise faster than customers' pay",
+   "what": "Consumer prices rose 3.7% over the year and energy 20.3% in the metro area; wages and salaries rose 3.9%.",
+   "evidence": [
+    "EC-040",
+    "EC-042",
+    "EC-041",
+    "EC-043"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "None for a single property.",
+   "watch": "BLS consumer price index for the Los Angeles area."
+  },
+  {
+   "id": "R11",
+   "kind": "Business as usual",
+   "title": "A sale price just above $5,400,000 triggers a 4% city tax on the whole price",
+   "what": "Measure ULA applies to the total transaction value once the threshold is passed. Crossing it by one dollar adds $216,000 of tax. Whether this property is near the threshold is unknown.",
+   "evidence": [
+    "TX-003",
+    "TX-019",
+    "TX-017",
+    "TX-016",
+    "PL-007"
+   ],
+   "exposure": {
+    "sell_cash": 2,
+    "sell_exchange": 2,
+    "extend_then_sell": 3,
+    "test_then_decide": 1,
+    "extend_and_hold": 0,
+    "do_nothing": 1
+   },
+   "mitigation": "Know the likely price before marketing; price and structure with the threshold in mind, with legal advice.",
+   "watch": "City Office of Finance page for the yearly threshold change (each July 1)."
+  },
+  {
+   "id": "R12",
+   "kind": "Business as usual",
+   "title": "Income tax takes a large share of a cash sale",
+   "what": "Top statutory rates on a long-term gain are 23.8% federal (20% plus 3.8%) and 13.30% California, with 25% on gain from past depreciation. The owner's basis and bracket are unknown.",
+   "evidence": [
+    "TX-040",
+    "TX-042",
+    "TX-043",
+    "TX-049",
+    "TX-047",
+    "TX-059",
+    "TX-060",
+    "TX-071",
+    "PL-040"
+   ],
+   "exposure": {
+    "sell_cash": 3,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 1,
+    "extend_and_hold": 0,
+    "do_nothing": 0
+   },
+   "mitigation": "Model the sale after tax with the owner's adviser before choosing between a cash sale and an exchange.",
+   "watch": "IRS and Franchise Tax Board rate pages; certification of Proposition 3."
+  },
+  {
+   "id": "R13",
+   "kind": "Business as usual",
+   "title": "A tax-deferred exchange fails on its deadlines",
+   "what": "Replacement property must be named within 45 days and received within 180 days; if not, the gain may be taxable in the year of sale. Partnership interests and trust certificates never qualify.",
+   "evidence": [
+    "TX-054",
+    "TX-055",
+    "TX-056",
+    "TX-057",
+    "TX-058",
+    "TX-051"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 3,
+    "extend_then_sell": 3,
+    "test_then_decide": 2,
+    "extend_and_hold": 0,
+    "do_nothing": 0
+   },
+   "mitigation": "Line up candidate replacement properties and a qualified intermediary before closing; allow for a fallback.",
+   "watch": "IRS Form 8824 instructions."
+  },
+  {
+   "id": "R14",
+   "kind": "Business as usual",
+   "title": "Sale proceeds are reinvested at a worse return, or in a weaker replacement",
+   "what": "A cash seller depends on what safe yields are when the money is invested; an exchanger depends on the replacement tenant and price. Large buyers' purchase yields ranged from 6.5% to 7.3% in 2026.",
+   "evidence": [
+    "CM-001",
+    "CM-040",
+    "CM-041",
+    "CM-020",
+    "CM-021"
+   ],
+   "exposure": {
+    "sell_cash": 2,
+    "sell_exchange": 2,
+    "extend_then_sell": 2,
+    "test_then_decide": 1,
+    "extend_and_hold": 0,
+    "do_nothing": 0
+   },
+   "mitigation": "Decide the reinvestment before selling, not after.",
+   "watch": "Treasury yields; net-lease buyers' quarterly filings."
+  },
+  {
+   "id": "R15",
+   "kind": "Business as usual",
+   "title": "An empty building costs money and sells for much less",
+   "what": "When a net lease ends, taxes, insurance and upkeep return to the owner. In one national portfolio vacant buildings sold for about 63% of the price per square foot of leased ones, and 181 expirations ended in a vacant sale against 66 re-lettings to a new tenant.",
+   "evidence": [
+    "CM-032",
+    "CM-033",
+    "CM-034",
+    "CM-052",
+    "CM-053",
+    "TX-021",
+    "PL-009"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Know the land value; start re-letting or sale preparation at least two years before expiry.",
+   "watch": "Net-lease owners' quarterly filings (vacant dispositions)."
+  },
+  {
+   "id": "R16",
+   "kind": "Business as usual",
+   "title": "The lease is less 'net' than assumed",
+   "what": "The tenant describes its leases as fixed rent plus real estate taxes, insurance and other expenses, but individual leases differ; roof, structure or parking lot may be the owner's.",
+   "evidence": [
+    "TN-064",
+    "PL-017",
+    "PL-004"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Read the repair, tax and insurance clauses; budget for any owner obligations.",
+   "watch": "The lease itself."
+  },
+  {
+   "id": "R17",
+   "kind": "Business as usual",
+   "title": "Property tax is reset to market value on a sale or an inheritance",
+   "what": "Assessed value may rise no more than 2% a year until ownership changes. A buyer is reassessed from the recording date and heirs from the date of death; the exclusion for passing other property to children was removed in 2021.",
+   "evidence": [
+    "TX-020",
+    "TX-022",
+    "TX-023",
+    "TX-024",
+    "TX-025",
+    "PL-003"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 1,
+    "extend_and_hold": 1,
+    "do_nothing": 1
+   },
+   "mitigation": "Under a net lease the tenant usually bears the increase, which raises its occupancy cost; check the lease and the current assessed value.",
+   "watch": "Assessor Portal for the current assessed value."
+  },
+  {
+   "id": "R18",
+   "kind": "Business as usual",
+   "title": "Selling during the owner's lifetime gives up a possible step-up in basis",
+   "what": "Inherited property generally takes a basis equal to fair market value at death, which can remove income tax on gain built up during life. A sale for cash crystallises that tax; an exchange defers it.",
+   "evidence": [
+    "TX-046",
+    "TX-050",
+    "PL-043"
+   ],
+   "exposure": {
+    "sell_cash": 3,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 1,
+    "extend_and_hold": 0,
+    "do_nothing": 0
+   },
+   "mitigation": "Decide the sale question together with the estate plan.",
+   "watch": "IRS guidance on inherited property; the owner's estate attorney."
+  },
+  {
+   "id": "R19",
+   "kind": "Business as usual",
+   "title": "Everything rides on one building, one tenant and one city",
+   "what": "About 70% of the tenant's restaurants are in California and Texas, and the property, the tenant's base and the hazards are all in the same region. The owner's other assets are unknown.",
+   "evidence": [
+    "TN-010",
+    "TN-009",
+    "HZ-001",
+    "PL-042"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Weigh the property against the owner's whole balance sheet; an exchange can spread the risk.",
+   "watch": "Not observable from public sources."
+  },
+  {
+   "id": "R20",
+   "kind": "Business as usual",
+   "title": "Tax, wage or land-use rules change during the hold",
+   "what": "Voters rejected a measure that would have raised the bar for future local special taxes; thresholds and wages are re-indexed yearly; results are unofficial until certified.",
+   "evidence": [
+    "TX-072",
+    "TX-073",
+    "TX-075",
+    "TX-010",
+    "TX-076",
+    "EC-096"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Re-check the rules before any transaction; keep decisions reversible where possible.",
+   "watch": "Secretary of State results; City Clerk council files."
+  },
+  {
+   "id": "R21",
+   "kind": "Business as usual",
+   "title": "The decision is taken on missing facts",
+   "what": "Rent, exact expiry, options, tenant entity, expense split, casualty clause, value, basis and debt are all unknown to this workbook. Any ranking here is conditional on assumptions.",
+   "evidence": [
+    "PL-012",
+    "PL-013",
+    "PL-014",
+    "PL-010",
+    "PL-017",
+    "PL-023",
+    "PL-007",
+    "PL-040"
+   ],
+   "exposure": {
+    "sell_cash": 3,
+    "sell_exchange": 3,
+    "extend_then_sell": 2,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Close the critical questions first; asking the tenant about an extension is itself a low-cost test.",
+   "watch": "The questions register on this site."
+  },
+  {
+   "id": "R22",
+   "kind": "Business as usual",
+   "title": "An environmental problem surfaces",
+   "what": "Past uses or underground tanks can create cleanup liability and delay a sale or refinancing. The parcel has not been searched because the address is withheld.",
+   "evidence": [
+    "PL-008"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Search the State's cleanup database privately and order a Phase I assessment before marketing.",
+   "watch": "State Water Board GeoTracker."
+  },
+  {
+   "id": "R23",
+   "kind": "Business as usual",
+   "title": "Zoning or planning changes alter what the site can be used for",
+   "what": "A plan update can restrict drive-throughs or, in the other direction, allow more building and raise land value. The parcel's zoning and plan area are unknown.",
+   "evidence": [
+    "PL-005",
+    "PL-051",
+    "PL-009"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Look up zoning and pending plan changes privately; ask an appraiser for a land value.",
+   "watch": "City Planning zoning search and public counters."
+  },
+  {
+   "id": "R24",
+   "kind": "Business as usual",
+   "title": "New management at the tenant changes its property decisions",
+   "what": "The chief executive is interim, a successor is due within twelve months, and an investor holds a cooperation agreement. Closure lists and renewal policy can change with them.",
+   "evidence": [
+    "TN-090",
+    "TN-091",
+    "TN-012",
+    "TN-084"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Seek a signed extension rather than relying on informal assurances.",
+   "watch": "The tenant's Form 8-K filings."
+  },
+  {
+   "id": "R25",
+   "kind": "Business as usual",
+   "title": "A lease notice date is missed",
+   "what": "Options, rent resets and renewals usually have notice windows. Missing one can lock in an outcome by default. The dates are unknown.",
+   "evidence": [
+    "PL-014",
+    "PL-013"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 1,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Put every lease date in a calendar with reminders two years, one year and six months ahead.",
+   "watch": "The lease."
+  },
+  {
+   "id": "R26",
+   "kind": "Business as usual",
+   "title": "Inflation erodes a fixed rent or a cash balance",
+   "what": "Federal forecasters expect inflation near 2% only from 2030; metro prices rose 3.7% over the year. A flat rent or a fixed-rate bond loses purchasing power; whether the lease has increases is unknown.",
+   "evidence": [
+    "PJ-061",
+    "EC-040",
+    "PL-015",
+    "CM-001"
+   ],
+   "exposure": {
+    "sell_cash": 3,
+    "sell_exchange": 2,
+    "extend_then_sell": 2,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Negotiate rent increases into any extension; avoid holding sale proceeds entirely in fixed-rate assets.",
+   "watch": "BLS consumer price index; Congressional Budget Office outlook."
+  },
+  {
+   "id": "B01",
+   "kind": "Black swan",
+   "title": "A major earthquake seriously damages the building",
+   "what": "The official forecast gives a 60% chance of a magnitude 6.7 or larger earthquake in the Los Angeles region within 30 years of 2014, about 3% a year. Damage at one site depends on ground and structure, which are unknown.",
+   "evidence": [
+    "HZ-001",
+    "HZ-002",
+    "HZ-003",
+    "HZ-010",
+    "HZ-008",
+    "PL-032",
+    "PL-033"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Check the three state hazard zones and the building type privately; confirm earthquake insurance and who must rebuild.",
+   "watch": "California Geological Survey zone map; city building records."
+  },
+  {
+   "id": "B02",
+   "kind": "Black swan",
+   "title": "A regional disaster disrupts trade without touching the building",
+   "what": "Restaurants lose sales, the tenant's finances are strained and buyers demand higher yields for a time. The tenant itself lists earthquakes, wildfires and civil unrest as risks to sales and property.",
+   "evidence": [
+    "TN-067",
+    "TN-010",
+    "HZ-006",
+    "HZ-040",
+    "HZ-041"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Hold a cash reserve; avoid being a forced seller in the two years after an event.",
+   "watch": "USGS and CAL FIRE incident records."
+  },
+  {
+   "id": "B03",
+   "kind": "Black swan",
+   "title": "A wildfire on the scale of January 2025",
+   "what": "The Eaton and Palisades fires destroyed 16,264 structures, burned for 24 days and cost the county an estimated $5.2 to $10.1 billion of output. Whether the parcel lies in a mapped fire hazard zone is unknown.",
+   "evidence": [
+    "HZ-021",
+    "HZ-026",
+    "HZ-031",
+    "HZ-030",
+    "HZ-040",
+    "HZ-041",
+    "HZ-052",
+    "PL-030"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Look up the parcel on the State Fire Marshal's map; check the insurance.",
+   "watch": "State Fire Marshal hazard maps; CAL FIRE incidents."
+  },
+  {
+   "id": "B04",
+   "kind": "Black swan",
+   "title": "Insurance becomes unavailable or much more expensive",
+   "what": "After the 2025 fires the regulator approved a $1 billion assessment on insurers, part of which may be charged to policyholders. After the 1994 earthquake most home insurers left the market. The policies on this property are unknown.",
+   "evidence": [
+    "HZ-060",
+    "HZ-061",
+    "HZ-062",
+    "HZ-009",
+    "PL-034",
+    "PL-024"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Obtain current certificates and renewal quotes; confirm the lease makes the tenant carry the cost.",
+   "watch": "Department of Insurance releases; the insurance broker."
+  },
+  {
+   "id": "B05",
+   "kind": "Black swan",
+   "title": "The lease ends after a fire or earthquake",
+   "what": "Many leases let either party terminate after major damage. If this one does, the owner is left with a damaged site and no rent. Rebuilding after a declared disaster does not reset the assessed value.",
+   "evidence": [
+    "PL-023",
+    "TX-027",
+    "TX-028",
+    "TX-029",
+    "TX-030"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Read the casualty clause now; it decides who bears a disaster.",
+   "watch": "The lease."
+  },
+  {
+   "id": "B06",
+   "kind": "Black swan",
+   "title": "The tenant restructures in bankruptcy and rejects the lease",
+   "what": "A leveraged company with a stockholders' deficit can use bankruptcy to shed leases. National statistics on lease expirations include leases rejected in bankruptcy.",
+   "evidence": [
+    "TN-043",
+    "TN-040",
+    "TN-050",
+    "TN-051",
+    "CM-050"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Know the land value and the re-letting market; prefer a location and rent a replacement tenant would also pay.",
+   "watch": "Form 8-K filings; covenant and refinancing news in Form 10-Q."
+  },
+  {
+   "id": "B07",
+   "kind": "Black swan",
+   "title": "A pandemic-type shutdown or civil unrest",
+   "what": "Dining rooms close or trade is interrupted for months. The tenant names man-made calamities and their aftermath as risks. Drive-through sites were more resilient in the last such episode, but that is not established here from an official source.",
+   "evidence": [
+    "TN-067",
+    "PL-006"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 1,
+    "extend_then_sell": 1,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Confirm the site has a working drive-through; keep a reserve.",
+   "watch": "Public health and emergency orders."
+  },
+  {
+   "id": "B08",
+   "kind": "Black swan",
+   "title": "A financial crisis removes buyers and credit when a sale is needed",
+   "what": "Federal debt is projected to rise from 101% to 120% of the economy by 2036 and the policy rate reached 5.25% to 5.50% in 2023. In a credit freeze, prices are set by the few buyers with cash.",
+   "evidence": [
+    "PJ-063",
+    "PJ-064",
+    "CM-013",
+    "CM-004"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 2,
+    "extend_then_sell": 2,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 3
+   },
+   "mitigation": "Avoid a plan that requires selling in one particular year; sell from strength, not at expiry.",
+   "watch": "Treasury yields; Federal Reserve statements."
+  },
+  {
+   "id": "B09",
+   "kind": "Black swan",
+   "title": "Flood or extreme storm at the parcel",
+   "what": "The official flood maps are published by FEMA; the parcel's zone is unknown.",
+   "evidence": [
+    "HZ-070",
+    "PL-031"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 1,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Look up the flood zone privately; check whether flood cover is required or carried.",
+   "watch": "FEMA Flood Map Service Center."
+  },
+  {
+   "id": "B10",
+   "kind": "Black swan",
+   "title": "A sudden tax or wage change aimed at this kind of property or tenant",
+   "what": "Transfer-tax thresholds move every July; a state council can raise the fast-food wage; the status of efforts to change the city transfer tax could not be established from an official source.",
+   "evidence": [
+    "TX-010",
+    "TX-031",
+    "TX-032",
+    "EC-096",
+    "TX-076"
+   ],
+   "exposure": {
+    "sell_cash": 1,
+    "sell_exchange": 1,
+    "extend_then_sell": 2,
+    "test_then_decide": 2,
+    "extend_and_hold": 2,
+    "do_nothing": 2
+   },
+   "mitigation": "Do not leave a planned sale to the last months before expiry.",
+   "watch": "City Office of Finance; Department of Industrial Relations."
+  },
+  {
+   "id": "B11",
+   "kind": "Black swan",
+   "title": "The region declines faster than the official projections",
+   "what": "If the 2020 to 2025 rate of population loss simply continued, the county would have about 3% fewer residents by 2035, twice the official projection. The State's own long-range series shows 4.7% fewer by 2050.",
+   "evidence": [
+    "PJ-073",
+    "PJ-071",
+    "PJ-072",
+    "PP-002b"
+   ],
+   "exposure": {
+    "sell_cash": 0,
+    "sell_exchange": 0,
+    "extend_then_sell": 0,
+    "test_then_decide": 2,
+    "extend_and_hold": 3,
+    "do_nothing": 3
+   },
+   "mitigation": "Diversify away from a single regional exposure if the owner's other assets are also local.",
+   "watch": "State Department of Finance projection updates."
+  }
+ ]
+}

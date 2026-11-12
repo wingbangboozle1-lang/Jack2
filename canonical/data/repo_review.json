@@ -1,0 +1,737 @@
+{
+ "note": "Mechanical scan of the files on disk. Counts of privacy patterns are counts only; the matched text is never copied. Institutional contact details on official pages quoted by earlier workbooks account for most hits.",
+ "totals": {
+  "workspaces": 28,
+  "files": 503,
+  "lines": 89934,
+  "pages": 247
+ },
+ "workspaces": [
+  {
+   "workspace": "(repository root files)",
+   "files": 3,
+   "lines": 2112,
+   "pages": 0,
+   "links": 68,
+   "official_links": 7,
+   "official_links_reread_today": 2,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "data",
+   "files": 9,
+   "lines": 2199,
+   "pages": 0,
+   "links": 24,
+   "official_links": 21,
+   "official_links_reread_today": 14,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "docs",
+   "files": 15,
+   "lines": 7326,
+   "pages": 11,
+   "links": 46,
+   "official_links": 31,
+   "official_links_reread_today": 12,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "model",
+   "files": 3,
+   "lines": 2617,
+   "pages": 0,
+   "links": 42,
+   "official_links": 29,
+   "official_links_reread_today": 10,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "research",
+   "files": 17,
+   "lines": 1568,
+   "pages": 0,
+   "links": 81,
+   "official_links": 62,
+   "official_links_reread_today": 24,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 1,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "scripts",
+   "files": 1,
+   "lines": 139,
+   "pages": 0,
+   "links": 0,
+   "official_links": 0,
+   "official_links_reread_today": 0,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-18dacdea",
+   "files": 23,
+   "lines": 5532,
+   "pages": 10,
+   "links": 29,
+   "official_links": 24,
+   "official_links_reread_today": 12,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-1944e5a3",
+   "files": 14,
+   "lines": 1583,
+   "pages": 10,
+   "links": 55,
+   "official_links": 30,
+   "official_links_reread_today": 3,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-24d6cd5f",
+   "files": 23,
+   "lines": 4871,
+   "pages": 11,
+   "links": 39,
+   "official_links": 35,
+   "official_links_reread_today": 17,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-3090b9ed",
+   "files": 25,
+   "lines": 2740,
+   "pages": 12,
+   "links": 23,
+   "official_links": 18,
+   "official_links_reread_today": 12,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-313ba936",
+   "files": 27,
+   "lines": 4146,
+   "pages": 16,
+   "links": 26,
+   "official_links": 24,
+   "official_links_reread_today": 23,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-343c7030",
+   "files": 22,
+   "lines": 4836,
+   "pages": 12,
+   "links": 23,
+   "official_links": 23,
+   "official_links_reread_today": 8,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-4ed347de",
+   "files": 19,
+   "lines": 5350,
+   "pages": 10,
+   "links": 27,
+   "official_links": 25,
+   "official_links_reread_today": 16,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-5bb36a1b",
+   "files": 13,
+   "lines": 693,
+   "pages": 6,
+   "links": 16,
+   "official_links": 12,
+   "official_links_reread_today": 8,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-5f296f9d",
+   "files": 25,
+   "lines": 4949,
+   "pages": 15,
+   "links": 62,
+   "official_links": 51,
+   "official_links_reread_today": 14,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-620551ec",
+   "files": 27,
+   "lines": 1920,
+   "pages": 14,
+   "links": 21,
+   "official_links": 16,
+   "official_links_reread_today": 9,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-6596c3f2",
+   "files": 25,
+   "lines": 743,
+   "pages": 13,
+   "links": 17,
+   "official_links": 15,
+   "official_links_reread_today": 7,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-6ad87c21",
+   "files": 25,
+   "lines": 4946,
+   "pages": 14,
+   "links": 20,
+   "official_links": 19,
+   "official_links_reread_today": 15,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-6d8f5d05",
+   "files": 19,
+   "lines": 3002,
+   "pages": 12,
+   "links": 24,
+   "official_links": 21,
+   "official_links_reread_today": 14,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-7663f9db",
+   "files": 31,
+   "lines": 5732,
+   "pages": 15,
+   "links": 38,
+   "official_links": 33,
+   "official_links_reread_today": 23,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-95d0beb9",
+   "files": 1,
+   "lines": 23,
+   "pages": 1,
+   "links": 9,
+   "official_links": 9,
+   "official_links_reread_today": 3,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-a3a8ec08",
+   "files": 22,
+   "lines": 4700,
+   "pages": 9,
+   "links": 41,
+   "official_links": 36,
+   "official_links_reread_today": 10,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-b4ec6128",
+   "files": 12,
+   "lines": 1952,
+   "pages": 11,
+   "links": 40,
+   "official_links": 32,
+   "official_links_reread_today": 12,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-cfe293bd",
+   "files": 21,
+   "lines": 881,
+   "pages": 11,
+   "links": 10,
+   "official_links": 10,
+   "official_links_reread_today": 3,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-d9c94ed0",
+   "files": 19,
+   "lines": 2542,
+   "pages": 8,
+   "links": 24,
+   "official_links": 21,
+   "official_links_reread_today": 14,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-e618ace7",
+   "files": 24,
+   "lines": 4811,
+   "pages": 14,
+   "links": 28,
+   "official_links": 27,
+   "official_links_reread_today": 19,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "session-f4f700c0",
+   "files": 34,
+   "lines": 6085,
+   "pages": 12,
+   "links": 103,
+   "official_links": 93,
+   "official_links_reread_today": 22,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  },
+  {
+   "workspace": "tools",
+   "files": 4,
+   "lines": 1936,
+   "pages": 0,
+   "links": 1,
+   "official_links": 0,
+   "official_links_reread_today": 0,
+   "privacy_pattern_hits": {
+    "e-mail address": 0,
+    "telephone number": 0,
+    "street address": 0,
+    "parcel number": 0
+   }
+  }
+ ],
+ "figures": [
+  {
+   "figure": "10-year Treasury yield",
+   "row": "CM-001",
+   "verified_today": "4.98%",
+   "source": "S-TSY",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "4.86",
+     "workbooks": 5
+    },
+    {
+     "value": "4.84",
+     "workbooks": 4
+    },
+    {
+     "value": "4.88",
+     "workbooks": 3
+    },
+    {
+     "value": "4.90",
+     "workbooks": 2
+    },
+    {
+     "value": "5.31",
+     "workbooks": 2
+    },
+    {
+     "value": "0.25",
+     "workbooks": 1
+    },
+    {
+     "value": "3.50",
+     "workbooks": 1
+    },
+    {
+     "value": "4.00",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "County residents, Census Bureau estimate",
+   "row": "PP-001b",
+   "verified_today": "9,694,934",
+   "source": "S-CENSUS",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "9,694,934",
+     "workbooks": 20
+    },
+    {
+     "value": "9,637,524",
+     "workbooks": 10
+    },
+    {
+     "value": "9,708,647",
+     "workbooks": 9
+    },
+    {
+     "value": "9,727,305",
+     "workbooks": 9
+    },
+    {
+     "value": "9,853,435",
+     "workbooks": 9
+    },
+    {
+     "value": "9,837,286",
+     "workbooks": 4
+    },
+    {
+     "value": "9,811,358",
+     "workbooks": 2
+    },
+    {
+     "value": "9,818,605",
+     "workbooks": 2
+    }
+   ]
+  },
+  {
+   "figure": "City residents, Census Bureau estimate",
+   "row": "PP-001a",
+   "verified_today": "3,869,089",
+   "source": "S-CENSUS",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "3,869,089",
+     "workbooks": 20
+    },
+    {
+     "value": "3,726,923",
+     "workbooks": 6
+    },
+    {
+     "value": "3,899,342",
+     "workbooks": 6
+    },
+    {
+     "value": "3,898,747",
+     "workbooks": 5
+    },
+    {
+     "value": "3,806,201",
+     "workbooks": 3
+    },
+    {
+     "value": "3,784,000",
+     "workbooks": 2
+    },
+    {
+     "value": "3,701,286",
+     "workbooks": 1
+    },
+    {
+     "value": "3,711,086",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Measure ULA lower threshold",
+   "row": "TX-003",
+   "verified_today": "$5,400,000 and $10,900,000",
+   "source": "S-ULA",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "5.4",
+     "workbooks": 17
+    },
+    {
+     "value": "5,400,000",
+     "workbooks": 13
+    },
+    {
+     "value": "5,000,000",
+     "workbooks": 1
+    },
+    {
+     "value": "5,300,000",
+     "workbooks": 1
+    },
+    {
+     "value": "5.40",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Tenant same-store sales, latest quarter",
+   "row": "TN-020",
+   "verified_today": "-1.1%",
+   "source": "S-JACK-8K",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "1.1",
+     "workbooks": 10
+    },
+    {
+     "value": "4.2",
+     "workbooks": 4
+    },
+    {
+     "value": "3.7",
+     "workbooks": 2
+    },
+    {
+     "value": "0.9",
+     "workbooks": 1
+    },
+    {
+     "value": "1.2",
+     "workbooks": 1
+    },
+    {
+     "value": "1.3",
+     "workbooks": 1
+    },
+    {
+     "value": "4.3",
+     "workbooks": 1
+    },
+    {
+     "value": "7.1",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Chance of a magnitude 6.7+ earthquake in 30 years, Los Angeles region",
+   "row": "HZ-001",
+   "verified_today": "60%",
+   "source": "S-USGS",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "60",
+     "workbooks": 16
+    },
+    {
+     "value": "50",
+     "workbooks": 3
+    },
+    {
+     "value": "25",
+     "workbooks": 2
+    },
+    {
+     "value": "31",
+     "workbooks": 1
+    },
+    {
+     "value": "35",
+     "workbooks": 1
+    },
+    {
+     "value": "46",
+     "workbooks": 1
+    },
+    {
+     "value": "85",
+     "workbooks": 1
+    },
+    {
+     "value": "98",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Fast-food minimum wage",
+   "row": "EC-093",
+   "verified_today": "$20.00 per hour",
+   "source": "S-DIR-FF",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "20.00",
+     "workbooks": 18
+    },
+    {
+     "value": "18.42",
+     "workbooks": 2
+    },
+    {
+     "value": "16.90",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Los Angeles Unified enrollment",
+   "row": "PP-066",
+   "verified_today": "497,105",
+   "source": "S-CDE",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "497,105",
+     "workbooks": 10
+    },
+    {
+     "value": "419,618",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Restaurants in the tenant's system",
+   "row": "TN-001",
+   "verified_today": "2,115",
+   "source": "S-JACK-8K",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "2,115",
+     "workbooks": 12
+    },
+    {
+     "value": "2,136",
+     "workbooks": 5
+    },
+    {
+     "value": "2,100",
+     "workbooks": 3
+    },
+    {
+     "value": "2,168",
+     "workbooks": 2
+    },
+    {
+     "value": "2,191",
+     "workbooks": 1
+    }
+   ]
+  },
+  {
+   "figure": "Federal Reserve target range",
+   "row": "CM-010",
+   "verified_today": "3.75-4.00%",
+   "source": "S-FED",
+   "values_in_earlier_workbooks": [
+    {
+     "value": "3.75 to 4.00",
+     "workbooks": 3
+    }
+   ]
+  }
+ ]
+}

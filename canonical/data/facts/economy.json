@@ -1173,6 +1173,66 @@
     "fmt": "${:,.0f}",
     "formula": "$44,000,801 thousand divided by 10,014,009 residents"
    }
+  },
+  {
+   "id": "EC-074",
+   "category": "economy",
+   "group": "Payroll jobs (county)",
+   "label": "Health care and social assistance jobs",
+   "geo": "Los Angeles County",
+   "period": "September 2026 (preliminary)",
+   "value": "890,700, from 859,500 a year earlier",
+   "source": "S-EDD",
+   "status": "verified",
+   "quote": "Data Not Seasonally Adjusted | Sep 25 | Jul 26 | Aug 26 Revised | Sep 26 Prelim | Percent Change Month | Percent Change Year | Health Care and Social Assistance | 859,500 | 886,800 | 889,800 | 890,700 | 0.1% | 3.6%",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
+  },
+  {
+   "id": "EC-075",
+   "category": "economy",
+   "group": "Payroll jobs (county)",
+   "label": "Health care and social assistance jobs, change over the year (from the table)",
+   "geo": "Los Angeles County",
+   "period": "September 2025 to September 2026",
+   "value": "+31,200",
+   "source": "S-EDD",
+   "status": "computed",
+   "quote": "",
+   "checked": "2026-11-12",
+   "note": "The narrative of the same release says health care and social assistance added 37,500 jobs; 37,500 is the change for the wider 'private education and health services' group. The table figure is published; the discrepancy is flagged.",
+   "reason": "",
+   "obtain": "",
+   "calc": {
+    "expr": "x0-x1",
+    "operands": [
+     "890,700",
+     "859,500"
+    ],
+    "inputs": [
+     "EC-074"
+    ],
+    "fmt": "{:+,.0f}",
+    "formula": "890,700 minus 859,500"
+   }
+  },
+  {
+   "id": "EC-076",
+   "category": "economy",
+   "group": "Payroll jobs (county)",
+   "label": "Health care's share of the education-and-health gain, as the release states it",
+   "geo": "Los Angeles County",
+   "period": "September 2025 to September 2026",
+   "value": "83 percent",
+   "source": "S-EDD",
+   "status": "verified",
+   "quote": "The collective needs of an aging population continue to drive up employment in educational and health services (up 37,500). Health care and social assistance led the growth and accounted for 83 percent of the development with an addition of 37,500 jobs. Private educational services added an additional 6,300 jobs to improve industry growth.",
+   "checked": "2026-11-12",
+   "note": "",
+   "reason": "",
+   "obtain": ""
   }
  ]
 }
