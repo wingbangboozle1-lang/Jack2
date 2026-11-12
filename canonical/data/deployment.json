@@ -17,6 +17,15 @@
    "merge": "Merged as 74467da (merge commit), without waiting for review, after the verify workflow passed on the pull request",
    "checks": "verify workflow run 43272596116 passed on the main branch: all 23 steps, including the 11 checks of the consolidated site",
    "pages": "Pages deployment run 43272595513 succeeded; Pages build reported 'built' for 74467da at 17:44:48 UTC; the live overview and Flagged for Review pages were fetched and show the consolidated site"
+  },
+  {
+   "when": "2026-11-12 (after part 2)",
+   "what": "Part 3: this deployment record, the note on merges and the e-mail privacy setting, and clearer risk and question tables.",
+   "pr": "Pull request 61",
+   "pr_url": "https://github.com/wingbangboozle1-lang/Jack2/pull/61",
+   "merge": "Merged after the verify workflow passed on the pull request; the merge commit and time are on the pull request page",
+   "checks": "verify workflow on the pull request head: all 23 steps",
+   "pages": "Confirmed after the merge; see the pull request page and the coordination record"
   }
  ]
 }

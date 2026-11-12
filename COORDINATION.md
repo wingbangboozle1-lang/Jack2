@@ -61,6 +61,8 @@ integration**. Nothing on either stale branch is modified.
 | [#49](https://github.com/wingbangboozle1-lang/Jack2/pull/49) | Part 1: claim on `main`, verified ledger, model. No page changed. | Merged 2026-11-12 17:14:49 UTC as `944e89d` | `verify` passed on the PR and on `main` | `built` for `944e89d` at 17:15 UTC |
 | [#60](https://github.com/wingbangboozle1-lang/Jack2/pull/60) | Part 2: consolidated root site; earlier root pages to `session-742b6a03/`; verifier; one CI step | Merged 2026-11-12 17:44:23 UTC as `74467da`, without waiting for review | `verify` run [43272596116](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43272596116) passed on `main` (23 steps) | Deployment run [43272595513](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43272595513) succeeded; Pages API `built` for `74467da` at 17:44:48 UTC; live `/` and `/flagged.html` fetched and confirmed |
 
+| [#61](https://github.com/wingbangboozle1-lang/Jack2/pull/61) | Part 3: this record; note on merges and the e-mail privacy setting; clearer risk and question tables | Merged after `verify` passed on the PR (commit and time on the PR page) | `verify` on the PR head: 23 steps | Confirmed after merge (see the PR page) |
+
 Live site: https://wingbangboozle1-lang.github.io/Jack2/ · Flagged for Review: https://wingbangboozle1-lang.github.io/Jack2/flagged.html · Suggestions for Review: https://wingbangboozle1-lang.github.io/Jack2/suggestions.html
 
 **Close-out record (required by the protocol: sources, verification performed, irregularities).**

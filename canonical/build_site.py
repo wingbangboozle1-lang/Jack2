@@ -63,21 +63,24 @@ PAGE_OF = {"people-place": "demographics.html", "economy": "market-economics.htm
 
 SHORT = {
     "S-CENSUS": "Census Bureau", "S-BLS": "Bureau of Labor Statistics", "S-EDD": "California EDD", "S-BEA": "Bureau of Economic Analysis",
-    "S-DOF-P2A": "California Dept. of Finance", "S-DOF-K12": "California Dept. of Finance", "S-CDE": "California Dept. of Education",
-    "S-SCAG": "SCAG", "S-CBO": "Congressional Budget Office", "S-TSY": "U.S. Treasury", "S-FED": "Federal Reserve",
-    "S-DIR-MW": "California DIR", "S-DIR-FF": "California DIR", "S-LA-WAGE": "City of Los Angeles",
-    "S-JACK-8K": "SEC filing: tenant 8-K", "S-JACK-10K": "SEC filing: tenant 10-K", "S-JACK-PLAN": "SEC filing: tenant 8-K",
-    "S-JACK-8K-0921": "SEC filing: tenant 8-K", "S-EDGAR": "SEC EDGAR", "S-NNN-8K": "SEC filing: NNN REIT", "S-O-8K": "SEC filing: Realty Income",
-    "S-ULA": "City of Los Angeles Finance", "S-RRCC": "L.A. County Recorder", "S-RTC-11911": "California Legislature",
-    "S-RTC-17043": "California Legislature", "S-PROP13": "California Constitution", "S-BOE-P19": "Board of Equalization",
-    "S-LAC-ASSESSOR": "L.A. County Assessor", "S-ASSESSOR-PORTAL": "L.A. County Assessor", "S-FTB": "Franchise Tax Board",
-    "S-IRS-409": "IRS", "S-IRS-559": "IRS", "S-IRS-1031": "IRS", "S-IRS-8824": "IRS", "S-IRS-INHERIT": "IRS",
-    "S-SOS-RES": "California Secretary of State", "S-SOS-P3": "California Secretary of State", "S-SOS-P43": "California Secretary of State",
-    "S-USGS": "U.S. Geological Survey", "S-CGS": "California Geological Survey", "S-CALFIRE-EATON": "CAL FIRE",
-    "S-CALFIRE-PALISADES": "CAL FIRE", "S-LAC-FIRE": "County of Los Angeles", "S-OSFM": "State Fire Marshal",
-    "S-CDI": "California Dept. of Insurance", "S-FEMA-MSC": "FEMA", "S-FEMA-NRI": "FEMA", "S-ZIMAS": "L.A. City Planning",
+    "S-DOF-P2A": "Calif. Finance: population", "S-DOF-K12": "Calif. Finance: schools", "S-CDE": "Calif. Dept. of Education",
+    "S-SCAG": "SCAG regional plan", "S-CBO": "Congressional Budget Office", "S-TSY": "U.S. Treasury", "S-FED": "Federal Reserve",
+    "S-DIR-MW": "Calif. DIR: minimum wage", "S-DIR-FF": "Calif. DIR: fast-food wage", "S-LA-WAGE": "L.A. Office of Wage Standards",
+    "S-JACK-8K": "SEC: tenant quarterly results", "S-JACK-10K": "SEC: tenant annual report", "S-JACK-PLAN": "SEC: tenant plan, 2025",
+    "S-JACK-8K-0921": "SEC: tenant release, Sept. 2026", "S-EDGAR": "SEC EDGAR index", "S-NNN-8K": "SEC: NNN REIT results",
+    "S-O-8K": "SEC: Realty Income results",
+    "S-ULA": "L.A. Office of Finance", "S-RRCC": "L.A. County Recorder", "S-RTC-11911": "Rev. and Tax. Code 11911",
+    "S-RTC-17043": "Rev. and Tax. Code 17043", "S-PROP13": "California Constitution", "S-BOE-P19": "Board of Equalization",
+    "S-LAC-ASSESSOR": "L.A. County Assessor", "S-ASSESSOR-PORTAL": "Assessor Portal", "S-FTB": "Franchise Tax Board",
+    "S-IRS-409": "IRS: capital gains", "S-IRS-559": "IRS: investment income tax", "S-IRS-1031": "IRS: exchanges",
+    "S-IRS-8824": "IRS: Form 8824", "S-IRS-INHERIT": "IRS: inherited property",
+    "S-SOS-RES": "Sec. of State: results", "S-SOS-P3": "Sec. of State: Prop. 3", "S-SOS-P43": "Sec. of State: Prop. 43",
+    "S-USGS": "U.S. Geological Survey", "S-CGS": "Calif. Geological Survey", "S-CALFIRE-EATON": "CAL FIRE: Eaton",
+    "S-CALFIRE-PALISADES": "CAL FIRE: Palisades", "S-LAC-FIRE": "County of Los Angeles", "S-OSFM": "State Fire Marshal",
+    "S-CDI": "Calif. Dept. of Insurance", "S-FEMA-MSC": "FEMA: flood maps", "S-FEMA-NRI": "FEMA: risk index", "S-ZIMAS": "L.A. City Planning",
     "S-LADBS": "L.A. Building and Safety", "S-GEOTRACKER": "State Water Board",
 }
+assert len(set(SHORT.values())) == len(SHORT), "short source names must be distinct"
 
 NAV = [
     ("Start", [("index.html", "Overview"), ("executive-summary.html", "Executive summary")]),
@@ -347,7 +350,7 @@ a.rid{color:var(--accent);text-decoration:underline}
 .badge.anchor{background:var(--ok-bg);color:var(--ok)}
 .badge.review{background:var(--bad-bg);color:var(--bad)}
 .badge.na{background:var(--mute-bg);color:#44506a}
-.lvl{display:inline-block;min-width:1.5rem;text-align:center;border-radius:.3rem;padding:.05rem .3rem;font-size:.75rem;font-weight:700}
+.lvl{display:inline-block;min-width:1.5rem;text-align:center;border-radius:.3rem;padding:.05rem .3rem;font-size:.75rem;font-weight:700;white-space:nowrap;margin:.05rem 0}
 .lvl0{background:#eef1f5;color:#8a94a6}.lvl1{background:#e6f4ec;color:#17794a}.lvl2{background:#fdf1dd;color:#8f5200}.lvl3{background:#fbe9e7;color:#a8261d}
 details{margin-top:.25rem}
 summary{cursor:pointer;color:var(--accent);font-size:.82rem}
@@ -731,7 +734,7 @@ def build_decision():
                     [f'<span class="lvl lvl{r["exposure"][k]}">{r["exposure"][k]}</span>' for k in ORDER] + [cites(r["evidence"][:3])])
     totals = ["", "<strong>Sum of ratings</strong>"] + [f'<strong>{sum(r["exposure"][k] for r in RISKS["risks"])}</strong>' for k in ORDER] + [""]
     body.append(table(["Risk", "Title"] + [e(STRAT_SHORT[k]) for k in ORDER] + ["Evidence and official sources"], rows, "data", "exposure-t"))
-    body.append(table(["", ""] + [e(STRAT_SHORT[k]) for k in ORDER], [totals[:-1]], "site"))
+    body.append(table(["", "Sum of ratings across all risks"] + [e(STRAT_SHORT[k]) for k in ORDER], [["", "A higher sum means more risks bear on the strategy; it is a count, not a probability."] + totals[2:-1]], "site"))
     body.append('<h2 id="plan">The first twelve weeks</h2>' + plan_table())
     body.append('<h2 id="triggers">What to watch</h2>')
     rows = []
@@ -745,23 +748,32 @@ def build_decision():
     return page("decision.html", "Decision analysis", lede, "".join(body), "Decide")
 
 
+CODES = {"sell_cash": "SC", "sell_exchange": "SX", "extend_then_sell": "ES", "test_then_decide": "TD", "extend_and_hold": "EH", "do_nothing": "DN"}
+
+
+def exposure_chips(r):
+    return " ".join(f'<span class="lvl lvl{r["exposure"][k]}" title="{e(STRAT_SHORT[k])}: {RISKS["levels"][str(r["exposure"][k])]}">'
+                    f'{CODES[k]} {r["exposure"][k]}</span>' for k in ORDER)
+
+
 def build_risks():
     body = ['<p>Each risk cites the verified rows it rests on, is rated against each of the six strategies '
-            '(0 none, 1 low, 2 medium, 3 high) and says what would reduce it and what to watch.</p>',
-            filter_box("risk-")]
+            '(0 none, 1 low, 2 medium, 3 high) and says what would reduce it and what to watch.</p>']
+    body.append(table(["Code", "Strategy", "What it is"],
+                      [[f'<span class="lvl lvl0">{CODES[o["key"]]}</span>', f'<strong>{e(o["label"])}</strong>', e(o["what"])] for o in DECIDE["options"]],
+                      "site", "", "Codes used in the exposure column"))
+    body.append(filter_box("risk-"))
     for kind, tid, intro in (("Business as usual", "risk-bau", "Things that happen in ordinary years."),
                              ("Black swan", "risk-bs", "Rare events with large consequences: natural disasters, tenant failure, financial crisis.")):
         rows = []
         for r in RISKS["risks"]:
             if r["kind"] != kind:
                 continue
-            expo = " ".join(f'<span class="lvl lvl{r["exposure"][k]}" title="{e(STRAT_SHORT[k])}">{r["exposure"][k]}</span>' for k in ORDER)
             rows.append({"attrs": f' id="{r["id"]}"', "cells": [
-                f'<span class="rid">{r["id"]}</span>', f'<strong>{e(r["title"])}</strong>', e(r["what"]), expo,
+                f'<span class="rid">{r["id"]}</span>', f'<strong>{e(r["title"])}</strong><br>{e(r["what"])}', exposure_chips(r),
                 e(r["mitigation"]), e(r["watch"]), cites(r["evidence"])]})
-        body.append(f'<h2 id="{tid}-h">{kind}</h2><p>{intro} Exposure columns, left to right: '
-                    + "; ".join(e(STRAT_SHORT[k]) for k in ORDER) + ".</p>")
-        body.append(table(["Risk", "Title", "What could happen", "Exposure by strategy", "What reduces it", "What to watch",
+        body.append(f'<h2 id="{tid}-h">{kind}</h2><p>{intro}</p>')
+        body.append(table(["Risk", "What could happen", "Exposure by strategy", "What reduces it", "What to watch",
                            "Evidence and official sources"], rows, "data", tid))
     lede = (f'{len(RISKS["risks"])} risks: {sum(1 for r in RISKS["risks"] if r["kind"] == "Business as usual")} of the ordinary kind and '
             f'{sum(1 for r in RISKS["risks"] if r["kind"] == "Black swan")} rare, severe events. Each is tied to official sources and rated for every strategy.')
@@ -779,10 +791,11 @@ def build_questions():
         st = {"Open": "unverified", "Partly answered": "computed", "Answered": "verified"}[q["status"]]
         rows.append({"attrs": f' id="{q["id"]}"', "cells": [
             f'<span class="rid">{q["id"]}</span>', f'<span class="badge {"review" if q["priority"] == "Critical" else "na"}">{q["priority"]}</span>',
-            e(q["category"]), f'<strong>{e(q["question"])}</strong>', e(q["why"]), have, missing, e(q["how"]), e(q["who"]),
+            f'<strong>{e(q["question"])}</strong><p class="note"><strong>Why it matters:</strong> {e(q["why"])}</p><p class="note">About: {e(q["category"]).lower()}</p>',
+            have, missing, e(q["how"]) + f'<p class="note"><strong>Who can answer:</strong> {e(q["who"])}</p>',
             f'<span class="badge {st}">{q["status"]}</span>']})
-    body.append(table(["No.", "Priority", "About", "Question", "Why it matters", "What we have", "What is missing (blank rows and where they can be found)",
-                       "How to find out", "Who can answer", "Status"], rows, "data", "q-t"))
+    body.append(table(["No.", "Priority", "Question", "What we have", "What is missing (blank rows, and where each can be found)",
+                       "How to find out", "Status"], rows, "data", "q-t"))
     n_open = sum(1 for q in QUESTIONS if q["status"] == "Open")
     lede = (f'{len(QUESTIONS)} questions, {sum(1 for q in QUESTIONS if q["priority"] == "Critical")} of them critical. '
             f'{n_open} are open: most can be closed by reading the lease, asking the tenant, and one meeting each with a broker, an attorney and a tax adviser.')

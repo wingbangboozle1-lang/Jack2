@@ -68,7 +68,7 @@ a.rid{color:var(--accent);text-decoration:underline}
 .badge.anchor{background:var(--ok-bg);color:var(--ok)}
 .badge.review{background:var(--bad-bg);color:var(--bad)}
 .badge.na{background:var(--mute-bg);color:#44506a}
-.lvl{display:inline-block;min-width:1.5rem;text-align:center;border-radius:.3rem;padding:.05rem .3rem;font-size:.75rem;font-weight:700}
+.lvl{display:inline-block;min-width:1.5rem;text-align:center;border-radius:.3rem;padding:.05rem .3rem;font-size:.75rem;font-weight:700;white-space:nowrap;margin:.05rem 0}
 .lvl0{background:#eef1f5;color:#8a94a6}.lvl1{background:#e6f4ec;color:#17794a}.lvl2{background:#fdf1dd;color:#8f5200}.lvl3{background:#fbe9e7;color:#a8261d}
 details{margin-top:.25rem}
 summary{cursor:pointer;color:var(--accent);font-size:.82rem}
