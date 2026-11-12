@@ -354,6 +354,116 @@
    "accessed": "2026-11-12",
    "read": "read",
    "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-USGS",
+   "publisher": "U.S. Geological Survey",
+   "title": "Fact Sheet 2015-3009: UCERF3, A New Earthquake Forecast for California's Complex Fault System",
+   "url": "https://pubs.usgs.gov/fs/2015/3009/pdf/fs2015-3009.pdf",
+   "kind": "official forecast",
+   "published": "2015; 30-year window starting from 2014",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (first two of four page segments, including Table 1). This remains the published statewide time-dependent forecast; the window it describes started in 2014."
+  },
+  {
+   "id": "S-CALFIRE-EATON",
+   "publisher": "CAL FIRE",
+   "title": "Incident record: Eaton Fire",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "kind": "official record",
+   "published": "last updated 2026-08-06",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date."
+  },
+  {
+   "id": "S-CALFIRE-PALISADES",
+   "publisher": "CAL FIRE",
+   "title": "Incident record: Palisades Fire",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "kind": "official record",
+   "published": "last updated 2026-04-09",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date. The record states it is not a CAL FIRE incident (Los Angeles City Fire Department has jurisdiction)."
+  },
+  {
+   "id": "S-LAC-FIRE",
+   "publisher": "County of Los Angeles",
+   "title": "Key Facts About the Eaton and Palisades Fires (anniversary fact sheet)",
+   "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf",
+   "kind": "official record",
+   "published": "January 2026",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date. Its structure counts differ slightly from CAL FIRE's later-updated incident records; see the Flagged for Review page."
+  },
+  {
+   "id": "S-OSFM",
+   "publisher": "CAL FIRE, Office of the State Fire Marshal",
+   "title": "Fire Hazard Severity Zones",
+   "url": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones",
+   "kind": "official map",
+   "published": "local-area maps released February to March 2025",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (first of two page segments). The page links the address-level map viewer; the parcel was not looked up because the address is withheld."
+  },
+  {
+   "id": "S-CDI",
+   "publisher": "California Department of Insurance",
+   "title": "Press release, February 11, 2025: action to ensure the FAIR Plan can continue paying claims after the Southern California wildfires",
+   "url": "https://www.insurance.ca.gov/0400-news/0100-press-releases/2025/release015-2025.cfm",
+   "kind": "official record",
+   "published": "2025-02-11",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date (release text). Officials named in the release are not reproduced."
+  },
+  {
+   "id": "S-SOS-RES",
+   "publisher": "California Secretary of State",
+   "title": "State Ballot Measures: statewide results, November 3, 2026 General Election (unofficial)",
+   "url": "https://electionresults.sos.ca.gov/returns/ballot-measures",
+   "kind": "official record",
+   "published": "as of 2026-11-12 07:53; certification due 2026-12-11",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read on the access date. Results are unofficial and will change until certified."
+  },
+  {
+   "id": "S-SOS-P3",
+   "publisher": "California Secretary of State",
+   "title": "Official Voter Information Guide: Proposition 3",
+   "url": "https://voterguide.sos.ca.gov/propositions/3/index.htm",
+   "kind": "official record",
+   "published": "November 3, 2026 ballot",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-SOS-P43",
+   "publisher": "California Secretary of State",
+   "title": "Official Voter Information Guide: Proposition 43",
+   "url": "https://voterguide.sos.ca.gov/propositions/43/index.htm",
+   "kind": "official record",
+   "published": "November 3, 2026 ballot",
+   "accessed": "2026-11-12",
+   "read": "read",
+   "note": "Read in full on the access date."
+  },
+  {
+   "id": "S-FEMA-NRI",
+   "publisher": "Federal Emergency Management Agency",
+   "title": "National Risk Index: Los Angeles County report",
+   "url": "https://hazards.fema.gov/nri/report/viewer?dataLOD=Counties&dataIDs=C06037",
+   "kind": "official map",
+   "published": "",
+   "accessed": "2026-11-12",
+   "read": "unreachable",
+   "note": "The address returned an error (HTTP 500) on the access date. Nothing from it is published."
   }
  ]
 }
