@@ -1424,3 +1424,18 @@ Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch c
 
 ## Session O merge-conflict log (2026-11-12)
 While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site) merged to `main` (`bf595f2`). Merging `origin/main` into `arena/6596c3f2-jack2` conflicted in 4 files. Resolution, discarding nothing: `COORDINATION.md` — both sessions' appended text kept (single hunk de-marked); `session-f4f700c0/audit/inventory.json`, `audit/summary.json`, `verification.json` — took main's side, then regenerated on the merged tree (they are build outputs). `tools/build_site.py` auto-merged: PR #47's root Suggestions navigation AND Session O's additive workspace row both present (verified by grep). Root `suggestions.html` from #47 is preserved as-is; Session O's distinct review-and-choose register remains at `session-6596c3f2/suggestions.html`.
+
+---
+
+## Session 95d0beb9 — independent decision-critical audit (2026-11-12)
+
+Arena fixes the branch as `arena/95d0beb9-jack2`; it serves as this session's integration branch. PR #46 (`arena/6596c3f2-jack2`) is a live independent workbook and #48 records another session's Suggestions deployment; neither is claimed or modified here. Older unfinished claims are not taken over.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| Independent review of decision-critical public root claims, source verification and practical limits of automated checks; publish review findings and actionable corrections without claiming property-specific facts | in progress | session-95d0beb9 | `session-95d0beb9/**` |
+| Add discoverability and automation of this review only if compatible with concurrent work, then verify integration, PR and Pages | in progress | session-95d0beb9 | `COORDINATION.md` append; additive generator/workflow edits only after integration and checking active claims |
+
+No private property details will be collected or published. Rows without confirmed facts remain blank and flagged. Source verification and limitations will be recorded at completion.
+
+**Conflict log:** On 2026-11-12 this session rebased onto main after Session O PR #46 merged; both appended board records were preserved without removing either session's work.
