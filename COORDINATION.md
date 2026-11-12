@@ -1387,3 +1387,25 @@ Platform branch: `arena/5f15df5c-jack2` (pinned active session branch). This ses
 **Privacy rule:** No personal names, street address, parcel/APN, account or contact details will be stored or published. The owner's identity and exact property are not required for this public research artifact. Property-specific figures that cannot be independently verified from supplied public information remain blank/unknown; no invented location or values. This is not individualized legal, tax, appraisal, or investment advice.
 
 **Integration boundary:** No edits to shared `tools/build_site.py`, root `index.html`, workspaces, CI, shared data, or another session's directory. This branch is the Arena-pinned branch; no alternate task branch will be created. Any request to integrate into a shared page is logged rather than made.
+
+## Session `5f15df5c` — close-out (2026-11-12)
+
+### Task board
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 5f-01 | Independent repository inventory and decision-readiness audit; claim | done | session-5f15df5c | `COORDINATION.md` (append only), `session-5f15df5c/audit/**` |
+| 5f-02 | Official-source-linked pre-decision questions, answerability, and acquisition plan | done | session-5f15df5c | `session-5f15df5c/questions.html`, `session-5f15df5c/data/questions.json` |
+| 5f-03 | Independent path comparison, conditional recommendation, decision triggers and scenario framework | done | session-5f15df5c | `session-5f15df5c/options.html`, `session-5f15df5c/market.html`, `session-5f15df5c/data/verified_context.json`, `session-5f15df5c/data/risks.json` |
+| 5f-04 | Privacy and source/link/blank-value verification for this workspace | done | session-5f15df5c | `session-5f15df5c/scripts/verify.py`, `session-5f15df5c/verification.html`, `session-5f15df5c/privacy.html` |
+| 5f-05 | Workspace landing and dashboard pages (not wired into shared/root nav) | done | session-5f15df5c | `session-5f15df5c/*.html`, `session-5f15df5c/assets/**`, `session-5f15df5c/scripts/build.py` |
+
+**Sources checked on 2026-11-12:** U.S. Census Bureau ACS API and 2024 ACS dataset reference; BLS Los Angeles Area Economic Summary (updated 2026-11-04); BEA Los Angeles County 2024 GDP/personal-income release; California Department of Education DataQuest; LA City Planning ZIMAS; LA County Assessor; FEMA NFHL; CAL FIRE/OSFM current Fire Hazard Severity Zone page; California Geological Survey EQZapp; SEC EDGAR JACK FY2025 10-K; IRS 2026 Form 8824 instructions; LA County Recorder Documentary Transfer Tax; City of LA Office of Finance Measure ULA FAQ. Current context facts (BLS regional values and BEA county personal-income total) each carry direct official links and geography/period limitations on the site.
+
+**Verification performed:** `python3 tools/model.py`, `python3 tools/build_site.py`, and `python3 tools/check_site.py` pass on current tree. Root checker now counts 16 generated root pages and 217 total HTML pages including archive and this 9-page workspace; 24 shared sources, 89 metrics (82 verified/7 blank-flagged), 24 risks. Workspace builder and verifier pass: 9 pages, 14 official source URLs, 20 questions, 6 official-context observations, 15 risks; every HTML table row has an official-source hyperlink; internal links resolve; privacy pattern scan clear. `git diff --check` passes. Review limitations are detailed in `session-5f15df5c/audit/repo_review.md`; issues affecting interpretation are displayed on this workspace's Flagged for Review page.
+
+**Recommendation boundary:** Actual property price/rent/NOI, exact lease dates/options, tenant credit, parcel geography/hazards, insurance, debt, tax basis and owner goals are not in the supplied facts. These remain blank/unknown; no final sell-or-renew investment instruction is supported. Best current action is a private, time-boxed dual-track diligence process while preserving all contractual rights and sale/extension optionality.
+
+### Integration request (no cross-session edits made)
+
+This session intentionally kept all product files in `session-5f15df5c/**`; it did not change the generated shared root navigation/workspace index, CI workflow, or `session-f4f700c0/audit/*`. The root Pages site therefore does not yet list this workspace. Final integration should (a) add an additive workspace link in the root generator/workspace index, (b) add this workspace verifier to `.github/workflows/verify.yml`, and (c) regenerate the global line-level inventory and any derived audit outputs after this workspace is added. The workflow's global “generated output is out of date” gate makes the audit-output regeneration necessary. These are shared files outside this claim's non-overlapping scope and are requested of the designated final integration session rather than edited here. The new pages are self-contained and will be served under `/Jack2/session-5f15df5c/` by GitHub Pages once integrated/deployed.

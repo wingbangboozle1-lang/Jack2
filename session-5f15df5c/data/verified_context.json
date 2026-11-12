@@ -1,0 +1,8 @@
+[
+ {"topic":"Unemployment","value":"4.4%","geography":"Los Angeles metro area","period":"September 2026","meaning":"Labor force unemployment rate; not a central-LA neighborhood rate or prediction.","source":"S02"},
+ {"topic":"Nonfarm employment change","value":"+0.5%","geography":"Los Angeles metro area","period":"September 2025–September 2026","meaning":"Year-over-year payroll employment change; BLS notes source revisions and area definitions differ by subject.","source":"S02"},
+ {"topic":"Education and health services employment change","value":"+3.8%","geography":"Los Angeles metro area","period":"September 2025–September 2026","meaning":"Industry payroll trend; not a measure of income or fast-food demand around the site.","source":"S02"},
+ {"topic":"Information employment change","value":"−5.7%","geography":"Los Angeles metro area","period":"September 2025–September 2026","meaning":"Industry payroll trend; one sector signal, not a forecast for this parcel.","source":"S02"},
+ {"topic":"Consumer inflation (CPI-U, all items)","value":"3.7%","geography":"Los Angeles metro area","period":"12 months to September 2026","meaning":"Consumer price change; not property appreciation or rent growth.","source":"S02"},
+ {"topic":"Personal income aggregate","value":"$818.5 billion","geography":"Los Angeles County","period":"2024","meaning":"Nominal county-wide total. It cannot stand in for neighborhood household income or consumer spending near an unspecified site.","source":"S03"}
+]
