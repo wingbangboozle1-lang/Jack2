@@ -1434,3 +1434,4 @@ While PR #46 was in CI, PR #47 (root `suggestions.html` + regenerated root site)
 | Pages | API `built`; `pages build and deployment` run `43261301878` success; `verify` on main `43261303068` success |
 | Live | https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/ (dashboard + suggestions fetched live and confirmed); Flagged: https://wingbangboozle1-lang.github.io/Jack2/session-6596c3f2/flagged.html |
 | Post-merge fix | Dashboard ranking rows reordered to match CE values (E > D); follow-up PR from this branch |
+- Follow-up (PR #52): main advanced again via PR #51, which hand-edited generated root `index.html` (Suggestions card for `session-313ba936`) without updating `tools/build_site.py` — the same failure Session N4 repaired for PR #42. Session O transcribed that card into the generator verbatim (regenerated `index.html` is now clean) and regenerated the `session-f4f700c0` audit outputs on the merged tree. Nothing from #51 was removed.

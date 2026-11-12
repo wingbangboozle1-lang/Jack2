@@ -1,8 +1,8 @@
 {
   "as_of": "2026-11-08",
-  "files": 445,
-  "lines": 81853,
-  "bytes": 7274240,
+  "files": 446,
+  "lines": 82011,
+  "bytes": 7297821,
   "privacy_pattern_hits": 1,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [
@@ -15,8 +15,8 @@
   "workspaces": {
     "root/config": {
       "files": 23,
-      "lines": 3130,
-      "bytes": 463834,
+      "lines": 3140,
+      "bytes": 464840,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -56,9 +56,9 @@
       "structural_errors": 0
     },
     "session-313ba936": {
-      "files": 26,
-      "lines": 3973,
-      "bytes": 589631,
+      "files": 27,
+      "lines": 4121,
+      "bytes": 612206,
       "privacy_hits": 0,
       "structural_errors": 0
     },
