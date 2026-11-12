@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 584,
-    "lines": 108856,
-    "bytes": 10193010,
+    "lines": 108874,
+    "bytes": 10194969,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -16,8 +16,8 @@
     "workspaces": {
       "root/config": {
         "files": 59,
-        "lines": 19960,
-        "bytes": 2077277,
+        "lines": 19978,
+        "bytes": 2079236,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -231,11 +231,11 @@
     {
       "path": "COORDINATION.md",
       "workspace": "root/config",
-      "bytes": 176219,
-      "lines": 1774,
-      "sha256": "89a63216f85dc30e218788136ed4195bd22f5a6af7e98c3af3097ffee8fb0431",
+      "bytes": 177410,
+      "lines": 1783,
+      "sha256": "e0f8893dc9d7776101e2bb8b7148a32aa4c95703c8f7a3f8a4ebdc890a9322db",
       "kind": ".md",
-      "url_count": 60,
+      "url_count": 67,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
@@ -359,7 +359,7 @@
       "workspace": "root/config",
       "bytes": 8116,
       "lines": 288,
-      "sha256": "4c5f96f191d251737e77ce80ac3fce5706fbdf631af2969fd653eedfd6c299c2",
+      "sha256": "8a450cee9d11bab2d0518f66b4a52f4ae629d41bb8864dc021d9d679eb6c9e8d",
       "kind": ".json",
       "url_count": 28,
       "pii_pattern_hits": 0,
@@ -399,11 +399,11 @@
     {
       "path": "canonical/data/deployment.json",
       "workspace": "root/config",
-      "bytes": 484,
-      "lines": 13,
-      "sha256": "dcfa68535eb4d24a64f5e6a4b9bd5ff392b44bd471465ea65683ca8ac261a7bd",
+      "bytes": 1252,
+      "lines": 22,
+      "sha256": "4f828b54795655462c1310fc28e8e76b47659c522ed9d9433323c29bdd5538dd",
       "kind": ".json",
-      "url_count": 1,
+      "url_count": 2,
       "pii_pattern_hits": 0,
       "json_valid": true,
       "python_compiles": null,
