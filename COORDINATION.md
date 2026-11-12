@@ -1522,3 +1522,10 @@ Before the final push, `git pull --rebase origin main` found that `main` had adv
 ### Pushed-branch ancestry reconciliation (2026-11-12)
 
 The first push after rebasing was correctly rejected as non-fast-forward because the remote feature ref still pointed to the two earlier, already-pushed claim commits (`19bdab7`, `3ec1e12`) on the pre-rebase base. Fetched that same current-session branch and merged it; the only merge conflict was `COORDINATION.md`. Inspection confirmed the remote-only delta contained only this session's initial claim and scope addendum, both already present in the rebased board. Retained the rebased board (including subsequent close-out and conflict records) and created merge commit `fb74541`, preserving the remote commits as ancestry. No force push was used; other sessions' files and history were not rewritten.
+
+---
+### Session 95d0beb9 deployment record
+
+- [PR #53](https://github.com/wingbangboozle1-lang/Jack2/pull/53) merged 2026-11-12 as `897f490515e644fd16d9d39181506f58ff970dd2`. PR CI run 43261803276 passed before merge. Pages run 43261891628 succeeded, and the [live review](https://wingbangboozle1-lang.github.io/Jack2/session-95d0beb9/) was fetched and checked.
+- Main verification run 43261892414 failed at the generated-files gate: PR #54 merged between PR CI and PR #53, adding a board line and invalidating the F4 generated inventory. No session work was discarded. This follow-up regenerates audit outputs on merged main and logs the deployment; CI must pass before merging the follow-up.
+- Task status: targeted review and publication **needs review** (findings posted); integration and deployment confirmation **done**. The audit does not certify every line, all external URLs, or complete absence of personal information.
