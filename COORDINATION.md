@@ -2,7 +2,7 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-12 18:10 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49 merged, part 2 follows).
+> Last updated **2026-11-12 17:50 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49 and PR #60 merged; the consolidated site is live).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
@@ -52,7 +52,16 @@ integration**. Nothing on either stale branch is modified.
 | FI-07 | Historical root workbook published under `session-742b6a03/` | done | session-1c30f8e8 | `tools/build_site.py` (output path + link prefix + banner), `tools/check_site.py` (page root), `session-742b6a03/**` |
 | FI-08 | Branch ledger and archive registry | done | session-1c30f8e8 | `canonical/snapshot_repo.py`, `canonical/data/archive.json`, `workspaces.html` |
 | FI-09 | Line-by-line verifier + one CI step | done | session-1c30f8e8 | `canonical/verify.py`, `canonical/privacy.py`, `.github/workflows/verify.yml` |
-| FI-10 | Final integration: merge `origin/main`, re-verify, PR → `main`, merge, confirm Pages deploy, record PR + result here | in progress | session-1c30f8e8 | `README.md`, `COORDINATION.md`, `canonical/data/deployment.json` |
+| FI-10 | Final integration: merge `origin/main`, re-verify, PR → `main`, merge, confirm Pages deploy, record PR + result here | done (PR #60) | session-1c30f8e8 | `README.md`, `COORDINATION.md`, `canonical/data/deployment.json` |
+
+**Deployment record.**
+
+| Pull request | What | Merge | Checks | Pages |
+|---|---|---|---|---|
+| [#49](https://github.com/wingbangboozle1-lang/Jack2/pull/49) | Part 1: claim on `main`, verified ledger, model. No page changed. | Merged 2026-11-12 17:14:49 UTC as `944e89d` | `verify` passed on the PR and on `main` | `built` for `944e89d` at 17:15 UTC |
+| [#60](https://github.com/wingbangboozle1-lang/Jack2/pull/60) | Part 2: consolidated root site; earlier root pages to `session-742b6a03/`; verifier; one CI step | Merged 2026-11-12 17:44:23 UTC as `74467da`, without waiting for review | `verify` run [43272596116](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43272596116) passed on `main` (23 steps) | Deployment run [43272595513](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43272595513) succeeded; Pages API `built` for `74467da` at 17:44:48 UTC; live `/` and `/flagged.html` fetched and confirmed |
+
+Live site: https://wingbangboozle1-lang.github.io/Jack2/ · Flagged for Review: https://wingbangboozle1-lang.github.io/Jack2/flagged.html · Suggestions for Review: https://wingbangboozle1-lang.github.io/Jack2/suggestions.html
 
 **Close-out record (required by the protocol: sources, verification performed, irregularities).**
 
