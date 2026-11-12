@@ -1369,3 +1369,20 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session `40933769` — 2026-11-12
+
+Claimed on the Arena-pinned branch `arena/40933769-jack2` (the checkout branch cannot be renamed or switched). Before claiming, read the board, inspected the root builder and index, checked open PRs, and confirmed the existing root / Session N4 / Session 6d8f05 builders pass their local checks. No other session claims a dedicated suggestions page. Scope is deliberately additive and does not edit another session's data or workbook.
+
+| Task | Status | Owner | Files / scope |
+|---|---|---|---|
+| 409-01 Dedicated decision-suggestions page, with explicit review/selection gates, source links, and a privacy-safe action sequence | claimed | session-40933769 | `tools/build_site.py` (additive builder + landing link), generated `index.html`, new `suggestions.html`, `COORDINATION.md` |
+| 409-02 Verify build, links, source citations, blank-value discipline, and PII | claimed | session-40933769 | Same scope |
+
+**Privacy:** no private property/owner/tenant identifiers, contact details, or financial facts will be requested or published. Parcel-specific facts remain unknown; actions point to private document review or official parcel tools.
+
+**Coordination note:** this is an additive root-site feature, not a rewrite of shared data, existing recommendations, or other workbooks. The suggestion table will distinguish evidence-backed considerations from proposed actions and will not present model thresholds as parcel-specific facts.
+
+**Initial verification:** `python3 tools/model.py && python3 tools/build_site.py && python3 tools/check_site.py` passed on the base tree; Session N4's model/build/verifier and Session 6d8f05's build/verifier also passed unchanged. These checks prove reproducibility and structural rules, not that every external source URL remains live or that assumptions are appropriate to the private parcel.
