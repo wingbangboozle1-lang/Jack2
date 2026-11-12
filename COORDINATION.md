@@ -1369,3 +1369,21 @@ Files written: `session-6d8f5d05/**` (new). Additive row in `workspaces.html`. N
 - **Local full-workflow re-run before merge** (CI order, all pass, porcelain clean): `tools/model.py` · `session-f4f700c0` build/audit/check/tests · `tools/build_site.py` · `tools/check_site.py` · `tools/export_ledger.py` · `4ed347de` · `343c7030` · `a3a8ec08` · `313ba936` · **`3090b9ed` model/build/verify (new CI step)** · global gate · `6ad87c21` · `24d6cd5f` · `5f296f9d` · `d9c94ed0`.
 - **Session verifier:** `python3 session-3090b9ed/scripts/verify.py` → 7 checks, **PASS (0 errors)**; live page fetch confirms all 12 pages serve with correct counts (90/14/20/26/30/15).
 - **Scope:** all N4 work under `session-3090b9ed/**`; shared edits limited to the additive generator rows (N4 + adopted #42 rows), one CI step, one README section, regenerated audit outputs, and this record. Stale PRs #5/#6/#10/#14/#18/#30/#38/#40 untouched. Session `fe9d2a91` (PR #41, consolidation) left entirely alone.
+
+---
+
+# Session `5f15df5c` — 2026-11-12
+
+Platform branch: `arena/5f15df5c-jack2` (pinned active session branch). This session follows the platform branch constraint and keeps all deliverables in `session-5f15df5c/**`; no root pages, shared datasets, or files assigned to other sessions will be changed. Read the existing task board and repository before claiming. Prior workbooks are already published; this session will provide an additive independent review focused on decision readiness, missing owner/property inputs, official-source verification boundaries, privacy, and recommendation safeguards rather than duplicate their datasets.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| 5f-01 | Independent repository inventory and decision-readiness audit; claim | in progress | session-5f15df5c | `COORDINATION.md` (append only), `session-5f15df5c/audit/**` |
+| 5f-02 | Official-source-linked pre-decision questions, answerability, and acquisition plan | unclaimed | session-5f15df5c | `session-5f15df5c/questions.html`, `session-5f15df5c/data/questions.json` |
+| 5f-03 | Independent path comparison, conditional recommendation, decision triggers and scenario framework | unclaimed | session-5f15df5c | `session-5f15df5c/decision.html`, `session-5f15df5c/data/decision.json` |
+| 5f-04 | Privacy and source/link/blank-value verification for this workspace | unclaimed | session-5f15df5c | `session-5f15df5c/scripts/verify.py`, `session-5f15df5c/verification.html` |
+| 5f-05 | Workspace landing and dashboard pages (not wired into shared/root nav) | unclaimed | `session-5f15df5c` | `session-5f15df5c/index.html`, `session-5f15df5c/*.html`, `session-5f15df5c/assets/**` |
+
+**Privacy rule:** No personal names, street address, parcel/APN, account or contact details will be stored or published. The owner's identity and exact property are not required for this public research artifact. Property-specific figures that cannot be independently verified from supplied public information remain blank/unknown; no invented location or values. This is not individualized legal, tax, appraisal, or investment advice.
+
+**Integration boundary:** No edits to shared `tools/build_site.py`, root `index.html`, workspaces, CI, shared data, or another session's directory. This branch is the Arena-pinned branch; no alternate task branch will be created. Any request to integrate into a shared page is logged rather than made.
