@@ -828,6 +828,8 @@ def build_flagged():
 {head_block("Flagged for review", "Everything this workbook could not verify, and everything it found wrong",
             "None of these items block publication. They block a <em>binding</em> decision. Each one states what is missing, why it matters, and what to obtain.")}
 
+<div class="callout warn" role="note"><p><strong>New independent review:</strong> <a href="session-95d0beb9/index.html">Decision-critical findings flagged for review</a> documents a ULA threshold boundary error, model scaling and break-even limitations, and source and privacy-check caveats. Do not treat illustrative scenario results as a property-specific recommendation.</p></div>
+
 <div class="callout warn">
 <p><strong>Count:</strong> {len(UNV)} blank data rows &middot; {len(IRR['data_irregularities'])} data issues &middot;
 {len(IRR['repo_irregularities'])} repository issues &middot; {len(PROP['fields_required_before_a_binding_decision'])} missing documents.
@@ -1241,6 +1243,8 @@ def build_current_index():
   on this question in this repository, from overlapping and partly assumed inputs. This page tells you which one to
   read first, why, and what none of them can tell you.</p>
 </section>
+
+<div class="callout warn" role="note"><p><strong>Read before relying on model results:</strong> An <a href="session-95d0beb9/index.html">independent decision-critical review</a> flags a tax threshold error and limitations in the recommended model's scaling, break-even comparisons and hazard assumptions. Those results are illustrative, not a basis for a final property-specific decision.</p></div>
 
 <div class="callout ok" role="note">
   <h3 style="margin-top:0">Also new: <a href="session-6d8f5d05/index.html">session-6d8f5d05</a> (2026-11-11)</h3>
