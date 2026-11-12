@@ -1597,3 +1597,7 @@ Platform note: Arena pins this session to branch `arena/7663f9db-jack2`; no alte
 ### Session P / PR #56 concurrent integration (2026-11-12)
 
 While PR #57 was being verified, `main` advanced to `6e1e9f0` with Session P (#56). Normal merge conflicts occurred in the workflow, append-only coordination log and generated workspace index; the root builder also auto-merged. Kept both Session P and cfe293bd workflow steps, all Session P claims/deployment material, and both workspace rows; regenerated root workspaces. During this merge review, identified and removed the stray unconditional `exit 1` / `fi` pair that caused PR #57's first workflow failure. No files under `session-7663f9db/` were edited. Re-ran cfe build/verify, root model/build/check and whitespace checks: pass; root checker now reports 17 root pages and 250 total including archives.
+
+### PR #57 second CI rerun diagnosis (2026-11-12)
+
+The rerun after the CFE-guard correction failed at the Session P workflow step, not at its data checks. An isolated replay of the full workflow sequence in a clean archived checkout regenerated Session P and passed its V1–V7 verifier with no Session P file changes; review of the merged workflow then exposed a second unconditional `exit 1` / `fi` pair after the Session P guard, introduced by the same conflict-resolution pattern. Removed only the stray pair; both the cfe and Session P guarded steps now close exactly once. The existing Session P scripts/data were not edited. A fresh PR check is required.

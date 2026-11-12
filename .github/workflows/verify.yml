@@ -120,8 +120,6 @@ jobs:
             git status --porcelain -- session-7663f9db/
             exit 1
           fi
-            exit 1
-          fi
 
       - name: Fail if generated files are out of date
         run: |
