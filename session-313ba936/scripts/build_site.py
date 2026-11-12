@@ -56,6 +56,7 @@ NAV = [
     ("flagged.html", "Flagged for review"),
     ("sources.html", "Sources"),
     ("privacy.html", "Privacy"),
+    ("suggestions.html", "Suggestions & review"),
 ]
 
 MONEY = "${:,.0f}"
@@ -1087,6 +1088,93 @@ needs to see them.</p>
     return page("privacy.html", "Privacy", body, "How personal and parcel-identifying information is excluded by construction.")
 
 
+# =========================================================================== suggestions page
+def build_suggestions():
+    """Suggestions for improving decision making and discovering missing information.
+
+    These are analyst recommendations, not measured values. They carry no source link
+    because they describe actions the owner or the analyst can take, not statistics
+    read from an official page. They are listed here so they can be reviewed, ranked,
+    and approved before anything is changed on the site or in the model.
+    """
+    body = head(
+        "Suggestions and review",
+        "Suggestions — review before implementing any change",
+        "Analyst proposals for improving this workbook's decision-making coverage and for closing the information gaps that block a binding decision. "
+        "None of these is a measured value; each is a proposed action with a priority and a suggested owner. "
+        "Review and approve here before touching the model, the data, or the site.",
+    )
+
+    body += """<h2>How to use this page</h2>
+<p>Each suggestion below is a proposed change to the workbook, the model, or the owner's information-gathering. Read the rationale, check the priority, and decide whether to adopt it. Approved suggestions are implemented by editing the data files or the build script, then re-running <code>build_site.py</code> and <code>verify.py</code>. No suggestion is live until it has been re-verified.</p>
+
+<div class=\"callout warn\"><p><strong>Review before implementing.</strong> Changing an assumption, a weight, a cap rate, or a source can move the breakevens and flip the recommendation. Treat every suggestion as a hypothesis: adopt it, re-run the model, and confirm the decision still holds before publishing.</p></div>
+
+<h2>Suggestions to improve decision-making coverage</h2>
+"""
+    body += table(
+        ["ID", "Category", "Suggestion", "Why it matters", "Priority", "Suggested owner"],
+        [
+            ["S01", "Model inputs", "Replace the assumed going-in cap rate (6.8%) with a broker opinion of value or a recent comparable sale for a single-tenant NNN restaurant in central LA.", "The breakeven (6.52%) is only meaningful against a real market cap rate. Without one, the hold-vs-sell answer is an assumption, not a conclusion.", "Critical", "Owner + broker"],
+            ["S02", "Tenant credit", "Obtain the franchisee entity's financial statements, not just the parent's SEC filings.", "The lease is with the local franchisee. Parent-company strength does not guarantee this unit's rent will be paid.", "High", "Owner"],
+            ["S03", "Lease terms", "Read the executed lease and amendments: exact expiry, option notice dates, escalations, recovery structure, go-dark and co-tenancy clauses.", "Fourteen owner-specific lease fields are blank because the lease has not been supplied. The option notice date is the most time-critical item.", "Critical", "Owner"],
+            ["S04", "Insurance", "Get written property, fire and earthquake insurance quotes with deductibles before deciding.", "Insurance cost or availability is the clearest sell signal in this asset class and is currently entirely absent.", "High", "Owner"],
+            ["S05", "Tax", "Model the owner's actual adjusted basis, depreciation recapture, and capital-gains rate with a CPA.", "The workbook deliberately does not quote a tax rate because it depends on the owner's basis and filing status. The 1031 exchange benefit cannot be sized without it.", "High", "Owner + CPA"],
+            ["S06", "Debt", "Obtain existing loan documents and check for defeasance or prepayment penalties.", "A sale may trigger defeasance costs that materially reduce net proceeds.", "Medium", "Owner"],
+            ["S07", "Valuation", "Order a full appraisal (not just a broker opinion) before listing or exchanging.", "The model expresses all values per $100,000 of rent because the rent is unknown. An appraisal converts breakevens into dollars.", "Critical", "Owner"],
+            ["S08", "Scenario coverage", "Add a refinancing scenario (hold + refi at current rates) alongside sell and hold.", "The current model compares sell vs hold; it does not model refinancing the existing debt at today's rates.", "Medium", "Analyst"],
+            ["S09", "Sensitivity", "Publish a tornado diagram showing which input moves the breakeven most.", "Would make it obvious which unknown (rent, cap rate, insurance cost, tax rate) dominates the decision.", "Medium", "Analyst"],
+            ["S10", "Presentation", "Add a plain-language one-page summary for a non-technical owner.", "The current pages are detailed but assume familiarity with cap rates, 1031 exchanges, and Monte Carlo output.", "Low", "Analyst"],
+        ],
+        numeric=(),
+        caption="Suggestions to close the gap between what the workbook knows and what a binding decision needs.",
+    )
+
+    body += """<h2>Suggestions to discover missing information</h2>
+<p>These map to the twelve owner-supplied documents (P01&ndash;P12) listed on the Flagged page. Each one is information the owner holds and this repository cannot obtain.</p>
+"""
+    body += table(
+        ["ID", "Information needed", "Where it lives", "Why the decision is blocked without it", "Priority"],
+        [
+            ["M01", "Exact lease expiration date and option notice deadline", "Executed lease (P01)", "The 2030&ndash;2035 window spans base term and options; the difference changes the hold/sell arithmetic by years.", "Critical"],
+            ["M02", "Current contract rent and escalation mechanism", "Rent roll (P03)", "All valuation math keys off actual NOI. Per-$100,000 figures are a placeholder until the real rent is known.", "Critical"],
+            ["M03", "Renewal option terms (rent reset, term length)", "Lease amendments (P01)", "The recommended strategy is to negotiate an extension; the option terms define what is negotiable.", "Critical"],
+            ["M04", "Owner's adjusted basis and depreciation taken", "Tax records (P05)", "Required to size capital gains, depreciation recapture, and the 1031 exchange benefit.", "High"],
+            ["M05", "Existing debt structure and prepayment terms", "Loan documents (P06)", "A sale may trigger defeasance; a renewal may require refinancing at current rates.", "High"],
+            ["M06", "Parcel APN and legal description", "Deed / tax bill (P07)", "Needed for CAL FIRE fire-hazard, FEMA flood-zone, CGS seismic and Assessor lookups. The address is deliberately not stored here.", "High"],
+            ["M07", "Property condition and capital needs", "Condition report (P08)", "Determines capital reserve sizing and insurability; affects net operating income.", "Medium"],
+            ["M08", "Insurance declarations page (premium, deductibles, coverage)", "Insurance policy (P09)", "Verifies NNN recovery structure and whether wildfire/earthquake cover is obtainable at all.", "High"],
+            ["M09", "Franchisee financial statements", "Franchisee books (P10)", "Tenant credit is the largest driver of the cap-rate spread between this asset and the market benchmark.", "High"],
+            ["M10", "Broker opinion of value / appraisal", "Broker report (P11)", "Converts the model's per-rent breakevens into a dollar value the owner can act on.", "Critical"],
+            ["M11", "Zoning and general plan designation", "City planning (P12)", "Determines re-tenanting or redevelopment potential if the tenant leaves at expiry.", "Medium"],
+            ["M12", "Operating expense history (NNN purity check)", "Expense records (P04)", "Confirms the lease is truly net-net-net and quantifies any leakage to the owner.", "Medium"],
+        ],
+        numeric=(),
+        caption="Information the owner must supply. None of it is in this repository, by design.",
+    )
+
+    body += """<h2>Suggested review and approval sequence</h2>
+<ol>
+<li><strong>Read this page</strong> and mark each suggestion adopt / defer / reject.</li>
+<li><strong>Adopted suggestions</strong> are implemented by editing data files or scripts only &mdash; never by hand-editing HTML.</li>
+<li><strong>Re-run</strong> <code>python3 session-313ba936/scripts/build_site.py</code> and <code>python3 session-313ba936/scripts/verify.py</code>.</li>
+<li><strong>Confirm</strong> all 20 verification checks pass before publishing.</li>
+<li><strong>Commit</strong> the changed data and scripts together with the regenerated HTML in one pull request.</li>
+<li><strong>Review</strong> the merged result on GitHub Pages before making any decision based on it.</li>
+</ol>
+
+<div class=\"callout ok\"><p><strong>Standing rule.</strong> No suggestion changes a published number until the model has been re-run, the breakevens re-checked, and all 20 verification checks pass. A suggestion that moves the breakeven cap or the replacement yield is a decision-changing change &mdash; treat it with the same scrutiny as the original model.</p></div>
+
+<h2>What is deliberately NOT a suggestion</h2>
+<ul>
+<li>This page does not suggest a property value &mdash; the rent is unknown, so a value would be an invention.</li>
+<li>This page does not suggest a capital-gains rate &mdash; that depends on the owner's basis and filing status.</li>
+<li>This page does not suggest the parcel address or APN &mdash; personal and parcel-identifying information is excluded by construction (see <a href=\"privacy.html\">Privacy</a>).</li>
+</ul>
+"""
+    return page("suggestions.html", "Suggestions &amp; review", body, "Analyst proposals for improving the workbook and closing information gaps; review before implementing.")
+
+
 # =========================================================================== main
 def main():
     pages = {
@@ -1105,6 +1193,7 @@ def main():
         "flagged.html": build_flagged,
         "sources.html": build_sources,
         "privacy.html": build_privacy,
+        "suggestions.html": build_suggestions,
     }
     for slug, fn in pages.items():
         html_out = fn()
