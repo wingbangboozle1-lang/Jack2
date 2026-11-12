@@ -1,0 +1,352 @@
+{
+ "meta": {
+  "what_this_is": "Scenario settings for canonical/model.py. Nothing in this file is a verified fact about the property. Each setting is either an ANCHOR (a number taken from a verified ledger row, named in 'row') or an ASSUMPTION (set by the analyst because no official source exists). Change any value and re-run the model.",
+  "unit": "All money amounts are per $100 of the property's CURRENT yearly net rent, because the actual rent is unknown. Multiply by (actual yearly rent / 100) to convert.",
+  "start_year": 2026,
+  "horizon_year": 2040,
+  "trials": 20000,
+  "seed": 20261112
+ },
+ "expiry_years": [
+  2030,
+  2031,
+  2032,
+  2033,
+  2034,
+  2035
+ ],
+ "settings": {
+  "reinvest_rate": {
+   "kind": "anchor",
+   "row": "CM-001",
+   "value": 4.98,
+   "low": 3.5,
+   "high": 6.0,
+   "unit": "% a year",
+   "label": "Return on sale proceeds held in Treasuries",
+   "why": "10-year Treasury yield on the latest posted date. Held fixed in the base case."
+  },
+  "cap_long": {
+   "kind": "anchor",
+   "row": "CM-040",
+   "value": 6.8,
+   "low": 5.5,
+   "high": 7.8,
+   "unit": "%",
+   "label": "Yield a buyer pays for a long lease, here or elsewhere",
+   "why": "No official source prices a single Los Angeles restaurant lease. The model uses one filed figure, the initial cash yield on a large net-lease buyer's third-quarter 2026 investments, for BOTH this property (once its lease is long) and a replacement property, so that neither side is favoured by a guess. The low case allows for scarce Los Angeles land; the high case is the yield at which another national buyer sold leased properties (row CM-023)."
+  },
+  "cap_sigma": {
+   "kind": "assumption",
+   "value": 0.4,
+   "low": 0.0,
+   "high": 0.8,
+   "unit": "points a year",
+   "label": "Yearly random movement of that yield",
+   "why": "Analyst setting. The 10-year Treasury moved 0.14 point within the first seven trading days of November 2026 (rows CM-001, CM-007)."
+  },
+  "cap_revert": {
+   "kind": "assumption",
+   "value": 0.2,
+   "low": 0.0,
+   "high": 0.5,
+   "unit": "share a year",
+   "label": "Pull of that yield back to its starting level",
+   "why": "Analyst setting; keeps the random walk bounded."
+  },
+  "short_premium": {
+   "kind": "assumption",
+   "value": 1.5,
+   "low": 0.5,
+   "high": 3.0,
+   "unit": "points",
+   "label": "Extra yield a buyer demands when the lease is about to expire",
+   "why": "Applied in proportion to the years missing from a 10-year remaining term. No official source measures it; a filed purchase yield of 7.3% is for 19.6-year leases (row CM-022)."
+  },
+  "sell_cost": {
+   "kind": "assumption",
+   "value": 3.06,
+   "low": 2.0,
+   "high": 7.1,
+   "unit": "% of price",
+   "label": "Cost of selling",
+   "why": "2.5% assumed for brokerage, escrow and legal, plus the verified 0.56% city and county transfer tax (row TX-015). The high case adds the Measure ULA 4% if the price exceeds $5,400,000 (row TX-016)."
+  },
+  "buy_cost": {
+   "kind": "assumption",
+   "value": 1.0,
+   "low": 0.5,
+   "high": 2.0,
+   "unit": "% of price",
+   "label": "Cost of buying a replacement property",
+   "why": "Analyst setting for due diligence, escrow and exchange-intermediary fees."
+  },
+  "tax_drag": {
+   "kind": "assumption",
+   "value": 0.0,
+   "low": 0.0,
+   "high": 30.0,
+   "unit": "% of net price",
+   "label": "Share of a cash sale lost to income tax",
+   "why": "Unknown: depends on the owner's basis, depreciation and bracket (rows PL-040, PL-044). The base case is shown before tax; a sensitivity table shows 10%, 20% and 30%. Top statutory rates are 23.8% federal and 13.30% California on the gain (rows TX-049, TX-060)."
+  },
+  "p_renew": {
+   "kind": "anchor",
+   "row": "CM-054",
+   "value": 76.2,
+   "low": 40.0,
+   "high": 90.0,
+   "unit": "%",
+   "label": "Chance the tenant renews at expiry",
+   "why": "Share of expiring leases renewed by the same tenant in a large national portfolio over nine months of 2026. Not specific to this tenant, whose system is shrinking (rows TN-085, TN-080); the low case reflects that."
+  },
+  "renew_rent": {
+   "kind": "anchor",
+   "row": "CM-058",
+   "value": 103.1,
+   "low": 85.0,
+   "high": 110.0,
+   "unit": "% of old rent",
+   "label": "Rent after a renewal",
+   "why": "New rent as a share of old rent on re-leased units in the same national portfolio."
+  },
+  "renew_term": {
+   "kind": "assumption",
+   "value": 10,
+   "low": 5,
+   "high": 20,
+   "unit": "years",
+   "label": "Length of a renewal",
+   "why": "Analyst setting; option periods are commonly five years each. The actual options are unknown (row PL-014)."
+  },
+  "p_extend_now": {
+   "kind": "assumption",
+   "value": 60.0,
+   "low": 30.0,
+   "high": 85.0,
+   "unit": "%",
+   "label": "Chance the tenant agrees to extend early if asked now",
+   "why": "Unknown until the tenant is asked. Asking is cheap and the answer is information: the model treats tenants who would extend today as the keenest of those who would renew at expiry, so a refusal lowers the remaining chance of renewal to (renewal chance minus this chance) divided by (100 minus this chance)."
+  },
+  "intent_change": {
+   "kind": "assumption",
+   "value": 30.0,
+   "low": 0.0,
+   "high": 60.0,
+   "unit": "%",
+   "label": "Chance the tenant's intention changes between now and expiry",
+   "why": "Analyst setting. A signed extension protects against this; waiting does not. The tenant has an interim chief executive with a successor due within twelve months and a running closure programme (rows TN-090, TN-080)."
+  },
+  "extend_rent": {
+   "kind": "assumption",
+   "value": 100.0,
+   "low": 90.0,
+   "high": 105.0,
+   "unit": "% of current rent",
+   "label": "Rent under an early extension",
+   "why": "Analyst setting; a tenant may ask for a concession in exchange for term."
+  },
+  "extend_term": {
+   "kind": "assumption",
+   "value": 15,
+   "low": 10,
+   "high": 20,
+   "unit": "years from now",
+   "label": "Remaining term after an early extension",
+   "why": "Analyst setting."
+  },
+  "vacant_carry": {
+   "kind": "assumption",
+   "value": 15.0,
+   "low": 8.0,
+   "high": 25.0,
+   "unit": "% of last rent a year",
+   "label": "Owner's cost of an empty building",
+   "why": "Property tax, insurance, security and upkeep revert to the owner when a net lease ends. Analyst setting; the actual tax bill is unknown (row PL-004)."
+  },
+  "vacant_years": {
+   "kind": "assumption",
+   "value": 1,
+   "low": 0,
+   "high": 3,
+   "unit": "years",
+   "label": "Time empty before a new lease or a sale",
+   "why": "Analyst setting."
+  },
+  "p_relet": {
+   "kind": "assumption",
+   "value": 50.0,
+   "low": 20.0,
+   "high": 80.0,
+   "unit": "%",
+   "label": "Chance an empty building is re-let rather than sold empty",
+   "why": "Analyst setting. In the national portfolio, 66 expired leases went to a new tenant against 181 vacant sales (rows CM-052, CM-053), a harsher split."
+  },
+  "relet_rent": {
+   "kind": "assumption",
+   "value": 90.0,
+   "low": 60.0,
+   "high": 110.0,
+   "unit": "% of last rent",
+   "label": "Rent from a new tenant",
+   "why": "Analyst setting. Market rent for the site is unknown."
+  },
+  "relet_cost": {
+   "kind": "assumption",
+   "value": 100.0,
+   "low": 50.0,
+   "high": 200.0,
+   "unit": "% of one year's new rent",
+   "label": "Cost of re-letting (commissions, allowances)",
+   "why": "Analyst setting."
+  },
+  "relet_term": {
+   "kind": "assumption",
+   "value": 15,
+   "low": 10,
+   "high": 20,
+   "unit": "years",
+   "label": "Length of a new tenant's lease",
+   "why": "Analyst setting."
+  },
+  "vacant_value": {
+   "kind": "anchor",
+   "row": "CM-034",
+   "value": 63.0,
+   "low": 40.0,
+   "high": 90.0,
+   "unit": "% of leased value",
+   "label": "Value of the building empty",
+   "why": "Price per square foot of vacant sales as a share of leased sales in a national portfolio over nine months of 2026. In Los Angeles land value may hold this higher (row PL-009)."
+  },
+  "p_credit": {
+   "kind": "assumption",
+   "value": 1.5,
+   "low": 0.5,
+   "high": 4.0,
+   "unit": "% a year",
+   "label": "Yearly chance the tenant stops paying or closes this restaurant early",
+   "why": "Analyst setting. No official default probability exists. The tenant reports a stockholders' deficit and a closure programme (rows TN-043, TN-080) but also positive earnings (row TN-034)."
+  },
+  "p_regional_event": {
+   "kind": "anchor",
+   "row": "HZ-010",
+   "value": 3.0,
+   "low": 1.5,
+   "high": 5.0,
+   "unit": "% a year",
+   "label": "Yearly chance of a regional disaster (magnitude 6.7+ earthquake as the yardstick)",
+   "why": "Constant yearly chance consistent with the official 30-year forecast for the Los Angeles region. Used as the yardstick for any region-wide shock: earthquake, major fire, unrest."
+  },
+  "p_site_damage": {
+   "kind": "assumption",
+   "value": 15.0,
+   "low": 5.0,
+   "high": 40.0,
+   "unit": "% of regional events",
+   "label": "Chance a regional disaster seriously damages this building",
+   "why": "Unknown: depends on the parcel's ground, the building and its distance from the event (rows PL-030 to PL-033). The forecast itself says consequences depend on site and structure (row HZ-008)."
+  },
+  "damage_loss": {
+   "kind": "assumption",
+   "value": 35.0,
+   "low": 10.0,
+   "high": 70.0,
+   "unit": "% of value",
+   "label": "Owner's uninsured loss if the building is seriously damaged",
+   "why": "Unknown: depends on the lease's casualty clause and the insurance in force (rows PL-023, PL-034)."
+  },
+  "p_lease_ends_on_damage": {
+   "kind": "assumption",
+   "value": 50.0,
+   "low": 10.0,
+   "high": 90.0,
+   "unit": "%",
+   "label": "Chance the lease ends after serious damage",
+   "why": "Unknown until the casualty clause is read (row PL-023)."
+  },
+  "regional_cap_bump": {
+   "kind": "assumption",
+   "value": 1.0,
+   "low": 0.0,
+   "high": 2.0,
+   "unit": "points",
+   "label": "Rise in the local buyer yield after a regional disaster",
+   "why": "Analyst setting; fades through the 'pull back' setting above."
+  },
+  "regional_renew_hit": {
+   "kind": "assumption",
+   "value": 90.0,
+   "low": 70.0,
+   "high": 100.0,
+   "unit": "% of prior chance",
+   "label": "Chance of renewal after a regional disaster in the two years before expiry",
+   "why": "Analyst setting."
+  },
+  "rent_growth": {
+   "kind": "assumption",
+   "value": 1.0,
+   "low": 0.0,
+   "high": 2.0,
+   "unit": "% a year",
+   "label": "Contract rent increases on the current lease",
+   "why": "Unknown (row PL-015). The tenant says its leases generally carry cost-of-living adjustments (row TN-064). Set equal to the replacement lease's increases so that neither side is favoured."
+  },
+  "repl_cap": {
+   "kind": "anchor",
+   "row": "CM-040",
+   "value": 6.8,
+   "low": 6.0,
+   "high": 7.3,
+   "unit": "%",
+   "label": "Yield on a replacement property bought in an exchange",
+   "why": "Same filed figure as above. A private buyer of one property may do better or worse."
+  },
+  "repl_term": {
+   "kind": "anchor",
+   "row": "CM-022",
+   "value": 19.6,
+   "low": 10.0,
+   "high": 20.0,
+   "unit": "years",
+   "label": "Lease length on the replacement property",
+   "why": "Average lease term on a national buyer's third-quarter 2026 purchases."
+  },
+  "repl_growth": {
+   "kind": "assumption",
+   "value": 1.0,
+   "low": 0.0,
+   "high": 2.0,
+   "unit": "% a year",
+   "label": "Rent increases on the replacement lease",
+   "why": "Analyst setting, equal to the setting for the current lease."
+  },
+  "repl_p_credit": {
+   "kind": "assumption",
+   "value": 0.5,
+   "low": 0.0,
+   "high": 2.0,
+   "unit": "% a year",
+   "label": "Yearly chance the replacement tenant fails",
+   "why": "Analyst setting; assumes a stronger tenant and a location outside the Los Angeles hazard region."
+  },
+  "downside_weight": {
+   "kind": "assumption",
+   "value": 0.5,
+   "low": 0.0,
+   "high": 1.0,
+   "unit": "weight",
+   "label": "How heavily the owner counts a bad outcome",
+   "why": "Balanced score = typical outcome minus this weight times the gap down to the 1-in-20 bad outcome. 0 looks only at the typical outcome (growth); 1 looks only at the bad outcome (preservation); 0.5 is the balance the brief asks for."
+  },
+  "terminal_years_left": {
+   "kind": "assumption",
+   "value": 5,
+   "low": 2,
+   "high": 10,
+   "unit": "years",
+   "label": "Lease term assumed to remain when values are struck in 2040",
+   "why": "Every leased property still owned in 2040 is valued as if this many years remained, so that no strategy is favoured by where its lease happens to stand in that one year."
+  }
+ }
+}
