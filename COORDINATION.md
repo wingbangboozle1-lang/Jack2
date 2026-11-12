@@ -1378,10 +1378,16 @@ Platform note: pinned to `arena/6596c3f2-jack2`; that branch doubles as the PR/i
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| O-01 | Claim + repo/privacy audit | in progress | session-6596c3f2 | `COORDINATION.md` (append only) |
-| O-02 | Fresh official-source verification, access date 2026-11-12; every row source-linked, unverified blank + flagged | claimed | session-6596c3f2 | `session-6596c3f2/data/sources.json`, `session-6596c3f2/data/metrics.json` |
-| O-03 | Questions / information / answers register + dedicated Suggestions-for-Review register (nothing auto-implemented) | claimed | session-6596c3f2 | `session-6596c3f2/data/questions.json`, `session-6596c3f2/data/suggestions.json` |
-| O-04 | Projection system: normalized deterministic scenarios + seeded Monte Carlo, 2030–2035 expiry grid; risk register mapped to every decision | claimed | session-6596c3f2 | `session-6596c3f2/scripts/model.py`, `session-6596c3f2/data/model_output.json`, `session-6596c3f2/data/risks.json`, `session-6596c3f2/data/decisions.json` |
-| O-05 | Executive summary + clean dashboard (landing + category subpages, table format) | claimed | session-6596c3f2 | `session-6596c3f2/*.html`, `session-6596c3f2/assets/`, `session-6596c3f2/EXECUTIVE_SUMMARY.md` |
-| O-06 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check | claimed | session-6596c3f2 | `session-6596c3f2/scripts/build_site.py`, `session-6596c3f2/scripts/verify.py` |
-| O-07 | Final integration: one additive workspace row, PR to `main`, merge without waiting, confirm Pages deploy, record result here | claimed | session-6596c3f2 | `tools/build_site.py` (one additive row in `build_workspaces()` only), `.github/workflows/verify.yml` (one additive step only), this file |
+| O-01 | Claim + repo/privacy audit | done | session-6596c3f2 | `COORDINATION.md` (append only) |
+| O-02 | Fresh official-source verification, access date 2026-11-12; every row source-linked, unverified blank + flagged | done | session-6596c3f2 | `session-6596c3f2/data/sources.json`, `session-6596c3f2/data/metrics.json` |
+| O-03 | Questions / information / answers register + dedicated Suggestions-for-Review register (nothing auto-implemented) | done | session-6596c3f2 | `session-6596c3f2/data/questions.json`, `session-6596c3f2/data/suggestions.json` |
+| O-04 | Projection system: normalized deterministic scenarios + seeded Monte Carlo, 2030–2035 expiry grid; risk register mapped to every decision | done | session-6596c3f2 | `session-6596c3f2/scripts/model.py`, `session-6596c3f2/data/model_output.json`, `session-6596c3f2/data/risks.json`, `session-6596c3f2/data/decisions.json` |
+| O-05 | Executive summary + clean dashboard (landing + category subpages, table format) | done | session-6596c3f2 | `session-6596c3f2/*.html`, `session-6596c3f2/assets/`, `session-6596c3f2/EXECUTIVE_SUMMARY.md` |
+| O-06 | Automated verifier: source-per-row, blank-if-unverified, PII scan, internal-link check | done | session-6596c3f2 | `session-6596c3f2/scripts/build_site.py`, `session-6596c3f2/scripts/verify.py` |
+| O-07 | Final integration: one additive workspace row, PR to `main`, merge without waiting, confirm Pages deploy, record result here | done | session-6596c3f2 | `tools/build_site.py` (one additive row in `build_workspaces()` only), `.github/workflows/verify.yml` (one additive step only), this file |
+
+## Session O verification record (2026-11-12)
+- Sources read today: Census QuickFacts V2025, BLS metro TED + LA CPI Oct 2026 (26-1670-SAN), CA EDD Sep 2026, BEA BEA 26-08, FRED DGS10 (4.88%, 2026-11-09), SEC EDGAR JACK 10-K FY2025 + 10-Q Q3 FY2026 (accession 0000807882-26-000091), CA DIR, USGS UCERF3 FAQ, LA County Eaton/Palisades fact sheet, LA City Finance ULA FAQ, IRS 1031, CA BOE Pub 29, CA DOF portal, LAEDC via LA City. 51 metric rows: 39 verified, 2 flagged-with-caution, 10 blank.
+- Irregularities flagged F-01..F-08 on `session-6596c3f2/flagged.html`, including DOF vintage conflict (B06 blank), BLS Oct YoY lapse gap (F-02), Eaton count timing variance (F-04), JACK debt-definition conflict (B08 blank), LAUSD official-release gap (B05 blank), no official cap rate (B07 blank).
+- Checks: `session-6596c3f2/scripts/verify.py` PASS (0 errors); root `tools/check_site.py` all checks passed (221 pages scanned); root rebuild changed only `workspaces.html` (one additive Session O row via `tools/build_site.py`); one additive CI step in `.github/workflows/verify.yml`. No prior session file edited.
+- Privacy: placeholders only; PII regex scan clean; private values blank by design.

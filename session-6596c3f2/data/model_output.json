@@ -1,0 +1,109 @@
+{
+ "meta": {
+  "model": "Session O normalized model v1",
+  "seed": 20261112,
+  "trials": 10000,
+  "unit": "PV multiple of 1.0x annual NOI (per $100k NOI, multiply by NOI/1.0 in $100k units)",
+  "warning": "Illustrative framework only. No rent, price, or tax figure is verified. See B02/B07/B09."
+ },
+ "assumptions": {
+  "anchor_10y_treasury_pct": 4.88,
+  "anchor_source": "M28 (S05, FRED DGS10, 2026-11-09)",
+  "cap_short_term_base_pct": 6.75,
+  "cap_short_term_range_pct": [
+   6.0,
+   7.5
+  ],
+  "cap_long_term_base_pct": 6.25,
+  "cap_long_term_range_pct": [
+   5.75,
+   6.9
+  ],
+  "discount_rate_pct": 6.0,
+  "sell_cost_pct": 2.5,
+  "transfer_tax_below_ula_pct": 0.56,
+  "dark_land_factor_of_leased_value": 0.55,
+  "downtime_months_base": 18,
+  "renewal_rent_haircut_pct": 10,
+  "replacement_growth_pct": 3.0,
+  "tax_drag_strategy_E_assumption": "20% of an assumed 60% gain fraction = 12% of price (ILLUSTRATION ONLY - real tax is blank, Q-15)",
+  "note": "Assumptions are not market data. B07 (actual cap rate) is blank by design. Sensitivity grid below shows the decision across the full range."
+ },
+ "deterministic": {
+  "A_sell_now_1031": 14.49,
+  "B_extend_then_sell": 15.75,
+  "C_hold_to_expiry_dark_sale": 10.66,
+  "D_renew_at_expiry_hold": 13.83,
+  "E_sell_now_taxable_illustration": 12.87
+ },
+ "monte_carlo": {
+  "A": {
+   "mean": 14.55,
+   "p05": 13.25,
+   "p50": 14.5,
+   "ce_crra2": 14.5
+  },
+  "B": {
+   "mean": 15.0,
+   "p05": 13.9,
+   "p50": 14.97,
+   "ce_crra2": 14.97
+  },
+  "C": {
+   "mean": 10.07,
+   "p05": 8.44,
+   "p50": 10.04,
+   "ce_crra2": 9.96
+  },
+  "D": {
+   "mean": 12.28,
+   "p05": 10.87,
+   "p50": 12.29,
+   "ce_crra2": 12.21
+  },
+  "E": {
+   "mean": 12.8,
+   "p05": 11.66,
+   "p50": 12.76,
+   "ce_crra2": 12.76
+  }
+ },
+ "term_value": {
+  "sell_now_multiple": 14.81,
+  "sell_with_long_term_multiple": 16.0,
+  "extension_uplift_pct": 8.0,
+  "dark_sale_multiple_at_expiry": 8.15
+ },
+ "expiry_grid_hold_to_expiry": [
+  {
+   "expiry_year": 2030,
+   "years_of_rent_from_2026": 4,
+   "pv_multiple_of_annual_noi": 9.92
+  },
+  {
+   "expiry_year": 2031,
+   "years_of_rent_from_2026": 5,
+   "pv_multiple_of_annual_noi": 10.3
+  },
+  {
+   "expiry_year": 2032,
+   "years_of_rent_from_2026": 6,
+   "pv_multiple_of_annual_noi": 10.66
+  },
+  {
+   "expiry_year": 2033,
+   "years_of_rent_from_2026": 7,
+   "pv_multiple_of_annual_noi": 11.0
+  },
+  {
+   "expiry_year": 2034,
+   "years_of_rent_from_2026": 8,
+   "pv_multiple_of_annual_noi": 11.32
+  },
+  {
+   "expiry_year": 2035,
+   "years_of_rent_from_2026": 9,
+   "pv_multiple_of_annual_noi": 11.62
+  }
+ ]
+}
