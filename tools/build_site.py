@@ -1092,6 +1092,10 @@ def build_workspaces():
          "hold-to-expiry last), 13-page dashboard with automated verifier",
          "13 pages",
          "<a href='session-6596c3f2/index.html'>open &#8599;</a>"],
+        ["<code>session-cfe293bd/</code>",
+         "Session cfe293bd — 2026-11-12 decision-readiness workbook: 10 official sources read live, 16 area/property evidence rows (9 verified public area observations; 7 deliberately blank unverified rows), 20 pre-decision questions, 14 path-specific business-as-usual/cyclical and severe-event risks, a six-item suggestion review queue, privacy safeguards, and an explicit no-fabricated-forecast recommendation.",
+         "11 pages",
+         "<a href='session-cfe293bd/index.html'>open &#8599;</a>"],
         ["<code>session-3090b9ed/</code>",
          "Session N4 (branch <code>arena/3090b9ed-jack2</code>) &mdash; 2026-11-11 line-by-line verification "
          "workbook: 20 official sources read on the access date (BLS LA Summary, Census QuickFacts V2025, FRED, "

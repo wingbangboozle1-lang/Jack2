@@ -1,0 +1,69 @@
+[
+  {
+    "id": "SUG-01",
+    "priority": "1 — immediate",
+    "title": "Create a confidential property fact pack and redacted public-data workspace",
+    "proposal": "Gather lease, amendments, parcel/title, rent history, tax basis, debt, insurance, maintenance, environmental and title materials into an access-controlled private folder. Publish only placeholders and aggregate outputs.",
+    "why": "Most decision-critical facts are property- and owner-specific; neither broad market statistics nor the prompt reveals them.",
+    "review": "Pending review",
+    "status": "Proposal only — not implemented",
+    "source": "ASSR1"
+  },
+  {
+    "id": "SUG-02",
+    "priority": "2 — before any offer",
+    "title": "Run a dual-track lease-extension and sale process",
+    "proposal": "Ask tenant for written extension terms while obtaining confidential, written broker pricing and a third-party valuation range; do not commit to either path until both are comparable on net, risk-adjusted terms.",
+    "why": "Maintains optionality and reveals the tenant's willingness to pay versus market-clearing sale demand.",
+    "review": "Pending review",
+    "status": "Proposal only — no tenant contact made",
+    "source": "IRS1"
+  },
+  {
+    "id": "SUG-03",
+    "priority": "3 — underwriting",
+    "title": "Use after-tax cash flows and explicit decision hurdles",
+    "proposal": "Compare sell-now, sell near expiry, renew then hold, renew then sell, and tenant-default/reletting outcomes. Show gross value, transaction costs, tax range, debt payoff, replacement yield, downside, and liquidity separately.",
+    "why": "Headline sale price, cap-rate assumptions, or untaxed reinvestment returns are not directly comparable to retained rent and residual value.",
+    "review": "Pending review",
+    "status": "Proposal only — no model inputs fabricated",
+    "source": "IRS1"
+  },
+  {
+    "id": "SUG-04",
+    "priority": "4 — location verification",
+    "title": "Add parcel-scale planning, demand, school, and hazard evidence",
+    "proposal": "Only after location is privately validated, append geography-tagged ACS/trade-area statistics, traffic and competition, school assignments, zoning/permit history, FEMA/CAL FIRE/USGS layers, and written insurance quotes.",
+    "why": "City/county and metro indicators can be directionally useful but are not local substitutes. Hazard maps have geographic and methodological limitations.",
+    "review": "Pending review",
+    "status": "Proposal only — no parcel mapped",
+    "source": "FEMA1",
+    "also_sources": [
+      "CEN1",
+      "CDE1",
+      "LACITY1",
+      "FIRE1",
+      "USGS1"
+    ]
+  },
+  {
+    "id": "SUG-05",
+    "priority": "5 — governance",
+    "title": "Make source freshness, geography, status, and model assumptions visible on each row",
+    "proposal": "Keep a single data ledger with source URL, retrieval date, period, geography, unit, status, revision/vintage, uncertainty and owner; blank unknown values and expose a separate Flagged for Review list.",
+    "why": "The repository contains many overlapping workbooks with differing methods and vintage; a reader needs to distinguish observed facts from scenarios and stale claims.",
+    "review": "Pending review",
+    "status": "Proposal only — dashboard implements this for its own rows",
+    "source": "BLS1"
+  },
+  {
+    "id": "SUG-06",
+    "priority": "6 — privacy",
+    "title": "Keep all identifying and taxpayer data out of the public Pages site",
+    "proposal": "Never publish owner name, street address, APN, signatures, contact details, bank/debt account numbers, tax returns, personal basis or identifiable raw lease files. Use generated random IDs and rounded ranges only where disclosure risk is acceptable.",
+    "why": "A public static site is not an appropriate repository for sensitive documents; no such information is required for the public evidence dashboard.",
+    "review": "Approved as a hard constraint",
+    "status": "Mandatory privacy safeguard",
+    "source": "ASSR1"
+  }
+]

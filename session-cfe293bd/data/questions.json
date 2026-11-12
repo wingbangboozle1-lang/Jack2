@@ -1,0 +1,206 @@
+[
+  {
+    "id": "Q01",
+    "category": "Identity & land",
+    "question": "What is the verified parcel, legal description, and situs jurisdiction?",
+    "answer": "Unknown; intentionally withheld. The prompt only says central Los Angeles.",
+    "needed": "Title report and assessor record; keep identifier in private diligence files, not this site.",
+    "decision_impact": "Controls city/county rules, school assignments, hazard layers, tax records, and comparable selection.",
+    "source": "ASSR1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q02",
+    "category": "Lease & tenant",
+    "question": "What is the exact expiration date, options, notice window, and rent schedule?",
+    "answer": "Unknown. The only supplied range is 2030–2035; do not assume a specific year or exercise date.",
+    "needed": "Executed lease, amendments, notices, estoppels; counsel abstract and independent date check.",
+    "decision_impact": "Sets marketing timeline, negotiating leverage, and value of extension rights.",
+    "source": "LACITY1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q03",
+    "category": "Lease & tenant",
+    "question": "What exactly does the NNN lease make the tenant pay, and what remains landlord responsibility?",
+    "answer": "Unknown; NNN labels do not establish the actual allocation, exclusions, caps, or capital obligations.",
+    "needed": "Lease, amendments, operating statements, invoices, repair history, and counsel review.",
+    "decision_impact": "Determines landlord cash flow and net operating income; seller representations depend on it.",
+    "source": "LACITY1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q04",
+    "category": "Lease & tenant",
+    "question": "What are current base rent, escalators, percentage rent, credits, and collection history?",
+    "answer": "Unknown.",
+    "needed": "Rent ledger, bank reconciliation, tenant statements, amendments, and estoppel.",
+    "decision_impact": "Drives income valuation and buyer/lender underwriting.",
+    "source": "ASSR1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q05",
+    "category": "Lease & tenant",
+    "question": "Who is the named tenant, guarantor, and obligor, and what is the current credit evidence?",
+    "answer": "Not established for this site; no tenant contact or personal identifiers are published.",
+    "needed": "Lease/guaranty, tenant estoppel, current SEC filings for the relevant public obligor, and counsel confirmation of entity matching.",
+    "decision_impact": "A brand/operator is not necessarily the lease guarantor; affects default/reletting risk.",
+    "source": "IRS1",
+    "priority": "High"
+  },
+  {
+    "id": "Q06",
+    "category": "Asset & value",
+    "question": "What are actual trailing-12-month NOI, recurring capital needs, and deferred maintenance?",
+    "answer": "Unknown; no figures are inferred.",
+    "needed": "Property-level income/expense ledger, tax bills, inspections, environmental and engineering reports.",
+    "decision_impact": "Needed for yield, debt coverage, hold/sell valuation, and extension rent tests.",
+    "source": "ASSR1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q07",
+    "category": "Asset & value",
+    "question": "What is the defensible current sale price and cap-rate evidence?",
+    "answer": "Unknown; no valid site-specific broker opinion, offer, appraisal, or verified comparable set is available.",
+    "needed": "Independent appraisal and at least two written broker opinions; comparable sale evidence with lease term, credit, rent, location, and sale date normalized.",
+    "decision_impact": "No sell-vs-hold comparison is meaningful without net sale proceeds and confidence range.",
+    "source": "ASSR1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q08",
+    "category": "Tax & capital",
+    "question": "What are adjusted tax basis, depreciation, ownership structure, debt payoff, and selling costs?",
+    "answer": "Unknown and private; deliberately not collected or published.",
+    "needed": "CPA-produced basis and gain schedule; payoff statements; entity/legal review; transaction-cost estimates.",
+    "decision_impact": "Converts headline price into net after-tax proceeds; may change ranking materially.",
+    "source": "IRS1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q09",
+    "category": "Tax & capital",
+    "question": "Would a proposed reinvestment qualify for Section 1031 and meet the owner's objectives?",
+    "answer": "Not determinable. IRS guidance says the rules cover qualifying real property held for business/investment and do not automatically apply; transaction and taxpayer facts matter.",
+    "needed": "Tax attorney/CPA advice; identify replacement-property plan, timing, debt/equity replacement, boot, entity and taxpayer constraints.",
+    "decision_impact": "A deferred-tax exchange is not equivalent to tax-free cash and may constrain asset choice and timing.",
+    "source": "IRS1",
+    "priority": "High"
+  },
+  {
+    "id": "Q10",
+    "category": "Tax & capital",
+    "question": "What would a renewal/extension require, and what rent would make it preferable to sale?",
+    "answer": "Unknown. No contract option price, tenant proposal, owner hurdle rate, or net sale proceeds are available.",
+    "needed": "Tenant proposal and competing sale pricing; compare after-tax scenario cash flows under consistent assumptions.",
+    "decision_impact": "Sets the actual renewal hurdle; there is no universal renewal premium.",
+    "source": "IRS1",
+    "priority": "Critical"
+  },
+  {
+    "id": "Q11",
+    "category": "Market & place",
+    "question": "What is the site-specific customer catchment, traffic, visibility, access, and competition?",
+    "answer": "Unknown. City and county statistics are broad context and cannot stand in for this trade area.",
+    "needed": "Verified parcel, commercial traffic counts, drive-time catchment, permitted access, competitor locations, store sales (if lawfully available), and field study.",
+    "decision_impact": "Affects tenant sales durability, alternative use, and buyer demand.",
+    "source": "CEN1",
+    "priority": "High"
+  },
+  {
+    "id": "Q12",
+    "category": "Market & place",
+    "question": "What are the neighborhood's population, income, employment, housing, and development trends at a relevant scale?",
+    "answer": "Only city/county and metro proxies are verified here; tract/catchment series are blank.",
+    "needed": "Once location is privately verified, extract Census ACS tract/block group and local planning pipeline; record vintage, margins of error, and boundary.",
+    "decision_impact": "Macro scale and stale vintages can hide local demand changes; use multiple vintages and uncertainty bands.",
+    "source": "CEN1",
+    "priority": "High"
+  },
+  {
+    "id": "Q13",
+    "category": "Market & place",
+    "question": "Which schools serve this location and how are they performing?",
+    "answer": "Unknown. No school boundary is assigned; city-wide education attainment is not school quality.",
+    "needed": "Verify attendance boundaries with district, then review current CDE school/district Dashboard and enrollment trends.",
+    "decision_impact": "School context may signal residential demand but is indirect for a quick-service commercial parcel.",
+    "source": "CDE1",
+    "priority": "Medium"
+  },
+  {
+    "id": "Q14",
+    "category": "Land & compliance",
+    "question": "What zoning, overlays, entitlements, access easements, signage, and redevelopment limits apply?",
+    "answer": "Unknown at parcel level.",
+    "needed": "Parcel-specific ZIMAS review, title/easement report, permits, environmental review and planning counsel where material.",
+    "decision_impact": "Controls alternative uses, redevelopment option value, and compliance costs.",
+    "source": "LACITY1",
+    "priority": "High"
+  },
+  {
+    "id": "Q15",
+    "category": "Hazards & insurance",
+    "question": "What are parcel-specific flood, fire, seismic, soil, and climate exposures?",
+    "answer": "Unknown. No parcel result is inferred from regional location.",
+    "needed": "FEMA MSC/NFHL, CAL FIRE FHSZ, USGS/CGS layers, geotechnical/structural inspection, local hazard plan, and insurer/broker written terms.",
+    "decision_impact": "Hazards may affect repair costs, interruption, premiums, coverage availability, financing, and saleability.",
+    "source": "FEMA1",
+    "priority": "Critical",
+    "also_sources": [
+      "FIRE1",
+      "USGS1"
+    ]
+  },
+  {
+    "id": "Q16",
+    "category": "Hazards & insurance",
+    "question": "Can the property obtain appropriate commercial coverage at sustainable limits and premiums?",
+    "answer": "Unknown; no policy, quote, exclusions, deductible, or loss runs supplied.",
+    "needed": "Current declarations, five-year loss runs, replacement-cost appraisal, and quotes from admitted/non-admitted markets with exclusions and deductibles.",
+    "decision_impact": "Insurance gaps and price changes can erode net income and make hold/renew infeasible.",
+    "source": "FIRE1",
+    "priority": "High"
+  },
+  {
+    "id": "Q17",
+    "category": "Financing & estate",
+    "question": "What debt, guarantees, covenants, liquidity needs, and concentration limits apply?",
+    "answer": "Unknown and private; no personal financial details appear in this workbook.",
+    "needed": "Private lender payoff/covenant statement and confidential advisor review; model only anonymized ranges.",
+    "decision_impact": "Changes hold cost, default exposure, net proceeds, and prudent concentration.",
+    "source": "IRS1",
+    "priority": "High"
+  },
+  {
+    "id": "Q18",
+    "category": "Scenarios",
+    "question": "What time horizon and wealth objective should the analysis optimize?",
+    "answer": "Not specified beyond wealth preservation and growth with manageable risk.",
+    "needed": "Advisor-defined horizon, liquidity reserve, diversification target, risk tolerance, income needs, and opportunity-cost benchmark; keep private.",
+    "decision_impact": "Expected value alone can favor a concentrated or illiquid outcome inconsistent with the owner's risk capacity.",
+    "source": "IRS1",
+    "priority": "High"
+  },
+  {
+    "id": "Q19",
+    "category": "Timing",
+    "question": "When should the sell/renew decision process start?",
+    "answer": "Exact lease milestones are unknown, so no dated countdown is reliable. Begin with document abstraction and parallel market sounding well before the first notice deadline.",
+    "needed": "Counsel-confirmed option and notice calendar plus broker sale process timeline.",
+    "decision_impact": "Late action can forfeit options or leave insufficient marketing and tax planning time.",
+    "source": "LACITY1",
+    "priority": "High"
+  },
+  {
+    "id": "Q20",
+    "category": "Data quality",
+    "question": "Can the decision model be reproduced and stressed without false precision?",
+    "answer": "Yes in principle, but a property-specific model cannot be populated with the missing inputs listed above. Current workbook provides a data intake plan, not an appraisal or forecast.",
+    "needed": "Versioned source ledger, source date/vintage, explicit assumptions, scenario ranges, sensitivity and independent review.",
+    "decision_impact": "Prevents precise-looking outputs from disguising uncertain or placeholder inputs.",
+    "source": "BLS1",
+    "priority": "High"
+  }
+]
