@@ -3,7 +3,7 @@
     "as_of": "2026-11-08",
     "files": 584,
     "lines": 108874,
-    "bytes": 10195754,
+    "bytes": 10196332,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -17,7 +17,7 @@
       "root/config": {
         "files": 59,
         "lines": 19978,
-        "bytes": 2080021,
+        "bytes": 2080599,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -525,9 +525,9 @@
     {
       "path": "canonical/data/irregularities.json",
       "workspace": "root/config",
-      "bytes": 13250,
+      "bytes": 13569,
       "lines": 365,
-      "sha256": "098b1b4d85ba3ee0dd65ff5e609d48f46c2cd65418ad2c7b7558f43a8b247d0a",
+      "sha256": "3476e9f923b7df2c998f013b77f10b2dc7c84a61d412410b9d833ad64e251ec9",
       "kind": ".json",
       "url_count": 6,
       "pii_pattern_hits": 0,
@@ -637,9 +637,9 @@
     {
       "path": "canonical/data/suggestions.json",
       "workspace": "root/config",
-      "bytes": 9089,
+      "bytes": 9348,
       "lines": 185,
-      "sha256": "e077787871ca51faf05970f6d208958d644019bec94b3e5da014e1ca50ae27db",
+      "sha256": "8c78e65ab53d49f57f887a811c693ea76a7c7f1b4016b36808e780ef785b5da1",
       "kind": ".json",
       "url_count": 0,
       "pii_pattern_hits": 0,
