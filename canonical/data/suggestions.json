@@ -175,9 +175,9 @@
    "id": "SG-18",
    "area": "Privacy",
    "title": "Remove a personal e-mail address from the repository's history",
-   "what": "Early commits in the repository's history carry a personal e-mail address in their author field (the count is on the Flagged for Review page). Rewriting history would remove it.",
+   "what": "Commits in the repository's history carry a personal e-mail address in their author field (the count is on the Flagged for Review page), and each merge made through GitHub adds one. Step one, reversible: turn on the account setting that keeps the e-mail address private, so new commits and merges use a no-reply address. Step two, irreversible: rewrite history to remove it from existing commits.",
    "benefit": "Closes the one privacy item this review found. The address does not appear on the site.",
-   "cost": "High and irreversible: every commit identifier changes and every open branch and pull request must be rebuilt.",
+   "cost": "Step one is a setting. Step two is high-cost and irreversible: every commit identifier changes and every open branch and pull request must be rebuilt.",
    "needs": "Repository owner's explicit decision.",
    "status": "For review - not implemented"
   }
