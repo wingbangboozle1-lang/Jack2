@@ -109,8 +109,6 @@ jobs:
             git diff --stat -- session-cfe293bd/
             exit 1
           fi
-            exit 1
-          fi
 
       - name: Fail if generated files are out of date
         run: |
