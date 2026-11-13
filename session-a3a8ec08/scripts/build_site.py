@@ -7,9 +7,13 @@ accessible dashboard HTML pages with hard verification & privacy assertions.
 
 import html
 import json
+import sys
 from pathlib import Path
 
 SITE_ROOT = Path(__file__).resolve().parent.parent
+REPO = SITE_ROOT.parent
+sys.path.insert(0, str(REPO))
+from canonical.sanitize import sanitize_file
 DATA_DIR = SITE_ROOT / "data"
 
 PAGES = [
@@ -669,6 +673,7 @@ def build_all():
     for fname, eyebrow, title, intro, body in page_specs:
         out_file = SITE_ROOT / fname
         out_file.write_text(render_shell(fname, eyebrow, title, intro, body), encoding="utf-8")
+        sanitize_file(str(out_file))
 
     (SITE_ROOT / ".nojekyll").write_text("", encoding="utf-8")
     print(f"Built {len(page_specs)} dashboard HTML pages in {SITE_ROOT}")

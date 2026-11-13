@@ -8,8 +8,13 @@ import html
 import json
 import os
 import re
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO = os.path.dirname(ROOT)
+sys.path.insert(0, REPO)
+from canonical.sanitize import sanitize_file
+
 DATA_DIR = os.path.join(ROOT, "data")
 
 
@@ -1000,6 +1005,7 @@ def main():
         out_path = os.path.join(ROOT, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html_out)
+        sanitize_file(out_path)
         print(f"wrote {fname:24s} ({len(html_out):,d} bytes)")
     print("All 10 HTML pages built and verified clean of PII.")
 
