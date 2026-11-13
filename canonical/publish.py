@@ -24,11 +24,35 @@ from urllib.parse import unquote, urlsplit
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
-import build_site  # noqa: E402
 import privacy  # noqa: E402
 
-LIVE = "https://wingbangboozle1-lang.github.io/Jack2/"
-PAGE_FILES = sorted({slug for _, items in build_site.NAV for slug, _ in items} | {"archive.html"})
+# Frozen publication set: changes to the site's navigation must not silently
+# expand the public artifact. Add a page here only after reviewing it for release.
+PAGE_FILES = sorted({
+    "404.html",
+    "archive.html",
+    "decision.html",
+    "demographics.html",
+    "deployment.html",
+    "executive-summary.html",
+    "flagged.html",
+    "hazards.html",
+    "index.html",
+    "market-economics.html",
+    "privacy.html",
+    "projection-model.html",
+    "property-lease.html",
+    "questions.html",
+    "requirements.html",
+    "risks.html",
+    "sources.html",
+    "suggestions.html",
+    "taxes.html",
+    "tenant.html",
+    "valuation.html",
+    "verification.html",
+    "workspaces.html",
+})
 STATIC_FILES = ["assets/site.css", "assets/site.js", "favicon.svg", ".nojekyll"]
 ALLOWED_FILES = set(PAGE_FILES + STATIC_FILES)
 
@@ -106,6 +130,15 @@ def _safe_page(title, crumb, body):
 '''
 
 
+def _not_found_page():
+    body = '''<p class="lede">This page is not published on this website.</p>
+<div class="callout info"><strong>Privacy boundary.</strong> Historical workbooks and research files are not part of this Pages deployment.</div>
+<p>The source repository and its earlier history remain public. This deployment does not remove repository files or rewrite Git history.</p>
+<p>Read the <a href="workspaces.html">archive disposition</a> or the <a href="privacy.html">privacy note</a>.</p>'''
+    page = _safe_page("Page not found", "Not found", body)
+    return page.replace('<meta name="viewport"', '<meta name="robots" content="noindex">\n<meta name="viewport"')
+
+
 def _archive_page():
     body = '''<p class="lede">Historical workbooks are not part of this public website. This page does not show workbook titles, file paths, or links to the source repository.</p>
 <div class="callout info"><strong>Privacy boundary.</strong> This deployment includes only the consolidated dashboard and reviewed local assets. Historical pages are not copied into the Pages artifact.</div>
@@ -129,10 +162,10 @@ def _privacy_page():
 
 
 def _deployment_page():
-    body = f'''<p class="lede">{LIVE}</p>
+    body = '''<p class="lede">GitHub Actions publishes an explicit, privacy-reviewed artifact.</p>
 <table class="tbl site"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody>
 <tr><td>Publishing method</td><td>GitHub Actions deploys an explicit allowlist after the main-branch <code>verify</code> workflow succeeds.</td></tr>
-<tr><td>Included</td><td>Generated dashboard pages, the privacy-reviewed archive notice, the stylesheet and script, favicon, and <code>.nojekyll</code>.</td></tr>
+<tr><td>Included</td><td>Generated dashboard pages, privacy-reviewed archive and 404 notices, the stylesheet and script, favicon, and <code>.nojekyll</code>.</td></tr>
 <tr><td>Excluded</td><td>Historical workbook directories, research files, raw data, coordination records, source code, and Git metadata.</td></tr>
 <tr><td>External loads</td><td>None. Official-source links open only when followed by the reader.</td></tr>
 </tbody></table>
@@ -155,14 +188,22 @@ def _extract_href(attrs):
     return next((value for value in match.groups() if value is not None), "")
 
 
+def _official_gov_link(value):
+    parts = urlsplit(html.unescape(value.strip()))
+    try:
+        host = (parts.hostname or "").lower()
+        port = parts.port
+    except ValueError:
+        return False
+    return (parts.scheme.lower() == "https" and not parts.username and not parts.password
+            and port in (None, 443) and host.endswith(".gov"))
+
+
 def _unsafe_href(href, current_page):
     value = html.unescape(href.strip())
     parts = urlsplit(value)
     if parts.scheme or parts.netloc:
-        host = parts.netloc.lower()
-        if parts.scheme != "https" or host in {"github.com", "www.github.com"}:
-            return True
-        return not (host.endswith(".gov") or host == "wingbangboozle1-lang.github.io")
+        return not _official_gov_link(value)
     path = unquote(parts.path)
     if not path:
         target = current_page
@@ -205,7 +246,9 @@ def _transform_page(rel, text):
     text = re.sub(r'(?i)(href=["\']workspaces\.html)#[^"\']*', r'\1', text)
     # Do not leave raw repository URLs or old workspace paths as visible text.
     text = re.sub(r"https?://(?:www\.)?github\.com/[^\s<\"']+", "", text, flags=re.I)
-    if re.search(r"session-[0-9a-f]{8}/", text, flags=re.I) or re.search(r"github\.com/wingbangboozle1-lang/Jack2", text, flags=re.I):
+    if (re.search(r"session-[0-9a-f]{8}/", text, flags=re.I)
+            or re.search(r"github\.com/wingbangboozle1-lang/Jack2", text, flags=re.I)
+            or re.search(r"https?://[^\s\"'<>]*github\.io", text, flags=re.I)):
         raise ValueError(f"{rel}: unapproved repository or archive reference remains")
     return text
 
@@ -240,8 +283,7 @@ def _validate_artifact(root):
                 if "data" not in table["class"] and "model" not in table["class"]:
                     continue
                 for row in table["rows"]:
-                    if not any(urlsplit(html.unescape(link)).scheme == "https" and
-                               urlsplit(html.unescape(link)).netloc.lower().endswith(".gov") for link in row):
+                    if not any(_official_gov_link(link) for link in row):
                         raise ValueError(f"{rel}: evidence/model row lacks an official .gov link")
 
     for rel, parser in parsers.items():
@@ -289,6 +331,8 @@ def stage(out_dir):
         os.makedirs(out_dir)
 
     for rel in sorted(ALLOWED_FILES):
+        if rel == "404.html":  # Privacy-reviewed, generated by this publisher.
+            continue
         source = ROOT / rel
         if not source.is_file():
             raise ValueError(f"required generated page or asset is missing: {rel}")
@@ -298,9 +342,12 @@ def stage(out_dir):
 
     for rel in PAGE_FILES:
         path = os.path.join(out_dir, *rel.split("/"))
-        with open(path, encoding="utf-8", errors="strict") as stream:
-            original = stream.read()
-        cleaned = _transform_page(rel, original)
+        if rel == "404.html":
+            cleaned = _not_found_page()
+        else:
+            with open(path, encoding="utf-8", errors="strict") as stream:
+                original = stream.read()
+            cleaned = _transform_page(rel, original)
         with open(path, "w", encoding="utf-8", newline="\n") as stream:
             stream.write(cleaned)
     return _validate_artifact(out_dir)
