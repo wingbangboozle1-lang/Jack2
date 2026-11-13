@@ -54,7 +54,7 @@
    "name": "Nothing personal is published",
    "proves": "The complete published repository, including archived workbooks, is scanned for names and personal identifiers; every property and owner row is blank.",
    "does_not_prove": "Whether a pattern scan can identify every possible form of personal information; human review is still appropriate.",
-   "result": "584 text files across the entire published repository scanned: no e-mail address, telephone number, street address, parcel number or named individual; every property and owner row is blank",
+   "result": "586 text files across the entire published repository scanned: no e-mail address, telephone number, street address, parcel number or named individual; every property and owner row is blank",
    "ok": true
   },
   {

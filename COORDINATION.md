@@ -2,8 +2,9 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-13** by session `020f067d` (branch `arena/020f067d-jack2`; PRIV-02 and REV-03 done, see its close-out below the task table). Previous update: 2026-11-12 18:00 UTC by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
-> Last updated **2026-11-13** by session `575eebba` (branch `arena/575eebba-jack2`; PR #67 merged; the consolidated site is live and every task of this session is done).
+> Last updated **2026-11-13 22:40 UTC** by session `568ae793` (branch `arena/568ae793-jack2`; privacy-reviewed Pages artifact integration in progress).
+> Previous update **2026-11-13** by session `020f067d` (branch `arena/020f067d-jack2`; PRIV-02 and REV-03 done, see its close-out below the task table). Previous update: 2026-11-12 18:00 UTC by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
+> Previous update **2026-11-13** by session `575eebba` (branch `arena/575eebba-jack2`; PR #67 merged; the consolidated site is live and every task of this session is done).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
@@ -181,6 +182,22 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 | What changed | CM-001 re-anchored 4.98% (11/10/2026) → 5.15% (11/13/2026, verified on home.treasury.gov — 5.05% was the 7-year rate); CM-014 yield gap 0.98 → 1.15 pp; CM-028 buyer spread 2.32 → 2.15 pp; model anchor reinvest_rate 4.98 → 5.15 with regenerated model_output.json; all 51 source accessed dates → 2026-11-13; IR-21 updated; no PII published; placeholders `[OWNER-01]`/`[PROPERTY-01]` only |
 
 **Result.** The root site is live, all 23 local CI steps pass, no personal information is published, every table row carries an official source link or is blank and flagged on `/flagged.html`. The merge was performed without waiting for approval per the brief; Pages `built` confirmed post-merge; nothing blocks the merge.
+
+### Session `568ae793` — PAGES ARTIFACT PRIVACY BOUNDARY — claimed 2026-11-13
+
+**Claim (in progress).** GitHub Pages was verified as legacy branch-root publication, which makes every repository path reachable through the site. PR #68 added whole-repository privacy scanning and sanitation. This task is distinct: deploy only the generated dashboard allowlist and prevent the website from linking to source-repository or historical workbook paths.
+
+**Scope discipline and requests.** PR #65 (`session-020f067d`) merged as `60286ef` (its close-out is recorded in follow-up PR #72) and included the root builder, verifier, irregularity data, README and historical-file work. PP-01 does not edit those files or any `session-*/`/`docs/` folder. Its code scope is only new `canonical/publish.py`, `.github/workflows/pages.yml`, an additive artifact-check step in `.github/workflows/verify.yml`, and this board. PR #65 also touched `verify.yml` and this board; before it merged, a coordination request was posted there. Its changes did not include the publisher or Pages workflow, and PP-01's verifier addition is a separate additive step. The publisher stages a frozen allowlist, synthesizes privacy-reviewed archive and 404 notices, and never hand-edits generated source pages. The latest-main local workflow replay invoked the existing generators and refreshed the root verification outputs and `session-f4f700c0/audit/{inventory,summary}.json` plus `session-f4f700c0/verification.json`; no manual edits were made to that session's code or analysis. All generated audit files are refreshed only by their existing generators. The workflow changes Pages from `legacy` to `workflow` only after the main-branch verification succeeds and immediately before deploy.
+
+**Rebase conflict log (2026-11-13).** `main` advanced through the Session 575 deployment close-out and PR #65/#72 integration while PP-01 was in progress. The rebase conflicted in the shared board and generated repository/verification/audit outputs. Resolution retains the complete upstream Session 020 and Session 575 records; generated outputs are taken from the latest main and refreshed only through their existing generators. No other-session code, data or analysis was discarded.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PP-01 | Build and verify an allowlisted GitHub Pages artifact; deploy only after successful `verify` on `main`; confirm live paths | in progress | session-568ae793 | `.github/workflows/pages.yml`, `.github/workflows/verify.yml` (additive step), `canonical/publish.py`, `COORDINATION.md`; generated audit refresh only by its existing generator if required |
+
+**Verification on latest main (2026-11-13).** After rebasing over PR #65/#72 and refreshing generated outputs with their existing generators, `RUNNER_TEMP="$(mktemp -d)" python3 canonical/ci_local.py` passed all 24 steps: 12/12 consolidated-site checks, 15 model tests, the repository-wide privacy check (0 matches), and PP-01's artifact gate. `canonical/publish.py --out <temporary-directory>` passed on 27 allowlisted files (23 HTML pages, including the archive and 404 notices); no historical-session directories, source-repository links, or `github.io` links were present; evidence/model rows cite HTTPS `.gov` sources; local links and fragments resolve; artifact privacy scan is clean. Both workflows parse as YAML and seven link-policy regression cases pass. Pages API still reports `build_type=legacy` and source `main:/`; the Pages workflow changes it to `workflow` only after successful main verification. **Harness irregularity:** an initial local replay without `RUNNER_TEMP` failed at step 19 with `Permission denied: /published-site`; rerunning with a temporary directory passed, so no code change was needed.
+
+**Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
 <!-- LIVE-BOARD:END -->
 
