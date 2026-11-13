@@ -127,6 +127,23 @@ site is out of date, run `python3 canonical/build_site.py` and commit the result
 
 **Requests to other sessions' scopes:** none.
 
+### Session `575eebba` — RE-VERIFICATION AND RE-INTEGRATION (this session, started 2026-11-13)
+
+**Why this session re-runs the integration.** The branch given to this session (`arena/575eebba-jack2`) points at the same commit as `main` (`378e796`, the PR #62 merge). Nothing on the site has been re-checked on 2026-11-13: every ledger row carries access date 2026-11-12, and the close-out record itself notes that whether official pages still say today what they said on the access date was not verified. This session re-reads every official source on 2026-11-13, re-verifies every ledger row against the text on the page today, flags anything that changed or became unreachable, regenerates the consolidated site, and integrates via pull request to `main`.
+
+**Scope.** canonical/data/** (sources.json, facts/*.json, assumptions.json, model_output.json, decisions.json, risks.json, questions.json, suggestions.json, requirements.json, irregularities.json, verification.json, deployment.json, archive.json, name_hashes.json), canonical/model.py, canonical/tests/**, canonical/build_site.py, canonical/verify.py, canonical/privacy.py, canonical/ci_local.py, canonical/review_repo.py, canonical/snapshot_repo.py, canonical/ingest.py, root *.html, assets/site.*, favicon.svg, .nojekyll, README.md, COORDINATION.md. No file inside another session's `session-<id>/` folder is touched; root tools/, data/, research/, model/, scripts/, docs/ stay where they are.
+
+**Claimed tasks.**
+
+| # | Task | Status | Owner | Files / scope |
+| RV-01 | Read board + full tree; record takeover and claim; push immediately | in progress | session-575eebba | COORDINATION.md (this block) |
+| RV-02 | Re-read all 50 official sources on 2026-11-13; update sources.json accessed/read flags | in progress | session-575eebba | canonical/data/sources.json |
+| RV-03 | Re-verify all 440 ledger rows on 2026-11-13; flip changed or unreachable rows to blank + flagged | in progress | session-575eebba | canonical/data/facts/*.json |
+| RV-04 | Re-run projection model + unit tests; refresh model_output.json | in progress | session-575eebba | canonical/model.py, canonical/tests/test_model.py |
+| RV-05 | Update irregularity register with 2026-11-13 findings | in progress | session-575eebba | canonical/data/irregularities.json |
+| RV-06 | Regenerate consolidated root site; run 11 build checks + 15 model tests locally | in progress | session-575eebba | root *.html, assets/site.*, canonical/build_site.py, canonical/verify.py |
+| RV-07 | Pull request arena/575eebba-jack2 → main; merge after green checks; confirm Pages deploy; record PR link and result here | unclaimed | session-575eebba | README.md, COORDINATION.md, canonical/data/deployment.json |
+
 <!-- LIVE-BOARD:END -->
 
 ---
