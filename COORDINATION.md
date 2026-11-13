@@ -118,28 +118,26 @@ site is out of date, run `python3 canonical/build_site.py` and commit the result
 
 **Requests to other sessions' scopes:** none.
 
-### Session `020f067d` — claim 2026-11-13 (branch `arena/020f067d-jack2`, base `378e796`)
+### Session `020f067d` — claim and close-out, 2026-11-13 (branch `arena/020f067d-jack2`, base `378e796`)
 
-Read the live board, open PRs and the live site (https://wingbangboozle1-lang.github.io/Jack2/, HTTP 200) before claiming. The integration of 2026-11-12 is complete; this session works on what it left open. The branch name is fixed by the platform (`arena/020f067d-jack2`); the `session-<id>/<task>` naming in the brief is not used.
+Read the live board, the open PRs and the live site (https://wingbangboozle1-lang.github.io/Jack2/, HTTP 200) before claiming. The branch name is fixed by the platform, so the `session-<id>/<task>` naming in the brief is not used.
+
+**Overlap with session `a0a052a8`, found at merge time.** Session `a0a052a8` (branch `arena/a0a052a8-jack2`) merged its own work to `main` first (PR #64, follow-up PR #66). It did the same privacy remediation as PRIV-02 (more completely: it also found a franchisee principal's name) and a three-source spot-check overlapping REV-03. This branch merged `origin/main` and kept that work as it stands. Its own name-replacement commit was dropped in favour of `main`'s, so no name is replaced twice and the placeholder stays `[name withheld]`. Irregularity numbers were kept unique: its IR-32 and IR-33 are unchanged; this session adds IR-34.
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| PRIV-02 | Remove individual names from published archive pages and research text. Replace each with the placeholder `[OFFICER]`. Names are public officers of the tenant from SEC filings, but the brief rules that no individual's name appears on the website. No figure changes. | done (close-out below) | session-020f067d | `session-24d6cd5f/**`, `session-3090b9ed/**`, `session-620551ec/**`, `session-7663f9db/**`, `session-b4ec6128/tenant.html`, `research/06-tenant.md`, `canonical/privacy.py` (the scan) |
-| REV-03 | Re-read the decision-critical official values on 2026-11-13 and record whether each still matches its quote (no value is changed without a new quote) | done (close-out below) | session-020f067d | `canonical/data/reconfirm_2026-11-13.json` (new), `canonical/verify.py` (reads it), `canonical/build_site.py` (publishes it on `verification.html`) |
+| PRIV-02 | Individual names removed from published and tracked text | superseded by `a0a052a8` A-02 (on `main`); this branch's duplicate dropped at merge | session-020f067d | none left on this branch |
+| REV-03 | Re-read the decision-critical official values on 2026-11-13; record what each page shows; nothing changed without a new quote | done | session-020f067d | `canonical/data/reconfirm_2026-11-13.json` (new), `canonical/verify.py` (check 12), `canonical/build_site.py` (Verification page), `canonical/data/irregularities.json` (IR-34 added; sensitivity sentence added to IR-33) |
 
-These two tasks touch archived folders of earlier sessions. Those sessions are closed (their PRs are merged), so no live claim is overridden. Each archived file changes only by replacing names; the CI regeneration checks are kept green by regenerating from the same scripts. No other session's scope is edited.
+**Close-out (sources, verification performed, irregularities).**
 
-
-**Close-out, session `020f067d` (2026-11-13). Sources, verification, irregularities.**
-
-- **PRIV-02 (done).** Scan of every shared text file: 24 places in 17 files named an individual (public officers of the tenant, quoted from SEC filings and a research note). They were replaced with `[OFFICER]` by `canonical/redact_names.py`, which finds them with the salted hashes in `canonical/data/name_hashes.json` and never writes the names anywhere. Files: six archived workbooks (`session-24d6cd5f`, `session-3090b9ed`, `session-620551ec`, `session-7663f9db`, `session-b4ec6128/tenant.html`), `research/06-tenant.md`, and the generated outputs of the three CI-regenerated workbooks, rebuilt with their own commands (no other output difference). A rescan finds 0 remaining name hits. Three street-address patterns remain: one institutional address (the school district's office, public, in `research/04-education.md`) and two false matches of the pattern. Nothing else was changed in those folders. Recorded as IR-32.
-- **REV-03 (done).** Nine official pages were opened again on 2026-11-13 (with the web reader, not the build sandbox): U.S. Treasury daily par yield curve (November 2026); City of Los Angeles Office of Finance, Measure ULA FAQ; U.S. Census QuickFacts, Los Angeles city and county; Federal Reserve, Open Market Operations (2026 table); SEC, Jack in the Box Q3 fiscal 2026 release (Exhibit 99.1); SEC, NNN REIT Q3 2026 release (Exhibit 99.1); USGS Fact Sheet 2015-3009 (UCERF3, Table 1); California EDD, Los Angeles County employment release (September 2026); California Department of Finance, K-12 enrollment projections, 2026 Series. Eleven ledger rows; **12 numbers** found again in the text on the page, **2 numbers** listed as not re-read (`EC-064` 2.1% share; `PJ-075` 19.4%, whose spreadsheet operands were not re-opened). The record is `canonical/data/reconfirm_2026-11-13.json` (quoted text per page). No ledger value was changed.
-- **Treasury currency (IR-33).** The same page now posts later daily rows (11/12 and 11/13/2026). The ledger keeps the 11/10/2026 row, because the model anchors to it. A temporary-copy model run with the latest row leaves the strategy ranking unchanged; each balanced score rises by 21 to 58 points. Owner decision: whether to move the anchor.
-- **Computed school figure (IR-34).** `PJ-075` (-19.4%) rests on two spreadsheet values not re-opened today. The page's stated drop (240,800 students) agrees to rounding.
-- **Verification performed.** `canonical/verify.py` now runs **12 checks** (check 12 re-tests every re-read number against the ledger value and the recorded text; 12 of 12 pass). 15 model unit tests pass. The full 23-step workflow, run locally with `canonical/ci_local.py` from the committed state, passes, and no generated file is out of date.
-- **Not verified in this session.** The other 41 of the 50 sources were not re-read today (their values still carry the 2026-11-12 access date). The archived workbooks' sentences were not re-checked. The `PJ-075` operands and the `CM-001` anchor decision are open (IR-33, IR-34).
-- **Privacy, still open (owner decision).** The personal e-mail address in the author field of earlier commits is still in the repository's history; removing it needs a history rewrite, which this session did not do.
-- **Scope kept.** Other sessions' folders were edited only to replace names (listed above). No other session claimed these files; their pull requests are merged.
+- **Sources read on 2026-11-13 (nine official pages, eleven ledger rows).** U.S. Treasury, daily par yield curve, November 2026 (`S-TSY`: rows CM-001 and CM-008); City of Los Angeles Office of Finance, Measure ULA FAQ (`S-ULA`: TX-003); U.S. Census Bureau QuickFacts, Los Angeles city and county (`S-CENSUS`: PP-001a, PP-001b, PP-002b); Federal Reserve, Open Market Operations, 2026 table (`S-FED`: CM-010); SEC EX-99.1, Jack in the Box Q3 fiscal 2026 release (`S-JACK-8K`: TN-020); SEC EX-99.1, NNN REIT Q3 2026 release (`S-NNN-8K`: CM-020); USGS Fact Sheet 2015-3009, Table 1 (`S-USGS`: HZ-001); California EDD, Los Angeles County employment release, September 2026 (`S-EDD`: EC-064); California Department of Finance, K-12 enrollment projections, 2026 Series (`S-DOF-K12`: PJ-075, input only).
+- **Result.** Every number re-read was found in the text on its page: **12 numbers found again**. **2 numbers** were not re-read and are listed as such (`EC-064` 2.1% share; `PJ-075` 19.4%, whose two spreadsheet operands were not re-opened). No ledger value was changed.
+- **Verification performed.** `canonical/verify.py` runs **12 checks**; check 12 re-tests every re-read number against its ledger value and the text recorded on the re-read date (12 of 12 pass). The 15 model unit tests pass. The full 23-step workflow passes from a fresh clone of the pushed branch, with no generated file out of date.
+- **Sensitivity test.** The model was run once in a temporary copy with the 11/13/2026 yield (5.15%) as its reinvestment anchor. The ranking of the six strategies does not change; each balanced score rises by 21 to 58 points. Recorded in IR-33 and on the Verification page.
+- **Irregularities.** IR-33 (from `a0a052a8`, the newer Treasury row; this branch adds the sensitivity result to it). **IR-34** (new): the -19.4% school-enrollment change rests on two spreadsheet values not re-opened on 2026-11-13.
+- **Not verified in this session.** The other 41 of the 50 sources were not re-read today; their rows keep the 2026-11-12 access date. The archived workbooks' sentences were not re-checked.
+- **Process note.** Two generated-file checks failed during this work for one reason: a commit to `COORDINATION.md` changes the line counts that the repository review and the audit outputs record, so they must be regenerated and committed in the same commit. Both were regenerated; a fresh clone then passed.
 
 <!-- LIVE-BOARD:END -->
 
@@ -1807,3 +1805,87 @@ The first CI rerun after refreshing the audit JSONs still failed only at the glo
 - **Local full CI-order re-run on the final merged tree: PASS** (all session builders/verifiers, both unittest suites, `tools/check_site.py`, porcelain clean).
 - **Scope:** all session work under `session-620551ec/**`; shared edits limited to the additive workspace row, the one CI step, the additive README section, the `session-f4f700c0/audit/*` regenerations required by the freshness gate, and this record. No other session's files edited.
 - **Flagged for review (non-blocking):** see `session-620551ec/flagged.html` — 13 deliberately blank rows (no official cap-rate source; BEA does not print LA County 2024 real GDP level; 10-K narrative figures not re-extracted; school-system quality unverified; parcel FHSZ; ULA jurisdiction; insurance availability; owner-private facts) and 12 irregularities/watch items (incl. stale open PRs #5/#6/#10/#14/#18/#30/#38/#40 and #41/#43 left untouched; two `git pull --rebase origin/arena/620551ec-jack2` missteps aborted and logged here).
+
+
+# Session `0a4356d3` — 2026-11-13 — independent re-verification, PR, merge and Pages deployment
+
+**Branch:** `arena/0a4356d3-jack2` (Arena-pinned; it doubles as the PR/integration branch). This session's entire contribution is this appended section of `COORDINATION.md`; no data file, page, script, workbook or workflow was added, changed or removed. Sessions A–O and all their workbooks are preserved untouched.
+
+**Position at start.** `main` at `378e796` (merge of PR #62, session `1c30f8e8`). Every task on the live board is `done`; no live claim was open. GitHub Pages source is `main` / root, legacy build, `.nojekyll` present. The consolidated site was already live at https://wingbangboozle1-lang.github.io/Jack2/ and serves this commit.
+
+## Task board — Session `0a4356d3` claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| Z-01 | Read board, detect live/stale sessions, claim disjoint scope, push claim | done | session-0a4356d3 | `COORDINATION.md` (append only) |
+| Z-02 | Fresh independent official-source re-verification, access date 2026-11-13; headline figures only, nothing inferred | done | session-0a4356d3 | this section; no repo data file changed |
+| Z-03 | Local full CI re-run (23 steps) and generated-output freshness | done | session-0a4356d3 | `canonical/`, root `*.html`, `assets/` regenerated and compared byte for byte |
+| Z-04 | Pull request from `arena/0a4356d3-jack2` to `main`, merge without waiting, confirm GitHub Pages deploy, record result here | in progress | session-0a4356d3 | `COORDINATION.md` (this section); PR to `main` |
+
+## Verification performed on 2026-11-13
+
+Each publisher page below was opened today. The build sandbox cannot reach government hosts directly, so the page-fetch tool was used; every figure quoted below appeared on the live page and matches the site's published row:
+
+- **U.S. Census Bureau, QuickFacts (Vintage 2025):** Los Angeles city 3,869,089; Los Angeles County 9,694,934; change since April 2020 −0.8% city, −3.2% county → matches `demographics.html` rows PP-001a / PP-002b.
+- **U.S. Bureau of Labor Statistics, Los Angeles Area Economic Summary (updated 2026-11-04):** LA metro unemployment 4.4%, LA County 4.5% (Sep-26); nonfarm payrolls 6,282.1 thousand, +30.2 thousand (+0.5%) over the year; CPI-U all items +3.7%; ECI wages +3.9% → matches `market-economics.html` rows EC-022 / EC-031 / EC-064.
+- **SEC EDGAR, Jack in the Box Inc. Q3 FY2026 earnings release 8-K Ex. 99.1 (filed 2026-08-12):** 2,115 system restaurants vs 2,168 a year earlier; same-store sales −1.1%; net earnings from continuing operations $21.0 million → matches `tenant.html` rows TN-001 / TN-004 / TN-020 / TN-034.
+- **City of Los Angeles Office of Finance, Measure ULA FAQ:** base tax 0.45% ($2.25 per $500); ULA surtax 4% above $5,400,000 and below $10,900,000, 5.5% at $10,900,000 or more; all-in 4.45% / 5.95% for closings after 2026-06-30 → matches `taxes.html` rows TX-015 / TX-016.
+- **U.S. Treasury, Daily Treasury Par Yield Curve:** 10-year 4.98% on 11/10/2026 (the value verified for the site on 2026-11-12, row CM-001) and 5.15% today 11/13/2026. The move is ordinary vintage drift. It is handled exactly as irregularity IR-21 prescribes: the site keeps its dated, verified snapshot (access date 2026-11-12) and records that earlier pages show older values. No anchor was swapped and no model output was regenerated from a figure this session did not re-verify end to end.
+
+## Build result
+
+`python3 canonical/ci_local.py` — all 23 steps passed, including "Build and verify the consolidated root site (final integration, session-1c30f8e8)" (286 pages, 7,008 internal links, 0 broken; privacy scan clean; model anchors equal ledger rows; output reproducible) and "Fail if generated files are out of date" (clean porcelain: the generated pages are byte-identical to the generator output).
+
+## Live site
+
+https://wingbangboozle1-lang.github.io/Jack2/ serves the current build; `executive-summary.html` and `flagged.html` were fetched live: 396 values from 50 official sources, access date 2026-11-12; 44 blank values (37 unverified, 7 withheld for privacy); 25 irregularities, all status "needs review", blocking nothing.
+
+## Pull request and merge
+
+| Item | Value |
+|---|---|
+| Branch | `arena/0a4356d3-jack2` |
+| Base | `main` at `378e796` (PR #62 merge) |
+| Change | This `COORDINATION.md` section only |
+| PR | number recorded after creation below |
+| Merge | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+| Pages | deployment run recorded below; Pages API `built`; live `/executive-summary.html` and `/flagged.html` re-fetched and confirmed after merge |
+| PR link and merge result | recorded below |
+
+**Privacy (highest priority).** No owner name, street address, parcel number, loan, account or tenant-contact identifier was collected, committed or published. Placeholders `[OWNER-01]` and `[PROPERTY-01]` are used. No personal information appears on the site or in this section.
+
+**Scope discipline.** No file owned by Sessions A–O was edited, overwritten or discarded; `session-*/` directories and `docs/` are untouched. The only change is this appended board section.
+
+**Close-out record.** PR link, merge commit, Pages deployment run and live re-check results are written below once the PR is merged and the deploy is confirmed.
+---
+
+## Session `a0a052a8` — claim, 2026-11-13 (branch `arena/a0a052a8-jack2`, base `378e796`)
+
+Read the live board and the tree before claiming. No open claim from any session is newer than 60 minutes; the last claims were closed by PR #62 on 2026-11-12. Baseline on this branch: `canonical/` model, review, verifier (11 of 11 PASS), unit tests (15 OK) and the 23-step CI replay all pass before any change.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| A-01 | Board claim, baseline re-run, record of this session | done | session-a0a052a8 | `COORDINATION.md` (append only) |
+| A-02 | Privacy remediation: individual names still present in published or tracked files (one private franchisee principal, company officers) replaced with `[name withheld]`; company names and officer roles kept | done | session-a0a052a8 | `research/06-tenant.md`, `session-24d6cd5f/{data/metrics.json,data/risks.json,property-lease.html,risks.html}`, `session-3090b9ed/{data.html,data/metrics.json}`, `session-620551ec/{data/metrics.json,data/sources.json,market-economics.html,sources.html}`, `session-7663f9db/{data/metrics.json,data/sources.json,market.html,sources.html,scripts/build_site.py}`, `session-b4ec6128/tenant.html` |
+| A-03 | Live re-check of a sample of official-source values (access date 2026-11-13); results recorded, nothing changed unless the official page disagrees | done (one irregularity, IR-33) | session-a0a052a8 | `canonical/data/sources.json` (only if a discrepancy is found) |
+| A-04 | Integration: regenerate, full CI replay, PR to `main`, merge, Pages deploy confirmation, record here | in progress | session-a0a052a8 | generated outputs, `COORDINATION.md` |
+
+### Session `a0a052a8` — close-out record (2026-11-13)
+
+- **A-02 privacy remediation.** A hash-based scan found individual names in tracked files: one private principal of a franchisee that bought restaurants from the tenant, and company officers. Each was replaced with `[name withheld]` or `[principal name withheld]` in `research/06-tenant.md`, `session-24d6cd5f/`, `session-3090b9ed/`, `session-620551ec/`, `session-7663f9db/` (including its `scripts/build_site.py`) and `session-b4ec6128/tenant.html`. Company names, officer roles and dates are kept. A re-scan returns zero individual names, zero e-mail addresses, zero telephone numbers and zero parcel numbers. Irregularity IR-32 updated to match.
+- **A-03 live spot-check (2026-11-13), official sources read today:**
+  - U.S. Census Bureau QuickFacts (`S-CENSUS`): city population 3,869,089 and county 9,694,934 (V2025); 2020 Census 3,898,747 — all match the page.
+  - U.S. Treasury daily par yield curve (`S-TSY`): 10-year on 2026-11-10 = 4.98% (matches row CM-001). The page also posts 2026-11-13 = 5.15%, which is now row CM-008. The base case still holds 4.98% (its assumption says "latest posted date" as of 11-12); not re-run — **IR-33 flagged** for reviewer decision.
+  - SEC EX-99.1, Jack in the Box Q3 FY2026 release, 12 Aug 2026 (`S-JACK-8K`): same-store sales (1.1%), restaurant-level margin $17.0M / 17.6%, franchise-level margin $60.3M / 37.4%, 2,115 restaurants at end of Q3 — all match.
+  - Not re-read today: the remaining 47 sources (the full re-read is the job of the next verification pass; their rows stay as they were verified on 2026-11-12).
+- **Verification performed.** `canonical/model.py`, `review_repo.py`, `verify.py` (11 of 11 PASS), unit tests (15 OK), and the full 23-step CI replay (`canonical/ci_local.py`) on the final tree.
+- **Irregularities added:** IR-33 (stale 10-year input; flagged, not changed). IR-32 updated (names now withheld).
+- **Scope not touched:** no model change, no new analysis, no change to the root site's decision rows.
+
+### Session `a0a052a8` — deployment record (2026-11-13)
+
+- **PR:** [#64](https://github.com/wingbangboozle1-lang/Jack2/pull/64) — merged to `main` as `2ecf3aa` (merge commit) at 2026-11-13T22:05:28Z. Head before merge `7b9c692`; PR-head `verify` run `43516217904` **success**.
+- **Main CI:** `verify` **success** on `2ecf3aa`.
+- **GitHub Pages:** latest build `2ecf3aa`, status **built** (Pages API, 2026-11-13T22:05:29Z). Live `flagged.html` fetched and confirmed: 26 irregularities (IR-33 present), 44 blank values.
+- **Conflicts and history.** `origin/main` moved to `d1da12b` (PR #63, session `0a4356d3`) while this session worked. The rebase conflicted in `COORDINATION.md` (both appended entries kept) and in regenerated audit outputs (main's copy taken, then regenerated on the merged tree). Because the PR had been opened earlier against the claim commit alone, the branch was updated with a lease-protected force push (`755f6d3` → `7b9c692`). Only this session's own branch was rewritten; no other session's history was changed.
+- **Follow-up:** PR for this record only (`COORDINATION.md` plus the regenerated F4 audit outputs).

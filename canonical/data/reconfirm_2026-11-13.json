@@ -15,11 +15,18 @@
       "4.98"
      ],
      "not_reread": []
+    },
+    {
+     "id": "CM-008",
+     "confirmed_numbers": [
+      "5.15"
+     ],
+     "not_reread": []
     }
    ],
    "read_text": "| 11/10/2026 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | 4.05 | 4.16 | 4.21 | 4.30 | 4.28 | 4.38 | 4.56 | 4.73 | 4.74 | 4.81 | 4.89 | 4.98 | 5.39 | 5.35 | | 11/12/2026 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | 4.12 | 4.18 | 4.26 | 4.32 | 4.35 | 4.42 | 4.65 | 4.86 | 4.90 | 4.95 | 5.02 | 5.10 | 5.48 | 5.43 | | 11/13/2026 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | 4.10 | 4.18 | 4.26 | 4.32 | 4.34 | 4.42 | 4.65 | 4.88 | 4.92 | 4.98 | 5.05 | 5.15 | 5.52 | 5.47 |",
    "result": "matches",
-   "note": "The 11/10/2026 row, the row the ledger uses, is unchanged. The same page now also posts 11/12/2026 (10-year 5.10) and 11/13/2026 (10-year 5.15). The ledger is not changed to them; see the sensitivity result on the Verification page."
+   "note": "The 11/10/2026 row, the row the model's anchor uses (CM-001), is unchanged. The same page also posts 11/12/2026 (10-year 5.10) and 11/13/2026 (10-year 5.15). The 11/13/2026 row is recorded as CM-008 by session a0a052a8 on the same day; the model still uses CM-001. See the sensitivity result."
   },
   {
    "source": "S-ULA",
@@ -171,7 +178,7 @@
   }
  ],
  "sensitivity": {
-  "test": "The model was run in a temporary copy with the reinvestment anchor set to 5.15 (the 11/13/2026 value). The repository was not changed.",
+  "test": "The model was run in a temporary copy with the reinvestment anchor set to 5.15 (the 11/13/2026 value, CM-008). The repository was not changed.",
   "ranking_before": [
    "extend_then_sell",
    "sell_exchange",

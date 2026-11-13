@@ -65,7 +65,7 @@ operating lease liabilities ~$1,418,844K; total stockholders' DEFICIT $(938,271)
 - "Select real estate sales" to accelerate cash flow.
 - Del Taco: strategic alternatives → definitive Stock Purchase Agreement 2025-10-15 to sell Del Taco Holdings
   to Yadav Enterprises, Inc. for $115 million cash, subject to adjustments (pending at filing).
-- New CEO: [OFFICER] (CEO since March 2025; interim principal executive officer since Feb 2025).
+- New CEO: [name withheld] (CEO since March 2025; interim principal executive officer since Feb 2025).
 - Activist situation: proxy contest disclosed in FY2025 10-K risk factors; Nomination and Cooperation
   Agreement with GreenWood Investors, LLC dated 2025-11-03 (exhibit 10.1.28) resolves director nominations.
 

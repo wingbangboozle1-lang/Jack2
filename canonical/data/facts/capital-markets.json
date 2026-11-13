@@ -114,6 +114,22 @@
    "obtain": ""
   },
   {
+   "id": "CM-008",
+   "category": "capital-markets",
+   "group": "Interest rates",
+   "label": "10-year Treasury yield, November 13, 2026 (posted on the access date)",
+   "geo": "United States",
+   "period": "November 13, 2026",
+   "value": "5.15%",
+   "source": "S-TSY",
+   "status": "verified",
+   "quote": "11/13/2026 | 1 Mo 4.10 | 3 Mo 4.32 | 6 Mo 4.42 | 1 Yr 4.65 | 2 Yr 4.88 | 3 Yr 4.92 | 5 Yr 4.98 | 7 Yr 5.05 | 10 Yr 5.15 | 20 Yr 5.52 | 30 Yr 5.47",
+   "checked": "2026-11-13",
+   "note": "Read on 2026-11-13 from the official daily par yield curve table. It may be provisional until the end of the day; see IR-33.",
+   "reason": "",
+   "obtain": ""
+  },
+  {
    "id": "CM-010",
    "category": "capital-markets",
    "group": "Interest rates",

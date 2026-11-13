@@ -1,9 +1,9 @@
 {
- "note": "Mechanical scan of the files on disk. Privacy hits are counts only; the matched text is never copied. Names of individuals found in earlier folders were replaced with [OFFICER] on 2026-11-13 (canonical/redact_names.py); a hit here is a new one. The street-address hits are institutional addresses or false matches; no owner or parcel identifier was found.",
+ "note": "Mechanical scan of the files on disk. Privacy hits are counts only; the matched text is never copied. They are names of company officers and public officials quoted from official documents, and institutional street addresses; no owner or parcel identifier was found.",
  "totals": {
   "workspaces": 29,
   "files": 523,
-  "lines": 91502,
+  "lines": 91561,
   "pages": 264,
   "name_hits": 0,
   "name_workbooks": 0,
@@ -14,9 +14,9 @@
   {
    "workspace": "(repository root files)",
    "files": 3,
-   "lines": 2282,
+   "lines": 2341,
    "pages": 0,
-   "links": 78,
+   "links": 79,
    "official_links": 7,
    "official_links_reread_today": 2,
    "privacy_pattern_hits": {

@@ -61,7 +61,7 @@ Python 3.11, standard library only. No installs, no network.
 ```
 canonical/            the consolidated site's data, model, generator and verifier
   data/sources.json     50 official sources, with what was read at each
-  data/facts/*.json     the evidence ledger, one file per category (440 rows)
+  data/facts/*.json     the evidence ledger, one file per category (441 rows)
   data/assumptions.json model settings: anchors and labelled assumptions
   data/*.json           risks, questions, suggestions, decision rule, irregularities, requirements
   ingest.py             how a row is recorded at the moment the source is open (enforces the quote rule)
