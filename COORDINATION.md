@@ -1836,3 +1836,15 @@ https://wingbangboozle1-lang.github.io/Jack2/ serves the current build; `executi
 **Scope discipline.** No file owned by Sessions A–O was edited, overwritten or discarded; `session-*/` directories and `docs/` are untouched. The only change is this appended board section.
 
 **Close-out record.** PR link, merge commit, Pages deployment run and live re-check results are written below once the PR is merged and the deploy is confirmed.
+---
+
+## Session `a0a052a8` — claim, 2026-11-13 (branch `arena/a0a052a8-jack2`, base `378e796`)
+
+Read the live board and the tree before claiming. No open claim from any session is newer than 60 minutes; the last claims were closed by PR #62 on 2026-11-12. Baseline on this branch: `canonical/` model, review, verifier (11 of 11 PASS), unit tests (15 OK) and the 23-step CI replay all pass before any change.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| A-01 | Board claim, baseline re-run, record of this session | in progress | session-a0a052a8 | `COORDINATION.md` (append only) |
+| A-02 | Privacy remediation: individual names still present in published or tracked files (one private franchisee principal, company officers) replaced with `[name withheld]`; company names and officer roles kept | in progress | session-a0a052a8 | `research/06-tenant.md`, `session-24d6cd5f/{data/metrics.json,data/risks.json,property-lease.html,risks.html}`, `session-3090b9ed/{data.html,data/metrics.json}`, `session-620551ec/{data/metrics.json,data/sources.json,market-economics.html,sources.html}`, `session-7663f9db/{data/metrics.json,data/sources.json,market.html,sources.html,scripts/build_site.py}`, `session-b4ec6128/tenant.html` |
+| A-03 | Live re-check of a sample of official-source values (access date 2026-11-13); results recorded, nothing changed unless the official page disagrees | unclaimed → in progress | session-a0a052a8 | `canonical/data/sources.json` (only if a discrepancy is found) |
+| A-04 | Integration: regenerate, full CI replay, PR to `main`, merge, Pages deploy confirmation, record here | unclaimed → in progress | session-a0a052a8 | generated outputs, `COORDINATION.md` |
