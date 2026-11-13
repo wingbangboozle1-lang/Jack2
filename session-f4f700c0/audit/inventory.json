@@ -3,7 +3,7 @@
     "as_of": "2026-11-08",
     "files": 586,
     "lines": 109546,
-    "bytes": 10268962,
+    "bytes": 10268980,
     "privacy_pattern_hits": 0,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [],
@@ -12,7 +12,7 @@
       "root/config": {
         "files": 61,
         "lines": 20639,
-        "bytes": 2152796,
+        "bytes": 2152814,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -324,9 +324,9 @@
     {
       "path": "canonical/build_site.py",
       "workspace": "root/config",
-      "bytes": 88743,
+      "bytes": 88761,
       "lines": 1255,
-      "sha256": "9bfd2a36d2ca554101f5fb210669b04129b337a35e7f721c1ce5ef9d16d7e6f8",
+      "sha256": "09e6214022d6bc3d1879489c1e83cc9d177977b936bb6a6486f0233e6bc68ec1",
       "kind": ".py",
       "url_count": 4,
       "pii_pattern_hits": 0,
