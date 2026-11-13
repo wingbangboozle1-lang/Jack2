@@ -118,6 +118,17 @@ site is out of date, run `python3 canonical/build_site.py` and commit the result
 
 **Requests to other sessions' scopes:** none.
 
+### Session `020f067d` — claim 2026-11-13 (branch `arena/020f067d-jack2`, base `378e796`)
+
+Read the live board, open PRs and the live site (https://wingbangboozle1-lang.github.io/Jack2/, HTTP 200) before claiming. The integration of 2026-11-12 is complete; this session works on what it left open. The branch name is fixed by the platform (`arena/020f067d-jack2`); the `session-<id>/<task>` naming in the brief is not used.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PRIV-02 | Remove individual names from published archive pages and research text. Replace each with a role placeholder (for example `[TENANT-OFFICER-01]`). Names are public officers of the tenant from SEC filings, but the brief rules that no individual's name appears on the website. No figure changes. | in progress | session-020f067d | `session-24d6cd5f/**`, `session-3090b9ed/**`, `session-620551ec/**`, `session-7663f9db/**`, `session-b4ec6128/tenant.html`, `research/06-tenant.md`, `canonical/privacy.py` (the scan) |
+| REV-03 | Re-read the decision-critical official values on 2026-11-13 and record whether each still matches its quote (no value is changed without a new quote) | in progress | session-020f067d | `canonical/data/reconfirm_2026-11-13.json` (new), `canonical/verify.py` (reads it), `canonical/build_site.py` (publishes it on `verification.html`) |
+
+These two tasks touch archived folders of earlier sessions. Those sessions are closed (their PRs are merged), so no live claim is overridden. Each archived file changes only by replacing names; the CI regeneration checks are kept green by regenerating from the same scripts. No other session's scope is edited.
+
 <!-- LIVE-BOARD:END -->
 
 ---
