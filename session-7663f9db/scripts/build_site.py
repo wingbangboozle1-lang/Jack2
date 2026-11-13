@@ -517,7 +517,7 @@ def build_pages() -> None:
       <ul>
         <li><strong>Footprint &amp; Store Closures:</strong> System shrank to <strong>2,115 units</strong> (149 company / 1,966 franchised = <strong>93.0% franchised</strong>), guiding ~2,100 by year-end with <strong>50–60 gross closures</strong> <a href="sources.html#S15">[S15]</a>.</li>
         <li><strong>Operating &amp; Balance Sheet Strain:</strong> Q3 same-store sales <strong>-1.1%</strong>; Q3 Adj. EBITDA <strong>$61.2M</strong>; Total debt <strong>$1,472.83M</strong> (including $500M May 2031 ARD notes overlapping owner's expiry window); stockholders' deficit <strong>($901.29M)</strong>; dividend &amp; buybacks suspended <a href="sources.html#S15">[S15]</a>.</li>
-        <li><strong>Governance Transition:</strong> Del Taco divestiture closed Dec 22, 2025 ($115M); Sep 21, 2026 8-K added Rachel Ruggeri to the Board, extended GreenWood cooperation, and announced CEO succession planning <a href="sources.html#S16">[S16]</a>.</li>
+        <li><strong>Governance Transition:</strong> Del Taco divestiture closed Dec 22, 2025 ($115M); Sep 21, 2026 8-K added [OFFICER] to the Board, extended GreenWood cooperation, and announced CEO succession planning <a href="sources.html#S16">[S16]</a>.</li>
         <li><strong>Critical Lease Caveat:</strong> 93% franchised structure means parent 10-Q strength does <em>not</em> backstop an individual parcel unless corporate signed or guaranteed the lease!</li>
       </ul>
     </div>
