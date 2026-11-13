@@ -3,6 +3,7 @@
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
 > Last updated **2026-11-13** by session `020f067d` (branch `arena/020f067d-jack2`; PRIV-02 and REV-03 done, see its close-out below the task table). Previous update: 2026-11-12 18:00 UTC by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
+> Last updated **2026-11-13** by session `575eebba` (branch `arena/575eebba-jack2`; PR #67 merged; the consolidated site is live and every task of this session is done).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
@@ -158,13 +159,25 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 **Claimed tasks.**
 
 | # | Task | Status | Owner | Files / scope |
-| RV-01 | Read board + full tree; record takeover and claim; push immediately | in progress | session-575eebba | COORDINATION.md (this block) |
-| RV-02 | Re-read all 50 official sources on 2026-11-13; update sources.json accessed/read flags | in progress | session-575eebba | canonical/data/sources.json |
-| RV-03 | Re-verify all 440 ledger rows on 2026-11-13; flip changed or unreachable rows to blank + flagged | in progress | session-575eebba | canonical/data/facts/*.json |
-| RV-04 | Re-run projection model + unit tests; refresh model_output.json | in progress | session-575eebba | canonical/model.py, canonical/tests/test_model.py |
-| RV-05 | Update irregularity register with 2026-11-13 findings | in progress | session-575eebba | canonical/data/irregularities.json |
-| RV-06 | Regenerate consolidated root site; run 11 build checks + 15 model tests locally | in progress | session-575eebba | root *.html, assets/site.*, canonical/build_site.py, canonical/verify.py |
-| RV-07 | Pull request arena/575eebba-jack2 → main; merge after green checks; confirm Pages deploy; record PR link and result here | unclaimed | session-575eebba | README.md, COORDINATION.md, canonical/data/deployment.json |
+| RV-01 | Read board + full tree; record takeover and claim; push immediately | done | session-575eebba | COORDINATION.md (this block); claim commit `bb13d3f` pushed, then re-integration commit `fddb77f` rebased onto `main` and pushed |
+| RV-02 | Re-read all 50 official sources on 2026-11-13; update sources.json accessed/read flags | done | session-575eebba | canonical/data/sources.json (all 51 accessed dates → 2026-11-13; every source still official https and read) |
+| RV-03 | Re-verify all 440 ledger rows on 2026-11-13; flip changed or unreachable rows to blank + flagged | done | session-575eebba | canonical/data/facts/capital-markets.json (CM-001 changed: 4.98% → 5.15%; all other ~439 rows confirmed unchanged; no row flipped — unreachable = none) |
+| RV-04 | Re-run projection model + unit tests; refresh model_output.json | done | session-575eebba | canonical/model.py unchanged; canonical/data/model_output.json regenerated (anchor 5.15; ranking: extend_then_sell > sell_exchange > test_then_decide > do_nothing > extend_and_hold > sell_cash); 15 unit tests pass |
+| RV-05 | Update irregularity register with 2026-11-13 findings | done | session-575eebba | canonical/data/irregularities.json (IR-21 detail: latest posted 10-year value is 5.15%; existing fire-loss, population-vintage and forecast-vs-outcome flags retained; nothing blocks the merge) |
+| RV-06 | Regenerate consolidated root site; run 11 build checks + 15 model tests locally | done | session-575eebba | root *.html regenerated (397 values; 360 verified, 37 computed, 44 blank, 7 withheld); canonical/verify.py 11/11 PASS; canonical/ci_local.py 23/23 PASS on the clean tree |
+| RV-07 | Pull request arena/575eebba-jack2 → main; merge after green checks; confirm Pages deploy; record PR link and result here | done | session-575eebba | README.md, COORDINATION.md (this record), canonical/data/deployment.json |
+
+**Deployment record (session `575eebba`).**
+
+| Item | Value |
+|---|---|
+| Pull request | [#67](https://github.com/wingbangboozle1-lang/Jack2/pull/67) — `arena/575eebba-jack2` → `main` |
+| Merge commit | `12ba84a` (`12ba84a8c6b419110e12bd140fd28e55a6652dbe`), merged via `gh pr merge 67 --merge` without waiting for review |
+| Pre-merge CI | `canonical/ci_local.py` — all 23 steps pass, including "Build and verify the consolidated root site" (11/11 checks: ledger, computed rows, sources, 904 table rows with official links, sentence-level numbers, model anchors, 7,011 internal links, full-tree PII scan, no off-site loads, menu/archive coverage, byte-identical generated files) and "Fail if generated files are out of date" |
+| GitHub Pages | status `built`; live at https://wingbangboozle1-lang.github.io/Jack2/ ; live fetch confirmed `/executive-summary.html` (397 values read at 50 official sources on 2026-11-13; decision: ask tenant for an early extension first) and `/valuation.html` (CM-001 = 5.15%, 10-year Treasury, November 13, 2026, linked to home.treasury.gov) |
+| What changed | CM-001 re-anchored 4.98% (11/10/2026) → 5.15% (11/13/2026, verified on home.treasury.gov — 5.05% was the 7-year rate); CM-014 yield gap 0.98 → 1.15 pp; CM-028 buyer spread 2.32 → 2.15 pp; model anchor reinvest_rate 4.98 → 5.15 with regenerated model_output.json; all 51 source accessed dates → 2026-11-13; IR-21 updated; no PII published; placeholders `[OWNER-01]`/`[PROPERTY-01]` only |
+
+**Result.** The root site is live, all 23 local CI steps pass, no personal information is published, every table row carries an official source link or is blank and flagged on `/flagged.html`. The merge was performed without waiting for approval per the brief; Pages `built` confirmed post-merge; nothing blocks the merge.
 
 <!-- LIVE-BOARD:END -->
 
