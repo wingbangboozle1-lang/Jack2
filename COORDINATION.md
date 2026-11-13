@@ -2,8 +2,19 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-12 18:00 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
+> Last updated **2026-11-13 21:54 UTC** by session `cfc68776` (branch `arena/cfc68776-jack2`; prior integration is complete; this follow-up is in progress).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
+
+### Session `cfc68776` — privacy-first publication follow-up — claimed 2026-11-13 21:54 UTC
+
+The consolidated site and prior integration tasks are complete. This non-overlapping follow-up checks what GitHub Pages actually publishes and closes the specific privacy gap already disclosed by the consolidated verifier: the root pages are clean, but linked archived workbooks contain official-person names and institutional address strings. The current Pages configuration is legacy branch-root publishing, so merely removing archive links would not prevent those files from being served. No owner, parcel, lease, contact or tax details will be sought or published.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| CP-01 | Verify Pages publication boundary and remove personal information from the public site while preserving the consolidated root dashboard | in progress | `cfc68776` | `COORDINATION.md`, `canonical/{privacy.py,build_site.py,publish_site.py,verify.py}`, `canonical/data/verification.json`, `.github/workflows/pages.yml`, generated root `workspaces.html` |
+| CP-02 | Rebuild all checks, test artifact contents and links, create/merge PR from the current branch, confirm Pages deployment and record exact outcome | claimed | `cfc68776` | same scope plus `canonical/data/deployment.json` |
+
+No current parallel claims were found. All earlier tasks in the live board are marked done; the historical session workspaces are not being edited. This session is the current final integration for this privacy-specific change. The branch is fixed by Arena; work will remain on `arena/cfc68776-jack2`.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
 
