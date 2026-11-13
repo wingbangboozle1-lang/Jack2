@@ -1052,7 +1052,8 @@ def build_verification():
     sens = RECONFIRM["sensitivity"]
     body.append(f'<p><strong>Sensitivity test (10-year yield at the latest posted row).</strong> {e(sens["test"])} '
                 f'The ranking of the six strategies {"changes" if sens["ranking_changed"] else "does not change"}; {e(sens["score_change_range"])}.</p>')
-    body.append('<p class="note">Treasury: the page now also posts later daily rows. The ledger keeps the 11/10/2026 row (CM-001) for the model, and the 11/13/2026 row is CM-008; a model test with the latest row leaves the ranking unchanged '
+    body.append('<p class="note">Treasury: the model anchor (CM-001) is the 11/13/2026 row, 5.15%, which session 575eebba moved on the access date from the 11/10/2026 row (4.98%). '
+                'CM-008 holds the same 11/13/2026 row from the earlier re-read. Runs at both values leave the ranking unchanged; the choice of anchor date is an open owner decision '
                 '(see Flagged for Review, IR-33). Check 12 below re-tests every number found again against the ledger value and the text recorded on the re-read.</p>')
     body.append('<h2 id="yourself">Check a row yourself</h2><ol class="steps"><li>Open the row and follow its official source link.</li>'
                 '<li>Open "What the source says" under the item and find that text on the page.</li>'

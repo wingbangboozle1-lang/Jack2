@@ -33,6 +33,10 @@ def _hashes():
 
 def strip_markup(text):
     text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", text, flags=re.S | re.I)
+    # Keep structural blocks separated so a number in one table cell cannot combine with
+    # words in another cell to look like a street address or two-word personal name.
+    structural = re.compile(r"</?(?:address|article|aside|blockquote|br|dd|div|dl|dt|fieldset|figcaption|figure|footer|form|h[1-6]|header|hr|li|main|nav|ol|p|section|table|tbody|td|tfoot|th|thead|tr|ul)\b[^>]*>", re.I)
+    text = structural.sub(" \u241e ", text)
     text = re.sub(r"<[^>]+>", " ", text)
     return text.replace("&amp;", "&").replace("&nbsp;", " ")
 

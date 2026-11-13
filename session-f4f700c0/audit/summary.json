@@ -1,36 +1,31 @@
 {
   "as_of": "2026-11-08",
   "files": 585,
-  "lines": 109324,
-  "bytes": 10252659,
-  "privacy_pattern_hits": 1,
+  "lines": 109225,
+  "bytes": 10237404,
+  "privacy_pattern_hits": 0,
   "current_session_privacy_hits": 0,
-  "historical_privacy_review": [
-    {
-      "path": "research/04-education.md",
-      "hits": 1
-    }
-  ],
+  "historical_privacy_review": [],
   "structural_errors": 0,
   "workspaces": {
     "root/config": {
       "files": 60,
-      "lines": 20428,
-      "bytes": 2136779,
+      "lines": 20318,
+      "bytes": 2121238,
       "privacy_hits": 0,
       "structural_errors": 0
     },
     "root/historical-shared": {
       "files": 54,
       "lines": 16021,
-      "bytes": 913843,
-      "privacy_hits": 1,
+      "bytes": 913839,
+      "privacy_hits": 0,
       "structural_errors": 0
     },
     "session-18dacdea": {
       "files": 23,
-      "lines": 5511,
-      "bytes": 539963,
+      "lines": 5517,
+      "bytes": 540106,
       "privacy_hits": 0,
       "structural_errors": 0
     },
@@ -141,8 +136,8 @@
     },
     "session-a3a8ec08": {
       "files": 23,
-      "lines": 4679,
-      "bytes": 384556,
+      "lines": 4684,
+      "bytes": 384703,
       "privacy_hits": 0,
       "structural_errors": 0
     },

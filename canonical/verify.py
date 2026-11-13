@@ -238,23 +238,27 @@ def run_checks(bs):
     # 8 ------------------------------------------------------------------ privacy
     def private():
         n = 0
-        targets = [os.path.join(REPO, p) for p in root_pages]
-        for dirpath, _, filenames in os.walk(DATA):
-            targets += [os.path.join(dirpath, f) for f in filenames if f.endswith(".json") and f != "name_hashes.json"]
-        for path in targets:
-            with open(path, encoding="utf-8") as fh:
-                hits = privacy.scan(fh.read(), is_html=path.endswith(".html"))
-            assert not hits, f"{os.path.relpath(path, REPO)}: {hits[:3]}"
-            n += 1
+        extensions = {".html", ".json", ".md", ".py", ".js", ".css", ".txt", ".csv", ".yml", ".svg"}
+        for dirpath, dirnames, filenames in os.walk(REPO):
+            dirnames[:] = [name for name in dirnames if name not in {".git", "__pycache__", "node_modules"}]
+            for filename in filenames:
+                path = os.path.join(dirpath, filename)
+                if os.path.splitext(filename)[1].lower() not in extensions:
+                    continue
+                if path == os.path.join(DATA, "name_hashes.json"):
+                    continue  # salted digests, not personal data
+                with open(path, encoding="utf-8", errors="replace") as fh:
+                    hits = privacy.scan(fh.read(), is_html=path.endswith(".html"))
+                assert not hits, f"{os.path.relpath(path, REPO)}: privacy-pattern match"
+                n += 1
         for r in rows:
             if r["category"] == "property-lease":
                 assert not r["value"], f"{r['id']}: a property or owner row carries a value"
-        t = bs.REVIEW["totals"]
-        return (f"{n} pages and data files of the consolidated site scanned: no e-mail address, telephone number, street address, "
-                f"parcel number or named individual. Archived workbooks: {t['name_hits']} names of officials and {t['address_hits']} institutional addresses, listed for review")
+        return (f"{n} text files across the entire published repository scanned: no e-mail address, telephone number, street address, "
+                "parcel number or named individual; every property and owner row is blank")
     add("Nothing personal is published",
-        "No identifier pattern and no individual's name appears on the consolidated site or in its data, and every property and owner row is blank.",
-        "That the archived workbooks meet the same standard; their hits are counted on this page and flagged.", private)
+        "The complete published repository, including archived workbooks, is scanned for names and personal identifiers; every property and owner row is blank.",
+        "Whether a pattern scan can identify every possible form of personal information; human review is still appropriate.", private)
 
     # 9 ------------------------------------------------------------------ self-contained pages
     def resources():

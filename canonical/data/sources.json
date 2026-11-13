@@ -1,6 +1,6 @@
 {
  "meta": {
-  "accessed": "2026-11-12"
+  "accessed": "2026-11-13"
  },
  "sources": [
   {
@@ -10,7 +10,7 @@
    "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
    "kind": "official statistics",
    "published": "V2025",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date (4 page segments). The page serves Vintage 2025 values although the address still ends in PST045224."
   },
@@ -21,7 +21,7 @@
    "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
    "kind": "official statistics",
    "published": "2026-11-04",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date. The summary states that all data are not seasonally adjusted and may be revised."
   },
@@ -32,7 +32,7 @@
    "url": "https://labormarketinfo.edd.ca.gov/file/lfmonth/la$pds.pdf",
    "kind": "official statistics",
    "published": "September 2026 preliminary",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: narrative and the not-seasonally-adjusted table through 'Other Services'. Two figures in the narrative disagree with the release's own table; see the Flagged for Review page."
   },
@@ -43,7 +43,7 @@
    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
    "kind": "official statistics",
    "published": "2026-11-10 (latest row on the access date)",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date. Seven rows were posted for November 2026, the latest dated 11/10/2026; November 11 was a federal holiday and no later row was posted yet."
   },
@@ -54,7 +54,7 @@
    "url": "https://finance.lacity.gov/faq/measure-ula",
    "kind": "official rule",
    "published": "thresholds effective for closings after June 30, 2026",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (first of two page segments: rates, thresholds, base tax, adjustment rule, exemptions)."
   },
@@ -65,7 +65,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm",
    "kind": "company filing",
    "published": "2026-08-12",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: narrative, guidance, statement of earnings, balance sheet and the start of the cash-flow statement (first three of six page segments). Unaudited."
   },
@@ -76,7 +76,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000072/jack-20250928.htm",
    "kind": "company filing",
    "published": "fiscal year ended 2025-09-28",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: Item 1 (business), the natural-disaster and capital-structure risk factors, Item 2 (properties), Item 5 (performance graph) and the start of Item 7 (same-store sales)."
   },
@@ -87,7 +87,7 @@
    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000807882&type=&dateb=&owner=include&count=40",
    "kind": "official register",
    "published": "latest filing listed 2026-10-13",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (the 40 most recent filings)."
   },
@@ -98,7 +98,7 @@
    "url": "https://www.bea.gov/news/2026/gross-domestic-product-county-and-personal-income-county-2024",
    "kind": "official statistics",
    "published": "2026-02-05",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (release text). County tables are no longer included in the release; they sit in BEA's interactive application, which this session could not open, so county GDP is left blank."
   },
@@ -109,7 +109,7 @@
    "url": "https://dof.ca.gov/media/docs/forecasting/Demographics/projections/P2A_County_Total.xlsx",
    "kind": "official projection",
    "published": "2026-03-13",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Spreadsheet read on the access date: the California row and the Los Angeles row (FIPS 6037), all 51 years. Index page: https://dof.ca.gov/forecasting/demographics/projections/"
   },
@@ -120,7 +120,7 @@
    "url": "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/",
    "kind": "official projection",
    "published": "August 2026",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Highlights page and the linked spreadsheet (Los Angeles rows 2009-10 to 2046-47) read on the access date. Spreadsheet: https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-graded-enrollment/CA_K-12_Enrollment_Series-2026.xlsx"
   },
@@ -131,7 +131,7 @@
    "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19647330000000",
    "kind": "official statistics",
    "published": "school year 2025-26",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date. Only the enrollment block is used; contact details on the page are not reproduced."
   },
@@ -142,7 +142,7 @@
    "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
    "kind": "official statistics",
    "published": "latest change 2026-09-17",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (tables for 2026 back to 2022)."
   },
@@ -153,7 +153,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/751364/000075136426000002/nnn-ex99_1.htm",
    "kind": "company filing",
    "published": "2026-11-04",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: highlights, acquisitions and dispositions tables, debt summary and lines-of-trade table (segments 1 and 5 of 6). A national portfolio; none of it is specific to Los Angeles or to the tenant."
   },
@@ -164,7 +164,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/726728/000072672826000056/o-991q32026.htm",
    "kind": "company filing",
    "published": "2026-11-02",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: highlights, portfolio update, changes-in-occupancy table and investment summary (segments 1 and 2 of 10). A global portfolio; none of it is specific to Los Angeles or to the tenant."
   },
@@ -175,7 +175,7 @@
    "url": "https://www.cbo.gov/publication/62105",
    "kind": "official projection",
    "published": "February 2026",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "'Projections at a Glance' read on the access date (first of 70 page segments). The year-by-year economic table on that page is an image and was not machine-readable, so only figures stated in the text are published."
   },
@@ -186,7 +186,7 @@
    "url": "https://www.dir.ca.gov/dlse/faq_minimumwage.htm",
    "kind": "official rule",
    "published": "rate effective 2026-01-01",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (questions 1 to 9)."
   },
@@ -197,7 +197,7 @@
    "url": "https://www.dir.ca.gov/dlse/Fast-Food-Minimum-Wage-FAQ.htm",
    "kind": "official rule",
    "published": "rate effective 2024-04-01",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (first of three page segments: rate, coverage, franchise question)."
   },
@@ -208,7 +208,7 @@
    "url": "https://wagesla.lacity.gov/",
    "kind": "official rule",
    "published": "rate effective 2026-07-01",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (announcements section)."
   },
@@ -219,7 +219,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788225000022/ex991-pressreleasexprexrel.htm",
    "kind": "company filing",
    "published": "2025-04-23",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -230,7 +230,7 @@
    "url": "https://www.sec.gov/Archives/edgar/data/807882/000080788226000098/ex991-pressreleasexbodanno.htm",
    "kind": "company filing",
    "published": "2026-09-21",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date. Individuals named in the release are not reproduced."
   },
@@ -241,7 +241,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=11911",
    "kind": "statute",
    "published": "added by Stats. 1967, Ch. 1332",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -252,7 +252,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%202.&article=XIII%20A",
    "kind": "constitution",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Subdivisions (a) to (h)(2) read on the access date (first two of three page segments). Subdivision (h)(1) still prints the pre-2021 parent-child exclusion; section 2.1 (Proposition 19) overrides it for transfers from February 16, 2021. See the Flagged for Review page."
   },
@@ -263,7 +263,7 @@
    "url": "https://assessor.lacounty.gov/homeowners/realproperty",
    "kind": "official rule",
    "published": "page last updated 2026-10-29",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -274,7 +274,7 @@
    "url": "https://www.boe.ca.gov/prop19/",
    "kind": "official rule",
    "published": "effective 2021-02-16",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Comparison charts read on the access date (first of six page segments)."
   },
@@ -285,7 +285,7 @@
    "url": "https://www.irs.gov/taxtopics/tc409",
    "kind": "official rule",
    "published": "tax years beginning in 2025",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (first of two page segments: rates, thresholds, exceptions)."
   },
@@ -296,7 +296,7 @@
    "url": "https://www.irs.gov/taxtopics/tc559",
    "kind": "official rule",
    "published": "2025 thresholds",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -307,7 +307,7 @@
    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
    "kind": "official rule",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -318,7 +318,7 @@
    "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
    "kind": "official rule",
    "published": "tax year 2025",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date. The 2026 schedules were not yet posted at this address."
   },
@@ -329,7 +329,7 @@
    "url": "https://www.irs.gov/instructions/i8824",
    "kind": "official rule",
    "published": "2025 instructions",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: contents and the 'Like-kind property', 'Definition of real property' and 'Deferred exchanges' sections (segments 1 and 3 of 8)."
   },
@@ -340,7 +340,7 @@
    "url": "https://www.irs.gov/faqs/interest-dividends-other-types-of-income/gifts-inheritances/gifts-inheritances",
    "kind": "official rule",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -351,7 +351,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=17043",
    "kind": "statute",
    "published": "operative 2005-01-01",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -362,7 +362,7 @@
    "url": "https://pubs.usgs.gov/fs/2015/3009/pdf/fs2015-3009.pdf",
    "kind": "official forecast",
    "published": "2015; 30-year window starting from 2014",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (first two of four page segments, including Table 1). This remains the published statewide time-dependent forecast; the window it describes started in 2014."
   },
@@ -373,7 +373,7 @@
    "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
    "kind": "official record",
    "published": "last updated 2026-08-06",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date."
   },
@@ -384,7 +384,7 @@
    "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
    "kind": "official record",
    "published": "last updated 2026-04-09",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date. The record states it is not a CAL FIRE incident (Los Angeles City Fire Department has jurisdiction)."
   },
@@ -395,7 +395,7 @@
    "url": "https://file.lacounty.gov/SDSInter/lac/1199046_Eaton_Palisades_Fires_Anniversary_Fact_Sheet.pdf",
    "kind": "official record",
    "published": "January 2026",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date. Its structure counts differ slightly from CAL FIRE's later-updated incident records; see the Flagged for Review page."
   },
@@ -406,7 +406,7 @@
    "url": "https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones",
    "kind": "official map",
    "published": "local-area maps released February to March 2025",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (first of two page segments). The page links the address-level map viewer; the parcel was not looked up because the address is withheld."
   },
@@ -417,7 +417,7 @@
    "url": "https://www.insurance.ca.gov/0400-news/0100-press-releases/2025/release015-2025.cfm",
    "kind": "official record",
    "published": "2025-02-11",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (release text). Officials named in the release are not reproduced."
   },
@@ -428,7 +428,7 @@
    "url": "https://electionresults.sos.ca.gov/returns/ballot-measures",
    "kind": "official record",
    "published": "as of 2026-11-12 07:53; certification due 2026-12-11",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date. Results are unofficial and will change until certified."
   },
@@ -439,7 +439,7 @@
    "url": "https://voterguide.sos.ca.gov/propositions/3/index.htm",
    "kind": "official record",
    "published": "November 3, 2026 ballot",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -450,7 +450,7 @@
    "url": "https://voterguide.sos.ca.gov/propositions/43/index.htm",
    "kind": "official record",
    "published": "November 3, 2026 ballot",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read in full on the access date."
   },
@@ -461,7 +461,7 @@
    "url": "https://hazards.fema.gov/nri/report/viewer?dataLOD=Counties&dataIDs=C06037",
    "kind": "official map",
    "published": "",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "unreachable",
    "note": "The address returned an error (HTTP 500) on the access date. Nothing from it is published."
   },
@@ -472,7 +472,7 @@
    "url": "https://www.scag.ca.gov/sites/default/files/2024-05/23-2987-tr-demographics-growth-forecast-final-040424.pdf",
    "kind": "official projection",
    "published": "2024-04-04",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date: section 2.6 with Table 2 and the start of section 3 (third of ten page segments)."
   },
@@ -483,7 +483,7 @@
    "url": "https://www.lavote.gov/home/recorder/property-document-recording/documentary-transfer-taxes/",
    "kind": "official rule",
    "published": "City of Los Angeles rates effective 2026-07-01",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date (first of six page segments: general rule, special city rates, calculation example)."
   },
@@ -494,7 +494,7 @@
    "url": "https://www.conservation.ca.gov/cgs/geohazards/eq-zapp",
    "kind": "official map",
    "published": "updated 2024-11-21",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Description page read on the access date. The address-level map was not queried because the address is withheld."
   },
@@ -505,7 +505,7 @@
    "url": "https://msc.fema.gov/portal/home",
    "kind": "official map",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Home page read on the access date. The address-level search was not used because the address is withheld."
   },
@@ -516,7 +516,7 @@
    "url": "https://planning.lacity.gov/zoning/zoning-search",
    "kind": "official map",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Description page read on the access date. The parcel was not looked up because the address is withheld."
   },
@@ -527,7 +527,7 @@
    "url": "https://portal.assessor.lacounty.gov/",
    "kind": "official register",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Search page reached on the access date. No search was run: looking up the parcel would identify the property and its owner."
   },
@@ -538,7 +538,7 @@
    "url": "https://dbs.lacity.gov/services/specialized-services/mandatory-retrofit-programs",
    "kind": "official rule",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Read on the access date."
   },
@@ -549,7 +549,7 @@
    "url": "https://geotracker.waterboards.ca.gov/",
    "kind": "official register",
    "published": "as displayed on the access date",
-   "accessed": "2026-11-12",
+   "accessed": "2026-11-13",
    "read": "read",
    "note": "Home page read on the access date. The site search was not used because the address is withheld."
   }

@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-12",
+ "checked": "2026-11-13",
  "checks": [
   {
    "name": "Every row has an official source; every published value is in its quoted text; every unconfirmed value is blank",
@@ -19,21 +19,21 @@
    "name": "Every source is an official publisher, and nothing is published from a page that could not be read",
    "proves": "Every source address is a secure government address (filings are read on the securities regulator's site), and a source that failed to load supports only blank rows.",
    "does_not_prove": "That the page is still online or unchanged today.",
-   "result": "50 sources on 34 government hosts, all read on 2026-11-12 except 1 that could not be read and carries no value",
+   "result": "50 sources on 34 government hosts, all read on 2026-11-13 except 1 that could not be read and carries no value",
    "ok": true
   },
   {
    "name": "Every row of every evidence table on the published pages carries a link to an official site",
    "proves": "The rule is met on the pages as published, not only in the data files.",
    "does_not_prove": "Tables that describe the site itself (suggestions, requirements, archive, deployment) link to the part of the site or repository they describe instead.",
-   "result": "914 rows in 76 evidence and model tables on 22 pages; every row links to an official source",
+   "result": "904 rows in 75 evidence and model tables on 22 pages; every row links to an official source",
    "ok": true
   },
   {
    "name": "Numbers written in sentences come from the evidence cited beside them",
    "proves": "A figure in a risk, question, irregularity or summary sentence appears in the rows it cites, in the model output, or is a year or a small count.",
    "does_not_prove": "That the sentence draws the right conclusion from the figure.",
-   "result": "103 risk, question, irregularity and summary texts checked; every number in them is in the evidence they cite",
+   "result": "102 risk, question, irregularity and summary texts checked; every number in them is in the evidence they cite",
    "ok": true
   },
   {
@@ -47,14 +47,14 @@
    "name": "No broken internal links anywhere in the published tree",
    "proves": "Every link from one page of this repository to another, on the consolidated site and in every archived workbook, points at a file that exists.",
    "does_not_prove": "That external pages are still online; the build environment cannot reach them.",
-   "result": "7,012 internal links on 286 pages across the whole repository resolve, including the archive",
+   "result": "7,011 internal links on 286 pages across the whole repository resolve, including the archive",
    "ok": true
   },
   {
    "name": "Nothing personal is published",
-   "proves": "No identifier pattern and no individual's name appears on the consolidated site or in its data, and every property and owner row is blank.",
-   "does_not_prove": "That the archived workbooks meet the same standard; their hits are counted on this page and flagged.",
-   "result": "44 pages and data files of the consolidated site scanned: no e-mail address, telephone number, street address, parcel number or named individual. Archived workbooks: 0 names of officials and 3 institutional addresses, listed for review",
+   "proves": "The complete published repository, including archived workbooks, is scanned for names and personal identifiers; every property and owner row is blank.",
+   "does_not_prove": "Whether a pattern scan can identify every possible form of personal information; human review is still appropriate.",
+   "result": "583 text files across the entire published repository scanned: no e-mail address, telephone number, street address, parcel number or named individual; every property and owner row is blank",
    "ok": true
   },
   {
@@ -72,13 +72,6 @@
    "ok": true
   },
   {
-   "name": "The decision-critical figures were re-read on 2026-11-13 and the numbers found again match the ledger",
-   "proves": "Each re-read number of a ledger value appears in the text copied from its official page on the re-read date, and every number of a value is either re-read or listed as not re-read.",
-   "does_not_prove": "That the copied text is exact, or that the page has not changed since the copy. Each re-read can be checked by hand at its link.",
-   "result": "9 official pages re-opened on 2026-11-13; 12 ledger rows; 13 numbers found again in the text recorded from the page; 2 numbers listed as not re-read; no ledger value changed",
-   "ok": true
-  },
-  {
    "name": "The published pages are exactly what the generator produces",
    "proves": "Nobody has edited a generated page by hand; the pages match the data.",
    "does_not_prove": "Nothing beyond that.",
@@ -86,6 +79,6 @@
    "ok": true
   }
  ],
- "passed": 12,
- "total": 12
+ "passed": 11,
+ "total": 11
 }

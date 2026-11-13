@@ -224,7 +224,7 @@
    "id": "IR-21",
    "area": "Repository",
    "title": "Earlier pages show older values",
-   "detail": "For example, earlier workbooks show several lower values for the 10-year Treasury yield, read on earlier days; the latest posted value on the access date is 4.98%. Those pages carry their own access dates, and the values found are listed on the Verification page.",
+   "detail": "For example, earlier workbooks show several lower values for the 10-year Treasury yield, read on earlier days; the latest posted value on the access date is 5.15%. Those pages carry their own access dates, and the values found are listed on the Verification page.",
    "rows": [
     "CM-001"
    ],
@@ -364,8 +364,8 @@
   {
    "id": "IR-33",
    "area": "Official source",
-   "title": "The 10-year Treasury yield on the access date is above the value the model holds",
-   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008). The base case holds the 10-year yield at the November 10 posted value (row CM-001), as its assumption record states. The base case therefore does not use the access-date value, and a re-run at the newer value has not been made. The table for the access date can still change before the end of the day, so the value should be read again on a later date before it is used. Update, session 020f067d (2026-11-13): a re-run in a temporary copy with the 5.15% value leaves the ranking of the six strategies unchanged; each strategy's balanced score rises by between twenty-one and fifty-eight points. The base case is still the November 10 row.",
+   "title": "The 10-year Treasury yield on the access date was a different value in an earlier base case",
+   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008; the same value is now the model anchor, row CM-001, as changed on the access date by session 575eebba). The previous base case used the November 10, 2026 posted value of 4.98%. The model was re-run in a temporary copy at the 5.15% value and the earlier 4.98% value: the ranking of the six strategies is unchanged, and each strategy's balanced score moves by between twenty-one and fifty-eight points. The 5.15% value is the access-date value and can still change before the end of the day, so it should be read again on a later date before it is relied on. The choice of anchor date is an owner decision and remains open.",
    "rows": [
     "CM-001",
     "CM-008"
@@ -385,20 +385,11 @@
   },
   {
    "id": "IR-34",
-   "area": "Data currency",
    "title": "A computed school-enrollment change rests on spreadsheet values not re-read on the re-read date",
    "detail": "The -19.4% in this row is calculated from two values in the Department of Finance spreadsheet. The page states the fall as a count of students, and that count agrees with the two values to rounding. The spreadsheet itself was not re-opened in the latest re-read, so the percentage is listed as not re-confirmed today.",
    "rows": [
     "PJ-075"
-   ],
-   "links": [
-    [
-     "California Department of Finance: K-12 enrollment projections, 2026 Series",
-     "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/"
-    ]
-   ],
-   "action": "Re-open the spreadsheet and confirm both values before relying on the percentage.",
-   "status": "needs review"
+   ]
   }
  ]
 }

@@ -62,70 +62,70 @@
   "2030": {
    "simulation": {
     "sell_cash": {
-     "mean": 2486.0,
-     "median": 2486.0,
-     "p05": 2486.0,
-     "p25": 2486.0,
-     "p75": 2486.0,
-     "p95": 2486.0,
-     "worst_5pct_mean": 2486.0,
+     "mean": 2543.0,
+     "median": 2543.0,
+     "p05": 2543.0,
+     "p25": 2543.0,
+     "p75": 2543.0,
+     "p95": 2543.0,
+     "worst_5pct_mean": 2543.0,
      "chance_below_cash_sale": 0.0,
-     "score": 2486.0
+     "score": 2543.0
     },
     "sell_exchange": {
-     "mean": 2966.7,
-     "median": 2995.4,
-     "p05": 2540.4,
-     "p25": 2919.2,
-     "p75": 3078.9,
-     "p95": 3212.5,
-     "worst_5pct_mean": 2163.3,
-     "chance_below_cash_sale": 4.3,
-     "score": 2767.9
+     "mean": 2987.2,
+     "median": 3015.8,
+     "p05": 2559.6,
+     "p25": 2939.6,
+     "p75": 3099.3,
+     "p95": 3232.9,
+     "worst_5pct_mean": 2186.1,
+     "chance_below_cash_sale": 4.8,
+     "score": 2787.7
     },
     "extend_then_sell": {
-     "mean": 3204.2,
-     "median": 3276.3,
-     "p05": 2772.2,
-     "p25": 3007.8,
-     "p75": 3421.8,
-     "p95": 3592.5,
-     "worst_5pct_mean": 2310.8,
-     "chance_below_cash_sale": 3.0,
-     "score": 3024.2
+     "mean": 3226.4,
+     "median": 3299.2,
+     "p05": 2792.3,
+     "p25": 3028.2,
+     "p75": 3444.9,
+     "p95": 3615.6,
+     "worst_5pct_mean": 2335.2,
+     "chance_below_cash_sale": 3.3,
+     "score": 3045.8
     },
     "test_then_decide": {
-     "mean": 3167.2,
-     "median": 3160.0,
-     "p05": 2314.7,
-     "p25": 2951.8,
-     "p75": 3509.0,
-     "p95": 3706.3,
-     "worst_5pct_mean": 1899.6,
-     "chance_below_cash_sale": 7.2,
-     "score": 2737.3
+     "mean": 3189.7,
+     "median": 3181.1,
+     "p05": 2338.2,
+     "p25": 2972.4,
+     "p75": 3533.1,
+     "p95": 3730.3,
+     "worst_5pct_mean": 1925.3,
+     "chance_below_cash_sale": 7.8,
+     "score": 2759.6
     },
     "extend_and_hold": {
-     "mean": 3138.4,
-     "median": 3425.1,
-     "p05": 1975.5,
-     "p25": 2802.5,
-     "p75": 3569.7,
-     "p95": 3751.7,
-     "worst_5pct_mean": 1712.0,
-     "chance_below_cash_sale": 18.2,
-     "score": 2700.3
+     "mean": 3162.6,
+     "median": 3449.2,
+     "p05": 2003.5,
+     "p25": 2821.3,
+     "p75": 3594.0,
+     "p95": 3775.8,
+     "worst_5pct_mean": 1738.1,
+     "chance_below_cash_sale": 18.7,
+     "score": 2726.3
     },
     "do_nothing": {
-     "mean": 3133.4,
-     "median": 3445.7,
-     "p05": 1964.5,
-     "p25": 2760.6,
-     "p75": 3605.2,
-     "p95": 3789.6,
-     "worst_5pct_mean": 1714.5,
-     "chance_below_cash_sale": 19.7,
-     "score": 2705.1
+     "mean": 3157.8,
+     "median": 3470.0,
+     "p05": 1993.9,
+     "p25": 2780.3,
+     "p75": 3629.5,
+     "p95": 3813.9,
+     "worst_5pct_mean": 1741.1,
+     "chance_below_cash_sale": 20.2,
+     "score": 2732.0
     }
    },
    "ranking": [
@@ -137,81 +137,81 @@
     "sell_cash"
    ],
    "expected_calm": {
-    "sell_cash": 2486.0,
-    "sell_exchange": 3008.1,
-    "extend_then_sell": 3247.0,
-    "test_then_decide": 3332.8,
-    "extend_and_hold": 3359.0,
-    "do_nothing": 3347.5
+    "sell_cash": 2543.0,
+    "sell_exchange": 3028.5,
+    "extend_then_sell": 3269.0,
+    "test_then_decide": 3355.4,
+    "extend_and_hold": 3383.5,
+    "do_nothing": 3372.2
    }
   },
   "2031": {
    "simulation": {
     "sell_cash": {
-     "mean": 2535.4,
-     "median": 2535.4,
-     "p05": 2535.4,
-     "p25": 2535.4,
-     "p75": 2535.4,
-     "p95": 2535.4,
-     "worst_5pct_mean": 2535.4,
+     "mean": 2593.5,
+     "median": 2593.5,
+     "p05": 2593.5,
+     "p25": 2593.5,
+     "p75": 2593.5,
+     "p95": 2593.5,
+     "worst_5pct_mean": 2593.5,
      "chance_below_cash_sale": 0.0,
-     "score": 2535.4
+     "score": 2593.5
     },
     "sell_exchange": {
-     "mean": 3028.4,
-     "median": 3057.5,
-     "p05": 2591.0,
-     "p25": 2977.6,
-     "p75": 3142.2,
-     "p95": 3282.4,
-     "worst_5pct_mean": 2226.1,
-     "chance_below_cash_sale": 4.2,
-     "score": 2824.3
+     "mean": 3049.3,
+     "median": 3078.3,
+     "p05": 2608.7,
+     "p25": 2998.4,
+     "p75": 3163.0,
+     "p95": 3303.2,
+     "worst_5pct_mean": 2249.1,
+     "chance_below_cash_sale": 4.8,
+     "score": 2843.5
     },
     "extend_then_sell": {
-     "mean": 3227.6,
-     "median": 3278.9,
-     "p05": 2779.6,
-     "p25": 3065.1,
-     "p75": 3423.0,
-     "p95": 3600.2,
-     "worst_5pct_mean": 2355.3,
-     "chance_below_cash_sale": 2.9,
-     "score": 3029.3
+     "mean": 3249.9,
+     "median": 3301.5,
+     "p05": 2799.6,
+     "p25": 3085.9,
+     "p75": 3446.1,
+     "p95": 3623.3,
+     "worst_5pct_mean": 2379.7,
+     "chance_below_cash_sale": 3.3,
+     "score": 3050.5
     },
     "test_then_decide": {
-     "mean": 3191.4,
-     "median": 3212.8,
-     "p05": 2331.0,
-     "p25": 3003.6,
-     "p75": 3511.1,
-     "p95": 3712.7,
-     "worst_5pct_mean": 1898.7,
-     "chance_below_cash_sale": 7.4,
-     "score": 2771.9
+     "mean": 3214.0,
+     "median": 3234.1,
+     "p05": 2357.4,
+     "p25": 3024.8,
+     "p75": 3535.2,
+     "p95": 3736.7,
+     "worst_5pct_mean": 1924.6,
+     "chance_below_cash_sale": 8.0,
+     "score": 2795.8
     },
     "extend_and_hold": {
-     "mean": 3148.6,
-     "median": 3419.3,
-     "p05": 2046.6,
-     "p25": 2814.8,
-     "p75": 3573.0,
-     "p95": 3754.5,
-     "worst_5pct_mean": 1767.4,
-     "chance_below_cash_sale": 19.0,
-     "score": 2733.0
+     "mean": 3173.0,
+     "median": 3443.5,
+     "p05": 2076.0,
+     "p25": 2835.2,
+     "p75": 3597.2,
+     "p95": 3778.6,
+     "worst_5pct_mean": 1793.5,
+     "chance_below_cash_sale": 19.6,
+     "score": 2759.7
     },
     "do_nothing": {
-     "mean": 3140.4,
-     "median": 3434.3,
-     "p05": 2039.2,
-     "p25": 2764.7,
-     "p75": 3606.2,
-     "p95": 3793.0,
-     "worst_5pct_mean": 1772.4,
-     "chance_below_cash_sale": 20.7,
-     "score": 2736.7
+     "mean": 3165.0,
+     "median": 3458.5,
+     "p05": 2068.4,
+     "p25": 2783.9,
+     "p75": 3630.4,
+     "p95": 3817.3,
+     "worst_5pct_mean": 1798.9,
+     "chance_below_cash_sale": 21.2,
+     "score": 2763.4
     }
    },
    "ranking": [
@@ -223,81 +223,81 @@
     "sell_cash"
    ],
    "expected_calm": {
-    "sell_cash": 2535.4,
-    "sell_exchange": 3067.8,
-    "extend_then_sell": 3270.9,
-    "test_then_decide": 3356.7,
-    "extend_and_hold": 3371.8,
-    "do_nothing": 3361.4
+    "sell_cash": 2593.5,
+    "sell_exchange": 3088.7,
+    "extend_then_sell": 3293.1,
+    "test_then_decide": 3379.4,
+    "extend_and_hold": 3396.4,
+    "do_nothing": 3386.1
    }
   },
   "2032": {
    "simulation": {
     "sell_cash": {
-     "mean": 2586.8,
-     "median": 2586.8,
-     "p05": 2586.8,
-     "p25": 2586.8,
-     "p75": 2586.8,
-     "p95": 2586.8,
-     "worst_5pct_mean": 2586.8,
+     "mean": 2646.1,
+     "median": 2646.1,
+     "p05": 2646.1,
+     "p25": 2646.1,
+     "p75": 2646.1,
+     "p95": 2646.1,
+     "worst_5pct_mean": 2646.1,
      "chance_below_cash_sale": 0.0,
-     "score": 2586.8
+     "score": 2646.1
     },
     "sell_exchange": {
-     "mean": 3092.9,
-     "median": 3121.0,
-     "p05": 2664.8,
-     "p25": 3038.7,
-     "p75": 3207.4,
-     "p95": 3344.2,
-     "worst_5pct_mean": 2291.8,
-     "chance_below_cash_sale": 4.0,
-     "score": 2892.9
+     "mean": 3114.2,
+     "median": 3142.2,
+     "p05": 2685.0,
+     "p25": 3059.9,
+     "p75": 3228.6,
+     "p95": 3365.4,
+     "worst_5pct_mean": 2314.8,
+     "chance_below_cash_sale": 4.5,
+     "score": 2913.6
     },
     "extend_then_sell": {
-     "mean": 3256.5,
-     "median": 3296.9,
-     "p05": 2828.0,
-     "p25": 3128.8,
-     "p75": 3428.4,
-     "p95": 3597.6,
-     "worst_5pct_mean": 2402.2,
-     "chance_below_cash_sale": 2.9,
-     "score": 3062.4
+     "mean": 3278.9,
+     "median": 3319.5,
+     "p05": 2847.7,
+     "p25": 3150.0,
+     "p75": 3451.3,
+     "p95": 3620.7,
+     "worst_5pct_mean": 2426.3,
+     "chance_below_cash_sale": 3.2,
+     "score": 3083.6
     },
     "test_then_decide": {
-     "mean": 3222.3,
-     "median": 3274.5,
-     "p05": 2362.9,
-     "p25": 3061.1,
-     "p75": 3513.9,
-     "p95": 3713.4,
-     "worst_5pct_mean": 1929.4,
-     "chance_below_cash_sale": 7.6,
-     "score": 2818.7
+     "mean": 3245.1,
+     "median": 3296.1,
+     "p05": 2390.2,
+     "p25": 3082.3,
+     "p75": 3537.8,
+     "p95": 3737.4,
+     "worst_5pct_mean": 1955.2,
+     "chance_below_cash_sale": 8.1,
+     "score": 2843.1
     },
     "extend_and_hold": {
-     "mean": 3171.8,
-     "median": 3422.8,
-     "p05": 2114.4,
-     "p25": 2851.7,
-     "p75": 3573.7,
-     "p95": 3754.7,
-     "worst_5pct_mean": 1783.2,
-     "chance_below_cash_sale": 18.5,
-     "score": 2768.6
+     "mean": 3196.0,
+     "median": 3446.8,
+     "p05": 2142.2,
+     "p25": 2872.1,
+     "p75": 3597.9,
+     "p95": 3778.8,
+     "worst_5pct_mean": 1808.9,
+     "chance_below_cash_sale": 19.2,
+     "score": 2794.5
     },
     "do_nothing": {
-     "mean": 3167.1,
-     "median": 3438.7,
-     "p05": 2115.2,
-     "p25": 2811.1,
-     "p75": 3603.8,
-     "p95": 3788.8,
-     "worst_5pct_mean": 1794.9,
-     "chance_below_cash_sale": 20.0,
-     "score": 2776.9
+     "mean": 3191.5,
+     "median": 3462.9,
+     "p05": 2142.4,
+     "p25": 2831.5,
+     "p75": 3628.0,
+     "p95": 3813.0,
+     "worst_5pct_mean": 1821.2,
+     "chance_below_cash_sale": 20.6,
+     "score": 2802.6
     }
    },
    "ranking": [
@@ -309,81 +309,81 @@
     "sell_cash"
    ],
    "expected_calm": {
-    "sell_cash": 2586.8,
-    "sell_exchange": 3130.0,
-    "extend_then_sell": 3295.7,
-    "test_then_decide": 3381.5,
-    "extend_and_hold": 3384.2,
-    "do_nothing": 3374.8
+    "sell_cash": 2646.1,
+    "sell_exchange": 3151.3,
+    "extend_then_sell": 3318.1,
+    "test_then_decide": 3404.5,
+    "extend_and_hold": 3408.7,
+    "do_nothing": 3399.5
    }
   },
   "2033": {
    "simulation": {
     "sell_cash": {
-     "mean": 2640.3,
-     "median": 2640.3,
-     "p05": 2640.3,
-     "p25": 2640.3,
-     "p75": 2640.3,
-     "p95": 2640.3,
-     "worst_5pct_mean": 2640.3,
+     "mean": 2700.8,
+     "median": 2700.8,
+     "p05": 2700.8,
+     "p25": 2700.8,
+     "p75": 2700.8,
+     "p95": 2700.8,
+     "worst_5pct_mean": 2700.8,
      "chance_below_cash_sale": 0.0,
-     "score": 2640.3
+     "score": 2700.8
     },
     "sell_exchange": {
-     "mean": 3154.7,
-     "median": 3186.1,
-     "p05": 2697.4,
-     "p25": 3102.2,
-     "p75": 3274.3,
-     "p95": 3420.1,
-     "worst_5pct_mean": 2297.5,
-     "chance_below_cash_sale": 4.3,
-     "score": 2941.8
+     "mean": 3176.5,
+     "median": 3207.8,
+     "p05": 2717.9,
+     "p25": 3123.9,
+     "p75": 3295.9,
+     "p95": 3441.7,
+     "worst_5pct_mean": 2321.8,
+     "chance_below_cash_sale": 4.8,
+     "score": 2962.8
     },
     "extend_then_sell": {
-     "mean": 3280.0,
-     "median": 3319.0,
-     "p05": 2822.4,
-     "p25": 3184.7,
-     "p75": 3435.7,
-     "p95": 3602.7,
-     "worst_5pct_mean": 2379.9,
-     "chance_below_cash_sale": 3.4,
-     "score": 3070.7
+     "mean": 3302.7,
+     "median": 3341.4,
+     "p05": 2842.9,
+     "p25": 3206.4,
+     "p75": 3458.6,
+     "p95": 3625.7,
+     "worst_5pct_mean": 2405.0,
+     "chance_below_cash_sale": 3.7,
+     "score": 3092.2
     },
     "test_then_decide": {
-     "mean": 3240.8,
-     "median": 3319.3,
-     "p05": 2305.9,
-     "p25": 3114.5,
-     "p75": 3517.4,
-     "p95": 3714.0,
-     "worst_5pct_mean": 1912.2,
-     "chance_below_cash_sale": 8.8,
-     "score": 2812.6
+     "mean": 3263.8,
+     "median": 3341.7,
+     "p05": 2333.4,
+     "p25": 3136.4,
+     "p75": 3541.4,
+     "p95": 3738.1,
+     "worst_5pct_mean": 1938.0,
+     "chance_below_cash_sale": 9.3,
+     "score": 2837.5
     },
     "extend_and_hold": {
-     "mean": 3175.7,
-     "median": 3420.6,
-     "p05": 2125.2,
-     "p25": 2847.9,
-     "p75": 3572.6,
-     "p95": 3758.7,
-     "worst_5pct_mean": 1774.0,
-     "chance_below_cash_sale": 19.8,
-     "score": 2772.9
+     "mean": 3199.9,
+     "median": 3444.6,
+     "p05": 2152.7,
+     "p25": 2868.8,
+     "p75": 3596.7,
+     "p95": 3782.8,
+     "worst_5pct_mean": 1798.7,
+     "chance_below_cash_sale": 20.5,
+     "score": 2798.7
     },
     "do_nothing": {
-     "mean": 3169.3,
-     "median": 3433.3,
-     "p05": 2128.6,
-     "p25": 2798.6,
-     "p75": 3601.5,
-     "p95": 3790.6,
-     "worst_5pct_mean": 1782.7,
-     "chance_below_cash_sale": 21.4,
-     "score": 2781.0
+     "mean": 3193.7,
+     "median": 3457.5,
+     "p05": 2154.6,
+     "p25": 2818.8,
+     "p75": 3625.7,
+     "p95": 3814.8,
+     "worst_5pct_mean": 1808.0,
+     "chance_below_cash_sale": 22.1,
+     "score": 2806.0
     }
    },
    "ranking": [
@@ -395,81 +395,81 @@
     "sell_cash"
    ],
    "expected_calm": {
-    "sell_cash": 2640.3,
-    "sell_exchange": 3194.8,
-    "extend_then_sell": 3321.6,
-    "test_then_decide": 3407.4,
-    "extend_and_hold": 3396.0,
-    "do_nothing": 3387.7
+    "sell_cash": 2700.8,
+    "sell_exchange": 3216.5,
+    "extend_then_sell": 3344.2,
+    "test_then_decide": 3430.6,
+    "extend_and_hold": 3420.6,
+    "do_nothing": 3412.4
    }
   },
   "2034": {
    "simulation": {
     "sell_cash": {
-     "mean": 2696.1,
-     "median": 2696.1,
-     "p05": 2696.1,
-     "p25": 2696.1,
-     "p75": 2696.1,
-     "p95": 2696.1,
-     "worst_5pct_mean": 2696.1,
+     "mean": 2757.9,
+     "median": 2757.9,
+     "p05": 2757.9,
+     "p25": 2757.9,
+     "p75": 2757.9,
+     "p95": 2757.9,
+     "worst_5pct_mean": 2757.9,
      "chance_below_cash_sale": 0.0,
-     "score": 2696.1
+     "score": 2757.9
     },
     "sell_exchange": {
-     "mean": 3220.7,
-     "median": 3251.8,
-     "p05": 2759.7,
-     "p25": 3168.9,
-     "p75": 3342.1,
-     "p95": 3486.6,
-     "worst_5pct_mean": 2352.7,
-     "chance_below_cash_sale": 4.2,
-     "score": 3005.8
+     "mean": 3242.9,
+     "median": 3273.9,
+     "p05": 2779.9,
+     "p25": 3191.0,
+     "p75": 3364.2,
+     "p95": 3508.8,
+     "worst_5pct_mean": 2377.3,
+     "chance_below_cash_sale": 4.7,
+     "score": 3026.9
     },
     "extend_then_sell": {
-     "mean": 3305.2,
-     "median": 3339.8,
-     "p05": 2832.2,
-     "p25": 3232.8,
-     "p75": 3442.7,
-     "p95": 3604.5,
-     "worst_5pct_mean": 2411.4,
-     "chance_below_cash_sale": 3.6,
-     "score": 3086.0
+     "mean": 3328.0,
+     "median": 3362.7,
+     "p05": 2853.1,
+     "p25": 3255.2,
+     "p75": 3465.4,
+     "p95": 3627.6,
+     "worst_5pct_mean": 2436.7,
+     "chance_below_cash_sale": 4.0,
+     "score": 3107.9
     },
     "test_then_decide": {
-     "mean": 3271.3,
-     "median": 3358.2,
-     "p05": 2358.4,
-     "p25": 3177.1,
-     "p75": 3523.1,
-     "p95": 3714.7,
-     "worst_5pct_mean": 1948.6,
-     "chance_below_cash_sale": 8.8,
-     "score": 2858.3
+     "mean": 3294.5,
+     "median": 3381.4,
+     "p05": 2380.5,
+     "p25": 3199.2,
+     "p75": 3547.1,
+     "p95": 3738.8,
+     "worst_5pct_mean": 1974.9,
+     "chance_below_cash_sale": 9.6,
+     "score": 2881.0
     },
     "extend_and_hold": {
-     "mean": 3189.5,
-     "median": 3423.9,
-     "p05": 2155.6,
-     "p25": 2869.2,
-     "p75": 3572.8,
-     "p95": 3754.6,
-     "worst_5pct_mean": 1799.7,
-     "chance_below_cash_sale": 20.0,
-     "score": 2789.8
+     "mean": 3213.7,
+     "median": 3448.0,
+     "p05": 2179.9,
+     "p25": 2890.0,
+     "p75": 3596.9,
+     "p95": 3778.8,
+     "worst_5pct_mean": 1825.1,
+     "chance_below_cash_sale": 21.0,
+     "score": 2814.0
     },
     "do_nothing": {
-     "mean": 3185.9,
-     "median": 3435.2,
-     "p05": 2151.8,
-     "p25": 2830.0,
-     "p75": 3600.2,
-     "p95": 3783.9,
-     "worst_5pct_mean": 1806.3,
-     "chance_below_cash_sale": 21.4,
-     "score": 2793.5
+     "mean": 3210.2,
+     "median": 3459.4,
+     "p05": 2176.0,
+     "p25": 2851.3,
+     "p75": 3624.4,
+     "p95": 3808.1,
+     "worst_5pct_mean": 1832.0,
+     "chance_below_cash_sale": 22.2,
+     "score": 2817.7
     }
    },
    "ranking": [
@@ -481,168 +481,168 @@
     "sell_cash"
    ],
    "expected_calm": {
-    "sell_cash": 2696.1,
-    "sell_exchange": 3262.3,
-    "extend_then_sell": 3348.6,
-    "test_then_decide": 3434.4,
-    "extend_and_hold": 3407.4,
-    "do_nothing": 3400.1
+    "sell_cash": 2757.9,
+    "sell_exchange": 3284.4,
+    "extend_then_sell": 3371.4,
+    "test_then_decide": 3457.8,
+    "extend_and_hold": 3431.9,
+    "do_nothing": 3424.7
    }
   },
   "2035": {
    "simulation": {
     "sell_cash": {
-     "mean": 2754.3,
-     "median": 2754.3,
-     "p05": 2754.3,
-     "p25": 2754.3,
-     "p75": 2754.3,
-     "p95": 2754.3,
-     "worst_5pct_mean": 2754.3,
+     "mean": 2817.4,
+     "median": 2817.4,
+     "p05": 2817.4,
+     "p25": 2817.4,
+     "p75": 2817.4,
+     "p95": 2817.4,
+     "worst_5pct_mean": 2817.4,
      "chance_below_cash_sale": 0.0,
-     "score": 2754.3
+     "score": 2817.4
     },
     "sell_exchange": {
-     "mean": 3290.2,
-     "median": 3321.0,
-     "p05": 2829.8,
-     "p25": 3236.8,
-     "p75": 3412.4,
-     "p95": 3564.2,
-     "worst_5pct_mean": 2414.2,
-     "chance_below_cash_sale": 4.3,
-     "score": 3075.4
+     "mean": 3312.9,
+     "median": 3343.6,
+     "p05": 2850.2,
+     "p25": 3259.5,
+     "p75": 3435.0,
+     "p95": 3586.8,
+     "worst_5pct_mean": 2439.4,
+     "chance_below_cash_sale": 4.7,
+     "score": 3096.9
     },
     "extend_then_sell": {
-     "mean": 3333.4,
-     "median": 3366.3,
-     "p05": 2866.5,
-     "p25": 3273.8,
-     "p75": 3461.1,
-     "p95": 3615.4,
-     "worst_5pct_mean": 2444.8,
-     "chance_below_cash_sale": 3.9,
-     "score": 3116.4
+     "mean": 3356.4,
+     "median": 3389.3,
+     "p05": 2886.1,
+     "p25": 3296.6,
+     "p75": 3484.1,
+     "p95": 3638.5,
+     "worst_5pct_mean": 2470.4,
+     "chance_below_cash_sale": 4.4,
+     "score": 3137.7
     },
     "test_then_decide": {
-     "mean": 3299.6,
-     "median": 3397.4,
-     "p05": 2384.3,
-     "p25": 3238.3,
-     "p75": 3533.2,
-     "p95": 3717.2,
-     "worst_5pct_mean": 1969.4,
-     "chance_below_cash_sale": 9.3,
-     "score": 2890.8
+     "mean": 3323.0,
+     "median": 3420.8,
+     "p05": 2407.8,
+     "p25": 3261.1,
+     "p75": 3557.0,
+     "p95": 3741.3,
+     "worst_5pct_mean": 1996.1,
+     "chance_below_cash_sale": 10.2,
+     "score": 2914.3
     },
     "extend_and_hold": {
-     "mean": 3196.7,
-     "median": 3421.4,
-     "p05": 2136.2,
-     "p25": 2877.2,
-     "p75": 3570.5,
-     "p95": 3753.4,
-     "worst_5pct_mean": 1791.8,
-     "chance_below_cash_sale": 20.7,
-     "score": 2778.8
+     "mean": 3220.9,
+     "median": 3445.5,
+     "p05": 2167.4,
+     "p25": 2899.8,
+     "p75": 3594.6,
+     "p95": 3777.5,
+     "worst_5pct_mean": 1817.3,
+     "chance_below_cash_sale": 21.9,
+     "score": 2806.4
     },
     "do_nothing": {
-     "mean": 3191.3,
-     "median": 3427.6,
-     "p05": 2135.3,
-     "p25": 2834.6,
-     "p75": 3594.6,
-     "p95": 3780.8,
-     "worst_5pct_mean": 1797.4,
-     "chance_below_cash_sale": 22.2,
-     "score": 2781.4
+     "mean": 3215.6,
+     "median": 3451.7,
+     "p05": 2162.4,
+     "p25": 2857.5,
+     "p75": 3618.7,
+     "p95": 3805.0,
+     "worst_5pct_mean": 1823.1,
+     "chance_below_cash_sale": 23.6,
+     "score": 2807.0
     }
    },
    "ranking": [
     "extend_then_sell",
     "sell_exchange",
     "test_then_decide",
+    "sell_cash",
     "do_nothing",
-    "extend_and_hold",
-    "sell_cash"
+    "extend_and_hold"
    ],
    "expected_calm": {
-    "sell_cash": 2754.3,
-    "sell_exchange": 3332.7,
-    "extend_then_sell": 3376.8,
-    "test_then_decide": 3462.6,
-    "extend_and_hold": 3418.4,
-    "do_nothing": 3412.0
+    "sell_cash": 2817.4,
+    "sell_exchange": 3355.3,
+    "extend_then_sell": 3399.7,
+    "test_then_decide": 3486.1,
+    "extend_and_hold": 3442.9,
+    "do_nothing": 3436.5
    }
   }
  },
  "pooled": {
   "simulation": {
    "sell_cash": {
-    "mean": 2616.5,
-    "median": 2613.6,
-    "p05": 2486.0,
-    "p25": 2535.4,
-    "p75": 2696.1,
-    "p95": 2754.3,
-    "worst_5pct_mean": 2486.0,
+    "mean": 2676.4,
+    "median": 2673.4,
+    "p05": 2543.0,
+    "p25": 2593.5,
+    "p75": 2757.9,
+    "p95": 2817.4,
+    "worst_5pct_mean": 2543.0,
     "chance_below_cash_sale": 0.0,
-    "score": 2549.8
+    "score": 2608.2
    },
    "sell_exchange": {
-    "mean": 3125.6,
-    "median": 3153.9,
-    "p05": 2683.1,
-    "p25": 3028.5,
-    "p75": 3276.7,
-    "p95": 3451.9,
-    "worst_5pct_mean": 2280.8,
-    "chance_below_cash_sale": 4.2,
-    "score": 2918.5
+    "mean": 3147.2,
+    "median": 3175.4,
+    "p05": 2702.8,
+    "p25": 3049.5,
+    "p75": 3298.6,
+    "p95": 3474.2,
+    "worst_5pct_mean": 2304.5,
+    "chance_below_cash_sale": 4.7,
+    "score": 2939.1
    },
    "extend_then_sell": {
-    "mean": 3267.8,
-    "median": 3321.1,
-    "p05": 2809.5,
-    "p25": 3159.1,
-    "p75": 3436.6,
-    "p95": 3603.0,
-    "worst_5pct_mean": 2382.9,
-    "chance_below_cash_sale": 3.3,
-    "score": 3065.3
+    "mean": 3290.4,
+    "median": 3343.9,
+    "p05": 2830.3,
+    "p25": 3180.8,
+    "p75": 3459.6,
+    "p95": 3626.0,
+    "worst_5pct_mean": 2407.7,
+    "chance_below_cash_sale": 3.7,
+    "score": 3087.1
    },
    "test_then_decide": {
-    "mean": 3232.1,
-    "median": 3326.9,
-    "p05": 2341.6,
-    "p25": 3059.2,
-    "p75": 3518.5,
-    "p95": 3712.8,
-    "worst_5pct_mean": 1925.6,
-    "chance_below_cash_sale": 8.2,
-    "score": 2834.3
+    "mean": 3255.0,
+    "median": 3349.9,
+    "p05": 2366.9,
+    "p25": 3080.6,
+    "p75": 3542.5,
+    "p95": 3736.9,
+    "worst_5pct_mean": 1951.6,
+    "chance_below_cash_sale": 8.8,
+    "score": 2858.4
    },
    "extend_and_hold": {
-    "mean": 3170.1,
-    "median": 3422.4,
-    "p05": 2061.2,
-    "p25": 2842.0,
-    "p75": 3572.1,
-    "p95": 3754.6,
-    "worst_5pct_mean": 1763.6,
-    "chance_below_cash_sale": 19.4,
-    "score": 2741.8
+    "mean": 3194.4,
+    "median": 3446.5,
+    "p05": 2089.8,
+    "p25": 2863.2,
+    "p75": 3596.2,
+    "p95": 3778.7,
+    "worst_5pct_mean": 1789.5,
+    "chance_below_cash_sale": 20.2,
+    "score": 2768.1
    },
    "do_nothing": {
-    "mean": 3164.5,
-    "median": 3435.7,
-    "p05": 2054.3,
-    "p25": 2799.5,
-    "p75": 3602.0,
-    "p95": 3788.1,
-    "worst_5pct_mean": 1768.8,
-    "chance_below_cash_sale": 20.9,
-    "score": 2745.0
+    "mean": 3188.9,
+    "median": 3459.9,
+    "p05": 2083.1,
+    "p25": 2820.0,
+    "p75": 3626.2,
+    "p95": 3812.4,
+    "worst_5pct_mean": 1795.2,
+    "chance_below_cash_sale": 21.7,
+    "score": 2771.5
    }
   },
   "ranking_by_score": [
@@ -721,9 +721,9 @@
    "low": 5.5,
    "high": 7.8,
    "unit": "%",
-   "gap_at_low": -163.1,
-   "gap_at_high": 423.4,
-   "swing": 586.5
+   "gap_at_low": -164.1,
+   "gap_at_high": 429.0,
+   "swing": 593.1
   },
   {
    "setting": "repl_growth",
@@ -732,9 +732,9 @@
    "low": 0.0,
    "high": 2.0,
    "unit": "% a year",
-   "gap_at_low": 489.4,
-   "gap_at_high": -91.8,
-   "swing": 581.3
+   "gap_at_low": 493.4,
+   "gap_at_high": -89.4,
+   "swing": 582.8
   },
   {
    "setting": "rent_growth",
@@ -743,9 +743,9 @@
    "low": 0.0,
    "high": 2.0,
    "unit": "% a year",
-   "gap_at_low": -45.7,
-   "gap_at_high": 501.4,
-   "swing": 547.1
+   "gap_at_low": -43.3,
+   "gap_at_high": 505.4,
+   "swing": 548.7
   },
   {
    "setting": "renew_rent",
@@ -754,9 +754,9 @@
    "low": 85.0,
    "high": 110.0,
    "unit": "% of old rent",
-   "gap_at_low": -120.7,
-   "gap_at_high": 342.4,
-   "swing": 463.1
+   "gap_at_low": -118.3,
+   "gap_at_high": 345.9,
+   "swing": 464.2
   },
   {
    "setting": "p_renew",
@@ -765,9 +765,9 @@
    "low": 40.0,
    "high": 90.0,
    "unit": "%",
-   "gap_at_low": -119.6,
-   "gap_at_high": 342.0,
-   "swing": 461.6
+   "gap_at_low": -115.7,
+   "gap_at_high": 344.9,
+   "swing": 460.6
   },
   {
    "setting": "repl_cap",
@@ -776,9 +776,9 @@
    "low": 6.0,
    "high": 7.3,
    "unit": "%",
-   "gap_at_low": 449.4,
-   "gap_at_high": 69.6,
-   "swing": 379.8
+   "gap_at_low": 455.1,
+   "gap_at_high": 71.2,
+   "swing": 383.9
   },
   {
    "setting": "short_premium",
@@ -787,9 +787,9 @@
    "low": 0.5,
    "high": 3.0,
    "unit": "points",
-   "gap_at_low": 53.8,
-   "gap_at_high": 410.9,
-   "swing": 357.1
+   "gap_at_low": 55.9,
+   "gap_at_high": 415.5,
+   "swing": 359.6
   },
   {
    "setting": "sell_cost",
@@ -798,9 +798,9 @@
    "low": 2.0,
    "high": 7.1,
    "unit": "% of price",
-   "gap_at_low": 181.4,
-   "gap_at_high": 338.4,
-   "swing": 157.0
+   "gap_at_low": 184.4,
+   "gap_at_high": 342.4,
+   "swing": 158.0
   },
   {
    "setting": "relet_rent",
@@ -809,9 +809,9 @@
    "low": 60.0,
    "high": 110.0,
    "unit": "% of last rent",
-   "gap_at_low": 139.0,
-   "gap_at_high": 265.0,
-   "swing": 126.0
+   "gap_at_low": 142.1,
+   "gap_at_high": 268.3,
+   "swing": 126.2
   },
   {
    "setting": "vacant_value",
@@ -820,9 +820,9 @@
    "low": 40.0,
    "high": 90.0,
    "unit": "% of leased value",
-   "gap_at_low": 158.0,
-   "gap_at_high": 281.1,
-   "swing": 123.1
+   "gap_at_low": 160.5,
+   "gap_at_high": 285.0,
+   "swing": 124.5
   },
   {
    "setting": "p_relet",
@@ -831,9 +831,9 @@
    "low": 20.0,
    "high": 80.0,
    "unit": "%",
-   "gap_at_low": 171.6,
-   "gap_at_high": 257.6,
-   "swing": 86.0
+   "gap_at_low": 175.6,
+   "gap_at_high": 260.0,
+   "swing": 84.4
   },
   {
    "setting": "vacant_years",
@@ -842,9 +842,9 @@
    "low": 0,
    "high": 3,
    "unit": "years",
-   "gap_at_low": 214.6,
-   "gap_at_high": 158.8,
-   "swing": 55.8
+   "gap_at_low": 217.8,
+   "gap_at_high": 161.1,
+   "swing": 56.7
   },
   {
    "setting": "buy_cost",
@@ -853,9 +853,9 @@
    "low": 0.5,
    "high": 2.0,
    "unit": "% of price",
-   "gap_at_low": 198.6,
-   "gap_at_high": 246.6,
-   "swing": 48.0
+   "gap_at_low": 201.7,
+   "gap_at_high": 250.0,
+   "swing": 48.3
   },
   {
    "setting": "reinvest_rate",
@@ -875,9 +875,9 @@
    "low": 10.0,
    "high": 20.0,
    "unit": "years",
-   "gap_at_low": 178.3,
-   "gap_at_high": 214.6,
-   "swing": 36.3
+   "gap_at_low": 181.5,
+   "gap_at_high": 217.8,
+   "swing": 36.4
   },
   {
    "setting": "renew_term",
@@ -886,9 +886,9 @@
    "low": 5,
    "high": 20,
    "unit": "years",
-   "gap_at_low": 239.3,
-   "gap_at_high": 214.6,
-   "swing": 24.7
+   "gap_at_low": 242.6,
+   "gap_at_high": 217.8,
+   "swing": 24.8
   },
   {
    "setting": "relet_cost",
@@ -897,9 +897,9 @@
    "low": 50.0,
    "high": 200.0,
    "unit": "% of one year's new rent",
-   "gap_at_low": 222.4,
-   "gap_at_high": 199.1,
-   "swing": 23.3
+   "gap_at_low": 225.7,
+   "gap_at_high": 202.1,
+   "swing": 23.6
   },
   {
    "setting": "vacant_carry",
@@ -908,8 +908,8 @@
    "low": 8.0,
    "high": 25.0,
    "unit": "% of last rent a year",
-   "gap_at_low": 217.0,
-   "gap_at_high": 211.2,
+   "gap_at_low": 220.2,
+   "gap_at_high": 214.3,
    "swing": 5.9
   },
   {
@@ -919,8 +919,8 @@
    "low": 0.0,
    "high": 30.0,
    "unit": "% of net price",
-   "gap_at_low": 214.6,
-   "gap_at_high": 214.6,
+   "gap_at_low": 217.8,
+   "gap_at_high": 217.8,
    "swing": 0.0
   },
   {
@@ -930,8 +930,8 @@
    "low": 30.0,
    "high": 85.0,
    "unit": "%",
-   "gap_at_low": 214.6,
-   "gap_at_high": 214.6,
+   "gap_at_low": 217.8,
+   "gap_at_high": 217.8,
    "swing": 0.0
   },
   {
@@ -941,8 +941,8 @@
    "low": 0.0,
    "high": 60.0,
    "unit": "%",
-   "gap_at_low": 214.6,
-   "gap_at_high": 214.6,
+   "gap_at_low": 217.8,
+   "gap_at_high": 217.8,
    "swing": 0.0
   },
   {
@@ -952,8 +952,8 @@
    "low": 90.0,
    "high": 105.0,
    "unit": "% of current rent",
-   "gap_at_low": 214.6,
-   "gap_at_high": 214.6,
+   "gap_at_low": 217.8,
+   "gap_at_high": 217.8,
    "swing": 0.0
   },
   {
@@ -963,8 +963,8 @@
    "low": 10,
    "high": 20,
    "unit": "years from now",
-   "gap_at_low": 214.6,
-   "gap_at_high": 214.6,
+   "gap_at_low": 217.8,
+   "gap_at_high": 217.8,
    "swing": 0.0
   },
   {
@@ -974,47 +974,47 @@
    "low": 10,
    "high": 20,
    "unit": "years",
-   "gap_at_low": 214.6,
-   "gap_at_high": 214.6,
+   "gap_at_low": 217.8,
+   "gap_at_high": 217.8,
    "swing": 0.0
   }
  ],
  "breakevens": {
   "2030": {
-   "renewal_chance_where_doing_nothing_equals_selling": 45.2,
-   "short_lease_premium_where_doing_nothing_equals_selling": 0.23,
-   "extension_rent_where_keeping_equals_selling": 84.8,
-   "tax_drag_where_cash_sale_equals_doing_nothing": -34.7
-  },
-  "2031": {
-   "renewal_chance_where_doing_nothing_equals_selling": 47.5,
+   "renewal_chance_where_doing_nothing_equals_selling": 44.8,
    "short_lease_premium_where_doing_nothing_equals_selling": 0.22,
-   "extension_rent_where_keeping_equals_selling": 86.4,
+   "extension_rent_where_keeping_equals_selling": 84.8,
    "tax_drag_where_cash_sale_equals_doing_nothing": -32.6
   },
+  "2031": {
+   "renewal_chance_where_doing_nothing_equals_selling": 47.1,
+   "short_lease_premium_where_doing_nothing_equals_selling": 0.21,
+   "extension_rent_where_keeping_equals_selling": 86.4,
+   "tax_drag_where_cash_sale_equals_doing_nothing": -30.6
+  },
   "2032": {
-   "renewal_chance_where_doing_nothing_equals_selling": 50.5,
+   "renewal_chance_where_doing_nothing_equals_selling": 50.1,
    "short_lease_premium_where_doing_nothing_equals_selling": 0.2,
    "extension_rent_where_keeping_equals_selling": 88.2,
-   "tax_drag_where_cash_sale_equals_doing_nothing": -30.5
+   "tax_drag_where_cash_sale_equals_doing_nothing": -28.5
   },
   "2033": {
-   "renewal_chance_where_doing_nothing_equals_selling": 54.4,
-   "short_lease_premium_where_doing_nothing_equals_selling": 0.19,
+   "renewal_chance_where_doing_nothing_equals_selling": 54.0,
+   "short_lease_premium_where_doing_nothing_equals_selling": 0.18,
    "extension_rent_where_keeping_equals_selling": 90.0,
-   "tax_drag_where_cash_sale_equals_doing_nothing": -28.3
+   "tax_drag_where_cash_sale_equals_doing_nothing": -26.3
   },
   "2034": {
-   "renewal_chance_where_doing_nothing_equals_selling": 59.4,
-   "short_lease_premium_where_doing_nothing_equals_selling": 0.17,
+   "renewal_chance_where_doing_nothing_equals_selling": 59.1,
+   "short_lease_premium_where_doing_nothing_equals_selling": 0.15,
    "extension_rent_where_keeping_equals_selling": 91.9,
-   "tax_drag_where_cash_sale_equals_doing_nothing": -26.1
+   "tax_drag_where_cash_sale_equals_doing_nothing": -24.2
   },
   "2035": {
-   "renewal_chance_where_doing_nothing_equals_selling": 65.8,
-   "short_lease_premium_where_doing_nothing_equals_selling": 0.11,
+   "renewal_chance_where_doing_nothing_equals_selling": 65.5,
+   "short_lease_premium_where_doing_nothing_equals_selling": 0.09,
    "extension_rent_where_keeping_equals_selling": 93.9,
-   "tax_drag_where_cash_sale_equals_doing_nothing": -23.9
+   "tax_drag_where_cash_sale_equals_doing_nothing": -22.0
   }
  },
  "sell_later": {
@@ -1023,31 +1023,31 @@
     "sell_year": 2026,
     "years_left_on_lease": 4,
     "sale_price": 1298.7,
-    "wealth_2040": 2486.0
+    "wealth_2040": 2543.0
    },
    {
     "sell_year": 2027,
     "years_left_on_lease": 3,
     "sale_price": 1286.6,
-    "wealth_2040": 2534.2
+    "wealth_2040": 2588.0
    },
    {
     "sell_year": 2028,
     "years_left_on_lease": 2,
     "sale_price": 1275.1,
-    "wealth_2040": 2583.9
+    "wealth_2040": 2634.8
    },
    {
     "sell_year": 2029,
     "years_left_on_lease": 1,
     "sale_price": 1264.2,
-    "wealth_2040": 2634.8
+    "wealth_2040": 2683.0
    },
    {
     "sell_year": 2030,
     "years_left_on_lease": 0,
     "sale_price": 1253.7,
-    "wealth_2040": 2686.6
+    "wealth_2040": 2732.3
    }
   ],
   "2031": [
@@ -1055,37 +1055,37 @@
     "sell_year": 2026,
     "years_left_on_lease": 5,
     "sale_price": 1324.5,
-    "wealth_2040": 2535.4
+    "wealth_2040": 2593.5
    },
    {
     "sell_year": 2027,
     "years_left_on_lease": 4,
     "sale_price": 1311.7,
-    "wealth_2040": 2579.9
+    "wealth_2040": 2634.7
    },
    {
     "sell_year": 2028,
     "years_left_on_lease": 3,
     "sale_price": 1299.5,
-    "wealth_2040": 2626.2
+    "wealth_2040": 2678.0
    },
    {
     "sell_year": 2029,
     "years_left_on_lease": 2,
     "sale_price": 1287.9,
-    "wealth_2040": 2674.0
+    "wealth_2040": 2722.9
    },
    {
     "sell_year": 2030,
     "years_left_on_lease": 1,
     "sale_price": 1276.8,
-    "wealth_2040": 2723.0
+    "wealth_2040": 2769.2
    },
    {
     "sell_year": 2031,
     "years_left_on_lease": 0,
     "sale_price": 1266.3,
-    "wealth_2040": 2772.9
+    "wealth_2040": 2816.5
    }
   ],
   "2032": [
@@ -1093,43 +1093,43 @@
     "sell_year": 2026,
     "years_left_on_lease": 6,
     "sale_price": 1351.4,
-    "wealth_2040": 2586.8
+    "wealth_2040": 2646.1
    },
    {
     "sell_year": 2027,
     "years_left_on_lease": 5,
     "sale_price": 1337.7,
-    "wealth_2040": 2627.4
+    "wealth_2040": 2683.2
    },
    {
     "sell_year": 2028,
     "years_left_on_lease": 4,
     "sale_price": 1324.8,
-    "wealth_2040": 2670.2
+    "wealth_2040": 2722.8
    },
    {
     "sell_year": 2029,
     "years_left_on_lease": 3,
     "sale_price": 1312.5,
-    "wealth_2040": 2714.7
+    "wealth_2040": 2764.4
    },
    {
     "sell_year": 2030,
     "years_left_on_lease": 2,
     "sale_price": 1300.8,
-    "wealth_2040": 2760.7
+    "wealth_2040": 2807.6
    },
    {
     "sell_year": 2031,
     "years_left_on_lease": 1,
     "sale_price": 1289.6,
-    "wealth_2040": 2807.9
+    "wealth_2040": 2852.0
    },
    {
     "sell_year": 2032,
     "years_left_on_lease": 0,
     "sale_price": 1278.9,
-    "wealth_2040": 2855.8
+    "wealth_2040": 2897.5
    }
   ],
   "2033": [
@@ -1137,49 +1137,49 @@
     "sell_year": 2026,
     "years_left_on_lease": 7,
     "sale_price": 1379.3,
-    "wealth_2040": 2640.3
+    "wealth_2040": 2700.8
    },
    {
     "sell_year": 2027,
     "years_left_on_lease": 6,
     "sale_price": 1364.9,
-    "wealth_2040": 2676.8
+    "wealth_2040": 2733.7
    },
    {
     "sell_year": 2028,
     "years_left_on_lease": 5,
     "sale_price": 1351.1,
-    "wealth_2040": 2715.9
+    "wealth_2040": 2769.4
    },
    {
     "sell_year": 2029,
     "years_left_on_lease": 4,
     "sale_price": 1338.1,
-    "wealth_2040": 2757.0
+    "wealth_2040": 2807.5
    },
    {
     "sell_year": 2030,
     "years_left_on_lease": 3,
     "sale_price": 1325.6,
-    "wealth_2040": 2799.9
+    "wealth_2040": 2847.4
    },
    {
     "sell_year": 2031,
     "years_left_on_lease": 2,
     "sale_price": 1313.8,
-    "wealth_2040": 2844.2
+    "wealth_2040": 2888.9
    },
    {
     "sell_year": 2032,
     "years_left_on_lease": 1,
     "sale_price": 1302.5,
-    "wealth_2040": 2889.5
+    "wealth_2040": 2931.6
    },
    {
     "sell_year": 2033,
     "years_left_on_lease": 0,
     "sale_price": 1291.7,
-    "wealth_2040": 2935.7
+    "wealth_2040": 2975.2
    }
   ],
   "2034": [
@@ -1187,55 +1187,55 @@
     "sell_year": 2026,
     "years_left_on_lease": 8,
     "sale_price": 1408.5,
-    "wealth_2040": 2696.1
+    "wealth_2040": 2757.9
    },
    {
     "sell_year": 2027,
     "years_left_on_lease": 7,
     "sale_price": 1393.1,
-    "wealth_2040": 2728.3
+    "wealth_2040": 2786.3
    },
    {
     "sell_year": 2028,
     "years_left_on_lease": 6,
     "sale_price": 1378.5,
-    "wealth_2040": 2763.4
+    "wealth_2040": 2817.9
    },
    {
     "sell_year": 2029,
     "years_left_on_lease": 5,
     "sale_price": 1364.6,
-    "wealth_2040": 2801.0
+    "wealth_2040": 2852.2
    },
    {
     "sell_year": 2030,
     "years_left_on_lease": 4,
     "sale_price": 1351.4,
-    "wealth_2040": 2840.6
+    "wealth_2040": 2888.7
    },
    {
     "sell_year": 2031,
     "years_left_on_lease": 3,
     "sale_price": 1338.9,
-    "wealth_2040": 2881.8
+    "wealth_2040": 2927.1
    },
    {
     "sell_year": 2032,
     "years_left_on_lease": 2,
     "sale_price": 1326.9,
-    "wealth_2040": 2924.4
+    "wealth_2040": 2966.9
    },
    {
     "sell_year": 2033,
     "years_left_on_lease": 1,
     "sale_price": 1315.5,
-    "wealth_2040": 2968.1
+    "wealth_2040": 3008.0
    },
    {
     "sell_year": 2034,
     "years_left_on_lease": 0,
     "sale_price": 1304.6,
-    "wealth_2040": 3012.5
+    "wealth_2040": 3049.9
    }
   ],
   "2035": [
@@ -1243,88 +1243,88 @@
     "sell_year": 2026,
     "years_left_on_lease": 9,
     "sale_price": 1438.8,
-    "wealth_2040": 2754.3
+    "wealth_2040": 2817.4
    },
    {
     "sell_year": 2027,
     "years_left_on_lease": 8,
     "sale_price": 1422.5,
-    "wealth_2040": 2782.0
+    "wealth_2040": 2841.1
    },
    {
     "sell_year": 2028,
     "years_left_on_lease": 7,
     "sale_price": 1407.0,
-    "wealth_2040": 2813.0
+    "wealth_2040": 2868.4
    },
    {
     "sell_year": 2029,
     "years_left_on_lease": 6,
     "sale_price": 1392.3,
-    "wealth_2040": 2846.8
+    "wealth_2040": 2898.8
    },
    {
     "sell_year": 2030,
     "years_left_on_lease": 5,
     "sale_price": 1378.3,
-    "wealth_2040": 2882.9
+    "wealth_2040": 2931.8
    },
    {
     "sell_year": 2031,
     "years_left_on_lease": 4,
     "sale_price": 1364.9,
-    "wealth_2040": 2921.0
+    "wealth_2040": 2966.8
    },
    {
     "sell_year": 2032,
     "years_left_on_lease": 3,
     "sale_price": 1352.3,
-    "wealth_2040": 2960.7
+    "wealth_2040": 3003.7
    },
    {
     "sell_year": 2033,
     "years_left_on_lease": 2,
     "sale_price": 1340.2,
-    "wealth_2040": 3001.7
+    "wealth_2040": 3041.9
    },
    {
     "sell_year": 2034,
     "years_left_on_lease": 1,
     "sale_price": 1328.7,
-    "wealth_2040": 3043.6
+    "wealth_2040": 3081.3
    },
    {
     "sell_year": 2035,
     "years_left_on_lease": 0,
     "sale_price": 1317.7,
-    "wealth_2040": 3086.4
+    "wealth_2040": 3121.6
    }
   ]
  },
  "tax_sensitivity": [
   {
    "tax_drag_pct": 0.0,
-   "sell_cash": 2616.5,
-   "do_nothing": 3380.6,
-   "sell_exchange": 3166.0
+   "sell_cash": 2676.4,
+   "do_nothing": 3405.2,
+   "sell_exchange": 3187.4
   },
   {
    "tax_drag_pct": 10.0,
-   "sell_cash": 2354.8,
-   "do_nothing": 3380.6,
-   "sell_exchange": 3166.0
+   "sell_cash": 2408.8,
+   "do_nothing": 3405.2,
+   "sell_exchange": 3187.4
   },
   {
    "tax_drag_pct": 20.0,
-   "sell_cash": 2093.2,
-   "do_nothing": 3380.6,
-   "sell_exchange": 3166.0
+   "sell_cash": 2141.2,
+   "do_nothing": 3405.2,
+   "sell_exchange": 3187.4
   },
   {
    "tax_drag_pct": 30.0,
-   "sell_cash": 1831.5,
-   "do_nothing": 3380.6,
-   "sell_exchange": 3166.0
+   "sell_cash": 1873.5,
+   "do_nothing": 3405.2,
+   "sell_exchange": 3187.4
   }
  ],
  "stress": [
@@ -1342,40 +1342,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2640.3,
-     "p05": 2640.3,
-     "score": 2640.3,
+     "median": 2700.8,
+     "p05": 2700.8,
+     "score": 2700.8,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 3184.0,
-     "p05": 2688.7,
-     "score": 2936.3,
-     "chance_below_cash_sale": 4.3
+     "median": 3205.7,
+     "p05": 2705.7,
+     "score": 2955.7,
+     "chance_below_cash_sale": 4.9
     },
     "extend_then_sell": {
-     "median": 3316.4,
-     "p05": 2815.9,
-     "score": 3066.1,
-     "chance_below_cash_sale": 3.4
+     "median": 3339.2,
+     "p05": 2833.4,
+     "score": 3086.3,
+     "chance_below_cash_sale": 3.8
     },
     "test_then_decide": {
-     "median": 3312.9,
-     "p05": 2347.5,
-     "score": 2830.2,
-     "chance_below_cash_sale": 8.6
+     "median": 3335.6,
+     "p05": 2374.3,
+     "score": 2855.0,
+     "chance_below_cash_sale": 9.2
     },
     "extend_and_hold": {
-     "median": 3424.3,
-     "p05": 2151.4,
-     "score": 2787.9,
-     "chance_below_cash_sale": 18.5
+     "median": 3448.4,
+     "p05": 2176.9,
+     "score": 2812.7,
+     "chance_below_cash_sale": 19.2
     },
     "do_nothing": {
-     "median": 3440.1,
-     "p05": 2152.2,
-     "score": 2796.1,
-     "chance_below_cash_sale": 20.0
+     "median": 3464.3,
+     "p05": 2179.1,
+     "score": 2821.7,
+     "chance_below_cash_sale": 20.6
     }
    }
   },
@@ -1396,40 +1396,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2640.3,
-     "p05": 2640.3,
-     "score": 2640.3,
+     "median": 2700.8,
+     "p05": 2700.8,
+     "score": 2700.8,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 3184.0,
-     "p05": 2688.7,
-     "score": 2936.3,
-     "chance_below_cash_sale": 4.3
+     "median": 3205.7,
+     "p05": 2705.7,
+     "score": 2955.7,
+     "chance_below_cash_sale": 4.9
     },
     "extend_then_sell": {
-     "median": 3316.4,
-     "p05": 2815.9,
-     "score": 3066.1,
-     "chance_below_cash_sale": 3.4
+     "median": 3339.2,
+     "p05": 2833.4,
+     "score": 3086.3,
+     "chance_below_cash_sale": 3.8
     },
     "test_then_decide": {
-     "median": 3205.7,
-     "p05": 2020.4,
-     "score": 2613.0,
-     "chance_below_cash_sale": 15.6
+     "median": 3227.8,
+     "p05": 2045.3,
+     "score": 2636.6,
+     "chance_below_cash_sale": 16.5
     },
     "extend_and_hold": {
-     "median": 2923.1,
-     "p05": 1878.9,
-     "score": 2401.0,
-     "chance_below_cash_sale": 35.5
+     "median": 2944.1,
+     "p05": 1905.3,
+     "score": 2424.7,
+     "chance_below_cash_sale": 36.8
     },
     "do_nothing": {
-     "median": 2803.8,
-     "p05": 1870.8,
-     "score": 2337.3,
-     "chance_below_cash_sale": 43.4
+     "median": 2824.9,
+     "p05": 1900.3,
+     "score": 2362.6,
+     "chance_below_cash_sale": 44.9
     }
    }
   },
@@ -1450,40 +1450,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2640.3,
-     "p05": 2640.3,
-     "score": 2640.3,
+     "median": 2700.8,
+     "p05": 2700.8,
+     "score": 2700.8,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 3184.0,
-     "p05": 2688.7,
-     "score": 2936.3,
-     "chance_below_cash_sale": 4.3
+     "median": 3205.7,
+     "p05": 2705.7,
+     "score": 2955.7,
+     "chance_below_cash_sale": 4.9
     },
     "extend_then_sell": {
-     "median": 3316.4,
-     "p05": 2815.9,
-     "score": 3066.1,
-     "chance_below_cash_sale": 3.4
+     "median": 3339.2,
+     "p05": 2833.4,
+     "score": 3086.3,
+     "chance_below_cash_sale": 3.8
     },
     "test_then_decide": {
-     "median": 3372.8,
-     "p05": 2593.1,
-     "score": 2982.9,
-     "chance_below_cash_sale": 5.6
+     "median": 3395.6,
+     "p05": 2615.1,
+     "score": 3005.3,
+     "chance_below_cash_sale": 6.0
     },
     "extend_and_hold": {
-     "median": 3503.5,
-     "p05": 2343.6,
-     "score": 2923.5,
-     "chance_below_cash_sale": 9.6
+     "median": 3527.6,
+     "p05": 2371.8,
+     "score": 2949.7,
+     "chance_below_cash_sale": 10.0
     },
     "do_nothing": {
-     "median": 3531.0,
-     "p05": 2328.7,
-     "score": 2929.9,
-     "chance_below_cash_sale": 10.3
+     "median": 3555.2,
+     "p05": 2355.7,
+     "score": 2955.5,
+     "chance_below_cash_sale": 10.7
     }
    }
   },
@@ -1505,40 +1505,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2640.3,
-     "p05": 2640.3,
-     "score": 2640.3,
+     "median": 2700.8,
+     "p05": 2700.8,
+     "score": 2700.8,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 3184.0,
-     "p05": 2688.7,
-     "score": 2936.3,
-     "chance_below_cash_sale": 4.3
+     "median": 3205.7,
+     "p05": 2705.7,
+     "score": 2955.7,
+     "chance_below_cash_sale": 4.9
     },
     "extend_then_sell": {
-     "median": 3316.4,
-     "p05": 2815.9,
-     "score": 3066.1,
-     "chance_below_cash_sale": 3.4
+     "median": 3339.2,
+     "p05": 2833.4,
+     "score": 3086.3,
+     "chance_below_cash_sale": 3.8
     },
     "test_then_decide": {
-     "median": 3270.8,
-     "p05": 1569.4,
-     "score": 2420.1,
-     "chance_below_cash_sale": 14.5
+     "median": 3293.0,
+     "p05": 1575.2,
+     "score": 2434.1,
+     "chance_below_cash_sale": 14.9
     },
     "extend_and_hold": {
-     "median": 3380.4,
-     "p05": 1166.2,
-     "score": 2273.3,
-     "chance_below_cash_sale": 27.5
+     "median": 3404.5,
+     "p05": 1176.9,
+     "score": 2290.7,
+     "chance_below_cash_sale": 28.0
     },
     "do_nothing": {
-     "median": 3375.6,
-     "p05": 1198.7,
-     "score": 2287.1,
-     "chance_below_cash_sale": 28.9
+     "median": 3399.7,
+     "p05": 1210.8,
+     "score": 2305.3,
+     "chance_below_cash_sale": 29.4
     }
    }
   },
@@ -1560,40 +1560,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2640.3,
-     "p05": 2640.3,
-     "score": 2640.3,
+     "median": 2700.8,
+     "p05": 2700.8,
+     "score": 2700.8,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 3184.0,
-     "p05": 2688.7,
-     "score": 2936.3,
-     "chance_below_cash_sale": 4.3
+     "median": 3205.7,
+     "p05": 2705.7,
+     "score": 2955.7,
+     "chance_below_cash_sale": 4.9
     },
     "extend_then_sell": {
-     "median": 3316.4,
-     "p05": 2815.9,
-     "score": 3066.1,
-     "chance_below_cash_sale": 3.4
+     "median": 3339.2,
+     "p05": 2833.4,
+     "score": 3086.3,
+     "chance_below_cash_sale": 3.8
     },
     "test_then_decide": {
-     "median": 3330.5,
-     "p05": 2516.9,
-     "score": 2923.7,
-     "chance_below_cash_sale": 6.5
+     "median": 3352.3,
+     "p05": 2543.7,
+     "score": 2948.0,
+     "chance_below_cash_sale": 7.0
     },
     "extend_and_hold": {
-     "median": 3436.4,
-     "p05": 2278.6,
-     "score": 2857.5,
-     "chance_below_cash_sale": 15.2
+     "median": 3460.5,
+     "p05": 2307.0,
+     "score": 2883.7,
+     "chance_below_cash_sale": 15.9
     },
     "do_nothing": {
-     "median": 3453.2,
-     "p05": 2271.2,
-     "score": 2862.2,
-     "chance_below_cash_sale": 16.9
+     "median": 3477.4,
+     "p05": 2296.9,
+     "score": 2887.1,
+     "chance_below_cash_sale": 17.5
     }
    }
   },
@@ -1614,40 +1614,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2278.8,
-     "p05": 2278.8,
-     "score": 2278.8,
+     "median": 2331.1,
+     "p05": 2331.1,
+     "score": 2331.1,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 2646.1,
-     "p05": 2257.9,
-     "score": 2452.0,
-     "chance_below_cash_sale": 5.2
+     "median": 2664.8,
+     "p05": 2274.7,
+     "score": 2469.7,
+     "chance_below_cash_sale": 5.7
     },
     "extend_then_sell": {
-     "median": 2866.1,
-     "p05": 2450.1,
-     "score": 2658.1,
-     "chance_below_cash_sale": 3.5
+     "median": 2886.8,
+     "p05": 2467.5,
+     "score": 2677.2,
+     "chance_below_cash_sale": 3.7
     },
     "test_then_decide": {
-     "median": 2800.7,
-     "p05": 2141.1,
-     "score": 2470.9,
-     "chance_below_cash_sale": 6.7
+     "median": 2820.3,
+     "p05": 2159.2,
+     "score": 2489.7,
+     "chance_below_cash_sale": 7.0
     },
     "extend_and_hold": {
-     "median": 3223.6,
-     "p05": 2033.8,
-     "score": 2628.7,
-     "chance_below_cash_sale": 11.1
+     "median": 3247.7,
+     "p05": 2056.3,
+     "score": 2652.0,
+     "chance_below_cash_sale": 12.0
     },
     "do_nothing": {
-     "median": 3242.3,
-     "p05": 2054.5,
-     "score": 2648.4,
-     "chance_below_cash_sale": 11.9
+     "median": 3266.5,
+     "p05": 2080.2,
+     "score": 2673.4,
+     "chance_below_cash_sale": 13.0
     }
    }
   },
@@ -1663,45 +1663,45 @@
     "sell_exchange",
     "test_then_decide",
     "do_nothing",
-    "extend_and_hold",
-    "sell_cash"
+    "sell_cash",
+    "extend_and_hold"
    ],
    "summary": {
     "sell_cash": {
-     "median": 3217.2,
-     "p05": 3217.2,
-     "score": 3217.2,
+     "median": 3290.9,
+     "p05": 3290.9,
+     "score": 3290.9,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 3880.5,
-     "p05": 3496.0,
-     "score": 3688.2,
-     "chance_below_cash_sale": 2.5
+     "median": 3906.9,
+     "p05": 3523.1,
+     "score": 3715.0,
+     "chance_below_cash_sale": 3.0
     },
     "extend_then_sell": {
-     "median": 4083.7,
-     "p05": 3625.4,
-     "score": 3854.5,
-     "chance_below_cash_sale": 1.7
+     "median": 4112.1,
+     "p05": 3653.3,
+     "score": 3882.7,
+     "chance_below_cash_sale": 2.0
     },
     "test_then_decide": {
-     "median": 3823.2,
-     "p05": 3004.0,
-     "score": 3413.6,
-     "chance_below_cash_sale": 8.8
+     "median": 3848.5,
+     "p05": 3027.5,
+     "score": 3438.0,
+     "chance_below_cash_sale": 9.7
     },
     "extend_and_hold": {
-     "median": 3710.0,
-     "p05": 2799.2,
-     "score": 3254.6,
-     "chance_below_cash_sale": 18.9
+     "median": 3736.2,
+     "p05": 2822.8,
+     "score": 3279.5,
+     "chance_below_cash_sale": 21.4
     },
     "do_nothing": {
-     "median": 3728.3,
-     "p05": 2808.0,
-     "score": 3268.1,
-     "chance_below_cash_sale": 19.7
+     "median": 3754.0,
+     "p05": 2833.6,
+     "score": 3293.8,
+     "chance_below_cash_sale": 22.4
     }
    }
   },
@@ -1721,40 +1721,40 @@
    ],
    "summary": {
     "sell_cash": {
-     "median": 2530.3,
-     "p05": 2530.3,
-     "score": 2530.3,
+     "median": 2588.3,
+     "p05": 2588.3,
+     "score": 2588.3,
      "chance_below_cash_sale": 0.0
     },
     "sell_exchange": {
-     "median": 2998.7,
-     "p05": 2529.9,
-     "score": 2764.3,
-     "chance_below_cash_sale": 5.0
+     "median": 3019.4,
+     "p05": 2550.6,
+     "score": 2785.0,
+     "chance_below_cash_sale": 5.6
     },
     "extend_then_sell": {
-     "median": 3123.8,
-     "p05": 2655.0,
-     "score": 2889.4,
-     "chance_below_cash_sale": 3.9
+     "median": 3145.7,
+     "p05": 2673.8,
+     "score": 2909.7,
+     "chance_below_cash_sale": 4.3
     },
     "test_then_decide": {
-     "median": 3142.2,
-     "p05": 2277.2,
-     "score": 2709.7,
-     "chance_below_cash_sale": 8.2
+     "median": 3163.0,
+     "p05": 2305.1,
+     "score": 2734.1,
+     "chance_below_cash_sale": 8.8
     },
     "extend_and_hold": {
-     "median": 3368.1,
-     "p05": 2098.0,
-     "score": 2733.0,
-     "chance_below_cash_sale": 17.3
+     "median": 3392.2,
+     "p05": 2121.1,
+     "score": 2756.6,
+     "chance_below_cash_sale": 18.1
     },
     "do_nothing": {
-     "median": 3383.9,
-     "p05": 2100.9,
-     "score": 2742.4,
-     "chance_below_cash_sale": 18.8
+     "median": 3408.1,
+     "p05": 2130.0,
+     "score": 2769.1,
+     "chance_below_cash_sale": 19.6
     }
    }
   }
@@ -1763,26 +1763,26 @@
   "share_agreeing_pct": 59.9,
   "if_tenant_agrees": {
    "keep": {
-    "median": 3476.1,
-    "p05": 2161.5,
-    "score": 2818.8
+    "median": 3500.2,
+    "p05": 2186.4,
+    "score": 2843.3
    },
    "sell_and_exchange": {
-    "median": 3395.0,
-    "p05": 2879.8,
-    "score": 3137.4
+    "median": 3418.1,
+    "p05": 2899.9,
+    "score": 3159.0
    }
   },
   "if_tenant_refuses": {
    "keep": {
-    "median": 2983.3,
-    "p05": 2010.2,
-    "score": 2496.8
+    "median": 3003.8,
+    "p05": 2039.1,
+    "score": 2521.5
    },
    "sell_and_exchange": {
-    "median": 3154.4,
-    "p05": 2697.2,
-    "score": 2925.8
+    "median": 3175.8,
+    "p05": 2717.9,
+    "score": 2946.8
    }
   }
  },
@@ -1930,5 +1930,5 @@
   },
   "note": "The official columns are the State's own projections. The 'trend continued' column is this workbook's arithmetic (the 2020 to 2025 yearly change carried forward) and is a scenario, not an official figure."
  },
- "sensitivity_base_gap": 214.6
+ "sensitivity_base_gap": 217.8
 }
