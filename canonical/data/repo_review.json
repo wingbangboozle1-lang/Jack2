@@ -3,18 +3,18 @@
  "totals": {
   "workspaces": 29,
   "files": 523,
-  "lines": 91561,
+  "lines": 91581,
   "pages": 264,
   "name_hits": 0,
   "name_workbooks": 0,
-  "address_hits": 3,
+  "address_hits": 0,
   "other_hits": 0
  },
  "workspaces": [
   {
    "workspace": "(repository root files)",
    "files": 3,
-   "lines": 2341,
+   "lines": 2350,
    "pages": 0,
    "links": 79,
    "official_links": 7,
@@ -90,7 +90,7 @@
    "privacy_pattern_hits": {
     "e-mail address": 0,
     "telephone number": 0,
-    "street address": 1,
+    "street address": 0,
     "parcel number": 0,
     "social security number": 0,
     "name of an individual": 0
@@ -116,7 +116,7 @@
   {
    "workspace": "session-18dacdea",
    "files": 23,
-   "lines": 5532,
+   "lines": 5538,
    "pages": 10,
    "links": 29,
    "official_links": 24,
@@ -124,7 +124,7 @@
    "privacy_pattern_hits": {
     "e-mail address": 0,
     "telephone number": 0,
-    "street address": 1,
+    "street address": 0,
     "parcel number": 0,
     "social security number": 0,
     "name of an individual": 0
@@ -388,7 +388,7 @@
   {
    "workspace": "session-a3a8ec08",
    "files": 22,
-   "lines": 4700,
+   "lines": 4705,
    "pages": 9,
    "links": 41,
    "official_links": 36,
@@ -396,7 +396,7 @@
    "privacy_pattern_hits": {
     "e-mail address": 0,
     "telephone number": 0,
-    "street address": 1,
+    "street address": 0,
     "parcel number": 0,
     "social security number": 0,
     "name of an individual": 0
