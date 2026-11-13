@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 586,
-    "lines": 109290,
-    "bytes": 10240127,
+    "lines": 109293,
+    "bytes": 10240848,
     "privacy_pattern_hits": 1,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [
@@ -16,8 +16,8 @@
     "workspaces": {
       "root/config": {
         "files": 61,
-        "lines": 20394,
-        "bytes": 2124431,
+        "lines": 20397,
+        "bytes": 2125152,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -329,9 +329,9 @@
     {
       "path": "canonical/build_site.py",
       "workspace": "root/config",
-      "bytes": 88241,
-      "lines": 1251,
-      "sha256": "9cdf83f0e01355baedef0fda6ca033cab5ff1a0d45b22bdce22325c6cd21487b",
+      "bytes": 88568,
+      "lines": 1254,
+      "sha256": "4afbe3e77df9646a8b179e97d2d6c81578fc867d6ac8dbba6362fa2b56e17b6e",
       "kind": ".py",
       "url_count": 4,
       "pii_pattern_hits": 0,
@@ -581,9 +581,9 @@
     {
       "path": "canonical/data/reconfirm_2026-11-13.json",
       "workspace": "root/config",
-      "bytes": 7100,
+      "bytes": 7084,
       "lines": 194,
-      "sha256": "a7b4c1d89ad24fc2bdccaa1c28d03f3f086002f587c034f374213baef3222e9c",
+      "sha256": "642b25dee1adee108d07526d0e050a87843392f67860f0cf687d25ae5998e358",
       "kind": ".json",
       "url_count": 0,
       "pii_pattern_hits": 0,
@@ -8365,15 +8365,15 @@
     {
       "path": "verification.html",
       "workspace": "root/config",
-      "bytes": 70567,
+      "bytes": 70977,
       "lines": 33,
-      "sha256": "52eb7a1f9af9cecda40d6dfd37593931ac3c6ebaebb590f11e7e73a0824ee4ed",
+      "sha256": "c5f61e1badf5033d80ad855404d86c92b7d4892dc2cb7b87da53c7240f792a4d",
       "kind": ".html",
       "url_count": 100,
       "pii_pattern_hits": 0,
       "json_valid": null,
       "python_compiles": null,
-      "html_tags": 1553,
+      "html_tags": 1555,
       "status": "ok"
     },
     {

@@ -189,6 +189,6 @@
    "sell_cash"
   ],
   "ranking_changed": false,
-  "score_change_range": "+21 to +58 points on the model's balanced score, in the same units as the published score; every strategy rises by a similar amount"
+  "score_change_range": "every strategy's balanced score rises, by between 21 and 58 points (the same units as the published balanced score)"
  }
 }

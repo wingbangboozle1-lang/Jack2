@@ -1040,7 +1040,7 @@ def build_verification():
         rows.append([e(f["figure"]), f'<strong>{e(f["verified_today"])}</strong>', seen, cites([f["row"]])])
     body.append(table(["Quantity", "Verified today", "Values in earlier workbooks (number of workbooks)", "Evidence and official source"], rows, "data"))
     body.append('<h2 id="reread">Re-read on 2026-11-13: decision-critical figures</h2>')
-    body.append('<p>On 2026-11-13 the official pages behind ten decision-critical figures were opened again. Each row below says what the page showed, '
+    body.append('<p>On 2026-11-13 nine official pages were opened again, covering eleven ledger figures that drive the decision. Each row below says what the page showed, '
                 'which numbers of the ledger value were found again in it, and which were not re-read. No value was changed by this re-read.</p>')
     rr = []
     for en in RECONFIRM["entries"]:
@@ -1049,6 +1049,9 @@ def build_verification():
         notre = "; ".join(", ".join(x["not_reread"]) for x in en["rows"] if x["not_reread"]) or "none"
         rr.append([src_link(en["source"]), ids, e(conf), e(notre), e(en["result"]), e(en["note"])])
     body.append(table(["Source", "Ledger rows", "Numbers found again", "Not re-read", "Result", "What the page showed"], rr, "data", "reread-t"))
+    sens = RECONFIRM["sensitivity"]
+    body.append(f'<p><strong>Sensitivity test (10-year yield at the latest posted row).</strong> {e(sens["test"])} '
+                f'The ranking of the six strategies {"changes" if sens["ranking_changed"] else "does not change"}; {e(sens["score_change_range"])}.</p>')
     body.append('<p class="note">Treasury: the page now also posts later daily rows. The ledger keeps the 11/10/2026 row, and a model test with the latest row leaves the ranking unchanged '
                 '(see Flagged for Review, IR-33). Check 12 below re-tests every number found again against the ledger value and the text recorded on the re-read.</p>')
     body.append('<h2 id="yourself">Check a row yourself</h2><ol class="steps"><li>Open the row and follow its official source link.</li>'
