@@ -137,6 +137,7 @@ jobs:
           python3 canonical/model.py
           python3 canonical/review_repo.py
           python3 canonical/verify.py
+          python3 canonical/sanitize.py --check
           python3 -m unittest discover -s canonical/tests
           if [ -n "$(git status --porcelain -- canonical/ assets/ favicon.svg ':(glob)*.html')" ]; then
             echo "The consolidated root site is out of date."

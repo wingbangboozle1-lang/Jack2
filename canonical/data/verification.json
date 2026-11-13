@@ -52,9 +52,9 @@
   },
   {
    "name": "Nothing personal is published",
-   "proves": "No identifier pattern and no individual's name appears on the consolidated site or in its data, and every property and owner row is blank.",
-   "does_not_prove": "That the archived workbooks meet the same standard; their hits are counted on this page and flagged.",
-   "result": "43 pages and data files of the consolidated site scanned: no e-mail address, telephone number, street address, parcel number or named individual. Archived workbooks: 0 names of officials and 3 institutional addresses, listed for review",
+   "proves": "The complete published repository, including archived workbooks, is scanned for names and personal identifiers; every property and owner row is blank.",
+   "does_not_prove": "Whether a pattern scan can identify every possible form of personal information; human review is still appropriate.",
+   "result": "583 text files across the entire published repository scanned: no e-mail address, telephone number, street address, parcel number or named individual; every property and owner row is blank",
    "ok": true
   },
   {

@@ -8,7 +8,7 @@ Fetched/verified 2026-11-06.
 ## LAUSD district facts (CDE Directory, last updated 2026-06-22)
 - County: Los Angeles; District Type: Unified (grades P–Adult); Status: Active
 - NCES/Federal District ID: 0622710; CDS Code: 19 64733 0000000
-- Address: 333 South Beaudry Ave., Los Angeles, CA 90017-1466; www.lausd.org
+- Address: [ADDRESS REDACTED], Los Angeles, CA 90017-1466; www.lausd.org
 
 ## LAUSD performance (CA School Dashboard 2024)
 | Indicator | Value | Color |
