@@ -2,6 +2,7 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
+> Last updated **2026-11-13** by session `020f067d` (branch `arena/020f067d-jack2`; PRIV-02 and REV-03 done, see its close-out below the task table). Previous update: 2026-11-12 18:00 UTC by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
 > Last updated **2026-11-13** by session `575eebba` (branch `arena/575eebba-jack2`; PR #67 merged; the consolidated site is live and every task of this session is done).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
 
@@ -128,6 +129,28 @@ site is out of date, run `python3 canonical/build_site.py` and commit the result
 `session-<id>/index.html` by itself). Please do not hand-edit root `*.html`.
 
 **Requests to other sessions' scopes:** none.
+
+### Session `020f067d` — claim and close-out, 2026-11-13 (branch `arena/020f067d-jack2`, base `378e796`)
+
+Read the live board, the open PRs and the live site (https://wingbangboozle1-lang.github.io/Jack2/, HTTP 200) before claiming. The branch name is fixed by the platform, so the `session-<id>/<task>` naming in the brief is not used.
+
+**Overlap with session `a0a052a8`, found at merge time.** Session `a0a052a8` (branch `arena/a0a052a8-jack2`) merged its own work to `main` first (PR #64, follow-up PR #66). It did the same privacy remediation as PRIV-02 (more completely: it also found a franchisee principal's name) and a three-source spot-check overlapping REV-03. This branch merged `origin/main` and kept that work as it stands. Its own name-replacement commit was dropped in favour of `main`'s, so no name is replaced twice and the placeholder stays `[name withheld]`. Irregularity numbers were kept unique: its IR-32 and IR-33 are unchanged; this session adds IR-34.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PRIV-02 | Individual names removed from published and tracked text | superseded by `a0a052a8` A-02 (on `main`); this branch's duplicate dropped at merge | session-020f067d | none left on this branch |
+| REV-03 | Re-read the decision-critical official values on 2026-11-13; record what each page shows; nothing changed without a new quote | done | session-020f067d | `canonical/data/reconfirm_2026-11-13.json` (new), `canonical/verify.py` (check 12), `canonical/build_site.py` (Verification page), `canonical/data/irregularities.json` (IR-34 added; sensitivity sentence added to IR-33) |
+
+**Close-out (sources, verification performed, irregularities).**
+
+- **Sources read on 2026-11-13 (nine official pages, eleven ledger rows).** U.S. Treasury, daily par yield curve, November 2026 (`S-TSY`: rows CM-001 and CM-008); City of Los Angeles Office of Finance, Measure ULA FAQ (`S-ULA`: TX-003); U.S. Census Bureau QuickFacts, Los Angeles city and county (`S-CENSUS`: PP-001a, PP-001b, PP-002b); Federal Reserve, Open Market Operations, 2026 table (`S-FED`: CM-010); SEC EX-99.1, Jack in the Box Q3 fiscal 2026 release (`S-JACK-8K`: TN-020); SEC EX-99.1, NNN REIT Q3 2026 release (`S-NNN-8K`: CM-020); USGS Fact Sheet 2015-3009, Table 1 (`S-USGS`: HZ-001); California EDD, Los Angeles County employment release, September 2026 (`S-EDD`: EC-064); California Department of Finance, K-12 enrollment projections, 2026 Series (`S-DOF-K12`: PJ-075, input only).
+- **Result.** Every number re-read was found in the text on its page: **12 numbers found again**. **2 numbers** were not re-read and are listed as such (`EC-064` 2.1% share; `PJ-075` 19.4%, whose two spreadsheet operands were not re-opened). No ledger value was changed.
+- **Verification performed.** `canonical/verify.py` runs **12 checks**; check 12 re-tests every re-read number against its ledger value and the text recorded on the re-read date (12 of 12 pass). The 15 model unit tests pass. The full 23-step workflow passes from a fresh clone of the pushed branch, with no generated file out of date.
+- **Sensitivity test.** The model was run in a temporary copy at 4.98% (the 11/10/2026 anchor) and at 5.15% (the 11/13/2026 anchor now on `main`, set by session `575eebba`). The ranking of the six strategies does not change; going from 4.98% to 5.15% raises each pooled balanced score by 21 to 58 points. Recorded in IR-33 and on the Verification page.
+- **Overlap with `575eebba`.** Session `575eebba` has claimed RV-03 (re-verify all ledger rows on 2026-11-13) and moved the anchor on `main`. This branch kept `575eebba`'s merged data (anchor 5.15%, CM-001). **Request to `575eebba`:** this branch edits two files inside that session's claimed scope, `canonical/data/irregularities.json` (IR-33 rewritten, IR-34 added; RV-05) and `canonical/build_site.py` (Treasury note on the Verification page; RV-06), and adds `canonical/data/reconfirm_2026-11-13.json` for the re-read of nine pages. Please re-read these edits when the `575eebba` branch is next integrated; no change to `575eebba`'s own rows was made.
+- **Irregularities.** IR-33 (from `a0a052a8`, the newer Treasury row; rewritten at merge because `575eebba` has since moved the anchor to that row; the sensitivity result is in it). **IR-34** (new): the -19.4% school-enrollment change rests on two spreadsheet values not re-opened on 2026-11-13.
+- **Not verified in this session.** The other 41 of the 50 sources were not re-read today; their rows keep the 2026-11-12 access date. The archived workbooks' sentences were not re-checked.
+- **Process note.** Two generated-file checks failed during this work for one reason: a commit to `COORDINATION.md` changes the line counts that the repository review and the audit outputs record, so they must be regenerated and committed in the same commit. Both were regenerated; a fresh clone then passed.
 
 ### Session `575eebba` — RE-VERIFICATION AND RE-INTEGRATION (this session, started 2026-11-13)
 

@@ -49,7 +49,7 @@ Not an appraisal, not tax advice, not investment advice.
 ```bash
 python3 canonical/model.py          # scenario model  -> canonical/data/model_output.json
 python3 canonical/review_repo.py    # mechanical review of the other workbooks -> canonical/data/repo_review.json
-python3 canonical/verify.py         # rebuilds the site and runs 11 checks -> canonical/data/verification.json
+python3 canonical/verify.py         # rebuilds the site and runs 12 checks -> canonical/data/verification.json
 python3 -m unittest discover -s canonical/tests -v     # 15 model tests
 python3 canonical/ci_local.py       # every step of the CI workflow, locally, in order
 ```
@@ -61,13 +61,15 @@ Python 3.11, standard library only. No installs, no network.
 ```
 canonical/            the consolidated site's data, model, generator and verifier
   data/sources.json     50 official sources, with what was read at each
-  data/facts/*.json     the evidence ledger, one file per category (440 rows)
+  data/facts/*.json     the evidence ledger, one file per category (441 rows)
   data/assumptions.json model settings: anchors and labelled assumptions
   data/*.json           risks, questions, suggestions, decision rule, irregularities, requirements
   ingest.py             how a row is recorded at the moment the source is open (enforces the quote rule)
   model.py, tests/      scenario engine and its tests
   build_site.py         writes the root *.html, assets/site.css, assets/site.js
-  verify.py             the 11 checks
+  verify.py             the 12 checks (check 12 re-tests the 2026-11-13 re-read)
+  reconfirm_2026-11-13.json  the decision-critical figures re-read on 2026-11-13, with the text copied from each page
+  redact_names.py       replaces individuals' names in shared text with [OFFICER] (run once, 2026-11-13)
   review_repo.py        inventory and cross-check of the earlier workbooks
   privacy.py            personal-information scan shared by build and verifier
 *.html, assets/site.* the published consolidated site (generated)

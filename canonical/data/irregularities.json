@@ -1,387 +1,412 @@
 {
-  "irregularities": [
-    {
-      "id": "IR-01",
-      "area": "Official source",
-      "title": "A state jobs release contradicts its own table",
-      "detail": "The September 2026 county release says total nonfarm employment fell by 4,100 'to 4,539,800'. Its table shows 4,593,800, and 4,597,900 less 4,100 is 4,593,800. The table figure is published here.",
-      "rows": [
-        "EC-060",
-        "EC-061"
-      ],
-      "links": [],
-      "action": "Report to the publisher; re-read next month's release.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-02",
-      "area": "Official source",
-      "title": "The same release misattributes a job gain",
-      "detail": "The narrative says health care and social assistance added 37,500 jobs. The table shows 859,500 rising to 890,700, a gain of 31,200; 37,500 is the gain for the wider education-and-health group, and the release's own '83 percent' fits 31,200.",
-      "rows": [
-        "EC-075",
-        "EC-074",
-        "EC-076",
-        "EC-071"
-      ],
-      "links": [],
-      "action": "Use the table; report to the publisher.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-03",
-      "area": "Official source",
-      "title": "Two official counts of the January 2025 fire losses differ",
-      "detail": "CAL FIRE's incident records show 9,419 and 6,845 structures destroyed; the County's fact sheet shows 9,414 and 6,837. CAL FIRE's records were updated later and are used here.",
-      "rows": [
-        "HZ-021",
-        "HZ-045",
-        "HZ-026",
-        "HZ-046"
-      ],
-      "links": [],
-      "action": "None needed; note the dates.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-04",
-      "area": "Official source",
-      "title": "Two official estimates of county residents differ by 158,501",
-      "detail": "For July 1, 2025 the State publishes 9,853,435 and the Census Bureau 9,694,934. Both show a decline since 2020. Both are published here, each with its source.",
-      "rows": [
-        "PP-011",
-        "PJ-001",
-        "PP-001b"
-      ],
-      "links": [],
-      "action": "Quote the publisher whenever a population figure is used.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-05",
-      "area": "Official source",
-      "title": "An official forecast and the outcome point in opposite directions",
-      "detail": "The federal budget office expected the central bank's rate to continue to decline in 2026; the central bank raised its range by 25 basis points on September 17, 2026.",
-      "rows": [
-        "PJ-065",
-        "CM-011"
-      ],
-      "links": [],
-      "action": "Treat every projection on this site as a projection.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-06",
-      "area": "Official source",
-      "title": "The Constitution's text still prints a repealed exclusion",
-      "detail": "Article XIII A, section 2, subdivision (h) as displayed still describes the $1,000,000 parent-to-child exclusion for other real property. The Board of Equalization confirms that Proposition 19 eliminated it from February 16, 2021. A reader of section 2 alone could be misled.",
-      "rows": [
-        "TX-025",
-        "TX-020"
-      ],
-      "links": [],
-      "action": "Rely on the Board of Equalization page for inheritance questions; confirm with an estate attorney.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-07",
-      "area": "Official source",
-      "title": "A federal hazard index could not be read",
-      "detail": "The National Risk Index county report returned a server error on the access date. No value from it is published, and figures for it in earlier workbooks were not copied.",
-      "rows": [
-        "HZ-063"
-      ],
-      "links": [],
-      "action": "Re-open the report and fill the row.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-08",
-      "area": "Official source",
-      "title": "Ballot results are unofficial",
-      "detail": "The count read on November 12, 2026 will change until certification, due by December 11, 2026. Earlier workbooks in this repository show slightly different percentages because they were read on earlier days.",
-      "rows": [
-        "TX-071",
-        "TX-073",
-        "TX-075"
-      ],
-      "links": [],
-      "action": "Re-read after certification.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-09",
-      "area": "Official source",
-      "title": "Two official projections for the same county point different ways",
-      "detail": "A 2024 regional plan projects employment rising from 5,031,000 to 5,461,000 by 2050; the State's 2026 series projects fewer residents throughout. They were made two years apart with different methods.",
-      "rows": [
-        "PJ-050",
-        "PJ-051",
-        "PJ-071",
-        "PJ-056"
-      ],
-      "links": [],
-      "action": "Prefer the newer series for population; treat the jobs projection as dated.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-10",
-      "area": "Official source",
-      "title": "County output is no longer in the release, and metro figures were discontinued",
-      "detail": "The federal release now carries no county table in its text and has ended metropolitan-area statistics. County gross domestic product is therefore blank here.",
-      "rows": [
-        "EC-082",
-        "EC-083"
-      ],
-      "links": [],
-      "action": "Read the county table in the publisher's interactive tool.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-11",
-      "area": "Official source",
-      "title": "A federal projection table is published only as an image",
-      "detail": "The year-by-year economic table could not be read as text, so only figures stated in the report's prose are published.",
-      "rows": [
-        "PJ-066"
-      ],
-      "links": [],
-      "action": "Read the publisher's data spreadsheet.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-12",
-      "area": "Official source",
-      "title": "A statistics page's address is out of date with its content",
-      "detail": "The Census Bureau page whose address ends in PST045224 serves Vintage 2025 figures. The figures published here are the ones on the page, labelled V2025.",
-      "rows": [
-        "PP-001a"
-      ],
-      "links": [],
-      "action": "None needed.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-13",
-      "area": "Official source",
-      "title": "Three long pages were read only in part",
-      "detail": "The fast-food wage page (the first of three segments), the tenant's annual report (the sections named in the source list) and the federal outlook (the first segment only) were not read end to end. A later increase in the fast-food wage, if any, would be on a part not read.",
-      "rows": [
-        "EC-093",
-        "TN-007",
-        "PJ-060"
-      ],
-      "links": [],
-      "action": "Read the remaining segments; the source list records exactly what was read.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-14",
-      "area": "Official source",
-      "title": "No official source prices this kind of property",
-      "detail": "The only filed purchase yields are national averages for leases of about 19.6 years. The yield for a short lease on one restaurant in Los Angeles is blank, and so is the property's value.",
-      "rows": [
-        "CM-060",
-        "PL-007",
-        "CM-022"
-      ],
-      "links": [],
-      "action": "Broker opinions of value or an appraisal.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-15",
-      "area": "Official source",
-      "title": "An earlier flag in this repository is resolved",
-      "detail": "An earlier workbook flagged a same-store sales figure of -4.2% as unreproducible. It is reproducible: it is the system figure for fiscal 2025 in the annual report, not a year-to-date figure.",
-      "rows": [
-        "TN-023"
-      ],
-      "links": [],
-      "action": "None needed.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-20",
-      "area": "Repository",
-      "title": "Earlier workbooks answer the same question differently",
-      "detail": "Earlier sessions each published a complete workbook with its own data date, assumptions and headline answer. They are preserved in the archive and are not endorsed by this site. Where they print a different number for the same quantity, the Verification page lists it beside today's value.",
-      "rows": [],
-      "links": [
-        [
-          "Archive",
-          "workspaces.html"
-        ],
-        [
-          "Cross-check of key figures",
-          "verification.html#crosscheck"
-        ]
-      ],
-      "action": "Read this site first; use the archive for history.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-21",
-      "area": "Repository",
-      "title": "Earlier pages show older values",
-      "detail": "For example, earlier workbooks show several lower values for the 10-year Treasury yield, read on earlier days; the latest posted value on the access date is 5.15%. Those pages carry their own access dates, and the values found are listed on the Verification page.",
-      "rows": [
-        "CM-001"
-      ],
-      "links": [
-        [
-          "Cross-check of key figures",
-          "verification.html#crosscheck"
-        ]
-      ],
-      "action": "None; the archive is historical.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-22",
-      "area": "Repository",
-      "title": "Generated pages were edited by hand twice",
-      "detail": "Two earlier pull requests changed a generated root page without changing its generator, and the build failed for the next session each time. This site's pages are written only by the generator, and the build fails if they differ.",
-      "rows": [],
-      "links": [
-        [
-          "Pull request 42",
-          "https://github.com/wingbangboozle1-lang/Jack2/pull/42"
-        ],
-        [
-          "Pull request 51",
-          "https://github.com/wingbangboozle1-lang/Jack2/pull/51"
-        ]
-      ],
-      "action": "Keep the generator-only rule; see suggestion SG-16.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-23",
-      "area": "Repository",
-      "title": "Session labels collide",
-      "detail": "Two sessions are called 'Session I' and several 'Session M' on the coordination board. This site refers to sessions by identifier.",
-      "rows": [],
-      "links": [
-        [
-          "Coordination board",
-          "https://github.com/wingbangboozle1-lang/Jack2/blob/main/COORDINATION.md"
-        ]
-      ],
-      "action": "None needed.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-24",
-      "area": "Coordination",
-      "title": "Pull requests from earlier sessions are still open",
-      "detail": "{snap:open_prs} pull requests were open when the repository was last measured. They belong to earlier sessions and were left as they are: closing or merging another session's work is that session's decision. They are listed on the Archive page.",
-      "rows": [],
-      "links": [
-        [
-          "Open pull requests",
-          "workspaces.html#pulls"
-        ]
-      ],
-      "action": "Repository owner to close or merge.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-25",
-      "area": "Coordination",
-      "title": "Branches hold work that never reached the main branch",
-      "detail": "{snap:unmerged_branches} branches carry files that are not on the main branch. They are listed with links on the Archive page. Their content was not verified by this session and is not published on this site.",
-      "rows": [],
-      "links": [
-        [
-          "Branch ledger",
-          "workspaces.html#branches"
-        ]
-      ],
-      "action": "Repository owner to decide whether any should be merged.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-26",
-      "area": "Coordination",
-      "title": "Many sessions merged within the same hour",
-      "detail": "Eight sessions merged eleven pull requests between 16:38 and 17:06 UTC on November 12, 2026, each adding a workbook. The integration claim was visible only on a branch during that time.",
-      "rows": [],
-      "links": [
-        [
-          "Merged pull requests",
-          "https://github.com/wingbangboozle1-lang/Jack2/pulls?q=is%3Apr+is%3Amerged"
-        ]
-      ],
-      "action": "See suggestion SG-16.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-30",
-      "area": "Privacy",
-      "title": "A personal e-mail address sits in the repository's history",
-      "detail": "{snap:email_commits} commits on the main branch carry one personal e-mail address in their author field. It is not on the site and is not reproduced here. The count rises with each pull request merged through GitHub while the account's e-mail privacy setting is off: it rose during this session's own merges. Removing the address from existing history requires rewriting history.",
-      "rows": [],
-      "links": [
-        [
-          "Commit history",
-          "https://github.com/wingbangboozle1-lang/Jack2/commits/main"
-        ]
-      ],
-      "action": "Owner to turn on GitHub's setting that keeps the e-mail address private, which stops new commits and merges carrying it; then decide on a history rewrite (suggestion SG-18).",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-31",
-      "area": "Privacy",
-      "title": "The repository and the site are public",
-      "detail": "Nobody is named, but anyone can read that an owner of such a property is weighing a sale.",
-      "rows": [],
-      "links": [
-        [
-          "Repository",
-          "https://github.com/wingbangboozle1-lang/Jack2"
-        ]
-      ],
-      "action": "Owner's decision; see suggestion SG-17.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-32",
-      "area": "Privacy",
-      "title": "Earlier workbooks printed names of individuals; names are now withheld",
-      "detail": "Earlier scans found individual names in several earlier workbooks. On 2026-11-13 the names of one private individual and of company officers were replaced with [name withheld] in every tracked file. Company names and officer roles are kept. A re-scan of the repository finds no individual name and no e-mail, telephone or parcel pattern. The institutional street addresses that remain are public institutional addresses and do not identify the owner or the property.",
-      "rows": [],
-      "links": [
-        [
-          "Counts by folder",
-          "verification.html#repo"
-        ]
-      ],
-      "action": "Owners of the earlier folders to confirm the redaction in their own pages at their next rebuild.",
-      "status": "needs review"
-    },
-    {
-      "id": "IR-33",
-      "area": "Official source",
-      "title": "The 10-year Treasury yield on the access date is above the value the model holds",
-      "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008). The base case holds the 10-year yield at the November 10 posted value (row CM-001), as its assumption record states. The base case therefore does not use the access-date value, and a re-run at the newer value has not been made. The table for the access date can still change before the end of the day, so the value should be read again on a later date before it is used.",
-      "rows": [
-        "CM-001",
-        "CM-008"
-      ],
-      "links": [
-        [
-          "Treasury daily par yield curve, November 2026",
-          "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611"
-        ],
-        [
-          "Projection model assumptions",
-          "projection-model.html"
-        ]
-      ],
-      "action": "Reviewer to decide whether to re-run the base case at the newest official value and to re-read the value on a later date.",
-      "status": "needs review"
-    }
-  ]
+ "irregularities": [
+  {
+   "id": "IR-01",
+   "area": "Official source",
+   "title": "A state jobs release contradicts its own table",
+   "detail": "The September 2026 county release says total nonfarm employment fell by 4,100 'to 4,539,800'. Its table shows 4,593,800, and 4,597,900 less 4,100 is 4,593,800. The table figure is published here.",
+   "rows": [
+    "EC-060",
+    "EC-061"
+   ],
+   "links": [],
+   "action": "Report to the publisher; re-read next month's release.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-02",
+   "area": "Official source",
+   "title": "The same release misattributes a job gain",
+   "detail": "The narrative says health care and social assistance added 37,500 jobs. The table shows 859,500 rising to 890,700, a gain of 31,200; 37,500 is the gain for the wider education-and-health group, and the release's own '83 percent' fits 31,200.",
+   "rows": [
+    "EC-075",
+    "EC-074",
+    "EC-076",
+    "EC-071"
+   ],
+   "links": [],
+   "action": "Use the table; report to the publisher.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-03",
+   "area": "Official source",
+   "title": "Two official counts of the January 2025 fire losses differ",
+   "detail": "CAL FIRE's incident records show 9,419 and 6,845 structures destroyed; the County's fact sheet shows 9,414 and 6,837. CAL FIRE's records were updated later and are used here.",
+   "rows": [
+    "HZ-021",
+    "HZ-045",
+    "HZ-026",
+    "HZ-046"
+   ],
+   "links": [],
+   "action": "None needed; note the dates.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-04",
+   "area": "Official source",
+   "title": "Two official estimates of county residents differ by 158,501",
+   "detail": "For July 1, 2025 the State publishes 9,853,435 and the Census Bureau 9,694,934. Both show a decline since 2020. Both are published here, each with its source.",
+   "rows": [
+    "PP-011",
+    "PJ-001",
+    "PP-001b"
+   ],
+   "links": [],
+   "action": "Quote the publisher whenever a population figure is used.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-05",
+   "area": "Official source",
+   "title": "An official forecast and the outcome point in opposite directions",
+   "detail": "The federal budget office expected the central bank's rate to continue to decline in 2026; the central bank raised its range by 25 basis points on September 17, 2026.",
+   "rows": [
+    "PJ-065",
+    "CM-011"
+   ],
+   "links": [],
+   "action": "Treat every projection on this site as a projection.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-06",
+   "area": "Official source",
+   "title": "The Constitution's text still prints a repealed exclusion",
+   "detail": "Article XIII A, section 2, subdivision (h) as displayed still describes the $1,000,000 parent-to-child exclusion for other real property. The Board of Equalization confirms that Proposition 19 eliminated it from February 16, 2021. A reader of section 2 alone could be misled.",
+   "rows": [
+    "TX-025",
+    "TX-020"
+   ],
+   "links": [],
+   "action": "Rely on the Board of Equalization page for inheritance questions; confirm with an estate attorney.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-07",
+   "area": "Official source",
+   "title": "A federal hazard index could not be read",
+   "detail": "The National Risk Index county report returned a server error on the access date. No value from it is published, and figures for it in earlier workbooks were not copied.",
+   "rows": [
+    "HZ-063"
+   ],
+   "links": [],
+   "action": "Re-open the report and fill the row.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-08",
+   "area": "Official source",
+   "title": "Ballot results are unofficial",
+   "detail": "The count read on November 12, 2026 will change until certification, due by December 11, 2026. Earlier workbooks in this repository show slightly different percentages because they were read on earlier days.",
+   "rows": [
+    "TX-071",
+    "TX-073",
+    "TX-075"
+   ],
+   "links": [],
+   "action": "Re-read after certification.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-09",
+   "area": "Official source",
+   "title": "Two official projections for the same county point different ways",
+   "detail": "A 2024 regional plan projects employment rising from 5,031,000 to 5,461,000 by 2050; the State's 2026 series projects fewer residents throughout. They were made two years apart with different methods.",
+   "rows": [
+    "PJ-050",
+    "PJ-051",
+    "PJ-071",
+    "PJ-056"
+   ],
+   "links": [],
+   "action": "Prefer the newer series for population; treat the jobs projection as dated.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-10",
+   "area": "Official source",
+   "title": "County output is no longer in the release, and metro figures were discontinued",
+   "detail": "The federal release now carries no county table in its text and has ended metropolitan-area statistics. County gross domestic product is therefore blank here.",
+   "rows": [
+    "EC-082",
+    "EC-083"
+   ],
+   "links": [],
+   "action": "Read the county table in the publisher's interactive tool.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-11",
+   "area": "Official source",
+   "title": "A federal projection table is published only as an image",
+   "detail": "The year-by-year economic table could not be read as text, so only figures stated in the report's prose are published.",
+   "rows": [
+    "PJ-066"
+   ],
+   "links": [],
+   "action": "Read the publisher's data spreadsheet.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-12",
+   "area": "Official source",
+   "title": "A statistics page's address is out of date with its content",
+   "detail": "The Census Bureau page whose address ends in PST045224 serves Vintage 2025 figures. The figures published here are the ones on the page, labelled V2025.",
+   "rows": [
+    "PP-001a"
+   ],
+   "links": [],
+   "action": "None needed.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-13",
+   "area": "Official source",
+   "title": "Three long pages were read only in part",
+   "detail": "The fast-food wage page (the first of three segments), the tenant's annual report (the sections named in the source list) and the federal outlook (the first segment only) were not read end to end. A later increase in the fast-food wage, if any, would be on a part not read.",
+   "rows": [
+    "EC-093",
+    "TN-007",
+    "PJ-060"
+   ],
+   "links": [],
+   "action": "Read the remaining segments; the source list records exactly what was read.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-14",
+   "area": "Official source",
+   "title": "No official source prices this kind of property",
+   "detail": "The only filed purchase yields are national averages for leases of about 19.6 years. The yield for a short lease on one restaurant in Los Angeles is blank, and so is the property's value.",
+   "rows": [
+    "CM-060",
+    "PL-007",
+    "CM-022"
+   ],
+   "links": [],
+   "action": "Broker opinions of value or an appraisal.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-15",
+   "area": "Official source",
+   "title": "An earlier flag in this repository is resolved",
+   "detail": "An earlier workbook flagged a same-store sales figure of -4.2% as unreproducible. It is reproducible: it is the system figure for fiscal 2025 in the annual report, not a year-to-date figure.",
+   "rows": [
+    "TN-023"
+   ],
+   "links": [],
+   "action": "None needed.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-20",
+   "area": "Repository",
+   "title": "Earlier workbooks answer the same question differently",
+   "detail": "Earlier sessions each published a complete workbook with its own data date, assumptions and headline answer. They are preserved in the archive and are not endorsed by this site. Where they print a different number for the same quantity, the Verification page lists it beside today's value.",
+   "rows": [],
+   "links": [
+    [
+     "Archive",
+     "workspaces.html"
+    ],
+    [
+     "Cross-check of key figures",
+     "verification.html#crosscheck"
+    ]
+   ],
+   "action": "Read this site first; use the archive for history.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-21",
+   "area": "Repository",
+   "title": "Earlier pages show older values",
+   "detail": "For example, earlier workbooks show several lower values for the 10-year Treasury yield, read on earlier days; the latest posted value on the access date is 5.15%. Those pages carry their own access dates, and the values found are listed on the Verification page.",
+   "rows": [
+    "CM-001"
+   ],
+   "links": [
+    [
+     "Cross-check of key figures",
+     "verification.html#crosscheck"
+    ]
+   ],
+   "action": "None; the archive is historical.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-22",
+   "area": "Repository",
+   "title": "Generated pages were edited by hand twice",
+   "detail": "Two earlier pull requests changed a generated root page without changing its generator, and the build failed for the next session each time. This site's pages are written only by the generator, and the build fails if they differ.",
+   "rows": [],
+   "links": [
+    [
+     "Pull request 42",
+     "https://github.com/wingbangboozle1-lang/Jack2/pull/42"
+    ],
+    [
+     "Pull request 51",
+     "https://github.com/wingbangboozle1-lang/Jack2/pull/51"
+    ]
+   ],
+   "action": "Keep the generator-only rule; see suggestion SG-16.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-23",
+   "area": "Repository",
+   "title": "Session labels collide",
+   "detail": "Two sessions are called 'Session I' and several 'Session M' on the coordination board. This site refers to sessions by identifier.",
+   "rows": [],
+   "links": [
+    [
+     "Coordination board",
+     "https://github.com/wingbangboozle1-lang/Jack2/blob/main/COORDINATION.md"
+    ]
+   ],
+   "action": "None needed.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-24",
+   "area": "Coordination",
+   "title": "Pull requests from earlier sessions are still open",
+   "detail": "{snap:open_prs} pull requests were open when the repository was last measured. They belong to earlier sessions and were left as they are: closing or merging another session's work is that session's decision. They are listed on the Archive page.",
+   "rows": [],
+   "links": [
+    [
+     "Open pull requests",
+     "workspaces.html#pulls"
+    ]
+   ],
+   "action": "Repository owner to close or merge.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-25",
+   "area": "Coordination",
+   "title": "Branches hold work that never reached the main branch",
+   "detail": "{snap:unmerged_branches} branches carry files that are not on the main branch. They are listed with links on the Archive page. Their content was not verified by this session and is not published on this site.",
+   "rows": [],
+   "links": [
+    [
+     "Branch ledger",
+     "workspaces.html#branches"
+    ]
+   ],
+   "action": "Repository owner to decide whether any should be merged.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-26",
+   "area": "Coordination",
+   "title": "Many sessions merged within the same hour",
+   "detail": "Eight sessions merged eleven pull requests between 16:38 and 17:06 UTC on November 12, 2026, each adding a workbook. The integration claim was visible only on a branch during that time.",
+   "rows": [],
+   "links": [
+    [
+     "Merged pull requests",
+     "https://github.com/wingbangboozle1-lang/Jack2/pulls?q=is%3Apr+is%3Amerged"
+    ]
+   ],
+   "action": "See suggestion SG-16.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-30",
+   "area": "Privacy",
+   "title": "A personal e-mail address sits in the repository's history",
+   "detail": "{snap:email_commits} commits on the main branch carry one personal e-mail address in their author field. It is not on the site and is not reproduced here. The count rises with each pull request merged through GitHub while the account's e-mail privacy setting is off: it rose during this session's own merges. Removing the address from existing history requires rewriting history.",
+   "rows": [],
+   "links": [
+    [
+     "Commit history",
+     "https://github.com/wingbangboozle1-lang/Jack2/commits/main"
+    ]
+   ],
+   "action": "Owner to turn on GitHub's setting that keeps the e-mail address private, which stops new commits and merges carrying it; then decide on a history rewrite (suggestion SG-18).",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-31",
+   "area": "Privacy",
+   "title": "The repository and the site are public",
+   "detail": "Nobody is named, but anyone can read that an owner of such a property is weighing a sale.",
+   "rows": [],
+   "links": [
+    [
+     "Repository",
+     "https://github.com/wingbangboozle1-lang/Jack2"
+    ]
+   ],
+   "action": "Owner's decision; see suggestion SG-17.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-32",
+   "area": "Privacy",
+   "title": "Earlier workbooks printed names of individuals; names are now withheld",
+   "detail": "Earlier scans found individual names in several earlier workbooks. On 2026-11-13 the names of one private individual and of company officers were replaced with [name withheld] in every tracked file. Company names and officer roles are kept. A re-scan of the repository finds no individual name and no e-mail, telephone or parcel pattern. The institutional street addresses that remain are public institutional addresses and do not identify the owner or the property.",
+   "rows": [],
+   "links": [
+    [
+     "Counts by folder",
+     "verification.html#repo"
+    ]
+   ],
+   "action": "Owners of the earlier folders to confirm the redaction in their own pages at their next rebuild.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-33",
+   "area": "Official source",
+   "title": "The 10-year Treasury yield on the access date was a different value in an earlier base case",
+   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008; the same value is now the model anchor, row CM-001, as changed on the access date by a later session's merged update). The previous base case used the November 10, 2026 posted value of 4.98%. The model was re-run in a temporary copy at the 5.15% value and the earlier 4.98% value: the ranking of the six strategies is unchanged, and each strategy's balanced score moves by between twenty-one and fifty-eight points. The 5.15% value is the access-date value and can still change before the end of the day, so it should be read again on a later date before it is relied on. The choice of anchor date is an owner decision and remains open.",
+   "rows": [
+    "CM-001",
+    "CM-008"
+   ],
+   "links": [
+    [
+     "Treasury daily par yield curve, November 2026",
+     "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611"
+    ],
+    [
+     "Projection model assumptions",
+     "projection-model.html"
+    ]
+   ],
+   "action": "Reviewer to decide whether to re-run the base case at the newest official value and to re-read the value on a later date.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-34",
+   "area": "Official source",
+   "title": "A computed school-enrollment change rests on spreadsheet values not re-read on the re-read date",
+   "detail": "The -19.4% in this row is calculated from two values in the Department of Finance spreadsheet. The page states the fall as a count of students, and that count agrees with the two values to rounding. The spreadsheet itself was not re-opened in the latest re-read, so the percentage is listed as not re-confirmed today.",
+   "rows": [
+    "PJ-075"
+   ],
+   "links": [
+    [
+     "Department of Finance, public K-12 graded enrollment, 2026 Series",
+     "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/"
+    ],
+    [
+     "Linked spreadsheet, Los Angeles rows (2026 Series)",
+     "https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-graded-enrollment/CA_K-12_Enrollment_Series-2026.xlsx"
+    ],
+    [
+     "Source record in this repository",
+     "sources.html"
+    ]
+   ],
+   "action": "Re-open the linked spreadsheet and confirm the two operands 1,002,045 and 1,242,816 for Los Angeles County before the percentage is relied on.",
+   "status": "needs review"
+  }
+ ]
 }
