@@ -7,12 +7,12 @@
    "group": "Interest rates",
    "label": "10-year Treasury yield",
    "geo": "United States",
-   "period": "November 10, 2026",
-   "value": "4.98%",
+   "period": "November 13, 2026",
+   "value": "5.15%",
    "source": "S-TSY",
    "status": "verified",
-   "quote": "11/10/2026 | 1 Mo 4.05 | 3 Mo 4.30 | 6 Mo 4.38 | 1 Yr 4.56 | 2 Yr 4.73 | 3 Yr 4.74 | 5 Yr 4.81 | 7 Yr 4.89 | 10 Yr 4.98 | 20 Yr 5.39 | 30 Yr 5.35",
-   "checked": "2026-11-12",
+   "quote": "11/13/2026 | 1 Mo 4.10 | 3 Mo 4.32 | 6 Mo 4.42 | 1 Yr 4.65 | 2 Yr 4.88 | 3 Yr 4.92 | 5 Yr 4.98 | 7 Yr 5.05 | 10 Yr 5.15 | 20 Yr 5.52 | 30 Yr 5.47",
+   "checked": "2026-11-13",
    "note": "",
    "reason": "",
    "obtain": ""
@@ -109,7 +109,7 @@
    "status": "verified",
    "quote": "11/05/2026 | 1 Mo 4.03 | 3 Mo 4.17 | 6 Mo 4.19 | 1 Yr 4.28 | 2 Yr 4.46 | 3 Yr 4.53 | 5 Yr 4.59 | 7 Yr 4.70 | 10 Yr 4.84 | 20 Yr 5.27 | 30 Yr 5.25",
    "checked": "2026-11-12",
-   "note": "Lowest of the seven November 2026 rows read on the access date (4.91, 4.95, 4.90, 4.84, 4.86, 4.88, 4.98).",
+   "note": "Lowest of the eight November 2026 rows read on the access date (4.91, 4.95, 4.90, 4.84, 4.86, 4.88, 4.98, 5.15).",
    "reason": "",
    "obtain": ""
   },
@@ -199,19 +199,19 @@
    "group": "Interest rates",
    "label": "Gap between the 10-year Treasury yield and the top of the Federal Reserve range",
    "geo": "United States",
-   "period": "November 10, 2026 against the range set September 17, 2026",
-   "value": "0.98 percentage points",
+   "period": "November 13, 2026 against the range set September 17, 2026",
+   "value": "1.15 percentage points",
    "source": "S-TSY",
    "status": "computed",
    "quote": "",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "note": "",
    "reason": "",
    "obtain": "",
    "calc": {
     "expr": "x0-x1",
     "operands": [
-     "4.98",
+     "5.15",
      "4.00"
     ],
     "inputs": [
@@ -219,7 +219,7 @@
      "CM-010"
     ],
     "fmt": "{:.2f} percentage points",
-    "formula": "10-year Treasury yield (4.98) minus top of target range (4.00)"
+    "formula": "10-year Treasury yield (5.15) minus top of target range (4.00)"
    }
   },
   {
@@ -356,12 +356,12 @@
    "group": "What large buyers pay for net-leased properties",
    "label": "Gap between that buyer's purchase yield and the 10-year Treasury yield",
    "geo": "United States",
-   "period": "Third quarter 2026 purchases against November 10, 2026",
-   "value": "2.32 percentage points",
+   "period": "Third quarter 2026 purchases against November 13, 2026",
+   "value": "2.15 percentage points",
    "source": "S-NNN-8K",
    "status": "computed",
    "quote": "",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "note": "",
    "reason": "",
    "obtain": "",
@@ -369,14 +369,14 @@
     "expr": "x0-x1",
     "operands": [
      "7.3",
-     "4.98"
+     "5.15"
     ],
     "inputs": [
      "CM-020",
      "CM-001"
     ],
     "fmt": "{:.2f} percentage points",
-    "formula": "Purchase yield (7.3) minus 10-year Treasury yield (4.98)"
+    "formula": "Purchase yield (7.3) minus 10-year Treasury yield (5.15)"
    }
   },
   {

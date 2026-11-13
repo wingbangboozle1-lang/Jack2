@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-12",
+ "checked": "2026-11-13",
  "checks": [
   {
    "name": "Every row has an official source; every published value is in its quoted text; every unconfirmed value is blank",
@@ -19,7 +19,7 @@
    "name": "Every source is an official publisher, and nothing is published from a page that could not be read",
    "proves": "Every source address is a secure government address (filings are read on the securities regulator's site), and a source that failed to load supports only blank rows.",
    "does_not_prove": "That the page is still online or unchanged today.",
-   "result": "50 sources on 34 government hosts, all read on 2026-11-12 except 1 that could not be read and carries no value",
+   "result": "50 sources on 34 government hosts, all read on 2026-11-13 except 1 that could not be read and carries no value",
    "ok": true
   },
   {
