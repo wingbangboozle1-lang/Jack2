@@ -2,7 +2,7 @@
   "as_of": "2026-11-08",
   "files": 586,
   "lines": 109546,
-  "bytes": 10268980,
+  "bytes": 10268998,
   "privacy_pattern_hits": 0,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [],
@@ -11,7 +11,7 @@
     "root/config": {
       "files": 61,
       "lines": 20639,
-      "bytes": 2152814,
+      "bytes": 2152832,
       "privacy_hits": 0,
       "structural_errors": 0
     },

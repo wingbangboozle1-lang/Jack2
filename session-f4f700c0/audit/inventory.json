@@ -3,7 +3,7 @@
     "as_of": "2026-11-08",
     "files": 586,
     "lines": 109546,
-    "bytes": 10268980,
+    "bytes": 10268998,
     "privacy_pattern_hits": 0,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [],
@@ -12,7 +12,7 @@
       "root/config": {
         "files": 61,
         "lines": 20639,
-        "bytes": 2152814,
+        "bytes": 2152832,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -1304,9 +1304,9 @@
     {
       "path": "privacy.html",
       "workspace": "root/config",
-      "bytes": 6096,
+      "bytes": 6114,
       "lines": 33,
-      "sha256": "ac35e27172f39bf8b73cf38ac836b5bc17534e738f5a243c0cfc2747f43f9407",
+      "sha256": "c78166f78d952bcb864e629dd37231fff8126adb30dc2ad6e018e6b47d42583d",
       "kind": ".html",
       "url_count": 0,
       "pii_pattern_hits": 0,
