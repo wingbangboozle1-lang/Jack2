@@ -288,6 +288,36 @@ def run_checks(bs):
         "No page of the consolidated site is orphaned, and no earlier workbook has been dropped from view.",
         "That the archived workbooks are correct; they are preserved, not endorsed.", nav)
 
+    # 12 ---------------------------------------------------------------- re-read of decision-critical figures (2026-11-13)
+    def reread():
+        with open(os.path.join(DATA, "reconfirm_2026-11-13.json"), encoding="utf-8") as fh:
+            doc = json.load(fh)
+        num = re.compile(r"\d[\d,]*(?:\.\d+)?")
+        srcs = {x["id"]: x for x in bs.SOURCES["sources"]}
+        n_rows = n_conf = n_not = 0
+        for en in doc["entries"]:
+            assert en["source"] in srcs, f"{en['source']}: not a listed source"
+            assert official(srcs[en["source"]]["url"]), f"{en['source']}: not an official address"
+            assert en["read_text"].strip(), f"{en['source']}: no text recorded from the page"
+            for row in en["rows"]:
+                rid = row["id"]
+                assert rid in bs.ROWS, f"{rid}: not a ledger row"
+                assert bs.ROWS[rid]["source"] == en["source"], f"{rid}: cited to {en['source']}, but the ledger cites {bs.ROWS[rid]['source']}"
+                value_nums = set(num.findall(bs.ROWS[rid]["value"]))
+                conf, notre = set(row["confirmed_numbers"]), set(row["not_reread"])
+                assert conf | notre == value_nums, f"{rid}: numbers in the value {sorted(value_nums)} are not all accounted for"
+                assert not (conf & notre), f"{rid}: a number is both confirmed and not re-read"
+                for c in conf:
+                    assert c in en["read_text"], f"{rid}: {c} is not in the text recorded from {en['source']} on 2026-11-13"
+                n_rows += 1
+                n_conf += len(conf)
+                n_not += len(notre)
+        return (f"{len(doc['entries'])} official pages re-opened on {doc['meta']['read_on']}; {n_rows} ledger rows; "
+                f"{n_conf} numbers found again in the text recorded from the page; {n_not} numbers listed as not re-read; no ledger value changed")
+    add("The decision-critical figures were re-read on 2026-11-13 and the numbers found again match the ledger",
+        "Each re-read number of a ledger value appears in the text copied from its official page on the re-read date, and every number of a value is either re-read or listed as not re-read.",
+        "That the copied text is exact, or that the page has not changed since the copy. Each re-read can be checked by hand at its link.", reread)
+
     # 11 ----------------------------------------------------------------- generated files are current
     def current():
         before = {}

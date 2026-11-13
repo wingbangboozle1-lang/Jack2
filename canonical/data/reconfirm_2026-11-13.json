@@ -1,0 +1,194 @@
+{
+ "meta": {
+  "read_on": "2026-11-13",
+  "by": "session 020f067d (task REV-03)",
+  "method": "Each official page was opened again with the web reader on 2026-11-13. For each ledger row listed, every number in the row's value that was re-read is checked to appear in the text recorded here, copied from the page. Numbers in a value that were not re-read are listed as not_reread. No ledger value was changed by this record.",
+  "rule": "canonical/verify.py check 12 re-tests every confirmed number against the ledger value and this text."
+ },
+ "entries": [
+  {
+   "source": "S-TSY",
+   "rows": [
+    {
+     "id": "CM-001",
+     "confirmed_numbers": [
+      "4.98"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "| 11/10/2026 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | 4.05 | 4.16 | 4.21 | 4.30 | 4.28 | 4.38 | 4.56 | 4.73 | 4.74 | 4.81 | 4.89 | 4.98 | 5.39 | 5.35 | | 11/12/2026 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | 4.12 | 4.18 | 4.26 | 4.32 | 4.35 | 4.42 | 4.65 | 4.86 | 4.90 | 4.95 | 5.02 | 5.10 | 5.48 | 5.43 | | 11/13/2026 | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | 4.10 | 4.18 | 4.26 | 4.32 | 4.34 | 4.42 | 4.65 | 4.88 | 4.92 | 4.98 | 5.05 | 5.15 | 5.52 | 5.47 |",
+   "result": "matches",
+   "note": "The 11/10/2026 row, the row the ledger uses, is unchanged. The same page now also posts 11/12/2026 (10-year 5.10) and 11/13/2026 (10-year 5.15). The ledger is not changed to them; see the sensitivity result on the Verification page."
+  },
+  {
+   "source": "S-ULA",
+   "rows": [
+    {
+     "id": "TX-003",
+     "confirmed_numbers": [
+      "5,400,000",
+      "10,900,000"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "Note: Effective for transactions closing after June 30, 2026, the new ULA thresholds will be $5,400,000 and $10,900,000. Transactions greater than $5,400,000 but less than $10,900,000 will be assessed a 4% tax, and transactions of $10,900,000 or greater will be assessed a 5.5% tax.",
+   "result": "matches",
+   "note": "The page's rate table also gives 0.45% for sales up to $5,400,000 (base tax only). The city-plus-county figure in TX-015 is a computed row and was not re-derived here."
+  },
+  {
+   "source": "S-CENSUS",
+   "rows": [
+    {
+     "id": "PP-001a",
+     "confirmed_numbers": [
+      "3,869,089"
+     ],
+     "not_reread": []
+    },
+    {
+     "id": "PP-001b",
+     "confirmed_numbers": [
+      "9,694,934"
+     ],
+     "not_reread": []
+    },
+    {
+     "id": "PP-002b",
+     "confirmed_numbers": [
+      "3.2"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "[table cells in order] Population estimates, July 1, 2025, (V2025) | 3,869,089 | 9,694,934 | Population, percent change - April 1, 2020 (estimates base) to July 1, 2025, (V2025) | -0.8% | -3.2%",
+   "result": "matches",
+   "note": "The QuickFacts page lists Los Angeles city and Los Angeles County, both Vintage 2025 estimates. Its population-change line gives -3.2% for the county."
+  },
+  {
+   "source": "S-FED",
+   "rows": [
+    {
+     "id": "CM-010",
+     "confirmed_numbers": [
+      "3.75",
+      "4.00"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "| September 17 | 25 | 0 | 3.75-4.00 |",
+   "result": "matches",
+   "note": "The 2026 table lists one change so far: the September 17, 2026 increase of 25 basis points. No later 2026 meeting is listed on the page on 2026-11-13."
+  },
+  {
+   "source": "S-JACK-8K",
+   "rows": [
+    {
+     "id": "TN-020",
+     "confirmed_numbers": [
+      "1.1"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "Same-store sales declined 1.1% in the third quarter, comprised of franchise same-store sales decline of 1.2% and company-owned same-store sales decline of 0.9%. [table] System | (1.1 %)",
+   "result": "matches",
+   "note": "The restaurant counts behind TN-085 (2,115 at July 5, 2026 and 2,168 a year earlier) also appear on this release. TN-085 is a computed row and was not recomputed here."
+  },
+  {
+   "source": "S-NNN-8K",
+   "rows": [
+    {
+     "id": "CM-020",
+     "confirmed_numbers": [
+      "7.3"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "Closed on $221.7 million of investments at an initial cash cap rate of 7.3%, with a weighted average lease term of 19.6 years",
+   "result": "matches",
+   "note": "This is the national net-lease cap rate for NNN REIT's own acquisitions. It is one buyer's pricing, not a market survey."
+  },
+  {
+   "source": "S-USGS",
+   "rows": [
+    {
+     "id": "HZ-001",
+     "confirmed_numbers": [
+      "60"
+     ],
+     "not_reread": []
+    }
+   ],
+   "read_text": "[table cells in order] Los Angeles region | Magnitude (greater than or equal to) | Average repeat time (years) | 30-year likelihood of one or more events | Readiness | 6.7 | 40 | (2.1) | 60% (0.8) | 1.1",
+   "result": "matches",
+   "note": "Table 1 of the fact sheet, which gives the 30-year likelihood counted from 2014. The fact sheet is from 2015; it is the official UCERF3 forecast and has not been replaced by a newer official table in this review."
+  },
+  {
+   "source": "S-EDD",
+   "rows": [
+    {
+     "id": "EC-064",
+     "confirmed_numbers": [
+      "7,300"
+     ],
+     "not_reread": [
+      "2.1"
+     ]
+    }
+   ],
+   "read_text": "Accommodation and food services (up 8,600) boosted the employment levels, with additions mainly centered in restaurants and other eating places (up 7,300).",
+   "result": "matches in part",
+   "note": "The 7,300 figure matches. The 2.1% share in the ledger value is in the release's table, which was not re-read in this pass, so it is listed as not re-read."
+  },
+  {
+   "source": "S-DOF-K12",
+   "rows": [
+    {
+     "id": "PJ-075",
+     "confirmed_numbers": [],
+     "not_reread": [
+      "19.4"
+     ]
+    }
+   ],
+   "read_text": "The biggest decline in enrollment is expected in Los Angeles County, which will fall by 240,800 students by the end of the 10-year projection.",
+   "result": "not reconfirmed",
+   "note": "The page states a fall of 240,800 students. The ledger computes -19.4% from two spreadsheet operands (1,002,045 and 1,242,816). Their difference, 240,771, rounds to the page's 240,800. The operands are in the Department of Finance spreadsheet, which was not re-opened in this pass, so the -19.4% is not re-confirmed today."
+  }
+ ],
+ "treasury_newer_posted": [
+  {
+   "date": "11/12/2026",
+   "ten_year": "5.10"
+  },
+  {
+   "date": "11/13/2026",
+   "ten_year": "5.15"
+  }
+ ],
+ "sensitivity": {
+  "test": "The model was run in a temporary copy with the reinvestment anchor set to 5.15 (the 11/13/2026 value). The repository was not changed.",
+  "ranking_before": [
+   "extend_then_sell",
+   "sell_exchange",
+   "test_then_decide",
+   "do_nothing",
+   "extend_and_hold",
+   "sell_cash"
+  ],
+  "ranking_after": [
+   "extend_then_sell",
+   "sell_exchange",
+   "test_then_decide",
+   "do_nothing",
+   "extend_and_hold",
+   "sell_cash"
+  ],
+  "ranking_changed": false,
+  "score_change_range": "+21 to +58 points on the model's balanced score, in the same units as the published score; every strategy rises by a similar amount"
+ }
+}

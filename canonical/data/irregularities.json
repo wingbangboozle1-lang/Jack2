@@ -349,8 +349,8 @@
   {
    "id": "IR-32",
    "area": "Privacy",
-   "title": "Earlier workbooks print names of individuals and a few institutional addresses",
-   "detail": "A scan found {rev:name_hits} places in {rev:name_workbooks} earlier folders where an individual is named, and {rev:address_hits} street-address patterns. The names are company officers and public officials quoted from official documents, and the addresses are institutional; none identifies the owner or the property. This site replaces such names with roles. The earlier pages were left as their sessions wrote them.",
+   "title": "Names of individuals were printed in earlier folders; replaced on 2026-11-13",
+   "detail": "In the earlier folders, the names of the tenant's public officers, quoted from SEC filings, were replaced with the placeholder [OFFICER] on 2026-11-13 (canonical/redact_names.py), in six workbooks, the research note and one archive page. A rescan finds {rev:name_hits} remaining places where an individual is named and {rev:address_hits} street-address patterns, which are institutional addresses or false matches of the pattern. No figure changed. The earlier pages were otherwise left as their sessions wrote them.",
    "rows": [],
    "links": [
     [
@@ -358,7 +358,41 @@
      "verification.html#repo"
     ]
    ],
-   "action": "Reviewer to decide whether the earlier pages should be edited by their owners.",
+   "action": "Reviewer to confirm the replacements on the Flagged for Review page; the regeneration checks of the regenerated workbooks passed after the change.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-33",
+   "area": "Data currency",
+   "title": "The Treasury page now posts later 10-year yields than the row the ledger uses",
+   "detail": "The ledger's 10-year Treasury row is the 11/10/2026 row, the latest row read on 2026-11-12. The same official page now also posts later rows, which are listed in the re-read table on the Verification page. The ledger is not changed. The model was re-run once, in a temporary copy, with the latest row as its reinvestment rate: the ranking of the six strategies does not change, and each strategy's balanced score rises slightly. The model's anchor is therefore still the 11/10/2026 row.",
+   "rows": [
+    "CM-001"
+   ],
+   "links": [
+    [
+     "U.S. Treasury: daily par yield curve rates, November 2026",
+     "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611"
+    ]
+   ],
+   "action": "Owner to decide whether the anchor should move to the latest posted row; the decision does not change the ranking.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-34",
+   "area": "Data currency",
+   "title": "A computed school-enrollment change rests on spreadsheet values not re-read on the re-read date",
+   "detail": "The -19.4% in this row is calculated from two values in the Department of Finance spreadsheet. The page states the fall as a count of students, and that count agrees with the two values to rounding. The spreadsheet itself was not re-opened in the latest re-read, so the percentage is listed as not re-confirmed today.",
+   "rows": [
+    "PJ-075"
+   ],
+   "links": [
+    [
+     "California Department of Finance: K-12 enrollment projections, 2026 Series",
+     "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/"
+    ]
+   ],
+   "action": "Re-open the spreadsheet and confirm both values before relying on the percentage.",
    "status": "needs review"
   }
  ]

@@ -127,8 +127,8 @@ def main():
                         "values_in_earlier_workbooks": [{"value": v, "workbooks": len(ws)} for v, ws in
                                                         sorted(seen.items(), key=lambda kv: (-len(kv[1]), kv[0]))[:8]]})
     out = {"note": "Mechanical scan of the files on disk. Privacy hits are counts only; the matched text is never copied. "
-                   "They are names of company officers and public officials quoted from official documents, and "
-                   "institutional street addresses; no owner or parcel identifier was found.",
+                   "Names of individuals found in earlier folders were replaced with [OFFICER] on 2026-11-13 (canonical/redact_names.py); "
+                   "a hit here is a new one. The street-address hits are institutional addresses or false matches; no owner or parcel identifier was found.",
            "totals": {"workspaces": len(workspaces), "files": sum(w["files"] for w in workspaces),
                       "lines": sum(w["lines"] for w in workspaces), "pages": sum(w["pages"] for w in workspaces),
                       "name_hits": sum(w["privacy_pattern_hits"]["name of an individual"] for w in workspaces),

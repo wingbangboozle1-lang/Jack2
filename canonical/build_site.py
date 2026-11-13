@@ -54,6 +54,7 @@ REQS = load("requirements.json")["requirements"]
 IRREG = load("irregularities.json")["irregularities"]
 REVIEW = load("repo_review.json")
 ARCHIVE = load("archive.json")
+RECONFIRM = load("reconfirm_2026-11-13.json")
 DEPLOY = load("deployment.json") if os.path.exists(os.path.join(DATA, "deployment.json")) else {"records": []}
 VERIF = load("verification.json") if os.path.exists(os.path.join(DATA, "verification.json")) else None
 
@@ -1038,6 +1039,18 @@ def build_verification():
         seen = ", ".join(f'{e(v["value"])} <span class="note">({v["workbooks"]})</span>' for v in f["values_in_earlier_workbooks"]) or "none found"
         rows.append([e(f["figure"]), f'<strong>{e(f["verified_today"])}</strong>', seen, cites([f["row"]])])
     body.append(table(["Quantity", "Verified today", "Values in earlier workbooks (number of workbooks)", "Evidence and official source"], rows, "data"))
+    body.append('<h2 id="reread">Re-read on 2026-11-13: decision-critical figures</h2>')
+    body.append('<p>On 2026-11-13 the official pages behind ten decision-critical figures were opened again. Each row below says what the page showed, '
+                'which numbers of the ledger value were found again in it, and which were not re-read. No value was changed by this re-read.</p>')
+    rr = []
+    for en in RECONFIRM["entries"]:
+        ids = ", ".join(f'<span class="rid">{x["id"]}</span>' for x in en["rows"])
+        conf = "; ".join(", ".join(x["confirmed_numbers"]) for x in en["rows"] if x["confirmed_numbers"]) or "none"
+        notre = "; ".join(", ".join(x["not_reread"]) for x in en["rows"] if x["not_reread"]) or "none"
+        rr.append([src_link(en["source"]), ids, e(conf), e(notre), e(en["result"]), e(en["note"])])
+    body.append(table(["Source", "Ledger rows", "Numbers found again", "Not re-read", "Result", "What the page showed"], rr, "data", "reread-t"))
+    body.append('<p class="note">Treasury: the page now also posts later daily rows. The ledger keeps the 11/10/2026 row, and a model test with the latest row leaves the ranking unchanged '
+                '(see Flagged for Review, IR-33). Check 12 below re-tests every number found again against the ledger value and the text recorded on the re-read.</p>')
     body.append('<h2 id="yourself">Check a row yourself</h2><ol class="steps"><li>Open the row and follow its official source link.</li>'
                 '<li>Open "What the source says" under the item and find that text on the page.</li>'
                 '<li>If the page now says something else, the source has changed since the access date: note it on Flagged for Review.</li></ol>')
@@ -1084,7 +1097,7 @@ def build_privacy():
         ["Owner's name, contact details, identity", "Never collected. The owner is <code>[OWNER-01]</code> throughout.", "Build stops if an e-mail address, telephone number or a known individual's name is about to be published."],
         ["Property address, parcel number, map location", "Never collected. The property is <code>[PROPERTY-01]</code>. No parcel was looked up, because the lookup itself would identify it.", "Build stops on a street-address or parcel-number pattern."],
         ["Rent, lease terms, value, loan, tax basis", "Left blank. They are listed with how to obtain them privately.", "Build stops if a blank row carries a value."],
-        ["Names of individuals in official documents", "Replaced with roles (for example, 'interim chief executive'). Company and agency names are kept.", "Names seen during research are stored only as salted hashes; the build hashes every pair of adjacent capitalised words and stops on a match."],
+        ["Names of individuals in official documents", "Replaced with the placeholder [OFFICER] in the earlier folders (2026-11-13). Company and agency names are kept.", "Names seen during research are stored only as salted hashes; the build hashes every pair of adjacent capitalised words and stops on a match."],
         ["Tracking, cookies, outside scripts or fonts", "None. The site is plain pages, one style sheet and one small script, all served from this repository.", "No address outside this site is loaded by any page."],
         ["Search within the site", "The filter boxes work in the reader's browser. Nothing typed is sent anywhere.", "The script has no network calls."],
     ]
