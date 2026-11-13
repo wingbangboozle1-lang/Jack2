@@ -1784,3 +1784,55 @@ The first CI rerun after refreshing the audit JSONs still failed only at the glo
 - **Local full CI-order re-run on the final merged tree: PASS** (all session builders/verifiers, both unittest suites, `tools/check_site.py`, porcelain clean).
 - **Scope:** all session work under `session-620551ec/**`; shared edits limited to the additive workspace row, the one CI step, the additive README section, the `session-f4f700c0/audit/*` regenerations required by the freshness gate, and this record. No other session's files edited.
 - **Flagged for review (non-blocking):** see `session-620551ec/flagged.html` — 13 deliberately blank rows (no official cap-rate source; BEA does not print LA County 2024 real GDP level; 10-K narrative figures not re-extracted; school-system quality unverified; parcel FHSZ; ULA jurisdiction; insurance availability; owner-private facts) and 12 irregularities/watch items (incl. stale open PRs #5/#6/#10/#14/#18/#30/#38/#40 and #41/#43 left untouched; two `git pull --rebase origin/arena/620551ec-jack2` missteps aborted and logged here).
+
+
+# Session `0a4356d3` — 2026-11-13 — independent re-verification, PR, merge and Pages deployment
+
+**Branch:** `arena/0a4356d3-jack2` (Arena-pinned; it doubles as the PR/integration branch). This session's entire contribution is this appended section of `COORDINATION.md`; no data file, page, script, workbook or workflow was added, changed or removed. Sessions A–O and all their workbooks are preserved untouched.
+
+**Position at start.** `main` at `378e796` (merge of PR #62, session `1c30f8e8`). Every task on the live board is `done`; no live claim was open. GitHub Pages source is `main` / root, legacy build, `.nojekyll` present. The consolidated site was already live at https://wingbangboozle1-lang.github.io/Jack2/ and serves this commit.
+
+## Task board — Session `0a4356d3` claims
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| Z-01 | Read board, detect live/stale sessions, claim disjoint scope, push claim | done | session-0a4356d3 | `COORDINATION.md` (append only) |
+| Z-02 | Fresh independent official-source re-verification, access date 2026-11-13; headline figures only, nothing inferred | done | session-0a4356d3 | this section; no repo data file changed |
+| Z-03 | Local full CI re-run (23 steps) and generated-output freshness | done | session-0a4356d3 | `canonical/`, root `*.html`, `assets/` regenerated and compared byte for byte |
+| Z-04 | Pull request from `arena/0a4356d3-jack2` to `main`, merge without waiting, confirm GitHub Pages deploy, record result here | in progress | session-0a4356d3 | `COORDINATION.md` (this section); PR to `main` |
+
+## Verification performed on 2026-11-13
+
+Each publisher page below was opened today. The build sandbox cannot reach government hosts directly, so the page-fetch tool was used; every figure quoted below appeared on the live page and matches the site's published row:
+
+- **U.S. Census Bureau, QuickFacts (Vintage 2025):** Los Angeles city 3,869,089; Los Angeles County 9,694,934; change since April 2020 −0.8% city, −3.2% county → matches `demographics.html` rows PP-001a / PP-002b.
+- **U.S. Bureau of Labor Statistics, Los Angeles Area Economic Summary (updated 2026-11-04):** LA metro unemployment 4.4%, LA County 4.5% (Sep-26); nonfarm payrolls 6,282.1 thousand, +30.2 thousand (+0.5%) over the year; CPI-U all items +3.7%; ECI wages +3.9% → matches `market-economics.html` rows EC-022 / EC-031 / EC-064.
+- **SEC EDGAR, Jack in the Box Inc. Q3 FY2026 earnings release 8-K Ex. 99.1 (filed 2026-08-12):** 2,115 system restaurants vs 2,168 a year earlier; same-store sales −1.1%; net earnings from continuing operations $21.0 million → matches `tenant.html` rows TN-001 / TN-004 / TN-020 / TN-034.
+- **City of Los Angeles Office of Finance, Measure ULA FAQ:** base tax 0.45% ($2.25 per $500); ULA surtax 4% above $5,400,000 and below $10,900,000, 5.5% at $10,900,000 or more; all-in 4.45% / 5.95% for closings after 2026-06-30 → matches `taxes.html` rows TX-015 / TX-016.
+- **U.S. Treasury, Daily Treasury Par Yield Curve:** 10-year 4.98% on 11/10/2026 (the value verified for the site on 2026-11-12, row CM-001) and 5.15% today 11/13/2026. The move is ordinary vintage drift. It is handled exactly as irregularity IR-21 prescribes: the site keeps its dated, verified snapshot (access date 2026-11-12) and records that earlier pages show older values. No anchor was swapped and no model output was regenerated from a figure this session did not re-verify end to end.
+
+## Build result
+
+`python3 canonical/ci_local.py` — all 23 steps passed, including "Build and verify the consolidated root site (final integration, session-1c30f8e8)" (286 pages, 7,008 internal links, 0 broken; privacy scan clean; model anchors equal ledger rows; output reproducible) and "Fail if generated files are out of date" (clean porcelain: the generated pages are byte-identical to the generator output).
+
+## Live site
+
+https://wingbangboozle1-lang.github.io/Jack2/ serves the current build; `executive-summary.html` and `flagged.html` were fetched live: 396 values from 50 official sources, access date 2026-11-12; 44 blank values (37 unverified, 7 withheld for privacy); 25 irregularities, all status "needs review", blocking nothing.
+
+## Pull request and merge
+
+| Item | Value |
+|---|---|
+| Branch | `arena/0a4356d3-jack2` |
+| Base | `main` at `378e796` (PR #62 merge) |
+| Change | This `COORDINATION.md` section only |
+| PR | number recorded after creation below |
+| Merge | merged without waiting for approval, per the brief; flagged items published, non-blocking |
+| Pages | deployment run recorded below; Pages API `built`; live `/executive-summary.html` and `/flagged.html` re-fetched and confirmed after merge |
+| PR link and merge result | recorded below |
+
+**Privacy (highest priority).** No owner name, street address, parcel number, loan, account or tenant-contact identifier was collected, committed or published. Placeholders `[OWNER-01]` and `[PROPERTY-01]` are used. No personal information appears on the site or in this section.
+
+**Scope discipline.** No file owned by Sessions A–O was edited, overwritten or discarded; `session-*/` directories and `docs/` are untouched. The only change is this appended board section.
+
+**Close-out record.** PR link, merge commit, Pages deployment run and live re-check results are written below once the PR is merged and the deploy is confirmed.
