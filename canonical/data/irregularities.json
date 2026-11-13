@@ -365,7 +365,7 @@
    "id": "IR-33",
    "area": "Official source",
    "title": "The 10-year Treasury yield on the access date is above the value the model holds",
-   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008). The base case holds the 10-year yield at the November 10 posted value (row CM-001), as its assumption record states. The base case therefore does not use the access-date value, and a re-run at the newer value has not been made. The table for the access date can still change before the end of the day, so the value should be read again on a later date before it is used. Update, session 020f067d (2026-11-13): a re-run in a temporary copy with the 5.15% value leaves the ranking of the six strategies unchanged; each strategy's balanced score rises by between 21 and 58 points. The base case is still the November 10 row.",
+   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008). The base case holds the 10-year yield at the November 10 posted value (row CM-001), as its assumption record states. The base case therefore does not use the access-date value, and a re-run at the newer value has not been made. The table for the access date can still change before the end of the day, so the value should be read again on a later date before it is used. Update, session 020f067d (2026-11-13): a re-run in a temporary copy with the 5.15% value leaves the ranking of the six strategies unchanged; each strategy's balanced score rises by between twenty-one and fifty-eight points. The base case is still the November 10 row.",
    "rows": [
     "CM-001",
     "CM-008"
