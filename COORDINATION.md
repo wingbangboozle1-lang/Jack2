@@ -2,7 +2,7 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-12 18:00 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
+> Last updated **2026-11-13** by session `020f067d` (branch `arena/020f067d-jack2`; PRIV-02 and REV-03 done, see its close-out below the task table). Previous update: 2026-11-12 18:00 UTC by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
@@ -124,10 +124,22 @@ Read the live board, open PRs and the live site (https://wingbangboozle1-lang.gi
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| PRIV-02 | Remove individual names from published archive pages and research text. Replace each with a role placeholder (for example `[TENANT-OFFICER-01]`). Names are public officers of the tenant from SEC filings, but the brief rules that no individual's name appears on the website. No figure changes. | in progress | session-020f067d | `session-24d6cd5f/**`, `session-3090b9ed/**`, `session-620551ec/**`, `session-7663f9db/**`, `session-b4ec6128/tenant.html`, `research/06-tenant.md`, `canonical/privacy.py` (the scan) |
-| REV-03 | Re-read the decision-critical official values on 2026-11-13 and record whether each still matches its quote (no value is changed without a new quote) | in progress | session-020f067d | `canonical/data/reconfirm_2026-11-13.json` (new), `canonical/verify.py` (reads it), `canonical/build_site.py` (publishes it on `verification.html`) |
+| PRIV-02 | Remove individual names from published archive pages and research text. Replace each with the placeholder `[OFFICER]`. Names are public officers of the tenant from SEC filings, but the brief rules that no individual's name appears on the website. No figure changes. | done (close-out below) | session-020f067d | `session-24d6cd5f/**`, `session-3090b9ed/**`, `session-620551ec/**`, `session-7663f9db/**`, `session-b4ec6128/tenant.html`, `research/06-tenant.md`, `canonical/privacy.py` (the scan) |
+| REV-03 | Re-read the decision-critical official values on 2026-11-13 and record whether each still matches its quote (no value is changed without a new quote) | done (close-out below) | session-020f067d | `canonical/data/reconfirm_2026-11-13.json` (new), `canonical/verify.py` (reads it), `canonical/build_site.py` (publishes it on `verification.html`) |
 
 These two tasks touch archived folders of earlier sessions. Those sessions are closed (their PRs are merged), so no live claim is overridden. Each archived file changes only by replacing names; the CI regeneration checks are kept green by regenerating from the same scripts. No other session's scope is edited.
+
+
+**Close-out, session `020f067d` (2026-11-13). Sources, verification, irregularities.**
+
+- **PRIV-02 (done).** Scan of every shared text file: 24 places in 17 files named an individual (public officers of the tenant, quoted from SEC filings and a research note). They were replaced with `[OFFICER]` by `canonical/redact_names.py`, which finds them with the salted hashes in `canonical/data/name_hashes.json` and never writes the names anywhere. Files: six archived workbooks (`session-24d6cd5f`, `session-3090b9ed`, `session-620551ec`, `session-7663f9db`, `session-b4ec6128/tenant.html`), `research/06-tenant.md`, and the generated outputs of the three CI-regenerated workbooks, rebuilt with their own commands (no other output difference). A rescan finds 0 remaining name hits. Three street-address patterns remain: one institutional address (the school district's office, public, in `research/04-education.md`) and two false matches of the pattern. Nothing else was changed in those folders. Recorded as IR-32.
+- **REV-03 (done).** Nine official pages were opened again on 2026-11-13 (with the web reader, not the build sandbox): U.S. Treasury daily par yield curve (November 2026); City of Los Angeles Office of Finance, Measure ULA FAQ; U.S. Census QuickFacts, Los Angeles city and county; Federal Reserve, Open Market Operations (2026 table); SEC, Jack in the Box Q3 fiscal 2026 release (Exhibit 99.1); SEC, NNN REIT Q3 2026 release (Exhibit 99.1); USGS Fact Sheet 2015-3009 (UCERF3, Table 1); California EDD, Los Angeles County employment release (September 2026); California Department of Finance, K-12 enrollment projections, 2026 Series. Eleven ledger rows; **12 numbers** found again in the text on the page, **2 numbers** listed as not re-read (`EC-064` 2.1% share; `PJ-075` 19.4%, whose spreadsheet operands were not re-opened). The record is `canonical/data/reconfirm_2026-11-13.json` (quoted text per page). No ledger value was changed.
+- **Treasury currency (IR-33).** The same page now posts later daily rows (11/12 and 11/13/2026). The ledger keeps the 11/10/2026 row, because the model anchors to it. A temporary-copy model run with the latest row leaves the strategy ranking unchanged; each balanced score rises by 21 to 58 points. Owner decision: whether to move the anchor.
+- **Computed school figure (IR-34).** `PJ-075` (-19.4%) rests on two spreadsheet values not re-opened today. The page's stated drop (240,800 students) agrees to rounding.
+- **Verification performed.** `canonical/verify.py` now runs **12 checks** (check 12 re-tests every re-read number against the ledger value and the recorded text; 12 of 12 pass). 15 model unit tests pass. The full 23-step workflow, run locally with `canonical/ci_local.py` from the committed state, passes, and no generated file is out of date.
+- **Not verified in this session.** The other 41 of the 50 sources were not re-read today (their values still carry the 2026-11-12 access date). The archived workbooks' sentences were not re-checked. The `PJ-075` operands and the `CM-001` anchor decision are open (IR-33, IR-34).
+- **Privacy, still open (owner decision).** The personal e-mail address in the author field of earlier commits is still in the repository's history; removing it needs a history rewrite, which this session did not do.
+- **Scope kept.** Other sessions' folders were edited only to replace names (listed above). No other session claimed these files; their pull requests are merged.
 
 <!-- LIVE-BOARD:END -->
 
