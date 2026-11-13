@@ -2,8 +2,21 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-12 18:00 UTC** by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
+> Last updated **2026-11-13 21:55 UTC** by session `ce7c7bf1` (branch `arena/ce7c7bf1-jack2`; fresh audit and deployment-readiness pass claimed; work in progress).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
+
+### Session `ce7c7bf1` — CURRENT-SESSION CLAIM — claimed 2026-11-13 21:55 UTC
+
+**Branch constraint.** Arena pins this session to `arena/ce7c7bf1-jack2`. This session will work only on that branch and will not create, switch to, or push another branch. The prior consolidated site is recorded as live after PR #62. The board shows no other currently active task; the older PR #50 is listed as open in the historical record and will not be altered.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| CE-01 | Read the live task board, inspect the baseline and claim a non-overlapping fresh audit | in progress | `ce7c7bf1` | `COORDINATION.md` |
+| CE-02 | Re-audit the published site, requirements coverage, source links, privacy safeguards, decision-readiness claims and flagged items; check official sources before changing any facts | in progress | `ce7c7bf1` | `canonical/**`, generated root `*.html`, `assets/**`; no `session-*/` or `docs/` files |
+| CE-03 | Correct only verified defects or add clearly labeled missing-information/irregularity findings; rebuild and run the complete verifier | pending | `ce7c7bf1` | `canonical/**`, generated root `*.html`, `assets/**` |
+| CE-04 | Final branch integration, PR to `main`, merge without waiting for review, confirm Pages, and record sources/checks/irregularities/deployment | pending | `ce7c7bf1` | `COORDINATION.md`, `README.md`, `canonical/data/deployment.json`, plus generated audit artifacts required by repository CI |
+
+**Scope discipline.** The prior integration and all completed workspaces will be preserved. Only root consolidated-site files and `canonical/**` may be changed for the audit; historical `session-*/` and `docs/` workbooks remain untouched. This is a fresh review of the delivered brief, not a claim that external research has already been repeated.
 
 ### Session `1c30f8e8` — FINAL INTEGRATION (takeover of a stale claim) — claimed 2026-11-12 16:40 UTC
 
