@@ -2,7 +2,7 @@
 
 <!-- LIVE-BOARD:START (maintained by the final integration session; history below is preserved verbatim) -->
 > ## READ THIS FIRST — live board
-> Last updated **2026-11-13 22:35 UTC** by session `568ae793` (branch `arena/568ae793-jack2`; privacy-reviewed Pages artifact integration in progress).
+> Last updated **2026-11-13 22:40 UTC** by session `568ae793` (branch `arena/568ae793-jack2`; privacy-reviewed Pages artifact integration in progress).
 > Previous update **2026-11-13** by session `020f067d` (branch `arena/020f067d-jack2`; PRIV-02 and REV-03 done, see its close-out below the task table). Previous update: 2026-11-12 18:00 UTC by session `1c30f8e8` (branch `arena/1c30f8e8-jack2`; PR #49, #60 and #61 merged; the consolidated site is live and every task of this session is done).
 > Previous update **2026-11-13** by session `575eebba` (branch `arena/575eebba-jack2`; PR #67 merged; the consolidated site is live and every task of this session is done).
 > Everything below the line "Historical record" is the append-only history of earlier sessions and is kept verbatim.
@@ -194,6 +194,8 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
 | PP-01 | Build and verify an allowlisted GitHub Pages artifact; deploy only after successful `verify` on `main`; confirm live paths | in progress | session-568ae793 | `.github/workflows/pages.yml`, `.github/workflows/verify.yml` (additive step), `canonical/publish.py`, `COORDINATION.md`; generated audit refresh only by its existing generator if required |
+
+**Verification on latest main (2026-11-13).** After rebasing over PR #65/#72 and refreshing generated outputs with their existing generators, `RUNNER_TEMP="$(mktemp -d)" python3 canonical/ci_local.py` passed all 24 steps: 12/12 consolidated-site checks, 15 model tests, the repository-wide privacy check (0 matches), and PP-01's artifact gate. `canonical/publish.py --out <temporary-directory>` passed on 27 allowlisted files (23 HTML pages, including the archive and 404 notices); no historical-session directories, source-repository links, or `github.io` links were present; evidence/model rows cite HTTPS `.gov` sources; local links and fragments resolve; artifact privacy scan is clean. Both workflows parse as YAML and seven link-policy regression cases pass. Pages API still reports `build_type=legacy` and source `main:/`; the Pages workflow changes it to `workflow` only after successful main verification. **Harness irregularity:** an initial local replay without `RUNNER_TEMP` failed at step 19 with `Permission denied: /published-site`; rerunning with a temporary directory passed, so no code change was needed.
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
