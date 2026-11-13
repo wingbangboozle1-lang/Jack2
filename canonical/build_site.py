@@ -1101,7 +1101,7 @@ def build_privacy():
         ["Owner's name, contact details, identity", "Never collected. The owner is <code>[OWNER-01]</code> throughout.", "Build stops if an e-mail address, telephone number or a known individual's name is about to be published."],
         ["Property address, parcel number, map location", "Never collected. The property is <code>[PROPERTY-01]</code>. No parcel was looked up, because the lookup itself would identify it.", "Build stops on a street-address or parcel-number pattern."],
         ["Rent, lease terms, value, loan, tax basis", "Left blank. They are listed with how to obtain them privately.", "Build stops if a blank row carries a value."],
-        ["Names of individuals in official documents", "Replaced with the placeholder [OFFICER] in the earlier folders (2026-11-13). Company and agency names are kept.", "Names seen during research are stored only as salted hashes; the build hashes every pair of adjacent capitalised words and stops on a match."],
+        ["Names of individuals in official documents", "Replaced with a placeholder ([OFFICER] or [name withheld], 2026-11-13) in the earlier folders. Company and agency names are kept.", "Names seen during research are stored only as salted hashes; the build hashes every pair of adjacent capitalised words and stops on a match."],
         ["Tracking, cookies, outside scripts or fonts", "None. The site is plain pages, one style sheet and one small script, all served from this repository.", "No address outside this site is loaded by any page."],
         ["Search within the site", "The filter boxes work in the reader's browser. Nothing typed is sent anywhere.", "The script has no network calls."],
     ]
