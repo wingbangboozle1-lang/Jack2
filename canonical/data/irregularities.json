@@ -365,7 +365,7 @@
    "id": "IR-33",
    "area": "Official source",
    "title": "The 10-year Treasury yield on the access date was a different value in an earlier base case",
-   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008; the same value is now the model anchor, row CM-001, as changed on the access date by session 575eebba). The previous base case used the November 10, 2026 posted value of 4.98%. The model was re-run in a temporary copy at the 5.15% value and the earlier 4.98% value: the ranking of the six strategies is unchanged, and each strategy's balanced score moves by between twenty-one and fifty-eight points. The 5.15% value is the access-date value and can still change before the end of the day, so it should be read again on a later date before it is relied on. The choice of anchor date is an owner decision and remains open.",
+   "detail": "The official daily Treasury table shows the 10-year yield for November 13, 2026 at 5.15% (row CM-008; the same value is now the model anchor, row CM-001, as changed on the access date by a later session's merged update). The previous base case used the November 10, 2026 posted value of 4.98%. The model was re-run in a temporary copy at the 5.15% value and the earlier 4.98% value: the ranking of the six strategies is unchanged, and each strategy's balanced score moves by between twenty-one and fifty-eight points. The 5.15% value is the access-date value and can still change before the end of the day, so it should be read again on a later date before it is relied on. The choice of anchor date is an owner decision and remains open.",
    "rows": [
     "CM-001",
     "CM-008"
@@ -385,11 +385,28 @@
   },
   {
    "id": "IR-34",
+   "area": "Official source",
    "title": "A computed school-enrollment change rests on spreadsheet values not re-read on the re-read date",
    "detail": "The -19.4% in this row is calculated from two values in the Department of Finance spreadsheet. The page states the fall as a count of students, and that count agrees with the two values to rounding. The spreadsheet itself was not re-opened in the latest re-read, so the percentage is listed as not re-confirmed today.",
    "rows": [
     "PJ-075"
-   ]
+   ],
+   "links": [
+    [
+     "Department of Finance, public K-12 graded enrollment, 2026 Series",
+     "https://dof.ca.gov/forecasting/demographics/public-k-12-graded-enrollment/"
+    ],
+    [
+     "Linked spreadsheet, Los Angeles rows (2026 Series)",
+     "https://dof.ca.gov/media/docs/forecasting/Demographics/public-k-12-graded-enrollment/CA_K-12_Enrollment_Series-2026.xlsx"
+    ],
+    [
+     "Source record in this repository",
+     "sources.html"
+    ]
+   ],
+   "action": "Re-open the linked spreadsheet and confirm the two operands 1,002,045 and 1,242,816 for Los Angeles County before the percentage is relied on.",
+   "status": "needs review"
   }
  ]
 }
