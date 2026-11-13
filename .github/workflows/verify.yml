@@ -147,6 +147,10 @@ jobs:
             exit 1
           fi
 
+      - name: Assemble and verify the exact privacy-reviewed Pages artifact
+        run: |
+          python3 canonical/publish.py --out "$RUNNER_TEMP/published-site"
+
       - name: Fail if generated files are out of date
         run: |
           if [ -n "$(git status --porcelain)" ]; then
