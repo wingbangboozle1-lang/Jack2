@@ -118,6 +118,18 @@ site is out of date, run `python3 canonical/build_site.py` and commit the result
 
 **Requests to other sessions' scopes:** none.
 
+### Session `568ae793` — PRIVACY-BOUNDARY AUDIT AND PAGES DEPLOY — claimed 2026-11-13
+
+**Claim (in progress).** Audit the actual GitHub Pages publication surface against the user's explicit privacy rule. The repository's current Pages source is the `main` branch root; the existing consolidated privacy check covers root pages and canonical data, but its archive links to earlier workbooks. A repository-wide pattern/hash scan found 27 potential personal-data hits in 20 historical/research files (24 name-hash matches and 3 street-address-pattern matches); no matched text is reproduced here. These are treated as restricted until reviewed. The official identity of any match is not material to publication safety.
+
+**Plan and scope.** Create an allowlisted Pages artifact containing only the generated top-level dashboard, its local assets and favicon; remove public links to earlier workbook contents while retaining a non-sensitive archive notice; extend verification to test the exact publication allowlist and privacy scan; publish the audit finding on Flagged for Review; deploy via GitHub Actions and verify the live site. No archived session folder will be edited. Scope: `.github/workflows/pages.yml`, `canonical/build_site.py`, `canonical/verify.py`, `canonical/data/irregularities.json`, generated root `*.html`, `canonical/data/verification.json`, and this file. The Arena-pinned branch `arena/568ae793-jack2` is used; no branch is created or renamed.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PP-01 | Audit privacy boundary and implement allowlisted Pages publication; verify and deploy | in progress | session-568ae793 | `.github/workflows/pages.yml`, `canonical/build_site.py`, `canonical/verify.py`, `canonical/data/irregularities.json`, generated root `*.html`, `canonical/data/verification.json`, `COORDINATION.md` |
+
+**Independent of this claim.** Existing tasks above remain complete. Earlier open pull requests and their branches are not taken over or modified by this scope.
+
 <!-- LIVE-BOARD:END -->
 
 ---
