@@ -1836,3 +1836,27 @@ https://wingbangboozle1-lang.github.io/Jack2/ serves the current build; `executi
 **Scope discipline.** No file owned by Sessions A–O was edited, overwritten or discarded; `session-*/` directories and `docs/` are untouched. The only change is this appended board section.
 
 **Close-out record.** PR link, merge commit, Pages deployment run and live re-check results are written below once the PR is merged and the deploy is confirmed.
+---
+
+## Session `a0a052a8` — claim, 2026-11-13 (branch `arena/a0a052a8-jack2`, base `378e796`)
+
+Read the live board and the tree before claiming. No open claim from any session is newer than 60 minutes; the last claims were closed by PR #62 on 2026-11-12. Baseline on this branch: `canonical/` model, review, verifier (11 of 11 PASS), unit tests (15 OK) and the 23-step CI replay all pass before any change.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| A-01 | Board claim, baseline re-run, record of this session | done | session-a0a052a8 | `COORDINATION.md` (append only) |
+| A-02 | Privacy remediation: individual names still present in published or tracked files (one private franchisee principal, company officers) replaced with `[name withheld]`; company names and officer roles kept | done | session-a0a052a8 | `research/06-tenant.md`, `session-24d6cd5f/{data/metrics.json,data/risks.json,property-lease.html,risks.html}`, `session-3090b9ed/{data.html,data/metrics.json}`, `session-620551ec/{data/metrics.json,data/sources.json,market-economics.html,sources.html}`, `session-7663f9db/{data/metrics.json,data/sources.json,market.html,sources.html,scripts/build_site.py}`, `session-b4ec6128/tenant.html` |
+| A-03 | Live re-check of a sample of official-source values (access date 2026-11-13); results recorded, nothing changed unless the official page disagrees | done (one irregularity, IR-33) | session-a0a052a8 | `canonical/data/sources.json` (only if a discrepancy is found) |
+| A-04 | Integration: regenerate, full CI replay, PR to `main`, merge, Pages deploy confirmation, record here | in progress | session-a0a052a8 | generated outputs, `COORDINATION.md` |
+
+### Session `a0a052a8` — close-out record (2026-11-13)
+
+- **A-02 privacy remediation.** A hash-based scan found individual names in tracked files: one private principal of a franchisee that bought restaurants from the tenant, and company officers. Each was replaced with `[name withheld]` or `[principal name withheld]` in `research/06-tenant.md`, `session-24d6cd5f/`, `session-3090b9ed/`, `session-620551ec/`, `session-7663f9db/` (including its `scripts/build_site.py`) and `session-b4ec6128/tenant.html`. Company names, officer roles and dates are kept. A re-scan returns zero individual names, zero e-mail addresses, zero telephone numbers and zero parcel numbers. Irregularity IR-32 updated to match.
+- **A-03 live spot-check (2026-11-13), official sources read today:**
+  - U.S. Census Bureau QuickFacts (`S-CENSUS`): city population 3,869,089 and county 9,694,934 (V2025); 2020 Census 3,898,747 — all match the page.
+  - U.S. Treasury daily par yield curve (`S-TSY`): 10-year on 2026-11-10 = 4.98% (matches row CM-001). The page also posts 2026-11-13 = 5.15%, which is now row CM-008. The base case still holds 4.98% (its assumption says "latest posted date" as of 11-12); not re-run — **IR-33 flagged** for reviewer decision.
+  - SEC EX-99.1, Jack in the Box Q3 FY2026 release, 12 Aug 2026 (`S-JACK-8K`): same-store sales (1.1%), restaurant-level margin $17.0M / 17.6%, franchise-level margin $60.3M / 37.4%, 2,115 restaurants at end of Q3 — all match.
+  - Not re-read today: the remaining 47 sources (the full re-read is the job of the next verification pass; their rows stay as they were verified on 2026-11-12).
+- **Verification performed.** `canonical/model.py`, `review_repo.py`, `verify.py` (11 of 11 PASS), unit tests (15 OK), and the full 23-step CI replay (`canonical/ci_local.py`) on the final tree.
+- **Irregularities added:** IR-33 (stale 10-year input; flagged, not changed). IR-32 updated (names now withheld).
+- **Scope not touched:** no model change, no new analysis, no change to the root site's decision rows.

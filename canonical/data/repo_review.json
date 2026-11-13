@@ -3,10 +3,10 @@
  "totals": {
   "workspaces": 29,
   "files": 523,
-  "lines": 91529,
+  "lines": 91553,
   "pages": 264,
-  "name_hits": 23,
-  "name_workbooks": 6,
+  "name_hits": 0,
+  "name_workbooks": 0,
   "address_hits": 3,
   "other_hits": 0
  },
@@ -14,7 +14,7 @@
   {
    "workspace": "(repository root files)",
    "files": 3,
-   "lines": 2309,
+   "lines": 2333,
    "pages": 0,
    "links": 78,
    "official_links": 7,
@@ -93,7 +93,7 @@
     "street address": 1,
     "parcel number": 0,
     "social security number": 0,
-    "name of an individual": 1
+    "name of an individual": 0
    }
   },
   {
@@ -161,7 +161,7 @@
     "street address": 0,
     "parcel number": 0,
     "social security number": 0,
-    "name of an individual": 6
+    "name of an individual": 0
    }
   },
   {
@@ -178,7 +178,7 @@
     "street address": 0,
     "parcel number": 0,
     "social security number": 0,
-    "name of an individual": 2
+    "name of an individual": 0
    }
   },
   {
@@ -280,7 +280,7 @@
     "street address": 0,
     "parcel number": 0,
     "social security number": 0,
-    "name of an individual": 6
+    "name of an individual": 0
    }
   },
   {
@@ -365,7 +365,7 @@
     "street address": 0,
     "parcel number": 0,
     "social security number": 0,
-    "name of an individual": 7
+    "name of an individual": 0
    }
   },
   {
@@ -416,7 +416,7 @@
     "street address": 0,
     "parcel number": 0,
     "social security number": 0,
-    "name of an individual": 1
+    "name of an individual": 0
    }
   },
   {
