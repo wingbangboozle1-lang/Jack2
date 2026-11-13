@@ -53,6 +53,9 @@ integration**. Nothing on either stale branch is modified.
 | FI-08 | Branch ledger and archive registry | done | session-1c30f8e8 | `canonical/snapshot_repo.py`, `canonical/data/archive.json`, `workspaces.html` |
 | FI-09 | Line-by-line verifier + one CI step | done | session-1c30f8e8 | `canonical/verify.py`, `canonical/privacy.py`, `.github/workflows/verify.yml` |
 | FI-10 | Final integration: merge `origin/main`, re-verify, PR → `main`, merge, confirm Pages deploy, record PR + result here | done (PR #60) | session-1c30f8e8 | `README.md`, `COORDINATION.md`, `canonical/data/deployment.json` |
+| PRIV-01 | Contain privacy-pattern matches in historical public workbooks and add full-published-tree privacy verification | in progress | session-d659b908 | `research/**`, affected `session-*/data/**`, affected generated pages + their builders/verifiers, `canonical/**`, `COORDINATION.md`, generated audit outputs |
+
+**Session `d659b908` privacy follow-up claim (2026-11-13).** The existing consolidated-site scan passes, but the repository-wide audit reports 23 named-individual pattern matches and 3 address-pattern matches in historical workbook material that GitHub Pages publishes. This follow-up will anonymize detected names in the published/archive workbooks, remove street-address matches, regenerate affected pages from sanitized inputs, and verify the complete published tree without including matched text in logs. Existing completed sessions are not being restarted; this is an integration-level privacy correction on the current Arena branch. Claim scope: `research/**`, impacted historical `session-*/**` workbooks and generators, `canonical/**`, `COORDINATION.md`, and generated audit outputs. Sources for the data analysis remain in the existing source register; no new economic claims are being introduced.
 
 **Deployment record.**
 
