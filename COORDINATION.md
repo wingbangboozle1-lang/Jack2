@@ -1860,3 +1860,11 @@ Read the live board and the tree before claiming. No open claim from any session
 - **Verification performed.** `canonical/model.py`, `review_repo.py`, `verify.py` (11 of 11 PASS), unit tests (15 OK), and the full 23-step CI replay (`canonical/ci_local.py`) on the final tree.
 - **Irregularities added:** IR-33 (stale 10-year input; flagged, not changed). IR-32 updated (names now withheld).
 - **Scope not touched:** no model change, no new analysis, no change to the root site's decision rows.
+
+### Session `a0a052a8` — deployment record (2026-11-13)
+
+- **PR:** [#64](https://github.com/wingbangboozle1-lang/Jack2/pull/64) — merged to `main` as `2ecf3aa` (merge commit) at 2026-11-13T22:05:28Z. Head before merge `7b9c692`; PR-head `verify` run `43516217904` **success**.
+- **Main CI:** `verify` **success** on `2ecf3aa`.
+- **GitHub Pages:** latest build `2ecf3aa`, status **built** (Pages API, 2026-11-13T22:05:29Z). Live `flagged.html` fetched and confirmed: 26 irregularities (IR-33 present), 44 blank values.
+- **Conflicts and history.** `origin/main` moved to `d1da12b` (PR #63, session `0a4356d3`) while this session worked. The rebase conflicted in `COORDINATION.md` (both appended entries kept) and in regenerated audit outputs (main's copy taken, then regenerated on the merged tree). Because the PR had been opened earlier against the claim commit alone, the branch was updated with a lease-protected force push (`755f6d3` → `7b9c692`). Only this session's own branch was rewritten; no other session's history was changed.
+- **Follow-up:** PR for this record only (`COORDINATION.md` plus the regenerated F4 audit outputs).
