@@ -1949,3 +1949,16 @@ Read the live board and the tree before claiming. No open claim from any session
 - **GitHub Pages:** latest build `2ecf3aa`, status **built** (Pages API, 2026-11-13T22:05:29Z). Live `flagged.html` fetched and confirmed: 26 irregularities (IR-33 present), 44 blank values.
 - **Conflicts and history.** `origin/main` moved to `d1da12b` (PR #63, session `0a4356d3`) while this session worked. The rebase conflicted in `COORDINATION.md` (both appended entries kept) and in regenerated audit outputs (main's copy taken, then regenerated on the merged tree). Because the PR had been opened earlier against the claim commit alone, the branch was updated with a lease-protected force push (`755f6d3` → `7b9c692`). Only this session's own branch was rewritten; no other session's history was changed.
 - **Follow-up:** PR for this record only (`COORDINATION.md` plus the regenerated F4 audit outputs).
+
+---
+
+## Session `90196f64` — local CI harness temporary-directory fix (2026-11-15)
+
+Read the live task board and inspected the current tree before claiming. The privacy-reviewed Pages artifact integration (PP-01, session `568ae793`) is already merged in PR #73; its artifact allowlist and Pages workflows are not modified here. This task is limited to the local workflow replay harness, which failed when run without the GitHub Actions-provided `RUNNER_TEMP` environment variable (`Permission denied: /published-site`). The prior board records this as a harness irregularity and confirms that setting `RUNNER_TEMP` manually made the 24-step replay pass.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| LCH-01 | Claim an isolated scope and make `canonical/ci_local.py` provide a safe temporary `RUNNER_TEMP` when absent; preserve caller-provided values | in progress | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py` only; coordination log in this file |
+| LCH-02 | Verify both default and caller-provided temporary-directory paths, then record full CI outcome and any irregularities | in progress | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py`, verification notes in this file |
+
+No site data, source claim, generated page, or official-source result is changed by this claim. No personal, parcel, lease, or owner financial information is collected or included. The fixed Arena branch `arena/90196f64-jack2` is used; no branch switch or additional branch is made.
