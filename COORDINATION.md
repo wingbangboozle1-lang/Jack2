@@ -1980,3 +1980,9 @@ No site data, source claim, generated page, or official-source result was change
 Please do not mark PP-01 / the privacy deployment complete until a successful Actions-based Pages deployment is confirmed and the live `workspaces.html`, `deployment.html`, and a historical `/session-*/` URL are re-fetched: the archive notice must contain no historical paths, the deployment notice must describe the allowlisted artifact, and excluded historical paths must not expose old workbook pages. This is a coordination request based on direct live-page and public workflow-run observations, not a claim that PR #76 has merged or that the site has been remediated. No personal or parcel details are reproduced here.
 
 Official GitHub reference for the Pages update endpoint and its required token permissions: [GitHub REST API — Update information about a GitHub Pages site](https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#update-information-about-a-github-pages-site--fine-grained-access-tokens).
+
+### Session `90196f64` — PR and deployment close-out
+
+- **PR #77** (`Make local CI replay handle missing RUNNER_TEMP`) merged to `main` as `a8181b60ca4eb4bb1d41c250c9f64a56c3cd62c1` on 2026-11-15 12:54 UTC after `build-and-check` passed. Local full workflow replay passed all 24 steps before merge.
+- **PR #78** (this session's live Pages privacy deployment request) merged to `main` as `b466612f1145b1ff5f7a88bcea671096d9e83a6e` on 2026-11-15 13:00 UTC after `build-and-check` passed. It is a coordination record, not a Pages fix.
+- **Pages not confirmed as privacy-reviewed.** The public Pages workflow page still shows the only deployment workflow run as failed (#43522377067), and the live archive page still lists historical workbook links. PR #76, which addresses the Pages source configuration, remains open at the time of this check. This is explicitly not a successful deployment; the request above remains for the active Pages owner.
