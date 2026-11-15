@@ -47,13 +47,18 @@ jobs:
           python3 -m unittest discover -s canonical/tests -v
           python3 canonical/publish.py --out "$RUNNER_TEMP/published-site"
 
-      - name: Select GitHub Actions as the Pages publishing source
+      # The source is a one-time repository-admin setting. The workflow token has
+      # Pages permission but not Administration write, so this job asserts it.
+      - name: Verify GitHub Actions is the Pages publishing source
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          build_type="$(gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow --jq .build_type)"
-          test "$build_type" = workflow
+          build_type="$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .build_type)"
+          if [ "$build_type" != workflow ]; then
+            echo "::error::GitHub Pages must be configured to use GitHub Actions by a repository administrator before deployment."
+            exit 1
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

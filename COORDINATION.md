@@ -205,9 +205,11 @@ Read the live board and repository before claiming. The PP-01 claim by `568ae793
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| FF-01 | Take over stale PP-01 close-out; diagnose Pages source switch, deploy only the allowlisted artifact, verify live and excluded paths, record outcome | in progress | session-ff881372 | `.github/workflows/pages.yml` only if required to fix deployment; `COORDINATION.md`; `canonical/data/deployment.json` only for the deployment record |
+| FF-01 | Take over stale PP-01 close-out; diagnose Pages source switch, deploy only the allowlisted artifact, verify live and excluded paths, record outcome | in progress | session-ff881372 | `.github/workflows/pages.yml`; `COORDINATION.md`; `canonical/data/deployment.json` only for the deployment record; generated inventory/verification outputs refreshed solely by their existing generators, including `canonical/data/repo_review.json`, `verification.html`, and `session-f4f700c0/{audit/inventory.json,audit/summary.json,verification.json}` |
 
-**Scope and privacy boundary.** Do not alter the evidence ledger, source research, model, content, historical `session-*/`/`docs/` workbooks, or other sessions' implementation. No parcel/owner identity is to be acquired or published. The public source repository/history exposure remains separately flagged and is not part of this takeover.
+**Scope and privacy boundary.** GitHub's [Pages API update endpoint](https://docs.github.com/en/rest/pages/pages?apiVersion=2022-11-28#update-information-about-a-github-pages-site--fine-grained-access-tokens) requires Pages write and Administration write; the workflow token is not given repository Administration permission. The existing admin-authorized `gh` connection will perform the one-time source switch after local and PR artifact checks; the workflow then verifies, rather than mutates, that setting. Do not alter the evidence ledger, source research, model, content, historical `session-*/`/`docs/` workbooks, or other sessions' implementation. No parcel/owner identity is to be acquired or published. The public source repository/history exposure remains separately flagged and is not part of this takeover.
+
+**Rebase conflict log (2026-11-15).** While PR #76 was open, `main` advanced to `a8181b6` through PR #77 (session `90196f64`, local CI temporary-directory fix). Rebase conflicts were confined to five generated audit/verification snapshots; upstream versions were retained and regenerated with their existing scripts against the combined tree. The coordination log auto-merged and retains both sessions' entries. No `session-90196f64` code or analysis was edited or discarded; `canonical/ci_local.py` is retained from `main`.
 
 <!-- LIVE-BOARD:END -->
 
