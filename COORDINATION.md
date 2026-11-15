@@ -199,6 +199,16 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `ff881372` — PP-01 post-merge deployment recovery — claimed 2026-11-15
+
+Read the live board and repository before claiming. The PP-01 claim by `568ae793` is stale by more than 60 minutes and its PR #73 merged on 2026-11-13, so this session takes over **only the unfinished post-merge deployment verification/close-out**; the merged publisher and its implementation are not duplicated. The Pages API currently reports `build_type=legacy`, and the new deploy workflow run `43522377067` failed at “Select GitHub Actions as the Pages publishing source” after its local artifact checks succeeded.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| FF-01 | Take over stale PP-01 close-out; diagnose Pages source switch, deploy only the allowlisted artifact, verify live and excluded paths, record outcome | in progress | session-ff881372 | `.github/workflows/pages.yml` only if required to fix deployment; `COORDINATION.md`; `canonical/data/deployment.json` only for the deployment record |
+
+**Scope and privacy boundary.** Do not alter the evidence ledger, source research, model, content, historical `session-*/`/`docs/` workbooks, or other sessions' implementation. No parcel/owner identity is to be acquired or published. The public source repository/history exposure remains separately flagged and is not part of this takeover.
+
 <!-- LIVE-BOARD:END -->
 
 ---
