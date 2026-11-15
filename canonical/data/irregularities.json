@@ -409,10 +409,52 @@
    "status": "needs review"
   },
   {
-   "id": "IR-40",
+   "id": "IR-35",
    "area": "Privacy",
-   "title": "The public Pages source is still the whole repository, and this session could not change it",
-   "detail": "On 2026-11-15 this session's credential was refused a change of the Pages build type (HTTP 403, Resource not accessible by integration), so the site is still served from the main branch as a whole. The privacy artifact workflow stays blocked until the repository owner sets Settings, Pages, Source to GitHub Actions. Until then, folders such as session-* remain reachable at their web addresses.",
+   "title": "The privacy-reviewed Pages deployment is not live; the whole repository is still served",
+   "detail": "Pages is still set to publish the repository root of the main branch (build type 'legacy'). The allowlisted artifact built by canonical/publish.py is not served, so the archive and deployment notices, and the exclusion of historical folders, do not yet apply on the public site. The deploy workflow fails by design until the repository owner sets the Pages source to GitHub Actions. Checked on 2026-11-15 through the Pages API and the workflow run history. This is a repository setting that the automation token cannot change.",
+   "rows": [],
+   "links": [
+    [
+     "GitHub Docs: configuring a publishing source (Settings > Pages > Source: GitHub Actions; Pages sites are public even in a private repository)",
+     "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+    ],
+    [
+     "Pages deploy workflow runs",
+     "https://github.com/wingbangboozle1-lang/Jack2/actions/workflows/pages.yml"
+    ],
+    [
+     "Coordination record of the blocked change (session f652211c)",
+     "COORDINATION.md"
+    ]
+   ],
+   "action": "Repository owner: Settings > Pages > Source: GitHub Actions, then re-run the latest 'deploy privacy-reviewed Pages artifact' run. Afterwards re-fetch workspaces.html, deployment.html and one /session-*/ URL on the live site and confirm the historical paths are gone. Decide separately whether the repository itself should stay public (IR-31, SG-17).",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-36",
+   "area": "Decision framing",
+   "title": "A model order was labelled as a rank and a 'best' result, which reads as a winner",
+   "detail": "The six-strategy table was headed 'Rank', the executive summary had a row 'Best balance of the two', and a decision-rule line said a cash sale 'ranks last even before tax'. The order comes from the projection model under analyst settings (rows labelled ASSUMPTION in canonical/data/assumptions.json) and from lease and owner inputs that are blank. The brief asks that no winner be selected before verified inputs exist. Changed on 2026-11-15 by session ebedfe13: the header now reads 'Model order', the labels now say 'not a recommendation', the caption states that the order selects no winner, and the decision-rule sentence states that it rests on analyst assumptions. The numbers are unchanged.",
+   "rows": [],
+   "links": [
+    [
+     "Model settings and which are assumptions",
+     "projection-model.html#settings"
+    ],
+    [
+     "Executive summary (decision rule)",
+     "executive-summary.html"
+    ]
+   ],
+   "action": "Owner to confirm the new wording. Once the lease and the owner's inputs are verified, re-run the model and decide whether any ordering can be stated.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-37",
+   "area": "Privacy",
+   "title": "The Pages source change was refused again for this session's credential (see IR-35)",
+   "detail": "On 2026-11-15 this session again asked GitHub to set the Pages build type to the workflow source and was refused (HTTP 403, Resource not accessible by integration). This repeats IR-35: the public site is still the whole repository, and the owner must set Settings, Pages, Source, GitHub Actions.",
    "rows": [],
    "links": [
     [
@@ -432,7 +474,7 @@
    "status": "needs review"
   },
   {
-   "id": "IR-41",
+   "id": "IR-38",
    "area": "Official source",
    "title": "The tax rates in the ledger are 2025 figures, and the IRS page read on 2026-11-15 still gives 2025 thresholds",
    "detail": "The federal rate rows are for tax years beginning in 2025, and the California rows are for the 2025 schedules. The IRS capital-gains topic page, read on 2026-11-15, still states 2025 thresholds. The calculator uses the rates only, but the owner's bracket for 2026 and later must be checked against the schedules for that year before it is entered.",
@@ -454,15 +496,22 @@
    "status": "needs review"
   },
   {
-   "id": "IR-42",
+   "id": "IR-39",
    "area": "Calculator",
-   "title": "The browser calculator leaves out several tax rules, so its result is only arithmetic on the inputs",
-   "detail": "The calculator does not model depreciation deductions during the hold, the limit on deducting capital losses, loss carryovers, state rules other than the rate entered, or the timing of tax payments. It assumes rent is received at the end of each year and that the end-of-term sale is taxed at the same rates as a sale now. The investment income tax is applied to the whole gain or rent, whereas the IRS rule applies it to the lesser of net investment income or the excess over the threshold; the page can therefore overstate it near the threshold. A winner is shown only after every input is entered and the check box is ticked. The result is not advice.",
-   "rows": [],
+   "title": "The browser calculator leaves out several tax rules, and applies the investment income tax to the whole gain or rent",
+   "detail": "The calculator does not model depreciation deductions during the hold, the limit on deducting capital losses, loss carryovers, state rules other than the rate entered, or the timing of tax payments. It assumes rent is received at the end of each year and that the end-of-term sale is taxed at the same rates as a sale now. The IRS rule applies the 3.8% investment income tax to the lesser of net investment income or the excess over the threshold, whereas the page applies it to the whole gain or rent; it can therefore overstate the tax near the threshold. A winner is shown only after every input is entered and the check box is ticked. The result is not advice.",
+   "rows": [
+    "TX-043",
+    "TX-044"
+   ],
    "links": [
     [
      "Calculator page",
      "calculator.html"
+    ],
+    [
+     "IRS Topic 559, net investment income tax",
+     "https://www.irs.gov/taxtopics/tc559"
     ],
     [
      "Progress board, gate G4",
@@ -473,7 +522,7 @@
    "status": "needs review"
   },
   {
-   "id": "IR-43",
+   "id": "IR-40",
    "area": "Blocked inputs",
    "title": "Five brief items and gates G1 to G5 cannot be closed from public sources",
    "detail": "The trade-area, neighbourhood, tract, parcel hazard and short-lease quote items need the parcel's location or a private quote. Gates G1 to G5 need the lease, the tenant's answer, broker opinions, the owner's tax position and the parcel checks. Each is shown as blocked or open on the progress board. None has been estimated.",

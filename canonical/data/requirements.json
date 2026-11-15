@@ -81,8 +81,8 @@
    "id": "RQ-12",
    "requirement": "Privacy first: no personal information, placeholders only",
    "where": "privacy.html",
-   "status": "Done",
-   "note": "Enforced by the build: the site fails to build if a personal identifier pattern appears."
+   "status": "Done in the repository; not yet on the live site",
+   "note": "The build scans every published file and fails on a personal identifier pattern (0 matches). The live GitHub Pages site still publishes the whole repository (source main:/), so historical pages remain reachable. See RQ-28 and COORDINATION.md (PP-03)."
   },
   {
    "id": "RQ-13",
@@ -121,108 +121,122 @@
   },
   {
    "id": "RQ-18",
-   "requirement": "W-01: replace city and county proxies with trade-area figures",
-   "where": "progress.html",
-   "status": "Blocked: private location",
-   "note": "Trade-area figures need the parcel's location, which stays in the private workspace. City and county figures remain the proxies."
+   "requirement": "W-01 Replace city and county proxies with trade-area figures",
+   "where": "demographics.html, market-economics.html",
+   "status": "Blocked: needs the secure location step",
+   "note": "The site still uses city and county figures. A trade area (radius or drive time) must be defined in the secure workflow first, then matched to official Census tract data."
   },
   {
    "id": "RQ-19",
-   "requirement": "W-02: extend the private worksheet to a sell-versus-hold comparison",
-   "where": "calculator.html, projection-model.html",
-   "status": "Partly",
-   "note": "Scenario model and a browser calculator with blank inputs. The owner's private figures are not in the repository."
+   "requirement": "W-02 Extend the private worksheet to a sell-versus-hold comparison",
+   "where": "calculator.html, projection-model.html, decision.html",
+   "status": "Partly met",
+   "note": "Six-strategy scenario model, plus a browser after-tax calculator with blank inputs. The owner's rent, basis, loan and bracket are still needed and stay offline."
   },
   {
    "id": "RQ-20",
-   "requirement": "W-03: decision-gate progress board",
+   "requirement": "W-03 Decision-gate progress board",
    "where": "progress.html",
-   "status": "Done",
-   "note": "Gates G1 to G7, each with what closes it and its official source. No gate is marked closed without evidence."
+   "status": "Done: progress.html",
+   "note": "Decision-gate board with gates G1 to G7, each with what closes it and its official source. No gate is marked closed without evidence."
   },
   {
    "id": "RQ-21",
-   "requirement": "W-04: parcel-level hazard screening",
+   "requirement": "W-04 Parcel-level hazard screening",
    "where": "progress.html, hazards.html",
-   "status": "Blocked: private location",
-   "note": "Regional hazard context only. The parcel's zone status is checked privately in the official maps."
+   "status": "Blocked: needs the secure parcel workflow",
+   "note": "Regional hazard context only. The parcel zone status is checked privately in the official maps."
   },
   {
    "id": "RQ-22",
-   "requirement": "W-10: one-page printable summary for advisors",
+   "requirement": "W-10 One-page printable summary for advisors",
    "where": "advisor-summary.html",
-   "status": "Done",
-   "note": "Letter-size print layout; every figure links to its official source; no owner or parcel detail."
+   "status": "Done: advisor-summary.html",
+   "note": "One letter-size page for advisers, printed from the browser. Every figure links to its official source; no owner or parcel detail."
   },
   {
    "id": "RQ-23",
    "requirement": "A private calculator that runs in the reader's browser",
    "where": "calculator.html",
-   "status": "Done",
-   "note": "Every box starts blank; no network call; nothing stored; a winner appears only after every input is entered and checked."
+   "status": "Done: calculator.html",
+   "note": "Every box starts blank; no network call; nothing stored. A winner appears only after every input is entered and the check box is ticked."
   },
   {
    "id": "RQ-24",
    "requirement": "Neighbourhood-level data around the parcel",
-   "where": "progress.html",
-   "status": "Blocked: private location",
-   "note": "Not published. Needs the parcel location in a secure workflow."
+   "where": "demographics.html",
+   "status": "Blocked: needs the secure location step",
+   "note": "Neighbourhood data needs the location, used only in the secure workflow, to select Census tracts. Public pages carry city and county data only."
   },
   {
    "id": "RQ-25",
-   "requirement": "An after-tax module that gives one number to compare with the hold case",
+   "requirement": "An after-tax module",
    "where": "calculator.html, taxes.html",
-   "status": "Partly",
-   "note": "The calculator's tax step uses the verified rates. Owner basis, depreciation and bracket are inputs still to be supplied."
+   "status": "Partly met: the calculator's tax step; owner inputs needed",
+   "note": "The calculator applies the verified federal, depreciation-recapture, investment-income and California rates. Basis, depreciation, loan and bracket are the owner's inputs."
   },
   {
    "id": "RQ-26",
    "requirement": "Price the short-lease discount from real quotes",
    "where": "progress.html, valuation.html",
-   "status": "Blocked: no verified quote",
-   "note": "No official quote for this lease exists. The buyer-yield row is blank."
+   "status": "Blocked: needs real quotes",
+   "note": "No public quote data exists. The short-lease discount stays blank until real quotes are obtained."
   },
   {
    "id": "RQ-27",
    "requirement": "Tract-level trend evidence alongside the regional figures",
-   "where": "progress.html",
-   "status": "Blocked: private location",
-   "note": "Tract selection depends on the parcel location, held privately."
+   "where": "market-economics.html",
+   "status": "Not started",
+   "note": "Trend series on the site are regional. Tract-level series have not been pulled from an official source."
   },
   {
    "id": "RQ-28",
-   "requirement": "Use the location only in a secure workflow for Census tracts, planning, traffic, school and competitor evidence",
-   "where": "progress.html",
-   "status": "Blocked: private location",
-   "note": "County school and City planning sources are listed. Traffic and competitor evidence are not yet sourced."
+   "requirement": "Keep identifiers, lease files and owner finances offline; publish only aggregate, non-identifying findings",
+   "where": "privacy.html",
+   "status": "Met in the repository; not yet on the live site",
+   "note": "The build rejects personal identifiers. The live Pages site still serves the whole repository (legacy source main:/). The owner must set Settings > Pages > Source to GitHub Actions (COORDINATION.md, PP-03)."
   },
   {
    "id": "RQ-29",
-   "requirement": "Privately check seismic, flood and fire maps, engineering and insurance; stress rent, repairs and exit liquidity together",
-   "where": "progress.html, hazards.html, projection-model.html",
-   "status": "Partly",
-   "note": "Regional hazard context and stress cases exist. Parcel map checks, engineering and insurance are private and not done."
+   "requirement": "Use the location only in a secure workflow to select Census tracts and local planning, traffic, school and competitor evidence",
+   "where": "none",
+   "status": "Not started",
+   "note": "Not built. The secure workflow does not exist yet and the public site holds no location."
   },
   {
    "id": "RQ-30",
-   "requirement": "Replace regional hazard context with the parcel's actual zone status",
-   "where": "progress.html",
-   "status": "Blocked: private location",
-   "note": "Needs the parcel identifier kept offline and the official map checks."
+   "requirement": "Privately check seismic, flood and fire maps, engineering and insurance; stress loss of rent, repairs and exit liquidity together",
+   "where": "risks.html, projection-model.html",
+   "status": "Partly met",
+   "note": "Regional stress cases are in the model. Parcel-level map checks, engineering and insurance figures are not done."
   },
   {
    "id": "RQ-31",
-   "requirement": "Versioned cash-flow model, back-tested once verified inputs and comparable history exist",
-   "where": "projection-model.html, progress.html",
-   "status": "Not started: conditions not met",
-   "note": "Versioned scenario model with labelled assumptions. No back-test: verified inputs and comparable history are not yet available."
+   "requirement": "Versioned, back-tested cash-flow model once verified inputs and comparable history exist",
+   "where": "projection-model.html",
+   "status": "Partly met; back-test not done",
+   "note": "A versioned scenario model with unit tests exists. A back-test needs comparable transaction history and verified owner inputs, which are not available."
   },
   {
    "id": "RQ-32",
-   "requirement": "Same-store sales, unit counts, closures and franchise rent read as a direction over several quarters",
-   "where": "tenant.html",
-   "status": "Partly",
-   "note": "Four same-store readings and two unit-count dates. More quarters needed."
+   "requirement": "A single after-tax number the owner can compare with the hold case",
+   "where": "calculator.html, taxes.html",
+   "status": "Partly met: calculator; owner basis figures needed",
+   "note": "The calculator sets after-tax cash today against the present value of renewal and gives the difference, once every input is entered and checked."
+  },
+  {
+   "id": "RQ-33",
+   "requirement": "Replace regional hazard context with the parcel's actual zone status (earthquake, fire, flood)",
+   "where": "hazards.html",
+   "status": "Blocked: needs the secure parcel workflow",
+   "note": "Same dependency as RQ-21. Not done until the parcel is screened in the secure workflow."
+  },
+  {
+   "id": "RQ-34",
+   "requirement": "Same-store sales, unit counts, closures and franchise rental revenue shown as direction over time, not one quarter",
+   "where": "tenant.html, progress.html",
+   "status": "Partly met; two quarters and two fiscal years",
+   "note": "Same-store sales for two quarters and two fiscal years, and unit counts at two dates. More quarters are needed before the direction is reliable."
   }
  ]
 }
