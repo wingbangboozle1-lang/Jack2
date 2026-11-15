@@ -2223,3 +2223,22 @@ accepted because the current legacy publication exposes the entire repository, w
 | `deploy privacy-reviewed Pages artifact` on `2add641` | **failed**, as designed, at *Confirm GitHub Actions is the Pages publishing source* (run `43776164371`). The four steps before it passed, including the verification and artifact allowlist. |
 | Pages API after the merge | `status: built`, `build_type: legacy`, `source: main /` |
 | Result | **Privacy-reviewed Pages deploy NOT live.** The live site still publishes the whole repository until the owner sets Settings → Pages → Source to GitHub Actions (IR-35). |
+
+### Session `35c8a4ed` — supersession record: CALC-01, WR-01, ADV-01 not merged (2026-11-15)
+
+**What happened.** This session claimed CALC-01 (browser calculator), WR-01 (work register) and ADV-01 (one-page advisor summary) in its claim block above. Before this session's pull request could merge, session `4112432a` had already merged the same scope to `main`: BG-01 (decision-gate progress board and brief coverage map, `progress.html`), BG-02 (browser after-tax calculator, `calculator.html`) and BG-03 (one-page advisor summary, `advisor-summary.html`), through PR #85. Those claims are in `main` above and were verified there.
+
+**Decision.** The duplicate pages were **not merged**. Merging them would have replaced another session's merged, verified pages (same filenames) and duplicated its brief coverage map. Pull request #89 was kept for this record only: its diff against `main` is this section of `COORDINATION.md` and nothing else. The earlier sections of this board describe the superseded work on `arena/35c8a4ed-jack2` and are kept as history. Their status is **superseded, not merged**: CALC-01, WR-01 and ADV-01 are closed as duplicates of BG-01 to BG-03. INT-01 is closed as "record only".
+
+**What was checked on `main`'s calculator (`calculator.html`, session `4112432a`), so the owner has evidence.** The browser page was driven in a DOM emulator outside the repository, with the same hand-checked case used for this session's calculator (price 3,000,000; costs 150,000; basis 1,000,000; depreciation 500,000; recapture 25%; long-term 20%; California 13.3%; investment-income tax yes; rent 100,000 a year; 30% federal; 9.3% California; 0% escalation; 5 years; discount 5%):
+- Tax on the sale 711,350 = 500,000 × 25% + 1,350,000 × 20% + 1,850,000 × 3.8% + 1,850,000 × 13.3%: **matches** the verified rules.
+- Present value of after-tax rent 262,799: **matches** (60,700 × 4.3295).
+- Transfer tax is not computed from the ledger. Its method text says sale costs include "transfer taxes", which the user enters. For a sale above 5,400,000 the Measure ULA tier (TX-003 to TX-008) and the county rate (TX-013) change the result materially: the ledger's own example is an extra 216,000 for a price one dollar above 5,400,000 (TX-017).
+
+**Request to session `4112432a` (logged, not edited here, as the board requires for another session's files).** Consider computing the statutory transfer tax from the ledger tiers as a default that the user can override, with the cliff at 5,400,000 shown as a warning. Rates for that: TX-006, TX-007, TX-008 (city tiers), TX-013 (county 0.11%), TX-003 (thresholds). The check harness used here is not in the repository.
+
+**Verification performed for this record.** Branch content equals `main` except this file; `canonical/ci_local.py` replay (see the final push); no new facts, sources or values were added.
+
+**Sources.** Unchanged: the verified tax-ledger rows already cited by session `4112432a` and the sources register read on 2026-11-13 (TX-003 to TX-017 as listed).
+
+**Irregularities for review.** (1) Duplicate scopes between sessions `35c8a4ed` and `4112432a` were not caught at claim time because the two claims were made on separate branches; the protocol's "check the board before claiming" was followed, but the other claim was not yet on `main` when this session started. (2) The Pages source is still the legacy repository root (owner action, PP-02/PP-03). (3) The `4112432a` calculator does not compute transfer tax (request above).
