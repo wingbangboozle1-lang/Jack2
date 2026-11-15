@@ -47,13 +47,20 @@ jobs:
           python3 -m unittest discover -s canonical/tests -v
           python3 canonical/publish.py --out "$RUNNER_TEMP/published-site"
 
-      - name: Select GitHub Actions as the Pages publishing source
+      - name: Confirm GitHub Actions is the Pages publishing source
+        # The workflow token cannot change the Pages build type (HTTP 403 on PUT).
+        # The repository owner sets it once in Settings > Pages (or with an admin token).
+        # This step only reads the current value and fails loudly if it is not "workflow".
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          build_type="$(gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow --jq .build_type)"
-          test "$build_type" = workflow
+          build_type="$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .build_type)"
+          if [ "$build_type" != workflow ]; then
+            echo "::error::Pages build_type is '$build_type'. Set Settings > Pages > Source to GitHub Actions, then re-run."
+            exit 1
+          fi
+          echo "Pages build_type is workflow"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
