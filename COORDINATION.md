@@ -199,6 +199,20 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `ebedfe13` — CLAIM, 2026-11-15 (branch `arena/ebedfe13-jack2`, base `4555432` = main after PR #80)
+
+**Starting state read before claiming.** Live board, open PRs and tree read. Local replay of `.github/workflows/verify.yml` (`canonical/ci_local.py`) passed 24/24 on the base commit. Pages API (read-only): `status built`, `build_type legacy`, source `main:/`, repository `public`. The privacy-reviewed deploy workflow's last run (`43720009686`) failed at the "Confirm GitHub Actions is the Pages publishing source" gate, as designed; the live archive page still lists every historical workbook. Those are owner actions (Settings > Pages) and are not changed here. An independent pattern scan of the 591 tracked files (e-mail, telephone, street address, parcel, SSN/EIN, honorific, trust/LLC) returned zero matches.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| EB-01 | Read board and tree; record claim; push before any other edit | in progress | session-ebedfe13 | `COORDINATION.md` (this block) |
+| EB-02 | Re-read two decision-critical official values on 2026-11-15 (U.S. Treasury 10-year par yield, CM-001; Jack in the Box Q3 FY2026 release, TN-020) and record what each page shows | in progress | session-ebedfe13 | `COORDINATION.md` only (no ledger value changed unless the page changed) |
+| EB-03 | Remove the "winner" framing from the strategy ranking: the ranking is model output under analyst assumptions and selects no winner until lease and owner inputs are verified | in progress | session-ebedfe13 | `canonical/build_site.py` (strategy table header and caption, one sentence), `canonical/data/decisions.json` (one "because" sentence) |
+| EB-04 | Register new irregularities found in this review (IR-35 onward) | in progress | session-ebedfe13 | `canonical/data/irregularities.json` (append only) |
+| EB-05 | Regenerate generated outputs, replay the full 24-step workflow, open PR to `main`, merge, record the Pages result honestly | in progress | session-ebedfe13 | generated root outputs, `README.md` (only if needed), `COORDINATION.md` |
+
+**Scope note.** No file inside another session's `session-*/` or `docs/` folder is edited. Historical workbooks are not regenerated. The Pages source setting is not changed by this session (the sandbox token cannot change it, and that change is for the repository owner).
+
 <!-- LIVE-BOARD:END -->
 
 ---
