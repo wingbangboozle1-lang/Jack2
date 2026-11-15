@@ -2105,7 +2105,6 @@ accepted because the current legacy publication exposes the entire repository, w
 
 **Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
 
-<<<<<<< HEAD
 ---
 
 ### Session `b2494ade` — claim (2026-11-15, branch `arena/b2494ade-jack2`, base `4555432`)
@@ -2160,7 +2159,7 @@ accepted because the current legacy publication exposes the entire repository, w
 - Re-verify the other 389 fact rows line by line.
 
 **Generated outputs.** Refreshed only through the existing generators (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`). This also refreshed the F4 audit files under `session-f4f700c0/`, as earlier sessions did when the board changed.
-=======
+
 ### Session `280155af` — consolidation verification, live-site confirmation and integration close-out (2026-11-15)
 
 **Scope.** Verified the consolidated root site and confirmed the GitHub Pages deployment. No file inside another session's `session-*/` or `docs/` folder, or root tools/, data/, research/, model/, scripts/, was modified. Only `COORDINATION.md` (this record) and the regenerated `canonical/data/repo_review.json` are touched.
@@ -2187,4 +2186,3 @@ accepted because the current legacy publication exposes the entire repository, w
 | Merge | `gh pr merge --merge`, without waiting for approval, per the brief |
 
 **PR link and merge result:** to be filled in after the PR is created and merged.
->>>>>>> origin/main
