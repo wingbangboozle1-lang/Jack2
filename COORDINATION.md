@@ -2043,3 +2043,37 @@ accepted because the current legacy publication exposes the entire repository, w
 | B-02 | Official-source spot verification of decision-critical rows (Measure ULA thresholds, IRS capital-gains thresholds, CAL FIRE fire records, BLS Los Angeles summary, Census QuickFacts), access date 2026-11-15 | in progress | session-b2494ade | `canonical/data/spot_check_2026-11-15.json` (new; not read by the build) |
 | B-03 | Requirement gap register: brief items W-01 to W-04 and W-10, plus other brief items absent from `requirements.json`, with honest status | in progress | session-b2494ade | `canonical/data/requirements.json` (additive rows) |
 | B-04 | Regenerate outputs through the existing generators, full CI replay, PR to `main`, merge only if green, record the Pages outcome | in progress | session-b2494ade | generated outputs only; `COORDINATION.md` |
+
+### Session `b2494ade` — close-out (2026-11-15)
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| B-01 | Privacy audit of the tracked tree and the full git history | done | Tree: 0 pattern hits across 591 tracked text files. History (292 commits, fetched with `git fetch --unshallow`): 25 hits in 6 commits dated 2026-11-06 to 2026-11-12, all listed by short hash in IR-40. Counts only; no matched text is reproduced. Recorded as IR-40 (new). A recount for IR-30 is in `canonical/data/spot_check_2026-11-15.json` (`history_scan`): 2 commits in 2026-11 carry a non-noreply address in the author or committer field. |
+| B-02 | Official-source spot verification, access date 2026-11-15 | done (sample) | 52 rows re-read or recomputed: **47 match, 5 recomputed, 0 mismatch**. Rows and URLs: `canonical/data/spot_check_2026-11-15.json`. This is a sample of the 441 rows in `canonical/data/facts/`; the other 389 were not re-read today and keep their earlier status. |
+| B-03 | Requirement gap register for the brief | done | RQ-18 to RQ-36 added to `canonical/data/requirements.json`: 5 Open, 7 Partial, 7 Blocked (owner-private or no official source). None is marked done. IR-42 records the gap. |
+| B-04 | Regenerate, full CI replay, PR, merge, Pages outcome | done for the replay; Pages blocked (see below) | `ci_local.py`: all 24 steps passed on the committed tree (12/12 site checks, 15 unit tests, privacy scan 0 matches). |
+
+**Sources read on 2026-11-15 (all official; URLs are the same as in `canonical/data/sources.json`).**
+- City of Los Angeles Office of Finance, Measure ULA FAQ: https://finance.lacity.gov/faq/measure-ula
+- IRS, Topic no. 409, Capital gains and losses: https://www.irs.gov/taxtopics/tc409
+- CAL FIRE, Eaton Fire incident record: https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire
+- CAL FIRE, Palisades Fire incident record: https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire
+- U.S. BLS, Los Angeles Area Economic Summary (updated 2026-11-04): https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf
+- U.S. Census Bureau, QuickFacts (Los Angeles city and county): https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224
+- GitHub Docs, configuring a Pages publishing source (Pages is public even if the repository is private; a private repository needs a paid plan): https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+- GitHub REST API, Pages (token permissions; explains the HTTP 403 on the source change): https://docs.github.com/en/rest/pages/pages
+
+**Verification performed.** 47 spot-check values match the official page (a few after rounding, as the record shows); 5 are recomputed from re-read figures with the arithmetic shown (ULA totals, fire totals, one percentage change each for the two population rows). The Measure ULA thresholds (\$5,400,000 and \$10,900,000 for closings after 2026-06-30), the IRS 20% threshold (\$533,400 single), and the CAL FIRE cause fields (Electrical; Arson) all match their pages. Not verified today: the county transfer rate (TX-013, 0.11%), any row not in the sample, and anything about the owner's property. Those rows keep their earlier status.
+
+**Irregularities recorded (status "needs review"; they block nothing).**
+1. **IR-40 (Privacy).** Personal-data patterns remain in six earlier commits. The current tree is clean, so IR-32 holds for the tracked files only. A history rewrite or a private repository is an owner decision. The public site links only to the commit list, not to individual commits.
+2. **IR-41 (Privacy, highest priority).** Pages still publishes the root of `main` (build type `legacy`). The privacy-reviewed artifact cannot go live until the owner sets Settings → Pages → Source to GitHub Actions. This session's attempt returned HTTP 403 for the integration token. The latest three deploy runs failed at that check (`43717494427`, `43718114648`, `43720009686`).
+3. **IR-42 (Requirements).** The register did not carry W-01, W-02, W-03, W-04 or W-10, nor several brief items. RQ-18 to RQ-36 now do.
+
+**What this session did not do (owner or later work).**
+- Set the Pages source (owner). Until then, the live site serves the whole repository, and the privacy-reviewed artifact is not deployed.
+- Decide on the history rewrite or repository visibility (owner; IR-40).
+- Build the trade-area, tract, parcel-level, neighbourhood, browser-calculator, decision-gate, back-test and after-tax items. These need inputs that stay offline, or a separate claimed session (RQ-18 to RQ-36).
+- Re-verify the other 389 fact rows line by line.
+
+**Generated outputs.** Refreshed only through the existing generators (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`). This also refreshed the F4 audit files under `session-f4f700c0/` (`audit/inventory.json`, `audit/summary.json`, `verification.json`), as the earlier sessions did when the board changed.
