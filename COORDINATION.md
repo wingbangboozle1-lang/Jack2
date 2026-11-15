@@ -1986,3 +1986,23 @@ Official GitHub reference for the Pages update endpoint and its required token p
 - **PR #77** (`Make local CI replay handle missing RUNNER_TEMP`) merged to `main` as `a8181b60ca4eb4bb1d41c250c9f64a56c3cd62c1` on 2026-11-15 12:54 UTC after `build-and-check` passed. Local full workflow replay passed all 24 steps before merge.
 - **PR #78** (this session's live Pages privacy deployment request) merged to `main` as `b466612f1145b1ff5f7a88bcea671096d9e83a6e` on 2026-11-15 13:00 UTC after `build-and-check` passed. It is a coordination record, not a Pages fix.
 - **Pages not confirmed as privacy-reviewed.** The public Pages workflow page still shows the only deployment workflow run as failed (#43522377067), and the live archive page still lists historical workbook links. PR #76, which addresses the Pages source configuration, remains open at the time of this check. This is explicitly not a successful deployment; the request above remains for the active Pages owner.
+### Session `f652211c` — PP-01 TAKEOVER: Pages privacy-artifact deploy fix — claimed 2026-11-15 (UTC)
+
+**Why this session takes over.** PR #73 (`568ae793`, PP-01) merged to `main` as `c278c22`. Its follow-up deploy workflow
+`deploy privacy-reviewed Pages artifact` (run `43522377067`, 2026-11-14) **failed** at step *Select GitHub Actions as the
+Pages publishing source*: the workflow token cannot change the Pages build type (`PUT repos/.../pages build_type=workflow`).
+Pages API on 2026-11-15 still reports `build_type=legacy`, source `main:/`, so the whole public repository (session folders,
+COORDINATION.md, historical workbooks) remains the published surface. No commit from `568ae793` has landed since PR #73, so
+the claim is more than 60 minutes old with no commits and is taken over under the board rule. Handoff noted here.
+
+**Local replay (2026-11-15).** `model.py`, `review_repo.py`, `verify.py` (12/12 PASS), `sanitize.py --check` (0 matches),
+15 unit tests OK, and `publish.py --out <tmp>` (27 allowlisted files, privacy scan clean) all pass on `c278c22`. The
+artifact is buildable; the failure is only the Pages source switch.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PP-02 | Make the Pages-source step idempotent (read build type first; PUT only if needed; fail loudly otherwise); admin-set Pages source to GitHub Actions once; re-run deploy; confirm live paths and that the legacy repo-root publication is gone | in progress | session-f652211c | `.github/workflows/pages.yml`, `COORDINATION.md` |
+
+**Known consequence (recorded before acting).** Switching Pages to the workflow source removes the legacy repo-root
+publication immediately. The site will be unavailable until the deploy job completes (typically a few minutes). This is
+accepted because the current legacy publication exposes the entire repository, which the owner ranks as the top priority.
