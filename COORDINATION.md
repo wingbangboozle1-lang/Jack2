@@ -199,6 +199,20 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `4112432a` — BRIEF GAP CLAIM (W-01…W-10 and feature list) — claimed 2026-11-15 (UTC), branch `arena/4112432a-jack2`
+
+**Why.** The brief's item list (W-01 to W-10 and the feature list) was never mapped to the site: no page names W-03, W-10, a browser calculator, an after-tax module, a decision-gate board or a printable advisor summary. This session claims those gaps. Nothing already published is changed except the navigation, requirements register and generated pages.
+
+**Pages Source (PP-03) — blocked.** `gh api --method PUT repos/…/pages` returned HTTP 403 "Resource not accessible by integration" for this session's credential, so the Pages source cannot be switched from here. Owner action is still required (see `f652211c` close-out above).
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| BG-01 | Decision-gate progress board and brief coverage map (W-01…W-10 and features); every row with an official-source link or an explicit "internal item" label | in progress | session-4112432a | `canonical/build_site.py` (new `build_progress`), `canonical/data/requirements.json` (new RQ rows), `progress.html` (generated) |
+| BG-02 | Browser-only after-tax sale-versus-renewal calculator; blank inputs; no network; winner shown only with verified inputs | in progress | session-4112432a | `canonical/build_site.py` (new `build_calculator`), `calculator.html` (generated) |
+| BG-03 | One-page printable advisor summary (W-10) | in progress | session-4112432a | `canonical/build_site.py` (new `build_advisor`), `advisor-summary.html` (generated) |
+| BG-04 | Navigation, verifier and local CI replay; regenerate generated files only by their generators | in progress | session-4112432a | `canonical/build_site.py` (NAV), generated root pages, `canonical/data/repo_review.json`, `canonical/data/verification.json` |
+| PP-03 | Switch Pages source to GitHub Actions so only the allowlisted artifact is served | BLOCKED: HTTP 403 for this credential; owner action required | session-4112432a | `repo settings` (not editable from this session) |
+
 <!-- LIVE-BOARD:END -->
 
 ---
