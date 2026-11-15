@@ -1,8 +1,8 @@
 {
   "as_of": "2026-11-08",
   "files": 589,
-  "lines": 110862,
-  "bytes": 10351082,
+  "lines": 110896,
+  "bytes": 10356092,
   "privacy_pattern_hits": 0,
   "current_session_privacy_hits": 0,
   "historical_privacy_review": [],
@@ -10,8 +10,8 @@
   "workspaces": {
     "root/config": {
       "files": 64,
-      "lines": 21955,
-      "bytes": 2234916,
+      "lines": 21989,
+      "bytes": 2239926,
       "privacy_hits": 0,
       "structural_errors": 0
     },
