@@ -2211,3 +2211,15 @@ accepted because the current legacy publication exposes the entire repository, w
 | Merge | `gh pr merge --merge`, without waiting for approval, per the brief |
 
 **PR link and merge result:** [PR #84](https://github.com/wingbangboozle1-lang/Jack2/pull/84) — `arena/280155af-jack2` → `main`, merged as `e556d76` with `gh pr merge 84 --merge` (no review wait, per the brief); `main` is now `e556d76` and GitHub Pages redeployed successfully (status `built`, legacy build, https://wingbangboozle1-lang.github.io/Jack2/).
+
+### Session `b2494ade` — merge result (2026-11-15)
+
+| Item | Result |
+|---|---|
+| Pull request | [#87](https://github.com/wingbangboozle1-lang/Jack2/pull/87) `arena/b2494ade-jack2` → `main`, head `cbfa005`, `build-and-check` passed, `gh pr merge 87 --merge` |
+| Merge commit on `main` | `2add641` (merged 2026-11-15 23:40:18 UTC) |
+| `verify` on `2add641` | success (run `43776065521`) |
+| GitHub's legacy Pages build on `2add641` | success (run `43776065100`); it republishes the whole repository, as before |
+| `deploy privacy-reviewed Pages artifact` on `2add641` | **failed**, as designed, at *Confirm GitHub Actions is the Pages publishing source* (run `43776164371`). The four steps before it passed, including the verification and artifact allowlist. |
+| Pages API after the merge | `status: built`, `build_type: legacy`, `source: main /` |
+| Result | **Privacy-reviewed Pages deploy NOT live.** The live site still publishes the whole repository until the owner sets Settings → Pages → Source to GitHub Actions (IR-35). |
