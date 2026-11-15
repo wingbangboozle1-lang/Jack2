@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 591,
-    "lines": 111195,
-    "bytes": 10459872,
+    "lines": 111214,
+    "bytes": 10463380,
     "privacy_pattern_hits": 0,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [],
@@ -11,8 +11,8 @@
     "workspaces": {
       "root/config": {
         "files": 66,
-        "lines": 22248,
-        "bytes": 2341203,
+        "lines": 22267,
+        "bytes": 2344711,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -240,9 +240,9 @@
     {
       "path": "COORDINATION.md",
       "workspace": "root/config",
-      "bytes": 243309,
-      "lines": 2158,
-      "sha256": "53be8a67da2f9f768d8bc96a6b8f49b508c5d3e876f5b688a0d274a71434df17",
+      "bytes": 246817,
+      "lines": 2177,
+      "sha256": "5f54a03b9e4b52b5b70781faa91d86156a810cde587b89e82dfc6c91313c8e1c",
       "kind": ".md",
       "url_count": 101,
       "pii_pattern_hits": 0,
@@ -634,7 +634,7 @@
       "workspace": "root/config",
       "bytes": 16276,
       "lines": 814,
-      "sha256": "ad5cc00411ed973de5e9c0cfb5b8f41e5c405b76dfc2a318f955fa60a14c1a3c",
+      "sha256": "456ee12a2d33fc8dbdf1c8d22ea2373782cc0780265008fcc2088ddfb2371f87",
       "kind": ".json",
       "url_count": 0,
       "pii_pattern_hits": 0,
@@ -8432,7 +8432,7 @@
       "workspace": "root/config",
       "bytes": 71586,
       "lines": 33,
-      "sha256": "dc9f3b1643c56c3e43422f1a179564e1ac867dae2a239274eab264a7a2141c05",
+      "sha256": "8d69ddeeab99cdac3282957205968096ac27a2e20d99967af6608e88a949087c",
       "kind": ".html",
       "url_count": 100,
       "pii_pattern_hits": 0,
