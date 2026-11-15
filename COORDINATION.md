@@ -199,6 +199,14 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `14430a3c` — CLAIM, 2026-11-15 (branch `arena/14430a3c-jack2`, base `4555432` = main)
+
+Read the live board, the open PRs, the Pages API and the last workflow runs before claiming. Pages is still `build_type=legacy`, source `main:/` (whole repository published); the last `deploy privacy-reviewed Pages artifact` run (43720009686) failed at the Pages-source confirmation step. The task below is the owner's top-priority privacy item. The branch name is fixed by the platform, so the `session-<id>/<task>` naming is not used; this session works only on its own branch and does not touch other sessions' folders.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PP-03 | Set Pages source to GitHub Actions (repository setting, via API, only if the admin token allows it); re-run the privacy deploy; re-fetch the live archive, deployment and one historical path to confirm the allowlisted artifact is served | in progress | session-14430a3c | repository Pages setting (no file change); `COORDINATION.md` |
+
 <!-- LIVE-BOARD:END -->
 
 ---
