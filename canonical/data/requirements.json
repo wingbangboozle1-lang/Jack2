@@ -123,43 +123,43 @@
    "id": "RQ-18",
    "requirement": "W-01 Replace city and county proxies with trade-area figures",
    "where": "demographics.html, market-economics.html",
-   "status": "Not started",
+   "status": "Blocked: needs the secure location step",
    "note": "The site still uses city and county figures. A trade area (radius or drive time) must be defined in the secure workflow first, then matched to official Census tract data."
   },
   {
    "id": "RQ-19",
    "requirement": "W-02 Extend the private worksheet to a sell-versus-hold comparison",
-   "where": "projection-model.html, decision.html",
+   "where": "calculator.html, projection-model.html, decision.html",
    "status": "Partly met",
-   "note": "The public scenario model compares six strategies with owner inputs left blank. The private worksheet with owner figures is not built and must stay offline."
+   "note": "Six-strategy scenario model, plus a browser after-tax calculator with blank inputs. The owner's rent, basis, loan and bracket are still needed and stay offline."
   },
   {
    "id": "RQ-20",
    "requirement": "W-03 Decision-gate progress board",
-   "where": "decision.html",
-   "status": "Not started",
-   "note": "Decision triggers are written on decision.html. A board that tracks each gate's status is not built."
+   "where": "progress.html",
+   "status": "Done: progress.html",
+   "note": "Decision-gate board with gates G1 to G7, each with what closes it and its official source. No gate is marked closed without evidence."
   },
   {
    "id": "RQ-21",
    "requirement": "W-04 Parcel-level hazard screening",
-   "where": "hazards.html",
+   "where": "progress.html, hazards.html",
    "status": "Blocked: needs the secure parcel workflow",
-   "note": "Regional hazard context is published. A parcel screen needs the parcel identified in the secure workflow, then official seismic, flood and fire zone lookups."
+   "note": "Regional hazard context only. The parcel zone status is checked privately in the official maps."
   },
   {
    "id": "RQ-22",
    "requirement": "W-10 One-page printable summary for advisors",
-   "where": "executive-summary.html",
-   "status": "Partly met",
-   "note": "The executive summary exists and the stylesheet has a print rule. A one-page advisor sheet is not built and its page fit has not been checked."
+   "where": "advisor-summary.html",
+   "status": "Done: advisor-summary.html",
+   "note": "One letter-size page for advisers, printed from the browser. Every figure links to its official source; no owner or parcel detail."
   },
   {
    "id": "RQ-23",
    "requirement": "A private calculator that runs in the reader's browser",
-   "where": "none",
-   "status": "Not started",
-   "note": "No calculator exists. Any version must run entirely in the browser, store nothing, and start from public defaults or blank fields."
+   "where": "calculator.html",
+   "status": "Done: calculator.html",
+   "note": "Every box starts blank; no network call; nothing stored. A winner appears only after every input is entered and the check box is ticked."
   },
   {
    "id": "RQ-24",
@@ -171,14 +171,14 @@
   {
    "id": "RQ-25",
    "requirement": "An after-tax module",
-   "where": "taxes.html",
-   "status": "Not started",
-   "note": "taxes.html lists verified tax rules. No after-tax sale calculation exists; it needs the owner's basis and sale figures, which are blank."
+   "where": "calculator.html, taxes.html",
+   "status": "Partly met: the calculator's tax step; owner inputs needed",
+   "note": "The calculator applies the verified federal, depreciation-recapture, investment-income and California rates. Basis, depreciation, loan and bracket are the owner's inputs."
   },
   {
    "id": "RQ-26",
    "requirement": "Price the short-lease discount from real quotes",
-   "where": "decision.html",
+   "where": "progress.html, valuation.html",
    "status": "Blocked: needs real quotes",
    "note": "No public quote data exists. The short-lease discount stays blank until real quotes are obtained."
   },
@@ -220,9 +220,9 @@
   {
    "id": "RQ-32",
    "requirement": "A single after-tax number the owner can compare with the hold case",
-   "where": "taxes.html",
-   "status": "Blocked: needs owner basis figures",
-   "note": "Needs the verified tax rules (published) plus the owner's private basis and proceeds, which are blank."
+   "where": "calculator.html, taxes.html",
+   "status": "Partly met: calculator; owner basis figures needed",
+   "note": "The calculator sets after-tax cash today against the present value of renewal and gives the difference, once every input is entered and checked."
   },
   {
    "id": "RQ-33",
@@ -234,9 +234,9 @@
   {
    "id": "RQ-34",
    "requirement": "Same-store sales, unit counts, closures and franchise rental revenue shown as direction over time, not one quarter",
-   "where": "tenant.html",
-   "status": "Partly met; one quarter only",
-   "note": "tenant.html shows one SEC-reported quarter of same-store sales and restaurant counts. A multi-quarter trend table is not built."
+   "where": "tenant.html, progress.html",
+   "status": "Partly met; two quarters and two fiscal years",
+   "note": "Same-store sales for two quarters and two fiscal years, and unit counts at two dates. More quarters are needed before the direction is reliable."
   },
   {
    "id": "RQ-35",

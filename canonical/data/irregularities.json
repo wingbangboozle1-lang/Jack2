@@ -451,7 +451,97 @@
    "status": "needs review"
   },
   {
+   "id": "IR-37",
+   "area": "Privacy",
+   "title": "The Pages source change was refused again for this session's credential (see IR-35)",
+   "detail": "On 2026-11-15 this session again asked GitHub to set the Pages build type to the workflow source and was refused (HTTP 403, Resource not accessible by integration). This repeats IR-35: the public site is still the whole repository, and the owner must set Settings, Pages, Source, GitHub Actions.",
+   "rows": [],
+   "links": [
+    [
+     "GitHub REST API: update a Pages site, and the token permissions it needs",
+     "https://docs.github.com/en/rest/pages/pages"
+    ],
+    [
+     "Repository Settings, Pages (owner action)",
+     "https://github.com/wingbangboozle1-lang/Jack2/settings/pages"
+    ],
+    [
+     "Pages deployment workflow runs",
+     "https://github.com/wingbangboozle1-lang/Jack2/actions/workflows/pages.yml"
+    ]
+   ],
+   "action": "Repository owner: Settings, Pages, Source, GitHub Actions. Then re-run the latest deploy run and re-fetch the live archive page and one session folder URL.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-38",
+   "area": "Official source",
+   "title": "The tax rates in the ledger are 2025 figures, and the IRS page read on 2026-11-15 still gives 2025 thresholds",
+   "detail": "The federal rate rows are for tax years beginning in 2025, and the California rows are for the 2025 schedules. The IRS capital-gains topic page, read on 2026-11-15, still states 2025 thresholds. The calculator uses the rates only, but the owner's bracket for 2026 and later must be checked against the schedules for that year before it is entered.",
+   "rows": [
+    "TX-040",
+    "TX-047"
+   ],
+   "links": [
+    [
+     "IRS Topic 409, capital gains and losses",
+     "https://www.irs.gov/taxtopics/tc409"
+    ],
+    [
+     "Franchise Tax Board, tax rate schedules",
+     "https://www.ftb.ca.gov/"
+    ]
+   ],
+   "action": "Check the 2026 federal and California schedules before using any bracket in the calculator, and add rows for them with their own sources.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-39",
+   "area": "Calculator",
+   "title": "The browser calculator leaves out several tax rules, and applies the investment income tax to the whole gain or rent",
+   "detail": "The calculator does not model depreciation deductions during the hold, the limit on deducting capital losses, loss carryovers, state rules other than the rate entered, or the timing of tax payments. It assumes rent is received at the end of each year and that the end-of-term sale is taxed at the same rates as a sale now. The IRS rule applies the 3.8% investment income tax to the lesser of net investment income or the excess over the threshold, whereas the page applies it to the whole gain or rent; it can therefore overstate the tax near the threshold. A winner is shown only after every input is entered and the check box is ticked. The result is not advice.",
+   "rows": [
+    "TX-043",
+    "TX-044"
+   ],
+   "links": [
+    [
+     "Calculator page",
+     "calculator.html"
+    ],
+    [
+     "IRS Topic 559, net investment income tax",
+     "https://www.irs.gov/taxtopics/tc559"
+    ],
+    [
+     "Progress board, gate G4",
+     "progress.html"
+    ]
+   ],
+   "action": "Have the tax adviser review the method and the omissions before any figure from the calculator is relied on.",
+   "status": "needs review"
+  },
+  {
    "id": "IR-40",
+   "area": "Blocked inputs",
+   "title": "Five brief items and gates G1 to G5 cannot be closed from public sources",
+   "detail": "The trade-area, neighbourhood, tract, parcel hazard and short-lease quote items need the parcel's location or a private quote. Gates G1 to G5 need the lease, the tenant's answer, broker opinions, the owner's tax position and the parcel checks. Each is shown as blocked or open on the progress board. None has been estimated.",
+   "rows": [],
+   "links": [
+    [
+     "Progress board",
+     "progress.html"
+    ],
+    [
+     "Flagged blank values",
+     "flagged.html"
+    ]
+   ],
+   "action": "Enter the private file in the secure workflow, then update the progress board. Do not publish any identifier while doing so.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-41",
    "area": "Privacy",
    "title": "Earlier commits in the public history still hold individual names and a street address",
    "detail": "A scan of the full git history (read 2026-11-15) finds personal-data pattern hits in six commits dated 2026-11-06 to 2026-11-12. Individual-name patterns appear in all six, and one of them also carries a street-address pattern. The current files are clean, so IR-32 is true for the tracked files but not for the history. Anyone who clones the public repository can read these earlier versions. The matched text is not reproduced here. Commits for review, by short hash: 833df60fbb, d5b27912af, f4500a22c7, 3b842781d8, 80ab9bd8ee, 0e4751e54c.",

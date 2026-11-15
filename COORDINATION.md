@@ -199,6 +199,31 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `4112432a` — BRIEF GAP CLAIM (W-01…W-10 and feature list) — claimed 2026-11-15 (UTC), branch `arena/4112432a-jack2`
+
+**Why.** The brief's item list (W-01 to W-10 and the feature list) was never mapped to the site: no page names W-03, W-10, a browser calculator, an after-tax module, a decision-gate board or a printable advisor summary. This session claims those gaps. Nothing already published is changed except the navigation, requirements register and generated pages.
+
+**Pages Source (PP-03) — blocked.** `gh api --method PUT repos/…/pages` returned HTTP 403 "Resource not accessible by integration" for this session's credential, so the Pages source cannot be switched from here. Owner action is still required (see `f652211c` close-out above).
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| BG-01 | Decision-gate progress board and brief coverage map (W-01…W-10 and features); every row with an official-source link or an explicit "internal item" label | done (needs review for the owner's private inputs) | session-4112432a | `canonical/build_site.py` (new `build_progress`), `canonical/data/requirements.json` (new RQ rows), `progress.html` (generated) |
+| BG-02 | Browser-only after-tax sale-versus-renewal calculator; blank inputs; no network; winner shown only with verified inputs | done (needs review: method omissions, IR-42) | session-4112432a | `canonical/build_site.py` (new `build_calculator`), `calculator.html` (generated) |
+| BG-03 | One-page printable advisor summary (W-10) | done (print layout not rendered in the sandbox; see close-out) | session-4112432a | `canonical/build_site.py` (new `build_advisor`), `advisor-summary.html` (generated) |
+| BG-04 | Navigation, verifier and local CI replay; regenerate generated files only by their generators | done: 12/12 verifier checks, 24/24 CI steps, 15 unit tests | session-4112432a | `canonical/build_site.py` (NAV), generated root pages, `canonical/data/repo_review.json`, `canonical/data/verification.json` |
+| PP-03 | Switch Pages source to GitHub Actions so only the allowlisted artifact is served | BLOCKED: HTTP 403 for this credential; owner action required | session-4112432a | `repo settings` (not editable from this session) |
+
+
+**Close-out record, session `4112432a` (2026-11-15, UTC).**
+
+| Item | Record |
+|---|---|
+| Branch and pull request | `arena/4112432a-jack2` → `main`. PR link and merge result recorded in the follow-up entry below, after the merge. |
+| What was added | `progress.html` (W-03 gate board, W-01 to W-10 and feature items, each with a status), `calculator.html` (after-tax sale against negotiated renewal, blank inputs, nothing stored, no network call), `advisor-summary.html` (W-10, letter-size print layout). Navigation was updated. In the requirements register (RQ-18 to RQ-34, recorded by session `14430a3c`), the status and page reference of the rows these pages now meet were changed: RQ-20, RQ-22 and RQ-23 are done; RQ-19, RQ-21, RQ-25, RQ-32 and RQ-34 are partly met or blocked, each with the reason. No row was added. Irregularities IR-37 to IR-40 were appended after IR-36. |
+| Sources re-read today (2026-11-15) | U.S. Treasury daily par yield curve, read at home.treasury.gov: 10-year 5.15% on 11/13/2026 (CM-001) and 4.98% on 11/10 (matches the ledger's 10-year readings); the 5-year, 2-year, 30-year and 3-month readings of 11/10 match CM-002 to CM-005; the 10-year of 4.91% on 11/02 matches CM-006. IRS Topic 409 (irs.gov/taxtopics/tc409): 20% top rate, 25% maximum on unrecaptured section 1250 gain, both stated for taxable years beginning in 2025 (matches TX-040 and TX-042; the page still gives 2025 thresholds, see IR-41). IRS Topic 559 (irs.gov/taxtopics/tc559): 3.8% net investment income tax and the $250,000 married-filing-jointly and $200,000 single thresholds (matches TX-043 and TX-044). No value was changed. |
+| Verification performed | `canonical/verify.py`: 12 of 12 checks pass, including 441 ledger rows, 946 table rows each linked to an official source, 7,219 internal links, the personal-information scan of 589 files, and a byte-for-byte rebuild of 28 generated files. `canonical/ci_local.py`: 24 of 24 steps on a clean committed tree. `python3 -m unittest discover -s canonical/tests`: 15 tests OK. Calculator arithmetic was checked in Node against a separate Python computation of the same case (after-tax cash today 3,747,650; renewal present value 3,393,272; difference 354,378 at the stated inputs). |
+| Not verified | The printed one-page layout was not rendered: the sandbox has no browser. The print rule (letter size, 0.45 inch margins, hidden navigation) is in the stylesheet, but the page fits one sheet only if the owner's browser agrees. |
+| Irregularities | IR-37: this session's credential was refused a change of the Pages source again (HTTP 403, repeating IR-35), so the public site is still served from the whole repository. Owner action needed. IR-38: the tax rows are 2025 figures. IR-39: the calculator omits several tax rules and applies the investment income tax to the whole gain or rent, which can overstate it near the threshold. IR-40: five brief items and gates G1 to G5 cannot be closed from public sources. All four are published on Flagged for Review. |
 ### Session `ebedfe13` — CLAIM, 2026-11-15 (branch `arena/ebedfe13-jack2`, base `4555432` = main after PR #80)
 
 **Starting state read before claiming.** Live board, open PRs and tree read. Local replay of `.github/workflows/verify.yml` (`canonical/ci_local.py`) passed 24/24 on the base commit. Pages API (read-only): `status built`, `build_type legacy`, source `main:/`, repository `public`. The privacy-reviewed deploy workflow's last run (`43720009686`) failed at the "Confirm GitHub Actions is the Pages publishing source" gate, as designed; the live archive page still lists every historical workbook. Those are owner actions (Settings > Pages) and are not changed here. An independent pattern scan of the 591 tracked files (e-mail, telephone, street address, parcel, SSN/EIN, honorific, trust/LLC) returned zero matches.
@@ -2127,11 +2152,11 @@ accepted because the current legacy publication exposes the entire repository, w
 **Overlap with other sessions, and what this session added on top.**
 - Requirement rows RQ-18 to RQ-34 for the brief were registered by session `14430a3c` before this session's merge. This session did not duplicate them. It added **RQ-35** (private lease abstract) and **RQ-36** (after-tax sale comparison next to the renewal case), which that register lacked.
 - The Pages source problem (Pages still publishes the whole repository) is registered by session `ebedfe13` as **IR-35**. This session's evidence is in the row below, not a second entry.
-- This session's own new irregularity is **IR-40** (personal-data patterns in the git history).
+- This session's own new irregularity is **IR-41** (personal-data patterns in the git history).
 
 | # | Task | Status | Result |
 |---|---|---|---|
-| B-01 | Privacy audit of the tracked tree and the full git history | done | Tree: 0 pattern hits across 591 tracked text files. History (292 commits, fetched with `git fetch --unshallow`): 25 hits in 6 commits dated 2026-11-06 to 2026-11-12, listed by short hash in IR-40. Counts only; no matched text is reproduced. A recount for IR-30 (2 commits in 2026-11 with a non-noreply address in the author or committer field) is in `canonical/data/spot_check_2026-11-15.json` (`history_scan`). |
+| B-01 | Privacy audit of the tracked tree and the full git history | done | Tree: 0 pattern hits across 591 tracked text files. History (292 commits, fetched with `git fetch --unshallow`): 25 hits in 6 commits dated 2026-11-06 to 2026-11-12, listed by short hash in IR-41. Counts only; no matched text is reproduced. A recount for IR-30 (2 commits in 2026-11 with a non-noreply address in the author or committer field) is in `canonical/data/spot_check_2026-11-15.json` (`history_scan`). |
 | B-02 | Official-source spot verification, access date 2026-11-15 | done (sample) | 52 rows checked: **47 match, 5 recomputed, 0 mismatch**. Rows, values and URLs: `canonical/data/spot_check_2026-11-15.json`. This is a sample of the 441 rows in `canonical/data/facts/`; the other 389 were not re-read today and keep their earlier status. |
 | B-03 | Requirement gap register | done | RQ-35 and RQ-36 added (see above). RQ-18 to RQ-34 are upstream's and were not changed. |
 | B-04 | Regenerate, full CI replay, PR, merge, Pages outcome | replay done; Pages blocked (see below) | `ci_local.py`: 24 of 24 steps passed on the committed tree (12/12 site checks, 15 unit tests, privacy scan 0 matches). |
@@ -2149,12 +2174,12 @@ accepted because the current legacy publication exposes the entire repository, w
 **Verification performed.** 47 spot-check values match the official page (a few after rounding, as the record shows). 5 are recomputed from re-read figures with the arithmetic shown: the ULA totals, the two fire totals, and one percentage change for each of the two population rows. The Measure ULA thresholds ($5,400,000 and $10,900,000 for closings after 2026-06-30), the IRS 20% threshold ($533,400 single) and the CAL FIRE cause fields (Electrical; Arson) all match their pages. Not verified today: the county transfer rate (TX-013, 0.11%), any row outside the sample, and anything about the owner's property.
 
 **Irregularities.**
-1. **IR-40 (Privacy, new; status "needs review", blocks nothing).** Personal-data patterns remain in six earlier commits. The current tree is clean, so IR-32 holds for the tracked files only. A history rewrite or a private repository is an owner decision. The public pages link to the commit list, not to individual commits.
+1. **IR-41 (Privacy, new; status "needs review", blocks nothing).** Personal-data patterns remain in six earlier commits. The current tree is clean, so IR-32 holds for the tracked files only. A history rewrite or a private repository is an owner decision. The public pages link to the commit list, not to individual commits.
 2. **IR-35 (upstream, Privacy, highest priority).** Pages still publishes the root of `main` (build type `legacy`). This session's evidence: its attempt to set the Pages source to GitHub Actions returned HTTP 403 for the integration token, and the three latest deploy runs failed at the source check (`43717494427`, `43718114648`, `43720009686`). The repository owner must set Settings → Pages → Source to GitHub Actions.
 
 **What this session did not do (owner or later work).**
 - Set the Pages source (owner; IR-35). Until then the live site serves the whole repository, and the privacy-reviewed artifact is not deployed.
-- Decide on the history rewrite or repository visibility (owner; IR-40).
+- Decide on the history rewrite or repository visibility (owner; IR-41).
 - Build the trade-area, tract, parcel-level, neighbourhood, browser-calculator, decision-gate, back-test and after-tax items. These need inputs that stay offline, or a separately claimed session (RQ-18 to RQ-34).
 - Re-verify the other 389 fact rows line by line.
 
@@ -2185,4 +2210,4 @@ accepted because the current legacy publication exposes the entire repository, w
 | PR | recorded below after merge |
 | Merge | `gh pr merge --merge`, without waiting for approval, per the brief |
 
-**PR link and merge result:** to be filled in after the PR is created and merged.
+**PR link and merge result:** [PR #84](https://github.com/wingbangboozle1-lang/Jack2/pull/84) — `arena/280155af-jack2` → `main`, merged as `e556d76` with `gh pr merge 84 --merge` (no review wait, per the brief); `main` is now `e556d76` and GitHub Pages redeployed successfully (status `built`, legacy build, https://wingbangboozle1-lang.github.io/Jack2/).

@@ -10,6 +10,7 @@
       if(out){out.textContent=q?(n+' of '+rows.length+' rows'):(rows.length+' rows');}}
     inp.addEventListener('input',run);run();
   });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-print]'),function(b){b.addEventListener('click',function(){window.print();});});
   if(location.hash&&location.hash.indexOf('#row-')===0){var t=document.getElementById(location.hash.slice(1));
     if(t){var d=t.querySelector('details');if(d){d.open=true;}}}
 })();

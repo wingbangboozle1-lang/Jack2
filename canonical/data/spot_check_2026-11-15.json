@@ -536,7 +536,7 @@
  "history_scan": {
   "method": "git log --all -p over all 292 commits (repository fetched with git fetch --unshallow on 2026-11-15) scanned with canonical/privacy.py patterns on added lines. Matched text is not reproduced anywhere in the repository.",
   "current_tree": "0 pattern hits across 591 tracked text files (canonical/privacy.py, same run).",
-  "history_hits": "25 hits in 6 commits dated 2026-11-06 to 2026-11-12: 24 individual-name pattern hits and 1 street-address pattern hit. Commit list and paths are in IR-40.",
+  "history_hits": "25 hits in 6 commits dated 2026-11-06 to 2026-11-12: 24 individual-name pattern hits and 1 street-address pattern hit. Commit list and paths are in IR-41.",
   "author_fields": "2 commits from 2026-11 carry a non-GitHub-noreply address in the author or committer field. Recorded in IR-30; the address is not reproduced."
  }
 }
