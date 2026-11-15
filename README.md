@@ -24,8 +24,8 @@ Not an appraisal, not tax advice, not investment advice.
 
 | Group | Pages |
 |---|---|
-| Start | `index.html` overview, `executive-summary.html` |
-| Decide | `decision.html`, `risks.html`, `questions.html` |
+| Start | `index.html` overview, `executive-summary.html`, `advisor-summary.html` (one printable page) |
+| Decide | `decision.html`, `risks.html`, `questions.html`, `calculator.html` (browser after-tax calculator, nothing stored), `progress.html` (decision-gate progress board and brief coverage) |
 | Evidence | `demographics.html`, `market-economics.html`, `tenant.html`, `property-lease.html`, `valuation.html`, `taxes.html`, `hazards.html`, `projection-model.html` |
 | Review | `flagged.html` (Flagged for Review), `suggestions.html` (Suggestions for Review), `verification.html`, `sources.html` |
 | About | `requirements.html`, `privacy.html`, `workspaces.html` (archive), `deployment.html` |

@@ -407,6 +407,89 @@
    ],
    "action": "Re-open the linked spreadsheet and confirm the two operands 1,002,045 and 1,242,816 for Los Angeles County before the percentage is relied on.",
    "status": "needs review"
+  },
+  {
+   "id": "IR-40",
+   "area": "Privacy",
+   "title": "The public Pages source is still the whole repository, and this session could not change it",
+   "detail": "On 2026-11-15 this session's credential was refused a change of the Pages build type (HTTP 403, Resource not accessible by integration), so the site is still served from the main branch as a whole. The privacy artifact workflow stays blocked until the repository owner sets Settings, Pages, Source to GitHub Actions. Until then, folders such as session-* remain reachable at their web addresses.",
+   "rows": [],
+   "links": [
+    [
+     "GitHub REST API: update a Pages site, and the token permissions it needs",
+     "https://docs.github.com/en/rest/pages/pages"
+    ],
+    [
+     "Repository Settings, Pages (owner action)",
+     "https://github.com/wingbangboozle1-lang/Jack2/settings/pages"
+    ],
+    [
+     "Pages deployment workflow runs",
+     "https://github.com/wingbangboozle1-lang/Jack2/actions/workflows/pages.yml"
+    ]
+   ],
+   "action": "Repository owner: Settings, Pages, Source, GitHub Actions. Then re-run the latest deploy run and re-fetch the live archive page and one session folder URL.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-41",
+   "area": "Official source",
+   "title": "The tax rates in the ledger are 2025 figures, and the IRS page read on 2026-11-15 still gives 2025 thresholds",
+   "detail": "The federal rate rows are for tax years beginning in 2025, and the California rows are for the 2025 schedules. The IRS capital-gains topic page, read on 2026-11-15, still states 2025 thresholds. The calculator uses the rates only, but the owner's bracket for 2026 and later must be checked against the schedules for that year before it is entered.",
+   "rows": [
+    "TX-040",
+    "TX-047"
+   ],
+   "links": [
+    [
+     "IRS Topic 409, capital gains and losses",
+     "https://www.irs.gov/taxtopics/tc409"
+    ],
+    [
+     "Franchise Tax Board, tax rate schedules",
+     "https://www.ftb.ca.gov/"
+    ]
+   ],
+   "action": "Check the 2026 federal and California schedules before using any bracket in the calculator, and add rows for them with their own sources.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-42",
+   "area": "Calculator",
+   "title": "The browser calculator leaves out several tax rules, so its result is only arithmetic on the inputs",
+   "detail": "The calculator does not model depreciation deductions during the hold, the limit on deducting capital losses, loss carryovers, state rules other than the rate entered, or the timing of tax payments. It assumes rent is received at the end of each year and that the end-of-term sale is taxed at the same rates as a sale now. A winner is shown only after every input is entered and the check box is ticked. The result is not advice.",
+   "rows": [],
+   "links": [
+    [
+     "Calculator page",
+     "calculator.html"
+    ],
+    [
+     "Progress board, gate G4",
+     "progress.html"
+    ]
+   ],
+   "action": "Have the tax adviser review the method and the omissions before any figure from the calculator is relied on.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-43",
+   "area": "Blocked inputs",
+   "title": "Five brief items and gates G1 to G5 cannot be closed from public sources",
+   "detail": "The trade-area, neighbourhood, tract, parcel hazard and short-lease quote items need the parcel's location or a private quote. Gates G1 to G5 need the lease, the tenant's answer, broker opinions, the owner's tax position and the parcel checks. Each is shown as blocked or open on the progress board. None has been estimated.",
+   "rows": [],
+   "links": [
+    [
+     "Progress board",
+     "progress.html"
+    ],
+    [
+     "Flagged blank values",
+     "flagged.html"
+    ]
+   ],
+   "action": "Enter the private file in the secure workflow, then update the progress board. Do not publish any identifier while doing so.",
+   "status": "needs review"
   }
  ]
 }

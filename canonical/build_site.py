@@ -84,8 +84,10 @@ SHORT = {
 assert len(set(SHORT.values())) == len(SHORT), "short source names must be distinct"
 
 NAV = [
-    ("Start", [("index.html", "Overview"), ("executive-summary.html", "Executive summary")]),
-    ("Decide", [("decision.html", "Decision analysis"), ("risks.html", "Risks"), ("questions.html", "Questions to answer")]),
+    ("Start", [("index.html", "Overview"), ("executive-summary.html", "Executive summary"),
+               ("advisor-summary.html", "Advisor summary (print)")]),
+    ("Decide", [("decision.html", "Decision analysis"), ("risks.html", "Risks"), ("questions.html", "Questions to answer"),
+                ("calculator.html", "After-tax calculator"), ("progress.html", "Progress board")]),
     ("Evidence", [("demographics.html", "People and place"), ("market-economics.html", "Economy and jobs"),
                   ("tenant.html", "Tenant"), ("property-lease.html", "Property and lease"),
                   ("valuation.html", "Capital markets"), ("taxes.html", "Taxes and costs"),
@@ -391,6 +393,7 @@ JS = """(function(){
       if(out){out.textContent=q?(n+' of '+rows.length+' rows'):(rows.length+' rows');}}
     inp.addEventListener('input',run);run();
   });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-print]'),function(b){b.addEventListener('click',function(){window.print();});});
   if(location.hash&&location.hash.indexOf('#row-')===0){var t=document.getElementById(location.hash.slice(1));
     if(t){var d=t.querySelector('details');if(d){d.open=true;}}}
 })();
@@ -1220,12 +1223,474 @@ def check_links(pages):
     assert not problems, "broken links:\n  " + "\n  ".join(problems[:40])
 
 
+# ----------------------------------------------------------------------------- brief items (session 4112432a)
+# Three pages that answer named items of the brief: the decision-gate progress board and brief coverage map (W-03,
+# with W-01 to W-10 and the feature list), the browser-only after-tax calculator, and the one-page printable advisor
+# summary (W-10). Every figure they print is a ledger value, linked to its official source, or a labelled blank.
+
+def ref_value(rid):
+    """The published value of a verified or computed ledger row, as shown on the site (never typed by hand)."""
+    r = ROWS[rid]
+    assert r["status"] in ("verified", "computed"), f"{rid} is blank and cannot be used as a reference value"
+    return r["value"]
+
+
+def ref_percent(rid):
+    """A percentage read from a ledger value, e.g. '20%' or '3.8 percent' -> '20' or '3.8'. Used by the calculator's
+    'use the verified figure' buttons; the number comes from the ledger, not from this file."""
+    m = re.match(r"^\s*(\d+(?:\.\d+)?)\s*(?:%|percent)", ref_value(rid))
+    assert m, f"{rid}: {ref_value(rid)!r} does not begin with a percentage"
+    return m.group(1)
+
+
+def status_pill(text):
+    cls = {"Done": "verified", "Partly": "computed", "Open": "unverified"}
+    key = next((k for k in cls if text.startswith(k)), None)
+    css = cls.get(key, "withheld")
+    return f'<span class="badge {css}">{e(text)}</span>'
+
+
+BRIEF_ITEMS = [
+    # (ref, brief item, status, what the site has now, what is missing and why, official source id, source text)
+    ("W-01", "Replace city and county proxies with trade-area figures", "Blocked: private location",
+     "City and county figures are on the People and place and Economy pages. They are still the proxies.",
+     "A trade-area figure needs the parcel's location. The location is kept in the private workspace, so no trade-area figure is published.",
+     "S-CENSUS", "Census Bureau QuickFacts, the source of the city and county figures"),
+    ("W-02", "Extend the private worksheet to a sell-versus-hold comparison", "Partly",
+     "A six-strategy scenario model (Decision analysis and Projections) and a browser after-tax calculator with blank inputs (Calculator).",
+     "The owner's rent, basis, loan and tax bracket are not in this repository. The private worksheet stays offline.",
+     "S-IRS-409", "IRS Topic 409, capital gains rates and the 25% rate on real-property depreciation"),
+    ("W-03", "Decision-gate progress board", "Done",
+     "Gates G1 to G7 are on this page, each with what closes it and the official source for it.",
+     "The gates close only when the private file is checked. No gate is marked closed in this repository.",
+     "S-IRS-8824", "IRS Form 8824, the 45-day and 180-day exchange deadlines used in gate G6"),
+    ("W-04", "Parcel-level hazard screening", "Blocked: private location",
+     "Regional hazard context on the Hazards and insurance page. No parcel result is published.",
+     "The parcel's zone status for earthquake, flood and fire must be looked up privately in the official maps, with the parcel identifier kept offline.",
+     "S-CGS", "California Geological Survey, earthquake zone maps"),
+    ("W-10", "One-page printable summary for advisors", "Done",
+     "Advisor summary: one letter-size page, printed from the browser, with every figure linked to its official source.",
+     "The page carries no owner or parcel detail, so an adviser who needs the parcel must use the private file.",
+     "S-TSY", "U.S. Treasury daily par yield curve, the 10-year yield used in the summary"),
+    ("F-01", "A private calculator that runs in the reader's browser", "Done",
+     "Calculator: after-tax sale against renewal, every input blank. It makes no network call and stores nothing.",
+     "The owner's inputs must be typed in by the reader. A winner is shown only when every input is entered and checked.",
+     "S-IRS-409", "IRS Topic 409, capital gains rates"),
+    ("F-02", "Neighbourhood-level data around the parcel", "Blocked: private location",
+     "Not published. City, county and metro data only.",
+     "Neighbourhood data needs the parcel's location in a secure workflow, as the brief requires.",
+     "S-ZIMAS", "L.A. City Planning zoning and parcel lookup, used privately"),
+    ("F-03", "An after-tax module", "Partly",
+     "The calculator's tax step: federal long-term gain, the 25% depreciation rate, the 3.8% investment income tax and the California rate.",
+     "The owner's basis, depreciation, loan and bracket are needed. Depreciation deductions and loss limits are not modelled (see Flagged for Review).",
+     "S-IRS-559", "IRS Topic 559, net investment income tax"),
+    ("F-04", "Price the short-lease discount from real quotes", "Blocked: no verified quote",
+     "Not priced. The buyer's yield for this lease is a blank row.",
+     "No official source gives a quote for this lease. A quote needs brokers' opinions, which are private until obtained.",
+     "S-NNN-8K", "SEC filing by a listed net-lease REIT, the public sale and purchase yields"),
+    ("F-05", "Tract-level trend evidence alongside the regional figures", "Blocked: private location",
+     "Regional and county trends only.",
+     "The Census tract depends on the location, which must be selected in the secure workflow.",
+     "S-CENSUS", "Census Bureau QuickFacts"),
+    ("F-06", "Use the location only in a secure workflow to select Census tracts and planning, traffic, school and competitor evidence", "Blocked: private location",
+     "County school counts and the City planning tool are listed as sources. Traffic and competitor evidence are not sourced yet.",
+     "The location is used only offline. Traffic counts and competitor lists are not yet sourced from an official site.",
+     "S-CDE", "California Department of Education, school data"),
+    ("F-07", "Privately check seismic, flood and fire maps, engineering and insurance; stress loss of rent, repairs and exit liquidity", "Partly",
+     "Regional risks and stress cases in the projection model. Insurance and engineering are blank rows.",
+     "Parcel map checks, an engineering inspection and an insurance quote are private and not yet done.",
+     "S-CDI", "California Department of Insurance, consumer guidance on earthquake cover"),
+    ("F-08", "Parcel's actual zone status for earthquake, fire and flood, replacing the regional context", "Blocked: private location",
+     "Regional hazard figures are on the Hazards and insurance page.",
+     "Replacing the regional context needs the parcel's zone status, from the official maps, checked privately.",
+     "S-FEMA-MSC", "FEMA flood maps, the official flood-zone lookup"),
+    ("F-09", "Create and back-test a versioned cash-flow model when verified inputs and comparable history exist", "Not started: conditions not met",
+     "A versioned scenario model with labelled assumptions and a test suite (Projections).",
+     "No back-test is run: the comparable history with verified inputs does not yet exist, and the private rent and basis are missing.",
+     "S-NNN-8K", "SEC filing by a listed net-lease REIT, the comparable yields it reports"),
+    ("F-10", "Same-store sales, unit counts, closures and franchise rental revenue, read as a direction over several quarters", "Partly",
+     "Same-store sales for four periods, unit counts for two dates, and one quarter of franchise rent (Tenant page).",
+     "More quarters are needed before the direction is reliable. Each new quarter should be added from the next filing.",
+     "S-JACK-8K", "SEC: the tenant's quarterly results, the source of the same-store and unit figures"),
+]
+
+DECISION_GATES = [
+    # (gate, what must be true, status, what closes it, official source id, source text)
+    ("G1", "Lease facts: expiry date, rent, renewal options and notice dates", "Open: private file",
+     "A one-page attorney abstract of the lease and every amendment, checked against the notice calendar. Check the County Recorder's index for a recorded memorandum.",
+     "S-RRCC", "L.A. County Registrar-Recorder, the index of recorded documents"),
+    ("G2", "The tenant's answer to an early extension", "Open",
+     "A written answer from the tenant. Its own filings show that it is closing restaurants and selling real estate, with the timing limited.",
+     "S-JACK-8K", "SEC: the tenant's quarterly results, which describe the closure programme"),
+    ("G3", "Price evidence: two broker opinions, as is and as extended", "Open: private",
+     "Two opinions with comparables. Public yields are on the NNN REIT filings, but they are not a quote for this lease.",
+     "S-NNN-8K", "SEC filing by a listed net-lease REIT, public sale and purchase yields"),
+    ("G4", "After-tax number for a cash sale and for renewal", "Open: inputs needed",
+     "The calculator, run with the owner's basis, depreciation, loan and brackets, every input checked against its document.",
+     "S-IRS-409", "IRS Topic 409, capital gains rates"),
+    ("G5", "Parcel hazard screen: earthquake, flood, fire and insurance", "Open: private",
+     "Official map checks and an insurance quote, both kept in the private file.",
+     "S-CGS", "California Geological Survey, earthquake zone maps"),
+    ("G6", "Exchange timing, if the owner sells and exchanges", "Open: depends on G1 to G4",
+     "A replacement property named within the 45-day window and received within the 180-day window.",
+     "S-IRS-8824", "IRS Form 8824, like-kind exchanges"),
+    ("G7", "Final choice, sell or renew", "Open: depends on G1 to G6",
+     "A winner is shown only when the calculator's inputs are all verified. The decision rule is on the Decision analysis page.",
+     "S-TSY", "U.S. Treasury daily par yield curve, the benchmark for the discount rate"),
+]
+
+INTERNAL_ITEMS = [
+    ("Keep identifiers, lease files and owner finances offline; publish only aggregate, non-identifying findings",
+     "Partly: the site holds no identifiers. The GitHub Pages source is still the whole repository, which the owner must switch (see Flagged for Review)."),
+    ("Executive summary of the important details", "Done: Executive summary page."),
+    ("Suggestions for improving the site, nothing implemented before review", "Done: Suggestions for Review page, each marked not implemented."),
+    ("Questions, information and answers needed before a decision", "Done: Questions to answer page."),
+    ("Requirements traced to pages", "Done: Requirements page, one row per requirement."),
+]
+
+
+def _prose_ok(text, where):
+    check_prose(text, [], where, anywhere=True)
+
+
+for _n, _it in enumerate(BRIEF_ITEMS):
+    for _t in _it[1:5]:
+        _prose_ok(_t, f"brief item {_it[0]}")
+for _n, _g in enumerate(DECISION_GATES):
+    for _t in _g[1:4]:
+        _prose_ok(_t, f"decision gate {_g[0]}")
+for _a, _b in INTERNAL_ITEMS:
+    _prose_ok(_a + " " + _b, "internal item")
+
+
+def build_progress():
+    n_done = sum(1 for it in BRIEF_ITEMS if it[2].startswith("Done"))
+    n_part = sum(1 for it in BRIEF_ITEMS if it[2].startswith("Partly"))
+    n_block = sum(1 for it in BRIEF_ITEMS if it[2].startswith("Blocked") or it[2].startswith("Not started"))
+    assert n_done + n_part + n_block == len(BRIEF_ITEMS)
+    cards = (f'<div class="cards"><div class="kpi"><div class="kpi-v">{n_done}</div><div class="kpi-l">Done</div>'
+             f'<div class="kpi-s">of {len(BRIEF_ITEMS)} brief items</div></div>'
+             f'<div class="kpi"><div class="kpi-v">{n_part}</div><div class="kpi-l">Partly done</div>'
+             f'<div class="kpi-s">needs owner inputs or more evidence</div></div>'
+             f'<div class="kpi"><div class="kpi-v">{n_block}</div><div class="kpi-l">Blocked or not started</div>'
+             f'<div class="kpi-s">needs the private location or verified inputs</div></div></div>')
+    body = [cards]
+    body.append('<p class="note"><strong>Status key.</strong> Done: on the site. Partly: some of it is on the site, the rest needs '
+                'owner inputs or more evidence. Blocked: needs the parcel location, which is kept in the private workspace, or a '
+                'verified quote that does not yet exist. Not started: the conditions for it are not met. Open: a gate that is not yet '
+                'closed. Nothing here is marked closed unless the evidence is in the repository.</p>')
+    body.append('<h2 id="items">Brief items</h2>')
+    body.append(filter_box("items-t"))
+    rows = []
+    for ref, item, status, now, missing, sid, stext in BRIEF_ITEMS:
+        rows.append({"cells": [f'<span class="rid">{e(ref)}</span>', e(item), status_pill(status), e(now), e(missing),
+                               src_link(sid) + f'<span class="note"> {e(stext)}</span>']})
+    body.append(table(["Ref", "Brief item", "Status", "What the site has now", "What is missing, and why", "Official source"],
+                      rows, "data", "items-t"))
+    body.append('<h2 id="gates">Decision gates</h2>')
+    body.append('<p class="note">A gate closes when its evidence is in the private file and checked. The gates are the order in which the '
+                'decision can be made. G7 depends on the others.</p>')
+    rows = []
+    for gate, must, status, closes, sid, stext in DECISION_GATES:
+        rows.append({"cells": [f'<span class="rid">{e(gate)}</span>', e(must), status_pill(status), e(closes),
+                               src_link(sid) + f'<span class="note"> {e(stext)}</span>']})
+    body.append(table(["Gate", "What must be true", "Status", "What closes it", "Official source"], rows, "data", "gates-t"))
+    body.append('<h2 id="internal">Internal items</h2>')
+    body.append('<p class="note">These items concern the site, the privacy of the owner\'s files, or the review process. No '
+                'outside data applies to them, so they carry no official-source column. Each is listed with its status.</p>')
+    rows = [[e(a), e(b)] for a, b in INTERNAL_ITEMS]
+    body.append(table(["Item", "Status"], rows, "site", "internal-t"))
+    lede = ("The brief's numbered items (W-01 to W-10) and the feature items that depend on outside data, each with a status, "
+            "what is missing and why, and the official source it depends on. The decision gates set the order of the decision. "
+            "Nothing private is shown.")
+    return page("progress.html", "Progress board", lede, "".join(body), "Decide")
+
+
+CALC_JS = r"""
+(function(){
+  var NIIT = __NIIT__;
+  function $(id){ return document.getElementById(id); }
+  function num(id){ var el=$(id); if(!el || el.value===''){ return null; } var x=Number(el.value); return isFinite(x)?x:null; }
+  function sel(id){ return $(id).value; }
+  var FIELDS = [
+    ['s_price','Sale price'], ['s_cost','Sale costs the seller pays (enter 0 if none)'], ['s_loan','Loan paid off at sale (enter 0 if none)'],
+    ['s_basis','Adjusted tax basis'], ['s_dep','Depreciation taken since purchase (enter 0 if none)'],
+    ['s_r1250','Rate on depreciation recapture'], ['s_rltcg','Federal rate on the rest of the gain'],
+    ['s_rca','California rate on the gain'], ['s_niit','Investment income tax applies (yes or no)'],
+    ['h_rent','Current yearly base rent'], ['h_esc','Rent increase each year (enter 0 if flat)'], ['h_years','Years of renewed term to model (1 to 30)'],
+    ['h_fed','Your federal income tax rate on the rent'], ['h_ca','Your California rate on the rent'],
+    ['h_niit','Investment income tax applies to the rent (yes or no)'], ['h_end_net','Net sale proceeds at the end of the term, after costs and loan'],
+    ['h_end_basis','Adjusted tax basis at the end of the term'], ['h_end_dep','Depreciation taken by the end of the term (enter 0 if none)'],
+    ['h_disc','Discount rate, after tax (the rate you use to compare cash over time)']
+  ];
+  var PCT = ['s_r1250','s_rltcg','s_rca','h_esc','h_fed','h_ca','h_disc'];
+  var YN = ['s_niit','h_niit'];
+  function money(x){ return (x < 0 ? '\u2212' : '') + '$' + Math.round(Math.abs(x)).toLocaleString('en-US'); }
+  function taxOnGain(gain, dep, r1250, rltcg, niit, rca){
+    if (gain <= 0) { return 0; }
+    var rec = Math.min(Math.max(dep, 0), gain);
+    var rest = gain - rec;
+    return rec*r1250 + rest*rltcg + (niit ? gain*NIIT/100 : 0) + gain*rca;
+  }
+  function missingFields(){
+    var miss = [];
+    FIELDS.forEach(function(f){
+      var id=f[0];
+      if (YN.indexOf(id)>=0) { if (sel(id)==='') miss.push(f[1]); return; }
+      var v = num(id);
+      if (v === null) { miss.push(f[1]); return; }
+      if (PCT.indexOf(id)>=0 && (v<0 || v>100)) miss.push(f[1] + ' (must be between 0 and 100)');
+      if (id==='h_years' && (v<1 || v>30 || Math.floor(v)!==v)) miss.push(f[1] + ' (whole years from 1 to 30)');
+      if (id!=='h_years' && PCT.indexOf(id)<0 && v<0) miss.push(f[1] + ' (cannot be negative)');
+    });
+    if (num('s_price') !== null && num('s_price') <= 0) miss.push('Sale price (must be above 0)');
+    return miss;
+  }
+  function run(){
+    var out = $('calc-out');
+    var miss = missingFields();
+    if (miss.length){
+      out.innerHTML = '<div class="calc-warn"><p><strong>Not calculated yet.</strong> These inputs are missing or not valid:</p><ul>' +
+        miss.map(function(m){ return '<li>' + m.replace(/</g,'&lt;') + '</li>'; }).join('') + '</ul></div>';
+      return;
+    }
+    var price=num('s_price'), cost=num('s_cost'), loan=num('s_loan'), basis=num('s_basis'), dep=num('s_dep');
+    var r1250=num('s_r1250')/100, rltcg=num('s_rltcg')/100, rca=num('s_rca')/100, niitS = sel('s_niit')==='yes';
+    var gain = price - cost - basis;
+    var taxSale = taxOnGain(gain, dep, r1250, rltcg, niitS, rca);
+    var now = price - cost - loan - taxSale;
+    var rent=num('h_rent'), esc=num('h_esc')/100, years=num('h_years'), fed=num('h_fed')/100, ca=num('h_ca')/100;
+    var niitR = sel('h_niit')==='yes' ? NIIT/100 : 0;
+    var disc=num('h_disc')/100, taxRent = fed + ca + niitR;
+    var pvRent = 0, i, r;
+    for (i=1; i<=years; i++){
+      r = rent * Math.pow(1+esc, i-1);
+      pvRent += r * (1 - taxRent) / Math.pow(1+disc, i);
+    }
+    var endNet=num('h_end_net'), endBasis=num('h_end_basis'), endDep=num('h_end_dep');
+    var taxEnd = taxOnGain(endNet - endBasis, endDep, r1250, rltcg, niitS, rca);
+    var pvEnd = (endNet - taxEnd) / Math.pow(1+disc, years);
+    var hold = pvRent + pvEnd;
+    var diff = now - hold;
+    var checked = $('attest').checked;
+    var h = '<h3>Sell now</h3><table class="tbl calc-t"><tbody>' +
+      '<tr><td>Sale price</td><td>' + money(price) + '</td></tr>' +
+      '<tr><td>Less sale costs and loan paid off</td><td>' + money(-(cost+loan)) + '</td></tr>' +
+      '<tr><td>Gain for tax (price less costs less basis)</td><td>' + money(gain) + (gain<0?' (a loss: no tax is modelled)':'') + '</td></tr>' +
+      '<tr><td>Less tax on the sale</td><td>' + money(-taxSale) + '</td></tr>' +
+      '<tr class="calc-total"><th scope="row">After-tax cash today</th><th>' + money(now) + '</th></tr></tbody></table>';
+    h += '<h3>Renew (negotiated rent)</h3><table class="tbl calc-t"><tbody>' +
+      '<tr><td>Present value of after-tax rent over ' + years + ' years</td><td>' + money(pvRent) + '</td></tr>' +
+      '<tr><td>Present value of the after-tax sale at the end of the term</td><td>' + money(pvEnd) + '</td></tr>' +
+      '<tr class="calc-total"><th scope="row">Present value today</th><th>' + money(hold) + '</th></tr></tbody></table>';
+    if (!checked){
+      h += '<div class="calc-warn"><p><strong>No comparison shown.</strong> Tick the check box below, once every input has been checked against its document. Until then the calculator does not say which option is better.</p></div>';
+    } else {
+      var word = diff > 0 ? 'Selling now is worth more' : (diff < 0 ? 'Renewing is worth more' : 'The two are equal');
+      h += '<div class="calc-result"><p><strong>' + word + '</strong>' + (diff!==0 ? ' by ' + money(Math.abs(diff)) : '') +
+        ' in today\'s after-tax money, at the discount rate you entered.</p><p class="note">This is arithmetic on the inputs you entered. It is not advice, and it is not a decision.</p></div>';
+    }
+    out.innerHTML = h;
+  }
+  function clearAll(){
+    FIELDS.forEach(function(f){ var el=$(f[0]); if(el){ el.value=''; } });
+    $('attest').checked=false; $('calc-out').innerHTML='<p class="note">Cleared. Nothing was stored.</p>';
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('button[data-set]'), function(b){
+    b.addEventListener('click', function(){ $(b.getAttribute('data-set')).value = b.getAttribute('data-val'); });
+  });
+  $('calc-run').addEventListener('click', run);
+  $('calc-clear').addEventListener('click', clearAll);
+})();
+"""
+
+
+def _rate_button(field, rid, label):
+    return (f'<button type="button" class="chip" data-set="{field}" data-val="{ref_percent(rid)}" '
+            f'title="Fill this box with the figure from {rid}">Use the verified figure ({rid})</button>')
+
+
+def build_calculator():
+    niit = ref_percent("TX-043")
+    js = CALC_JS.replace("__NIIT__", niit)
+    fields = [
+        ("Sale now", [
+            ("s_price", "Sale price (USD)", "The price the buyer would pay for the property as it is.", None),
+            ("s_cost", "Sale costs the seller pays (USD)", "Broker fees, transfer taxes and other seller costs. Enter 0 if none.", None),
+            ("s_loan", "Loan paid off at sale (USD)", "Enter 0 if the property has no loan.", None),
+            ("s_basis", "Adjusted tax basis (USD)", "From your tax records. Ask your tax adviser to confirm the figure.", None),
+            ("s_dep", "Depreciation taken since purchase (USD)", "From the tax returns. Enter 0 if none.", None),
+            ("s_r1250", "Rate on depreciation recapture (%)", f"Maximum federal rate on the part of the gain from past depreciation: {ref_value('TX-042')} (IRS Topic 409).",
+             _rate_button("s_r1250", "TX-042", "")),
+            ("s_rltcg", "Federal rate on the rest of the gain (%)", f"Enter the rate for your taxable income. The top rate is {ref_value('TX-040')} (IRS Topic 409).",
+             _rate_button("s_rltcg", "TX-040", "")),
+            ("s_rca", "California rate on the gain (%)", f"California taxes gains at ordinary rates. The top rate is {ref_value('TX-060')} including the additional 1% (FTB).",
+             _rate_button("s_rca", "TX-060", "")),
+        ]),
+        ("Renew (negotiated)", [
+            ("h_rent", "Current yearly base rent (USD)", "From the lease abstract and the rent ledger. Not the owner's guess.", None),
+            ("h_esc", "Rent increase each year (%)", "From the lease. Enter 0 if the rent is flat.", None),
+            ("h_years", "Years of renewed term to model", "A whole number from 1 to 30.", None),
+            ("h_fed", "Your federal income tax rate on the rent (%)", "Your marginal federal rate, from your own return.", None),
+            ("h_ca", "Your California rate on the rent (%)", "Your marginal California rate, from your own return.", None),
+            ("h_end_net", "Net sale proceeds at the end of the term (USD)", "After sale costs and any loan at that time.", None),
+            ("h_end_basis", "Adjusted tax basis at the end of the term (USD)", "From the tax records at that date.", None),
+            ("h_end_dep", "Depreciation taken by the end of the term (USD)", "Enter 0 if none.", None),
+            ("h_disc", "Discount rate, after tax (%)", f"The rate for comparing cash over time. For reference, the 10-year Treasury yield was {ref_value('CM-001')} (U.S. Treasury). It is a benchmark, not a recommendation.",
+             None),
+        ]),
+    ]
+    sel_fields = {"s_niit": ("Investment income tax applies to the gain?", f"The investment income tax is {ref_value('TX-043')} and applies above {ref_value('TX-044')} (IRS Topic 559)."),
+                  "h_niit": ("Investment income tax applies to the rent?", f"Rents and net gains from real estate are within the tax (IRS Topic 559). Applies above {ref_value('TX-044')}.")}
+    body = ['<div class="calc-note"><p><strong>Private to you.</strong> Nothing you type is sent, saved or shared. This page makes no network call, '
+            'stores nothing, and forgets everything when you close it. Keep your figures in the private file and type only what you need.</p>'
+            '<p>Every box starts blank. No figure is filled in for you, except the buttons that copy a verified rate from the ledger.</p></div>']
+    body.append('<form id="calc" class="calc" autocomplete="off" onsubmit="return false">')
+    for legend, items in fields:
+        body.append(f'<fieldset class="calc-group"><legend>{e(legend)}</legend>')
+        for fid, label, hint, extra in items:
+            body.append(f'<div class="calc-row"><label for="{fid}">{e(label)}</label>'
+                        f'<input id="{fid}" type="number" step="any" inputmode="decimal" min="0">'
+                        f'<p class="hint">{fill(hint)}</p>{extra or ""}</div>')
+        if legend == "Sale now":
+            for sid in ("s_niit",):
+                label, hint = sel_fields[sid]
+                body.append(f'<div class="calc-row"><label for="{sid}">{e(label)}</label><select id="{sid}"><option value="">Choose</option>'
+                            f'<option value="yes">Yes</option><option value="no">No</option></select><p class="hint">{fill(hint)}</p></div>')
+        else:
+            for sid in ("h_niit",):
+                label, hint = sel_fields[sid]
+                body.append(f'<div class="calc-row"><label for="{sid}">{e(label)}</label><select id="{sid}"><option value="">Choose</option>'
+                            f'<option value="yes">Yes</option><option value="no">No</option></select><p class="hint">{fill(hint)}</p></div>')
+        body.append('</fieldset>')
+    body.append('<fieldset class="calc-group"><legend>Check before the comparison is shown</legend>'
+                '<label class="check"><input type="checkbox" id="attest"> I have checked every amount above against its document '
+                '(the lease, the rent ledger, the tax records and my return). I accept that the calculator leaves out '
+                'depreciation deductions, the loss limit and any state rule it does not name.</label></fieldset>')
+    body.append('<div class="calc-actions"><button type="button" id="calc-run" class="btn">Calculate</button> '
+                '<button type="button" id="calc-clear" class="btn ghost">Clear every box</button></div></form>')
+    body.append('<section id="calc-out" class="calc-out" aria-live="polite"><p class="note">Fill in every box, tick the check, then press Calculate.</p></section>')
+    body.append(f"<script>{js}</script>")
+    body.append('<h2 id="method">How the arithmetic works</h2>')
+    rows = [
+        ["Gain", "Sale price, less sale costs, less adjusted tax basis."],
+        ["Depreciation recapture", "The part of a gain up to the depreciation taken, taxed at the recapture rate. The rest of the gain is taxed at the federal rate you enter."],
+        ["Investment income tax", "If you answer yes, the investment income tax rate is applied to the whole gain or rent. Its rate is a ledger value."],
+        ["California", "The California rate you enter is applied to the whole gain, because California taxes gains at ordinary rates."],
+        ["Renewal", "Each year's rent is grown by the increase you enter, taxed at the rates you enter, and discounted to today at the discount rate."],
+        ["End of renewed term", "The end-of-term sale is taxed with the same rates as the sale now. This is an assumption, stated here."],
+        ["Left out", "Depreciation deductions during the hold, the limit on deducting capital losses, and any state rule the page does not name. Those are for the private model."],
+    ]
+    body.append(table(["Step", "What it does"], rows, "site", "method-t"))
+    body.append(f'<p class="note">Rates and thresholds come from the ledger rows named beside each box, each linked to its official '
+                f'source: <a href="taxes.html">Taxes and costs</a>, and <a href="valuation.html">Capital markets</a>.</p>')
+    lede = ("A browser calculator that sets the after-tax cash from a sale now against the present value of a negotiated renewal. "
+            "Every box starts blank, nothing is stored or sent, and no winner is shown until every input is entered and checked.")
+    return page("calculator.html", "After-tax calculator", lede, "".join(body), "Decide")
+
+
+ADVISOR_FIGURES = [
+    ("Restaurants in the tenant's system", "TN-001", "Its own quarterly filing; a year earlier it was [[TN-004]]."),
+    ("Same-store sales, whole system, latest quarter", "TN-020", "As the tenant reports it in its quarterly filing. The company gives the reason: " + "[[TN-025]]."),
+    ("Same-store sales, last full fiscal year", "TN-023", "Annual report; the year before was [[TN-024]]."),
+    ("Share of restaurants run by franchisees", "TN-008", "Annual report, at fiscal year-end."),
+    ("10-year Treasury yield, the discount benchmark", "CM-001", "U.S. Treasury; the Federal Reserve target range is [[CM-010]]."),
+    ("Top federal rate on most long-term gains", "TX-040", "IRS Topic 409; the rate on depreciation recapture is [[TX-042]]."),
+    ("Federal investment income tax", "TX-043", "IRS Topic 559; it applies above [[TX-044]]."),
+    ("Top California rate including the extra 1% surcharge", "TX-060", "Franchise Tax Board schedules for tax year 2025, the latest the ledger holds. See the [[TX-059]] surcharge."),
+    ("Measure ULA thresholds on sale price", "TX-003", "City of Los Angeles. The thresholds are adjusted each year: [[TX-010]]."),
+]
+
+
+def build_advisor():
+    figs = []
+    for label, rid, note in ADVISOR_FIGURES:
+        figs.append([e(label), f'<strong>{e(ref_value(rid))}</strong>', e(ROWS[rid]["period"] or "") or "&mdash;",
+                     row_link(rid) + " " + src_link(ROWS[rid]["source"])])
+    fig_rows = []
+    for (label, rid, note), row in zip(ADVISOR_FIGURES, figs):
+        fig_rows.append({"cells": row + [fill(note)]})
+    body = ['<div class="print-bar no-print"><button type="button" class="btn" data-print="1">Print this page</button> '
+            '<span class="note">Prints on one letter-size page. Each figure links to its official source.</span></div>']
+    body.append('<section class="one-page">')
+    body.append(f'<p class="question"><strong>Question.</strong> {e(DECIDE["question"])}</p>')
+    body.append(f'<p class="answer"><strong>Short answer.</strong> {e(DECIDE["answer_short"])}</p>')
+    body.append('<h2>Key figures, each read at its official source</h2>')
+    body.append(table(["Figure", "Value", "Period", "Official source", "Note"], fig_rows, "data", "adv-figs"))
+    body.append('<h2>The rule, by answer</h2><ol class="rules">')
+    for rule in DECIDE["rule"][:3]:
+        cond = rule["if"][0].lower() + rule["if"][1:]
+        act = rule["then"][0].lower() + rule["then"][1:]
+        body.append(f'<li><strong>If</strong> {e(cond)}, <strong>then</strong> {e(act)}</li>')
+    body.append('</ol>')
+    body.append('<h2>Blank until the private file is checked</h2><ul class="blanks">')
+    critical = [q for q in QUESTIONS if q["priority"] == "Critical" and q["status"] == "Open"][:8]
+    for q in critical:
+        body.append(f'<li>{e(q["question"])} <span class="ref">({e(q["id"])})</span></li>')
+    body.append('</ul>')
+    body.append('<h2>First steps</h2><ol class="steps">')
+    for p in DECIDE["plan"][:2]:
+        body.append(f'<li><strong>{e(p["when"])}:</strong> {e(p["action"])}</li>')
+    body.append('</ol>')
+    body.append('<p class="fine">Decision support only: not an appraisal, not tax advice, not investment advice. The owner is '
+                '[OWNER-01] and the property is [PROPERTY-01]; no identifying detail is published. Full figures, sources and blanks: '
+                '<a href="questions.html">Questions</a>, <a href="flagged.html">Flagged for Review</a>, <a href="sources.html">Sources</a>.</p>')
+    body.append('</section>')
+    lede = ("A one-page summary for an adviser: the question, the short answer, the figures that matter, the rule, what is still "
+            "blank, and the first steps. Print it from the browser.")
+    return page("advisor-summary.html", "Advisor summary", lede, "".join(body), "Start")
+
+
+PRINT_CSS = """
+.print-bar{margin:0 0 .8rem}
+.one-page .question,.one-page .answer{margin:.2rem 0;font-size:.95rem}
+.one-page h2{font-size:1rem;margin:.7rem 0 .25rem}
+.one-page table{font-size:.78rem}
+.one-page .rules,.one-page .steps,.one-page .blanks{font-size:.82rem;margin:.2rem 0;padding-left:1.1rem}
+.one-page .fine{font-size:.72rem;color:var(--muted)}
+.calc-note{background:var(--accent-bg);border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;margin:0 0 1rem}
+.calc-note p{margin:.3rem 0}
+.calc{display:grid;gap:.9rem}
+.calc-group{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem}
+.calc-group legend{font-weight:700;padding:0 .3rem}
+.calc-row{display:grid;grid-template-columns:minmax(12rem,1fr) minmax(8rem,12rem);gap:.2rem .8rem;align-items:center;padding:.35rem 0;border-top:1px dashed var(--line)}
+.calc-row:first-of-type{border-top:0}
+.calc-row label{font-weight:600}
+.calc-row input,.calc-row select{font:inherit;padding:.35rem .5rem;border:1px solid var(--line);border-radius:6px;width:100%;box-sizing:border-box}
+.calc-row .hint{grid-column:1/-1;margin:0;font-size:.82rem;color:var(--muted)}
+.chip{font:inherit;font-size:.78rem;border:1px solid var(--accent);background:#fff;color:var(--accent);border-radius:999px;padding:.12rem .6rem;cursor:pointer;margin:.2rem 0 0}
+.check{display:flex;gap:.5rem;align-items:flex-start}
+.btn{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:.5rem .9rem;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+.calc-actions{display:flex;gap:.6rem;flex-wrap:wrap}
+.calc-out{margin-top:1rem}
+.calc-t{width:100%}
+.calc-total th{text-align:left}
+.calc-warn{background:#fff7e6;border:1px solid #f0c36d;border-radius:10px;padding:.7rem 1rem}
+.calc-result{background:#eef8f0;border:1px solid #9ccfa8;border-radius:10px;padding:.7rem 1rem}
+@media (max-width:640px){.calc-row{grid-template-columns:1fr}}
+@media print{
+  @page{size:letter;margin:.45in}
+  header.top,nav.side,footer.foot,.menu,.no-print,.crumb,.lede,.skip{display:none !important}
+  body{background:#fff;color:#000}
+  main{padding:0;margin:0;max-width:none}
+  .one-page{break-inside:avoid}
+  .one-page table{break-inside:avoid}
+  .one-page h1{font-size:1.2rem;margin:0 0 .3rem}
+  a{color:#000;text-decoration:none}
+  .src{color:#000}
+}
+"""
+
+
+
 def main():
     ledger_rules()
     run_prose_checks()
     pages = {"index.html": build_index(), "executive-summary.html": build_exec(), "decision.html": build_decision(),
              "risks.html": build_risks(), "questions.html": build_questions()}
     pages.update(build_evidence())
+    pages.update({"advisor-summary.html": build_advisor(), "calculator.html": build_calculator(), "progress.html": build_progress()})
     pages.update({"projection-model.html": build_projection(), "flagged.html": build_flagged(), "suggestions.html": build_suggestions(),
                   "verification.html": build_verification(), "sources.html": build_sources(), "requirements.html": build_requirements(),
                   "privacy.html": build_privacy(), "workspaces.html": build_archive(), "deployment.html": build_deployment(),
@@ -1238,7 +1703,7 @@ def main():
         assert "http://" not in re.sub(r'xmlns="http://www\.w3\.org/[^"]+"', "", text), f"{slug}: insecure address"
     os.makedirs(os.path.join(REPO, "assets"), exist_ok=True)
     outputs = dict(pages)
-    outputs["assets/site.css"] = CSS
+    outputs["assets/site.css"] = CSS + PRINT_CSS
     outputs["assets/site.js"] = JS
     outputs["favicon.svg"] = FAVICON
     for rel, text in outputs.items():

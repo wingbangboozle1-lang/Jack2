@@ -118,6 +118,111 @@
    "where": "flagged.html",
    "status": "Done",
    "note": "Blank rows and irregularities, each with a link."
+  },
+  {
+   "id": "RQ-18",
+   "requirement": "W-01: replace city and county proxies with trade-area figures",
+   "where": "progress.html",
+   "status": "Blocked: private location",
+   "note": "Trade-area figures need the parcel's location, which stays in the private workspace. City and county figures remain the proxies."
+  },
+  {
+   "id": "RQ-19",
+   "requirement": "W-02: extend the private worksheet to a sell-versus-hold comparison",
+   "where": "calculator.html, projection-model.html",
+   "status": "Partly",
+   "note": "Scenario model and a browser calculator with blank inputs. The owner's private figures are not in the repository."
+  },
+  {
+   "id": "RQ-20",
+   "requirement": "W-03: decision-gate progress board",
+   "where": "progress.html",
+   "status": "Done",
+   "note": "Gates G1 to G7, each with what closes it and its official source. No gate is marked closed without evidence."
+  },
+  {
+   "id": "RQ-21",
+   "requirement": "W-04: parcel-level hazard screening",
+   "where": "progress.html, hazards.html",
+   "status": "Blocked: private location",
+   "note": "Regional hazard context only. The parcel's zone status is checked privately in the official maps."
+  },
+  {
+   "id": "RQ-22",
+   "requirement": "W-10: one-page printable summary for advisors",
+   "where": "advisor-summary.html",
+   "status": "Done",
+   "note": "Letter-size print layout; every figure links to its official source; no owner or parcel detail."
+  },
+  {
+   "id": "RQ-23",
+   "requirement": "A private calculator that runs in the reader's browser",
+   "where": "calculator.html",
+   "status": "Done",
+   "note": "Every box starts blank; no network call; nothing stored; a winner appears only after every input is entered and checked."
+  },
+  {
+   "id": "RQ-24",
+   "requirement": "Neighbourhood-level data around the parcel",
+   "where": "progress.html",
+   "status": "Blocked: private location",
+   "note": "Not published. Needs the parcel location in a secure workflow."
+  },
+  {
+   "id": "RQ-25",
+   "requirement": "An after-tax module that gives one number to compare with the hold case",
+   "where": "calculator.html, taxes.html",
+   "status": "Partly",
+   "note": "The calculator's tax step uses the verified rates. Owner basis, depreciation and bracket are inputs still to be supplied."
+  },
+  {
+   "id": "RQ-26",
+   "requirement": "Price the short-lease discount from real quotes",
+   "where": "progress.html, valuation.html",
+   "status": "Blocked: no verified quote",
+   "note": "No official quote for this lease exists. The buyer-yield row is blank."
+  },
+  {
+   "id": "RQ-27",
+   "requirement": "Tract-level trend evidence alongside the regional figures",
+   "where": "progress.html",
+   "status": "Blocked: private location",
+   "note": "Tract selection depends on the parcel location, held privately."
+  },
+  {
+   "id": "RQ-28",
+   "requirement": "Use the location only in a secure workflow for Census tracts, planning, traffic, school and competitor evidence",
+   "where": "progress.html",
+   "status": "Blocked: private location",
+   "note": "County school and City planning sources are listed. Traffic and competitor evidence are not yet sourced."
+  },
+  {
+   "id": "RQ-29",
+   "requirement": "Privately check seismic, flood and fire maps, engineering and insurance; stress rent, repairs and exit liquidity together",
+   "where": "progress.html, hazards.html, projection-model.html",
+   "status": "Partly",
+   "note": "Regional hazard context and stress cases exist. Parcel map checks, engineering and insurance are private and not done."
+  },
+  {
+   "id": "RQ-30",
+   "requirement": "Replace regional hazard context with the parcel's actual zone status",
+   "where": "progress.html",
+   "status": "Blocked: private location",
+   "note": "Needs the parcel identifier kept offline and the official map checks."
+  },
+  {
+   "id": "RQ-31",
+   "requirement": "Versioned cash-flow model, back-tested once verified inputs and comparable history exist",
+   "where": "projection-model.html, progress.html",
+   "status": "Not started: conditions not met",
+   "note": "Versioned scenario model with labelled assumptions. No back-test: verified inputs and comparable history are not yet available."
+  },
+  {
+   "id": "RQ-32",
+   "requirement": "Same-store sales, unit counts, closures and franchise rent read as a direction over several quarters",
+   "where": "tenant.html",
+   "status": "Partly",
+   "note": "Four same-store readings and two unit-count dates. More quarters needed."
   }
  ]
 }
