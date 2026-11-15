@@ -1949,3 +1949,24 @@ Read the live board and the tree before claiming. No open claim from any session
 - **GitHub Pages:** latest build `2ecf3aa`, status **built** (Pages API, 2026-11-13T22:05:29Z). Live `flagged.html` fetched and confirmed: 26 irregularities (IR-33 present), 44 blank values.
 - **Conflicts and history.** `origin/main` moved to `d1da12b` (PR #63, session `0a4356d3`) while this session worked. The rebase conflicted in `COORDINATION.md` (both appended entries kept) and in regenerated audit outputs (main's copy taken, then regenerated on the merged tree). Because the PR had been opened earlier against the claim commit alone, the branch was updated with a lease-protected force push (`755f6d3` → `7b9c692`). Only this session's own branch was rewritten; no other session's history was changed.
 - **Follow-up:** PR for this record only (`COORDINATION.md` plus the regenerated F4 audit outputs).
+
+---
+
+## Session `90196f64` — local CI harness temporary-directory fix (2026-11-15)
+
+Read the live task board and inspected the current tree before claiming. The privacy-reviewed Pages artifact integration (PP-01, session `568ae793`) is already merged in PR #73; its artifact allowlist and Pages workflows are not modified here. This task is limited to the local workflow replay harness, which failed when run without the GitHub Actions-provided `RUNNER_TEMP` environment variable (`Permission denied: /published-site`). The prior board records this as a harness irregularity and confirms that setting `RUNNER_TEMP` manually made the 24-step replay pass.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| LCH-01 | Claim an isolated scope and make `canonical/ci_local.py` provide a safe temporary `RUNNER_TEMP` when absent; preserve caller-provided values | done | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py` only; coordination log in this file |
+| LCH-02 | Verify both default and caller-provided temporary-directory paths, then record full CI outcome and any irregularities | done | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py`, verification notes in this file |
+
+No site data, source claim, generated page, or official-source result was changed. No personal, parcel, lease, or owner financial information was collected or included. The fixed Arena branch `arena/90196f64-jack2` was used; no branch switch or additional branch was made.
+
+### Session `90196f64` — close-out (2026-11-15)
+
+- **Change:** local replay now assigns an isolated `TemporaryDirectory` as `RUNNER_TEMP` only when the caller has not provided that variable. An explicitly provided value is preserved. This fixes the prior local-only artifact check that otherwise expanded an empty variable to `/published-site` and failed with a permission error.
+- **Verification:** `env -u RUNNER_TEMP python3 canonical/ci_local.py` passed all 24 workflow steps, including all 12 consolidated-site checks, 15 model tests, full-tree privacy scanning, the exact Pages artifact gate, and the generated-files freshness gate. With an explicitly created caller temp directory, `RUNNER_TEMP="$tmp" python3 canonical/ci_local.py --until 19` passed all 19 steps through artifact assembly.
+- **Generated audit refresh:** `canonical/review_repo.py` and the existing site verifier/generator refreshed only their generated outputs to account for this board entry and code change (`canonical/data/repo_review.json`, `verification.html`, and `session-f4f700c0/audit/**` / `verification.json`). They were not manually edited. The first full replay exposed the expected generated-inventory sequencing issue; rerunning the existing generator after the verification page stabilized made the final full replay clean.
+- **Irregularity:** the prior `RUNNER_TEMP`-unset local harness failure is resolved by this change. The privacy-boundary limitation remains unchanged: the GitHub repository and its historical Git objects are still public; the Pages allowlist does not hide repository history. That exposure is already published for owner review and was not altered here.
+- **Sources:** no new factual or economic claims were introduced, so no official-source evidence was added or reinterpreted. This was verified against the repository's checked-in `.github/workflows/verify.yml` (the artifact command uses `$RUNNER_TEMP/published-site`) and by executing the complete local workflow described above.

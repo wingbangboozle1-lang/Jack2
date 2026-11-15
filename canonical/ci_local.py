@@ -13,6 +13,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,6 +59,13 @@ def main():
     if "--until" in sys.argv:
         limit = int(sys.argv[sys.argv.index("--until") + 1])
     quiet = "--quiet" in sys.argv
+    # GitHub Actions provides RUNNER_TEMP, but a local replay usually does not.
+    # The workflow's artifact check writes beneath this path; default it to an
+    # isolated temporary directory while preserving any caller-provided value.
+    runner_temp = None
+    if "RUNNER_TEMP" not in os.environ:
+        runner_temp = tempfile.TemporaryDirectory(prefix="jack2-ci-")
+        os.environ["RUNNER_TEMP"] = runner_temp.name
     for n, (name, script) in enumerate(todo[:limit], 1):
         t0 = time.time()
         proc = subprocess.run(["bash", "-eo", "pipefail", "-c", script], cwd=REPO,
