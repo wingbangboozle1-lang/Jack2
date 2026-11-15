@@ -2130,6 +2130,61 @@ accepted because the current legacy publication exposes the entire repository, w
 
 **Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
 
+---
+
+### Session `b2494ade` — claim (2026-11-15, branch `arena/b2494ade-jack2`, base `4555432`)
+
+**Starting state read before claiming.** Repository `wingbangboozle1-lang/Jack2` is **public** (`isPrivate: false`). GitHub Pages is still `build_type: legacy`, source `main:/` (whole repository served). The latest `deploy privacy-reviewed Pages artifact` runs (`43717494427`, `43718114648`, `43720009686`) failed at the Pages-source check. A `PUT repos/…/pages build_type=workflow` from this session returned **HTTP 403** (`Resource not accessible by integration`), so the Pages source needs the repository owner. Open pull requests at claim time: #75, #71, #50, #43, #41, #40, #38, #30, #18, #14, #10, #6, #5. This session does not touch any other session's scope.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| B-01 | Privacy boundary audit: tracked tree plus full git history (history fetched with `git fetch --unshallow`), counts by commit and file only, no matched values printed or published | in progress | session-b2494ade | `COORDINATION.md` (this section), `canonical/data/irregularities.json` (additive rows) |
+| B-02 | Official-source spot verification of decision-critical rows (Measure ULA thresholds, IRS capital-gains thresholds, CAL FIRE fire records, BLS Los Angeles summary, Census QuickFacts), access date 2026-11-15 | in progress | session-b2494ade | `canonical/data/spot_check_2026-11-15.json` (new; not read by the build) |
+| B-03 | Requirement gap register: brief items W-01 to W-04 and W-10, plus other brief items absent from `requirements.json`, with honest status | in progress | session-b2494ade | `canonical/data/requirements.json` (additive rows) |
+| B-04 | Regenerate outputs through the existing generators, full CI replay, PR to `main`, merge only if green, record the Pages outcome | in progress | session-b2494ade | generated outputs only; `COORDINATION.md` |
+
+### Session `b2494ade` — close-out (2026-11-15)
+
+**Pull request.** [#87](https://github.com/wingbangboozle1-lang/Jack2/pull/87) `arena/b2494ade-jack2` → `main`, `build-and-check` passed on head `d5eb4e0`. It is merged with `gh pr merge 87 --merge` by this session. The merge commit on `main` is the merge record; the PR page shows the result.
+
+**Integration note (recorded per the rules).** This branch was first rebased on `main`. Its four local commits conflicted in the same generated files on each replay, and `main` had moved by nine commits (PRs #81 and #82, session `14430a3c` and session `ebedfe13`). The rebase was aborted and `origin/main` was merged once instead. Resolution: the data files kept upstream's entries and added only what upstream lacked; generated outputs were taken from upstream and regenerated with the existing generators. No other session's entry was edited or removed.
+
+**Overlap with other sessions, and what this session added on top.**
+- Requirement rows RQ-18 to RQ-34 for the brief were registered by session `14430a3c` before this session's merge. This session did not duplicate them. It added **RQ-35** (private lease abstract) and **RQ-36** (after-tax sale comparison next to the renewal case), which that register lacked.
+- The Pages source problem (Pages still publishes the whole repository) is registered by session `ebedfe13` as **IR-35**. This session's evidence is in the row below, not a second entry.
+- This session's own new irregularity is **IR-41** (personal-data patterns in the git history).
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| B-01 | Privacy audit of the tracked tree and the full git history | done | Tree: 0 pattern hits across 591 tracked text files. History (292 commits, fetched with `git fetch --unshallow`): 25 hits in 6 commits dated 2026-11-06 to 2026-11-12, listed by short hash in IR-41. Counts only; no matched text is reproduced. A recount for IR-30 (2 commits in 2026-11 with a non-noreply address in the author or committer field) is in `canonical/data/spot_check_2026-11-15.json` (`history_scan`). |
+| B-02 | Official-source spot verification, access date 2026-11-15 | done (sample) | 52 rows checked: **47 match, 5 recomputed, 0 mismatch**. Rows, values and URLs: `canonical/data/spot_check_2026-11-15.json`. This is a sample of the 441 rows in `canonical/data/facts/`; the other 389 were not re-read today and keep their earlier status. |
+| B-03 | Requirement gap register | done | RQ-35 and RQ-36 added (see above). RQ-18 to RQ-34 are upstream's and were not changed. |
+| B-04 | Regenerate, full CI replay, PR, merge, Pages outcome | replay done; Pages blocked (see below) | `ci_local.py`: 24 of 24 steps passed on the committed tree (12/12 site checks, 15 unit tests, privacy scan 0 matches). |
+
+**Sources read on 2026-11-15 (all official; the URLs are the same as in `canonical/data/sources.json`).**
+- City of Los Angeles Office of Finance, Measure ULA FAQ: https://finance.lacity.gov/faq/measure-ula
+- IRS, Topic no. 409, Capital gains and losses: https://www.irs.gov/taxtopics/tc409
+- CAL FIRE, Eaton Fire incident record: https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire
+- CAL FIRE, Palisades Fire incident record: https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire
+- U.S. BLS, Los Angeles Area Economic Summary (updated 2026-11-04): https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf
+- U.S. Census Bureau, QuickFacts (Los Angeles city and county): https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224
+- GitHub Docs, configuring a Pages publishing source (Pages is public even if the repository is private; a private repository needs a paid plan): https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+- GitHub REST API, Pages (token permissions; explains the HTTP 403 on the source change): https://docs.github.com/en/rest/pages/pages
+
+**Verification performed.** 47 spot-check values match the official page (a few after rounding, as the record shows). 5 are recomputed from re-read figures with the arithmetic shown: the ULA totals, the two fire totals, and one percentage change for each of the two population rows. The Measure ULA thresholds ($5,400,000 and $10,900,000 for closings after 2026-06-30), the IRS 20% threshold ($533,400 single) and the CAL FIRE cause fields (Electrical; Arson) all match their pages. Not verified today: the county transfer rate (TX-013, 0.11%), any row outside the sample, and anything about the owner's property.
+
+**Irregularities.**
+1. **IR-41 (Privacy, new; status "needs review", blocks nothing).** Personal-data patterns remain in six earlier commits. The current tree is clean, so IR-32 holds for the tracked files only. A history rewrite or a private repository is an owner decision. The public pages link to the commit list, not to individual commits.
+2. **IR-35 (upstream, Privacy, highest priority).** Pages still publishes the root of `main` (build type `legacy`). This session's evidence: its attempt to set the Pages source to GitHub Actions returned HTTP 403 for the integration token, and the three latest deploy runs failed at the source check (`43717494427`, `43718114648`, `43720009686`). The repository owner must set Settings → Pages → Source to GitHub Actions.
+
+**What this session did not do (owner or later work).**
+- Set the Pages source (owner; IR-35). Until then the live site serves the whole repository, and the privacy-reviewed artifact is not deployed.
+- Decide on the history rewrite or repository visibility (owner; IR-41).
+- Build the trade-area, tract, parcel-level, neighbourhood, browser-calculator, decision-gate, back-test and after-tax items. These need inputs that stay offline, or a separately claimed session (RQ-18 to RQ-34).
+- Re-verify the other 389 fact rows line by line.
+
+**Generated outputs.** Refreshed only through the existing generators (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`). This also refreshed the F4 audit files under `session-f4f700c0/`, as earlier sessions did when the board changed.
+
 ### Session `280155af` — consolidation verification, live-site confirmation and integration close-out (2026-11-15)
 
 **Scope.** Verified the consolidated root site and confirmed the GitHub Pages deployment. No file inside another session's `session-*/` or `docs/` folder, or root tools/, data/, research/, model/, scripts/, was modified. Only `COORDINATION.md` (this record) and the regenerated `canonical/data/repo_review.json` are touched.
