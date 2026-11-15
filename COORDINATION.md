@@ -2155,4 +2155,4 @@ accepted because the current legacy publication exposes the entire repository, w
 | PR | recorded below after merge |
 | Merge | `gh pr merge --merge`, without waiting for approval, per the brief |
 
-**PR link and merge result:** to be filled in after the PR is created and merged.
+**PR link and merge result:** [PR #84](https://github.com/wingbangboozle1-lang/Jack2/pull/84) — `arena/280155af-jack2` → `main`, merged as `e556d76` with `gh pr merge 84 --merge` (no review wait, per the brief); `main` is now `e556d76` and GitHub Pages redeployed successfully (status `built`, legacy build, https://wingbangboozle1-lang.github.io/Jack2/).
