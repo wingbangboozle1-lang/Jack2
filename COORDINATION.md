@@ -2120,6 +2120,8 @@ accepted because the current legacy publication exposes the entire repository, w
 
 ### Session `b2494ade` — close-out (2026-11-15)
 
+**Pull request.** [#87](https://github.com/wingbangboozle1-lang/Jack2/pull/87) `arena/b2494ade-jack2` → `main`, `build-and-check` passed on head `d5eb4e0`. It is merged with `gh pr merge 87 --merge` by this session. The merge commit on `main` is the merge record; the PR page shows the result.
+
 **Integration note (recorded per the rules).** This branch was first rebased on `main`. Its four local commits conflicted in the same generated files on each replay, and `main` had moved by nine commits (PRs #81 and #82, session `14430a3c` and session `ebedfe13`). The rebase was aborted and `origin/main` was merged once instead. Resolution: the data files kept upstream's entries and added only what upstream lacked; generated outputs were taken from upstream and regenerated with the existing generators. No other session's entry was edited or removed.
 
 **Overlap with other sessions, and what this session added on top.**
