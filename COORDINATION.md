@@ -2047,3 +2047,34 @@ The brief lists items W-01 to W-04, W-10 and a feature list (browser calculator,
 | INT-01 | Integration: regenerate generated outputs, run `canonical/ci_local.py`, open PR to `main`, merge, record deployment result here | pending | session-35c8a4ed | `COORDINATION.md`, generated outputs |
 
 No sources are added to `canonical/data/sources.json` in this change: that file carries one access date for all rows, and this session did not re-open pages to change it. Every new figure is taken from an existing ledger row that was read on the access date. Nothing private is collected.
+
+### Session `35c8a4ed` — close-out (2026-11-15)
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| CALC-01 | Browser sell-versus-hold calculator | done | `calculator.html` (Decide menu), `assets/calculator.js`, `canonical/tests/calculator_test.js`, `canonical/tests/test_calculator.py`. Blank inputs; no default; rates read from ledger rows TX-003, TX-006 to TX-008, TX-013, TX-040, TX-042, TX-043, TX-060, checked by an assertion in the build (a ledger change stops the build). No storage, no network call, no form submission. No winner selected. |
+| WR-01 | Work register | done | `work-register.html` (Review menu): 22 rows, the W-series and the feature list. Status values: Done, Partly done, Blocked. Blocked items are not filled in. Rows with no official source are flagged, not linked. |
+| ADV-01 | One-page advisor summary (W-10) | done | `advisor-summary.html` (Start menu), print layout. |
+| INT-01 | Integration | in progress until the PR merges | see the deployment note below |
+
+**Sources (official, already in `sources.json`; none added, none re-read today).** S-ULA (Measure ULA rates and thresholds, TX-003 to TX-008, TX-019); S-RTC-11911 (county transfer tax, TX-013); S-RRCC (Recorder: ULA base and thresholds, TX-019); S-IRS-409 (capital-gain and recapture rates, TX-040, TX-042); S-IRS-559 (net investment income tax, TX-043 to TX-045); S-FTB (California top rate, TX-047, TX-060); S-RTC-17043 (additional California tax, TX-059). Every rule row on `calculator.html` opens the official page it was read from on 2026-11-13. Work-register rows link only to sources already in the register: S-CENSUS, S-ZIMAS, S-FEMA-MSC, S-CGS, S-OSFM, S-CDE, S-BLS, S-EDD, S-JACK-10K, S-TSY, S-IRS-409, S-IRS-559, S-FTB, S-RTC-17043, S-ULA.
+
+**Verification performed.**
+- Build: 25 pages built from `canonical/data/**`; the calculator rates are asserted equal to the ledger values (14 numbers checked).
+- Verifier: 12 of 12 checks pass; the evidence-table check now covers 928 rows (the calculator's rule table is included and every row links to an official source).
+- Unit tests: 16 tests pass, including the calculator arithmetic (hand-computed full case, city-tier boundaries at 5,400,000 and 10,900,000, zero and negative gain, recapture cap, zero discount rate, validation).
+- Browser behaviour: `calculator.html` was loaded in a DOM emulator outside the repository and driven through its inputs. Checked: blank state computes nothing; the hand-checked case shows $2,128,083 after tax on the sale, $262,799 for the hold path and a difference of $1,865,284; upper-bound button sets only the four statutory rates; clear empties every field; no storage, cookie, network or form-submission API in the page or script; all scripts local. This harness is not in CI (it needs a DOM package not in the repository).
+- Replay: `canonical/ci_local.py` passes all 24 steps on the committed tree, and leaves nothing to regenerate.
+
+**Irregularities for review (each to appear on the Flagged for Review page).**
+1. **Pages source is still the legacy repository root (owner action).** The live site publishes the whole repository, including this board and archived workbooks, until the owner sets Settings → Pages → Source to GitHub Actions. PP-02 records that the workflow token cannot change this (HTTP 403). The new pages are in the 27-file allowlist, so they will be served only after that switch. Until then the privacy boundary is not in effect.
+2. **Access date.** The calculator's tax rows were read on 2026-11-13 (the register's single access date). They were not re-read on 2026-11-15, so the page says so. Re-read before any commitment.
+3. **Federal ordinary-income rate is not in the ledger.** The hold path needs the owner's own marginal federal rate; none is supplied or assumed. Upper-bound button covers the sale only.
+4. **Transfer-tax base.** The statutory county base excludes liens the buyer takes over (TX-014), while the calculator applies the price to both transfer taxes. This overstates the county tax by 0.11% of any assumed loan. The page says so.
+5. **Simplifications.** Rates are added, not compounded; no capital loss; straight-line depreciation for the recapture split; end-of-year payments. All stated on the page.
+6. **Blocked items** (need private or outside inputs; nothing filled in): W-01, W-04, F-02, F-05, F-07, F-11 (parcel location); F-14 (lease abstract; the expiry date is open, question Q01); F-04 (real quotes; no official source publishes them; flagged). F-06 offline store is outside this repository.
+7. **Stress coverage gap.** The model has no repair-cost line, and no single case combines loss of rent, repairs and exit liquidity (F-08).
+8. **Same-store series** has two quarters and two fiscal years (F-12), not a multi-period series.
+9. **Process.** The replay's clean-tree gate (`git status` over generated paths) cannot pass with uncommitted generated files, so each change was committed before the replay. Every edit to this board also changes the repository line totals in `repo_review.json`, which forces another regeneration.
+
+**Handoff and scope.** Session `35c8a4ed` is the only session on branch `arena/35c8a4ed-jack2`. No other session's `session-*/` folder was edited. The `session-<id>/<task>` branch naming in the brief is not used: the platform fixes the branch name.

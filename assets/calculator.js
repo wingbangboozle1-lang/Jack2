@@ -140,7 +140,11 @@
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
 
-  function row(label, value) { return "<tr><th scope=\"row\">" + esc(label) + "</th><td>" + value + "</td></tr>"; }
+  function row(label, value, bold) {
+    var l = esc(label), v = esc(value);
+    if (bold) { l = "<strong>" + l + "</strong>"; v = "<strong>" + v + "</strong>"; }
+    return "<tr><th scope=\"row\">" + l + "</th><td>" + v + "</td></tr>";
+  }
 
   function render() {
     var res = compute(readInputs(), R);
@@ -166,15 +170,15 @@
       row("Federal tax on the gain", money(s.fedTax)) +
       row("Net investment income tax", money(s.niitTax)) +
       row("California tax on the gain", money(s.caTax)) +
-      row("<strong>After-tax cash from the sale</strong>", "<strong>" + money(s.cash) + "</strong>") +
+      row("After-tax cash from the sale", money(s.cash), true) +
       "</tbody></table></div>" +
       "<div><h3>B. Hold and renew</h3><table class=\"calc-t\"><tbody>" +
-      row("Combined tax rate on rent (" + h.ratePct.toFixed(2) + "%)", "applied to taxable rent") +
+      row("Combined tax rate on rent", h.ratePct.toFixed(2) + "%") +
       row("After-tax rent per year", money(h.afterRent)) +
       row("Years counted (discount factor)", h.annuity.toFixed(4)) +
       row("Present value of after-tax rent", money(h.pvRent)) +
       row("Present value of after-tax cash at the end", money(h.pvTerm)) +
-      row("<strong>Present value of the hold path</strong>", "<strong>" + money(h.pv) + "</strong>") +
+      row("Present value of the hold path", money(h.pv), true) +
       "</tbody></table></div></div>" +
       "<p><strong>Difference (sell minus hold):</strong> " + money(res.diff) + " in today's dollars.</p>" +
       (s.aboveLowThreshold ? "<p class=\"note\">The price is above the lower Measure ULA threshold, so the higher city rate applies to the whole price (rule TX-004 and TX-007 on this page).</p>" : "") +

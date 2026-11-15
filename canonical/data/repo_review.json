@@ -3,7 +3,7 @@
  "totals": {
   "workspaces": 29,
   "files": 523,
-  "lines": 91753,
+  "lines": 91784,
   "pages": 264,
   "name_hits": 0,
   "name_workbooks": 0,
@@ -14,7 +14,7 @@
   {
    "workspace": "(repository root files)",
    "files": 3,
-   "lines": 2522,
+   "lines": 2553,
    "pages": 0,
    "links": 92,
    "official_links": 7,
