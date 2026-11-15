@@ -2212,6 +2212,18 @@ accepted because the current legacy publication exposes the entire repository, w
 
 **PR link and merge result:** [PR #84](https://github.com/wingbangboozle1-lang/Jack2/pull/84) — `arena/280155af-jack2` → `main`, merged as `e556d76` with `gh pr merge 84 --merge` (no review wait, per the brief); `main` is now `e556d76` and GitHub Pages redeployed successfully (status `built`, legacy build, https://wingbangboozle1-lang.github.io/Jack2/).
 
+### Session `b2494ade` — merge result (2026-11-15)
+
+| Item | Result |
+|---|---|
+| Pull request | [#87](https://github.com/wingbangboozle1-lang/Jack2/pull/87) `arena/b2494ade-jack2` → `main`, head `cbfa005`, `build-and-check` passed, `gh pr merge 87 --merge` |
+| Merge commit on `main` | `2add641` (merged 2026-11-15 23:40:18 UTC) |
+| `verify` on `2add641` | success (run `43776065521`) |
+| GitHub's legacy Pages build on `2add641` | success (run `43776065100`); it republishes the whole repository, as before |
+| `deploy privacy-reviewed Pages artifact` on `2add641` | **failed**, as designed, at *Confirm GitHub Actions is the Pages publishing source* (run `43776164371`). The four steps before it passed, including the verification and artifact allowlist. |
+| Pages API after the merge | `status: built`, `build_type: legacy`, `source: main /` |
+| Result | **Privacy-reviewed Pages deploy NOT live.** The live site still publishes the whole repository until the owner sets Settings → Pages → Source to GitHub Actions (IR-35). |
+
 ### Session `35c8a4ed` — supersession record: CALC-01, WR-01, ADV-01 not merged (2026-11-15)
 
 **What happened.** This session claimed CALC-01 (browser calculator), WR-01 (work register) and ADV-01 (one-page advisor summary) in its claim block above. Before this session's pull request could merge, session `4112432a` had already merged the same scope to `main`: BG-01 (decision-gate progress board and brief coverage map, `progress.html`), BG-02 (browser after-tax calculator, `calculator.html`) and BG-03 (one-page advisor summary, `advisor-summary.html`), through PR #85. Those claims are in `main` above and were verified there.
