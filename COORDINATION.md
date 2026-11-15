@@ -207,12 +207,23 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| BG-01 | Decision-gate progress board and brief coverage map (W-01…W-10 and features); every row with an official-source link or an explicit "internal item" label | in progress | session-4112432a | `canonical/build_site.py` (new `build_progress`), `canonical/data/requirements.json` (new RQ rows), `progress.html` (generated) |
-| BG-02 | Browser-only after-tax sale-versus-renewal calculator; blank inputs; no network; winner shown only with verified inputs | in progress | session-4112432a | `canonical/build_site.py` (new `build_calculator`), `calculator.html` (generated) |
-| BG-03 | One-page printable advisor summary (W-10) | in progress | session-4112432a | `canonical/build_site.py` (new `build_advisor`), `advisor-summary.html` (generated) |
-| BG-04 | Navigation, verifier and local CI replay; regenerate generated files only by their generators | in progress | session-4112432a | `canonical/build_site.py` (NAV), generated root pages, `canonical/data/repo_review.json`, `canonical/data/verification.json` |
+| BG-01 | Decision-gate progress board and brief coverage map (W-01…W-10 and features); every row with an official-source link or an explicit "internal item" label | done (needs review for the owner's private inputs) | session-4112432a | `canonical/build_site.py` (new `build_progress`), `canonical/data/requirements.json` (new RQ rows), `progress.html` (generated) |
+| BG-02 | Browser-only after-tax sale-versus-renewal calculator; blank inputs; no network; winner shown only with verified inputs | done (needs review: method omissions, IR-42) | session-4112432a | `canonical/build_site.py` (new `build_calculator`), `calculator.html` (generated) |
+| BG-03 | One-page printable advisor summary (W-10) | done (print layout not rendered in the sandbox; see close-out) | session-4112432a | `canonical/build_site.py` (new `build_advisor`), `advisor-summary.html` (generated) |
+| BG-04 | Navigation, verifier and local CI replay; regenerate generated files only by their generators | done: 12/12 verifier checks, 24/24 CI steps, 15 unit tests | session-4112432a | `canonical/build_site.py` (NAV), generated root pages, `canonical/data/repo_review.json`, `canonical/data/verification.json` |
 | PP-03 | Switch Pages source to GitHub Actions so only the allowlisted artifact is served | BLOCKED: HTTP 403 for this credential; owner action required | session-4112432a | `repo settings` (not editable from this session) |
 
+
+**Close-out record, session `4112432a` (2026-11-15, UTC).**
+
+| Item | Record |
+|---|---|
+| Branch and pull request | `arena/4112432a-jack2` → `main`. PR link and merge result recorded in the follow-up entry below, after the merge. |
+| What was added | `progress.html` (W-03 gate board, W-01 to W-10 and feature items, each with a status), `calculator.html` (after-tax sale against negotiated renewal, blank inputs, nothing stored, no network call), `advisor-summary.html` (W-10, letter-size print layout). Navigation, the requirements register (RQ-18 to RQ-32) and the irregularities register (IR-40 to IR-43) were updated. |
+| Sources re-read today (2026-11-15) | U.S. Treasury daily par yield curve, read at home.treasury.gov: 10-year 5.15% on 11/13/2026 (CM-001) and 4.98% on 11/10 (matches the ledger's 10-year readings); the 5-year, 2-year, 30-year and 3-month readings of 11/10 match CM-002 to CM-005; the 10-year of 4.91% on 11/02 matches CM-006. IRS Topic 409 (irs.gov/taxtopics/tc409): 20% top rate, 25% maximum on unrecaptured section 1250 gain, both stated for taxable years beginning in 2025 (matches TX-040 and TX-042; the page still gives 2025 thresholds, see IR-41). IRS Topic 559 (irs.gov/taxtopics/tc559): 3.8% net investment income tax and the $250,000 married-filing-jointly and $200,000 single thresholds (matches TX-043 and TX-044). No value was changed. |
+| Verification performed | `canonical/verify.py`: 12 of 12 checks pass, including 441 ledger rows, 946 table rows each linked to an official source, 7,219 internal links, the personal-information scan of 589 files, and a byte-for-byte rebuild of 28 generated files. `canonical/ci_local.py`: 24 of 24 steps on a clean committed tree. `python3 -m unittest discover -s canonical/tests`: 15 tests OK. Calculator arithmetic was checked in Node against a separate Python computation of the same case (after-tax cash today 3,747,650; renewal present value 3,393,272; difference 354,378 at the stated inputs). |
+| Not verified | The printed one-page layout was not rendered: the sandbox has no browser. The print rule (letter size, 0.45 inch margins, hidden navigation) is in the stylesheet, but the page fits one sheet only if the owner's browser agrees. |
+| Irregularities | IR-40: this session's credential was refused a change of the Pages source (HTTP 403), so the public site is still served from the whole repository. Owner action needed. IR-41: the tax rows are 2025 figures. IR-42: the calculator omits several tax rules, and it applies the investment income tax to the whole gain or rent, which can overstate it near the threshold. IR-43: five brief items and gates G1 to G5 cannot be closed from public sources. All four are published on Flagged for Review. |
 <!-- LIVE-BOARD:END -->
 
 ---

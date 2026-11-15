@@ -1540,8 +1540,8 @@ def build_calculator():
              None),
         ]),
     ]
-    sel_fields = {"s_niit": ("Investment income tax applies to the gain?", f"The investment income tax is {ref_value('TX-043')} and applies above {ref_value('TX-044')} (IRS Topic 559)."),
-                  "h_niit": ("Investment income tax applies to the rent?", f"Rents and net gains from real estate are within the tax (IRS Topic 559). Applies above {ref_value('TX-044')}.")}
+    sel_fields = {"s_niit": ("Investment income tax applies to the gain?", f"The investment income tax is {ref_value('TX-043')} on the lesser of your net investment income or your income above {ref_value('TX-044')} (IRS Topic 559). The page applies the rate to the whole gain, so answer yes only if you are above the threshold, and expect it to overstate the tax when you are only just above it."),
+                  "h_niit": ("Investment income tax applies to the rent?", f"Rents and net gains from real estate are within the tax (IRS Topic 559). Answer yes only if you are above {ref_value('TX-044')}; the page applies the rate to the whole rent, which can overstate it.")}
     body = ['<div class="calc-note"><p><strong>Private to you.</strong> Nothing you type is sent, saved or shared. This page makes no network call, '
             'stores nothing, and forgets everything when you close it. Keep your figures in the private file and type only what you need.</p>'
             '<p>Every box starts blank. No figure is filled in for you, except the buttons that copy a verified rate from the ledger.</p></div>']

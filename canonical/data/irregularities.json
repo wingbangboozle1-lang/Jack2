@@ -457,7 +457,7 @@
    "id": "IR-42",
    "area": "Calculator",
    "title": "The browser calculator leaves out several tax rules, so its result is only arithmetic on the inputs",
-   "detail": "The calculator does not model depreciation deductions during the hold, the limit on deducting capital losses, loss carryovers, state rules other than the rate entered, or the timing of tax payments. It assumes rent is received at the end of each year and that the end-of-term sale is taxed at the same rates as a sale now. A winner is shown only after every input is entered and the check box is ticked. The result is not advice.",
+   "detail": "The calculator does not model depreciation deductions during the hold, the limit on deducting capital losses, loss carryovers, state rules other than the rate entered, or the timing of tax payments. It assumes rent is received at the end of each year and that the end-of-term sale is taxed at the same rates as a sale now. The investment income tax is applied to the whole gain or rent, whereas the IRS rule applies it to the lesser of net investment income or the excess over the threshold; the page can therefore overstate it near the threshold. A winner is shown only after every input is entered and the check box is ticked. The result is not advice.",
    "rows": [],
    "links": [
     [
