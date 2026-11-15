@@ -47,7 +47,7 @@
    "name": "No broken internal links anywhere in the published tree",
    "proves": "Every link from one page of this repository to another, on the consolidated site and in every archived workbook, points at a file that exists.",
    "does_not_prove": "That external pages are still online; the build environment cannot reach them.",
-   "result": "7,034 internal links on 286 pages across the whole repository resolve, including the archive",
+   "result": "7,037 internal links on 286 pages across the whole repository resolve, including the archive",
    "ok": true
   },
   {

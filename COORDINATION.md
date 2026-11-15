@@ -199,6 +199,66 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `ebedfe13` — CLAIM, 2026-11-15 (branch `arena/ebedfe13-jack2`, base `4555432` = main after PR #80)
+
+**Starting state read before claiming.** Live board, open PRs and tree read. Local replay of `.github/workflows/verify.yml` (`canonical/ci_local.py`) passed 24/24 on the base commit. Pages API (read-only): `status built`, `build_type legacy`, source `main:/`, repository `public`. The privacy-reviewed deploy workflow's last run (`43720009686`) failed at the "Confirm GitHub Actions is the Pages publishing source" gate, as designed; the live archive page still lists every historical workbook. Those are owner actions (Settings > Pages) and are not changed here. An independent pattern scan of the 591 tracked files (e-mail, telephone, street address, parcel, SSN/EIN, honorific, trust/LLC) returned zero matches.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| EB-01 | Read board and tree; record claim; push before any other edit | in progress | session-ebedfe13 | `COORDINATION.md` (this block) |
+| EB-02 | Re-read two decision-critical official values on 2026-11-15 (U.S. Treasury 10-year par yield, CM-001; Jack in the Box Q3 FY2026 release, TN-020) and record what each page shows | in progress | session-ebedfe13 | `COORDINATION.md` only (no ledger value changed unless the page changed) |
+| EB-03 | Remove the "winner" framing from the strategy ranking: the ranking is model output under analyst assumptions and selects no winner until lease and owner inputs are verified | in progress | session-ebedfe13 | `canonical/build_site.py` (strategy table header and caption, one sentence), `canonical/data/decisions.json` (one "because" sentence) |
+| EB-04 | Register new irregularities found in this review (IR-35 onward) | in progress | session-ebedfe13 | `canonical/data/irregularities.json` (append only) |
+| EB-05 | Regenerate generated outputs, replay the full 24-step workflow, open PR to `main`, merge, record the Pages result honestly | in progress | session-ebedfe13 | generated root outputs, `README.md` (only if needed), `COORDINATION.md` |
+
+**Scope note.** No file inside another session's `session-*/` or `docs/` folder is edited. Historical workbooks are not regenerated. The Pages source setting is not changed by this session (the sandbox token cannot change it, and that change is for the repository owner).
+
+### Session `ebedfe13` — close-out (2026-11-15)
+
+**Task status.**
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| EB-01 | Claim and board | done | claim pushed as `98c07e4` before any other edit |
+| EB-02 | Re-read two decision-critical official values | done | both re-read on 2026-11-15; both match the ledger; nothing changed |
+| EB-03 | Remove the "winner" framing from the strategy order | done | `canonical/build_site.py` and `canonical/data/decisions.json` changed (wording only; no number changed) |
+| EB-04 | Register new irregularities | done | IR-35 (Pages source still legacy) and IR-36 (order labelled as a winner) added to `canonical/data/irregularities.json` (append only) |
+| EB-05 | Regenerate, replay, PR, merge, record the Pages result | in progress at the time of writing; PR link and merge result recorded below by follow-up commit | see the PR line in the table below |
+
+**Sources read on 2026-11-15 (official, re-opened today).**
+
+| Source | What was read | Ledger rows matched |
+|---|---|---|
+| U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates, November 2026 (`https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611`) | Row 11/13/2026: 10 Yr 5.15; latest posted row is 11/13/2026 | CM-001 (5.15%, 11/13/2026): match |
+| Jack in the Box Inc., Exhibit 99.1, third quarter fiscal 2026 results, August 12, 2026 (`https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm`) | System same-store sales (1.1%); restaurant count 2,115 at end of Q3 (2,168 a year earlier); net earnings from continuing operations $21.0 million; total stockholders' deficit (901,286) | TN-020, TN-001, TN-004, TN-034, TN-043 and the computed TN-085 (-53): all match |
+
+**Result.** Eight values re-read today; eight matched. The other ledger rows keep their 2026-11-13 and 2026-11-12 access dates. This session did not re-read all 440 rows.
+
+**Verification performed.** `canonical/ci_local.py` runs the 24 steps of `verify.yml`. After the wording changes, the consolidated checks pass 12 of 12 (914 table rows on 22 pages each linked to an official source; numbers in sentences match their cited evidence; 7,034 internal links resolve; privacy scan finds no e-mail, telephone, street address, parcel number or named individual in 586 text files; no outside scripts; 23 archived workbooks listed; generated files rebuilt). The 15 model unit tests pass. The regenerated outputs are committed with this record in the same commit, so the freshness gate passes on the branch.
+
+**Irregularities (on the Flagged for Review page).** IR-35: the privacy-reviewed Pages deployment is not live. Pages is still `legacy`, `main:/`, and the whole public repository is served. The owner must set Settings > Pages > Source to GitHub Actions (GitHub Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). IR-36: the strategy order was labelled "Rank" and "Best", which reads as a winner before verified lease and owner inputs exist. Relabelled "Model order", with a no-winner statement; the numbers are unchanged. Existing IR-30 (a personal e-mail address in commit metadata) and IR-31 (repository is public) remain open.
+
+**Pages deployment and merge.** See the PR table below. Pages source is a repository setting that this session's token cannot change (the earlier attempt by session `f652211c` returned HTTP 403). The workflow `deploy privacy-reviewed Pages artifact` is therefore expected to fail its source gate until the owner acts, and the public site continues to be served from the repository root.
+
+### Session `14430a3c` — CLAIM, 2026-11-15 (branch `arena/14430a3c-jack2`, base `4555432` = main)
+
+Read the live board, the open PRs, the Pages API and the last workflow runs before claiming. Pages is still `build_type=legacy`, source `main:/` (whole repository published); the last `deploy privacy-reviewed Pages artifact` run (43720009686) failed at the Pages-source confirmation step. The task below is the owner's top-priority privacy item. The branch name is fixed by the platform, so the `session-<id>/<task>` naming is not used; this session works only on its own branch and does not touch other sessions' folders.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| PP-03 | Set Pages source to GitHub Actions (repository setting, via API, only if the admin token allows it); re-run the privacy deploy; re-fetch the live archive, deployment and one historical path to confirm the allowlisted artifact is served | **blocked: owner action required** (close-out below) | session-14430a3c | repository Pages setting (no file change); `COORDINATION.md` |
+| REQ-34 | Record the 2026-11-15 brief (W-01…W-10 and the other listed items) in the requirements register with an honest status; correct RQ-12 | done | session-14430a3c | `canonical/data/requirements.json`; regenerated `requirements.html`, `verification.html`, `canonical/data/{repo_review,verification}.json`, `session-f4f700c0/audit/**`, `session-f4f700c0/verification.json` |
+
+**Close-out, session `14430a3c` (2026-11-15).**
+
+- **PP-03 (privacy deploy) is not complete, and this session cannot complete it.** Re-checked from the sandbox at 2026-11-15: the Pages API still reports `build_type=legacy`, source `main:/`, status `built`. A direct `PUT repos/…/pages build_type=workflow` with the sandbox token returned **HTTP 403 "Resource not accessible by integration"**, the same result as session `f652211c`. The latest `deploy privacy-reviewed Pages artifact` run (`43720009686`, on `main` at `4555432`) failed at the step *Confirm GitHub Actions is the Pages publishing source*, as designed.
+- **Live exposure, confirmed on the live page today.** `https://wingbangboozle1-lang.github.io/Jack2/workspaces.html` still lists 23 archived workbooks, each linked to its `session-*/` or `docs/` path, and lists open pull requests. The Pages site therefore still publishes the historical workbooks and repository paths. This is not remediated.
+- **What the owner must do (one setting):** repository **Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run the latest `deploy privacy-reviewed Pages artifact` run (or push any commit to `main`). Then re-fetch `workspaces.html`, `deployment.html` and one `/session-*/` URL. Expected result: the 27-file allowlisted artifact from `canonical/publish.py` (checked locally this session: 27 files, 23 HTML pages, privacy scan clean). The site is briefly unavailable while the switch deploys.
+- **REQ-34 (requirements register).** Added RQ-18 to RQ-34 for the items in the 2026-11-15 brief. Statuses are honest: none of W-01, W-03, the calculator, neighbourhood data, the tract trend, the short-lease quote pricing, the parcel hazard screen or the after-tax number is built. Each row names its dependency (secure parcel/location workflow, owner-private inputs, or real quotes). RQ-12 was changed from "Done" to "Done in the repository; not yet on the live site", because the live site does not yet meet it.
+- **Sources read on 2026-11-15 (this session).** U.S. Treasury, Daily Treasury Par Yield Curve Rates, November 2026 (`https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611`): the 11/13/2026 row reads 10 Yr **5.15**, matching ledger row CM-001 (quote and value agree). The live GitHub Pages `workspaces.html` (listed above). The Pages REST API and workflow run `43720009686` (GitHub). No other official source was re-read; the other 49 sources keep their 2026-11-13 read date.
+- **Verification performed.** `canonical/ci_local.py`: 12 of 12 site checks and 15 unit tests pass; the generated-file freshness gate was regenerated with the documented commands (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`) and re-checked. Pages privacy artifact dry-run: `canonical/publish.py` passes with 27 files.
+- **Irregularities for review.** (1) PP-03: the Pages source is a repository setting this token cannot change; until the owner sets it, the privacy boundary is not in effect. (2) The brief asks for line-by-line verification of every row against official sites. That was not repeated this session: 441 ledger rows were last re-read on 2026-11-13, and one row was re-checked today. (3) None of the W-items is built; the register says so rather than implying progress. (4) Eleven open pull requests from earlier sessions remain, including PR #75 (`arena/1f611394-jack2`, opened 2026-11-15), and were not touched. (5) Historical Git commits still contain the earlier unredacted text; rewriting history is a separate owner decision.
+
 <!-- LIVE-BOARD:END -->
 
 ---
@@ -2046,14 +2106,21 @@ accepted because the current legacy publication exposes the entire repository, w
 
 ### Session `b2494ade` — close-out (2026-11-15)
 
+**Integration note (recorded per the rules).** This branch was first rebased on `main`. Its four local commits conflicted in the same generated files on each replay, and `main` had moved by nine commits (PRs #81 and #82, session `14430a3c` and session `ebedfe13`). The rebase was aborted and `origin/main` was merged once instead. Resolution: the data files kept upstream's entries and added only what upstream lacked; generated outputs were taken from upstream and regenerated with the existing generators. No other session's entry was edited or removed.
+
+**Overlap with other sessions, and what this session added on top.**
+- Requirement rows RQ-18 to RQ-34 for the brief were registered by session `14430a3c` before this session's merge. This session did not duplicate them. It added **RQ-35** (private lease abstract) and **RQ-36** (after-tax sale comparison next to the renewal case), which that register lacked.
+- The Pages source problem (Pages still publishes the whole repository) is registered by session `ebedfe13` as **IR-35**. This session's evidence is in the row below, not a second entry.
+- This session's own new irregularity is **IR-40** (personal-data patterns in the git history).
+
 | # | Task | Status | Result |
 |---|---|---|---|
-| B-01 | Privacy audit of the tracked tree and the full git history | done | Tree: 0 pattern hits across 591 tracked text files. History (292 commits, fetched with `git fetch --unshallow`): 25 hits in 6 commits dated 2026-11-06 to 2026-11-12, all listed by short hash in IR-40. Counts only; no matched text is reproduced. Recorded as IR-40 (new). A recount for IR-30 is in `canonical/data/spot_check_2026-11-15.json` (`history_scan`): 2 commits in 2026-11 carry a non-noreply address in the author or committer field. |
-| B-02 | Official-source spot verification, access date 2026-11-15 | done (sample) | 52 rows re-read or recomputed: **47 match, 5 recomputed, 0 mismatch**. Rows and URLs: `canonical/data/spot_check_2026-11-15.json`. This is a sample of the 441 rows in `canonical/data/facts/`; the other 389 were not re-read today and keep their earlier status. |
-| B-03 | Requirement gap register for the brief | done | RQ-18 to RQ-36 added to `canonical/data/requirements.json`: 5 Open, 7 Partial, 7 Blocked (owner-private or no official source). None is marked done. IR-42 records the gap. |
-| B-04 | Regenerate, full CI replay, PR, merge, Pages outcome | done for the replay; Pages blocked (see below) | `ci_local.py`: all 24 steps passed on the committed tree (12/12 site checks, 15 unit tests, privacy scan 0 matches). |
+| B-01 | Privacy audit of the tracked tree and the full git history | done | Tree: 0 pattern hits across 591 tracked text files. History (292 commits, fetched with `git fetch --unshallow`): 25 hits in 6 commits dated 2026-11-06 to 2026-11-12, listed by short hash in IR-40. Counts only; no matched text is reproduced. A recount for IR-30 (2 commits in 2026-11 with a non-noreply address in the author or committer field) is in `canonical/data/spot_check_2026-11-15.json` (`history_scan`). |
+| B-02 | Official-source spot verification, access date 2026-11-15 | done (sample) | 52 rows checked: **47 match, 5 recomputed, 0 mismatch**. Rows, values and URLs: `canonical/data/spot_check_2026-11-15.json`. This is a sample of the 441 rows in `canonical/data/facts/`; the other 389 were not re-read today and keep their earlier status. |
+| B-03 | Requirement gap register | done | RQ-35 and RQ-36 added (see above). RQ-18 to RQ-34 are upstream's and were not changed. |
+| B-04 | Regenerate, full CI replay, PR, merge, Pages outcome | replay done; Pages blocked (see below) | `ci_local.py`: 24 of 24 steps passed on the committed tree (12/12 site checks, 15 unit tests, privacy scan 0 matches). |
 
-**Sources read on 2026-11-15 (all official; URLs are the same as in `canonical/data/sources.json`).**
+**Sources read on 2026-11-15 (all official; the URLs are the same as in `canonical/data/sources.json`).**
 - City of Los Angeles Office of Finance, Measure ULA FAQ: https://finance.lacity.gov/faq/measure-ula
 - IRS, Topic no. 409, Capital gains and losses: https://www.irs.gov/taxtopics/tc409
 - CAL FIRE, Eaton Fire incident record: https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire
@@ -2063,17 +2130,16 @@ accepted because the current legacy publication exposes the entire repository, w
 - GitHub Docs, configuring a Pages publishing source (Pages is public even if the repository is private; a private repository needs a paid plan): https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 - GitHub REST API, Pages (token permissions; explains the HTTP 403 on the source change): https://docs.github.com/en/rest/pages/pages
 
-**Verification performed.** 47 spot-check values match the official page (a few after rounding, as the record shows); 5 are recomputed from re-read figures with the arithmetic shown (ULA totals, fire totals, one percentage change each for the two population rows). The Measure ULA thresholds (\$5,400,000 and \$10,900,000 for closings after 2026-06-30), the IRS 20% threshold (\$533,400 single), and the CAL FIRE cause fields (Electrical; Arson) all match their pages. Not verified today: the county transfer rate (TX-013, 0.11%), any row not in the sample, and anything about the owner's property. Those rows keep their earlier status.
+**Verification performed.** 47 spot-check values match the official page (a few after rounding, as the record shows). 5 are recomputed from re-read figures with the arithmetic shown: the ULA totals, the two fire totals, and one percentage change for each of the two population rows. The Measure ULA thresholds ($5,400,000 and $10,900,000 for closings after 2026-06-30), the IRS 20% threshold ($533,400 single) and the CAL FIRE cause fields (Electrical; Arson) all match their pages. Not verified today: the county transfer rate (TX-013, 0.11%), any row outside the sample, and anything about the owner's property.
 
-**Irregularities recorded (status "needs review"; they block nothing).**
-1. **IR-40 (Privacy).** Personal-data patterns remain in six earlier commits. The current tree is clean, so IR-32 holds for the tracked files only. A history rewrite or a private repository is an owner decision. The public site links only to the commit list, not to individual commits.
-2. **IR-41 (Privacy, highest priority).** Pages still publishes the root of `main` (build type `legacy`). The privacy-reviewed artifact cannot go live until the owner sets Settings → Pages → Source to GitHub Actions. This session's attempt returned HTTP 403 for the integration token. The latest three deploy runs failed at that check (`43717494427`, `43718114648`, `43720009686`).
-3. **IR-42 (Requirements).** The register did not carry W-01, W-02, W-03, W-04 or W-10, nor several brief items. RQ-18 to RQ-36 now do.
+**Irregularities.**
+1. **IR-40 (Privacy, new; status "needs review", blocks nothing).** Personal-data patterns remain in six earlier commits. The current tree is clean, so IR-32 holds for the tracked files only. A history rewrite or a private repository is an owner decision. The public pages link to the commit list, not to individual commits.
+2. **IR-35 (upstream, Privacy, highest priority).** Pages still publishes the root of `main` (build type `legacy`). This session's evidence: its attempt to set the Pages source to GitHub Actions returned HTTP 403 for the integration token, and the three latest deploy runs failed at the source check (`43717494427`, `43718114648`, `43720009686`). The repository owner must set Settings → Pages → Source to GitHub Actions.
 
 **What this session did not do (owner or later work).**
-- Set the Pages source (owner). Until then, the live site serves the whole repository, and the privacy-reviewed artifact is not deployed.
+- Set the Pages source (owner; IR-35). Until then the live site serves the whole repository, and the privacy-reviewed artifact is not deployed.
 - Decide on the history rewrite or repository visibility (owner; IR-40).
-- Build the trade-area, tract, parcel-level, neighbourhood, browser-calculator, decision-gate, back-test and after-tax items. These need inputs that stay offline, or a separate claimed session (RQ-18 to RQ-36).
+- Build the trade-area, tract, parcel-level, neighbourhood, browser-calculator, decision-gate, back-test and after-tax items. These need inputs that stay offline, or a separately claimed session (RQ-18 to RQ-34).
 - Re-verify the other 389 fact rows line by line.
 
-**Generated outputs.** Refreshed only through the existing generators (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`). This also refreshed the F4 audit files under `session-f4f700c0/` (`audit/inventory.json`, `audit/summary.json`, `verification.json`), as the earlier sessions did when the board changed.
+**Generated outputs.** Refreshed only through the existing generators (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`). This also refreshed the F4 audit files under `session-f4f700c0/`, as earlier sessions did when the board changed.
