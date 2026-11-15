@@ -223,7 +223,7 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 | EB-02 | Re-read two decision-critical official values | done | both re-read on 2026-11-15; both match the ledger; nothing changed |
 | EB-03 | Remove the "winner" framing from the strategy order | done | `canonical/build_site.py` and `canonical/data/decisions.json` changed (wording only; no number changed) |
 | EB-04 | Register new irregularities | done | IR-35 (Pages source still legacy) and IR-36 (order labelled as a winner) added to `canonical/data/irregularities.json` (append only) |
-| EB-05 | Regenerate, replay, PR, merge, record the Pages result | in progress at the time of writing; PR link and merge result recorded below by follow-up commit | see the PR line in the table below |
+| EB-05 | Regenerate, replay, PR, merge, record the Pages result | done | Pull request [#82](https://github.com/wingbangboozle1-lang/Jack2/pull/82) (`arena/ebedfe13-jack2` → `main`), merged with a merge commit, **`bf8dcbf`**, at 23:21 UTC after `build-and-check` passed on the PR head (`c2adb23`). Post-merge on `main`: `verify` **success** (run `43774346785`); `pages build and deployment` (legacy) **success** (run `43774346675`); the live executive summary shows the new "Model order" and "Highest balanced score (model setting, not a recommendation)" wording; `deploy privacy-reviewed Pages artifact` **failure** (run `43774426297`) at the step "Confirm GitHub Actions is the Pages publishing source", as designed. Pages API: `status built`, `build_type legacy`, source `main:/`. The privacy-reviewed artifact is not live until the owner sets the Pages source (IR-35). |
 
 **Sources read on 2026-11-15 (official, re-opened today).**
 
@@ -238,7 +238,7 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Irregularities (on the Flagged for Review page).** IR-35: the privacy-reviewed Pages deployment is not live. Pages is still `legacy`, `main:/`, and the whole public repository is served. The owner must set Settings > Pages > Source to GitHub Actions (GitHub Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). IR-36: the strategy order was labelled "Rank" and "Best", which reads as a winner before verified lease and owner inputs exist. Relabelled "Model order", with a no-winner statement; the numbers are unchanged. Existing IR-30 (a personal e-mail address in commit metadata) and IR-31 (repository is public) remain open.
 
-**Pages deployment and merge.** See the PR table below. Pages source is a repository setting that this session's token cannot change (the earlier attempt by session `f652211c` returned HTTP 403). The workflow `deploy privacy-reviewed Pages artifact` is therefore expected to fail its source gate until the owner acts, and the public site continues to be served from the repository root.
+**Pages deployment and merge.** Merged as `bf8dcbf` (PR #82, merge commit). Post-merge results are in the EB-05 row above. Note that `main` moved during this session: PR #81 (session `14430a3c`) merged first; its board entries and generated outputs were kept and the outputs regenerated from the data, not hand-merged. Earlier text: Pages source is a repository setting that this session's token cannot change (the earlier attempt by session `f652211c` returned HTTP 403). The workflow `deploy privacy-reviewed Pages artifact` is therefore expected to fail its source gate until the owner acts, and the public site continues to be served from the repository root.
 
 ### Session `14430a3c` — CLAIM, 2026-11-15 (branch `arena/14430a3c-jack2`, base `4555432` = main)
 
@@ -2105,6 +2105,7 @@ accepted because the current legacy publication exposes the entire repository, w
 
 **Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
 
+<<<<<<< HEAD
 ---
 
 ### Session `b2494ade` — claim (2026-11-15, branch `arena/b2494ade-jack2`, base `4555432`)
@@ -2159,3 +2160,31 @@ accepted because the current legacy publication exposes the entire repository, w
 - Re-verify the other 389 fact rows line by line.
 
 **Generated outputs.** Refreshed only through the existing generators (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`). This also refreshed the F4 audit files under `session-f4f700c0/`, as earlier sessions did when the board changed.
+=======
+### Session `280155af` — consolidation verification, live-site confirmation and integration close-out (2026-11-15)
+
+**Scope.** Verified the consolidated root site and confirmed the GitHub Pages deployment. No file inside another session's `session-*/` or `docs/` folder, or root tools/, data/, research/, model/, scripts/, was modified. Only `COORDINATION.md` (this record) and the regenerated `canonical/data/repo_review.json` are touched.
+
+**Verification performed (2026-11-15).** `python3 canonical/ci_local.py` passed all 24 steps on the clean tree: 12/12 consolidated-site checks (441 ledger rows: 360 verified, 37 computed, 44 blank, 7 withheld; 914 table rows each linked to an official source; 7,013 internal links; full-tree privacy scan 0 matches; no off-site loads; decision-critical figures re-read and unchanged), `canonical/sanitize.py --check` 0 matches, `canonical/review_repo.py` regenerated `canonical/data/repo_review.json` (29 workspaces, 523 files, 91,736 lines, 264 pages), and 15 unit tests OK. Generated-files freshness gate clean (`git status` clean).
+
+**Live site.** GitHub Pages API: `status=built`, `build_type=legacy`, `source=main:/`, HTTPS enforced, live at https://wingbangboozle1-lang.github.io/Jack2/ . The consolidated root site at commit `4555432` (the merged integration) is deployed.
+
+**Pull request / merge.** At claim time this session's branch `arena/280155af-jack2` was at the same commit as `main`/`origin/main` (`4555432`), so there was no integration-branch diff. After recording this close-out and refreshing `canonical/data/repo_review.json`, the session commits are pushed to `arena/280155af-jack2`, a PR is opened to `main`, and merged with `gh pr merge --merge`; the push to `main` re-deploys GitHub Pages (legacy build). PR link and merge result recorded below once merged.
+
+**Privacy boundary blocker (owner action).** The privacy-reviewed artifact deploy (`.github/workflows/pages.yml`) remains blocked until a repository owner sets Settings → Pages → Build and deployment → Source to GitHub Actions: the workflow token receives HTTP 403 on the `build_type=workflow` PUT (documented by session `f652211c`). Until then the legacy whole-repo publication (`build_type=legacy`) is what is live. The sandbox cannot reach `github.io`, so live-page checks come from the GitHub Pages API and workflow runs only.
+
+**Decision (from the verified model).** Ask the tenant for an early extension first; a refusal points to selling before expiry; never hold to expiry. Per $100 of current yearly rent at a 2030 expiry, the model ranking is extend_then_sell ≈ 3,045.8 > sell_exchange ≈ 2,787.7 > test_then_decide ≈ 2,759.6 > do_nothing > extend_and_hold > sell_cash = 2,543.0. Public evidence cannot settle sell vs renew; the deciding facts (rent, exact expiry, options, tenant entity, tax basis) are private and are left blank and flagged on the site. Not an appraisal, tax or investment advice.
+
+| Item | Value |
+|---|---|
+| Branch | `arena/280155af-jack2` |
+| Base commit | `45554320b66a80c1bd202872cc50e49b6f4d34bd` |
+| CI replay | `canonical/ci_local.py` all 24 steps passed |
+| Consolidated-site checks | 12/12 PASS; unit tests 15/15 OK; privacy scan 0 matches |
+| Live site URL | https://wingbangboozle1-lang.github.io/Jack2/ |
+| Pages status | `built`, `build_type=legacy`, `source=main:/` |
+| PR | recorded below after merge |
+| Merge | `gh pr merge --merge`, without waiting for approval, per the brief |
+
+**PR link and merge result:** to be filled in after the PR is created and merged.
+>>>>>>> origin/main
