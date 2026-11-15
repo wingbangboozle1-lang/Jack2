@@ -30,9 +30,7 @@ import privacy  # noqa: E402
 # expand the public artifact. Add a page here only after reviewing it for release.
 PAGE_FILES = sorted({
     "404.html",
-    "advisor-summary.html",
     "archive.html",
-    "calculator.html",
     "decision.html",
     "demographics.html",
     "deployment.html",
@@ -53,10 +51,9 @@ PAGE_FILES = sorted({
     "tenant.html",
     "valuation.html",
     "verification.html",
-    "work-register.html",
     "workspaces.html",
 })
-STATIC_FILES = ["assets/site.css", "assets/site.js", "assets/calculator.js", "favicon.svg", ".nojekyll"]
+STATIC_FILES = ["assets/site.css", "assets/site.js", "favicon.svg", ".nojekyll"]
 ALLOWED_FILES = set(PAGE_FILES + STATIC_FILES)
 
 
