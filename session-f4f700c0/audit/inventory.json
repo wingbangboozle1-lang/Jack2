@@ -2,8 +2,8 @@
   "meta": {
     "as_of": "2026-11-08",
     "files": 588,
-    "lines": 110021,
-    "bytes": 10297965,
+    "lines": 110042,
+    "bytes": 10299937,
     "privacy_pattern_hits": 0,
     "current_session_privacy_hits": 0,
     "historical_privacy_review": [],
@@ -11,8 +11,8 @@
     "workspaces": {
       "root/config": {
         "files": 63,
-        "lines": 21114,
-        "bytes": 2181799,
+        "lines": 21135,
+        "bytes": 2183771,
         "privacy_hits": 0,
         "structural_errors": 0
       },
@@ -240,9 +240,9 @@
     {
       "path": "COORDINATION.md",
       "workspace": "root/config",
-      "bytes": 209342,
-      "lines": 1951,
-      "sha256": "3e765329412f57fa2ff0dfcf4281f2453ab36930566d360edf4f9c387c7fec70",
+      "bytes": 210874,
+      "lines": 1964,
+      "sha256": "cd4f0ffa1617997cdd8bc70b1dd7362d228c05e42edac7e5d05bbf38079ce158",
       "kind": ".md",
       "url_count": 83,
       "pii_pattern_hits": 0,
@@ -352,9 +352,9 @@
     {
       "path": "canonical/ci_local.py",
       "workspace": "root/config",
-      "bytes": 2761,
-      "lines": 77,
-      "sha256": "923051eeb55ee507a90be6f84d640231be1fc199f0e866072bc52ad5bb586a33",
+      "bytes": 3201,
+      "lines": 85,
+      "sha256": "c2ac1db4a19bf0cb3401ba73130f5d660d0edeaaf9a8fd36f012c9ad5aa50c57",
       "kind": ".py",
       "url_count": 0,
       "pii_pattern_hits": 0,
