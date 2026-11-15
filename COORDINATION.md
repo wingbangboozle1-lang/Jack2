@@ -2104,3 +2104,30 @@ accepted because the current legacy publication exposes the entire repository, w
 **Verification performed (2026-11-15).** `canonical/ci_local.py` passed all 24 steps on the rebased tree (12/12 consolidated-site checks, 15 unit tests, privacy scan 0 matches, Pages artifact gate, generated-files freshness gate). `yaml` parsed for `pages.yml` and `verify.yml`.
 
 **Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
+
+### Session `280155af` — consolidation verification, live-site confirmation and integration close-out (2026-11-15)
+
+**Scope.** Verified the consolidated root site and confirmed the GitHub Pages deployment. No file inside another session's `session-*/` or `docs/` folder, or root tools/, data/, research/, model/, scripts/, was modified. Only `COORDINATION.md` (this record) and the regenerated `canonical/data/repo_review.json` are touched.
+
+**Verification performed (2026-11-15).** `python3 canonical/ci_local.py` passed all 24 steps on the clean tree: 12/12 consolidated-site checks (441 ledger rows: 360 verified, 37 computed, 44 blank, 7 withheld; 914 table rows each linked to an official source; 7,013 internal links; full-tree privacy scan 0 matches; no off-site loads; decision-critical figures re-read and unchanged), `canonical/sanitize.py --check` 0 matches, `canonical/review_repo.py` regenerated `canonical/data/repo_review.json` (29 workspaces, 523 files, 91,736 lines, 264 pages), and 15 unit tests OK. Generated-files freshness gate clean (`git status` clean).
+
+**Live site.** GitHub Pages API: `status=built`, `build_type=legacy`, `source=main:/`, HTTPS enforced, live at https://wingbangboozle1-lang.github.io/Jack2/ . The consolidated root site at commit `4555432` (the merged integration) is deployed.
+
+**Pull request / merge.** At claim time this session's branch `arena/280155af-jack2` was at the same commit as `main`/`origin/main` (`4555432`), so there was no integration-branch diff. After recording this close-out and refreshing `canonical/data/repo_review.json`, the session commits are pushed to `arena/280155af-jack2`, a PR is opened to `main`, and merged with `gh pr merge --merge`; the push to `main` re-deploys GitHub Pages (legacy build). PR link and merge result recorded below once merged.
+
+**Privacy boundary blocker (owner action).** The privacy-reviewed artifact deploy (`.github/workflows/pages.yml`) remains blocked until a repository owner sets Settings → Pages → Build and deployment → Source to GitHub Actions: the workflow token receives HTTP 403 on the `build_type=workflow` PUT (documented by session `f652211c`). Until then the legacy whole-repo publication (`build_type=legacy`) is what is live. The sandbox cannot reach `github.io`, so live-page checks come from the GitHub Pages API and workflow runs only.
+
+**Decision (from the verified model).** Ask the tenant for an early extension first; a refusal points to selling before expiry; never hold to expiry. Per $100 of current yearly rent at a 2030 expiry, the model ranking is extend_then_sell ≈ 3,045.8 > sell_exchange ≈ 2,787.7 > test_then_decide ≈ 2,759.6 > do_nothing > extend_and_hold > sell_cash = 2,543.0. Public evidence cannot settle sell vs renew; the deciding facts (rent, exact expiry, options, tenant entity, tax basis) are private and are left blank and flagged on the site. Not an appraisal, tax or investment advice.
+
+| Item | Value |
+|---|---|
+| Branch | `arena/280155af-jack2` |
+| Base commit | `45554320b66a80c1bd202872cc50e49b6f4d34bd` |
+| CI replay | `canonical/ci_local.py` all 24 steps passed |
+| Consolidated-site checks | 12/12 PASS; unit tests 15/15 OK; privacy scan 0 matches |
+| Live site URL | https://wingbangboozle1-lang.github.io/Jack2/ |
+| Pages status | `built`, `build_type=legacy`, `source=main:/` |
+| PR | recorded below after merge |
+| Merge | `gh pr merge --merge`, without waiting for approval, per the brief |
+
+**PR link and merge result:** to be filled in after the PR is created and merged.
