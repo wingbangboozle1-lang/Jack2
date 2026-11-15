@@ -1,0 +1,542 @@
+{
+ "meta": {
+  "access_date": "2026-11-15",
+  "by": "session b2494ade (task B-02)",
+  "scope": "Sample of decision-critical rows from canonical/data/facts (taxes, hazards, economy, population). 441 rows exist in those files; this session re-read 47 against the official page, recomputed 5 from re-read figures, and did not check the other 389 rows. Those remain as the earlier sessions recorded them.",
+  "method": "Each source page was opened with the web reader on the access date. The official value was copied from the page. 'match' means the repository value equals the official value after rounding. 'recomputed' means the value is arithmetic on re-read figures; the arithmetic is shown.",
+  "changes": "No value in canonical/data/facts or sources.json was changed by this record. The build does not read this file.",
+  "result_counts": {
+   "match": 47,
+   "recomputed": 5,
+   "mismatch": 0
+  }
+ },
+ "rows": [
+  {
+   "id": "TX-001",
+   "label": "City transfer tax, base rate",
+   "repo_value": "0.45%",
+   "official_value": "0.45%",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-002",
+   "label": "City base rate per $500",
+   "repo_value": "$2.25 per $500 or part thereof",
+   "official_value": "$2.25 per $500 or part thereof",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-003",
+   "label": "ULA thresholds",
+   "repo_value": "$5,400,000 and $10,900,000",
+   "official_value": "$5,400,000 and $10,900,000 (transactions closing after June 30, 2026)",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-004",
+   "label": "ULA rate above $5,400,000 and below $10,900,000",
+   "repo_value": "4%",
+   "official_value": "4%",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-005",
+   "label": "ULA rate at $10,900,000 or more",
+   "repo_value": "5.5%",
+   "official_value": "5.5%",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-006",
+   "label": "Total city rate at or below $5,400,000",
+   "repo_value": "0.45%",
+   "official_value": "0.45%",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-007",
+   "label": "Total city rate above $5,400,000 and below $10,900,000",
+   "repo_value": "4.45%",
+   "official_value": "4.45%",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-008",
+   "label": "Total city rate at $10,900,000 or more",
+   "repo_value": "5.95%",
+   "official_value": "5.95%",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-011",
+   "label": "Date the ULA tax took effect",
+   "repo_value": "April 1, 2023",
+   "official_value": "applies to qualified conveyances on or after April 1, 2023",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-015",
+   "label": "City plus county, sale at or below $5,400,000",
+   "repo_value": "0.56%",
+   "official_value": "not on the ULA page",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "recomputed",
+   "note": "0.45% city base (read on the ULA page) + 0.11% county rate (TX-013, not re-read this session) = 0.56%"
+  },
+  {
+   "id": "TX-016",
+   "label": "City plus county, sale above $5,400,000 and below $10,900,000",
+   "repo_value": "4.56%",
+   "official_value": "not on the ULA page",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "recomputed",
+   "note": "4.45% + 0.11% = 4.56%"
+  },
+  {
+   "id": "TX-017",
+   "label": "Extra tax from crossing $5,400,000 by one dollar",
+   "repo_value": "$216,000",
+   "official_value": "not on the ULA page",
+   "source": "S-ULA",
+   "url": "https://finance.lacity.gov/faq/measure-ula",
+   "result": "recomputed",
+   "note": "4% x $5,400,000 = $216,000"
+  },
+  {
+   "id": "TX-040",
+   "label": "Top federal rate on most long-term capital gain",
+   "repo_value": "20%",
+   "official_value": "20% applies above the 15% thresholds (tax years beginning in 2025)",
+   "source": "S-IRS-409",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-041",
+   "label": "Taxable income above which 20% applies",
+   "repo_value": "$533,400 single; $600,050 married filing jointly",
+   "official_value": "$533,400 single; $600,050 married filing jointly and qualifying surviving spouse",
+   "source": "S-IRS-409",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "TX-042",
+   "label": "Top federal rate on unrecaptured section 1250 gain",
+   "repo_value": "25%",
+   "official_value": "25% maximum rate",
+   "source": "S-IRS-409",
+   "url": "https://www.irs.gov/taxtopics/tc409",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-020",
+   "label": "Eaton Fire: area burned",
+   "repo_value": "14,021 acres",
+   "official_value": "14,021 Acres",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-021",
+   "label": "Eaton Fire: structures destroyed",
+   "repo_value": "9,419",
+   "official_value": "9,419 Structures Destroyed",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-022",
+   "label": "Eaton Fire: structures damaged",
+   "repo_value": "1,076",
+   "official_value": "1,076 Structures Damaged",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-023",
+   "label": "Eaton Fire: confirmed civilian fatalities",
+   "repo_value": "19",
+   "official_value": "19 Confirmed Civilian Fatalities",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-024",
+   "label": "Eaton Fire: cause on the incident record",
+   "repo_value": "Electrical",
+   "official_value": "Cause: Electrical",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-025",
+   "label": "Palisades Fire: area burned",
+   "repo_value": "23,448 acres",
+   "official_value": "23,448 Acres",
+   "source": "S-CALFIRE-PALISADES",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "result": "match",
+   "note": "The CAL FIRE page says 'Not a CAL FIRE Incident'; the figures are as posted there."
+  },
+  {
+   "id": "HZ-026",
+   "label": "Palisades Fire: structures destroyed",
+   "repo_value": "6,845",
+   "official_value": "6,845 Structures Destroyed",
+   "source": "S-CALFIRE-PALISADES",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-027",
+   "label": "Palisades Fire: structures damaged",
+   "repo_value": "975",
+   "official_value": "975 Structures Damaged",
+   "source": "S-CALFIRE-PALISADES",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-028",
+   "label": "Palisades Fire: confirmed civilian fatalities",
+   "repo_value": "12",
+   "official_value": "12 Confirmed Civilian Fatalities",
+   "source": "S-CALFIRE-PALISADES",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-029",
+   "label": "Palisades Fire: cause on the incident record",
+   "repo_value": "Arson",
+   "official_value": "Cause: Arson",
+   "source": "S-CALFIRE-PALISADES",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-030",
+   "label": "How long each fire was active",
+   "repo_value": "24 days",
+   "official_value": "Active for 24 days (both fires)",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "HZ-031",
+   "label": "Structures destroyed, both fires",
+   "repo_value": "16,264",
+   "official_value": "not on the CAL FIRE pages",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "recomputed",
+   "note": "9,419 + 6,845 = 16,264"
+  },
+  {
+   "id": "HZ-032",
+   "label": "Area burned, both fires",
+   "repo_value": "37,469 acres",
+   "official_value": "not on the CAL FIRE pages",
+   "source": "S-CALFIRE-EATON",
+   "url": "https://www.fire.ca.gov/incidents/2025/1/7/eaton-fire",
+   "result": "recomputed",
+   "note": "14,021 + 23,448 = 37,469"
+  },
+  {
+   "id": "EC-020",
+   "label": "Unemployment rate, LA city, Sep 2026",
+   "repo_value": "4.5%",
+   "official_value": "4.5% (Sep-26)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-021",
+   "label": "Unemployment rate, LA city, Sep 2025",
+   "repo_value": "5.9%",
+   "official_value": "5.9% (Sep-25)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-022",
+   "label": "Unemployment rate, LA County, Sep 2026",
+   "repo_value": "4.5%",
+   "official_value": "4.5% (Sep-26)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-023",
+   "label": "Unemployment rate, LA metro, Sep 2026",
+   "repo_value": "4.4%",
+   "official_value": "4.4% (Sep-26)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-024",
+   "label": "Unemployment rate, California, Sep 2026",
+   "repo_value": "5.1%",
+   "official_value": "5.1% (Sep-26)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-025",
+   "label": "Unemployment rate, United States, Sep 2026",
+   "repo_value": "4.0%",
+   "official_value": "4.0% (Sep-26)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-030",
+   "label": "Payroll jobs, LA metro, Sep 2026 (thousands)",
+   "repo_value": "6,282.1",
+   "official_value": "6,282.1",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-031",
+   "label": "Payroll jobs change over the year",
+   "repo_value": "+30.2 thousand (0.5%)",
+   "official_value": "30.2 (0.5%)",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-032",
+   "label": "Leisure and hospitality jobs",
+   "repo_value": "+11.5 thousand (1.5%), to 782.0 thousand",
+   "official_value": "11.5 (1.5%); 782.0",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-033",
+   "label": "Education and health services jobs",
+   "repo_value": "+49.1 thousand (3.8%), to 1,340.7 thousand",
+   "official_value": "49.1 (3.8%); 1,340.7",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-034",
+   "label": "Information sector jobs",
+   "repo_value": "-11.4 thousand (-5.7%), to 187.0 thousand",
+   "official_value": "-11.4 (-5.7%); 187.0",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "EC-035",
+   "label": "Professional and business services jobs",
+   "repo_value": "-5.2 thousand (-0.5%), to 975.5 thousand",
+   "official_value": "-5.2 (-0.5%); 975.5",
+   "source": "S-BLS",
+   "url": "https://www.bls.gov/regions/west/summary/blssummary_losangeles.pdf",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-001a",
+   "label": "Residents, City of Los Angeles, July 1, 2025",
+   "repo_value": "3,869,089",
+   "official_value": "3,869,089",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-001b",
+   "label": "Residents, Los Angeles County, July 1, 2025",
+   "repo_value": "9,694,934",
+   "official_value": "9,694,934",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-002a",
+   "label": "Change since the 2020 estimates base, City",
+   "repo_value": "-0.8%",
+   "official_value": "-0.8%",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": "Recomputed from the Census estimates base 3,899,342: -0.78%."
+  },
+  {
+   "id": "PP-002b",
+   "label": "Change since the 2020 estimates base, County",
+   "repo_value": "-3.2%",
+   "official_value": "-3.2%",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": "Recomputed from the Census estimates base 10,017,414: -3.22%."
+  },
+  {
+   "id": "PP-003a",
+   "label": "Residents at the 2020 Census, City",
+   "repo_value": "3,898,747",
+   "official_value": "3,898,747",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-003b",
+   "label": "Residents at the 2020 Census, County",
+   "repo_value": "10,014,009",
+   "official_value": "10,014,009",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-004a",
+   "label": "Residents at the 2010 Census, City",
+   "repo_value": "3,792,621",
+   "official_value": "3,792,621",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-004b",
+   "label": "Residents at the 2010 Census, County",
+   "repo_value": "9,818,605",
+   "official_value": "9,818,605",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-005a",
+   "label": "Residents under 18, City, 2025 estimate",
+   "repo_value": "19.2%",
+   "official_value": "19.2%",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-005b",
+   "label": "Residents under 18, County, 2025 estimate",
+   "repo_value": "19.2%",
+   "official_value": "19.2%",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": "The same figure for both geographies is what the page shows; it is not a copy error."
+  },
+  {
+   "id": "PP-006a",
+   "label": "Residents aged 65 and over, City, 2025 estimate",
+   "repo_value": "14.2%",
+   "official_value": "14.2%",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  },
+  {
+   "id": "PP-006b",
+   "label": "Residents aged 65 and over, County, 2025 estimate",
+   "repo_value": "17.1%",
+   "official_value": "17.1%",
+   "source": "S-CENSUS",
+   "url": "https://www.census.gov/quickfacts/fact/table/losangelescitycalifornia,losangelescountycalifornia/PST045224",
+   "result": "match",
+   "note": ""
+  }
+ ],
+ "history_scan": {
+  "method": "git log --all -p over all 292 commits (repository fetched with git fetch --unshallow on 2026-11-15) scanned with canonical/privacy.py patterns on added lines. Matched text is not reproduced anywhere in the repository.",
+  "current_tree": "0 pattern hits across 591 tracked text files (canonical/privacy.py, same run).",
+  "history_hits": "25 hits in 6 commits dated 2026-11-06 to 2026-11-12: 24 individual-name pattern hits and 1 street-address pattern hit. Commit list and paths are in IR-41.",
+  "author_fields": "2 commits from 2026-11 carry a non-GitHub-noreply address in the author or committer field. Recorded in IR-30; the address is not reproduced."
+ }
+}

@@ -539,6 +539,25 @@
    ],
    "action": "Enter the private file in the secure workflow, then update the progress board. Do not publish any identifier while doing so.",
    "status": "needs review"
+  },
+  {
+   "id": "IR-41",
+   "area": "Privacy",
+   "title": "Earlier commits in the public history still hold individual names and a street address",
+   "detail": "A scan of the full git history (read 2026-11-15) finds personal-data pattern hits in six commits dated 2026-11-06 to 2026-11-12. Individual-name patterns appear in all six, and one of them also carries a street-address pattern. The current files are clean, so IR-32 is true for the tracked files but not for the history. Anyone who clones the public repository can read these earlier versions. The matched text is not reproduced here. Commits for review, by short hash: 833df60fbb, d5b27912af, f4500a22c7, 3b842781d8, 80ab9bd8ee, 0e4751e54c.",
+   "rows": [],
+   "links": [
+    [
+     "Commit history of the repository",
+     "https://github.com/wingbangboozle1-lang/Jack2/commits/main"
+    ],
+    [
+     "Spot-check and history-scan record (counts only)",
+     "https://github.com/wingbangboozle1-lang/Jack2/blob/main/canonical/data/spot_check_2026-11-15.json"
+    ]
+   ],
+   "action": "Owner decision, not taken here: (a) accept that history is public and record that; (b) rewrite history with a history-rewriting tool and force-push every branch, which also rewrites open pull requests and other sessions' branches; or (c) make the repository private, which the GitHub Pages documentation says needs a paid plan for Pages. Afterwards, re-run the history scan.",
+   "status": "needs review"
   }
  ]
 }

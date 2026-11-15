@@ -237,6 +237,20 @@
    "where": "tenant.html, progress.html",
    "status": "Partly met; two quarters and two fiscal years",
    "note": "Same-store sales for two quarters and two fiscal years, and unit counts at two dates. More quarters are needed before the direction is reliable."
+  },
+  {
+   "id": "RQ-35",
+   "requirement": "Commission a private lease abstract and reconcile it with the notice calendar before a sale or renewal commitment",
+   "where": "questions.html",
+   "status": "Blocked: needs the lease file, kept offline with authorised advisers",
+   "note": "Not in the repository. The lease file must stay offline; the abstract is commissioned privately."
+  },
+  {
+   "id": "RQ-36",
+   "requirement": "Prepare an after-tax sale comparison alongside a negotiated renewal case; select no winner until verified inputs exist",
+   "where": "decision.html, taxes.html",
+   "status": "Partly met; no winner selected",
+   "note": "The decision rule is published and no winner is selected. The after-tax sale comparison waits for the private inputs (RQ-32)."
   }
  ]
 }
