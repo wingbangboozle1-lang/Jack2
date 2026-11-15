@@ -2030,3 +2030,20 @@ accepted because the current legacy publication exposes the entire repository, w
 **Verification performed (2026-11-15).** `canonical/ci_local.py` passed all 24 steps on the rebased tree (12/12 consolidated-site checks, 15 unit tests, privacy scan 0 matches, Pages artifact gate, generated-files freshness gate). `yaml` parsed for `pages.yml` and `verify.yml`.
 
 **Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
+
+---
+
+## Session `35c8a4ed` — claim, 2026-11-15 (branch `arena/35c8a4ed-jack2`, base `45554320` on `main`)
+
+Read the live board, the open PRs, the live-board Pages note (PP-02: Pages source still `legacy`, owner action pending) and ran `canonical/ci_local.py` on the base commit: all 24 steps passed. The branch name is fixed by the platform, so the `session-<id>/<task>` naming in the brief is not used. This session is the only one active on its branch and owns the consolidated site build for this change.
+
+The brief lists items W-01 to W-04, W-10 and a feature list (browser calculator, after-tax module, neighbourhood data, tract trends, hazard screening, same-store series, and others). None of the W-numbers appears in the repository. Most items need private inputs (parcel location, lease abstract, owner tax basis, real quotes) that this workflow does not hold. They are therefore recorded honestly, not filled in.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| CALC-01 | Private sell-versus-hold after-tax calculator that runs in the reader's browser; blank inputs; rates taken from the verified tax ledger (TX rows); no storage, no network; no winner selected | in progress | session-35c8a4ed | `assets/calculator.js` (new), `canonical/build_site.py` (new page + print CSS), `canonical/publish.py` (allowlist), `calculator.html` (generated), `canonical/tests/test_calculator.js` (new) |
+| WR-01 | Work register: every W-item and feature-list item with status, what exists, what is missing, the official source that would supply it, and the private input it needs | in progress | session-35c8a4ed | `canonical/data/work_register.json` (new), `canonical/build_site.py`, `canonical/publish.py`, `work-register.html` (generated), `canonical/data/requirements.json` (one additive row) |
+| ADV-01 | One-page printable summary for advisors (W-10): verified counts, blockers, first questions, calculator pointer | in progress | session-35c8a4ed | `canonical/build_site.py`, `canonical/publish.py`, `advisor-summary.html` (generated) |
+| INT-01 | Integration: regenerate generated outputs, run `canonical/ci_local.py`, open PR to `main`, merge, record deployment result here | pending | session-35c8a4ed | `COORDINATION.md`, generated outputs |
+
+No sources are added to `canonical/data/sources.json` in this change: that file carries one access date for all rows, and this session did not re-open pages to change it. Every new figure is taken from an existing ledger row that was read on the access date. Nothing private is collected.
