@@ -199,6 +199,47 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `ebedfe13` — CLAIM, 2026-11-15 (branch `arena/ebedfe13-jack2`, base `4555432` = main after PR #80)
+
+**Starting state read before claiming.** Live board, open PRs and tree read. Local replay of `.github/workflows/verify.yml` (`canonical/ci_local.py`) passed 24/24 on the base commit. Pages API (read-only): `status built`, `build_type legacy`, source `main:/`, repository `public`. The privacy-reviewed deploy workflow's last run (`43720009686`) failed at the "Confirm GitHub Actions is the Pages publishing source" gate, as designed; the live archive page still lists every historical workbook. Those are owner actions (Settings > Pages) and are not changed here. An independent pattern scan of the 591 tracked files (e-mail, telephone, street address, parcel, SSN/EIN, honorific, trust/LLC) returned zero matches.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| EB-01 | Read board and tree; record claim; push before any other edit | in progress | session-ebedfe13 | `COORDINATION.md` (this block) |
+| EB-02 | Re-read two decision-critical official values on 2026-11-15 (U.S. Treasury 10-year par yield, CM-001; Jack in the Box Q3 FY2026 release, TN-020) and record what each page shows | in progress | session-ebedfe13 | `COORDINATION.md` only (no ledger value changed unless the page changed) |
+| EB-03 | Remove the "winner" framing from the strategy ranking: the ranking is model output under analyst assumptions and selects no winner until lease and owner inputs are verified | in progress | session-ebedfe13 | `canonical/build_site.py` (strategy table header and caption, one sentence), `canonical/data/decisions.json` (one "because" sentence) |
+| EB-04 | Register new irregularities found in this review (IR-35 onward) | in progress | session-ebedfe13 | `canonical/data/irregularities.json` (append only) |
+| EB-05 | Regenerate generated outputs, replay the full 24-step workflow, open PR to `main`, merge, record the Pages result honestly | in progress | session-ebedfe13 | generated root outputs, `README.md` (only if needed), `COORDINATION.md` |
+
+**Scope note.** No file inside another session's `session-*/` or `docs/` folder is edited. Historical workbooks are not regenerated. The Pages source setting is not changed by this session (the sandbox token cannot change it, and that change is for the repository owner).
+
+### Session `ebedfe13` — close-out (2026-11-15)
+
+**Task status.**
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| EB-01 | Claim and board | done | claim pushed as `98c07e4` before any other edit |
+| EB-02 | Re-read two decision-critical official values | done | both re-read on 2026-11-15; both match the ledger; nothing changed |
+| EB-03 | Remove the "winner" framing from the strategy order | done | `canonical/build_site.py` and `canonical/data/decisions.json` changed (wording only; no number changed) |
+| EB-04 | Register new irregularities | done | IR-35 (Pages source still legacy) and IR-36 (order labelled as a winner) added to `canonical/data/irregularities.json` (append only) |
+| EB-05 | Regenerate, replay, PR, merge, record the Pages result | in progress at the time of writing; PR link and merge result recorded below by follow-up commit | see the PR line in the table below |
+
+**Sources read on 2026-11-15 (official, re-opened today).**
+
+| Source | What was read | Ledger rows matched |
+|---|---|---|
+| U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates, November 2026 (`https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611`) | Row 11/13/2026: 10 Yr 5.15; latest posted row is 11/13/2026 | CM-001 (5.15%, 11/13/2026): match |
+| Jack in the Box Inc., Exhibit 99.1, third quarter fiscal 2026 results, August 12, 2026 (`https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm`) | System same-store sales (1.1%); restaurant count 2,115 at end of Q3 (2,168 a year earlier); net earnings from continuing operations $21.0 million; total stockholders' deficit (901,286) | TN-020, TN-001, TN-004, TN-034, TN-043 and the computed TN-085 (-53): all match |
+
+**Result.** Eight values re-read today; eight matched. The other ledger rows keep their 2026-11-13 and 2026-11-12 access dates. This session did not re-read all 440 rows.
+
+**Verification performed.** `canonical/ci_local.py` runs the 24 steps of `verify.yml`. After the wording changes, the consolidated checks pass 12 of 12 (914 table rows on 22 pages each linked to an official source; numbers in sentences match their cited evidence; 7,034 internal links resolve; privacy scan finds no e-mail, telephone, street address, parcel number or named individual in 586 text files; no outside scripts; 23 archived workbooks listed; generated files rebuilt). The 15 model unit tests pass. The regenerated outputs are committed with this record in the same commit, so the freshness gate passes on the branch.
+
+**Irregularities (on the Flagged for Review page).** IR-35: the privacy-reviewed Pages deployment is not live. Pages is still `legacy`, `main:/`, and the whole public repository is served. The owner must set Settings > Pages > Source to GitHub Actions (GitHub Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). IR-36: the strategy order was labelled "Rank" and "Best", which reads as a winner before verified lease and owner inputs exist. Relabelled "Model order", with a no-winner statement; the numbers are unchanged. Existing IR-30 (a personal e-mail address in commit metadata) and IR-31 (repository is public) remain open.
+
+**Pages deployment and merge.** See the PR table below. Pages source is a repository setting that this session's token cannot change (the earlier attempt by session `f652211c` returned HTTP 403). The workflow `deploy privacy-reviewed Pages artifact` is therefore expected to fail its source gate until the owner acts, and the public site continues to be served from the repository root.
+
 ### Session `14430a3c` — CLAIM, 2026-11-15 (branch `arena/14430a3c-jack2`, base `4555432` = main)
 
 Read the live board, the open PRs, the Pages API and the last workflow runs before claiming. Pages is still `build_type=legacy`, source `main:/` (whole repository published); the last `deploy privacy-reviewed Pages artifact` run (43720009686) failed at the Pages-source confirmation step. The task below is the owner's top-priority privacy item. The branch name is fixed by the platform, so the `session-<id>/<task>` naming is not used; this session works only on its own branch and does not touch other sessions' folders.
