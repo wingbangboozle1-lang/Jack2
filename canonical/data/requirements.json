@@ -81,8 +81,8 @@
       "id": "RQ-12",
       "requirement": "Privacy first: no personal information, placeholders only",
       "where": "privacy.html",
-      "status": "Done",
-      "note": "Enforced by the build: the site fails to build if a personal identifier pattern appears."
+      "status": "Done in the repository; not yet on the live site",
+      "note": "The build scans every published file and fails on a personal identifier pattern (0 matches). The live GitHub Pages site still publishes the whole repository (source main:/), so historical pages remain reachable. See RQ-28 and COORDINATION.md (PP-03)."
     },
     {
       "id": "RQ-13",
@@ -121,17 +121,122 @@
     },
     {
       "id": "RQ-18",
-      "requirement": "Each item named in the brief (W-01 to W-10) and each feature on its list, with its status and what it still needs",
-      "where": "work-register.html, advisor-summary.html",
-      "status": "Done as a register; most items are blocked on private inputs",
-      "note": "Blocked items are not filled in. The work register states what each one needs and the official source that would supply it."
+      "requirement": "W-01 Replace city and county proxies with trade-area figures",
+      "where": "work-register.html, demographics.html, market-economics.html",
+      "status": "Blocked: needs the secure parcel workflow",
+      "note": "The site still uses city and county figures. A trade area (radius or drive time) must be defined in the secure workflow first, then matched to official Census tract data."
     },
     {
       "id": "RQ-19",
-      "requirement": "A private sell-versus-hold after-tax calculator that runs in the reader's browser, with no winner selected until verified inputs exist",
+      "requirement": "W-02 Extend the private worksheet to a sell-versus-hold comparison",
+      "where": "calculator.html, projection-model.html, decision.html",
+      "status": "Partly met: the calculator computes both paths from the owner's inputs; no winner selected; owner inputs missing",
+      "note": "The public scenario model compares six strategies with owner inputs left blank. The private worksheet with owner figures is not built and must stay offline."
+    },
+    {
+      "id": "RQ-20",
+      "requirement": "W-03 Decision-gate progress board",
+      "where": "work-register.html, decision.html",
+      "status": "Partly met: the plan is on decision.html; no tracked board yet",
+      "note": "Decision triggers are written on decision.html. A board that tracks each gate's status is not built."
+    },
+    {
+      "id": "RQ-21",
+      "requirement": "W-04 Parcel-level hazard screening",
+      "where": "hazards.html",
+      "status": "Blocked: needs the secure parcel workflow",
+      "note": "Regional hazard context is published. A parcel screen needs the parcel identified in the secure workflow, then official seismic, flood and fire zone lookups."
+    },
+    {
+      "id": "RQ-22",
+      "requirement": "W-10 One-page printable summary for advisors",
+      "where": "advisor-summary.html, executive-summary.html",
+      "status": "Met: one-page printable advisor summary",
+      "note": "The executive summary exists and the stylesheet has a print rule. A one-page advisor sheet is not built and its page fit has not been checked."
+    },
+    {
+      "id": "RQ-23",
+      "requirement": "A private calculator that runs in the reader's browser",
       "where": "calculator.html",
-      "status": "Done as a tool; results need the owner's verified inputs",
-      "note": "Blank inputs, no storage and no network call. Rates come from the verified tax ledger. Arithmetic is tested in canonical/tests/calculator_test.js."
+      "status": "Met: runs in the reader's browser; saves nothing",
+      "note": "No calculator exists. Any version must run entirely in the browser, store nothing, and start from public defaults or blank fields."
+    },
+    {
+      "id": "RQ-24",
+      "requirement": "Neighbourhood-level data around the parcel",
+      "where": "demographics.html",
+      "status": "Blocked: needs the secure location step",
+      "note": "Neighbourhood data needs the location, used only in the secure workflow, to select Census tracts. Public pages carry city and county data only."
+    },
+    {
+      "id": "RQ-25",
+      "requirement": "An after-tax module",
+      "where": "calculator.html, taxes.html",
+      "status": "Met as a module: rules from the verified tax ledger; owner's inputs still needed",
+      "note": "taxes.html lists verified tax rules. No after-tax sale calculation exists; it needs the owner's basis and sale figures, which are blank."
+    },
+    {
+      "id": "RQ-26",
+      "requirement": "Price the short-lease discount from real quotes",
+      "where": "decision.html",
+      "status": "Blocked: needs real quotes",
+      "note": "No public quote data exists. The short-lease discount stays blank until real quotes are obtained."
+    },
+    {
+      "id": "RQ-27",
+      "requirement": "Tract-level trend evidence alongside the regional figures",
+      "where": "work-register.html, market-economics.html",
+      "status": "Blocked: needs the secure location step",
+      "note": "Trend series on the site are regional. Tract-level series have not been pulled from an official source."
+    },
+    {
+      "id": "RQ-28",
+      "requirement": "Keep identifiers, lease files and owner finances offline; publish only aggregate, non-identifying findings",
+      "where": "privacy.html",
+      "status": "Met in the repository; not yet on the live site",
+      "note": "The build rejects personal identifiers. The live Pages site still serves the whole repository (legacy source main:/). The owner must set Settings > Pages > Source to GitHub Actions (COORDINATION.md, PP-03)."
+    },
+    {
+      "id": "RQ-29",
+      "requirement": "Use the location only in a secure workflow to select Census tracts and local planning, traffic, school and competitor evidence",
+      "where": "work-register.html",
+      "status": "Blocked: needs the secure location step",
+      "note": "Not built. The secure workflow does not exist yet and the public site holds no location."
+    },
+    {
+      "id": "RQ-30",
+      "requirement": "Privately check seismic, flood and fire maps, engineering and insurance; stress loss of rent, repairs and exit liquidity together",
+      "where": "risks.html, projection-model.html",
+      "status": "Partly met",
+      "note": "Regional stress cases are in the model. Parcel-level map checks, engineering and insurance figures are not done."
+    },
+    {
+      "id": "RQ-31",
+      "requirement": "Versioned, back-tested cash-flow model once verified inputs and comparable history exist",
+      "where": "projection-model.html",
+      "status": "Partly met; back-test not done",
+      "note": "A versioned scenario model with unit tests exists. A back-test needs comparable transaction history and verified owner inputs, which are not available."
+    },
+    {
+      "id": "RQ-32",
+      "requirement": "A single after-tax number the owner can compare with the hold case",
+      "where": "calculator.html, taxes.html",
+      "status": "Partly met: the calculator produces the number; owner's basis figures still needed",
+      "note": "Needs the verified tax rules (published) plus the owner's private basis and proceeds, which are blank."
+    },
+    {
+      "id": "RQ-33",
+      "requirement": "Replace regional hazard context with the parcel's actual zone status (earthquake, fire, flood)",
+      "where": "hazards.html",
+      "status": "Blocked: needs the secure parcel workflow",
+      "note": "Same dependency as RQ-21. Not done until the parcel is screened in the secure workflow."
+    },
+    {
+      "id": "RQ-34",
+      "requirement": "Same-store sales, unit counts, closures and franchise rental revenue shown as direction over time, not one quarter",
+      "where": "tenant.html",
+      "status": "Partly met; one quarter only",
+      "note": "tenant.html shows one SEC-reported quarter of same-store sales and restaurant counts. A multi-quarter trend table is not built."
     }
   ]
 }

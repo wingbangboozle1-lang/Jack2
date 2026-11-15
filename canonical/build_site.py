@@ -542,14 +542,15 @@ def strategy_rows(full=False):
 
 
 def strategy_table(full=False):
-    heads = ["Rank", "Strategy"] + (["What it is"] if full else []) + [
+    heads = ["Model order", "Strategy"] + (["What it is"] if full else []) + [
         "Typical outcome", "1-in-20 bad outcome", "Balanced score", "Bad to typical", "Chance of ending below a cash sale"]
     if full:
         heads += ["Fits an owner who", "Main drawback"]
     heads.append("Official inputs")
     cap = ("Model output, not a forecast. Money is wealth in " + str(MODEL["meta"]["horizon_year"]) +
            " per $100 of today's yearly rent, before income tax, pooled over the six possible expiry years. "
-           "Balanced score = halfway between the typical and the bad outcome. Settings and their sources are on the Projections page.")
+           "Balanced score = halfway between the typical and the bad outcome. Settings and their sources are on the Projections page. "
+           "The model order is output under analyst settings and selects no winner: the lease, rent, expiry and owner tax inputs are not verified yet and are blank on this site.")
     return table(heads, strategy_rows(full), "model", "strategies", cap)
 
 
@@ -628,9 +629,9 @@ def build_exec():
     rows = [
         ["Highest typical outcome", f'{e(STRAT_SHORT[med_sorted[0]])}: {n1(POOL[med_sorted[0]]["median"])}',
          "Doing nothing pays the most when nothing goes wrong.", model_inputs()],
-        ["Best outcome in a bad case", f'{e(STRAT_SHORT[MODEL["pooled"]["ranking_by_bad_case"][0]])}: {n1(POOL[MODEL["pooled"]["ranking_by_bad_case"][0]]["p05"])}',
+        ["Highest 1-in-20 bad outcome", f'{e(STRAT_SHORT[MODEL["pooled"]["ranking_by_bad_case"][0]])}: {n1(POOL[MODEL["pooled"]["ranking_by_bad_case"][0]]["p05"])}',
          f'Doing nothing has the worst bad case: {n1(POOL["do_nothing"]["p05"])}.', model_inputs()],
-        ["Best balance of the two", f'{e(STRAT_SHORT[best])}: {n1(POOL[best]["score"])}',
+        ["Highest balanced score (model setting, not a recommendation)", f'{e(STRAT_SHORT[best])}: {n1(POOL[best]["score"])}',
          f'Last on the same measure: {e(STRAT_SHORT[worst])}, {n1(POOL[worst]["score"])}.', model_inputs()],
         ["If the tenant refuses to extend", f'Sell and exchange: typical {n1(a["if_tenant_refuses"]["sell_and_exchange"]["median"])}, bad case {n1(a["if_tenant_refuses"]["sell_and_exchange"]["p05"])}',
          f'Keep: typical {n1(a["if_tenant_refuses"]["keep"]["median"])}, bad case {n1(a["if_tenant_refuses"]["keep"]["p05"])}. Selling is ahead on both.', model_inputs()],
@@ -702,7 +703,7 @@ def build_decision():
                      f'<span class="num">+{MODEL["today"]["price_gain_from_extension_pct"][y]:.0f}%</span>',
                      e(STRAT_SHORT[blk["ranking"][0]]), f'<span class="num">{n1(s["do_nothing"]["median"])} / {n1(s["do_nothing"]["p05"])}</span>',
                      f'<span class="num">{n1(s["sell_exchange"]["median"])} / {n1(s["sell_exchange"]["p05"])}</span>', model_inputs()])
-    body.append(table(["Lease expires", "Sale price today, as is", "Price gain if extended first", "First on balanced score",
+    body.append(table(["Lease expires", "Sale price today, as is", "Price gain if extended first", "Top on balanced score (not a recommendation)",
                        "Do nothing: typical / bad", "Sell and exchange: typical / bad", "Official inputs"], rows, "model"))
     body.append('<h2 id="breakevens">Breakevens</h2><p>The value of one setting at which two strategies give the same expected outcome, with everything else at its base value and no shocks.</p>')
     rows = []
@@ -726,7 +727,7 @@ def build_decision():
                      f'<span class="num">{n1(sm["do_nothing"]["median"])} / {n1(sm["do_nothing"]["p05"])}</span>',
                      f'<span class="num">{n1(sm["sell_exchange"]["median"])} / {n1(sm["sell_exchange"]["p05"])}</span>',
                      f'<span class="num">{n1(sm["test_then_decide"]["median"])} / {n1(sm["test_then_decide"]["p05"])}</span>', model_inputs()])
-    body.append(table(["Case", "First on balanced score", "Second", "Do nothing: typical / bad", "Sell and exchange: typical / bad",
+    body.append(table(["Case", "Top on balanced score (not a recommendation)", "Second", "Do nothing: typical / bad", "Sell and exchange: typical / bad",
                        "Extend and keep, or sell if refused: typical / bad", "Official inputs"], rows, "model"))
     body.append('<h2 id="exposure">Which risks bear on which strategy</h2><p>Every risk on the <a href="risks.html">Risks</a> page, rated for each strategy: 0 none, 1 low, 2 medium, 3 high.</p>')
     rows = []

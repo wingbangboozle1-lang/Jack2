@@ -407,6 +407,48 @@
    ],
    "action": "Re-open the linked spreadsheet and confirm the two operands 1,002,045 and 1,242,816 for Los Angeles County before the percentage is relied on.",
    "status": "needs review"
+  },
+  {
+   "id": "IR-35",
+   "area": "Privacy",
+   "title": "The privacy-reviewed Pages deployment is not live; the whole repository is still served",
+   "detail": "Pages is still set to publish the repository root of the main branch (build type 'legacy'). The allowlisted artifact built by canonical/publish.py is not served, so the archive and deployment notices, and the exclusion of historical folders, do not yet apply on the public site. The deploy workflow fails by design until the repository owner sets the Pages source to GitHub Actions. Checked on 2026-11-15 through the Pages API and the workflow run history. This is a repository setting that the automation token cannot change.",
+   "rows": [],
+   "links": [
+    [
+     "GitHub Docs: configuring a publishing source (Settings > Pages > Source: GitHub Actions; Pages sites are public even in a private repository)",
+     "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+    ],
+    [
+     "Pages deploy workflow runs",
+     "https://github.com/wingbangboozle1-lang/Jack2/actions/workflows/pages.yml"
+    ],
+    [
+     "Coordination record of the blocked change (session f652211c)",
+     "COORDINATION.md"
+    ]
+   ],
+   "action": "Repository owner: Settings > Pages > Source: GitHub Actions, then re-run the latest 'deploy privacy-reviewed Pages artifact' run. Afterwards re-fetch workspaces.html, deployment.html and one /session-*/ URL on the live site and confirm the historical paths are gone. Decide separately whether the repository itself should stay public (IR-31, SG-17).",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-36",
+   "area": "Decision framing",
+   "title": "A model order was labelled as a rank and a 'best' result, which reads as a winner",
+   "detail": "The six-strategy table was headed 'Rank', the executive summary had a row 'Best balance of the two', and a decision-rule line said a cash sale 'ranks last even before tax'. The order comes from the projection model under analyst settings (rows labelled ASSUMPTION in canonical/data/assumptions.json) and from lease and owner inputs that are blank. The brief asks that no winner be selected before verified inputs exist. Changed on 2026-11-15 by session ebedfe13: the header now reads 'Model order', the labels now say 'not a recommendation', the caption states that the order selects no winner, and the decision-rule sentence states that it rests on analyst assumptions. The numbers are unchanged.",
+   "rows": [],
+   "links": [
+    [
+     "Model settings and which are assumptions",
+     "projection-model.html#settings"
+    ],
+    [
+     "Executive summary (decision rule)",
+     "executive-summary.html"
+    ]
+   ],
+   "action": "Owner to confirm the new wording. Once the lease and the owner's inputs are verified, re-run the model and decide whether any ordering can be stated.",
+   "status": "needs review"
   }
  ]
 }

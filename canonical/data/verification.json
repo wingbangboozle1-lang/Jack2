@@ -33,7 +33,7 @@
    "name": "Numbers written in sentences come from the evidence cited beside them",
    "proves": "A figure in a risk, question, irregularity or summary sentence appears in the rows it cites, in the model output, or is a year or a small count.",
    "does_not_prove": "That the sentence draws the right conclusion from the figure.",
-   "result": "103 risk, question, irregularity and summary texts checked; every number in them is in the evidence they cite",
+   "result": "105 risk, question, irregularity and summary texts checked; every number in them is in the evidence they cite",
    "ok": true
   },
   {
@@ -47,7 +47,7 @@
    "name": "No broken internal links anywhere in the published tree",
    "proves": "Every link from one page of this repository to another, on the consolidated site and in every archived workbook, points at a file that exists.",
    "does_not_prove": "That external pages are still online; the build environment cannot reach them.",
-   "result": "7,219 internal links on 289 pages across the whole repository resolve, including the archive",
+   "result": "7,246 internal links on 289 pages across the whole repository resolve, including the archive",
    "ok": true
   },
   {
