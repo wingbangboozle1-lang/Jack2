@@ -2030,3 +2030,16 @@ accepted because the current legacy publication exposes the entire repository, w
 **Verification performed (2026-11-15).** `canonical/ci_local.py` passed all 24 steps on the rebased tree (12/12 consolidated-site checks, 15 unit tests, privacy scan 0 matches, Pages artifact gate, generated-files freshness gate). `yaml` parsed for `pages.yml` and `verify.yml`.
 
 **Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
+
+---
+
+### Session `b2494ade` — claim (2026-11-15, branch `arena/b2494ade-jack2`, base `4555432`)
+
+**Starting state read before claiming.** Repository `wingbangboozle1-lang/Jack2` is **public** (`isPrivate: false`). GitHub Pages is still `build_type: legacy`, source `main:/` (whole repository served). The latest `deploy privacy-reviewed Pages artifact` runs (`43717494427`, `43718114648`, `43720009686`) failed at the Pages-source check. A `PUT repos/…/pages build_type=workflow` from this session returned **HTTP 403** (`Resource not accessible by integration`), so the Pages source needs the repository owner. Open pull requests at claim time: #75, #71, #50, #43, #41, #40, #38, #30, #18, #14, #10, #6, #5. This session does not touch any other session's scope.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| B-01 | Privacy boundary audit: tracked tree plus full git history (history fetched with `git fetch --unshallow`), counts by commit and file only, no matched values printed or published | in progress | session-b2494ade | `COORDINATION.md` (this section), `canonical/data/irregularities.json` (additive rows) |
+| B-02 | Official-source spot verification of decision-critical rows (Measure ULA thresholds, IRS capital-gains thresholds, CAL FIRE fire records, BLS Los Angeles summary, Census QuickFacts), access date 2026-11-15 | in progress | session-b2494ade | `canonical/data/spot_check_2026-11-15.json` (new; not read by the build) |
+| B-03 | Requirement gap register: brief items W-01 to W-04 and W-10, plus other brief items absent from `requirements.json`, with honest status | in progress | session-b2494ade | `canonical/data/requirements.json` (additive rows) |
+| B-04 | Regenerate outputs through the existing generators, full CI replay, PR to `main`, merge only if green, record the Pages outcome | in progress | session-b2494ade | generated outputs only; `COORDINATION.md` |
