@@ -84,13 +84,13 @@ SHORT = {
 assert len(set(SHORT.values())) == len(SHORT), "short source names must be distinct"
 
 NAV = [
-    ("Start", [("index.html", "Overview"), ("executive-summary.html", "Executive summary")]),
-    ("Decide", [("decision.html", "Decision analysis"), ("risks.html", "Risks"), ("questions.html", "Questions to answer")]),
+    ("Start", [("index.html", "Overview"), ("executive-summary.html", "Executive summary"), ("advisor-summary.html", "One-page advisor summary")]),
+    ("Decide", [("decision.html", "Decision analysis"), ("calculator.html", "Sell-versus-hold calculator"), ("risks.html", "Risks"), ("questions.html", "Questions to answer")]),
     ("Evidence", [("demographics.html", "People and place"), ("market-economics.html", "Economy and jobs"),
                   ("tenant.html", "Tenant"), ("property-lease.html", "Property and lease"),
                   ("valuation.html", "Capital markets"), ("taxes.html", "Taxes and costs"),
                   ("hazards.html", "Hazards and insurance"), ("projection-model.html", "Projections")]),
-    ("Review", [("flagged.html", "Flagged for Review"), ("suggestions.html", "Suggestions for Review"),
+    ("Review", [("flagged.html", "Flagged for Review"), ("work-register.html", "Work register"), ("suggestions.html", "Suggestions for Review"),
                 ("verification.html", "Verification"), ("sources.html", "Sources")]),
     ("About", [("requirements.html", "Requirements"), ("privacy.html", "Privacy"),
                ("workspaces.html", "Archive"), ("deployment.html", "Deployment")]),
@@ -1084,6 +1084,208 @@ def build_sources():
     return page("sources.html", "Sources", lede, "".join(body), "Review")
 
 
+# ---- Session 35c8a4ed: sell-versus-hold calculator, work register, one-page advisor summary ----
+WORK = load("work_register.json")
+CALC_TAX_IDS = ["TX-003", "TX-006", "TX-007", "TX-008", "TX-013", "TX-019", "TX-040", "TX-042", "TX-043", "TX-044",
+                "TX-045", "TX-047", "TX-059", "TX-060"]
+STATUS_CLASS = {"Done": "verified", "Partly done": "computed", "Blocked": "unverified", "Not started": "withheld"}
+INTERNAL_PAGE = {"W-03": "decision.html", "W-10": "advisor-summary.html", "F-06": "privacy.html",
+                 "F-15": "executive-summary.html", "F-16": "suggestions.html", "F-17": "questions.html"}
+NO_SOURCE_FLAG = {"F-04", "F-14"}
+
+
+def calc_rules():
+    """Rates the calculator applies, read from the verified ledger rows. Any change in the ledger stops the build here."""
+    def nums_in(rid):
+        return [float(x.replace(",", "")) for x in re.findall(r"\d[\d,]*(?:\.\d+)?", ROWS[rid]["value"])]
+    lo, hi = nums_in("TX-003")[:2]
+    R = {"cityLow": nums_in("TX-006")[0], "cityMid": nums_in("TX-007")[0], "cityHigh": nums_in("TX-008")[0],
+         "threshLow": lo, "threshHigh": hi, "county": nums_in("TX-013")[0], "cg": nums_in("TX-040")[0],
+         "rec": nums_in("TX-042")[0], "niit": nums_in("TX-043")[0], "caTop": nums_in("TX-060")[0]}
+    expected = {"cityLow": 0.45, "cityMid": 4.45, "cityHigh": 5.95, "threshLow": 5400000.0, "threshHigh": 10900000.0,
+                "county": 0.11, "cg": 20.0, "rec": 25.0, "niit": 3.8, "caTop": 13.3}
+    assert R == expected, f"tax ledger changed; calculator rates need review: {R}"
+    for rid in CALC_TAX_IDS:
+        assert ROWS[rid]["status"] in ("verified", "computed"), f"{rid}: calculator cites a blank row"
+    return R
+
+
+CALC_CSS = """
+.calc-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));gap:1rem}
+.calc-form fieldset{background:var(--panel);border:1px solid var(--line);border-radius:.6rem;padding:.9rem 1rem 1rem;margin:0}
+.calc-form legend{font-weight:650;padding:0 .3rem;color:var(--accent)}
+.cf{display:grid;gap:.2rem;margin:.7rem 0}
+.cf label{font-weight:550}
+.cf input,.cf select{padding:.45rem .55rem;font:inherit;border:1px solid #b9c2cf;border-radius:.4rem;max-width:20rem;background:#fff}
+.cf .hint{margin:0;font-size:.84rem;color:var(--muted)}
+.calc-buttons{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.calc-buttons button{font:inherit;padding:.5rem .9rem;border-radius:.4rem;border:1px solid var(--accent);background:var(--panel);color:var(--accent);cursor:pointer}
+.calc-buttons button.primary{background:var(--accent);color:#fff}
+.calc-result{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--calc);border-radius:.6rem;padding:1rem 1.2rem;margin:1rem 0}
+.calc-result h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+.calc-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:1rem}
+.calc-t th{text-align:left;font-weight:450;width:62%}
+.calc-t td{text-align:right;font-variant-numeric:tabular-nums}
+.verdict{font-size:1.05rem}
+.onepage{max-width:60rem}
+.onepage h2{font-size:1.02rem;margin:.9rem 0 .3rem}
+.onepage ol,.onepage ul{margin:.2rem 0 .4rem 1.1rem;padding:0}
+.onepage li{margin:.15rem 0}
+@media print{
+  @page{margin:.5in}
+  .calc-form,.calc-buttons{display:none}
+  .calc-result{border:1px solid #999}
+  .onepage{font-size:9.5pt;line-height:1.3}
+  .onepage h1{font-size:14pt;margin:0 0 .2rem}
+  .onepage h2{font-size:10.5pt;margin:.5rem 0 .15rem}
+  .onepage p{margin:.2rem 0}
+  .onepage .lede{margin:.2rem 0}
+  .onepage .crumb{display:none}
+}
+"""
+CSS += CALC_CSS
+
+
+def calc_field(key, label, kind, hint=""):
+    fid = f"c-{key}"
+    if kind == "yn":
+        ctl = (f'<select id="{fid}" aria-describedby="{fid}-h"><option value="">Choose</option>'
+               f'<option value="yes">Yes</option><option value="no">No</option></select>')
+    else:
+        step = "1" if kind == "years" else "any"
+        mx = ' max="50"' if kind == "years" else (' max="100"' if kind == "pct" else "")
+        ctl = (f'<input id="{fid}" type="number" inputmode="decimal" min="0"{mx} step="{step}" '
+               f'autocomplete="off" aria-describedby="{fid}-h">')
+    return (f'<div class="cf"><label for="{fid}">{e(label)}</label>{ctl}'
+            f'<p class="hint" id="{fid}-h">{e(hint)}</p></div>')
+
+
+def build_calculator():
+    R = calc_rules()
+    rule_rows = []
+    for rid in CALC_TAX_IDS:
+        r = ROWS[rid]
+        rule_rows.append([row_link(rid), e(r["label"]), e(r["value"]), e(r["period"]), src_link(r["source"]), badge(r["status"])])
+    sale = [
+        calc_field("price", "Sale price (USD)", "money",
+                   "The calculator applies this figure to both transfer taxes. If the buyer takes over a loan, the county tax base is smaller (TX-014), so the result slightly overstates the county tax."),
+        calc_field("costs", "Selling costs paid by the seller (USD)", "money", "Brokerage, legal and other costs of sale."),
+        calc_field("ttShare", "Share of the transfer tax the seller pays (%)", "pct", "Set by the purchase agreement. Blank is not assumed."),
+        calc_field("basis", "Adjusted tax basis (USD)", "money", "Original cost plus improvements, less depreciation taken. From the owner's private records."),
+        calc_field("dep", "Depreciation taken on the building (USD)", "money", "The recapture split assumes straight-line depreciation (TX-042)."),
+        calc_field("cgRate", "Federal rate on long-term gain (%)", "pct", "The top rate is 20% (TX-040). Enter your own rate, or use the upper-bound button."),
+        calc_field("recRate", "Federal rate on depreciation recapture (%)", "pct", "The top rate is 25% (TX-042)."),
+        calc_field("niit", "Does the 3.8% net investment income tax apply to the sale?", "yn",
+                   "Depends on the owner's income; the threshold is in TX-044."),
+        calc_field("caRate", "California rate on the gain (%)", "pct", "The highest rate, including the 1% surcharge above $1,000,000, is 13.30% (TX-060)."),
+    ]
+    hold = [
+        calc_field("rent", "Taxable rent per year, after deductions (USD)", "money",
+                   "Rent the owner keeps after allowable deductions, before income tax. Enter only a figure that has been verified."),
+        calc_field("years", "Years of hold, from now (whole years, 1 to 50)", "years", "Count from today to the end of the hold you are comparing."),
+        calc_field("disc", "Discount rate (% a year)", "pct", "The return the owner requires. No default is assumed."),
+        calc_field("fedRate", "Federal income tax rate on the rent (%)", "pct", "The owner's own marginal rate."),
+        calc_field("caRate2", "California rate on the rent (%)", "pct", "The owner's own rate."),
+        calc_field("niit2", "Does the 3.8% tax apply to the rent?", "yn",
+                   "Rents and net gains from real estate are covered unless from a trade or business (TX-045)."),
+        calc_field("term", "After-tax cash at the end of the hold (USD)", "money", "Enter 0 if there is none. Used only for the present value."),
+    ]
+    form = ('<form id="c-form" class="calc-form" autocomplete="off">'
+            f'<fieldset><legend>A. Sell now</legend>{"".join(sale)}</fieldset>'
+            f'<fieldset><legend>B. Hold and renew</legend>{"".join(hold)}</fieldset>'
+            "</form>")
+    buttons = ('<div class="calc-buttons">'
+               '<button type="button" id="c-upper">Use the top statutory rates for the sale (upper bound)</button>'
+               '<button type="button" id="c-clear">Clear all inputs</button>'
+               '<button type="button" id="c-print" class="primary">Print this page</button></div>')
+    body = [
+        '<p class="note"><strong>Private by design.</strong> This calculator runs in your browser. Nothing you type is sent, stored or shown to anyone, '
+        'and it makes no call to any other site. Close the page and the entries are gone.</p>',
+        '<p class="note"><strong>Blank on purpose.</strong> Every input starts empty and no figure is assumed. Tax rates come from the verified '
+        'tax ledger below; the rates that apply to you are yours to enter. No winner is selected: the page shows arithmetic on your inputs.</p>',
+        f'<script>window.CALC_RULES = {json.dumps(R)};</script>',
+        form, buttons,
+        '<section id="c-result" class="calc-result" aria-live="polite"><p>Enter every input to see the comparison. Nothing is calculated until then.</p></section>',
+        "<h2>How the two paths are computed</h2>",
+        '<ul><li><strong>Sell now:</strong> transfer tax is the city tier for the sale price plus the county rate, applied to the whole price '
+        '(tiers TX-006 to TX-008; county TX-013). The seller\'s share is deducted with selling costs to give the amount realised. The taxable gain is that amount less the adjusted basis. '
+        'Depreciation recapture is taxed at the recapture rate, up to the depreciation taken; the rest of the gain at the long-term rate. '
+        'The 3.8% tax and the California rate are applied to the gain (TX-043, TX-060).</li>'
+        '<li><strong>Hold and renew:</strong> the combined rate on the rent is applied to taxable rent. The after-tax rent is discounted over the years entered (end-of-year payments), '
+        'and the after-tax cash at the end is discounted too. The result is the present value of the hold path.</li>'
+        '<li><strong>Difference:</strong> after-tax sale cash minus the hold path\'s present value, in today\'s dollars.</li></ul>',
+        f"<h2>Rules this calculator uses ({len(CALC_TAX_IDS)} rows from the verified tax ledger)</h2>",
+        '<p class="note">Each row is the ledger row the calculator reads. Open the row for the quoted text from the official page.</p>',
+        filter_box("calc-rules"),
+        table(["Row", "Rule", "Value", "Period", "Official source", "Status"], rule_rows, "data", "calc-rules"),
+        "<h2>Left out on purpose</h2>",
+        '<p>Loss of rent during a vacancy, repairs, tenant default, the timing of a sale, loan payoff, any capital loss, and anything not entered. '
+        'Each rate is applied to the same base; no tax is deducted from another. Use these results as arithmetic on your inputs only: they are not tax advice, '
+        'and they are not a valuation. Check the figures with a qualified tax adviser before any commitment.</p>',
+        '<script src="assets/calculator.js" defer></script>',
+    ]
+    return page("calculator.html", "Sell-versus-hold calculator (private)",
+                "Enter your own figures and see the after-tax sale and the hold path side by side. Private: runs in your browser, saves nothing.",
+                "".join(body), "Decide")
+
+
+def build_work_register():
+    counts_by = {k: sum(1 for r in WORK["rows"] if r["status"] == k) for k in ("Done", "Partly done", "Blocked")}
+    rows = []
+    for r in WORK["rows"]:
+        if r["sources"]:
+            srcs = " ".join(src_link(s) for s in r["sources"])
+        elif r["id"] in INTERNAL_PAGE:
+            srcs = f'<a href="{INTERNAL_PAGE[r["id"]]}">This site: {INTERNAL_PAGE[r["id"]]}</a> (no outside source needed)'
+        else:
+            srcs = '<span class="badge unverified">No official source: flagged</span>'
+        rows.append([f'<span class="rid">{r["id"]}</span>', f'<strong>{e(r["item"])}</strong><p class="note">{e(r["kind"])}</p>',
+                     f'<span class="badge {STATUS_CLASS[r["status"]]}">{e(r["status"])}</span>',
+                     fill(r["exists"]), e(r["missing"]), e(r["needs"]), srcs])
+    cards = ('<div class="cards">'
+             f'<div class="kpi"><div class="kpi-v">{counts_by["Done"]}</div><div class="kpi-l">Done</div></div>'
+             f'<div class="kpi"><div class="kpi-v">{counts_by["Partly done"]}</div><div class="kpi-l">Partly done</div></div>'
+             f'<div class="kpi"><div class="kpi-v">{counts_by["Blocked"]}</div><div class="kpi-l">Blocked on a private or outside input</div></div>'
+             "</div>")
+    body = [cards,
+            '<p class="note">Every item named in the brief and every feature on its list, with where it stands. "Blocked" means the item needs an input '
+            'that is not in the public record or in this repository, so nothing has been filled in. Rows that describe a value link to the official page '
+            'that would supply it; rows that describe the site link to the page itself. Rows with no official source are flagged, not filled in.</p>',
+            filter_box("register"),
+            table(["No.", "Item", "Status", "What exists, and where", "What is missing", "What it needs", "Official source"], rows, "register", "register")]
+    return page("work-register.html", "Work register",
+                f"{len(WORK['rows'])} items from the brief (W-series and feature list), each with its status, the gap, and the official source that would close it.",
+                "".join(body), "Review")
+
+
+def build_advisor():
+    c = counts()
+    crit = [q for q in QUESTIONS if q["priority"] == "Critical"]
+    blocked = [r for r in WORK["rows"] if r["status"] == "Blocked"]
+    body = ['<div class="onepage">',
+            '<p class="note"><strong>Status: no sell-or-renew choice is supported yet.</strong> The calculator applies its arithmetic to the inputs '
+            'the owner enters, and those inputs are not all verified. No winner is selected. Decision support only, not tax, legal or investment advice.</p>',
+            "<h2>Verified record</h2>",
+            f'<p>{c["published"]} values are published, each with its official link ({c["verified"]} verified, {c["computed"]} computed from verified values). '
+            f'{c["blank"]} are blank and flagged because they could not be confirmed from an official source.</p>',
+            "<h2>Answer these first (Critical questions)</h2><ol>"]
+    for q in crit:
+        body.append(f'<li><a href="questions.html#{q["id"]}">{q["id"]}</a>: {e(q["question"])}</li>')
+    body.append("</ol><h2>Blocked items (need an input not in the public record)</h2><ul>")
+    for r in blocked:
+        body.append(f'<li><strong>{r["id"]}</strong> {e(r["item"])}. <em>Needs:</em> {e(r["needs"])}</li>')
+    body.append('</ul><h2>How to use the calculator</h2>'
+                '<p>Open <a href="calculator.html">Sell-versus-hold calculator</a> in a browser. It runs locally, saves nothing and makes no network call. '
+                'Enter only verified figures; the tax rules it applies are on that page with links to the official text.</p>'
+                '<h2>Sources and privacy</h2>'
+                f'<p>Official sources were read on {ACCESSED} and are listed on <a href="sources.html">Sources</a>. No personal information, '
+                'owner name, address or parcel number is published: placeholders stand in for them. Print this page with the browser\'s Print command.</p>'
+                "</div>")
+    return page("advisor-summary.html", "One-page advisor summary",
+                "A printable page for advisers: where the record stands, the first questions to answer, and what is blocked.",
+                "".join(body), "Start")
+
+
 def build_requirements():
     rows = []
     for r in REQS:
@@ -1228,6 +1430,7 @@ def main():
     pages.update(build_evidence())
     pages.update({"projection-model.html": build_projection(), "flagged.html": build_flagged(), "suggestions.html": build_suggestions(),
                   "verification.html": build_verification(), "sources.html": build_sources(), "requirements.html": build_requirements(),
+                  "calculator.html": build_calculator(), "work-register.html": build_work_register(), "advisor-summary.html": build_advisor(),
                   "privacy.html": build_privacy(), "workspaces.html": build_archive(), "deployment.html": build_deployment(),
                   "archive.html": REDIRECT})
     nav_slugs = [h for _, items in NAV for h, _ in items]
