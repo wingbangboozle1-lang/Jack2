@@ -284,6 +284,20 @@ Read the live board, the open PRs, the Pages API and the last workflow runs befo
 - **Verification performed.** `canonical/ci_local.py`: 12 of 12 site checks and 15 unit tests pass; the generated-file freshness gate was regenerated with the documented commands (`canonical/model.py`, `canonical/review_repo.py`, `canonical/verify.py`) and re-checked. Pages privacy artifact dry-run: `canonical/publish.py` passes with 27 files.
 - **Irregularities for review.** (1) PP-03: the Pages source is a repository setting this token cannot change; until the owner sets it, the privacy boundary is not in effect. (2) The brief asks for line-by-line verification of every row against official sites. That was not repeated this session: 441 ledger rows were last re-read on 2026-11-13, and one row was re-checked today. (3) None of the W-items is built; the register says so rather than implying progress. (4) Eleven open pull requests from earlier sessions remain, including PR #75 (`arena/1f611394-jack2`, opened 2026-11-15), and were not touched. (5) Historical Git commits still contain the earlier unredacted text; rewriting history is a separate owner decision.
 
+**Pull request and merge record, session `14430a3c` (2026-11-15).**
+
+| Item | Result |
+|---|---|
+| Pull request | [#81](https://github.com/wingbangboozle1-lang/Jack2/pull/81) `arena/14430a3c-jack2` → `main` (REQ-34 and PP-03 close-out) |
+| Pre-merge checks | `build-and-check` passed on the PR head (run `43773781441`) |
+| Merge | `gh pr merge 81 --merge` (no approval wait), merge commit **`5bb93be`** |
+| Post-merge `verify` on `main` | **success** (run `43773903876`) |
+| Post-merge `pages build and deployment` | success (run `43773903548`), but Pages is still `build_type=legacy` |
+| Post-merge `deploy privacy-reviewed Pages artifact` | **failed, as designed**, at *Confirm GitHub Actions is the Pages publishing source* (run `43773968597`). The site is not yet the allowlisted artifact. |
+| Live state after merge | Pages API: `status built`, `build_type legacy`, source `main:/`. The whole repository remains published until the owner sets the Pages source (PP-03). |
+
+The privacy deploy is **not** confirmed. Because the Pages source switch is a repository setting that this token cannot change, the deploy can succeed only after the owner acts. Nothing else in this session is pending.
+
 <!-- LIVE-BOARD:END -->
 
 ---
