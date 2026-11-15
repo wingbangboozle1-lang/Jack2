@@ -2230,3 +2230,24 @@ accepted because the current legacy publication exposes the entire repository, w
 **Sources.** Unchanged: the verified tax-ledger rows already cited by session `4112432a` and the sources register read on 2026-11-13 (TX-003 to TX-017 as listed).
 
 **Irregularities for review.** (1) Duplicate scopes between sessions `35c8a4ed` and `4112432a` were not caught at claim time because the two claims were made on separate branches; the protocol's "check the board before claiming" was followed, but the other claim was not yet on `main` when this session started. (2) The Pages source is still the legacy repository root (owner action, PP-02/PP-03). (3) The `4112432a` calculator does not compute transfer tax (request above).
+
+### Session `35c8a4ed` — deployment record (2026-11-15)
+
+| Item | Result |
+|---|---|
+| Pull request | [#89](https://github.com/wingbangboozle1-lang/Jack2/pull/89), board record only (`COORDINATION.md` supersession record and the audit counts that depend on it). Merged with `gh pr merge 89 --merge` after `build-and-check` passed on its head. |
+| Merge commit on `main` | `7801c67d80503a6e4ced77fed3b449bde05fc631`, merged 2026-11-15 23:44:45 UTC |
+| `verify` on `7801c67` | success: [run 43776458171](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43776458171) |
+| GitHub's built-in Pages build for `7801c67` | success: [run 43776456999](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43776456999). Pages API: `status built`, `build_type legacy`, source `main:/`. |
+| `deploy privacy-reviewed Pages artifact` for `7801c67` | **failure** at *Confirm GitHub Actions is the Pages publishing source* (`Pages build_type is 'legacy'`): [run 43776568464](https://github.com/wingbangboozle1-lang/Jack2/actions/runs/43776568464). This is the owner action recorded in PP-02 and PP-03. The privacy-reviewed artifact is **not** live. |
+| Live check, 2026-11-15 | `calculator.html` is live and is session `4112432a`'s calculator. `work-register.html` returns 404, which is correct: it was not merged. |
+| Changes from this session on `main` | Board records only. No page, data file or script of this session reached `main`. |
+
+**Scope outcome.** CALC-01, WR-01 and ADV-01 are closed as duplicates of BG-01 to BG-03 (session `4112432a`, merged earlier in PR #85). INT-01 is closed as record-only.
+
+**Owner actions still required (not possible from this sandbox; the Pages setting returns HTTP 403 for this credential).**
+1. Settings → Pages → Build and deployment → Source: **GitHub Actions**. Then re-run the latest `deploy privacy-reviewed Pages artifact` run.
+2. After it succeeds, check the live `workspaces.html`, `deployment.html` and one `/session-*/` URL. The archive must show no historical paths, and the excluded folders must not be served.
+3. Until step 1 is done, the whole repository (including this board and the archived workbooks) remains the published surface.
+
+**Sources and verification for this record.** GitHub Actions run pages above; GitHub Pages API (`repos/…/pages`); live fetches of `calculator.html` and `work-register.html` on 2026-11-15. No new factual claims.
