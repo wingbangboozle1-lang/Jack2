@@ -1958,7 +1958,15 @@ Read the live task board and inspected the current tree before claiming. The pri
 
 | # | Task | Status | Owner | Files / scope |
 |---|---|---|---|---|
-| LCH-01 | Claim an isolated scope and make `canonical/ci_local.py` provide a safe temporary `RUNNER_TEMP` when absent; preserve caller-provided values | in progress | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py` only; coordination log in this file |
-| LCH-02 | Verify both default and caller-provided temporary-directory paths, then record full CI outcome and any irregularities | in progress | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py`, verification notes in this file |
+| LCH-01 | Claim an isolated scope and make `canonical/ci_local.py` provide a safe temporary `RUNNER_TEMP` when absent; preserve caller-provided values | done | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py` only; coordination log in this file |
+| LCH-02 | Verify both default and caller-provided temporary-directory paths, then record full CI outcome and any irregularities | done | session-90196f64 (`arena/90196f64-jack2`) | `canonical/ci_local.py`, verification notes in this file |
 
-No site data, source claim, generated page, or official-source result is changed by this claim. No personal, parcel, lease, or owner financial information is collected or included. The fixed Arena branch `arena/90196f64-jack2` is used; no branch switch or additional branch is made.
+No site data, source claim, generated page, or official-source result was changed. No personal, parcel, lease, or owner financial information was collected or included. The fixed Arena branch `arena/90196f64-jack2` was used; no branch switch or additional branch was made.
+
+### Session `90196f64` — close-out (2026-11-15)
+
+- **Change:** local replay now assigns an isolated `TemporaryDirectory` as `RUNNER_TEMP` only when the caller has not provided that variable. An explicitly provided value is preserved. This fixes the prior local-only artifact check that otherwise expanded an empty variable to `/published-site` and failed with a permission error.
+- **Verification:** `env -u RUNNER_TEMP python3 canonical/ci_local.py` passed all 24 workflow steps, including all 12 consolidated-site checks, 15 model tests, full-tree privacy scanning, the exact Pages artifact gate, and the generated-files freshness gate. With an explicitly created caller temp directory, `RUNNER_TEMP="$tmp" python3 canonical/ci_local.py --until 19` passed all 19 steps through artifact assembly.
+- **Generated audit refresh:** `canonical/review_repo.py` and the existing site verifier/generator refreshed only their generated outputs to account for this board entry and code change (`canonical/data/repo_review.json`, `verification.html`, and `session-f4f700c0/audit/**` / `verification.json`). They were not manually edited. The first full replay exposed the expected generated-inventory sequencing issue; rerunning the existing generator after the verification page stabilized made the final full replay clean.
+- **Irregularity:** the prior `RUNNER_TEMP`-unset local harness failure is resolved by this change. The privacy-boundary limitation remains unchanged: the GitHub repository and its historical Git objects are still public; the Pages allowlist does not hide repository history. That exposure is already published for owner review and was not altered here.
+- **Sources:** no new factual or economic claims were introduced, so no official-source evidence was added or reinterpreted. This was verified against the repository's checked-in `.github/workflows/verify.yml` (the artifact command uses `$RUNNER_TEMP/published-site`) and by executing the complete local workflow described above.
