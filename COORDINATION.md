@@ -213,6 +213,33 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Scope note.** No file inside another session's `session-*/` or `docs/` folder is edited. Historical workbooks are not regenerated. The Pages source setting is not changed by this session (the sandbox token cannot change it, and that change is for the repository owner).
 
+### Session `ebedfe13` — close-out (2026-11-15)
+
+**Task status.**
+
+| # | Task | Status | Result |
+|---|---|---|---|
+| EB-01 | Claim and board | done | claim pushed as `98c07e4` before any other edit |
+| EB-02 | Re-read two decision-critical official values | done | both re-read on 2026-11-15; both match the ledger; nothing changed |
+| EB-03 | Remove the "winner" framing from the strategy order | done | `canonical/build_site.py` and `canonical/data/decisions.json` changed (wording only; no number changed) |
+| EB-04 | Register new irregularities | done | IR-35 (Pages source still legacy) and IR-36 (order labelled as a winner) added to `canonical/data/irregularities.json` (append only) |
+| EB-05 | Regenerate, replay, PR, merge, record the Pages result | in progress at the time of writing; PR link and merge result recorded below by follow-up commit | see the PR line in the table below |
+
+**Sources read on 2026-11-15 (official, re-opened today).**
+
+| Source | What was read | Ledger rows matched |
+|---|---|---|
+| U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates, November 2026 (`https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202611`) | Row 11/13/2026: 10 Yr 5.15; latest posted row is 11/13/2026 | CM-001 (5.15%, 11/13/2026): match |
+| Jack in the Box Inc., Exhibit 99.1, third quarter fiscal 2026 results, August 12, 2026 (`https://www.sec.gov/Archives/edgar/data/807882/000080788226000090/ex991-q326earningsrelease.htm`) | System same-store sales (1.1%); restaurant count 2,115 at end of Q3 (2,168 a year earlier); net earnings from continuing operations $21.0 million; total stockholders' deficit (901,286) | TN-020, TN-001, TN-004, TN-034, TN-043 and the computed TN-085 (-53): all match |
+
+**Result.** Eight values re-read today; eight matched. The other ledger rows keep their 2026-11-13 and 2026-11-12 access dates. This session did not re-read all 440 rows.
+
+**Verification performed.** `canonical/ci_local.py` runs the 24 steps of `verify.yml`. After the wording changes, the consolidated checks pass 12 of 12 (914 table rows on 22 pages each linked to an official source; numbers in sentences match their cited evidence; 7,016 internal links resolve; privacy scan finds no e-mail, telephone, street address, parcel number or named individual in 586 text files; no outside scripts; 23 archived workbooks listed; generated files rebuilt). The 15 model unit tests pass. The regenerated outputs are committed with this record in the same commit, so the freshness gate passes on the branch.
+
+**Irregularities (on the Flagged for Review page).** IR-35: the privacy-reviewed Pages deployment is not live. Pages is still `legacy`, `main:/`, and the whole public repository is served. The owner must set Settings > Pages > Source to GitHub Actions (GitHub Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). IR-36: the strategy order was labelled "Rank" and "Best", which reads as a winner before verified lease and owner inputs exist. Relabelled "Model order", with a no-winner statement; the numbers are unchanged. Existing IR-30 (a personal e-mail address in commit metadata) and IR-31 (repository is public) remain open.
+
+**Pages deployment and merge.** See the PR table below. Pages source is a repository setting that this session's token cannot change (the earlier attempt by session `f652211c` returned HTTP 403). The workflow `deploy privacy-reviewed Pages artifact` is therefore expected to fail its source gate until the owner acts, and the public site continues to be served from the repository root.
+
 <!-- LIVE-BOARD:END -->
 
 ---

@@ -149,7 +149,7 @@
   {
    "if": "The tax adviser finds a large taxable gain",
    "then": "Prefer an exchange to a cash sale, or holding within an estate plan.",
-   "because": "A cash sale ranks last even before tax."
+   "because": "Under the model\u2019s current settings a cash sale comes last even before tax. That order rests on analyst assumptions, not on verified lease or owner inputs."
   },
   {
    "if": "Broker opinions put the price just above $5,400,000",
