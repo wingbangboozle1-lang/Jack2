@@ -199,6 +199,21 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `db3abb7a` — CLAIM (2026-11-15 12:44 UTC, branch `arena/db3abb7a-jack2`, base `c278c22`)
+
+**Why this claim exists.** The Pages deploy triggered by PR #73 failed (run `43522377067`, job `deploy`, step "Select GitHub Actions as the Pages publishing source"). The live site therefore still serves the legacy branch-root publication of `main:/`, which exposes the whole repository tree, including historical workbooks. The Actions token cannot change the Pages source (`PUT /pages` needs administration rights), so the allowlisted artifact never replaced the legacy source. This session takes over that single deploy step of PP-01 because the PP-01 claim (2026-11-13 22:40 UTC) has had no commit since its merge and PP-01 is not complete. Only `.github/workflows/pages.yml` is changed. Session `568ae793`'s merged files are not otherwise touched.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| DB-00 | Takeover of PP-01 deploy step (fix Pages source handling; manual `workflow_dispatch`; no other change) | in progress | session-db3abb7a | `.github/workflows/pages.yml` only; this board |
+| DB-01 | Decision-gate progress board (W-03): gates, status per gate, missing evidence, sources | in progress | session-db3abb7a | new `canonical/build_site.py` section, `canonical/data/decision_gates.json`, `decision-gates.html` |
+| DB-02 | One-page printable advisor summary (W-10), print stylesheet, no personal data | in progress | session-db3abb7a | `advisor-summary.html`, `canonical/build_site.py` section |
+| DB-03 | After-tax module: verified federal and California tax rules and a browser-only calculator (no storage, no defaults) (W-02 part; "after-tax module") | in progress | session-db3abb7a | `after-tax.html`, `canonical/data/after_tax.json`, `canonical/build_site.py` section |
+| DB-04 | Blocked-item register: W-01 trade area, W-04 parcel hazard, neighbourhood and tract data, short-lease quotes, lease abstract, back-test; each with the reason it cannot be filled and the official tool to use | in progress | session-db3abb7a | `canonical/data/gaps.json`, `gaps.html` |
+| DB-05 | Publish allowlist, navigation and verifier coverage for the new pages (additive only) | in progress | session-db3abb7a | `canonical/publish.py` (PAGE_FILES), `canonical/build_site.py` NAV, `canonical/verify.py` (page list only) |
+
+Coordination requests: none to other sessions. No session other than `568ae793` (stalled) has a live claim on the files listed above.
+
 <!-- LIVE-BOARD:END -->
 
 ---
