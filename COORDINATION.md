@@ -199,6 +199,17 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `e5eeae81` — BRIEF TASKS (W-03, W-10, calculator, after-tax module, brief traceability) — claimed 2026-11-15 12:45 UTC
+
+**Starting state read before claiming.** `origin/main` = `c278c22` (PR #73 merged; PP-01 is therefore complete even though its row above still reads "in progress"). Open PR: #71 (`arena/d659b908-jack2`, last activity 2026-11-13 22:24 UTC, stale). No session has commits in the last 60 minutes. Local CI baseline on this branch: 24/24 steps pass. The brief's W-01, W-02, W-04, the parcel-level hazard screen, the short-lease quote pricing, tract-level trends and the neighbourhood data depend on the owner's private address, lease and quotes, which are not in the repository by design. They are recorded as blocked (not invented) by BR-01.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| BR-01 | Traceability of every item in the brief to a page, a status and a blocking input; decision-gate progress board (W-03) | in progress | session-e5eeae81 | `canonical/data/brief_trace.json` (new), `canonical/build_site.py` (new builders + nav), root `brief-trace.html`, `gates.html` (new) |
+| BR-02 | After-tax module (verified 2026 federal, NIIT, California and transfer-tax rules) and a private browser calculator that sends nothing and stores nothing | in progress | session-e5eeae81 | `canonical/data/after_tax_2026.json` (new), `assets/calculator.js` (new), root `calculator.html` (new), `canonical/build_site.py` |
+| BR-03 | One-page printable advisor summary (W-10), anonymised, every figure linked to an official source | in progress | session-e5eeae81 | root `advisor-summary.html` (new), `canonical/build_site.py`, `assets/site.css` (print rules only) |
+| BR-04 | Irregularity register: flag any verified rule that is a prior-year figure (e.g. 2025 schedules labelled as current) | in progress | session-e5eeae81 | `canonical/data/irregularities.json` (additive IR rows only), this block |
+
 <!-- LIVE-BOARD:END -->
 
 ---
