@@ -199,6 +199,16 @@ Read the live board, the open PRs and the live site (https://wingbangboozle1-lan
 
 **Unresolved boundary.** The source repository and older Git history remain public. This task limits the Pages website; it does not change repository visibility or rewrite history. That separate exposure remains flagged for owner review.
 
+### Session `1f611394` — independent source spot-check and decision-neutrality audit — claimed 2026-11-15 12:47 UTC
+
+**Claim and scope.** Read the current tree and live board, then checked a small decision-critical sample against the official publisher pages and the live site. This is deliberately disjoint from concurrent scopes: PP-02 (`arena/f652211c-jack2`) owns the Pages deploy-source fix; DB-00..DB-05 (`arena/db3abb7a-jack2`) owns the gate board, advisor sheet, after-tax module and gap register; the local CI harness fix is claimed by `arena/90196f64-jack2`. No page, evidence data, model, generator, workflow or navigation is edited here. Scope: append-only `COORDINATION.md` record of the source checks and any integration request.
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| QA-01 | Re-read the live overview and a bounded sample of official decision-critical sources; compare the figures with the current published rows; report discrepancies or guardrail requests without editing shared data | in progress | session-1f611394 | `COORDINATION.md` (append only) |
+
+**Coordination request (not an edit to the other session's files).** During final integration, review whether the consolidated landing/decision pages should suppress ordinal strategy ranks until verified owner/property inputs exist. The current live overview presents a numbered strategy ranking although `canonical/data/assumptions.json` labels 28 of 36 model settings as analyst assumptions, defines the money unit as per $100 of unknown current net rent, and sets the base tax drag to 0. The user asked not to select a winner before verified inputs exist. Preserve scenario analysis if useful, but make its assumption-dependence explicit and ensure the after-tax comparison is not represented as a property-specific winner until the private inputs are verified.
+
 <!-- LIVE-BOARD:END -->
 
 ---
