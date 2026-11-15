@@ -1949,3 +1949,18 @@ Read the live board and the tree before claiming. No open claim from any session
 - **GitHub Pages:** latest build `2ecf3aa`, status **built** (Pages API, 2026-11-13T22:05:29Z). Live `flagged.html` fetched and confirmed: 26 irregularities (IR-33 present), 44 blank values.
 - **Conflicts and history.** `origin/main` moved to `d1da12b` (PR #63, session `0a4356d3`) while this session worked. The rebase conflicted in `COORDINATION.md` (both appended entries kept) and in regenerated audit outputs (main's copy taken, then regenerated on the merged tree). Because the PR had been opened earlier against the claim commit alone, the branch was updated with a lease-protected force push (`755f6d3` → `7b9c692`). Only this session's own branch was rewritten; no other session's history was changed.
 - **Follow-up:** PR for this record only (`COORDINATION.md` plus the regenerated F4 audit outputs).
+
+## Session `50761461` — claim, 2026-11-15 (branch `arena/50761461-jack2`, base `c278c22`)
+
+Read the live board and the tree before claiming. Open claims checked: PP-01 (`568ae793`, merged as PR #73), `d659b908` (PR #71, open, record only). No open claim covers the items below; the W-01…W-10 identifiers in the brief are not used on the board, so they are mapped in S5-03. Scope is `session-50761461/**` plus this board. No edit to any root page, `canonical/**`, `tools/**`, `docs/**` or another session's folder. Every shared change needed is logged as a request to the final integration session (S5-08).
+
+| # | Task | Status | Owner | Files / scope |
+|---|---|---|---|---|
+| S5-01 | Board claim, baseline (`canonical/ci_local.py`), record of this session | in progress | session-50761461 | `COORDINATION.md` (this block) |
+| S5-02 | Re-check the verified tax rules against the official primary text (IRS Rev. Proc. 2025-32; FTB 2026 rate schedules); list ledger rows that are out of date | claimed | session-50761461 | `session-50761461/data/tax_rules.json` |
+| S5-03 | Requirement-to-status register for every item in the brief: built here, built elsewhere, or blocked on private input, with the official tool to use | claimed | session-50761461 | `session-50761461/gap-register.html` |
+| S5-04 | W-03 decision-gate progress board (gates, open questions, owner, source link per row; progress from the question register) | claimed | session-50761461 | `session-50761461/decision-gates.html` |
+| S5-05 | W-10 one-page printable advisor summary (print stylesheet, one Letter page, sources per row, blanks flagged) | claimed | session-50761461 | `session-50761461/advisor-brief.html` |
+| S5-06 | Private calculator that runs in the reader's browser: sell-versus-hold worksheet (W-02) and after-tax module; inputs blank, no network, nothing stored | claimed | session-50761461 | `session-50761461/calculator.html`, `session-50761461/assets/calc.js` |
+| S5-07 | Verifier for this workspace: a source link on every table row, blank-if-unverified, personal-information scan (`canonical/privacy.py`, read only), no off-site loads, internal links | claimed | session-50761461 | `session-50761461/scripts/**` |
+| S5-08 | Requests to the final integration session (not edited here): publish allowlist and navigation for the four pages; correction of ledger rows TX-041, TX-047, TX-048; CI step for this verifier | logged | session-50761461 | none (request only, see close-out) |
