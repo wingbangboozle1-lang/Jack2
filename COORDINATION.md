@@ -2006,3 +2006,27 @@ artifact is buildable; the failure is only the Pages source switch.
 **Known consequence (recorded before acting).** Switching Pages to the workflow source removes the legacy repo-root
 publication immediately. The site will be unavailable until the deploy job completes (typically a few minutes). This is
 accepted because the current legacy publication exposes the entire repository, which the owner ranks as the top priority.
+
+### Session `f652211c` — PP-02 close-out (2026-11-15): code merged, Pages source change BLOCKED for owner action
+
+| Item | Result |
+|---|---|
+| Pull request | [#74](https://github.com/wingbangboozle1-lang/Jack2/pull/74) `arena/f652211c-jack2` → `main`, merged with `gh pr merge 74 --merge` after `build-and-check` passed |
+| What the merge changes | `.github/workflows/pages.yml`: the step that tried to PUT `build_type=workflow` (HTTP 403 for the workflow token) is replaced by a read-only confirmation that **fails loudly** unless Pages is set to GitHub Actions |
+| Verify on merge commit | `verify` **success** (run `43718036355`) |
+| Pages deploy after merge | run `43718114648` **failed**, as designed, at *Confirm GitHub Actions is the Pages publishing source*: `Pages build_type is 'legacy'` |
+| Admin attempt (2026-11-15) | `gh api --method PUT repos/…/pages -f build_type=workflow` returned **HTTP 403 "Resource not accessible by integration"**. The sandbox credential has repository admin in name but cannot change Pages settings. |
+| Live site | Pages API: `status built`, `build_type legacy`, `source main:/`. Whole repository still served. Not remediated. |
+| Owner action required | Repository **Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run the latest `deploy privacy-reviewed Pages artifact` run (or push any commit to `main`). After the run succeeds, re-fetch `workspaces.html`, `deployment.html` and one `/session-*/` URL on the live site. |
+| Expected effect | Site briefly unavailable from the switch until the deploy completes; then only the allowlisted 27-file artifact is served (publish.py) |
+
+**Irregularities recorded for review.**
+1. The Pages source is a repository setting that the workflow token cannot change; a human (or a Pages-capable token) must set it. Until then, the privacy boundary is not in effect.
+2. Every edit to `COORDINATION.md` changes the repository-wide line totals in `canonical/data/repo_review.json` and the F4 audit counts, so each merged board entry forces another regeneration and replay. This caused three extra CI iterations for this session and is the reason several PRs fail the "generated files are out of date" gate.
+3. The GitHub API returned HTTP 403 rate-limit responses for about 25 minutes during this session.
+4. PR #76 (`arena/ff881372-jack2`, Pages source fix by another session) was closed without merge; its branch no longer exists on the remote. The workflow change from PR #74 supersedes it.
+5. The sandbox cannot reach `github.io`, so live-page checks were not possible from the sandbox; the live state above comes from the GitHub Pages API and workflow runs only.
+
+**Verification performed (2026-11-15).** `canonical/ci_local.py` passed all 24 steps on the rebased tree (12/12 consolidated-site checks, 15 unit tests, privacy scan 0 matches, Pages artifact gate, generated-files freshness gate). `yaml` parsed for `pages.yml` and `verify.yml`.
+
+**Sources.** GitHub REST API, Pages (update information about a Pages site, token permissions): https://docs.github.com/en/rest/pages/pages · GitHub Actions workflow-run `43718114648` and `43522377067` (logs as cited above).
