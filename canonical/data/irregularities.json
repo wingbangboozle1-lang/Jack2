@@ -407,6 +407,63 @@
    ],
    "action": "Re-open the linked spreadsheet and confirm the two operands 1,002,045 and 1,242,816 for Los Angeles County before the percentage is relied on.",
    "status": "needs review"
+  },
+  {
+   "id": "IR-40",
+   "area": "Privacy",
+   "title": "Earlier commits in the public history still hold individual names and a street address",
+   "detail": "A scan of the full git history (read 2026-11-15) finds personal-data pattern hits in six commits dated 2026-11-06 to 2026-11-12. Individual-name patterns appear in all six, and one of them also carries a street-address pattern. The current files are clean, so IR-32 is true for the tracked files but not for the history. Anyone who clones the public repository can read these earlier versions. The matched text is not reproduced here. Commits for review, by short hash: 833df60fbb, d5b27912af, f4500a22c7, 3b842781d8, 80ab9bd8ee, 0e4751e54c.",
+   "rows": [],
+   "links": [
+    [
+     "Commit history of the repository",
+     "https://github.com/wingbangboozle1-lang/Jack2/commits/main"
+    ],
+    [
+     "Spot-check and history-scan record (counts only)",
+     "https://github.com/wingbangboozle1-lang/Jack2/blob/main/canonical/data/spot_check_2026-11-15.json"
+    ]
+   ],
+   "action": "Owner decision, not taken here: (a) accept that history is public and record that; (b) rewrite history with a history-rewriting tool and force-push every branch, which also rewrites open pull requests and other sessions' branches; or (c) make the repository private, which the GitHub Pages documentation says needs a paid plan for Pages. Afterwards, re-run the history scan.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-41",
+   "area": "Privacy",
+   "title": "The live Pages site still publishes the whole repository",
+   "detail": "GitHub Pages is still set to publish the root of the main branch (build type 'legacy'), so every file in the public repository is served, not only the reviewed site. The workflow that would publish the privacy-reviewed artifact fails at its source check on each run (latest runs 43717494427, 43718114648 and 43720009686). This session's attempt to change the source returned HTTP 403 for the integration token, so the repository owner has to make the change. Until then the privacy boundary described on the board is not in effect.",
+   "rows": [],
+   "links": [
+    [
+     "Pages settings (read-only API)",
+     "https://api.github.com/repos/wingbangboozle1-lang/Jack2/pages"
+    ],
+    [
+     "Pages workflow runs",
+     "https://github.com/wingbangboozle1-lang/Jack2/actions/workflows/pages.yml"
+    ],
+    [
+     "GitHub documentation: configuring a Pages publishing source",
+     "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+    ]
+   ],
+   "action": "Owner: repository Settings, Pages, Build and deployment, Source: GitHub Actions. Then re-run the latest 'deploy privacy-reviewed Pages artifact' run and re-check the live archive and deployment pages.",
+   "status": "needs review"
+  },
+  {
+   "id": "IR-42",
+   "area": "Requirements",
+   "title": "The requirement register did not carry the brief's W-items or several brief items",
+   "detail": "The requirement register held 17 entries and none with the IDs W-01, W-02, W-03, W-04 or W-10. Brief items on trade-area figures, tract-level trends, parcel-level hazards, a short-lease price from quotes, a back-tested cash-flow model, the owner's after-tax number, a decision-gate board and a browser calculator were missing. Entries RQ-18 to RQ-36 were added on 2026-11-15 with honest statuses. None of the open ones is marked done.",
+   "rows": [],
+   "links": [
+    [
+     "Requirement register",
+     "requirements.html"
+    ]
+   ],
+   "action": "Owner to confirm the list and the priority. Each open item needs a claimed session on the board before work starts.",
+   "status": "needs review"
   }
  ]
 }

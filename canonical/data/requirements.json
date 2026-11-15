@@ -118,6 +118,139 @@
    "where": "flagged.html",
    "status": "Done",
    "note": "Blank rows and irregularities, each with a link."
+  },
+  {
+   "id": "RQ-18",
+   "requirement": "W-01 · Replace city and county proxies with trade-area figures",
+   "where": "demographics.html, market-economics.html",
+   "status": "Open",
+   "note": "Only city, county and metro figures are in the repository. No trade-area figure exists. The trade area depends on the parcel's location, which stays offline."
+  },
+  {
+   "id": "RQ-19",
+   "requirement": "W-02 · Extend the private worksheet to a sell-versus-hold comparison",
+   "where": "decision.html, projection-model.html",
+   "status": "Partial",
+   "note": "The public pages compare six strategies on regional scenarios. The owner's own worksheet is private by design and is not in the repository."
+  },
+  {
+   "id": "RQ-20",
+   "requirement": "W-03 · Decision-gate progress board",
+   "where": "questions.html",
+   "status": "Open",
+   "note": "questions.html lists the open items. No gate-by-gate progress board exists."
+  },
+  {
+   "id": "RQ-21",
+   "requirement": "W-04 · Parcel-level hazard screening",
+   "where": "hazards.html, sources.html",
+   "status": "Blocked: needs the owner's offline parcel input",
+   "note": "Regional hazard data only. The official parcel-level maps (CGS EQ Zapp, FEMA Flood Map Service Center, CAL FIRE Fire Hazard Severity Zones) are listed as sources and must be checked privately."
+  },
+  {
+   "id": "RQ-22",
+   "requirement": "W-10 · One-page printable summary for advisors",
+   "where": "executive-summary.html, suggestions.html (SG-08)",
+   "status": "Partial",
+   "note": "The site has a print stylesheet. A separate one-page advisor summary is an open suggestion (SG-08); it has not been built or checked for one printed page."
+  },
+  {
+   "id": "RQ-23",
+   "requirement": "A private calculator that runs in the reader's browser",
+   "where": "suggestions.html (SG-01)",
+   "status": "Open",
+   "note": "Proposed as SG-01 for review. Not built."
+  },
+  {
+   "id": "RQ-24",
+   "requirement": "Neighbourhood-level data around the parcel",
+   "where": "demographics.html",
+   "status": "Blocked: needs the parcel location, kept offline",
+   "note": "Blank at neighbourhood level (see RQ-05)."
+  },
+  {
+   "id": "RQ-25",
+   "requirement": "An after-tax module",
+   "where": "taxes.html",
+   "status": "Partial",
+   "note": "Verified tax rules are published: the Measure ULA thresholds, the IRS capital-gains thresholds and the Proposition 13 rule. No after-tax figure exists because the owner's basis and sale inputs are private."
+  },
+  {
+   "id": "RQ-26",
+   "requirement": "Price the short-lease discount from real quotes",
+   "where": "questions.html, IR-14",
+   "status": "Blocked: no official source prices this",
+   "note": "No official source prices this kind of property (IR-14). Needs broker opinions of value or an appraisal."
+  },
+  {
+   "id": "RQ-27",
+   "requirement": "Tract-level trend evidence alongside the regional figures",
+   "where": "market-economics.html",
+   "status": "Open",
+   "note": "Only regional series are in the repository. No tract-level series has been assembled."
+  },
+  {
+   "id": "RQ-28",
+   "requirement": "Use the location only in a secure workflow to select consistent Census tracts, and local planning, traffic, school and competitor evidence",
+   "where": "none yet",
+   "status": "Open",
+   "note": "Not started. The location must stay offline, so this needs an access-controlled workflow with an authorised adviser."
+  },
+  {
+   "id": "RQ-29",
+   "requirement": "Privately check seismic, flood and fire maps, engineering and insurance; stress loss of rent, repairs and exit liquidity together",
+   "where": "risks.html",
+   "status": "Blocked: owner-private",
+   "note": "Not done in the repository. The stress test needs the owner's private lease and cost figures."
+  },
+  {
+   "id": "RQ-30",
+   "requirement": "Versioned cash-flow model, back-tested when verified inputs and comparable history exist; observations kept apart from assumptions",
+   "where": "projection-model.html",
+   "status": "Partial",
+   "note": "A scenario model exists. There is no property cash flow and no back-test, because the inputs and the comparable history are not verified."
+  },
+  {
+   "id": "RQ-31",
+   "requirement": "One after-tax number the owner can compare with the hold case",
+   "where": "taxes.html",
+   "status": "Blocked: owner-private",
+   "note": "Needs the owner's basis and sale inputs, kept offline."
+  },
+  {
+   "id": "RQ-32",
+   "requirement": "Replace regional hazard context with the parcel's actual zone status for earthquake, fire and flood",
+   "where": "hazards.html",
+   "status": "Blocked: owner-private",
+   "note": "Same dependency as RQ-21."
+  },
+  {
+   "id": "RQ-33",
+   "requirement": "Same-store sales, unit counts, closures and franchise rental revenue, showing direction over several quarters",
+   "where": "tenant.html",
+   "status": "Partial",
+   "note": "The tenant sheet holds same-store sales for several periods (TN-020 to TN-024), franchise rent (TN-028) and closure programme items (TN-011, TN-082). Unit counts by quarter are not assembled into one series."
+  },
+  {
+   "id": "RQ-34",
+   "requirement": "Keep identifiers, lease files and owner finances offline; publish only aggregate, non-identifying findings",
+   "where": "privacy.html, IR-40, IR-41",
+   "status": "Partial",
+   "note": "Policy and pattern checks are in place for the tree. The history still holds personal-data patterns (IR-40), and the Pages source still publishes the whole repository (IR-41)."
+  },
+  {
+   "id": "RQ-35",
+   "requirement": "Commission a private lease abstract and reconcile it with the notice calendar before a sale or renewal commitment",
+   "where": "questions.html",
+   "status": "Blocked: owner and advisers",
+   "note": "Not in the repository. Needs the lease file, which stays offline."
+  },
+  {
+   "id": "RQ-36",
+   "requirement": "Prepare an after-tax sale comparison alongside a negotiated renewal case, and select no winner until verified inputs exist",
+   "where": "decision.html",
+   "status": "Partial",
+   "note": "The decision rule is published and no winner is selected. The after-tax sale comparison awaits the private inputs (RQ-31)."
   }
  ]
 }
